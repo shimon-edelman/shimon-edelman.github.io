@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Psych/Cogst/Info 2140/6140</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2012 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="+1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+</head>
+<body>
+
+<!-- 
+<rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+<permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+<requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+<permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+<requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+</License>
+</rdf:RDF>
+-->
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Week 2.2 &#151;
+    <!-- hhmts start --> Last modified on Tue Feb  7 10:52:20 2012
+<!-- hhmts end --> 
+    <!-- doc-lang: english -->
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Psych/Cogst/Info 2140/6140</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Week 2: complexity from simplicity</h2>
+    <h3>&nbsp;Lecture 2.2</h3>
+  </div>
+  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%>
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>NOW we are fully ready to start demystifying the mind</h1>
+
+  <!--
+  <embed src="brain-scan.mp4" height=256 width=320 controller=true
+  autoplay=false align=right hspace=20>
+  -->
+  <P>
+  <BR>
+  Certain types of dynamical systems &#151; in particular, Turing Machines,
+  but also brains &#151;
+  can implement very complex functions (input-output mappings), starting with
+  very simple building blocks and using <SC>hierarchical abstraction</SC>.
+  <P>
+  This suggests that the <B>mind</B> and the <B>brain</B> (respectively, the
+  most complex process and the most complex organ we know of) can be
+  understood through <SC>hierarchical analysis</SC> of the computations and
+  neural circuits involved.
+  <P>
+  That's where we are headed next.
+  
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>Lecture 2.2: neurons and synapses</h1>
+
+  <img src="CS92-fig2-1.jpg" class="figure-right" height=500>
+  <P>
+  <BR>
+  <ul>
+    <li>Neuroanatomy and neurophysiology</li>
+    <P>
+    <li>Neuroanatomy: levels of organization</li>
+    <P>
+    <li><SC>Neurons</SC></li>
+    <P>
+    <li><SC>Synapses</SC></li>
+    <P>
+    <li>Circuits</li>
+  </ul>
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>neurons &#151; an artist's concept</h1>
+
+  <img src="neurons.jpg" class="figure-left" height=450>
+  <P>
+  <BR>
+  A sparse tangle of randomly connected blobs, suspended in grape jelly?
+
+</div>
+
+
+<DIV  CLASS="slide">
+  <h1>neurons &#151; the artist's concept is misleading</h1>
+
+  <img src="neurons-for-real.jpg" class="figure-left" height=450>
+
+</div>
+
+
+<DIV  CLASS="slide">
+  <h1>neurons in their natural habitat</h1>
+
+  <img src="Lpurkin.JPG" title="cerebellar Purkinje cells" class="figure-right">
+  <P>
+  <BR>
+  On the right:
+  a <a
+  href="http://nobelprize.org/nobel_prizes/medicine/articles/golgi/index.html"
+  target=new>Golgi stain</a> of a <a
+  href="http://en.wikipedia.org/wiki/Cerebellum" target=new>cerebellum</a>
+  preparation, showing several <a
+  href="http://en.wikipedia.org/wiki/Purkinje_cell" target=new>Purkinje
+  cells</a> &#151;
+  <P>
+  Below: in brains, neurons are packed close together.
+  <P>
+  <img src="neurons-Image21-frag.jpg" class="figure-left" vspace=20>
+  
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>schematic structure and function of a neuron</h1>
+
+  <img src="C87-fig2.14.jpg" class="figure-right">
+  <P>
+  <BR>
+  How parts of a neuron work together to carry out simple computations
+  &#151;
+  <ul>
+    <li><a href="http://en.wikipedia.org/wiki/Soma_%28biology%29" target=new>soma</a> (cell body)</li>
+    <li><a href="http://en.wikipedia.org/wiki/Dendrite" target=new>dendrites</a></li>
+    <li><a href="<a href="http://en.wikipedia.org/wiki/Axon"
+    target=new>axon</a></li>
+    <li><a href="http://en.wikipedia.org/wiki/Synapse"
+    target=new>synapses</a></li>    
+  </ul>
+  <HR>
+  <ul>
+    <li><a href="http://en.wikipedia.org/wiki/EPSP" target=new>EPSP</a>s</li>
+    <li><a
+    href="http://en.wikipedia.org/wiki/Action_potential" target=new>action potentials</a> (spikes)</li>
+  </ul>
+  
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>neuronal action potentials or spikes</h1>
+
+  <table cellspacing=20>
+    <tr>
+      <td align=center><img src="spike.jpg"></td>
+      <td align=center><img src="spike-train.gif"></td>
+    </tr>
+    <tr>
+      <td align=center>a <a
+	href="http://en.wikipedia.org/wiki/Action_potential" target=new>spike</a> train</td>
+      <td align=center>an increase in the firing rate of a sensory neuron,
+	driven by an external stimulus</td>
+    </tr>
+  </table>  
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>synapses</h1>
+
+  <img src="neurons-Image21.jpg" class="figure-right" >
+
+  <P>
+  <BR>
+  <ol type=A>
+    <li>
+    Electrochemical <a href="http://en.wikipedia.org/wiki/Synapse"
+    target=new>synapses</a> (<I>left:</I> schematic; <I>right:</I> under electron microscope 
+    magnification).
+    </li>
+    <P>
+    <li>
+    Electrical synapses.
+    </li>
+  </ol>
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>how a synapse works</h1>
+
+  <img src="CS92-fig2-22.jpg" class="figure-right" >
+
+  <P>
+  <BR>
+  A <SC>highly simplified</SC> functional diagram of a synapse.
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>how a synapse works</h1>
+
+  <img src="C87-fig2.21.jpg" class="figure-right">
+  <P>
+  <BR>
+  A <SC>VASTLY</SC> simplified functional diagram of a synapse.
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>how a synapse works</h1>
+
+  <img src="C87-fig2.21.jpg" class="figure-right">
+  <P>
+  <BR>
+  A <SC>VASTLY</SC> simplified functional diagram of a synapse.
+  <P>
+  <img src="spiny-dendrites.jpg" height=350>
+  <P>
+  This neuron's <a 
+  href="http://en.wikipedia.org/wiki/Dendrite" target=new>dendrites</a> are
+  dotted with <a href="http://en.wikipedia.org/wiki/Dendritic_spine"
+  target=new>spines</a> that bear synapses.
+
+</div>
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>how a neuron computes</h1>
+
+  <P>
+  <BR>
+  The basic <SC><B>computation</B></SC> performed by a neuron:
+  <OL>
+    <li>multiply each incoming signal by a <SC>weight</SC>;</li>
+    <li><SC>sum</SC> all the resulting products;</li>
+    <li><SC>compare</SC> the sum to a <SC>threshold</SC>;</li>
+    <li><SC><B>if</B></SC> the sum exceeds the threshold,
+    <B><SC>then</SC></B> output an <SC><a
+    href="http://en.wikipedia.org/wiki/Action_potential" target=new>action
+    potential</a></SC> (spike).</li>
+  </OL>
+
+</div>
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>what each synapse computes</h1>
+
+  <P>
+  <BR>
+  A useful <SC>computational</SC> view of synaptic function: a synapse acts as a <a
+  href="http://en.wikipedia.org/wiki/Synaptic_weight" target=new><SC>weight</SC></a> &#151; a number that
+  <I>multiplies</I> the incoming (presynaptic) signal to compute the outgoing
+  (postsynaptic) signal:
+  <DIR><DIR>
+    out = <I>W</I> &times; in
+  </DIR></DIR>
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>how neurons learn</h1>
+
+  <!--
+  <img src="synaptic-plasticity.jpg" class="figure-right" height=500>
+  -->
+  <P>
+  <BR>
+  A useful <SC>computational</SC> view of synaptic function: a synapse acts as a <a
+ href="http://en.wikipedia.org/wiki/Synaptic_weight"
+ target=new><SC>weight</SC></a>  &#151; a number that
+  <I>multiplies</I> the incoming (presynaptic) signal to compute the outgoing
+  (postsynaptic) signal:
+  <DIR><DIR>
+    out = <I>W</I> &times; in
+  </DIR></DIR>
+  <P>
+  A crucially important detail:
+  <DIR><DIR>
+    <P>
+    The weight <I>W</I> and
+    the <SC>threshold</SC> to which the sum of 
+    synaptic products is compared are <a
+    href="http://en.wikipedia.org/wiki/Synaptic_plasticity"
+    target=new><SC>modifiable</SC></a> by <SC><B>experience</B></SC>.
+    <P>
+    Modification can take the form of
+    <SC>Long-Term Potentiation</SC> (<a
+    href="http://en.wikipedia.org/wiki/Long-term_potentiation"
+    target=new>LTP</a>) or <SC>Long-Term Depression</SC> 
+    (<a href="http://en.wikipedia.org/wiki/Long-term_depression"
+    target=new>LTD</a>) of synaptic efficacy.
+  </DIR></DIR>
+
+</DIV>
+
+
+<DIV  CLASS="slide">
+  <h1>how neurons learn</h1>
+
+  <!--
+  <img src="synaptic-plasticity.jpg" class="figure-right" height=500>
+  -->
+  <P>
+  <BR>
+  A useful <SC>computational</SC> view of synaptic function: a synapse acts as a <a
+ href="http://en.wikipedia.org/wiki/Synaptic_weight"
+ target=new><SC>weight</SC></a>  &#151; a number that
+  <I>multiplies</I> the incoming (presynaptic) signal to compute the outgoing
+  (postsynaptic) signal:
+  <DIR><DIR>
+    out = <I>W</I> &times; in
+  </DIR></DIR>
+  <P>
+  A crucially important detail:
+    <DIR><DIR>
+    <P>
+    The weight <I>W</I> and 
+    the <SC>threshold</SC> to which the sum of 
+    synaptic products is compared are <a
+    href="http://en.wikipedia.org/wiki/Synaptic_plasticity"
+    target=new><SC>modifiable</SC></a> by <SC><B>experience</B></SC>.
+    <P>
+    Modification can take the form of
+    <SC>Long-Term Potentiation</SC> (<a
+    href="http://en.wikipedia.org/wiki/Long-term_potentiation"
+    target=new>LTP</a>) and <SC>Long-Term Depression</SC> 
+    (<a href="http://en.wikipedia.org/wiki/Long-term_depression"
+    target=new>LTD</a>) of synaptic efficacy.
+  </DIR></DIR>
+  <P>
+  <font color=red><SC><B>Experience</B></SC> = joint <a href="http://en.wikipedia.org/wiki/Statistics"
+  target=new><SC><B>statistics</B></SC></a> of presynaptic and postsynaptic 
+  neuron activities.</font>
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>learning from experience through synaptic modification</h1>
+
+  <img src="STDP-Fig1.jpg" title="STDP" class="figure-right">
+  <P>
+  <BR>
+  Learning from experience at the level of synapse:
+  <P>
+  &#151; modification of synaptic
+  weight through Spike Timing-Dependent Plasticity (<a
+  href="http://www.scholarpedia.org/article/Spike-timing_dependent_plasticity"
+  target=new>STDP</a>).
+
+</DIV>
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>IMPORTANT: the War Room analogy</h1>
+
+  <a href="http://en.wikipedia.org/wiki/Dr._Strangelove" target=new><img src="strangelove_war_room.jpg" title="the war room from Dr. Strangelove" class="figure-right"></a>
+  <P>
+  <BR>
+  Why it makes sense to define experience in terms of synapse-level events:
+  the analogy between the brain/mind and a war cabinet.
+  <P class="incremental">
+  [Think of an experienced commander-in-chief]
+  </P>
+
+</DIV>
+
+
+<!--
+
+<DIV  CLASS="slide">
+  <h1>from anatomical structure to function: the diversity of neuron shapes</h1>
+
+  <img src="neurons-Image17.gif" class="figure-right" height=500>
+
+  <P>
+  <BR>
+  <ol type=A>
+    <li>motor neuron, cat spinal cord</li><P>
+    <li>interneuron, locust thorax ganglion</li><P>
+    <li><B><a href="http://en.wikipedia.org/wiki/Pyramidal_neuron"
+    target=new>pyramidal</a> cell, rat <a
+    href="http://en.wikipedia.org/wiki/Cerebral_cortex" target=new>cerebral cortex</a></B></li><P>
+    <li>retinal ganglion cell, kitten</li><P>
+    <li>retinal amacrine cell, salamander</li><P>
+    <li><a href="http://www.youtube.com/watch?v=eiGgengz2qM" target=vid><B>Purkinje cell</B></a>, human cerebellum</li><P>
+    <li>relay neuron, rat thalamus</li>
+  </ol>
+
+</div>
+
+
+  
+<DIV  CLASS="slide">
+  <h1>from anatomical structure to function: the diversity of neuron connections</h1>
+
+  <img src="C87-fig2.20.jpg" class="figure-right" >
+  <P>
+  <BR>
+  The very simple basic mechanism of neural computation is made very
+  powerful through:
+  <ul>
+    <li>the large numbers of neurons involved;</li>
+    <li>massive connectivity;</li>
+    <li>connection diversity.</li>
+  </ul>
+  <P>
+  Can you guess the functional (computational) role of these
+  synaptic structures?
+
+</div>
+
+-->
+
+
+
+<DIV  CLASS="slide">
+  <h1>"analog" computation by neurons: arithmetical division</h1>
+
+  <P>
+  <BR>
+  <table cellpadding=50>
+    <tr>
+      <td><embed src="Aplysia-basic.mp4" width=320 height=256
+	controller=true autoplay=false></td>
+      <td><embed src="Aplysia-kiss.mp4" width=320 height=256 controller=true
+	autoplay=false></td>
+    </tr>
+    <tr>
+      <td align=center><I><a href="http://en.wikipedia.org/wiki/Aplysia"
+	target=new>Aplysia</a> californica</I>...</td> 
+      <td align=center>...being loved.</td>
+ </table>
+
+</DIV>
+
+
+
+<DIV  CLASS="slide">
+  <h1>a synapse that implements arithmetical division in <I>Aplysia</I></h1>
+
+  <table cellspacing=5>
+    <tr>
+      <td align=center rowspan=2><a
+	href="http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=149961" 
+	target=new><img src="shunting-inhibition.jpg" title="a synapse that implements
+	division" height=350></a>
+      </td>
+      <td align=center><a
+ href="http://en.wikipedia.org/wiki/Aplysia_gill_and_siphon_withdrawal_reflex"
+ target=new><img src="C87-fig2.25.jpg" height=250></a></td>
+    </tr>
+    <tr>
+      <td align=center><a
+	href="http://home.comcast.net/~john.kimball1/BiologyPages/M/Memory.html"
+	target=new><img src="C87-fig2.24.jpg" height=250></a></td> 
+    </tr>
+  </table>
+  
+</div>
+
+
+<!--
+
+<DIV  CLASS="slide">
+  <h1>from neurons to circuits: the retina, as drawn by Santiago Ramón y Cajal</h1>
+
+  <a href="http://nobelprize.org/nobel_prizes/medicine/articles/cajal/"
+  target=new><img src="cajal12-retina.gif"></a>
+
+</div>
+
+-->
+
+
+<!--
+
+<DIV  CLASS="slide">
+  <h1>functions: old friends from high school</h1>
+
+  <img src="linear-function.PNG" class="figure-right">
+  <P>
+  <BR>
+  <table border=1>
+    <tr><td colspan=5>linear:</td></tr>
+    <tr><th>domain</th><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+    <tr><th><I>range</I></th><td>3</td><td>6</td><td>9</td><td>?</td></tr>
+  </table>
+  <img src="quadratic-function.png" class="figure-right">
+  <table border=1>
+    <tr><td colspan=5>quadratic:</td></tr>
+    <tr><th>domain</th><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+    <tr><th><I>range</I></th><td>1</td><td>4</td><td>9</td><td>?</td></tr>
+  </table>
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>defining computation: functions</h1>
+
+  <img src="Magritte_Castle_of_Pyrenees.jpg" class="figure-right">
+  <P>
+  <BR>
+  <table border=1>
+    <tr><td colspan=5>linear:</td></tr>
+    <tr><th>domain</th><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+    <tr><th><I>range</I></th><td>3</td><td>6</td><td>9</td><td>?</td></tr>
+  </table>
+  <table border=1>
+    <tr><td colspan=5>quadratic:</td></tr>
+    <tr><th>domain</th><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+    <tr><th><I>range</I></th><td>1</td><td>4</td><td>9</td><td>?</td></tr>
+  </table>
+  <table border=1>
+    <tr><td colspan=5>example: a falling object &#151</td></tr>
+    <tr><th>time</th><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+    <tr><th><I>velocity</I></th><td>3</td><td>6</td><td>9</td><td>?</td></tr>
+    <tr><th><I>distance</I></th><td>1</td><td>4</td><td>9</td><td>?</td></tr>
+  </table>
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>an object computing its velocity in real time</h1>
+  
+  <embed src="drop(new).mov" width="320" height="495"
+  autoplay="false" controller="true" cache="true" playeveryframe="true"
+  align=right vspace=10 hspace=20>
+  <P>
+  <BR>
+  A stone in free fall computes its instantaneous velocity and location,
+  given the elapsed time (the key factor being the <a
+  href="http://www.astronomynotes.com/gravappl/s6.htm"
+  target=new>acceleration due to gravity</a>).
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>the first glimpse of neural computation</h1>
+
+  <img src="CS92-fig3.3.jpg" height=520 class="figure-left">
+  <a href="http://en.wikipedia.org/wiki/Pyramidal_cell" target=new>
+  <img src="three-pyramidal-neurons.gif" title="three pyramidal neurons" class="figure-right">
+  </a>
+  <P>
+  <BR>
+  <SC>Neurons</SC> are excellent building blocks for computing various
+  input-to-output mappings.
+  <P>
+  Here, three neurons are computing some function of time.
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>neural computation</h1>
+
+  <a
+  href="http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&tid=6024"
+  target=new><img src="the-computational-brain.jpg" 
+  title="The Computational Brain (Churchland & Sejnowski, 1992)"
+  class="figure-right" ></a>
+  <P>
+  <BR>
+  <ul>
+    <li>neural computation, "digital" style</li>
+    <P>
+    <li>neural computation, "analog" style</li>
+  </ul>
+  <HR>
+  ["neural computation" = for now, computing with <SC>very simple</SC> elements]
+  
+</div>
+
+-->
+
+
+<DIV  CLASS="slide">
+  <h1>"digital" neural computation</h1>
+
+  <a
+  href="http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&tid=6496"
+  target=new><img src="McCulloch-cover.jpg" class="figure-right" ></a>
+  <P>
+  <BR>
+  "For any <SC>logical expression</SC> satisfying certain conditions, one can find a
+  net [of formal neurons] behaving in the fashion it does."
+  <DIR><DIR><DIR>
+    <I>A Logical Calculus of the Ideas Immanent in Nervous Activity</I><BR>
+    <a
+    href="http://en.wikipedia.org/wiki/Warren_McCulloch" target=new>Warren S. McCulloch</a> and <a
+    href="http://en.wikipedia.org/wiki/Walter_Pitts" target=new>Walter
+    Pitts</a>
+    <BR>
+    Bulletin of Mathematical Biophysics 5:115-133, 1943.
+  </DIR></DIR></DIR>
+  <P>
+  <HR>
+  <P>
+  Recall that a <a href="http://en.wikipedia.org/wiki/Logic_circuit"
+  target=new>logic circuit</a> (state transition table, which is what
+  McCulloch means by "logical expression") is what controls a <a
+  href="http://en.wikipedia.org/wiki/Turing_Machine" target=new>Turing
+  Machine</a>.
+
+</div>
+
+
+<DIV  CLASS="slide">
+  <h1>neural logic</h1>
+
+  <img src="neural-logic.gif">
+  <a href="http://en.wikipedia.org/wiki/Image:GolgiStainedPyramidalCell.jpg"
+  target=new><img src="GolgiStainedPyramidalCell.jpg" align=right hspace=20></a>
+  <P>
+  A <SC>"multiply, sum, threshold"</SC> neuron can implement logic operations
+  such as <I>AND</I>, <I>OR</I>, and <I>NOT</I>.
+  <P>
+  <HR>
+  <P>
+  The number inside the "neuron" signifies its threshold (the neuron will
+ "fire" if the sum of its inputs meets or exceeds the threshold). The small circle
+  on an input line denotes inhibition (the unmarked inputs are excitatory).
+
+</div>
+
+
+<DIV  CLASS="slide">
+  <h1>almost magic: a neural switchboard made of two "formal neurons"</h1>
+
+  <img src="neural-router.gif" class="figure-right"  >
+  <P>
+  <BR>
+  Signals from the <SC>source</SC> input (left) are routed to
+  <SC>destination 1</SC> or <SC>destination 2</SC> (right), depending on the state
+  of the <SC>steering signal</SC> input. 
+  <P>
+  <HR>
+  <P>
+  An expression to distrust: <SC>"hard-wired"</SC> (as in "Function X is
+  hard-wired into the brain").
+  <HR width=30% align=left>
+  <P>
+  <small> The number inside the "neuron" signifies the threshold. The small circle
+  on an input line denotes inhibition (the unmarked input are excitatory).</small>
+
+</div>
+
+
+<DIV  CLASS="slide">
+  <h1>more "magic": a neural memory cell made of two "formal neurons"</h1>
+
+  <img src="neural-memory-2.gif" class="figure-right" >
+  <P>
+  <BR>
+  A signal arriving on the <SC>Start</SC> line stores one bit of information in the
+  neuron by turning it <I>ON</I>.
+  <P>
+  The neuron subsequently remains <I>ON</I> due to the <SC>Feedback</SC>
+  connection, until a <SC>Stop</SC> signal is received.
+  <P>
+  The state of the memory cell (<I>ON</I> or <I>OFF</I>) is queried by
+  sending a signal down the <SC>Input</SC> line:
+  <DIR><DIR>
+    if the <SC>Output</SC> is <I>ON</I>, the state is <I>ON</I>;
+    <P>
+    if the <SC>Output</SC> is <I>OFF</I>, the state is <I>OFF</I>.
+  </DIR></DIR>
+  <P>
+  <HR>
+  <P>
+  The number inside the "neuron" signifies the threshold. The small circle
+  on an input line denotes inhibition (the unmarked input are excitatory).
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>neurons and synapses: a quick summary</h1>
+
+  <P>
+  <BR>
+  <ul class="outline">
+    <li>Neurons:
+    <ul>
+      <li>the neuron is the basic representational unit in the brain;</li>
+      <li>neurons are wired together in a manner that reflects the
+      computational needs of the circuit;</li>
+      <li>a neuron sends signals to other neurons by emitting (all-or-none)
+      action potentials, or "spikes", whose timing and frequency (both
+      graded) reflect various qualities of its combined inputs.</li>
+    </ul>
+    </li>
+    <P>
+    <li>Synapses:
+    <ul>
+      <li>the synapse is the narrow gap where a connection between neurons is made;</li>
+      <li>a synapse modifies the signal it transmits;</li>
+      <li>synaptic strength ("weight") can in turn be modified by neural activity.</li>
+    </ul>
+    </li>
+    <P>
+    <li>Learning:
+    <ul>
+      <li>neurons learn from experience (that is, from the joint <B>statistics</B>
+      of their inputs and outputs);</li>      
+      <li>learning includes changes in synaptic weights and in the
+      neuronal firing thresholds.</li>      
+    </ul>
+    </li>
+    <P>
+    <li>Complexity from simplicity:
+    <ul>
+      <li>Computation required for complex tasks is hierarchically
+      decomposable into simpler elements;</li>      
+      <li>Circuits of neurons are well-suited for supporting hierarchical
+      computation.</li>       
+    </ul>
+    </li>
+  </ul>
+  
+</div>
+
+
+
+<!-- doc-lang: english -->
+</body>
+</html>

@@ -1,0 +1,1210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computational Psychology — Unit 14</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2014-2020 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- 
+<rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+<permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+<requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+<permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+<requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+</License>
+</rdf:RDF>
+-->
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 14 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computational Psychology</h1>
+            <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 14: induction, general intelligence, and IQ</h2>
+  </div>
+  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%>
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+
+
+<DIV CLASS="slide">
+  <h1>the agenda</h1>
+
+  <img src="mushrooms.jpg" class="figure-right">
+  <P>
+  <BR>
+<!--  <img src="swans.jpg" class="figure-right" height=250> -->
+  <ul>
+    <li>
+    the Induction Problem (and a <B>very general</B> Bayesian approach):
+    <ul>
+      <li>
+      How does abstract knowledge guide learning and reasoning from sparse
+      data?
+      </li>
+      <li>
+      What forms does our knowledge take, across different domains and
+      tasks?
+      </li>
+      <li>
+      How is that abstract knowledge itself acquired?
+      </li>
+    </ul>
+  </li>
+  <P>
+  <li>
+  general intelligence and IQ
+  </li>
+  </ul>
+
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>a reminder from Lecture 4.1: testing Bayesian induction in the "numbers game" (Tenenbaum, 1999)</h1>
+  
+  <img src="Tenenbaum99-fig1.jpg">
+  <P>
+  Class I trials &#151; the exemplar set consists of one number from each concept.
+  <BR>
+  Class II trials  &#151; four numbers, consistent with a simple rule.
+  <BR>
+  Class III trials  &#151; four random numbers of similar magnitude.
+  
+</div>
+
+-->
+
+
+<DIV CLASS="slide">
+  <h1>INDUCTION in general: reasoned knowledge from evidence</h1>
+
+  <P>
+  <BR>
+    Modes of reasoning <!-- (compare with
+    <a href="http://kybele.psych.cornell.edu/~edelman/Psych-3140/wk-9-1.html#(14)"
+    target=new>slides #14-#16 of Lecture 9.1</a>) --> —
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/Deductive_reasoning"
+      target=new>deduction</a>: from premises to consequences [logical]</li>
+      <li><a href="https://en.wikipedia.org/wiki/Abductive_reasoning"
+      target=new>abduction</a>: from a single case to a likely
+      explanation (which cause/rule is responsible for this case?) [statistical]</li> 
+      <li><a href="https://en.wikipedia.org/wiki/Inductive_reasoning"
+      target=new><B>induction</B></a>: from multiple cases to a
+      general rule (what rule can unify all these cases?) [statistical]</li> 
+    </ul>
+  <P>
+  <HR>      
+  <P class="incremental">
+    (given) Chimps are susceptible to the disease blicketitis.<BR>
+    (given) Squirrels are susceptible to the disease blicketitis.
+  </P>
+  <P class="incremental">
+    ————
+  </P>
+  <P class="incremental">
+    (true or false?) Horses are susceptible to the disease blicketitis.
+  </P>
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>main characteristics of induction in humans: note the role of STATISTICS</h1>
+
+  <I>Inferences from single cases:</I>
+  <DIR>
+    1. <SC>Similarity</SC> between premise and conclusion categories promotes
+    induction.
+    <BR>
+    2. <SC>Typicality</SC> of the premise category promotes induction.
+    <BR>
+    3. <SC>Homogeneity</SC> of the conclusion category promotes induction.
+  </DIR>
+  <I>Inferences from multiple cases:</I>
+  <DIR>
+    4. Greater <SC>number</SC> of observations, or premises, promotes induction.
+    <BR>
+    5. Greater <SC>diversity</SC> of observations, or premises, promotes induction.
+  </DIR>
+  <I>Influence of properties (<SC>context</SC>):</I>
+  <DIR>
+    6. People draw inferences differently depending on the property being
+    projected.
+    <BR>
+    7. Some properties are idiosyncratic or transient, with a
+    narrow scope for inferences, whereas other properties are more
+    broadly projected.
+    <BR>
+    8. The assessment of similarity between categories in an
+    argument depends on the property being projected (cf. the "ball, moon,
+    candle" example).
+  </DIR>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>testing a Bayesian model of category induction (Sanjana & Tenenbaum, 2002)</h1>
+
+  <img src="Tenenbaum02-fig3.jpg" class="figure-right">
+  <P>
+  <BR>
+  <font color=gray>
+  (given) Chimps are susceptible to the disease blicketitis.<BR>
+  (given) Squirrels are susceptible to the disease blicketitis.<BR>
+  <HR width=30% align=left>
+  <P>
+  (true or false?) Horses are susceptible to the disease blicketitis.
+  </font>
+  <P>
+  <HR>
+  <P>
+  <I>Below:</I> the assumed representation of the structure of
+  similarities among animals, based on similarity judgments made by subjects
+  in a separate norming study.
+  <I>Right:</I> correlations between the behavior of the Bayesian
+  model and of the human subjects, in three versions of the  induction task (n
+  indicates the number of premise examples).
+  <P>
+  <img src="Tenenbaum02-fig1.jpg" height=200 class="figure-left">
+  
+</div>
+
+
+
+
+
+<DIV CLASS="slide">
+  <h1>induction means going from episodic data to conceptual knowledge</h1>
+
+  <img src="Tenenbaum-Science11-fig1a.png" class="figure-right">
+  <P>
+  Children learning names for object concepts routinely make strong
+  generalizations from just a few examples. The same processes of rapid
+  generalization can be studied in adults learning names for novel objects
+  created with computer graphics.
+  </P>
+  <P>
+  Here, given these alien objects and three examples (boxed in <font
+  color=red>red</font>) of "tufas" (a word in the alien language), which
+  other objects are tufas? Almost everyone selects just the objects boxed in
+  gray.
+  </P>
+  <P>
+  <small>
+  <I>How to Grow a Mind: Statistics, Structure, and Abstraction</I>,
+  J. B. Tenenbaum et al., Science 331:1279 (2011).
+  </small>
+  </P>
+
+</div>
+  
+
+
+<DIV CLASS="slide">
+  <h1>[EXTRA] a reminder: weighing statistical evidence using Bayes</h1>
+
+  <P>
+  <img src="Tenenbaum-Science11-Bayes.png">
+<!--  <img src="Bayes-1.jpg">  <img src="Bayes-2.jpg">  -->
+  <P>
+  <HR>
+  <P>
+  <I>d</I> &#151; the observed data;
+  <BR>
+  <I>h</I> &#151; the hypothesis in question;
+  <BR>
+  <I>H</I> &#151; the space of all possible hypotheses (which may be
+  <B>intricately structured</B>).
+  <P>
+  <HR>
+  <small>
+  <I>How to Grow a Mind: Statistics, Structure, and Abstraction</I>,
+  J. B. Tenenbaum et al., Science 331:1279 (2011).
+  </small>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>[EXTRA] induction: it's STRUCTURED statistics (Tenenbaum et al., 2011)</h1>
+
+  <img src="Tenenbaum-Science11-fig1b.png" class="figure-right" height=400>
+  <P>
+    Learning names for categories can be modeled as Bayesian inference
+    over a tree-structured domain representation. <small>Objects are
+    placed at the leaves of the tree; hypotheses about categories that
+    words could label correspond to different nodes. Nodes at
+    different depths pick out hypotheses at different levels of
+    generality (e.g., Clydesdales, draft horses, horses, animals, or
+    living things).</small>
+  </P>
+  <P>
+    <I>Priors</I> [on category labels] favor higher-placed nodes and
+    coherent categories.
+  </P>
+  <P>
+    <I>Likelihoods</I> [of images, given labels] assume that examples
+    are drawn randomly from the node labeled by the word, favoring
+    lower nodes that cover the examples tightly. (This captures the
+    sense of
+    <a href="Bayesian-suspicious-coincidences.html"
+       target=new><I><B>suspicious coincidence</B></I></a>: it would
+       be very improbable — suspicious — for all examples of a word to
+       cluster under the same lower branch of the tree if the word
+    actually labels a high node.)
+  </P>
+  <P>
+    <I>Posterior probabilities</I> [of labels, given images] are
+    computed by combining priors and likelihoods; the results favor
+    generalizing across the lowest distinctive branch that spans all
+    the observed examples (boxed in gray).
+  </P>
+
+</div>
+  
+
+
+
+<DIV CLASS="slide">
+  <img src="Tenenbaum-Science11-fig2a.png" class="figure-right" height=640>
+  <h1>[EXTRA] induction: it's STRUCTURED statistics</h1>
+
+  <P>
+    A search algorithm attempts to find both the form \(F\) (dictated
+    by the abstract principles) and the structure \(S\) of that form
+    that jointly maximize \(P(S,F\mid D)\), the posterior probability
+    of the structure and form, given data \(D\). That posterior is a
+    function of the product of \(P(D\mid S)\) and \(P(S\mid F)\).
+  </P>
+  <P>
+    In this example, the algorithm is given as data the features of
+    animals; it then finds a tree structure with intuitively sensible
+    categories at multiple scales.
+  </P>
+  <P>
+    [For examples of structures other than trees, see the next slide.] 
+    <HR>
+      <small>
+	<I>How to Grow a Mind: Statistics, Structure, and Abstraction</I>,
+	J. B. Tenenbaum et al., Science 331:1279 (2011).
+      </small>
+    </P>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <img src="Tenenbaum-Science11-fig2.png" class="figure-right" height=640>
+  <h1>[EXTRA] induction: it's STRUCTURED statistics</h1>
+
+  <P>
+    A search algorithm attempts to find both the form \(F\) (dictated
+    by the abstract principles) and the structure \(S\) of that form
+    that jointly maximize \(P(S,F\mid D)\), the posterior probability
+    of the structure and form, given data \(D\). That posterior is a
+    function of the product of \(P(D\mid S)\) and \(P(S\mid F)\).
+  </P>
+  <P>
+  <table align=center>
+    <tr><td></td><td><I>problem setting</I></td><td><I>form</I></td></tr>
+    <tr><td>(A)</td><td>animal species taxonomy</td><td>tree</td></tr>
+    <tr><td>(B)</td><td>SCOTUS conservative/liberal</td><td>chain</td></tr>
+    <tr><td>(C)</td><td>color similarity</td><td>ring</td></tr>
+    <tr><td>(D)</td><td>latitude/longitude</td><td>ring \(\times\) chain</td></tr>
+    <tr><td>(E)</td><td>morphed face images, 2 parameters</td><td>chain \(\times\) chain</td> </tr>
+  </table>
+  <HR>
+  <small>
+  <I>How to Grow a Mind: Statistics, Structure, and Abstraction</I>,
+  J. B. Tenenbaum et al., Science 331:1279 (2011).
+  </small>
+  </P>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>[EXTRA: causal induction — it's STRUCTURED statistics]</h1>
+
+  <img src="Tenenbaum-Science11-fig3d.png" class="figure-right">
+  <P>
+  <BR>
+  <font color=gray>
+  A Hierarchical Bayesian model for learning an abstract theory of
+  causality.
+  <P>
+  At the highest level are laws expressed in first-order logic
+  representing the abstract properties of causal relationships, the role of
+  exogenous interventions in defining the direction of causality, and
+  features that may mark an event as an exogenous intervention. These laws
+  place constraints on possible directed graphical models at the level
+  below, which in turn are used to explain patterns of observed events over
+  variables. Given observed events from several different causal systems,
+  each encoded in a distinct data matrix, and a hypothesis space of possible
+  laws at the highest level, the model converges quickly on a correct theory
+  of intervention-based causality and uses that theory to constrain
+  inferences about the specific causal networks underlying the different
+  systems at the level below.
+  </font>
+  <HR>
+  <small>
+  <I>How to Grow a Mind: Statistics, Structure, and Abstraction</I>,
+  J. B. Tenenbaum et al., Science 331:1279 (2011).
+  </small>
+
+</div>
+    
+
+  
+<div  CLASS="slide">
+  <h1>general fluid intelligence (gF, a.k.a. IQ)</h1>
+
+  <a href="https://www.mensa.org/workout" target=new><img
+  src="above-average-IQ.jpg" class="figure-right" ></a> 
+  <P>
+  <BR>
+  <ul>
+    <li>The structure of [correlations among subjects' performance in] intelligence [tests]</li>
+    <P>
+    <li>General fluid intelligence (gF)</li>
+    <P>
+    <li>gF, working memory, and analogy problems</li>
+    <P>
+    <li>Practical implications of gF</li>
+    <P>
+    <li>gF in non-human animals</li>
+  </ul>
+  <P>
+  <HR>
+  <P>
+  <A href="http://psychclassics.yorku.ca/Spearman/" target=new><I>"General
+  intelligence," objectively determined and measured</I></a>,
+  <BR>
+  C. Spearman, <I>American Journal of Psychology</I> 15:201-293 (1904). 
+  
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>some tests of general intelligence</h1>
+
+  <img src="1198gottfred_sample.jpg" class="figure-right" >
+  <P>
+  <BR>
+  Four examples of <SC>general intelligence</SC> tests, from a <a
+  href="http://www.udel.edu/educ/gottfredson/reprints/1998generalintelligencefactor.pdf"
+  target=new><I>Scientific American</I> article</a> by L. Gottfredson
+  (1998).
+  <P>
+  <B>Performance in such tests is tightly correlated: a subject who does well
+  on one is likely to do well also on others.</B>
+  <P>
+  The usual degree of correlation between scores in such tasks &#151; about
+  <I>0.75</I> &#151; implies that about <I>50%</I> of the 
+  variance in subjects' performance is explained (through <a href="http://en.wikipedia.org/wiki/Factor_analysis"
+  target=new>factor analysis</a>) by positing the existence of
+  a common <SC>general intelligence factor</SC>, <font color=red><B>gF</B></font>.
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>the structure of intelligence, as revealed by <a
+  href="http://en.wikipedia.org/wiki/Factor_analysis" target=new><SC>factor
+  analysis</SC></a> [see textbook, p.366]</h1>
+  
+  <img src="Deary01-fig1.jpg">
+  <P>
+
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>on the value of the three-stratum model</h1>
+
+  <P>
+  <BR>
+  "This so-called three-stratum model affords freedom from otiose arguments
+  about being 'for or against the general factor.'
+  <P>
+  The three-stratum account has been called a theory. It is not.
+  <P>
+  And it is not a model of the human cognitive architecture: rather,
+  <B>it is a taxonomy</B> or model <B>of test variances and co-variances</B>. The taxonomy
+  does not explain human intelligence differences, it describes them."
+  <DIR>  <DIR>  <DIR>
+    <I>Human intelligence differences: a recent history</I>, I. J. Deary,
+    Trends in Cognitive Sciences 5:127-130 (2001). 
+  </DIR>  </DIR>  </DIR>
+</DIV>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>is the general intelligence factor relevant to real life?</h1>
+
+  <P>
+  <BR>
+  From the <a
+  href="http://www.udel.edu/educ/gottfredson/reprints/1998generalintelligencefactor.pdf"
+  target=new><I>Scientific American</I> article</a> by L. Gottfredson
+  (1998):
+  <DIR>
+    <font size=+3>... Is there indeed a general mental ability we commonly
+    call "intelligence," and is it important in the practical affairs of
+    life? The answer, based on decades of intelligence research, is an
+    unequivocal yes.</font>
+    <P>
+    ... No matter their form or content, tests of mental skills invariably
+    point to the existence of a <B>global factor</B> that permeates all
+    aspects of cognition. And this factor seems to have considerable
+    influence on a person's practical quality of life. Intelligence as
+    measured by IQ tests is the single most effective predictor known of
+    individual performance at school and on the job.
+    <P>
+    ... The effects of environment on intelligence fade rather than
+    grow with time.
+  </DIR>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>general intelligence and real life (from Gottfredson, 1998)</h1>
+
+  <img src="thinking-intelligence-1198gottfred_table-0.gif">
+  <BR>
+  Correlation of IQ Scores with occupational achievement suggests that <font
+  color=red><B>gF</B></font> reflects an ability to deal with <SC>cognitive
+  complexity</SC>.
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>general intelligence and real life</h1>
+  
+  <img src="thinking-intelligence-1198gottfred_table-0.gif">
+  <br clear=all>
+  <img src="thinking-intelligence-1198gottfred_table-1-1.gif">
+  <BR>
+  Scores also correlate with some social outcomes (% young white adults in the US).
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>general intelligence and real life</h1>
+
+  <img src="thinking-intelligence-1198gottfred_table-0.gif">
+  <br clear=all>
+  <img src="thinking-intelligence-1198gottfred_table-1-2.gif">
+  <BR>
+  Scores also correlate with some social outcomes (% young white adults in the US).
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>general intelligence and real life</h1>
+
+  <img src="thinking-intelligence-1198gottfred_table-0.gif">
+  <br clear=all>
+  <img src="thinking-intelligence-1198gottfred_table-2-2.gif">
+  <BR>
+  Scores also correlate with some social outcomes (% young white adults in the US).
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>general intelligence and real life</h1>
+
+  <img src="thinking-intelligence-1198gottfred_table-0.gif">
+  <br clear=all>
+  <img src="thinking-intelligence-1198gottfred_table-2-1.gif">
+  <BR>
+  Scores also correlate with some social outcomes (% young white adults in the US).
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>general intelligence and real life (from Gottfredson, 2004)</h1>
+
+  <img src="Gottfredson04-NALS.jpg">
+  <BR>
+  <small>See the <a href="http://nces.ed.gov/naal/"
+  target=new>National Adult Literacy Survey (NALS)</a>.</small>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>general intelligence and real life</h1>
+
+  <P>
+  <BR>
+  "Turning to [<a href="http://nces.ed.gov/naal/"
+  target=new>NALS</a>] Level 5, these two items require using tables of information. The
+  first one requires determining the cost of carpet for a room and the second
+  involves comparing the merits of two credit cards. Only 4% of white adults
+  in the United States routinely function at this level. If these tasks do
+  not seem difficult to the reader, it is because the reader is used to
+  operating at this cognitive level. Most people cannot."
+  <P>
+  <DIR>  <DIR>  <DIR>
+    Gottfredson, Linda S. (2004). <I>Life, Death, and Intelligence</I>. Journal of
+    Cognitive Education and Psychology [online], 4, 1, 23-46. 
+  </DIR>  </DIR>  </DIR>
+
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>exceptional achievers</h1>
+  
+  <img src="Lubinski06-fig1.jpg" class="figure-right" height=600>
+
+  Lubinski et al. (2006) found that SAT scores delivered early predict well both
+  long-term achievement and life satisfaction.
+  Their study, titled <I>Tracking Exceptional Human Capital Over Two Decades</I>,
+  compared
+  <DIR>
+    <B>380 SAT takers under age 13</B> who scored in the top 0.01% of their age
+    group and were surveyed 20 years later, 
+  </DIR>
+  and
+  <DIR>
+    <B>586 graduate students</B> who had been enrolled in a top-ranked
+    engineering, mathematics, or physical science program, and given
+    the same survey 12 years later.
+  </DIR>
+  This chart describes the career choices of the members of the two groups.
+
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>factors that affect gF</h1>
+
+  <P>
+  <BR>
+  The typical breakdown of the respective contributions to the variance in <font
+  color=red><B>gF</B></font> in a given population is:
+  <P>
+  <table cellpadding=20 border=1 align=center>
+    <tr>
+      <th align=left>genes:</th>
+      <td>~ 50%</td>
+    </tr>
+    <tr>
+      <th align=left>shared <font color=gray>[with siblings & family]</font> environment:</th>
+      <td>~ 0-10%</td>
+    </tr>
+    <tr>
+      <th align=left>unique <font color=gray>[to the person]</font> environment:</th>
+      <td>~ 40-50%</td>
+    </tr>
+  </table>
+  <P>
+
+  Source:
+  <DIR>
+    S. Pinker, <I>The Blank Slate: the modern denial of human nature</I>,
+    Chapter 19 (Viking, Harmondsworth, UK, 2000) 
+  </DIR>
+
+</div>
+
+-->
+
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>implications for policy? [as in all decision making, your opinion reflects your VALUES]</h1>
+
+  <P>
+  <BR>
+  <center>
+  <a href="http://xkcd.com/1049/" target=new><img src="http://imgs.xkcd.com/comics/bookshelf.png"></a>
+  </center>
+
+</div>
+  
+-->
+
+
+<DIV CLASS="slide">
+  <h1>NOW, what functional building blocks could underlie general intelligence?</h1>
+
+  <P>
+  <BR>
+  The prime suspect behind gF: <SC>working memory</SC>.
+  <!--
+  <P class="incremental">
+  [Also: PROCESSING SPEED (in the diffusion model of decision making from <a
+  href="week-13-2.html" target=new>Lecture 13.2</a>, this corresponds to the
+  diffusion rate).]
+  </P>
+  -->
+  
+</div>
+
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>the centrality of working memory</h1>
+
+  <img src="Deary01-figI.jpg" class="figure-right" >
+  <P>
+  <BR>
+  The cognitive architecture used to examine associations between <SC>working
+  memory</SC> and <SC>intelligence</SC> (from Deary, 2001b).
+  <P>
+  "General fluid intelligence and working memory both reflect 'the
+  ability to keep a representation active, particularly in
+  the face of interference and distraction'."
+  <HR>
+  <small>P. C. Kyllonen and R. E. Christal, <I>Reasoning ability is (little
+  more than) working memory capacity?!</I> Intelligence 14, 389-433 (1990).</small>
+
+</div>
+
+-->
+
+
+
+<DIV CLASS="slide">
+  <h1>understanding general intelligence: the centrality of working memory</h1>
+
+  <P>
+  <BR>
+  The prime suspect behind gF: <SC>working memory</SC>.
+  <P>
+  <HR>
+  <P>
+  "The realization that general intelligence and working
+  memory might be closely linked brings together two concepts with
+  <B>massive psychometric evidence</B> on the one hand and <B>massive cognitive and
+  neuroscience evidence</B> on the other."
+  <DIR>  <DIR>  <DIR>
+    <I>Human intelligence differences: towards a combined
+    experimental-differential approach</I>, I. J. Deary, Trends in Cognitive
+    Sciences 5:164-170 (2001).
+  </DIR>  </DIR>  </DIR>
+  
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>gF and working memory: a nearly perfect correlation  [see textbook, p.369]</h1>
+
+  <img src="Deary01-figII.jpg" height=400>
+  <P>
+  <BR>
+  <font color=blue>blue</font>: intelligence tests (revealing gF)
+  <BR>
+  <font color=green>green</font>: tests of cognitive abilities (revealing WM)
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>one of the first tests of this idea: the n-back match task</h1>
+
+  <img src="Kane03-fig2.jpg">
+  <P>
+  This is the 3-back <SC>working memory</SC> task, in which
+  the subject must determine whether or not the present target was shown
+  precisely three items back.
+  <P>
+  Gray et al. (2003) used this task to demonstrate
+  that <B>WM contributes to general intelligence to the extent that it can 
+  support flexible, <SC>interference-avoiding</SC> manipulation of
+  data.</B>
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>flexible interference avoiding (the 3-back match task)</h1>
+
+  <img src="Kane03-fig2.jpg" height=200 class="figure-right" >
+  <P>
+  <SC>Lure foils</SC>: matched a stimulus 2, 4, or 5 items ago in the
+  sequence.
+  <P>
+  <SC>Non-lure foils</SC> were all other non-target trials (items never seen
+  before, or matches seen 1-back or 6-or-more-back).
+  <HR>
+  <B>Behavioral findings:</B>
+  <OL>
+    <li>Lure foils were much less accurately rejected by subjects than were
+    non-lure foils.</li>
+    <li>Lure-foil accuracy correlated positively with gF, and remained
+    significant after partialling out individual differences in non-lure
+    foil accuracy or target accuracy.</li>
+  </OL>
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>flexible interference avoiding (the 3-back match task)</h1>
+
+  <img src="Kane03-fig2.jpg" height=200 class="figure-right" >
+  <P>
+  <SC>Lure foils</SC>: matched a stimulus 2, 4, or 5 items ago in the
+  sequence.
+  <P>
+  <SC>Non-lure foils</SC> were all other non-target trials (items never seen
+  before, or matches seen 1-back or 6-or-more-back).
+  <HR>
+  <B>fMRI findings:</B>
+  <OL>
+    <li>In lure trials, high-gF subjects showed a markedly greater increase
+    in fMRI signal in left lateral <a
+    href="http://en.wikipedia.org/wiki/Prefrontal_cortex"
+    target=new>prefrontal cortex (PFC)</a> than low-gF subjects.</li>
+    <li>in non-lure trials, this correlation of gF with brain activity was
+    much weaker.</li> 
+  </OL>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>flexible interference avoiding (the 3-back match task)</h1>
+
+  <img src="Kane03-fig2.jpg" height=200 class="figure-right" >
+  <P>
+  <SC>Lure foils</SC>: matched a stimulus 2, 4, or 5 items ago in the
+  sequence.
+  <P>
+  <SC>Non-lure foils</SC> were all other non-target trials (items never seen
+  before, or matches seen 1-back or 6-or-more-back).
+  <HR>
+  <P>
+  <B>Summary of behavioral + fMRI findings:</B>
+  <ul>
+    <li>Only those <SC>working memory</SC> processes involved in <SC>interference
+    control</SC> (lure trials) were implicated as gF-related brain activity.
+    </li>
+  </ul>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>prefrontal cortex (PFC) size and gF in non-human species</h1>
+
+  <img src="mouse_monkey_human.jpg" height=40% class="figure-right"
+  title="prefrontal cortex in mouse, monkey, human">
+  <P>
+  <BR>
+  Respect the mouse!
+  <HR>
+  <P>
+  "Recent studies are consistent with the presence of general intelligence in mammals
+  (rodents and primates)."
+  <DIR><DIR><DIR>
+	—
+	<a href="https://www.aim.uzh.ch/de/Members/seniorlecturers/judithburkart.html"
+	target=new>Judith M. Burkart</a> et
+	al. (2018). <a href="https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/the-evolution-of-general-intelligence/5AB1923F6D39AEED6AFB91E5AACCEE8E" target=new><I>The
+	evolution of general intelligence</I></></a>. Behavioral and Brain
+	Sciences 40:e195. 
+  </DIR></DIR></DIR>
+  
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>from Burkart et al. (2017)</h1>
+
+  <img src="Burkart17-tab1.png" height=80% class="figure-right">
+    "In animals, intelligence is thought to involve an individual’s
+    ability to acquire new knowledge from interactions with the
+    physical or social environment, use this knowledge to organize
+    effective behavior in both familiar and novel contexts, and ENGAGE
+    WITH AND SOLVE NOVEL PROBLEMS."
+    <HR>
+    <P class="incremental">
+      general problems <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &darr;</center><BR>
+      general intelligence
+    </P>
+
+    
+</div>
+
+
+  
+
+<DIV CLASS="slide">
+  <h1>the BIG PROBLEMS with interpreting and using IQ measurements</h1>
+
+  <P>
+    IQ has traditionally been and is still being <B>interpreted</B> as
+    measuring a person's fixed innate intellectual ability. In
+    contrast, recent studies show that IQ strongly depends on formal
+    schooling.
+  </P>
+  <P>
+    IQ and its equivalents have traditionally been and are still being
+    <B>used</B> to justify discriminatory and unjust social policies.
+  </P>
+  <HR>
+  <P>
+    Some of the relevant evidence concerning IQ and education:
+    <ul>
+      <li>
+	Davis, Helen Elizabeth. <a href="https://digitalrepository.unm.edu/anth_etds/17" 
+				   target=new><I>Variable Education
+	    Exposure and Cognitive Task Performance Among the Tsimane,
+	    Forager-Horticulturalists</I></a>
+	(2014).
+      </li>
+      <li>
+	Baker, David P., Paul J. Eslinger, Martin Benavides, Ellen
+	Peters, Nathan F. Dieckmann, and Juan
+	Leon. <a href="http://dx.doi.org/10.1016/j.intell.2015.01.003"
+	target=new><I>The cognitive impact of the education
+	revolution: A possible cause of the Flynn Effect on population
+	IQ</I></a>, Intelligence 49:144-158 (2015).
+      </li>
+      <li>
+	Stuart J. Ritchie and Elliot
+	M. Tucker-Drob. <a href="https://journals.sagepub.com/doi/10.1177/0956797618774253"
+	target=new><I>How Much Does Education Improve Intelligence? A
+	Meta-Analysis</I></a>, Psychological Science 29:1358-1369
+	(2018).
+      </li>
+    </ul>
+    
+</div>
+
+      
+
+<DIV CLASS="slide">
+  <h1><I>Variable Education Exposure and Cognitive Task Performance
+	    Among the Tsimané, Forager-Horticulturalists</I> [Davis et
+	    al., 2014]</h1>
+
+  <img src="Davis14-fig.3.2.png" height=70% class="figure-right">
+    <P>
+      Davis measured cognitive performance
+      among <a href="https://en.wikipedia.org/wiki/Tsiman%C3%A9"
+      target=new>Tsimané</a> children between 8 and 18 years of age
+      exposed to variable levels of formal schooling.
+    </P>
+    <P>
+      <I>On the right:</I> Scatterplot of performance on
+      <a href="https://en.wikipedia.org/wiki/Raven%27s_Progressive_Matrices"
+      target=new>Raven’s Colored Progressive Matrices</a> among
+      children in consistently schooled, moderately schooled, and
+      unschooled villages (N = 283). A
+      <a href="https://en.wikipedia.org/wiki/Dose%E2%80%93response_relationship"
+      target=new>dose-response effect</a> is seen on Raven’s
+      performance where, with more schooling, improved performance was
+      also observed.
+    </P>
+    
+</div>
+
+      
+
+<DIV CLASS="slide">
+  <h1>[Davis et al., 2014]</h1>
+
+  <img src="Davis14-fig4.3.png" height=80% class="figure-right">
+    <P>
+      Results
+      from <a href="https://en.wikipedia.org/wiki/Path_analysis_(statistics)"
+      target=new>path analysis</a> among all students within schooled
+      villages (N = 298). Standardized path coefficients listed for
+      each related variable. Line thickness indicates significant
+      negative path coefficients.
+    </P>
+    
+</div>
+
+      
+
+<DIV CLASS="slide">
+  <h1><I>The cognitive impact of the education revolution: A possible
+	cause of the Flynn Effect on population IQ</I> [Baker et al.,
+	2015]</h1>
+
+  <img src="Baker15-fig1.png" height=60% class="figure-right">
+    <P>
+      The phenomenon of rising IQ scores in high-income nations over
+      the 20th century, known as the
+      <a href="https://en.wikipedia.org/wiki/Flynn_effect"
+      target=new>Flynn Effect</a>, indicates historical increase in
+      mental abilities related to planning, organization, working
+      memory, integration of experience, spatial reasoning, unique
+      problem-solving, and skills for goal-directed behaviors. [...] A
+      <B>field study</B> with adults from insolated agrarian
+      communities finds that variable exposure to schooling is
+      associated with related variation in the mental abilities. [...]
+      A <B>historical</B> analysis of the cognitive requirements of
+      American mathematics curriculum finds a growing cognitive demand
+      for birth cohorts from later in the 20th century. These findings
+      show the impact of mass education on the Flynn Effect.
+    </P>
+    
+</div>
+
+
+
+<!-- 
+
+<DIV CLASS="slide">
+  <h1>[Baker et al., 2015]</h1>
+
+  <img src="Baker15-fig2.png" height=80% class="figure-right">
+    <P>
+
+    </P>
+    
+</div>
+
+-->
+  
+
+<DIV CLASS="slide">
+  <h1>[Baker et al., 2015]</h1>
+
+  <img src="Baker15-fig4B.png" height=80% class="figure-right">
+    <P>
+      <a href="https://en.wikipedia.org/wiki/Structural_equation_modeling"
+      target=new>Structural equation model</a> of association between
+      <a href="https://en.wikipedia.org/wiki/Peru"
+      target=new>Peruvian</a> [adult] subjects' years of schooling and
+      cognitive
+      <a href="https://en.wikipedia.org/wiki/Executive_functions"
+      target=new>executive functioning</a>.
+    </P>
+    
+</div>
+
+      
+
+<DIV CLASS="slide">
+  <h1>[Baker et al., 2015]</h1>
+
+  <img src="Baker15-fig6.png" height=65% class="figure-right">
+    <P>
+      The percentage of pages with reasoning, estimation, mental math,
+      and self-check in the 1st and 4th grade textbooks combined,
+      1932–2000 [U.S.].
+    </P>
+    
+</div>
+
+  
+
+  
+<DIV CLASS="slide">
+  <h1><I>How Much Does Education Improve Intelligence? A
+	Meta-Analysis</I> [Ritchie and Tucker-Drob, 2018]</h1>
+
+  <P>
+    Intelligence test scores and educational duration are positively
+    correlated. This correlation could be interpreted in two ways:
+    Students with greater propensity for intelligence go on to
+    complete more education, or a longer education increases
+    intelligence.
+  </P>
+  <P>
+    We <a href="https://en.wikipedia.org/wiki/Meta-analysis"
+    target=new>meta-analyzed</a> three categories of
+    quasi-experimental studies of educational effects on intelligence:
+    <ol>
+      <li>
+	those estimating education-intelligence associations after
+	controlling for earlier intelligence,
+      </li>
+      <li>
+	those using compulsory
+	schooling policy changes as instrumental variables, and
+      </li>
+      <li>
+	those
+	using regression-discontinuity designs on school-entry age
+	cutoffs.
+      </li>
+    </ol>
+  </P>
+  <P>
+    Across 142 effect sizes from 42 data sets involving over 600,000
+    participants, we found consistent evidence for beneficial effects
+    of education on cognitive abilities of approximately <B>1 to 5 IQ
+      points for an additional year of education</B>.
+  </P>
+  <P>
+    <I>Education appears to be the most consistent, robust, and
+    durable method yet to be identified for raising intelligence.</I>
+  </P>
+    
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>IQ and capitalism; IQ and racism</h1>
+
+  <h3>IQ and capitalism</h3>
+  <P>
+    Bowles, Samuel, Herbert Gintis, and Peter
+    Meyer. <a href="http://www.jstor.com/stable/41336295" target=new><I>Education, IQ,
+    and the legitimation of the social division of labor</I></a>,
+    Berkeley Journal of Sociology, 20:233-264 
+    (1975-76).
+    <blockquote>
+      "A major proposition of Marxian educational theory is that the
+      educational system in advanced capitalist societies is a
+      mechanism for the reproduction of the social division of labor.
+      This paper deals with one aspect of the reproduction process:
+      the <I>legitimation</I> of the division of labor and the process
+      of assigning individuals to its various positions. We say that a
+      social process is legitimated when individuals are sufficiently
+      convinced of its inevitability, desirability, or justness that
+      united class action towards the transformation of the process is
+      rendered infeasible. Thus the apparent legitimacy of social
+      relationships is one, but clearly not the only, basis of the
+      fragmentation of class solidarity."
+    </blockquote>
+  </P>
+
+  <h3>IQ and racism</h3>
+  <P>
+    Felix Klaassen,
+    <a href="https://blog.donders.ru.nl/?p=12203&lang=en"
+       target=new><I>How IQ-scores encourage racism</I></a> (blog
+       post, 20 July 2020).
+      <blockquote>
+	"Intelligence is one of the most studied aspects of human
+	cognition. However, it seems that IQ – the intelligence
+	quotient – does not accurately represent intelligence. In
+	fact, the way IQ is determined encourages racism, and the
+	scientific community is not free from these biases."
+      </blockquote>
+    </P>
+    
+</div>
+
+      
+
+
+<DIV CLASS="slide">
+  <h1>implications for policy? [as in all decision making, your opinion reflects your VALUES]</h1>
+
+  <center>
+  <img src="lpf.jpg" height=475>
+  </center>
+
+</div>
+
+
+
+
+<div class="footer">
+<p>Last modified: Tue Aug 11 2020 at 08:48:21 EDT</p>
+</div>
+</body>
+</html>

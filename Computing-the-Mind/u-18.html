@@ -1,0 +1,1094 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computational Psychology — Unit 18</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2014-2019 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- 
+<rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+<permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+<requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+<permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+<requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+</License>
+</rdf:RDF>
+-->
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 18 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computational Psychology</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 18: neuronal learning and timing</h2>
+  </div>
+  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%>
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+
+<div  CLASS="slide">
+  <h1>learning via synaptic modification</h1>
+
+  <P>
+  <BR>
+  <ul>
+    <li>computational models of
+    <a href="https://en.wikipedia.org/wiki/Synapse" target=new>synaptic</a> learning:
+    <ul>
+      <li>the <a href="https://en.wikipedia.org/wiki/Hebbian_theory" target=new>Hebb rule</a></li>
+      <P>
+      <li>the <a href="https://en.wikipedia.org/wiki/BCM_theory"
+      target=new>BCM rule</a> /
+      <a href="https://en.wikipedia.org/wiki/Projection_pursuit" target=new>projection pursuit</a></li>
+    </ul>
+    </li>
+      <P>
+	<li>biological relevance of the BCM rule</li>
+  </ul>
+  
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>a by-now-unnecessary reminder: how a neuron computes</h1>
+
+  <P>
+  <BR>
+  The basic <SC><B>computation</B></SC> performed by a neuron:
+  <OL>
+    <li>multiply the components of the incoming signal
+    \(\textbf{x}=(x_1,x_2,\dots,x_i)\) by their corresponding
+    synaptic <SC>weights</SC>, \(\textbf{w}=(w_1,w_2,\dots,w_i)\)</li>
+    <li><SC>sum</SC> the resulting products;</li>
+    <li>pass the sum through a <SC>nonlinearity</SC> (e.g., <a
+ href="http://en.wikipedia.org/wiki/Logistic_sigmoid"
+   target=new>logistic sigmoid</a>);</li>
+    <li><SC>compare</SC> the result to a <SC>threshold</SC>;</li>
+    <li><SC><B>if</B></SC> it exceeds the threshold,
+    <B><SC>then</SC></B> output an <SC><a
+    href="http://en.wikipedia.org/wiki/Action_potential" target=new>action
+    potential</a></SC> (spike).</li>
+  </OL>
+
+</div>
+
+
+  <DIV  CLASS="slide">
+  <h1>how neurons learn: experience driving the changes</h1>
+
+  <img src="synaptic-plasticity.jpg" class="figure-right" height=500>
+  <P>
+  <BR>
+    In many types of neurons, the synaptic weight \(\textbf{w}\)
+    is <SC>modifiable</SC> by <SC><B>experience</B></SC> (and so are
+    some of the parameters that control this modification process; see
+    slides #10-#11).
+    <P>
+    <a
+    href="http://en.wikipedia.org/wiki/Synaptic_plasticity"
+    target=new>Synaptic modification</a> can take the form of
+    <SC>Long-Term Potentiation</SC> (<a
+    href="http://en.wikipedia.org/wiki/Long-term_potentiation"
+    target=new>LTP</a>) or <SC>Long-Term Depression</SC> 
+    (<a href="http://en.wikipedia.org/wiki/Long-term_depression"
+    target=new>LTD</a>) of synaptic efficacy (weight).
+
+    <P class="incremental">
+      The details of these processes — even the vastly oversimplified
+      sketch of the molecular dynamics of LTP and LTD illustrated here — are beyond the
+      scope of the present discussion.
+    </P>
+    
+  <P class="incremental">
+  <font color=red><SC><B>Experience</B></SC> = joint <a href="http://en.wikipedia.org/wiki/Statistics"
+  target=new><SC><B>statistics</B></SC></a> of presynaptic and postsynaptic 
+    neuron activities.</font>
+  </P>
+
+</DIV>
+
+
+<DIV  CLASS="slide">
+  <h1>a reminder re the neuron's "experience": the War Room analogy</h1>
+
+  <a href="http://en.wikipedia.org/wiki/Dr._Strangelove" target=new><img src="strangelove_war_room.jpg" title="the war room from Dr. Strangelove" class="figure-right"></a>
+  <P>
+  <BR>
+  <font color=red><SC><B>Experience</B></SC> = joint <a href="http://en.wikipedia.org/wiki/Statistics"
+  target=new><SC><B>statistics</B></SC></a> of presynaptic and postsynaptic 
+  neuron activities.</font>
+  <P>  
+  Why it makes sense to define experience in terms of synapse-level events:
+  <DIR><DIR>
+    — remember the analogy between the brain/mind and a war cabinet.
+  </DIR></DIR>
+  </P>
+  <P>  
+  Why it makes sense to consider experience through the lens of statistics:
+  <DIR><DIR>
+    — review material from earlier units :-)
+  </DIR></DIR>
+  <P>
+  Why JOINT INPUT&OUTPUT statistics?
+  <DIR><DIR>
+    — because consequences matter (in reinforcement learning,
+    consequences of actions; here, of neural activity)  
+  </DIR></DIR>
+
+</DIV>
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>ASH NAZG...</h1>
+
+  <P>
+    <BR>
+      ONE RULE TO BRING THEM ALL:
+      <DIR>      <DIR>      <DIR>
+	The  <a 
+  href="http://en.wikipedia.org/wiki/Hebbian"
+  target=new><SC>Hebbian</SC></A> rule: "neurons that fire together,
+	wire together".
+	</DIR>      </DIR>      </DIR>
+
+</div>
+
+
+      
+
+<DIV  CLASS="slide">
+  <h1>input space and weight space, visualized together</h1>
+
+  <img src="Hebb-cloud.jpg" class="figure-right" height=350>
+  <P>
+  <BR>
+  Consider a neuron that computes
+  $$
+  out \propto \textbf{w}\cdot \textbf{x} = w_1 x_1 + w_2 x_2
+  $$
+  <HR>
+  <P>
+  On the right, the input \(\textbf{x}=(x_1,x_2)\) and
+  the weight \(\textbf{w}=(w_1,w_2)\) vectors are
+  plotted together in the same 2D space. The dotted line shows the change
+  that the weight vector undergoes through Hebbian learning (see next slide).
+
+</div>
+
+
+<DIV  CLASS="slide">
+  <h1>input statistics driving weight changes</h1>
+
+  <img src="Hebb-cloud.jpg" class="figure-right" height=350>
+  <P>
+  <BR>
+  Consider a neuron that computes
+  $$
+  out \propto \textbf{w}\cdot \textbf{x} = w_1 x_1 + w_2 x_2
+  $$
+  <P>
+  Computational analysis carried out in the 1980s proved that neurons
+  with experience-dependent <a 
+  href="http://en.wikipedia.org/wiki/Hebbian"
+  target=new><SC>Hebbian</SC></A> synapses (as in: spike timing dependent
+  plasticity, <a
+  href="http://www.scholarpedia.org/article/Spike-timing_dependent_plasticity"
+  target=new>STDP</a>, to be discussed later)
+  <!--
+  <a
+ href="http://kybele.psych.cornell.edu/~edelman/Psych-2140/week-2-2.html"
+ target=new>Lecture 2.2</a>
+  -->
+  learn
+  the projection that maximizes the variance of the data in the
+  resulting space. In other words, they carry out Principal Component Analysis
+  or <a
+  href="http://en.wikipedia.org/wiki/Principal_component_analysis"
+  target=new>PCA</a>.
+
+</div>
+
+
+<!-- Hebb and BCM -->
+
+
+  
+
+<DIV CLASS="slide">
+  <h1>the Hebb rule and Oja's modification of it</h1>
+
+  <P>
+    <BR>
+  <B>Hebbian learning:</B> a synaptic connection between two neurons
+    increases in efficacy in proportion to the degree of correlation between
+    the mean activities of the pre- and post-synaptic neurons (<a
+    href="http://scholarpedia.org/article/Hebb" target=new>Donald 
+    O. Hebb</a>, 1949).  
+  <P>
+  The <a href="https://en.wikipedia.org/wiki/Hebbian_theory"
+  target=new>Hebb rule</a> in formal notation: 
+  $$
+  \begin{matrix}
+  y &=& \sum_i w_i x_i \\
+  \frac{dw_i}{dt} &=& \eta x_i y
+  \end{matrix}
+  $$
+  The <a href="http://scholarpedia.org/article/Oja_learning_rule"
+ target=new>Oja rule</a>:
+  $$
+  \frac{dw_i}{dt} = \eta \left(x_i y - y^2w_i\right)
+  $$  
+
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>an axiomatic approach to modeling synaptic modification, leading
+  to the BCM rule (after Cooper & Bear 2012)</h1>
+
+  <P>
+  <BR>
+  To account for much data on synapse modification in response to
+  experience, Bienenstock, <a
+ href="http://en.wikipedia.org/wiki/Leon_Cooper" target=new>Cooper</a>, and
+  Munro (1982) proposed the three 
+  postulates of what came to be called the <a 
+  href="http://scholarpedia.org/article/BCM_rule" target=new>BCM theory</a>:
+  <ol>
+    <li>The change in synaptic weights (\(dw_i/dt\)) is proportional to
+    the PREsynaptic activity (\(x_i\)).
+    </li>
+    <li>The change in synaptic weights (\(dw_i/dt\)) is also proportional to a non-monotonic
+    function (denoted by \(\phi\)) of the POSTsynaptic activity (\(y\)): 
+    <ol>
+      <li>for small \(y\) , the synaptic weight decreases (\(dw_i/dt < 0\));</li>
+      <li>for larger \(y\) , it increases (\(dw_i/dt > 0\)).
+    </ol>
+    The cross-over point between \(dw_i/dt < 0\) and \(dw_i/dt > 0\) is called the
+    modification threshold, and is denoted by \(\theta_M\).
+  </li>
+  <li>
+  The modification threshold \(\theta_M\) is itself a nonlinear
+  function of the history of postsynaptic activity \(y\). 
+  </ol>
+
+  
+</div>
+
+  
+
+<DIV CLASS="slide">
+  <h1>[EXTRA] an objective-function approach to modeling synaptic modification, leading to the BCM rule</h1>
+
+  <img src="BCM_Main_figure.png" class="figure-right" height=300>
+  <P>
+  <BR>
+  The BCM rule (Intrator and Cooper, 1992):
+  $$
+  \begin{matrix}
+  y &=& \sigma\left(\sum_i w_i x_i\right) & \ \\
+  \frac{dw_i}{dt} &\propto & \phi\left(y\right)\cdot x_i &= y\left(y-\theta_M\right)\cdot x_i \\
+  \theta_M &=& E\left[y^2\right] & \ 
+  \end{matrix}
+  $$
+  where \(E\) denotes <a href="http://en.wikipedia.org/wiki/Expected_value"
+  target=new>expectation</a> (statistical averaging).
+  <!-- \cdot
+ \sigma^{\prime}\left(y\right) and
+  \(\sigma^{\prime}\) is the derivative of the sigmoidal transfer function \(\sigma\)
+  (the neuron's "output nonlinearity").
+  -->
+  <P>
+  This form of BCM can be derived by minimizing a loss (or objective,
+  or cost) function
+  $$
+  R = -\frac{1}{3} E\left[y^3\right] + \frac{1}{4}E^2\left[y^2\right]
+  $$
+  that measures the <B>bi-modality</B> of the output distribution.
+  Similar rules can be derived from objective functions based on <a
+  href="http://en.wikipedia.org/wiki/Kurtosis" target=new>kurtosis</a> and
+  <a href="http://en.wikipedia.org/wiki/Skewness" target=new>skewness</a>. 
+  </P>
+  
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>the conceptual steps in getting from Hebb to BCM</h1>
+
+  <img src="CooperBear12-fig1.png" class="figure-right" height=300>
+  <P>
+  <B>(a)</B> For the information required for Hebbian synaptic modification
+  to be available locally at the synapses, information about the
+  integrated postsynaptic firing rate \(c\) must be propagated backwards or
+  retrogradely. The existence of 'back spiking' (dashed lines) was confirmed
+  experimentally and shown to be associated with changes in synaptic
+ strength.
+  <P>
+  <B>(b)</B> Simple Hebbian modification assumes that active synapses grow
+  stronger at a rate proportional to the concurrent integrated postsynaptic
+  response; therefore, the value of \(\phi\) increases monotonically with
+  \(c\).
+  <P>
+  <B>(c)</B> The CLO (Cooper, Liberman, and Oja) theory combined Hebbian and
+  anti-Hebbian learning to obtain a more general rule that can yield
+  selective responses. When a pattern of input activity evokes a
+  postsynaptic response greater than the modification threshold
+  (\(\theta_m\)), the active synapses strengthen; otherwise, the active
+  synapses weaken.
+  <P>
+  <B>(d)</B> The BCM (Bienenstock, Cooper and Munro) theory incorporates
+  a sliding modification threshold that adjusts as a function of the history
+  of average activity in the postsynaptic neuron. This graph shows the shape
+  of \(\phi\) at two different values of \(\theta_m\). The orange curve
+  shows how synapses modify after a period of postsynaptic inactivity, and
+ the red curve shows how synapses modify after a period of heightened
+  postsynaptic activity.
+  
+</div>
+
+    
+
+<DIV CLASS="slide">
+  <h1>[EXTRA] the important properties of the BCM rule (Intrator and Cooper, 1992)</h1>
+
+  <ol>
+    <li>
+    As an exploratory projection index, it seeks deviation from a
+    Gaussian distribution, in the form of multi-modality.
+    </li>
+    <li>
+    It naturally extends to a lateral inhibition network, which can find
+    several projections at once.
+    </li>
+    <li>
+    The number of calculations of the gradient grows linearly with the
+    number of projections sought, thus it is very efficient in high dimensional
+    feature extraction.
+    </li>
+    <li>
+    The search is forced to <a
+    href="http://en.wikipedia.org/wiki/Projection_pursuit" target=new>seek
+    projections</a> that are orthogonal to 
+    all but one of the clusterings (in the original space). Thus, there are at
+    most \(K\) optimal projections and not \(K(K−1)/2\) separating
+    hyper-planes as in discriminant analysis methods. This property is very
+    important as it suggests why the "curse of dimensionality" is less
+    problematic with this learning rule.
+    </li>
+    <li>
+    The neuronal output (or the projection) of an input \(x\)
+    (or a cluster of inputs) is proportional to \(1/P(x)\), where \(P(x)\) is the
+    a-priori probability of the input \(x\). This property is essential for creating
+    <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.32.1269"
+    target=new><B>"suspicious coincidence" detectors</B></a>, and it
+    also indicates the optimality of the learning 
+    rule in terms of energy (or code) conservation.
+    If a biologically plausible
+    log saturation transfer function is used as the neuronal non-linearity, it
+    follows that the amplitude or code length associated with the input \(x\) is
+    proportional to \(−\log\left(P\left(x\right)\right)\), which is optimal
+    from information-theoretic considerations.
+    </li>
+    </small>
+</ol>
+<HR>
+  The BCM rule has been used in many applications.
+
+  
+</div>
+
+  
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>Can theory be useful in neuroscience? (Cooper and Bear, 2012)</h1>
+
+  <P>
+  <BR>
+  What is a good theory? The usefulness of a theory lies in its concreteness and in the precision
+with which questions can be formulated. A successful approach is to find the minimum number of
+assumptions that imply as logical consequences the qualitative features of the system that we are
+trying to describe. As Einstein is reputed to have said: “Make things as simple as possible, but no
+simpler.” Of course there are risks in this approach. We may simplify too much or in the wrong way
+so that we leave out something essential or we may choose to ignore some facets of the data that
+distinguished scientists have spent their lifetimes elucidating. Nonetheless, the theoretician must
+first limit the domain of the investigation: that is, introduce a set of assumptions specific enough to
+give consequences that can be compared with observation. We must be able to see our way from
+assumptions to conclusions. The next step is experimental: to assess the validity of the underlying
+assumptions if possible and to test predicted consequences.
+  <P>
+A ‘correct’ theory is not necessarily a good theory. For example, in analysing a system as
+complicated as a neuron, we must not try to include everything too soon. Theories involving vast
+numbers of neurons or large numbers of parameters can lead to systems of equations that defy
+analysis. Their fault is not that what they contain is incorrect, but that they contain too much.
+<P>
+  A theory is not a legal document and, in spite of occasional suggestions to the contrary, no
+scientist is in communication with the Almighty. Theoretical analysis is an ongoing attempt to
+create a structure — changing it when necessary — that finally arrives at consequences consistent
+with our experience. Indeed, one characteristic of a good theory is that one can modify the
+structure and know what the consequences will be. From the point of view of an experimentalist, a
+good theory provides a structure in to which seemingly incongruous data can be incorporated and
+that suggests new experiments to assess the validity of this structure. A good theory helps the
+experimentalist to decide which questions are the most important.
+
+  </div>
+
+  -->
+
+
+<DIV CLASS="slide">
+  <h1>lessons?</h1>
+
+
+  <!--   <img src="" class="figure-right" >  -->
+  <P>
+  <BR>
+  So, what is it that neurons compute (natively)?
+  <ul class="incremental">
+    <li>
+    Do linear algebra (vector projection / inner product, matrix
+    multiplication).</li>
+    <P>
+    <li>
+    Implement dimensionality reduction (from many dimensions to one),
+    <font color=gray>including similarity-preserving DR by random projections.</font>
+    </li>
+    <P>
+    <li>
+    <font color=gray>Perform function approximation (when arranged in multilayer networks).</font>
+    </li>
+    <P>
+    <li>
+    Respond selectively (exhibit tuning) <font color=gray> and thus serve as
+    landmarks/prototypes in a similarity-based 
+    representation scheme, a.k.a. the Chorus Transform</font>.
+    </li>
+    <P>
+    <li>
+    Form spatial maps, presumably to facilitate navigation, episodic
+    memory and prospection, and social cognition. 
+    <P>
+    <li>
+    Form abstract maps (retinotopic, tonotopic, chronotopic, etc.),
+    presumably to facilitate similarity-based readout. 
+    </li>
+    <P>
+    <li>
+    Organize themselves in dynamic assemblies (note the importance of
+    time) implemented by readout mechanisms.
+    </li>
+    <P>
+    <li>
+    Learn.
+    </li>
+  </ul>
+  
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>what neurons do: keep track of, and act upon, precise timing of spikes</h1>
+
+  <!--
+  <embed src="brain-scan.mp4" height=256 width=320 controller=true
+  autoplay=false align=right hspace=20>
+  -->
+  <P>
+  <BR>
+  <ul>
+    <li>
+      <font color=gray>Timing in coincidence detection: as in the barn owl sound localization
+	circuit; also readout.</font>
+    </li>
+    <P>
+    <li>
+      Timing in learning: as in Spike Timing-Dependent Plasticity (<a
+								     href="http://www.scholarpedia.org/article/Spike-timing_dependent_plasticity"
+								     target=new>STDP</a>).
+    </li>
+  </ul>
+  
+</div>
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>learning from experience through synaptic modification</h1>
+
+  <img src="STDP-Fig1.jpg" title="STDP" class="figure-right">
+  <P>
+  <BR>
+  Learning from experience at the level of synapse:
+  <P>
+  &#151; modification of synaptic
+  weight through Spike Timing-Dependent Plasticity (<a
+  href="http://www.scholarpedia.org/article/Spike-timing_dependent_plasticity"
+  target=new>STDP</a>).
+  <P>
+  \(w_{ij}\): the weight of the synapse between the presynaptic neuron \(j\)
+  and the postsynaptic neuron \(i\).
+  <P>
+  \(\frac{\Delta w_{ij}}{w_{ij}}\): normalized change in the value of the
+  synaptic weight.
+  <P>
+  The abscissa of the plot shows the time difference between the pre- and
+  post-synaptic spikes, \(\Delta t = t_{j}^{pre} - t_{i}^{post}\), in milliseconds.
+  Circles are actual data points from a recording, to which a curve was
+  fitted. Note that the curve is sharply discontinuous at \(\Delta t = 0\).
+
+</DIV>
+
+
+
+<DIV  CLASS="slide">
+  <h1>molecular basis of STDP (from Natalia Caporale & Yang Dan, 2008)</h1>
+
+  <img src="CaporaleDan08-fig2.png" title="STDP" class="figure-right">
+  <P>
+  <BR>
+  Schematic representation of signaling pathways involved in STDP induction.
+  In tLTP induction (right), the NMDA receptors act as coincidence detectors
+  for pre- and postsynaptic spiking. In tLTD induction (left) the coincidence
+  detector may vary across synapses.
+  <P>
+    The diagram includes several pathways that
+  have been suggested to play a role in tLTD. Red oval indicates possible
+  coincidence detectors. Arrow indicates activation/potentiation. Blunt-ended
+  line indicates inhibition/suppression. Abbreviations: eCB, <a
+ href="https://en.wikipedia.org/wiki/Endocannabinoid_system" target=new>endocannabinoids</a>;
+  ER, endoplasmic reticulum; Glu, glutamate; IP3, inositol 1,4,5-triphosphate;
+  PLC, phospholipase C; VDCCs, voltage-dependent Ca2+ channels.
+  <P class="incremental">
+  TOO MUCH INFORMATION!
+  </P>
+
+</div>
+
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>[text is EXTRA; focus on the figure] a formalization of the STDP rule</h1>
+
+  <img src="STDP-fig2.png" height=300 title="STDP" class="figure-right">
+  <P>
+  Each presynaptic spike arrival leaves a trace \(x_j(t)\) which is updated by an
+  amount \(a_{+}(x_j)\) at the moment of spike arrival and decays exponentially in
+  the absence of spikes:
+  $$
+  \tau_{+}\frac{dx_j}{dt} = -x_j + a_{+}(x_j) \sum_f \delta\left(t -
+ t_j^f\right)
+  $$
+  Similarly, each postsynaptic spike leaves a trace \(y\)
+  $$
+  \tau_{-}\frac{dy}{dt} = -y + a_{-} \sum_n \delta\left(t - t^n\right)
+  $$
+  which increases by \(a_{−}(y)\) at the moment of postsynaptic
+  spikes. The weight change is then
+  $$
+  \frac{dw_j}{dt} = A_{+}\left(w_j\right) x\left(t\right) \sum_n
+ \delta\left(t-t^n\right) - A_{-}\left(w_j\right) y\left(t\right) \sum_f
+  \delta\left(t-t_j^f\right)
+  $$
+  Thus, the weight is (1) increased at the moment of a postsynaptic spike by an
+  amount that depends on the value of the trace \(x\) left by the presynaptic
+  spike, and (2) decreased at the moment of presynaptic spike by an amount
+  proportional to the trace \(y\) left by previous postsynaptic spikes.  
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>STDP and Hebbian learning rules</h1>
+
+  <P>
+  <BR>
+  STDP can be seen as a spike-based formulation of Hebbian learning: in a
+  sense, it is "Hebb, done right".
+  <P>
+  Hebb (1949) proposed that a synapse should be strengthened if a
+  presynaptic neuron 'repeatedly or persistently takes part in firing' the
+  postsynaptic one. This formulation suggests a potential <a
+ href="https://plato.stanford.edu/entries/causation-process/" target=new><B>causal</B></a>
+  relation between the firing of the two neurons. Causality requires that the
+  presynaptic neuron fires slightly before the postsynaptic one. Hebb did
+  not, however, postulate the existence of synaptic weakening. The
+  anti-Hebbian (weakening) component is found in Oja and BCM rules.
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>[EXTRA] STDP versus firing rate-based learning rules</h1>
+
+  <P>
+  <BR>
+  Under the assumption of stationary <a
+  href="http://en.wikipedia.org/wiki/Poisson_distribution"
+  target=new>Poisson statistics</a> for the firing times 
+  of pre- and postsynaptic neurons, the most relevant aspect of the STPD
+  function is its integral and an STDP model can mapped to an equivalent
+  rate-based learning rule.<sup>*</sup>
+  <P>
+  For standard STDP models,
+  <!--
+  \(\beta>0\) , i.e., presynaptic spike arrival
+  leads on average to a positive change  of the synapse, because it is
+  likely to cause postsynaptic firing. This is  then often combined with a
+  negative integral over the STDP function \(\alpha<0\) , so that
+  -->
+  random pairings of pre- and postsynaptic firings lead to a weakening
+  of the synapse.
+  <HR width=30% align=left>
+  <P>
+  *<small>
+  <font color=gray>
+  Assuming independence between
+  pre- and postsynaptic firing, the total weight change 
+  is \(\Delta w_{ij} = \alpha f_i(t) f_j(t)\) where \(f_j(t)\) and
+  \(f_i(t)\) denote the firing rate of pre- and postsynaptic neurons
+  averaged over some time \(T\) and \(\alpha = \int W(s)ds\) is the 
+  integral over the learning window. If the integral is positive, STDP is
+  identical to standard rate-based Hebbian learning. For negative integral,
+  as often used in modeling, STDP corresponds to a anti-Hebbian rate rule.
+  <P>
+  However, the assumption of independence of pre- and postsynaptic firing is
+  obviously wrong: it neglects the causal correlations generated by the
+  interaction of the two neurons. A more precise mapping to rate models can
+  be achieved if the postsynaptic neuron is described as an inhomogeneous
+  Poisson Process with a rate \(f_i(t) = \gamma \sum_j \sum_f
+  \epsilon(t−t^f_j)\) where \(t^f_j\) denotes the spike
+  times of a presynaptic neuron \(j\) generated by a Poisson process of rate 
+ \(f_j(t)\) and \(\epsilon(s)\) for \(s>0\) describes the time course of a
+  postsynaptic potential. The total weight change in a period \(T\) is then
+  \(\Delta w_{ij} = \alpha f_i(t)f_j(t) + \beta f_j(t)\) where \(\beta =
+ \gamma \int_{0}^{\infty} \epsilon(s)W(s)ds\) is the integral over the
+ 'causal' part of the learning window, i.e., over all times with
+ 'pre-before-post' relation.
+  </font></small>
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>time-dependent plasticity and the time scale of reward (Izhikevich, 2007)</h1>
+
+<!--  <img src="Izhikevich07-fig1.png" class="figure-right" --
+  --  height=550> -->
+  <P>
+    <BR>
+      "In
+      <a href="https://en.wikipedia.org/wiki/Classical_conditioning"
+	 target=new>Pavlovian or classical</a> and
+	 <a href="https://en.wikipedia.org/wiki/Operant_conditioning"
+      target=new>instrumental or operant</a> conditioning,
+      reward typically comes 
+seconds after reward-triggering actions, creating an explanatory
+conundrum known as ‘‘distal reward problem’’: How does the brain
+know what firing patterns of what neurons are responsible for the
+reward if 1) the patterns are no longer there when the reward
+arrives and 2) all neurons and synapses are active during the
+waiting period to the reward? Here, we show how the conundrum
+is resolved by a model network of cortical spiking neurons with
+spike-timing--dependent plasticity (STDP) modulated by
+      <a href="https://en.wikipedia.org/wiki/Dopamine" target=new>dopamine</a>
+(DA). Although STDP is triggered by nearly coincident firing
+patterns on a millisecond timescale, slow kinetics of subsequent
+synaptic plasticity is sensitive to changes in the extracellular DA
+      concentration during the critical period of a few seconds."
+      <DIR><DIR><DIR>
+	    — E. Izhikevich (2007). <a href="https://academic.oup.com/cercor/article/17/10/2443/314939" target=new><I>Solving the Distal Reward
+	    Problem through Linkage of STDP and Dopamine
+	    Signaling</I></a>. Cerebral Cortex  17:2443-2452.
+      </DIR></DIR></DIR>
+
+</div>
+  
+
+
+<DIV  CLASS="slide">
+  <h1>[EXTRA] time-dependent plasticity and the time scale of reward (Izhikevich, 2007)</h1>
+
+  <img src="Izhikevich07-fig1.png" class="figure-right" height=500>
+  <P>
+      <B>Instrumental conditioning of a synapse.</B>
+      <BR>
+	<small>
+      (a) The dynamics of each synapse is described by 2
+      phenomenological variables,
+      synapse strength s and
+      <a href="http://www.scholarpedia.org/article/Temporal_difference_learning#Eligibility_Traces"
+      target=new>eligibility trace</a> c, which are gated by
+      the extracellular DA d. Firings of the pre- and postsynaptic
+      neurons induce changes to the variable c according to the STDP
+      rule (shown in b). These changes result in modification of the
+      synaptic strength, s, only when extracellular DA is present
+      (d[0) during the critical window of a few seconds while the
+      eligibility trace c decays to zero.
+      <BR>
+	(c) The magnification of the region in (d) marked by *. To
+      reinforce coincident firings of 2 coupled neurons, we
+      deliver a reward (step-increase of  variable d) with a random
+      delay (between 1 and 3 s) each time a postsynaptic firing occurs
+      within 10 ms after a presynaptic firing (marked by a rectangle
+      in c). This rare event increases c greater than any random
+	firings of the same neurons during the delayed period.
+	<BR>
+	  (d)
+      Consistent rewarding of each such event results in the gradual
+      increase of synaptic strength, s, which increases the
+      probability of coincident firings and brings even more
+      reward. The time course of a typical unreinforced synapse (not
+      shown) looks like a random walk near 0. Inset: the
+      distribution of all synaptic weights in the network. The
+      reinforced synapse is potentiated to the maximal allowable value
+      4 mV, whereas the other synapses are not."  
+	</small>
+
+</div>
+  
+
+<!--
+
+<DIV  CLASS="slide">
+  <h1>an even longer time scale: plasticity in hippocampus place cells</h1>
+
+  <img src="Bittner17-fig2ABC.png" class="figure-right" height=550>
+    <P>
+    Hippocampal
+    <a href="https://en.wikipedia.org/wiki/Hippocampus_anatomy"
+    target=new>CA1</a> place fields can be produced in vivo <B>in a
+    single trial</B> by potentiation of input that arrived seconds before and
+    after complex spiking... How???
+  <P>
+    (A) Mouse on linear track (top), Gaussian functions representing
+    place-field firing in the
+    <a href="https://en.wikipedia.org/wiki/Hippocampus_anatomy" target=new>CA3</a> neurons (green), the to-be-determined 
+    plasticity rule that controls the synaptic weights of CA3 inputs
+    (gray), Gaussian functions representing CA3 excitatory input
+    weighted by above rule (black), and the resulting \(V_m\)
+    [membrane potential] ramp in CA1
+    neuron (blue). Red bar indicates plateau potential.
+    <P>
+    (B) Activity of CA3 population versus time during induction
+    trial.
+    <P>
+    (C) Synaptic weight values as a function of time from plateau
+    (plasticity rule) inferred from the data (black) and standard [STDP] rule
+    (red) for comparison. ampl., amplitude; a.u., arbitrary units. 
+    <DIR><DIR><DIR>
+	  — <I>Behavioral time scale synaptic plasticity underlies CA1
+	  place fields</I>. Katie C. Bittner et al. Science 357,
+	  1033–1036 (2017). 
+    </DIR></DIR></DIR>
+
+</div>
+
+
+<DIV  CLASS="slide">
+  <h1>behavioral time-dependent plasticity in hippocampus place cells</h1>
+
+  <img src="Bittner17-fig3D.png" class="figure-right" height=250>
+  <P>
+  <BR>
+    Plot of postinduction
+    <a href="https://en.wikipedia.org/wiki/Excitatory_postsynaptic_potential"
+    target=new>EPSP</a> amplitude normalized to baseline versus
+    the induction interval time for the entire population of
+    neurons. Open gray symbols are individual neurons; black symbols
+    are means. \(\tau_b\) (tau backward) from exponential fit of data ranging
+    from 0 to –3250 ms (red line projecting to negative times). \(\tau_f\)
+    (tau forward) from exponential fit of data ranging from 0 to +2000
+    ms (red line projecting to positive times).
+    <P class="incremental">
+      "This time course allows inputs that were
+      neither directly causal nor even temporally contiguous
+      with postsynaptic activation (either APs
+      or plateau potentials) to become potentiated, and
+      the magnitude of this potentiation permits this to
+      occur without substantial repetition. The time
+      course also produces \(V_m\) depolarizations that have
+      a PREDICTIVE quality, in that they peak and have a
+      center of mass well before the actual induction
+      [time and] location."
+    </P>
+    <DIR><DIR><DIR>
+	  — <I>Behavioral time scale synaptic plasticity underlies CA1
+	  place fields</I>. Katie C. Bittner et al. Science 357,
+	  1033–1036 (2017). 
+    </DIR></DIR></DIR>
+
+</div>
+
+-->
+
+
+<DIV  CLASS="slide">
+  <h1>STDP and the Bienenstock-Cooper-Munro (BCM) rule</h1>
+
+  <P>
+  <BR>
+  STDP can also be related to a nonlinear rate model where the weight change
+  depends linearly on the presynaptic rate, but nonlinearly on the
+  postsynaptic rate (Bienenstock et al., 1982). This can be achieved in two
+  different ways.
+  <P>
+  The first possibility (described on the next slide) is to allow only the 
+  nearest-neighbor spikes to have a joint effect (instead of all-to-all
+  spike coupling, as suggested above). This leads to
+  a nonlinearity consistent with the BCM rule.
+  <P>
+  For the second possibility, see the <a
+  href="http://www.scholarpedia.org/article/Spike-timing_dependent_plasticity"
+  target=new>Scholarpedia article
+  on STDP</a>.
+  <P>
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>[EXTRA] more on STDP and the Bienenstock-Cooper-Munro (BCM) rule</h1>
+
+  <img src="Izhikevich03-fig1.png" class="figure-right" height=550>
+  <P>
+  <BR>
+    (A) The STDP curve.
+    <P>
+    (B) Function controlling synaptic plasticity at the Cooper synapse
+    receiving 20 Hz presynaptic stimulation.
+    <P>
+    (C) All-to-all implementation of STDP: the net synaptic change is
+    a combination of small changes induced by all possible pre- and
+    postsynaptic pairs.
+    <P>
+    (D) The result of application of STDP rule to <a
+  href="http://en.wikipedia.org/wiki/Poisson_distribution"
+  target=new>Poisson</a> spike
+    trains.
+    <P>
+    (E) The nearest-neighbor implementation of STDP. For each
+    presynaptic spike, only one preceding andone succeeding
+    postsynaptic spike are considered.
+    <P>
+    (F) The resulting BCM function. Parameters are as in Figure 1A.
+
+    <DIR><DIR><DIR>
+	  — <I>Relating STDP to BCM</I>. Eugene M. Izhikevich and Niraj
+	  S. Desai. Neural Computation 15, 1511–1523 (2003).
+    </DIR></DIR></DIR>
+
+</div>
+
+
+<!--
+    
+<DIV  CLASS="slide">
+  <h1>"STDP enables spiking neurons to detect hidden causes of their inputs"
+ (W. Maass et al., 2009)</h1>
+
+  <img src="Maas-STDP-fig1a.png" class="figure-right">
+  <P>
+  <B>STDP applied to handwritten digit recognition.</B>
+  \(28\times 28\) pixel values \(x_j\) were encoded through population
+  coding by binary variables \(y_i\). <small>
+  Pixels were binarized to black/white. All pixels that were black in less
+  than 5% of the training examples were removed, leaving \(m = 429\)
+  external variables \(x_j\) that were encoded by \(n = 858\) spiking neurons
+  \(y_i\). Spikes were produced for each variable \(y_i\) by a
+  <a
+  href="http://en.wikipedia.org/wiki/Poisson_distribution"
+  target=new>Poisson</a> process with a rate of 40 Hz for \(y_i = 1\), and 0 Hz for \(y_i =
+  0\),  at a simulation time step of \(1ms\). Every training example x was
+  presented for \(50ms\). Every neuron \(y_i\) was connected to all \(K =
+  10\) output neurons \(z_1, \ldots, z_{10}\). </small>
+  A Poisson process caused firing of one of the neurons \(z_k\) on average
+  every \(5ms\). 
+  <P>
+  The Winner-Take-All (WTA) mechanism ensured that only one of the output neurons could fire
+  at any time step. The winning neuron at time step \(t\) was chosen by a
+  <a href="https://en.wikipedia.org/wiki/Softmax_function" target=new>soft-max</a> step.
+  <P>
+  <font color=gray>
+  [Specifically,
+  $$
+  p(z_k~\textrm{fires at time}~t\mid y) =
+  \frac{e^{u_k\left(t\right)}}{\sum_{l=1}^{K} e^{u_l\left(t\right)}}
+  $$
+  where \(u_k(t) = \sum_{i=1}^n w_{ki}\tilde{y}_i(t) + w_{k0}\) represents
+  the current membrane potential of neuron \(z_k\) (with \(\tilde{y}_i(t) =
+  1\) if \(y_i\) fired within the time interval \([t-10ms,t]\), else
+  \(\tilde{y}_i(t)=0\)).]
+  </font>
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>STDP enables spiking neurons to detect hidden causes of their inputs (Maass)</h1>
+
+  <img src="Maas-STDP-fig1b.png" class="figure-right">
+  <P>
+  <BR>
+  Learning curve for the two STDP rules that were used (with \(\sigma =
+  10ms\)). The synaptic weight \(w_{ki}\) is changed in dependence of the
+  firing times \(t_{pre}\) of the presynaptic neuron \(y_i\) and
+  \(t_{post}\) of the postsynaptic neuron \(z_k\). If \(z_k\) fires at time
+  \(t\) without a firing of \(y_i\) in the interval \([t − \sigma, t +
+  2\sigma]\), \(w_{ki}\) is reduced by 1. The resulting weight change is in
+  any case multiplied with the current learning rate \(\eta\), 
+  <font color=gray>which was chosen in the simulations according to the variance tracking
+  rule.</font> 
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>STDP enables spiking neurons to detect hidden causes of their inputs (Maass)</h1>
+
+  <img src="Maas-STDP-fig2.png" class="figure-right">
+  <P>
+  <BR>
+  Unsupervised classification learning and sparsification of firing of output
+  neurons after training. For testing we presented three examples from an
+  independent test set of handwritten digits 0, 3, 4 from the <a
+  href="http://yann.lecun.com/exdb/mnist/" target=new>MNIST dataset</a>,
+  and compared the firing of the output-neurons before and after learning.
+  <P>
+  <B>(A)</B> Representation of the three handwritten digits 0, 3, 4 for
+  \(50~ms\) each (\(150~ms\) total) by the 858 spiking neurons \(y_i\).
+  <P>
+  <B>(B)</B> Responses of the 10 output neurons before training.
+  <P>
+  <B>(C)</B> Responses of the 10 output neurons after STDP. The three output
+  neurons \(z_4, z_9, z_6\) that respond have generated <B>internal 
+  models</B> for the three shown handwritten digits according to the figure in
+  the next slide.
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>STDP enables spiking neurons to detect hidden causes of their inputs (Maass)</h1>
+
+  <img src="Maas-STDP-fig3bc.png" class="figure-right">
+  <P>
+  <BR>
+  <B>(B)</B> The implicit internal models created by the neurons after 2000
+  training examples are revealed by presenting their learned weights as input
+  templates. Clearly, neurons created separate internal models 
+  for different ways of writing the two digits 0 and 3.
+  <P>
+  <B>(C)</B> Re-organized internal models after 2000 further training
+  examples that included digit 4. Two output neurons had created internal
+  models for the newly introduced digit 4.
+  <P class="incremental">
+  When tested on sets of 10,000 new samples each, the network achieved a
+  classification error of 2.19% on the digits 0 and 3 after 2000 training
+  steps and 3.68% on all three digits after 4000 training steps.
+  </P>
+
+</div>
+
+  
+<div  CLASS="slide">
+  <h1>STDP enables spiking neurons to detect hidden causes of their inputs (Maass)</h1>
+  
+  <a
+ href="https://en.wikipedia.org/wiki/Felix,_qui_potuit_rerum_cognoscere_causas"
+ target=new><img src="felix-qui-potuit.jpg" class="figure-right"></a>
+  <P>
+  <BR>
+  Modeling the world requires causal knowledge —
+  <BR>
+  <a
+    href="http://en.wikipedia.org/wiki/Felix,_qui_potuit_rerum_cognoscere_causas"
+    target=new>Felix, qui potuit rerum cognoscere causas</a> (recall
+    <a href="http://kybele.psych.cornell.edu/~edelman/Psych-3140/wk-9-1.html#(4)"
+    target=n>Lecture 9.1</a>).
+  </P>
+  <P>
+   Note that this calls for finding more than just "hidden causes
+    for inputs" as per Maass. Rather, one must also find events that cause
+    other events — as in model-based reinforcement learning.
+  </P>
+
+</div>
+  
+-->
+
+
+<div class="footer">
+<p>Last modified: Wed Aug 19 2020 at 20:00:55 EDT</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,1347 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Psych 3140/6140 wk-4-2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2014-2021 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- 
+<rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+<permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+<requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+<permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+<requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+</License>
+</rdf:RDF>
+-->
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Week 6.1 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Psych 3140/6140</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Week 4: universal tools, III</h2>
+    <h3>&nbsp;Lecture 4.2: similarity and generalization; function approximation</h3>
+  </div>
+  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%>
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+
+<div  CLASS="slide">
+  <h1>Lecture 4.2: learning, similarity, and generalization</h1>
+
+  <P>
+  <BR>
+  <ul>
+    <li>Categories and perceptual learning from examples</li>
+    <P>
+    <li>Learning and generalization</li>
+    <P>
+    <li>The universal law of generalization</li>
+  </ul>
+  
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>categorical perception and pareidolia</h1>
+
+  <P>
+  <img src="Cydonia-1976.jpg" height=400>  <img src="Cydonia-1998.gif" height=400>
+  <P>
+  <a href="http://en.wikipedia.org/wiki/Pareidolia"
+  target=new>Pareidolia</a>: seeing meaningful forms (such as faces) in
+  random stimuli. <BR>
+  [Cf. HADD or Hyperactive <a
+ href="https://en.wikipedia.org/wiki/Agent_detection" target=new>Agency
+ Detection</a> Device; also Theseus in <a
+ href="https://books.google.com/books?id=T-Y-o2upqmYC&pg=PA232&lpg=PA232&dq=Shakespeare+midsummer+fear+bear&source=bl&ots=yjBZ9KTRbN&sig=DVxPKkk3Yqnzk1yh7PiqXKiD8-A&hl=en&sa=X&ved=0ahUKEwj84qm-97LSAhVm2oMKHVT1A_wQ6AEIQzAG#v=onepage&q=Shakespeare%20midsummer%20fear%20bear&f=false"
+ target=new><I>A Midsummer Night's Dream</I></a>.]
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>categorical perception in the lab</h1>
+
+  <img src="categ-perception-2-classification.gif" class="figure-right" >
+  <img src="categ-perception-2-faces.gif" class="figure-right" >
+  <P>
+  <BR>
+  A morph sequence of face images, and a telltale sign of <a
+  href="http://en.wikipedia.org/wiki/Categorical_perception"
+  target=new><SC>categorical perception</SC></a>:
+  <ul>
+    <li><a
+    href="http://en.wikipedia.org/wiki/Sigmoid_function"
+    target=new><SC>sigmoidal</SC></a> response probability in a
+    <SC>classification</SC> task: <BR>for a single image, "which category
+    is this?"
+    </li>
+    As the image is chosen from a morph sequence between category A
+    (e.g., "female", top of the figure)  and
+    category B ("male", bottom of the figure), the probability of
+    subjects choosing A first stays close to 1, then rapidly swings
+    closer to 0, then slowly approaches 0. The rapid change occurs
+    around the category boundary. 
+  </ul>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>categorical perception in the lab</h1>
+
+  <img src="categ-perception-2-discrimination.gif" class="figure-right" >
+  <img src="categ-perception-2-faces.gif" class="figure-right" >
+  <P>
+  <BR>
+  A morph sequence of face images, and a telltale sign of <a
+  href="http://en.wikipedia.org/wiki/Categorical_perception"
+  target=new><SC>categorical perception</SC></a>:
+  <ul>
+    <li><SC>peaked</SC> performance (% correct) in a pairwise
+    <SC>discrimination</SC> task: <BR>for a pair of images, "are these
+    same or different?"
+    </li>
+    The best performance (highest % correct) is obtained for pairs of stimuli that
+    straddle the category boundary. 
+  </ul>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>categorical perception in the lab</h1>
+
+  <img src="categ-perception-2.gif" class="figure-right" >
+  <P>
+  <BR>
+  A morph sequence of face images, and <I>two</I> telltale signs of <a
+  href="http://en.wikipedia.org/wiki/Categorical_perception"
+  target=new><SC>categorical perception</SC></a>:
+  <ul>
+    <li><a
+    href="http://en.wikipedia.org/wiki/Sigmoid_function"
+    target=new><SC>sigmoidal</SC></a> response probability in 
+    <SC>classification</SC> ("which category is this?").</li>
+    <li><SC>peaked</SC> performance (% correct) in pairwise
+    <SC>discrimination</SC> ("are these same or different?").</li>
+  </ul>
+  <B>The inflection point of the sigmoid and the peak are both centered on the
+  category boundary.</B>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>categorical perception: an intuitive learning / optimization account</h1>
+
+  <img src="categ-perception-1.gif" class="figure-right" >
+  <P>
+  <I>Top:</I> acquiring the examples and forming a <a
+ href="http://en.wikipedia.org/wiki/Decision_boundary" target=new>decision boundary</a> in the
+  representation space.
+  <P>
+  <I>Bottom:</I> <a
+  href="http://en.wikipedia.org/wiki/Categorical_perception"
+  target=new><SC>categorical perception</SC></a> emerges from a <SC>warping</SC> of the
+  representation space.
+  <P>
+  This account can be made completely explicit on the computational,
+  algorithmic, and implementational levels.
+  <P>
+  <HR>
+  <P class="incremental">
+    Let us compare this to the so-called
+    <a href="https://www.ncbi.nlm.nih.gov/pubmed/1945741"
+       target=new>"perceptual magnet effect"</a> in phonetics, which
+       for decades has been touted as both a "theory" and a
+       "mechanism" explaining categorical perception of phonemes (see
+       next slide).
+  </P>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>the traditional confusion btw "theory", "model", and "mechanism"
+  in psychology (Kuhl 1995, 2008)</h1>
+
+  <a href="http://rstb.royalsocietypublishing.org/content/363/1493/979.short"
+  target=new><img src="Kuhl08-fig5.jpg" class="figure-right"
+  height=450></a> 
+  <a href="https://www.cs.indiana.edu/~port/teach/641/Kuhl.Iverson.lingc.exptc.percpt.magnt.pdf"
+  target=new><img src="Kuhl-perceptual-magnet-theory-1994.png" height=275></a>
+  <P>
+  <a href="https://www.cs.indiana.edu/~port/teach/641/Kuhl.Iverson.lingc.exptc.percpt.magnt.pdf"
+       target=new><img src="Kuhl-perceptual-magnet-mechanism-1994.png" height=175></a>
+  <P class="incremental">
+    Eventually, the multitude of documented "EFFECTS" and "THEORIES"
+    in psychology and neuroscience will be accounted for in terms of
+    a few basic COMPUTATIONAL PRINCIPLES or even LAWS.
+  </P>
+      
+</div>
+
+-->
+  
+
+<DIV CLASS="slide">
+  <h1 >categories and generalization</h1>
+
+  <img src="Cornell-apples.jpg" class="figure-right" height=500>
+  <P>
+    Categories would be of little use if it were not possible to extend
+    classification to <B>new stimuli</B>.
+  </P>
+  <P>
+  [Think <a
+ href="http://www.news.cornell.edu/stories/2013/08/snapdragon-and-rubyfrost-are-new-apple-varieties"
+	   target=new>Snapdragon and Ruby Frost</a> by Cornell]
+  </P>
+
+</div>
+  
+
+<!--
+<DIV CLASS="slide">
+  <h1 >categories and generalization</h1>
+
+  <img src="Shepard-consequential-regions.gif" class="figure-right" >
+  <P>
+  <BR>
+  Categories would be of little use if it were not possible to extend
+  classification to <B>new stimuli</B>.
+
+  <P>
+  <HR>
+  <P class="incremental">
+  <font color=gray>
+  <embed src="Monty-Python-Sermon-on-the-Mount.mp4" scale=aspect>  
+  Example: <a href="http://www.youtube.com/watch?v=XiDmMBIyfsU"
+ target=new>Monty Python's Sermon on the Mount</a> &#151; how many examples
+  of extending category labels to new items can you spot in that clip?
+  </font>
+  </P>
+
+  <DIR>
+    generalization: "cheesemakers" &rarr; "any manufacturers of dairy products"
+  </DIR>
+  <P>
+  Issues at hand: categories and individuals; <a
+ href="http://psp.sagepub.com/cgi/content/abstract/34/10/1332" target=new>stereotyping</a> ("nose city").
+
+</DIV>
+  
+-->
+
+  
+<DIV CLASS="slide">
+  <h1>generalization, similarity, and forethought</h1>
+
+  <img src="Shepard-consequential-regions.gif" class="figure-right" >
+  <P>
+    Categories would be of little use if it were not possible to extend
+    classification to <B>new stimuli</B>.
+  </P>
+  <P>
+    "In reality, all <B>arguments from experience</B> are founded on the
+    <SC><B>similarity</B></SC> which we discover among natural
+    objects, and by which we are induced to expect effects similar to
+    those which we have found to follow from such
+    objects. [...] <B>From causes which appear similar we expect
+    similar effects.</B>"
+    <DIR><DIR>
+	<a href="http://en.wikipedia.org/wiki/David_Hume" target=new>David Hume</a><BR>
+	  <a href="http://www.gutenberg.org/etext/9662"
+	     target=new><I>An Enquiry Concerning Human Understanding</I></a> (1748) 
+      </DIR></DIR>
+    </P>
+  
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>for generalization, (dis)similarity = distance in a representation space</h1>
+
+  <P>
+    <a href="http://en.wikipedia.org/wiki/Roger_Shepard" target=new>Roger
+      Shepard</a>'s <SC><a
+			  href="http://www.sciencemag.org/cgi/content/abstract/237/4820/1317" target=new>universal law of generalization</a>:</SC>
+    <ul>
+    <li>The <SC>goal</SC>: explaining subjects' generalization behavior towards a set of stimuli.
+    </li>
+    <P>
+      <li>The <SC>formulation of the law</SC>:
+	<ul>
+	  <li>
+	    A set of relatable stimuli can be arranged in a representation space
+	    <font color=gray>[which Shepard calls "psychological space"]</font>...
+	  </li>
+	  <li>
+	    ... in such a manner that the likelihood that the subject 
+	    will generalize the category label ["tasty"] from one stimulus [<I>this</I>
+	    apple] to another [<I>that</I> apple] diminishes
+	    <a href="http://en.wikipedia.org/wiki/Exponential_decay"
+	       target=new>exponentially</a> with their distance in that space.
+	  </li>
+	</ul>
+      </li>
+    </ul>
+    </P>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>Shepard's experimental procedure for studying generalization</h1>
+
+  <img src="Newton-color-circle.gif" title="Newton's color circle"
+  class="figure-right" width=250>
+  <P>
+  <ol>
+    <li>Gather subject responses reflecting perceived similarity among a set
+    of stimuli.</li>
+    <P>
+    <li>Use multidimensional scaling <a
+  href="http://en.wikipedia.org/wiki/Multidimensional_scaling"
+  target=new>MDS</a> to embed the stimuli in a low-dimensional <B>"psychological
+    space"</B> and examine the resulting layout.</li> 
+    <P>
+    <img src="Shepard-color-circle-fig11_72.jpg" title="Shepard's color circle"
+    class="figure-right" width=250>
+  </ol>
+  <img src="spectrum.jpg">
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>a typical generalization pattern</h1>
+
+  <img src="Shepard01-color.jpg" class="figure-right" >
+  <P>
+  <ol>
+    <li>Gather subject responses reflecting perceived similarity among a set
+    of stimuli.</li>
+    <P>
+    <li>Use <a
+    href="http://en.wikipedia.org/wiki/Multidimensional_scaling"
+    target=new>MDS</a> to embed the stimuli in a low-dimensional "psychological
+    space".</li> 
+    <P>
+    <li>In this representation space, the <B>probability of
+    generalization</B> from one stimulus to another <B>falls exponentially with</B> their
+    <B>distance</B>.
+    </li>
+  </ol>
+    <HR>
+      <P>
+	The functional form (exponential) of this dependence of generalization on
+	distance in the ("psychological") representation space
+	is <SC>invariant</SC> across domains, tasks, and subjects.
+      </P>
+
+  <!-- <B>cf. <a
+ href="http://en.wikipedia.org/wiki/Jean_Baptiste_Perrin" target=new>Jean Perrin</a> on the <a
+ href="http://books.google.com/books?g=PR9&lpg=PR9&dq=jean+perrin+simple+invisible+complex+visible&source=web&ots=qTnNHKNjYE&sig=YexUGupAVXicc3i0Ij7bBur3J0g"
+ target=new>simple invisible</a></B>]. -->
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>Shepard's Law of Generalization</h1>
+
+  <img src="Shepard-law.gif" class="figure-right" height=500>
+  <P>
+  <BR>
+    The functional form (exponential) of this dependence of generalization on
+  distance in the ("psychological") representation space
+  is <SC>invariant</SC> across domains, tasks, and subjects. 
+  
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>Shepard's Law: a Bayesian analysis (Tenenbaum and Griffiths, 2001)</h1>
+
+  <img src="Shepard-consequential-regions.gif" class="figure-right">
+  <P>
+  <BR>
+  <ol>
+    <li>
+    What constitutes the learner's knowledge about the
+    consequential region?
+    </li>
+    <li>
+    How can the learner acquire knowledge from the
+    example(s) encountered?
+    </li>
+    <li>
+    How does the learner use that knowledge to decide
+    how to generalize?
+    </li>
+  </ol>
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>1. what constitutes the learner's knowledge? (Tenenbaum and Griffiths, 2001)</h1>
+
+  <P>
+  <BR>
+  The learner's knowledge about the consequential region is represented as a
+  probability distribution \(p\left(h\mid x\right)\) over a <I>hypothesis space</I>
+  \({\cal H}\) of possible consequential 
+  regions \(h \in {\cal H}\). This space is a set of EXHAUSTIVE and MUTUALLY
+  EXCLUSIVE possibilities:
+  <DIR><DIR>
+      One and only one element of \({\cal H}\) is
+      assumed to be the true consequential region, although different
+      candidate regions may overlap in the stimuli that they include.
+  </DIR></DIR>    
+  <img src="robin+worm.jpg" height=200 class="figure-right">
+  <P>
+  The learner's background knowledge is a source of constraints on which subsets of objects belong
+  to \({\cal H}\). Shepard (1994) suggests a general constraint:
+  that consequential regions for basic
+  <A href="https://en.wikipedia.org/wiki/Natural_kind" target=new>NATURAL KINDS</a> 
+  correspond to <a href="http://en.wikipedia.org/wiki/Topology"
+  target=new><I>connected subsets</I></a> of psychological space. 
+  <P>
+  Applying the connectedness constraint to the domains of
+  (say) worm hue or length, where the relevant
+  stimulus spaces are ONE-DIMENSIONAL CONTINUA, the
+  hypothesis spaces would consist of INTERVALS, or ranges of
+  stimuli between some minimum and maximum consequential
+  levels.
+  <P>
+  [Slide 13 shows several such intervals
+  that are consistent with the single example of 60 in a number
+  game.]
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>2. how can the learner acquire the knowledge from the encountered example(s)? (Tenenbaum and Griffiths, 2001)</h1>
+
+  <P>
+  After observing \(x\) as an example of the consequence \(C\), the
+  learner updates its beliefs about the consequential region
+  from the prior \(p(h)\) to the posterior \(p\left(h\mid x\right)\) through
+  the use of Bayes' rule:
+  $$
+  \begin{array}
+  &nbsp; p\left(h\mid x\right) &=& \frac{p\left(x\mid h\right)
+ p\left(h\right)}{p\left(x\right)} \\
+  &=& \frac{p\left(x\mid h\right) p\left(h\right)}{\sum_{h^{\prime}\in {\cal
+  H}} p\left(x\mid h^{\prime}\right) p\left(h^{\prime}\right)}
+  \end{array}
+  $$
+  </P>
+  <P>
+  <font color=gray>Note that the summation in the denominator is valid
+  because the various hypotheses \(h^{\prime}\) are MUTUALLY EXCLUSIVE.
+  </font>
+  </P>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>3. how does the learner use the knowledge? (Tenenbaum and Griffiths, 2001)</h1>
+
+  <P>
+  The generalization function \(p\left(y\in C \mid x\right)\) is computed by
+  summing the probabilities \(p\left(h\mid x\right)\) of all hypothesized
+  consequential regions \(h\) such that \(h\) contains \(y\):
+  $$
+  p\left(y\in C \mid x\right) = \sum_{h:y\in h} p\left(h\mid x\right)
+  $$
+  This amounts to <B>hypothesis averaging</B>, because it can be thought of as
+  averaging the predictions that each hypothesis makes about \(y\)'s membership in \(C\),
+  weighted by the posterior probability of that hypothesis.
+  </P>
+  <P>
+   Observe how this combines the two stages of Bayesian treatment:
+   posterior estimation and the application of a loss function.
+  </P>
+    <!--
+    <font color=gray>In the case of a continuum of hypotheses, such as the space of all
+  intervals of real numbers, all probability distributions over
+  \({\cal H}\) become probability densities and the sums over \({\cal H}\)
+  become integrals.</font>
+-->
+    <HR>
+      <P>
+  <small>Notation:
+  <BR>\(x\) is the example — a data point for which the consequence is
+  known: \(x\in C\);
+  <BR>
+  \(y\) is the test point, for which generalization is sought: "is it true
+  that \(y\in C\)?"
+  </small>
+  </P>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>Shepard's consequential regions defined by posterior probabilities (Tenenbaum and Griffiths, 2001)</h1>
+
+  <img src="TenenbaumGriffiths01-fig1.png" height=400 class="figure-right">
+  <P>
+  An illustration of the Bayesian approach to generalization from \(x=60\) in
+  a 1D psychological space in the "number game". 
+  <P>
+  For the sake of simplicity, only intervals with
+  integer-valued endpoints are shown. All hypotheses of a given size are
+  grouped together in one bracket. The <B>thickness</B> (height) of the bar
+  illustrating each hypothesis \(h\) represents \(p(h\mid x)\), the
+  learner's degree  of belief that \(h\) is the true consequential region
+  given the observation of \(x\).
+  <P>
+  The curve at the top illustrates the gradient 
+  of generalization obtained by integrating over (summing) just these consequential
+  regions. The profile of generalization is always <I>concave</I> regardless of
+  what values \(p(h\mid x)\) takes on, as long as all hypotheses of the same
+  size (in one bracket) take on the same probability. 
+
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>[EXTRA] Shepard's Law: the effect of example spacing</h1>
+
+  <img src="TenenbaumGriffiths01-fig2.png" height=400 class="figure-right">
+  <P>
+  The effect of EXAMPLE VARIABILITY (SPACING) on Bayesian generalization <font color=gray>(under the
+  assumptions of <a href="Tenenbaum99-sampling.html" target=new>strong sampling</a> and an <a
+  href="http://en.wikipedia.org/wiki/Erlang_distribution"
+											     target=new>Erlang</a> prior, \(\mu = 10\))</font>.
+  </P>
+  <P>
+  The first curve is the gradient of generalization with three examples
+  bunched up at the same point. The remaining graphs show that the range of
+  generalization increases as a function of the range of examples.
+  </P>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>[EXTRA] Shepard's Law: the effect of the number of examples</h1>
+
+  <img src="TenenbaumGriffiths01-fig3.png" height=400 class="figure-right">
+  <P>
+  The effect of the NUMBER OF EXAMPLES on Bayesian generalization <font
+  color=gray>(under the assumptions of <a
+  href="Tenenbaum99-sampling.html">strong sampling</a> and an <a 
+  href="http://en.wikipedia.org/wiki/Erlang_distribution"
+								target=new>Erlang</a> prior, \(\mu = 10\))</font>.
+  </P>
+  <P>
+  The first curve is the gradient of generalization with a single example. The
+  remaining graphs show that the range of generalization decreases as a
+  function of the number of examples within the same range (interval).
+  </P>
+
+</div>
+
+-->
+
+
+<DIV CLASS="slide">
+  <h1>the number game: comparing the Bayesian model with human performance (Tenenbaum and Griffiths, 2001)</h1>
+  
+  <img src="Tenenbaum99-fig1.jpg" class="figure-right">
+  <P>
+    Class I trials &#151; the exemplar set consists of one number from
+    each concept.
+  </P>
+  </P>
+  <P>
+    Class II trials  &#151; four numbers, consistent with a simple rule.
+  </P>
+  <P>
+    Class III trials  &#151; four random numbers of similar magnitude.
+  </P>
+  <!--
+  Two groups of hypotheses used: (1) salient mathematical properties: odd,
+  even, square, cube, and prime numbers, multiples and powers of small
+  numbers, and sets of numbers ending in the same digit; (2) all intervals
+  of consecutive numbers with endpoints between 1 and 100.
+  -->
+  
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>Shepard's Law: summary of a Bayesian analysis (Tenenbaum and Griffiths, 2001)</h1>
+
+  <img src="Shepard-consequential-regions.gif" class="figure-right">
+  <P>
+  <ol>
+    <li>
+    What constitutes the learner's knowledge about the
+    consequential region?
+    <P>
+    A probability distribution \(p\left(h\mid x\right)\) over a <I>hypothesis space</I>
+    \({\cal H}\) of possible consequential regions \(h \in {\cal H}\).
+    </li>
+    <li>
+    How can the learner acquire knowledge from the
+    example encountered?
+    <P>
+    By updating its beliefs about the consequential region from the prior
+    \(p(h)\) to the posterior \(p\left(h\mid x\right)\) through 
+    the use of Bayes' rule.
+    </li>
+    <li>
+    How does the learner use that knowledge to decide
+    how to generalize to a new point?
+    <P>
+    By averaging the predictions that each <I>relevant</I> hypothesis makes about \(y\)'s
+    membership in \(C\), weighted by the posterior probability of that
+    hypothesis. 
+    </li>
+  </ol>
+  
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>pause and consider: two universal laws</h1>
+
+  <table cellspacing=20>
+    <tr>
+      <td align=center><a href="http://en.wikipedia.org/wiki/Isaac_newton"
+ target=new><img src="isaac-newton.jpg" height=300 title="Isaac Newton"></a></td>
+      <td align=center><a href="http://en.wikipedia.org/wiki/Roger_Shepard"
+ target=new><img src="roger-shepard.jpg" height=300 title="Roger N. Shepard"></a></td>
+    </tr>
+    <tr>
+      <td>
+	<a
+ href="http://www.aps.org/publications/apsnews/200002/zero-gravity.cfm" target=new><B>Every</B></a> massive particle in the universe attracts every other massive
+	particle with a force which is directly proportional to the product of
+	their masses and inversely proportional to the square of the distance
+	between them.
+      </td>
+      <td>
+	<B>Every</B> set of relatable stimuli can be arranged in a psychological
+	space so that the likelihood of response generalization among them diminishes
+	exponentially with their distance.
+      </td>
+  </table>
+
+</div>
+ 
+
+
+
+<div  CLASS="slide">
+  <h1>next: function approximation for learning and generalization; regularization</h1>
+
+  <img src="function-approximation.png" class="figure-right" height=400>
+  <P>
+    A general-purpose tool for making use of
+    <SC>similarity</SC>: <a href="http://en.wikipedia.org/wiki/Function_approximation"
+		   target=new><B>function approximation</B></a>.
+  </P>
+  <P>
+    If you know how to approximate an unknown function from some
+    sample points, you can also:
+    <ol>
+      <li>
+	learn from examples and generalize to new cases;
+      </li>
+      or
+      <li>
+	be a good Bayesian by approximating relevant probability
+	distributions from examples and then generalizing as needed.
+      </li>
+    </ol>
+  </P>
+      
+</div>
+
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>the uses of learning a probability distribution</h1>
+
+  <img src="classification-and-regression-feasible.gif" class="figure-right" >
+  <P>
+  <BR>
+  The computational essence of learning and generalization:
+  <P>
+  <a href="http://en.wikipedia.org/wiki/Statistical_classification"
+    target=new><SC>Classification</SC></a> 
+  <BR>
+  <B>1. <SC>estimate</SC></B> the probability of each possible class label, given the values
+  of the object's features: \(P\left(C_i\mid x_1,x_2\right)\);<BR>
+  <B>2. <SC>choose</SC></B>
+  the class with the largest probability.<BR>
+  <small>Example: categorization (given <SC>size</SC> and <SC>color</SC>, predict <SC>crunchy/mushy</SC>).</small>
+  <P>
+  <a href="http://en.wikipedia.org/wiki/Regression_analysis"
+  target=new><SC>Regression</SC></a>
+  <BR>
+  <B>1. <SC>estimate</SC></B> the probability of each possible output value, given the input value(s):
+  \(P\left(y\mid x\right)\);<BR>
+  <B>2. <SC>choose</SC></B> the output value
+  with the largest probability.<BR>
+  <small>Example: estimation (given <SC>color</SC>, predict <SC>how tasty</SC>); also visual-motor coordination.</small>
+  <P>
+  [As we saw a couple of weeks ago, classification reduces to regression.]
+  
+</div>
+
+-->
+
+
+
+<DIV CLASS="slide">
+  <h1>the uses and the nature of function approximation</h1>
+
+  <img src="classification-and-regression-feasible.gif" class="figure-right" >
+  <P>
+  Suppose there is an unknown function \(y
+  = f(x)\) for which you have some input/output examples — pairs of
+  the form \(\left\{\left(x_1,y_1\right), 
+  \left(x_2,y_2\right), \dots, \left(x_N,y_N\right)\right\}\).
+  If you can approximate \(f(x)\) from such data, then you can:
+  <ol>
+    <li>learn to directly solve a behavioral problem described by \(y
+  = f(x)\) using empirical risk minimization.</li>
+    or
+    <li>first learn a generative model for a behavioral problem, by 
+    approximating the relevant joint probability distribution.
+    </li>
+  </ol>
+  (re: <a href="http://kybele.psych.cornell.edu/~edelman/Psych-3140/w-4-1.html#(22)"
+    target=s>generative models</a>.) 
+  <HR>
+    <P>
+      <B>
+	The fundamental computational nature of function approximation:<BR>
+      <DIR><DIR>
+	  Function approximation
+	  is an <a href="http://en.wikipedia.org/wiki/Ill-posed" 
+		target=new>ill-posed problem</a>. Specifically, it is
+	  UNDERDETERMINED by the data. 
+      </DIR></DIR>
+	</B>
+      
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>the computational nature of the problem of function approximation
+  (here, regression)</h1>
+
+  <img src="overfitting-1.png" height=200 class="figure-right">
+  <P>
+  <BR>
+  <a href="http://en.wikipedia.org/wiki/Function_approximation"
+  target=new>Function approximation</a> from data (input/output examples) is
+  <a href="http://en.wikipedia.org/wiki/Ill-posed"
+  target=new>ill-posed</a>. Specifically, it is UNDERDETERMINED by the data.
+  <P>
+  This means that it must
+      be <a href="http://en.wikipedia.org/wiki/Regularization_(mathematics)"  
+      target=new>regularized</a> by making ASSUMPTIONS about its
+      solutions (in other words, imposing CONSTRAINTS on the solutions).
+  <P>
+  <HR>
+  <P>
+  <I>Top:</I> 10 data points interpolated exactly with a 9th-degree <a
+ href="https://en.wikipedia.org/wiki/Polynomial" target=new>polynomial</a>.
+  <P>
+  <img src="overfitting-2.png" height=200 class="figure-right">
+  <I>Bottom:</I> the same data, approximated by a quadratic <a
+  href="http://value-at-risk.net/ordinary-least-squares/"
+  target=new>least-squares</a> fit.
+  <P class="incremental">
+  Which is better? And can you think of a way to estimate the best degree of the polynomial
+  automatically?
+  </P>
+  <P class="incremental">
+    — "better" for what? and what is "best"?
+  </P>
+  <P class="incremental">
+  OK, now can you think of a way to estimate the best degree of the polynomial
+  automatically?
+  </P>
+  <P class="incremental">
+  It's
+  <a href="https://en.wikipedia.org/wiki/Cross-validation_(statistics)"
+  target=new>cross-validation</a>.
+  </P>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>Bayes for regression (and classification)</h1>
+
+  <P>
+  <ol>
+    <li>a <a href="http://en.wikipedia.org/wiki/Linear"
+    target=new>linear</a> solution in the form of a weighted sum of nonlinear
+    <a href="http://en.wikipedia.org/wiki/Basis_function" target=new>basis functions</a></li>
+    <P>
+    <li>
+    A Bayesian <a
+    href="http://en.wikipedia.org/wiki/Regularization_%28mathematics%29"
+    target=new>regularized</a> solution that avoids overfitting
+    </li>
+    <!--
+    <P>
+    <li>a <a
+    href="http://en.wikipedia.org/wiki/Regularization_%28mathematics%29"
+    target=new>regularized</a> <a
+    href="http://en.wikipedia.org/wiki/Least_squares"
+    target=new>least-squares</a> solution that avoids 
+    <a href="http://en.wikipedia.org/wiki/Overfitting" target=new>overfitting</a></li> 
+    <P>
+    <li>a probabilistically motivated <a
+    href="http://en.wikipedia.org/wiki/Point_estimate" target=new>point-estimate</a> regularized solution</li>
+    <P>
+    <font color=gray>
+    <P>
+    [Extras:]
+    <li>a powerful method for achieving (2): <a
+    href="http://en.wikipedia.org/wiki/Support_vector_machine" target=new>Support Vector Machines</a>
+    (SVM)</li>
+    <li>a better, Bayesian method: <a
+    href="http://en.wikipedia.org/wiki/Relevance_vector_machine"
+    target=new>Relevance Vector Machines</a> (RVM)
+    </li>
+    </font>
+    -->
+    </ol>
+    </P>
+    <HR>
+      <P>
+	<font color=gray>
+	  [For complete technical details, see extra reading: <a
+								href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/bishop-nato-bayes.pdf"
+								target=new><I>Bayesian Regression and  
+	      Classification</I></a>, C. M. Bishop and M. E. Tipping, in <I>Advances in
+	    Learning Theory: Methods, Models and Applications</I>, J. A. K. Suykens et
+	  al. (Editors), IOS Press, NATO Science Series III: Computer and Systems
+	  Sciences, volume 190 (2003)]
+	</font>
+      </P>
+
+</DIV>
+
+
+
+<DIV CLASS="slide">
+  <h1>least squares regression</h1>
+
+<!--  <img src="weights.jpg" class="figure-right" height=150> -->
+  \(\require{color}\)
+  <P>
+  Consider a data set of examples of input vectors
+  \(\left(\textbf{x}_1, \textbf{x}_2, \dots, \textbf{x}_N\right)\) along
+  with a corresponding vector of target values \(\textbf{t} = \left(t_1, t_2,
+  \dots, t_N\right)\).
+  </P>
+  <P>
+  <a href="http://kybele.psych.cornell.edu/~edelman/Psych-3140/w-3-1.html#%2815%29" target=bla><img src="Churchland-10-7-cropped.jpg" class="figure-right" height=250></a>
+  For regression, we assume that the target values are a noisy version of some
+  underlying functional relationship \(y(\textbf{x})\) that we need to
+  estimate, so that each target value is
+  $$
+  t_n = y(\textbf{x}_n; {\color{red}\textbf{w}}) + \epsilon_n
+  $$
+  where \(\epsilon\) is additive noise and \({\color{red}\textbf{w}} =
+ \left({\color{red} w_1}, {\color{red} w_2}, \dots, {\color{red} w_M}\right)^T\) is a vector of
+    adjustable parameters or "weights".
+    <P>
+      <HR>
+	<P>
+	  <small>In the "circuit" on the right, the weight vector
+	  \({\color{red}\textbf{w}}\) corresponds to \(\left(r_1, r_2,
+	    r_3, r_4\right)^{T}\);<BR> each of the input vectors
+	  \(\textbf{x}_i\) (not marked in the figure) has the form \(\left(x_{i1}, x_{i2},
+	    x_{i3}, x_{i4}\right)^{T}\). </small>
+	</P>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>least squares regression (cont.)</h1>
+
+  <img src="rbf.png" class="figure-right">
+  <P>
+  One <a href="http://www.it.uu.se/research/project/rbf"
+  target=new>interesting</a> class of candidate functions for \(y(\textbf{x}; 
+  {\color{red}\textbf{w}})\)  is
+  $$
+  y(\textbf{x}; {\color{red}\textbf{w}}) = 
+  {\color{red}\textbf{w}}^{T} \phi(\textbf{x}) = \sum^{M}_{i=1} w_i \phi_i(\textbf{x})
+  $$
+  which represents a linearly weighted sum of \(M\) nonlinear fixed <a
+ href="http://en.wikipedia.org/wiki/Basis_function" target=new>basis
+  functions</a>, denoted by \(\phi(\textbf{x}) = (\phi_1(\textbf{x}),
+  \phi_2(\textbf{x}), \ldots, \phi_M(\textbf{x}))^{T}\).
+  </P>
+  <P>
+  Models of this type are known as linear models, because the function
+  \(y(\textbf{x}; {\color{red}\textbf{w}})\) is a linear function (=
+  weighted sum) of the parameters 
+  \({\color{red}\textbf{w}} = \left({\color{red} w_1}, {\color{red} w_2},
+  \dots, {\color{red} w_M}\right)^T\).
+  </P>
+  <P>
+  Interestingly, however, when considered as a function of \(\textbf{x}\),
+  \(y=y(\textbf{x})\) is generally nonlinear, and indeed 
+  can be very flexible if \(M\) is relatively large.
+  </P>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>least squares regression (cont.)</h1>
+
+  <P>
+  Classical (non-Bayesian) techniques use some form of "estimator" to
+  determine a specific value for the parameter vector \({\color{red}\textbf{w}}\).
+  For instance, one can seek \({\color{red}\textbf{w}}\) that minimizes the
+  sum-of-squares error: 
+  $$
+  E({\color{red}\textbf{w}}) = \frac{1}{2} \sum^{N}_{n=1} \left\vert y\left(\textbf{x}_n;
+  {\color{red}\textbf{w}}\right) - t_n \right\vert^2
+  $$
+  The estimate \({\color{red}\tilde{\textbf{w}}}\) obtained by
+  minimizing this error with respect to \({\color{red}\textbf{w}}\)
+  can be used to make predictions for new values of \(\textbf{x}\) by
+  computing \(y(\textbf{x}; {\color{red}\tilde{\textbf{w}}})\).
+  </P>
+  <P>
+  <font color=gray>
+  In the case of classification problems, the function \(y(\textbf{x};
+  {\color{red}\textbf{w}})\) is transformed using an appropriate nonlinearity, such as a
+  logistic sigmoid for 2-class problems.
+  </font>
+  </P>
+
+  <!--
+  or a softmax (normalized
+  exponential) for multi-class problems. The corresponding error function is
+  the crossentropy (Bishop 1995).
+  -->
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>the problem of overfitting</h1>
+
+  <img src="overfitting-1.png" height=200 class="figure-right">
+  <P>
+  A well-known problem with error function minimization is that complex and flexible
+  models can <a href="http://en.wikipedia.org/wiki/Overfitting" target=new>"OVERFIT"</a> the training data, leading to poor
+  generalization.
+  </P>
+  <P>
+  Indeed, when the number of parameters equals the number of
+  data points, the least squares solution can achieve a perfect fit to the
+  training data while having very poor generalization to new data points.
+  <P class="incremental">
+  What could be a behavioral consequence of overfitting?
+  </P>
+  <!--
+  <P class="incremental">
+  <font color=gray>Overfiting can be avoided by limiting the complexity of the model
+  (intuitively, its number of parameters, or degrees of freedom; for a
+  polynomial model, this corresponds to the degree of the polynomial). However,
+  this too can lead to poor generalization if the model is insufficiently
+  flexible to capture the underlying behavior of the data set.</font>
+  </P>
+  -->
+  <P class="incremental">
+  <font color=gray>As the Bishop & Tipping paper explains,
+  overfitting is a pathological property of <a
+  href="http://en.wikipedia.org/wiki/Point_estimation" target=new>point
+  estimation</a>; by adopting a Bayesian viewpoint we can apply
+  complex models to small data sets without encountering problems of
+  overfitting. </font>
+  </P>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>regularization as a remedy for overfitting</h1>
+
+  <P>
+  A classical (non-Bayesian) technique for reducing overfitting through <a
+      href="http://en.wikipedia.org/wiki/Regularization_(mathematics)" 
+      target=new><B>regularization</B></a> adds another term
+      \(\Omega({\color{red}\textbf{w}})\) to the error function:
+  $$
+  E^{*}({\color{red}\textbf{w}}) = E({\color{red}\textbf{w}}) + \lambda\Omega({\color{red}\textbf{w}})
+  $$
+  where the regularizer term
+      \(\Omega({\color{red}\textbf{w}})\) discourages overfitting, for 
+  example by penalizing large values for the weight parameters
+ \({\color{red} w_i}\). The
+  parameter \(\lambda\) controls the trade-off between (i) <B>fitting the data</B> by
+  reducing the error \(E({\color{red}\textbf{w}})\) and (ii)
+  <B>smoothing</B> the solution 
+  \(y(\textbf{x}; {\color{red}\textbf{w}})\) by constraining \({\color{red}\textbf{w}}\).
+  <P>
+  NOTE that constraining the solution to be smooth helps resolve the
+  under-determinacy that stems from the ill-posed nature of the function
+  approximation problem.
+  </P>
+  <P>
+  A <a href="https://en.wikipedia.org/wiki/Tikhonov_regularization"
+  target=new>common choice of regularizer</a> is the sum of
+  the squares of the 
+  weight parameters, so that 
+  $$
+  \Omega({\color{red}\textbf{w}}) = \frac{1}{2} \|{\color{red}\textbf{w}}\|^2
+  $$
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>[EXTRA] Bayesian regression</h1>
+
+  <P>
+    The Bayesian approach characterizes the pre-observation
+    uncertainty in \({\color{red}\textbf{w}}\) by a <B>prior</B>
+    probability distribution \(p({\color{red}\textbf{w}})\) [this
+    corresponds to the <B>smoothing</B> term from the previous
+    slide]. Observations enter the picture through
+    the <B>likelihood</B> function [this is the <B>data-fitting</B>
+    term].
+  </P>
+  <P>
+  Let's choose a <B>prior</B> distribution \(p({\color{red}\textbf{w}})\) that expresses our
+  uncertainty in \({\color{red}\textbf{w}}\):
+  $$
+  p({\color{red}\textbf{w}}) \sim e^{-\alpha\Omega\left({\color{red}\textbf{w}}\right)}
+  $$
+  where the function \(\Omega\left({\color{red}\textbf{w}}\right)\) can be
+  the one defined on the previous slide: \( \Omega({\color{red}\textbf{w}}) =
+  \frac{1}{2} \|{\color{red}\textbf{w}}\|^2 \); 
+  and \(\alpha\) is a <a
+ href="http://en.wikipedia.org/wiki/Hyperparameter" target=new>hyperparameter</a>.
+  <!--
+  One specific example for the prior over weights would be Gaussian (smaller
+  probability for larger weights):
+  $$
+  p({\color{red}\textbf{w}}) = \left(\frac{\alpha}{2\pi}\right)^{M/2}
+  exp\left\{-\frac{\alpha}{2}\|{\color{red}\textbf{w}}\|^2\right\}
+  $$
+  -->
+  <P>
+  We can now use the Bayes Theorem to express the <B>posterior</B>
+  distribution for \({\color{red}\textbf{w}}\) as proportional to the product of the
+  prior and the likelihood
+  \(L({\color{red}\textbf{w}}) = p(\textbf{t}\mid
+  {\color{red}\textbf{w}})\) 
+  $$
+  \begin{array}{ll}
+  p({\color{red}\textbf{w}}\mid \textbf{t}) & \sim &
+  p(\textbf{t}\mid {\color{red}\textbf{w}}) \cdot  p({\color{red}\textbf{w}}) 
+  \end{array}
+  $$
+  The proper thing to do now would be to choose a loss function and use it
+  to estimate \({\color{red}\textbf{w}}\).
+  </P>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>[EXTRA] Bayesian regression (cont.)</h1>
+
+  <P>
+  <B>What if we decide to use the MAP (maximum a posteriori) loss function?</B> This
+  would yield a <a
+  href="http://en.wikipedia.org/wiki/Point_estimation"
+		  target=new>point estimate</a> for \({\color{red}\textbf{w}}\).
+  </P>
+  <P>
+  Simple math [spelled out on the EXTRA slides 29-31] shows that maximizing the logarithm of the
+  posterior distribution \(\ln \left(p({\color{red}\textbf{w}}) \cdot
+ L({\color{red}\textbf{w}})\right)\) is equivalent to minimizing
+  $$
+  \frac{1}{2\sigma^2}\sum_{n=1}^{N} \left\vert y(x_n; {\color{red}\textbf{w}}) - t_n\right\vert^2 +
+  \alpha \Omega({\color{red}\textbf{w}})
+  $$
+ But this happens to be precisely the regularized error function
+  \(E^{*}({\color{red}\textbf{w}})~\) from slide 25, which includes (i) a
+  sum-of-squares error component and (ii) an overfitting-control component
+  that penalizes larger weights [note <a
+ href="https://www.ncbi.nlm.nih.gov/pubmed/8868566"
+ target=new><B>biological relevance</B></a>]. 
+  <P>
+  Thus, the conventional approach to function approximation, based on regularized error
+  (loss) minimization, can be obtained as a specific case of the Bayesian approach.
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>[EXTRA] Bayesian regression (cont.)</h1>
+
+  <P>
+    There remains a key distinction between the conventional error
+    minimization and the Bayesian approach: in a full-blown Bayesian
+    treatment, we make predictions by <B>integrating over the
+    distribution</B> of model parameters \({\color{red}\textbf{w}}\),
+    rather than by using a specific estimated value of
+    \({\color{red}\textbf{w}}\).
+  </P>
+  <P>
+    The integration implied by the Bayesian framework overcomes the
+    issue of overfitting (by <B>averaging over many different possible
+    solutions</B>;
+    recall <a href="http://kybele.psych.cornell.edu/~edelman/Psych-3140/wk-4-1.html#(19)"
+    target=s>hypothesis averaging</a>). This typically results in
+    improved predictive (generalization) capability.
+  </P>
+  <HR>
+  <P class="incremental">
+  <font color=gray>
+    [EXTRA] Specifically, if we are given a new value of \(x=x^*\)
+    then the predictive distribution for \(t^* = y(x^*;
+    {\color{red}\textbf{w}})\) is obtained from the sum and product
+    rules of probability by marginalizing over
+    \({\color{red}\textbf{w}}\): $$ p(t\mid
+    \textbf{t},\alpha,\sigma^2) = \int_{{\color{red}\textbf{w}}}
+    p\left(t\mid {\color{red}\textbf{w}},\sigma^2\right)
+    p\left({\color{red}\textbf{w}}\mid
+    \textbf{t},\alpha,\sigma^2\right) d{\color{red}\textbf{w}} $$
+  </font>
+  </P>
+  <P class="incremental">
+    <img src="Panamint-valley-vista.jpg"
+	 height=200
+	 class="figure-right"
+	 title="Panamint valley vista">
+  </P>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>[EXTRA] regularization: a classical (non-Bayesian) probabilistic take</h1>
+
+  <P>
+  We can motivate the regularized least-squares framework from a
+  probabilistic (but not Bayesian) viewpoint as follows. Assume that the observed target values
+ \(t_n\) are "noisy" versions of the underlying true function values
+  \(y(\textbf{x}; {\color{red}\textbf{w}})\), where the noise is zero-mean
+ <a href="https://en.wikipedia.org/wiki/Central_limit_theorem" target=new>Gaussian</a>:
+  $$
+  p(\epsilon) = \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{\epsilon^2}{2\sigma^2}}
+  $$
+  <!--
+  The noise variance \(\sigma^2\) is called a <a
+ href="http://en.wikipedia.org/wiki/Hyperparameter" target=new><I>hyperparameter</I></a>
+  because it controls the distribution over parameters.
+  -->
+  <P>
+    Given that
+
+    $$
+    t_n = y(\textbf{x}_n; {\color{red}\textbf{w}}) + \epsilon_n
+    $$
+    the probability of the observed
+  data \(t\), conditioned on the inputs \(\textbf{x}\) and the parameters
+  \({\color{red}\textbf{w}}\), is also Gaussian.
+  <P>To see why, note that
+  the noise term \(\epsilon\) is the difference between the measured output target value \(t\) and
+  the actual value of \(y\). So, simply plug \(\epsilon_n^2 =
+  \left( y\left(\textbf{x}_n; {\color{red}\textbf{w}}\right) - t_n\right)^2\) into the
+  above formula for noise, to obtain:
+  $$
+  p(t \mid \textbf{x},{\color{red}\textbf{w}}) = \frac{1}{\sqrt{2\pi}\sigma}
+  e^{- \frac{\left\vert y\left(\textbf{x}; {\color{red}\textbf{w}}\right) - t\right\vert^2}{2\sigma^2} }
+  $$
+
+</div>
+
+ 
+
+
+<DIV CLASS="slide">
+  <h1>[EXTRA] classical (non-Bayesian) probabilistic regularization (cont.)</h1>
+
+  <P>
+  From the previous slide, here's again the probability of the observed
+  data, conditioned on the inputs and the parameters:
+  $$
+  p(t \mid \textbf{x},{\color{red}\textbf{w}}) = \frac{1}{\sqrt{2\pi}\sigma}
+  e^{- \frac{\left\vert y\left(\textbf{x}; {\color{red}\textbf{w}}\right) - t\right\vert^2}{2\sigma^2} }
+  $$
+  Because the data points are independent, the joint probability of the entire
+  data set \(\textbf{t}\), given \({\color{red}\textbf{w}}\), is equal to
+  the product of the above probabilities over all the examples, evaluated at
+  the observed data points \(\textbf{x}_n\): 
+  $$
+  p(\textbf{t}\mid {\color{red}\textbf{w}}) = \left(\frac{1}{\sqrt{2\pi}\sigma}\right)^{N}
+  e^{- \frac{\sum^{N}_{n=1} \left( y\left(\textbf{x}_{n}; {\color{red}\textbf{w}}\right) -
+  t_{n}\right)^2}{2\sigma^2} }
+  $$
+  When viewed as a function of \({\color{red}\textbf{w}}\), this is 
+  the <I>likelihood function</I> ("how likely/probable are the data values,
+  given the parameter values?").
+  <BR>
+    Let's call it   \(L({\color{red}\textbf{w}})\).
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>[EXTRA] classical probabilistic regularization (cont.)</h1>
+
+  \(\require{color}\)
+  <P>
+  <BR>
+  One technique from classical statistics for estimating \({\color{red}\textbf{w}}\) is
+  called <a href="http://en.wikipedia.org/wiki/Maximum_likelihood"
+  target=new><I>Maximum Likelihood</I></a>. It calls for setting \({\color{red}\textbf{w}}\) to 
+  the value that maximizes the likelihood function \(L({\color{red}\textbf{w}})\).
+  <P>
+  For convenience we can instead minimize the negative <a
+ href="https://en.wikipedia.org/wiki/Natural_logarithm"
+ target=new>[natural]</a> logarithm \(\ln(\cdot)\) of the
+  likelihood function (because the logarithm is a monotonic function):
+  $$
+  - \ln \left(L\left({\color{red}\textbf{w}}\right)\right) = - \ln\left(\left(\frac{1}{\sqrt{2\pi}\sigma}\right)^{N}
+  e^{- \frac{\sum^{N}_{n=1} \left( y\left(\textbf{x}_{n}; {\color{red}\textbf{w}}\right) -
+  t_{n}\right)^2}{2\sigma^2} }\right) = {\color{gray}\frac{N}{2}\ln \sigma^2 + \frac{N}{2} \ln(2\pi)} +
+  \frac{1}{2\sigma^2} \sum^{N}_{n=1} \left\vert y\left(x_{n}; {\color{red}\textbf{w}}\right) - t_{n}\right\vert^2
+  $$
+  <P>
+  Note what we've got here:
+  <DIR>
+    Minimizing \(-\ln \left(L\left({\color{red}\textbf{w}}\right)\right)\)
+    with respect to \({\color{red}\textbf{w}}\) is equivalent to minimizing
+    the sum-of-squares error function!
+    <P>
+    In other words, the Maximum Likelihood principle offers a <I>reason</I> for
+    using the least-squares approximation technique. NOTE: this is still
+    prone to overfitting, because no regularization has been included in the
+    ML solution.
+  </DIR>
+
+</div>
+
+
+
+  
+<div class="footer">
+<p>Last modified: Thu Mar 11 2021 at 09:03:07 EST</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+H1, H2, H3, H4 { color: green; font-family: helvetica }
+
+.col {
+   width: 600;
+   text-align: justify
+}
+
+.colc {
+   width: 80%;
+   text-align: center
+}

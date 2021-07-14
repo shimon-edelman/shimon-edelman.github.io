@@ -1,0 +1,1382 @@
+<!-- doc-lang: english -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computational Psychology — Unit 4</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2014-2019 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+</head>
+<body>
+
+<!-- 
+<rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+<permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+<requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+<permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+<requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+</License>
+</rdf:RDF>
+-->
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 4 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computational Psychology</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 4: Perception I, Representation spaces</h2>
+  </div>
+  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%>
+
+</div>
+<!-- END COVER PAGE -->
+
+
+<div  CLASS="slide">
+  <h1>measurements and representation spaces</h1>
+
+  <a href="https://www.youtube.com/watch?v=WI5B7jLWZUc" target=new><img
+  src="strangelove_war_room.jpg" title="the War Room fight, from Stanley Kubrik's film `Dr. Strangelove'"
+  class="figure-right"></a>
+  <P>
+  <BR>
+  Perception IN THE SERVICE OF BEHAVIOR involves the brain performing
+  many <SC><B>measurements</B></SC> on the <strike>outside</strike> world.
+  <P>
+  Think of this is as intelligence-gathering for the sake of the
+  command-and-control processes that reside in the War Room. No generals,
+  though! 
+  <BR>
+    <img src="cabinet-war-room.jpg"
+	 title="British Cabinet War Room (WWII)" vspace=20>
+  </P>
+      
+</div>
+
+
+<div  CLASS="slide">
+  <h1>perceptual measurements and representations</h1>
+
+  <a href="https://psychclassics.yorku.ca/James/Principles/prin19.htm"
+  target=new><img src="James-fig48.gif" title="From William James's
+  'Principles of Psychology' (1890)" class="figure-right"></a>
+  <P>
+  <BR>
+  Perception involves the brain performing many measurements
+  on the <strike>outside</strike> world.
+  <P>
+  The MEASUREMENTS are STRUCTURED in space and time, and they carry
+  information about the space-time structure of the world.
+  </P>
+  <DIR>  <DIR>
+      <small>
+	The use of
+	<a href="https://en.wikipedia.org/wiki/Sound_localization#ITD_and_IID"
+	   target=new>ITD</a> in sound localization was one example; another one is
+	shown here on the right; yet another one will come up later in this
+	lecture.
+	</small>
+  </DIR>  </DIR>
+  <P>
+  The resulting REPRESENTATION SPACES are also STRUCTURED. For this too
+  there will be examples.
+  </P>
+  <HR>
+  <P class="incremental">
+  <font size=+2>
+  How many measurements?
+  </font>
+  </P>
+  <P class="incremental">
+  <font size=+4>
+  A lot!
+  </font>
+  </P>
+  
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1><SC>dimensionality</SC> of representation space = # of
+  measurements PER POINT</h1>
+
+  <a href="http://xkcd.com/388/" target=new><img src="fuck_grapefruit.png"
+  class="figure-right" height=500 title="fuck grapefruit"></a>
+  <BR>
+  The measurements populate a REPRESENTATION SPACE.
+  <P>
+  It's a <a href="http://en.wikipedia.org/wiki/Topological_space"
+  target=new>topological SPACE</a> (not
+  merely a <a href="http://en.wikipedia.org/wiki/Set_%28mathematics%29" target=new>set</a>) because intermediate points in it make sense too (think <a
+  href="https://www.youtube.com/watch?v=VdMcGy6EW-A"
+  target=new>morphing</a>).
+  </P>
+  <P>
+  In this example, the "fruit space" has 2 dimensions, which means 2 numbers per point. 
+  </P>
+  <P>
+  Each point represents a 
+  single kind of item (apples, bananas, etc.).
+  </P>
+
+</DIV>
+
+
+<!--
+
+<DIV  CLASS="slide">
+  <h1>how many dimensions?</h1>
+
+  <video src="Zorbing.mov"
+	 width=640 height=496 controls="controls" class="figure-right">
+  </video>
+  <P>
+  <BR>
+  Consider a ball rolling down a hill...
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>how many dimensions?</h1>
+
+  <a href="http://xkcd.com/c152.html" target=new><img src="ball-rolling.jpg"
+   class="figure-right"></a>
+  <P>
+  <BR>
+  Consider a ball rolling down a hill.
+  <P>
+  To represent this process, one must represent a <B>function</B> that maps
+  <DIR>  <DIR>  <DIR>
+    <SC><I>time</I></SC>
+    <BR>
+    <font color=gray>[the domain of the function]</font>
+  </DIR>  </DIR>  </DIR>
+  <P>
+  to
+  <DIR>  <DIR>  <DIR>
+    the <SC><I><B>state</B></I></SC> of the ball
+    <BR>
+    <font color=gray>[the range of the function].</font>
+  </DIR>  </DIR>  </DIR>
+  <P>
+  How many dimensions does this function's range possess?
+
+</div>
+
+-->
+
+
+<DIV  CLASS="slide">
+  <h1>how many dimensions?</h1>
+
+  <video src="Tumbling_on_Adrenalin.mov" width=640 height=496
+	 controls="controls" class="figure-right">
+  </video>
+  <P>
+  <BR>
+  Consider a skier tumbling down a hill...
+  <P>
+  To represent this process, one must represent a function that maps
+  <DIR>  <DIR>  <DIR>
+    <SC><I>time</I></SC>
+    <BR>
+    <font color=gray>[the domain of the function].</font>
+  </DIR>  </DIR>  </DIR>
+  <P>
+  to
+  <DIR>  <DIR>  <DIR>
+    the <SC><I><B>state</B></I></SC> of the skier
+    <BR>
+    <font color=gray>[the range of the function].</font>
+  </DIR>  </DIR>  </DIR>
+  <P>
+  How many dimensions does this function's range possess?
+
+</div>
+
+
+<!--
+  
+<DIV  CLASS="slide">
+<h1>how many dimensions?</h1>
+
+  <img src="ski-fall.jpg" class="figure-right" >
+  <P>
+  <BR>
+  Consider a skier tumbling down a hill.
+  <P>
+  To represent this process, one must represent a function that maps
+  <DIR>  <DIR>  <DIR>
+    <SC><I>time</I></SC>
+    <BR>
+    <font color=gray>[the domain of the function].</font>
+  </DIR>  </DIR>  </DIR>
+  <P>
+  to
+  <DIR>  <DIR>  <DIR>
+    the <SC><I>state</I></SC> of the skier
+    <BR>
+    <font color=gray>[the range of the function].</font>
+  </DIR>  </DIR>  </DIR>
+  <P>
+  How many dimensions does this function's range possess?
+
+</div>
+
+
+<DIV  CLASS="slide">
+  <h1>1-D, 2-D, and 3-D measurement spaces</h1>
+
+  <img src="multidim-space.jpg">
+
+</div>
+
+
+<DIV  CLASS="slide">
+  <h1>1-D, 2-D, and 3-D measurement spaces</h1>
+
+  <img src="multidim-space.jpg">
+  <P>
+  What if one carries out 4 simultaneous measurements?
+
+</div>
+
+-->
+
+
+<DIV CLASS="slide">
+  <h1>[an abstract high-dimensional representation space]</h1>
+
+  <img src="29dim.jpg" height=425>
+  <P>
+  [For a scientific debunking of such approaches to
+  matchmaking, see <a
+  href="https://www.nytimes.com/2012/02/12/opinion/sunday/online-dating-sites-dont-match-hype.html"
+  target=new>this article</a>.]
+  <P class="incremental">
+  [If you both think "foreign movies" is a coherent category, you deserve each other.]
+
+</div>
+
+
+<!--
+
+<DIV  CLASS="slide">
+  <h1>a multidimensional state space for human physiology</h1>
+
+  <img src="physvec.gif" height=450 class="figure-right" >
+  <P>
+  <BR>
+  An 8-dimensional neurophysiological state <a
+ href="http://en.wikipedia.org/wiki/Feature_vector" target=new>vector</a> [=
+ ordered list of numbers], recorded
+  in a stroke patient over a period of 18 hours.
+  <P>
+  <font size=-1 color=gray>(From <I><a
+ href="http://rabi.nmr.mgh.harvard.edu/~andre/ICCS2posting/neurostate.html"
+ target=new>Examining the dynamics of a vector representing
+ neurophysiological state during intensive care</I></a>, André J. W. van der
+ Kouwe & Richard C. Burgess, 1998).</font>
+
+</div>
+
+-->
+
+
+
+<DIV  CLASS="slide">
+  <h1>the state space of a 3-neuron brain</h1>
+
+  <table cellspacing=50>
+    <TR>
+      <TD>
+	<img src="CS92-fig3.3.jpg" height=350>
+      </td>
+      <TD>
+	<a href="http://en.wikipedia.org/wiki/Pyramidal_cell" target=new>
+	<img src="three-pyramidal-neurons.gif" title="three pyramidal neurons"></a>
+      </td>
+    </tr>
+  </table>
+  <P>
+  The diagram shows the <SC>trajectory</SC> &#151; state plotted against
+ time &#151; of a three-neuron <B>dynamical system</B>
+  through the space of its possible states.
+
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>brain activity space</h1>
+
+  <img src="points-in-3D-space.gif" height=400 class="figure-right" >
+  <P>
+  <BR>
+  Neuronal activity spans a multidimensional representation space, in which
+  each stimulus is represented by a point.
+  <ul class="incremental">
+    <li>Three neurons &#151; three dimensions. In the illustration on the
+    right, 13 items/objects are being represented in a three-neuron system.</li>
+    <li>Eight neurons &#151; eight dimensions.</li>
+    <li>17 neurons &#151; 17 dimensions.</li>
+    <li>10<sup>6</sup> neurons &#151; ...</li>
+  </ul>
+  
+</div>
+
+-->
+
+
+<div  CLASS="slide">
+  <h1>NOMINAL and EFFECTIVE dimensionality</h1>
+
+  <img src="compound_eye_man.jpg" class="figure-right">
+
+  <BR>
+  <P>
+  <BR>
+  <P>
+  <BR>
+  <font size=+3>
+  How many dimensions are there in the data that the eye sends to the brain?
+  </font>
+  <P class="incremental">
+  About 1,000,000.
+  </P>
+  <P class="incremental">
+  Luckily, throughout cognition, EFFECTIVE dimensionality << NOMINAL
+						    dimensionality.
+						    </P>
+
+</div>
+
+
+<!--
+
+<DIV  CLASS="slide">
+  <h1>playing with the number of dimensions</h1>
+
+  <table>
+    <tr>
+      <td align=center><img src="Churchland-10-7.jpg" height=500></td>
+    </tr>
+  </table>
+
+</div>
+
+<DIV  CLASS="slide">
+  <h1>mapping a 4D space into a 3D space: dimensionality reduction</h1>
+
+  <table>
+    <tr>
+      <td align=center><img src="Churchland-10-7.jpg" height=350></td>
+      <td align=center><img src="CS92-fig3.3.jpg" height=350></td>
+    </tr>
+  </table>
+
+</div>
+
+<DIV  CLASS="slide">
+  <h1>are there such circuits in the brain?</h1>
+
+  <img src="Churchland-10-1.jpg" height=500 class="figure-right">
+  <P>
+  <BR>
+  Yes!
+  <P>
+  The <a href="http://en.wikipedia.org/wiki/Parallel_fiber" target=new>parallel fibers</a> / <a href="http://en.wikipedia.org/wiki/Purkinje_cell"
+  target=new>Purkinje cell</a> circuit in the <a
+ href="http://en.wikipedia.org/wiki/Cerebellum" target=new>cerebellar</a> cortex.
+
+</div>
+
+<DIV  CLASS="slide">
+  <h1>what for? perhaps information <strike>preserving</strike> maximizing reduction of dimensionality</h1>
+
+  <table cellspacing=10>
+    <tr>
+      <td align=center><img src="Hastie-dataset.jpg"></td>
+      <td align=center><img src="Hastie-pca.jpg"></td>
+    </tr>
+    <tr>
+      <td align=center>a 2D dataset &#151; think apples that vary in (1)
+	color and (2) mushiness</td>
+      <td align=center>the same data, mapped into 1D by Principal Component
+	Analysis (<a href="http://ordination.okstate.edu/PCA.htm"
+ target=new>PCA</a>) = <a
+ href="http://www.cs.mcgill.ca/~sqrt/dimr/dimreduction.html" target=new><B>projection</B></a> onto the first principal direction</td> 
+    </tr>
+  </table>
+  
+</div>
+
+<DIV  CLASS="slide">
+  <h1>a glimpse of one of the things that neurons compute natively: projection</h1>
+
+  <img src="Hebb-cloud.jpg" class="figure-right" height=350>
+  <P>
+  <BR>
+  Mathematically, <a
+  href="http://en.wikipedia.org/wiki/Dot_product"
+  target=new><SC><B>projecting</B></SC></a> an <I>N</I>-dimensional quantity (a list of
+  <I>N</I> numbers, or a <a 
+  href="http://en.wikipedia.org/wiki/Vector_space" target=new>vector</a>)
+  onto a 1-dimensional subspace (a line) amounts to multiplying the vector's elements by
+  individual weights that define the line's orientation and then summing the
+  results &#151; just like the computation that neurons carry out:
+  <DIR><DIR>
+    <SC><I>out = <B>w</B>&middot;<B>x</B> = w<SUB>1</SUB>&times; x<SUB>1</SUB> + w<SUB>2</SUB>&times; x<SUB>2</SUB></I></SC>
+  </DIR></DIR>
+  <HR>
+  <P>
+  On the right, the input <B><I>x</I></B><I>=(x<SUB>1</SUB>,x<SUB>2</SUB>)</I> and
+  the weight <B><I>w</I></B><I>=(w<SUB>1</SUB>,w<SUB>2</SUB>)</I> vectors are
+  plotted together in the same 2D space. The dotted line shows the change
+  that the weight vector undergoes through learning (see next slide).
+
+</div>
+
+
+<DIV  CLASS="slide">
+  <h1>one of the things that neurons do natively: learn interesting projections</h1>
+
+  <img src="Hebb-cloud.jpg" class="figure-right" height=350>
+  <P>
+  <BR>
+  Mathematically, <a
+  href="http://en.wikipedia.org/wiki/Dot_product"
+  target=new><SC><B>projecting</B></SC></a> an <I>N</I>-dimensional quantity (a list of
+ <I>N</I> numbers, or a <a 
+  href="http://en.wikipedia.org/wiki/Vector_space" target=new>vector</a>)
+  onto a 1-dimensional subspace (a line) amounts to multiplying the vector's elements by
+  individual weights that define the line's orientation and then summing the
+  results &#151; just like the computation that neurons carry out:
+  <DIR><DIR>
+    <SC><I>out = <B>w</B>&middot;<B>x</B> = w<SUB>1</SUB>&times; x<SUB>1</SUB> + w<SUB>2</SUB>&times; x<SUB>2</SUB></I></SC>
+  </DIR></DIR>
+  <HR>
+  <P>
+  Neurons with experience-dependent <a
+  href="http://en.wikipedia.org/wiki/Hebbian"
+  target=new><SC>Hebbian</SC></A> synapses (as in: spike timing dependent
+  plasticity, <a
+  href="http://www.scholarpedia.org/article/Spike-timing_dependent_plasticity"
+  target=new>STDP</a>, to be discussed later this semester)
+  learn
+  the projection that maximizes the variance of the data in the
+  resulting space. In other words, they carry out Principal Component Analysis
+  or <a
+  href="http://en.wikipedia.org/wiki/Principal_component_analysis"
+  target=new>PCA</a>.
+
+</div>
+
+<DIV  CLASS="slide">
+  <h1>neurons can reduce dimensionality NATIVELY, by doing what they do [= projection]</h1>
+
+  <img src="Churchland-10-7.jpg" class="figure-right" height=400>
+  <P>
+  <BR>
+  A neuron <SC>projects</SC> its input space onto the single dimension (single
+  number) represented by its output.
+  <P>
+  A set of <I>K</I> neurons fed by the same set of <I>N</I> input fibers project their common
+  <I>N</I>-dimensional input space onto the <I>K</I>-dimensional space
+  spanned by their outputs.
+  <P>
+  In this illustration, <I>N=4</I> and <I>K=3</I>.
+  <P>
+  <B>
+  [Later, we will come across many uses of dimensionality reduction in
+  cognitive computation, as well as many examples of computation that
+  neurons do natively.]</B>
+  </P>
+  
+</DIV>
+
+<DIV  CLASS="slide">
+  <h1>a slogan for much of perceptual and motor computation</h1>
+
+  <P>
+  <BR>
+  <img src="e-pluribus-unum.jpg">
+  <img src="e-pluribus-pauca.jpg">
+  <P>
+  Dimensionality reduction: <SC>out of many, few</SC>.
+
+  <P class="incremental">
+  [This is because doing pretty much any kind of computation, including
+  learning, in a high-dimensional space is very, VERY hard.]
+  </P>
+
+</div>
+
+-->
+
+
+
+<DIV CLASS="slide">
+  <h1>a visual task that illustrates the importance of spatially structured measurements: acuity</h1>
+
+  <P>
+  <BR>
+  Dimensionality is about the <SC>number</SC> of measurements.
+  <P>
+  The <SC>spatial structure</SC> of the measurements is very important
+  (as is their temporal structure).
+  <P>
+  <HR>
+  <img src="vernier-and-two-dots.gif" class="figure-right">
+  <P>
+  On the right: two types of stimuli, illustrating
+  <I>two-dot</I> and <a href="http://en.wikipedia.org/wiki/Vernier"
+  target=new><I>vernier</I></a> <a
+  href="http://webvision.med.utah.edu/KallSpatial.html"
+ target=new><SC>acuity</SC></a> tasks &#151;
+  <P>
+  <ul class="incremental">
+    <li>
+    The perception <a
+    href="http://en.wikipedia.org/wiki/Psychophysics#Thresholds"
+    target=new>threshold</a> for the two-dot task: 
+    <BR>
+    about 30" (<a
+    href="http://en.wikipedia.org/wiki/Arcsecond" target=new>seconds of
+    arc</a>).
+    </li>
+    <P>
+    <li>
+    The perception <a
+    href="http://en.wikipedia.org/wiki/Psychophysics#Thresholds"
+    target=new>threshold</a> for the vernier task: 
+    <BR>
+    can be as low as 5"!
+    </li>
+  </ul>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1 >the measurement device</h1>
+
+  <img src="hyperac-retinal-mosaic.jpg" class="figure-right" >
+  <P>
+  <BR>
+  On the right: a magnified image of the retinal mosaic &#151;
+  <P>
+  This is the <a href="http://en.wikipedia.org/wiki/Fovea" target=new>fovea</a>, hence no <a
+  href="http://en.wikipedia.org/wiki/Retinal_rod" target=new>rods</a> &#151; only <a
+  href="http://en.wikipedia.org/wiki/Retinal_cone" target=new>cones</a>.
+  <P>
+  <BR>
+  <P>
+  <a href="http://nobelprize.org/nobel_prizes/medicine/articles/cajal/"
+  target=new><img src="cajal12-retina.gif" width=400></a>
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1 >hyperacuity</h1>
+
+  <img src="hyperac-space-space.jpg" class="figure-right" height=550 >
+  <P>
+  <BR>
+  The smallest discernible vernier, as it projects onto the retinal mosaic
+  &#151; 
+  <P>
+  Note that the vernier displacement is much smaller than photoreceptor
+  size.
+  <P>
+  This is an example of <a
+ href="http://scitation.aip.org/getabs/servlet/GetabsServlet?prog=normal&dtype=cvips&gifs=yes"
+  target=new><SC>hyperacuity</SC></a>-level performance.
+  <P><P><P>
+  Right: a cross-section of the <a href="http://www.scholarpedia.org/article/Receptive_field" target=new><SC>receptive fields</SC></a>
+  of three adjacent receptors.
+
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>appreciating hyperacuity</h1>
+
+  <img src="mittens.jpg" class="figure-right">
+  <img src="comb.jpg">
+
+</DIV>
+  
+  -->
+
+
+<DIV CLASS="slide">
+  <h1>"tabletop" receptive field (RF) coding isn't very good</h1>
+
+  <img src="RFs2.png" height=500 class="figure-right">
+  <P>
+  <BR>
+  This measurement device is too insensitive: two close-by dots will likely
+  fall under the same RF and their locations will be perceived as the same.
+
+</DIV>
+
+
+
+<DIV CLASS="slide">
+  <h1>"high-resolution" coding isn't very good either, in another way</h1>
+
+  <img src="RFs1.png" height=500 class="figure-right">
+  <P>
+  <BR>
+  This measurement device is also suboptimal: dot locations
+  get "digitized", but some information is still lost.
+
+</DIV>
+
+
+
+<DIV CLASS="slide">
+  <h1>overlapping "tabletop" coding is better</h1>
+
+  <img src="RFs3.png" height=500 class="figure-right">
+  <P>
+  <BR>
+  To have many overlapping RFs is a better idea. Can you tell why?
+
+</DIV>
+
+
+<DIV CLASS="slide">
+  <h1>overlapping, graded RF coding is the thing!</h1>
+
+  <img src="RFs4.png" height=500 class="figure-right">
+  <P>
+  <BR>
+  Can you tell why many overlapping and graded RFs would do an even better job?
+
+</DIV>
+
+
+<DIV CLASS="slide">
+  <h1>here's why broad, overlapping, graded receptive fields are so effective</h1>
+
+  <img src="RFs5.png" height=500 class="figure-right">
+  <P>
+  <BR>
+  Even small lateral displacements of the dot will not go unnoticed: they
+  get TRANSDUCED into measurable changes in the outputs of the RFs.
+
+</DIV>
+
+
+<DIV CLASS="slide">
+  <h1>here's why broad, overlapping, graded receptive fields are so effective</h1>
+
+  <img src="vernier-and-two-dots.gif" class="figure-right">
+  <P>
+  <BR>
+  Can you tell why the performance for the vernier (two-line) stimulus is so much
+  better than for the two-dot stimulus?
+  <P>
+  <HR>
+  <P>
+  Summary: hyperacuity-level performance is possible because
+  <ol>
+    <li>the RFs are <SC>graded</SC>, and</li>
+    <li>the RFs are <SC>broad and overlapping</SC> in space.</li>
+  </ol>
+  </P>
+
+</DIV>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>a simple explanation of vernier hyperacuity [from the textbook]</h1>
+
+  <img src="hyperac-2RFs.gif" class="figure-right" height=450>
+  <P>
+  <BR>
+  An extremely simple measurement device ("retina") &#151; just two receptive fields
+  (RFs).
+  <P>
+  This very simple system illustrates two very general principles:
+  <ul>
+    <li>the ubiquity of "channel coding" / hyperacuity</li>
+    <li>the broad applicability of learning from examples</li>
+  </ul>
+  <HR>
+    <small><font color=gray>
+  <P>
+  Perceptual learning can be based on populating a representation
+  space with exemplars. Here are a couple of ways of using the accrued
+  exemplars to decide about a new stimulus:
+  <ul>
+    <li>
+    A new stimulus <B><I>x</I></B> can be attributed to the
+    same category as its <a
+ href="http://en.wikipedia.org/wiki/Nearest_neighbor_%28pattern_recognition%29"
+ target=new><SC>nearest neighbors</SC></a> in the representation
+    space. 
+    </li>
+    <li>
+    A new stimulus can be categorized on the basis of its
+    representation-space location relative to a <a
+ href="http://en.wikipedia.org/wiki/Decision_surface" target=new><SC>decision line</SC></a>.
+    </li>
+  </ul>
+  </P>
+  </small></font>
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>[EXTRA: a computational model of hyperacuity perception and learning]</h1>
+
+  <img src="hyperacuity-from-Science.png">
+  <P>
+  <I>Fast Perceptual Learning in Visual Hyperacuity</I>,
+  <BR>
+  Tomaso Poggio; Manfred Fahle; Shimon Edelman
+  <BR>
+  Science, New Series, Vol. 256, No. 5059. (May 15, 1992), pp. 1018-1021.
+
+</DIV>
+
+-->
+
+
+<!-- ------------------------------------------------------------------- -->
+<!-- FACE SPACE -->
+
+<DIV CLASS="slide">
+  <h1>the structure of representation spaces</h1>
+  
+  <img src="face-space-1.gif" height=550 class="figure-right"
+  title="average face; Marty Feldman; Charles LeBrun; Giuseppe Arcimboldo" >
+  The plan for the rest of today:
+  <ol>
+    <li>experimental evidence for the representation space being a
+      SPACE</li>
+    <li>a powerful tool for studying representation spaces</li>
+  </ol>
+  <P>
+  On the right: A schematic diagram of a
+  (high-dimensional<sup><font color=red>*</font></sup>) <SC><B>face
+  space</B></SC>, 
+  illustrating the following concepts:
+  <ul>
+    <li>
+    the average face;
+    </li>
+    <li>
+    typical faces;
+    </li>
+    <li>
+    atypical faces;
+    </li>
+    <li>
+    novel faces.
+    </li>
+    </ul>
+
+    <HR width=30% align=left>
+      <P>
+    <sup><font color=red>*</font></sup> Questions to ponder: WHY and HOW
+    high-dimensional? 
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>face space and view spaces</h1>
+
+  <img src="view-spaces.gif" height=550 class="figure-right" >
+  <P>
+  <BR>
+  In the plane:
+  <BR>
+  the <SC><B>face</B></SC> [shape] <SC><B>space</B></SC>.
+  <P>
+  Perpendicular to it:
+  <BR>
+  the <SC><B>view</B></SC> [orientation] <SC><B>spaces</B></SC> of some of the faces. 
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>caricature as deviation from the mean in the face space</h1>
+
+  <table cellspacing=15>
+    <tr>
+      <td><img src="caricature-reagan.gif" width=80%></td>
+      <td><img src="caricature_vector.gif"></td>
+    </tr>
+    <tr>
+      <td>
+	<a
+	href="http://links.jstor.org/sici?sici=0024-094X(1985)18%3A3%3C170%3ACGTDEO%3E2.0.CO%3B2-U"
+	target=new><I>Caricature Generator: The Dynamic Exaggeration of Faces by
+	Computer</I></a>, 
+	Susan E. Brennan, <a href="http://www.leonardo.info/"
+	target=new>Leonardo</a> 18:170-178 (1985)
+      </td>
+      <td>
+	Caricatures and <a href="http://www.youtube.com/watch?v=F2AitTPI5U0"
+	target=new>face morphing</a>
+      </td>
+    </tr>
+  </table>
+  
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>caricature as deviation from the mean</h1>
+
+  <table cellspacing=15>
+    <tr>
+      <td><img src="Nixon-cropped.jpg" height=450></td>
+      <td><img src="Bush_worry.jpg" height=450></td>
+    </tr>
+    <tr>
+      <td align=center><a href="https://en.wikipedia.org/wiki/Watergate_scandal"
+      target=new>Richard M. "Shifty Dick" Nixon</a></td>
+      <td align=center>George W. "Dubya" Bush as<BR>
+	<a href="https://en.wikipedia.org/wiki/Alfred_E._Neuman" target=new>Alfred E. "What, me worry?"
+	Newman</a></td>
+    </tr>
+  </table>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>perceptual adaptation: a demo that reveals a general principle of representation in the brain</h1>
+
+  <img src="afterimage-adaptation.jpg" class="figure-right">
+  <P>
+  <BR>
+  On the right: a quick demo of visual color adaptation. Stare at the
+  parrot for at least 30 seconds, then look at the center of the
+  cage. What do you see?
+  <P class="incremental">
+    <a href="http://www.michaelbach.de/ot/mot-adapt/index.html"
+  target=new>Adaptation</a>, to which all perceptual modalities are susceptible,
+  reveals an important characteristic of neural coding:
+  the brain uses DISTRIBUTED REPRESENTATIONS, so that when some of the
+  units that participate in representing a particular stimulus get
+  fatigued and respond less vigorously, the ones that have not been
+  active "take over" and make the entire representation more like
+  their own preferred features of the stimulus.
+  </P>
+  <P class="incremental">
+    Re distributed representations: recall the Haxby et al. (2001) paper from
+    <a href="../comp-psych-20/u-2.html#(24)"
+    target=new>Unit 2</a>.
+  </P>
+  <P class="incremental">
+    A useful analogy: the <a href="https://www.youtube.com/watch?v=qYEzLL510o8"
+			     target=new>Tug-of-War game</a>.
+  </P>
+
+</div>
+
+  
+
+<DIV CLASS="slide">
+  <h1>[EXTRA] using morphing to study face space in the brain (Jiang, Blanz, and O'Toole, 2006)</h1>
+
+  <img src="Jiang06-fig1.png" class="figure-right" height=450>
+  <P>
+  <B>(a)</B> The face space used in Experiment 1 of
+  <a href="https://journals.sagepub.com/doi/abs/10.1111/j.1467-9280.2006.01734.x"
+  target=new>Jiang, Blanz, and O'Toole (2006)</a>.  Morphing along the
+  line from the average to an original face corresponds
+  to <I>anticaricatures</I>, where the identity strength is lower
+  relative to the original. Increasing identity strength beyond the
+  original creates <I>caricatures</I>. The <I>antiface</I> of an
+  original is located on the other side of the average.
+  <P>
+  <B>(b)</B>
+  The four original scans that were used in the experiment and their
+  antifaces.
+  <P>
+  <B>(c)</B> The identity strengths from the experiment, scaled in units of
+  the distance of the original (1.0) from the average (0.0). <font color=gray>Using antifaces
+  with identity strengths equal to -0.75 avoided some morphing artifacts
+  that tend to occur at more extreme values.</font>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>[EXTRA] experiment 1 (Jiang at al., 2006)</h1>
+
+  <img src="Jiang06-fig2.png" height=500 class="figure-right">
+  <P>
+  <small>
+  <B>(a)</B> An example trial: across-viewpoint, neutral condition with
+  5 sec antiface <SC>adaptation</SC>.
+  <B>(b)</B> <I>Left:</I> an antiface adapting stimulus as presented in the
+  within-viewpoint condition; <I>Middle:</I> the corresponding antiface adapting
+  stimulus in the view-changed condition; <I>Right:</I> the corresponding
+  warped antiface.
+  <B>(c)</B> The proportion of trials in the within-viewpoint,
+  across-viewpoint, and warped conditions on which the test face was
+  identified as the match to the adapting antiface stimulus, as a function
+  of the identity strength of the test face.
+  </small>
+  <P>
+  Findings:
+  <ul>
+    <li>
+    [within-viewpoint] The average face (identity strength = 0) was identified as the match to the
+    antiface adapting stimulus on .55 of the trials, significantly
+    more often than the .25 expected by chance.
+    </li>
+    <li>
+    [across-viewpoint] The average face was identified as the match to the
+    adapting stimulus on .39 of the trials, again significantly more
+    often than expected by chance.
+    </li>
+    <li>
+    Bottom line: <B>the face space is not just a fanciful
+    abstraction</B> —
+    subjects maintain representations of the face space and use those
+    in processing face stimuli.
+    </li>
+  </ul>
+  <!--
+  The no-adaptation line indicates the proportion of correct identifications
+  for the faces as a function of identity strength (excluding the
+  0-identity-strength point, which reflects guessing responses to the
+  average).
+  -->
+
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>separate manipulation of shape and reflectance (Jiang at al., 2006)</h1>
+
+  <img src="Jiang06-fig3.png">
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>experiments 2, 3: shape vs. reflectance (Jiang at al., 2006)</h1>
+
+  <img src="Jiang06-fig4.png" class="figure-right" height=550>
+  <P>
+  The proportion of trials in the within- and across-viewpoint conditions on
+  which the test face was identified as the match to the adapting antiface
+  stimulus, as a function of the identity strength of the test face.
+  <P>
+  The
+  no-adaptation line indicates the proportion of correct identifications for
+  the faces as a function of identity strength (excluding the
+  0-identity-strength point, which reflects guessing responses to the
+  average).
+  <P>
+  <I>Top:</I> results for the shape-varying faces. <I>Bottom:</I> results
+  for the reflectance-varying faces.
+  <P>
+  Summary:
+  <ul>
+    <li>
+    The representation of faces that is affected by opponent-identity
+    adaptation includes information about both three-dimensional
+    shape and surface reflectance.
+    </li>
+    <li>
+    More generally, <B>the face space is not just a fanciful abstraction</B>: 
+    subjects maintain representations of the face space and use those
+    in processing face stimuli.
+    </li>
+  </ul>
+
+</div>
+
+-->
+
+<!--- MDS --->
+
+
+
+<DIV CLASS="slide">
+  <h1>mapping representation spaces from behavioral data and measurements of neural activity</h1>
+
+  <img src="Haxby14-fig1.png" class="figure-right" width=60%>
+  How can we visualize the face space as it is represented by the subject, from
+  <ul>
+    <li>
+    behavioral data, such as subjective similarity judgments?
+    </li>
+    <li>
+    neural activity data recorded from populations of neurons? 
+    </li>
+  </ul>  
+  <P>
+    PROBLEM: Unlike brain scans, behavioral data concerning internal
+    representations do not include the coordinates for
+    each point — only <B>relational</B> information.
+  </P>
+  <P>
+    PROBLEM: Brain data typically reside in a <B>high-dimensional</B>
+    space, which cannot be easily visualized (In this example, there
+    are 10 dimensions).
+  </P>
+  <P class="incremental">
+  A particularly useful and theoretically interesting computational 
+      technique that can do that is multidimensional scaling (<B>MDS</B>).
+  For both behavioral and neural cases, MDS can embed the data (1)
+      faithfully and (2) in a space of much lower dimensionality. 
+  </P>
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>multidimensional scaling (MDS)</h1>
+
+  <img src="mds1.gif" class="figure-right" height=200>
+  <P>
+  <BR>
+  <a
+  href="http://en.wikipedia.org/wiki/Multidimensional_scaling" target=new>Multidimensional scaling</a> (MDS) is a procedure that takes
+  <UL>
+    <li>
+    <B>a table of pairwise distances</B> among points
+    <BR>
+    (which may come from a <I>very</I> high-dimensional space)
+    </li>
+    <P>
+      and turns it into
+    <li>
+      <img src="mds2.gif" class="figure-right" height=250>
+    a <B>map</B> of the points' layout
+    <BR>
+    in just a few dimensions (typically, 2 or 3, if used for visualization)
+    </li>
+    <P>
+    <li>
+    while <a
+ href="http://genius.com/Jorge-luis-borges-on-exactitude-in-science-annotated"
+ target=new>preserving the original absolute distances</a> (in another version,
+    original relative distances, or distance ranks) as much as possible.
+    </li>
+  </ul>
+  <HR>
+  <P class="incremental">
+  Why must a mapping procedure preserve at least relative distances?
+  </P>
+
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>EXTRA: visualizing face space from neural and behavioral data (Nestor et al., 2016)</h1>
+
+  <img src="Nestor16-fig1.png" height=35%>
+  <P>
+  <BR>
+    <B>Behavioral and neural face space topography estimated through
+    MDS.</B> <font color=gray><small>Plots show the distribution of facial identities across the
+    first two dimensions for (A) behavioral and (C) brain [right anterior
+    fusiform gyrus (raFG)] data. Each dot represents a single identity
+    (for simplicity only a subset of neutral images is shown in each
+    plot). First-dimension coefficients corresponding to different
+    facial identities correlate significantly across data types (C
+    Inset, Pearson correlation, *P < 0.05). Pairs of opposing face
+    templates are constructed for each dimension and data type (B,
+    behavioral templates; D, raFG templates) for visualization and
+    interpretation purposes.</small></font>
+  <P align=right>
+    — Nestor, Plaut, and Behrmann (2016). <I>Feature-based face representations and image
+      reconstruction from behavioral and neural data</I>,
+      Proc. Natl. Acad. Sci. 113:416-421.
+  </P>
+
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>reconstructing faces from behavioral and neural activity; also some dark sci-fi</h1>
+
+  <P class="incremental">
+  <a href="https://en.wikipedia.org/wiki/Crocodile_(Black_Mirror)"
+  target=new><img src="Black-Mirror-Crocodile.jpg"
+  class="figure-right" height=550 title="Black Mirror (S4E3): Crocodile"></a>
+  </P>
+  <img src="Nestor16-fig4b.png" height=550>
+
+</div>
+
+  
+<DIV CLASS="slide">
+  <h1>visualizing multidimensional face and view spaces from neural activity data</h1>
+
+  <img src="FreiwaldLivingstone09-fig1.png">
+  <P>
+  <BR>
+
+
+</div>
+
+   
+
+<DIV CLASS="slide">
+  <h1>visualizing multidimensional face and view spaces from neural activity data</h1>
+
+  <P>
+  <BR>
+  In a typical study, described next, researchers used <a
+  href="http://en.wikipedia.org/wiki/Multidimensional_scaling"
+  target=new>multidimensional scaling</a> (MDS)
+  to plot the face space formed by the activities of a group of neurons in
+  the temporal visual areas in monkeys, which engaged in a face
+  identification task.
+  <P>
+  Two separate populations of face-responsive neurons were studied:
+  <ul>
+    <li>
+    In the anterior <a
+    href="http://brainmaps.org/index.php?i=superior%20temporal%20sulcus"
+    target=new>STS</a>, neurons responded selectively to specific 
+    <B>views</B> of various faces. 
+    </li>
+    <li>
+    In the anterior <a href="http://brainmaps.org/index.php?i=ITG"
+    target=new>ITG</a>, neurons responded selectively to face
+    <B>identity</B>, regardless of view.
+    </li>
+  </ul>
+  <P>
+  <HR>
+  <P>
+  S. Eifuku et al., <a
+  href="http://jn.physiology.org/cgi/content/full/91/1/358?maxtoshow=&HITS=10&hits=10&RESULTFORMAT=&author1=Eifuku&andorexactfulltext=and&searchid=1&FIRSTINDEX=0&sortspec=relevance&resourcetype=HWCIT"
+  target=new><I>Neuronal correlates of face identification in
+  the monkey anterior temporal cortical areas</I></a>, J. Neurophysiology,
+  91:358-371 (2004).
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1 >an ITG neuron's response to various views of four faces</h1>
+
+  <img src="face-space-1.gif" height=200 class="figure-right" >
+  <img src="Eifuku04-face-space-tuning.jpg">
+  <P>
+  Narrower tuning to <B>face identity</B> than to face view.
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1 >ensemble of ITG neurons: the <I>FACE</I> space</h1>
+
+  <img src="face-space-1.gif" height=200 class="figure-right" >
+  <img src="Eifuku04-face-space.jpg" class="figure-left" height=500>
+  <table border=1 width=300 align=right>
+    <tr>
+      <td><I>letter</I></td><td>A,B,C,D</td><td>face identity</td>
+    </tr>
+    <tr>
+      <td><I>color</I></td><td><font color=red>A</font>,<font color=green>A</font>,<font color=purple>A</font>,...</td><td>face view</td>
+    </tr>
+  </table>  
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1 >an STS neuron's response to various views of four faces</h1>
+
+  <img src="view-spaces.gif" height=200 class="figure-right" >
+  <img src="Eifuku04-view-space-tuning.jpg">
+  <P>
+  Narrower tuning to <B>face view</B> than to face identity.
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1 >ensemble of STS neurons: the <I>VIEW</I> space</h1>
+
+  <img src="view-spaces.gif" height=200 class="figure-right" >
+
+  <img src="Eifuku04-view-space.jpg" class="figure-left" height=500>
+  <table border=1 width=300 align=right>
+    <tr>
+      <td><I>letter</I></td><td>A,B,C,D</td><td>face identity</td>
+    </tr>
+    <tr>
+      <td><I>color</I></td><td><font color=red>A</font>,<font color=green>A</font>,<font color=purple>A</font>,...</td><td>face view</td>
+    </tr>
+  </table>  
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>from measurements of behavioral and neural activity to maps of face spaces </h1>
+
+  <img src="view-spaces.gif" height=550 class="figure-right" >
+
+  <P>
+  <BR>
+  <B>So, is all this representation space business for real?</B>
+  <P>
+  YES.
+  </P>
+  
+</div>
+
+-->
+
+
+<DIV CLASS="slide">
+  <h1>INSIGHT: two complementary conceptions of multidimensional scaling (MDS)</h1>
+
+  The conceptual underpinnings of MDS serve both the scientists
+  who study the brain and the brain itself:
+  <P>
+  <table cellpadding=20 rules=rows>
+    <TR>
+      <td></td>
+      <td align=center>neuroscience</td>
+      <td align=center>cognition</td>
+    </tr>
+    <TR class="incremental">
+      <td>obtaining relational ("2nd-order") insight into a
+	system</td>
+      <td>
+	The <B>scientist</B> needs to know how brain representations
+	are related to each other.
+      </td>
+      <td>
+	The <B>brain</B> needs to know how external objects and events
+	are related to each other.
+      </td>
+    </TR>
+    <TR class="incremental">
+      <td>dimensionality reduction</td>
+      <TD>
+	The <B>scientist</B> needs to map the high-dimensional brain activity space
+	into a few meaningful dimensions.
+      </TD>
+      <TD>
+	The <B>brain</B> needs to map the high-dimensional sensory measurement
+	space into a few meaningful dimensions.
+      </TD>
+    </TR>
+  </table>
+  <P>
+    <HR>
+      <P class="incremental">
+	MDS is uniquely suitable for bridging the <font color=red>gap</font> between the
+	brain and the world — in either direction — because it relates
+	configurations of corresponding items in two spaces that are
+	otherwise in principle absolutely unrelated to each
+	other. <font color=gray>(Note that this is not the case for projection-based
+	methods such as Principal Components Analysis
+	or <a href="http://ordination.okstate.edu/PCA.htm" target=new>PCA</a>.)</font>
+      </P>
+      <P class="incremental">
+	The key idea here is <a href="../Archive/Edelman-BBS98.pdf"
+				   target=new>REPRESENTATION <B>OF</B>
+	  SIMILARITY</a>.
+	<BR>
+	  <font color=gray>For a book-length
+				   detailed mathematical treatment and
+				   empirical tests, see
+      <a href="https://www.amazon.com/Representation-Recognition-Vision-Bradford-Book/dp/0262050579/" target=new><I>Representation
+				   and Recognition in Vision</I></a>, 
+      S. Edelman, MIT Press (1999).</font>
+      </P>
+
+</div>
+
+
+
+<div class="footer">
+<p>Last modified: Mon Jul 20 2020 at 20:09:12 EDT</p>
+</div>
+</body>
+</html>

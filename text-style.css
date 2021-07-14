@@ -1,0 +1,19 @@
+H1, H2 { color: green; font-family: sans-serif }
+
+H3, H4 { color: brown; font-family: sans-serif }
+
+.col {
+   width: 600;
+   text-align: justify
+}
+
+.colp {
+   width: 80%;
+   text-align: justify
+}
+
+.coln {
+   width: 50%;
+   text-align: justify
+}
+

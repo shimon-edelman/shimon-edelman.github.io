@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Psych 3140/6140 w-11-2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2014-2021 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- 
+<rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+<permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+<requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+<permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+<requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+</License>
+</rdf:RDF>
+-->
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Week 11.2 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Psych 3140/6140</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Week 11: neurons, I</h2>
+    <h3>&nbsp;Lecture 11.2: dynamic assemblies</h3>
+  </div>
+  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%>
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+
+<div  CLASS="slide">
+  <h1>Lecture 11.2: neurons, I (cont.)</h1>
+
+  <P>
+    A few more functions that neurons compute natively:
+    <ul>
+      <li>DYNAMIC assemblies</li>
+      <P>
+	<li>neurons as READOUT devices</li>
+      </ul>
+    </li>
+  </P>
+  
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>many neurons acting together: cell assemblies and associative recall</h1>
+
+  <img src="cell-assemblies.jpg" class="figure-right" >
+  <P>
+    <I>Right</I>: <a href="https://en.wikipedia.org/wiki/Donald_O._Hebb"
+       target=new>Donald Hebb</a>'s idea of cell assemblies.
+  </P>
+  <P>
+    For the cell assembly hypothesis to stand, key questions must be
+    addressed: 
+    <ul class="incremental">
+      <li>
+	Why doesn't activity spread to the entire network and persist forever?
+      </li>
+      <P>
+	<li>
+	  How can a far-flung set of neurons be causally effective as a group?
+	</li>
+      </ul>
+    </P>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>a side remark on associations and CONCEPTS: the Puzzle of Pineapple Pizza</h1>
+
+  <a href="https://www.mccain.com/" target=new><img src="Ham-and-Pineapple-Pizza.jpg" class="figure-right" height=300></a>
+  <P>
+    Why would someone think of putting pineapple on a pizza??  Think
+    British-style <a href="https://www.youtube.com/watch?v=rJ5PnSfZ98c"
+    target=new>gammon steak</a>.
+  </P>
+  <video src="Monty&#32;Python&#32;la&#32;vache.mov" height=350 controls="controls">
+  </video>
+<!--  <img src="recursive-pizza.jpg" class="figure-right" height=250> -->
+  <P>
+    Concepts are DYNAMIC and are constituted
+    <a href="http://sapir.psych.wisc.edu/papers/Casasanto_Lupyan_AdHocConcepts_InPress.pdf"
+       target=new><I>ad hoc</I></a>; any instance of concept use is an
+       instance of CREATIVITY.
+  </P>
+  <P class="incremental">
+    How could dynamic concepts be implemented in the brain, which is
+    presumably all "hard-wired"?
+  </P>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>how cell assemblies emerge: neurons as read-out devices (Buzsaki, 2010)</h1>
+
+<!--   <img src="" class="figure-right" >  -->
+  <P>
+  Three hypotheses regarding cell assemblies:
+  <ol>
+    <li>
+      Cell assemblies are best understood in light of their output, as
+      detected by "reader-actuator" mechanisms.
+    </li>
+    <li>
+      The hierarchical organization of cell assemblies may be regarded
+      as a
+      neural <font color=red>"</font>syntax<font color=red>"</font>.
+    </li>
+    <li>
+      Constituents of the neural syntax are linked together by
+      dynamically changing constellations of synaptic weights
+      (ensembles of synapses, or "synapsembles").
+    </li>
+  </ol>
+  </P>
+  <HR>
+    <P class="incremental">
+      [EXTRA: Note that the representations implemented by synapsembles are
+      <a href="http://mathworld.wolfram.com/DualGraph.html" target=new>DUAL</a> to those
+      implemented by neural activities.]
+    </P>
+    
+</div>
+
+    
+
+
+  
+<DIV CLASS="slide">
+  <h1>cell assemblies and the problem of segmentation</h1>
+
+  <img src="Buzsaki10-fig1ab.png" class="figure-right" >
+  <P>
+    <B>(A)</B> Hebb's reverberating cell assembly sequences ("assembly
+    phases"). Arrows represent transitions between individual
+    assemblies, numbered sequentially in order. <small>The direction
+    of activity flow across assemblies (edges) is determined by the
+    stronger synaptic strengths among assembly members relative to
+    other connections (not shown). The same assembly can participate
+    in a sequence more than once (e.g., pathway 1, 4 indicates
+    recurring transitions). <!-- No mechanism is postulated to explain why
+    activity does not spread to all parts of the network and
+    reverberate forever.--> </small>
+  </P>
+  <P>
+    <B>(B)</B> Top: long sequence of two characters (e.g., dot and
+    dash). Its embedded information is virtually impossible to
+    recover. Bottom: same exact sequence as above after adding
+    syntactic segmentation (space = stop-start punctuation) between
+    the short strings of
+    characters. <small>The <a href="http://en.wikipedia.org/wiki/Morse_code"
+    target=new><B>Morse code</B></a> message reads: "segmentation of
+    information is essence of coding." By analogy, segmentation or
+    "chunking" of neuronal assemblies can be brought about by salient
+    external stimulus sequences, brain-initiated, modality-specific
+    synchronizing-blanking mechanisms (such as saccadic eye movement,
+    sniffing, whisking, active touch, licking, contraction of middle
+    ear muscles, etc.), internally generated oscillations, or other
+      syntactical mechanisms.</small>
+  </P>
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>reader-defined cell assemblies</h1>
+
+  <img src="Buzsaki10-fig1c.png" class="figure-right" >
+  <P>
+  <B>(C)</B> Neurons that fire within the <B>integrating window</B> of a reader
+  mechanism (corresponding, e.g., to the ability of a reader neuron to integrate
+  its inputs within the time frame of its membrane time constant) define an assembly
+  (irrespective of whether or not assembly members are interconnected
+  synaptically among themselves). Readers <B>a</B>, <B>b</B>, <B>c</B> ,and
+ <B>w</B> may receive inputs from many  
+  neurons (1 to n) by way of synapses differing in strength but respond only to
+  a combination of spiking neurons to which they are most strongly connected
+  (e.g., reader <B>a</B> responds preferentially to cofiring of neurons 1, 5, and 9 at \(t_1\),
+  even though it may be synaptically innervated by neurons 2, 6, and 10 as
+  well; at \(t_2\), neuron <B>b</B> fires in response to the discharge of neurons 2, 6, and
+ 10).
+  <P>
+    <small>Synaptic strengths between neurons vary as a function of the spiking
+  history of both postsynaptic and presynaptic neuron
+  (short-term <B>plasticity</B>, to be discussed
+  <a href="wk-12-1.html"
+  target=n>next week</a>).
+  The response of the reader neuron, therefore, depends on both the identity
+  of the spiking upstream neurons and the constellation of current synaptic
+  weights ("synapsembles"). Reader mechanism <B>q</B> has a longer time integrator
+  and, therefore, can link together assemblies to neural "words," reading out
+  a new quality not present in the individual representations of <B>a</B>, <B>b</B>, and
+  <B>c</B>.</small>
+  
+</div>
+
+  
+
+<DIV CLASS="slide">
+  <h1>cell assembly: the fundamental unit of neural syntax</h1>
+
+  <img src="Buzsaki10-fig2.png" class="figure-right" >
+  <P>
+    <B>(A, B)</B> Raster plot (A) of a subset of hippocampal pyramidal
+    cells that were active during a 1 s period of spatial exploration
+    on an open field out of a larger set of simultaneously recorded
+    neurons, ordered by stochastic search over all possible orderings
+    to highlight the temporal relationship between anatomically
+    distributed neurons. Color-coded ticks (spikes) refer to recording
+    locations shown in (B).  <B>Cell assembly organization is visible,
+    with repeatedly synchronous firing of some subpopulations
+    (circled).</B>
+  </P>
+  <P>
+    <font color=gray>Vertical lines indicate troughs
+      of <a href="http://en.wikipedia.org/wiki/Theta_waves"
+	  target=new>theta waves</a> (bottom trace).  Note that assemblies
+      can alternate (top and bottom sets) rapidly across theta
+      cycles.</font>
+  </P>
+  <P>
+    <font color=gray>
+      <B>(C)</B> Spike timing is predictable from peer
+      activity. [NOTE: this implies some very interesting collective
+      dynamics, such as
+      <a href="https://en.wikipedia.org/wiki/Emergence"
+	 target=new>emergence</a> and
+      <a href="https://en.wikipedia.org/wiki/Downward_causation"
+	 target=new>downward causation</a>.] The histogram here shows
+	 the distribution of timescales at which peer activity
+	 optimally improved spike time prediction of a given cell,
+	 shown for all cells. The median optimal timescale is 23 ms
+      (red line).
+    </font>
+  </P>
+    <!--
+  <P class="incremental">
+    [See the <a href="https://en.wikipedia.org/wiki/Synfire_chain"
+		target=new>synfire</a> concept (Abeles, 1982)]
+  </P>
+  -->
+  
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>synchrony is only a small part of the story of TEMPORAL PATTERNS of neural activity</h1>
+
+  <img src="Izhikevich-fig.8.7.png" class="figure-right" height=550>
+  <P>
+    Summary of neuro-computational properties exhibited by Izhikevich's
+    "simple model": 
+  <P>
+    <img src="Izhikevich-simple-model.png" height=200>
+  <P>
+  <small>
+  Eugene M. Izhikevich, <I>Dynamical Systems in Neuroscience: The Geometry
+  of Excitability and Bursting</I>, MIT Press, 2005.
+  </small>
+  <HR>
+    <P>Re the next slide, note especially case (K),
+    <a href="https://en.wikipedia.org/wiki/Resonance_(disambiguation)"
+    target=new>"resonator"</a>.
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>(K) an example in which input spike frequency is key: switching/steering a signal</h1>
+
+  <img src="Izhikevich05-fig.7.23.png" class="figure-right" height=400>
+  <P>
+  Cell A can direct its output selectively:
+  <ul>
+    <li>to cell B, by emitting 4 spikes at intervals of 12 ms,</li>
+    <P>
+    or
+    <P>
+    <li>to cell C, by emitting 4 spikes at intervals of 18 ms.</li>
+  </ul>
+  <P>
+  <small>
+  Eugene M. Izhikevich, <I>Dynamical Systems in Neuroscience: The Geometry
+  of Excitability and Bursting</I>, MIT Press, 2005.
+  </small>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>[back to Buzsaki] example of read-out: olfaction in the locust</h1>
+
+  <img src="Buzsaki10-fig3abc.png" class="figure-right" >
+  <P>
+    <B>(A)</B> Wiring diagram of the early olfactory system of the
+    <a href="https://en.wikipedia.org/wiki/Locust"
+       target=new>locust</a>. An odorant evokes an odor-specific
+       temporal pattern in several of recurrently connected antennal
+       lobe (AL) projection neurons (PNs), coordinated by a 20–30 Hz
+       (<a href="http://en.wikipedia.org/wiki/Gamma_wave"
+       target=new>gamma</a>)
+       oscillation. <a href="http://en.wikipedia.org/wiki/Kenyon_cells"
+       target=new>Kenyon cells</a> (KC) of the mushroom body (MB) are
+       the readers of the activity of AL projection neurons (PNs) and
+       integrate their spikes.
+  </P>
+  <P>
+    <B>(B)</B> Firing patterns of 3 AL neurons (PN1-3) in response to
+    16 different odors. The activity of AL neurons defines the
+    "population vector" or "state" of the network; the time-varying
+    population vector (i.e., the shifting states) ascribes a
+    trajectory. The state evolves over a few hundred milliseconds
+    before relaxing back to baseline (illustrated by the curve in the
+    inset in A).
+  </P>
+  <P>
+    <B>(C)</B> Activity of 3 KCs. Each KC carries out a pattern matching
+    operation between its synaptic vector and the PN population activity
+    vector. The AL output evokes a single  burst in the reader KC
+    (<a href="http://en.wikipedia.org/wiki/Sparse_coding#Sparse_coding"
+	target=new>"sparse coding"</a>).
+  </P>
+  <P>
+    <img src="locust.jpg" height=150>
+    </P>
+  
+</div>
+
+  
+
+<DIV CLASS="slide">
+  <h1>another example: birdsong</h1>
+
+  <img src="Buzsaki10-fig3def.png" class="figure-right" height=500>
+  <P>
+  <B>(D)</B> Time-frequency spectrum of a <a href="https://en.wikipedia.org/wiki/Zebra_finch"
+    target=new>zebra finch</a> song and its amplitude
+  envelope.
+  <P>
+  <B>(E)</B> Spike raster plot of eight projection neurons in area
+  <a href="http://en.wikipedia.org/wiki/HVC_%28avian_brain_region%29"
+  target=new>HVC</a> (10 repeats). Each ensemble pattern ("state") in
+  HVC specifies a note to be sung; the temporal sequence of notes
+  (trajectory) defines the song and is read out and sent to the motor
+  execution system by the subsequent stages.
+  <P>
+  <font color=gray>
+  <B>(F)</B> Interneuronal activity is also temporally organized and relates
+  to the syntactic structure of the song.
+  </font>
+  <P>
+    <a href="https://en.wikipedia.org/wiki/Zebra_finch"
+    target=new><img src="mock-zebra-finch.jpg" title="not really a
+    zebra finch" height=200></a> 
+  
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>lessons?</h1>
+
+<!--   <img src="" class="figure-right" >  -->
+  <P>
+  So, what is it that neurons compute natively?
+  <ul class="incremental">
+    <li>
+      Do linear algebra (vector projection / inner product, matrix
+      multiplication).</li>
+    <li>
+      Implement dimensionality reduction (from many dimensions to
+      one), including similarity-preserving DR by random projections.
+    </li>
+    <li>
+      <font color=gray>Perform function approximation (when arranged
+      in multilayer networks).</font> 
+    </li>
+    <li>
+      Respond selectively (exhibit tuning) [and thus serve as
+      landmarks/prototypes in a similarity-based representation
+      scheme, a.k.a. the Chorus Transform].
+    </li>
+    <li>
+      Form spatial maps, presumably to facilitate navigation, episodic
+      memory and prospection, and social cognition.
+    </li>
+    <li>
+      Form abstract maps (retinotopic, tonotopic, chronotopic, etc.),
+      presumably to facilitate similarity-based readout. 
+    </li>
+    <li>
+      Organize themselves in dynamic assemblies (note the importance of
+      time) implemented by readout mechanisms.
+    </li>
+  </ul>
+  </P>
+  
+</div>
+
+  
+  
+
+<div class="footer">
+<p>Last modified: Thu Apr 22 2021 at 08:52:18 EDT</p>
+</div>
+</body>
+</html>

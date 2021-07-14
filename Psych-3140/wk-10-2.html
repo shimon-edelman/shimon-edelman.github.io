@@ -1,0 +1,1527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Psych 3140/6140 wk-10-2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2008-2021 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- 
+<rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+<permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+<requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+<permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+<requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+</License>
+</rdf:RDF>
+-->
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Week 10.2 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Psych 3140/6140</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Week 10: higher cognition, III</h2>
+    <h3>&nbsp;Lecture 10.2: problem-solving; creativity</h3>
+  </div>
+  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%>
+
+</div>
+<!-- END COVER PAGE -->
+
+
+<div CLASS="slide">
+  <h1>"what shall I do next?"</h1>
+
+  <img src="at-a-loss.png" class="figure-right" height="350">
+    <P>
+      <ul>
+	<li>problem spaces and search</li>
+	<li>simulation and counterfactuals</li>
+	<li>meta-problem solving</li>
+	<li>creativity</li>
+      </ul>
+    </P>
+    <P>
+      <b>"All organisms <strike>with complex nervous systems</strike> are faced with the
+	moment-by-moment question that is posed by life: What shall I do next?"</b>
+    </p><dir><dir>
+	S. Savage-Rumbaugh and R. Lewin<br>
+	  <a href="http://en.wikipedia.org/wiki/Kanzi" target="new"><i>Kanzi</i></a> (1994)
+      </dir></dir>
+      
+      <P class="incremental">
+	[This already came up in Week 8, the context of language.]
+      </P>
+
+</div>
+
+
+
+<div CLASS="slide">
+  <h1>a side remark: all DOING begins with WANTING (for better or for worse)</h1>
+
+  <img src="Braitenberg-M-brain.gif" class="figure-right">
+  <p>
+  "... <a href="http://en.wikipedia.org/wiki/Tanha"
+  target="new"><sc>drives</sc></a> engender desires, which lead to the 
+  realization of problems, which in turn instigate thinking."
+  </p><p>
+  </p><hr>
+  <p class="incremental">
+  [The above quote is part of the second of the
+    so-called <a href="http://en.wikipedia.org/wiki/Four_noble_truths"
+    target="new">Four Noble Truths</a> preached by
+    the <a href="http://en.wikipedia.org/wiki/Buddha"
+    target="new">Buddha</a>.] 
+  </p><hr>
+  <p>
+    <small>
+      McCulloch, W. S., <i>Machines that think and want</i>, Lecture at the American
+      Psychological Association, September 9, 1947.
+    </small>
+  </p>
+  <P>
+    <I>Right:</I> block diagram of the control system for a
+    two-wheeled mobile robot. Note the SEEK and AVOID drives, as well
+    as the actual drive inputs to the right and left motors (MR and
+    ML).
+  </P>
+  <img src="Braitenberg-vehicle.jpg" height=150 class="figure-left">
+
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>"machines that think and want"</h1>
+
+  <img src="Braitenberg-M-brain+.gif" class="figure-right" >
+  <P>
+  <BR>
+  "... <a href="http://en.wikipedia.org/wiki/Tanha"
+  target=new><SC>drives</SC></a> engender desires, which lead to the
+  realization of problems, which in turn instigate thinking."
+  <P>
+  <HR>
+  <P>
+  [This is part of the second of the so-called <a
+    href="http://en.wikipedia.org/wiki/Four_noble_truths" target=new>Four
+    Noble Truths</a> preached by the <a
+    href="http://en.wikipedia.org/wiki/Buddha" target=new>Buddha</a>.]
+  <P>
+  <HR>
+  <P>
+  <a href="http://en.wikipedia.org/wiki/Yoda" target=new><img src="yoda.gif"
+  height=120 class="figure-right"></a>
+  <P>
+  <I>Compare:</I><BR> "Fear is the path to the dark side. Fear leads to anger. Anger leads to
+  hate. Hate leads to suffering." 
+
+</div>
+
+
+
+<div CLASS="slide">
+  <h1>the Towers of Hanoi problem</h1>
+
+  <P>
+    [Recall
+    <a href="http://kybele.psych.cornell.edu/~edelman/Psych-3140/wk-7-2.html#(14)"
+       target=lec>Lecture 7.2</a>]
+  </P>
+  <table cellspacing="30">
+    <tbody><tr>
+	<td>
+	  <a href="https://www.mathsisfun.com/games/towerofhanoi.html" target="new"><img src="Towers.GIF" border="0"></a>
+	  </td>
+	<td>
+	  <img src="balitemple3.jpg">
+	  </td>
+	</tr>
+	  <tr>
+	    <td colspan="2">
+	      "All organisms with complex nervous systems are faced with the
+	      moment-by-moment question that is posed by life: What shall I do next?"
+	    </td>
+	  </tr>
+      </tbody></table>
+
+</div>
+
+-->
+
+    
+<div CLASS="slide">
+  <h1>back to problem spaces: the state space of the Towers of Hanoi problem</h1>
+
+  <img src="hanoi_graph.gif" class="figure-right" height="550">
+    <P>
+      Problem solving as state-space navigation — 
+    </P>
+  <P>
+    [Recall
+    <a href="wk-7-2.html#(14)"
+       target=lec>Lecture 7.2</a>]
+  </P>
+  <P>
+    <a href="https://www.mathsisfun.com/games/towerofhanoi.html"
+    target="new"><img src="Towers.GIF" border="0"></a> 
+    </P>
+
+</div>
+
+
+
+<div CLASS="slide">
+  <h1>the Tic Tac Toe problem space</h1>
+  <img src="tictactoe.gif" class="figure-right">
+
+  <p>
+    A <i>very</i> small portion of the Tic Tac Toe problem space,
+    which has the form of
+    a <a href="http://en.wikipedia.org/wiki/Tree_%28data_structure%29"
+    target="new"><sc>tree</sc></a> (a
+    directed <a href="http://en.wikipedia.org/wiki/Graph_%28data_structure%29"
+		target="new">graph</a> without cyclical paths).
+  </P>
+
+</div>
+
+
+
+<div class="slide">
+  <h1>some problem spaces</h1>
+
+  <table border="1" cellpadding="10">
+    <tbody><tr>
+      <td align="center"><i>game</i></td><td align="center"><i>state space
+	size</i></td><td align="center"><i>remarks</i></td>
+    </tr><tr>
+      <th>Towers of Hanoi</th>
+      <td align="center">27</td>
+      <td>For 3 disks</td>
+    </tr>
+    <tr>
+      <th>Tic Tac Toe</th>
+      <td align="center">26,830</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th><a href="http://en.wikipedia.org/wiki/Checkers" target="new">checkers</a></th>
+      <td align="center">10<sup>31</sup></td>
+      <td>Checkers has been <a href="http://www.sciencemag.org/cgi/content/abstract/1144079" target="new">solved</a>: perfect play by both sides results in a draw.
+      </td>
+    </tr>
+    <tr>
+      <th><a href="http://en.wikipedia.org/wiki/Chess" target="new">chess</a></th>
+      <td align="center">10<sup>123</sup></td>
+      <td>Estimated. Compare to the estimated number of atoms in the
+	Universe: 10<sup>79</sup></td>
+    </tr>
+    <tr>
+      <th><a href="http://en.wikipedia.org/wiki/Go_%28board_game%29" target="new">Go</a></th>
+      <td align="center">2.1⋅10<sup>170</sup></td>
+      <td><img src="Go_adjacent_stones.gif"></td>
+    </tr>
+  </tbody></table>
+
+</div>
+
+
+
+<div CLASS="slide">
+  <h1>heuristic search</h1>
+
+  <img src="chess-tree.gif" class="figure-right">
+  <p>
+    Chess <a href="http://chess.verhelst.org/1997/03/10/search/"
+	     target="new"><sc>search algorithms</sc></a> explore the
+	     problem state space, which has the form of a tree —
+  </p>
+  <p>
+    The state space is too large to explore
+    exhaustively; <a href="http://en.wikipedia.org/wiki/Heuristics"
+    target="new"><sc>heuristics</sc></a> are used to evaluate the
+    possible moves.
+  </p>
+  <p>
+    The poorer moves are discarded (the tree is "pruned"), and the
+    optimal move (given the information at hand) is chosen.
+  </P>
+  <HR>
+  <P class="incremental">
+    The
+    <a href="https://deepmind.com/research/case-studies/alphago-the-story-so-far"
+    target=new>AlphaGo program</a> — the first to beat the human Go
+    world champion — used reinforcement learning to train itself in
+    deep heuristic tree search.
+  </P>
+
+</div>
+
+
+
+
+
+<DIV CLASS="slide">
+  <h1>search and exploration v. exploitation in space, mind, and society (Hills et al., 2015)</h1>
+
+  <img src="Hills15-fig4.png" class="figure-right" height=550>
+  <P>
+    Key concepts:
+    <ul>
+      <li>search
+	<ul>
+	  <li>in physical spaces</li>
+	  <li>in abstract spaces</li>
+	</ul>
+      </li>
+      <li>balancing exploitation and exploration</li>
+    </ul>
+  </P>
+  <P>
+  <HR>
+  <P>
+  Challenges and limitations:
+  <ul>
+    <li>___</li>
+    <li>___</li>
+  </ul>
+
+
+</div>
+
+
+<!--
+
+<div CLASS="slide">
+  <h1>problem solving as hill climbing</h1>
+
+  <img src="hill-climbing.gif" class="figure-right">
+
+  <p>
+  <br>
+  <a href="http://en.wikipedia.org/wiki/Hill_climbing" target="new"><sc>Hill
+  climbing</sc></a> is a <a href="http://en.wikipedia.org/wiki/Local_search_%28optimization%29" target="new"><sc>local</sc></a> method for searching state spaces — 
+
+</div>
+
+
+
+<div CLASS="slide">
+  <h1>hierarchical abstraction and heuristics</h1>
+
+  <img src="GobetEtAl-chunking-in-chess.jpg" class="figure-right" height="550">
+  <p>
+    Redefining the search space  in chess
+    by <a href="http://en.wikipedia.org/wiki/Chunking_%28psychology%29"
+	  target="new"><sc>"chunking"</sc></a> (recall <sc>hierarchical abstraction</sc>) —
+  </p>
+  <p>
+    The higher
+    the <a href="http://en.wikipedia.org/wiki/Elo_rating_system"
+    target="new">Elo rating</a> of a player, the larger the difference
+    between his memory for valid board positions and his memory for
+    random positions (from Gobet et al., 2001).
+  </p>
+  <hr>
+    <p class="incremental">
+      Consider the role of experience/memory (which complements gF) in
+      being smart.
+    </P>
+  
+</div>
+
+  -->
+  
+
+<div CLASS="slide">
+  <h1>real-life (as opposed to board-game) problem solving is EMBODIED and SITUATED</h1>
+
+  <img src="pitcher-L.jpg"><img src="pitcher-R.jpg">
+  <p>
+    In the Tucker and Ellis task (which is related to the celebrated
+    <a href="https://www.youtube.com/watch?v=pl4plPGRG8o"
+       target=new>drinking problem</a>), the subject is
+    required to answer, in each trial, the question <b>"Is this a
+      pitcher?"</b>  as rapidly as possible.
+  </p>
+  <p>
+    Half the subjects answer "yes" by pressing a button on the right and half
+    by pressing a button on the left.
+  </p>
+  <p>
+    The participants respond faster when the handle is on the same
+    side as the "yes" button
+    (cf. <a href="http://www.usabilityfirst.com/glossary/stimulus-response-compatibility/"
+	    target="new">stimulus-response compatibility</a>).
+  </P>
+
+</div>
+
+
+
+
+<div CLASS="slide">
+  <h1>embodied problem solving and SIMULATION</h1>
+
+  <img src="Hegarty04-fig1a.png" class="figure-right">
+  <p>
+    The diagram shows two interlocking gears. Will the knob on the leftmost
+    gear mesh with the groove on the right gear if the gears are rotated
+    inward?
+  </p>
+  <p>
+    [From <i>Mechanical reasoning by mental simulation</i>,
+    <br>
+      M. Hegarty, Trends
+      in Cognitive Sciences 8:280-285 (2004).]
+    </P>
+  
+</div>
+
+
+
+
+<div CLASS="slide">
+  <h1>embodied problem solving and simulation</h1>
+
+  <img src="Hegarty04-fig1b.png" class="figure-right">
+  <p>
+    The diagram depicts a pulley system. When the free end of the rope is
+    pulled, will the lower pulley turn clockwise?
+  </p>
+  <p>
+    [From <i>Mechanical reasoning by mental simulation</i>,
+    <br>M. Hegarty, Trends in Cognitive Sciences 8:280-285 (2004).]
+    </p>
+    <hr>
+      <p class="incremental">
+	It takes subjects longer to infer the direction of rotation for the lowest
+	pulley, compared to the middle one.
+      </p>
+
+</div>
+
+
+
+
+<div CLASS="slide">
+  <h1>embodied problem solving and simulation</h1>
+
+  <img src="Hegarty04-fig1c.png" class="figure-right">
+    <p>
+      The diagram shows two glasses of water. The glasses are the same
+      height and filled to the same water level. If the glasses are
+      tilted, will the water pour out of the two glasses at the same
+      or different angles of tilt?  If they are tilted at the same
+      rate, which will pour first?
+    </p>
+    <p>
+      [From <i>Mechanical reasoning by mental simulation</i>,
+      <br>
+	M. Hegarty, Trends
+	in Cognitive Sciences 8:280-285 (2004).]
+      </p>
+      <hr>
+	<p class="incremental">
+	  Subjects find it much more difficult to solve this problem when reclining
+	  than when sitting upright.
+	</p>
+  
+</div>
+
+
+<!--
+
+<div CLASS="slide">
+  <h1>animals solving problems</h1>
+
+  <img src="Kacelnik-crow.jpg" class="figure-right">
+  <p>
+  <br>
+  A member of Alex Kacelnik's <a href="http://users.ox.ac.uk/%7Ekgroup/tools/nest_photos.shtml" target="new">Behavioral Ecology Research Group</a>, Oxford University, using
+  a computer.
+  
+</div>
+
+-->
+
+
+<div CLASS="slide">
+  <h1>real-world problem solving</h1>
+
+  <table cellspacing="10">
+    <tbody><tr>
+      <td align="center"><img src="apollo.gif" height="400"></td>
+      <td align="center"><img src="Apollo-13-damaged-CM.jpg" height="400"></td>
+    </tr>
+    <tr>
+      <td align="center">the Apollo spacecraft, used in<BR> the
+      <a href="https://en.wikipedia.org/wiki/Apollo_13"
+      target=new>Apollo 13 mission</a></td>
+      <td align="center"><a href="https://www.youtube.com/watch?v=55NH2eobcUc"
+      target="new">"Houston, we've got a problem"</a></td>
+    </tr>
+  </tbody></table>
+  
+</div>
+
+
+
+
+<div class="slide">
+  <h1>saving Apollo 13</h1>
+
+  <p>
+    Problem solving in "cognition in the wild" relies on some of the same
+    computational principles and techniques as in artificial situations such
+    as chess-playing, including:
+  </p>
+  <ul>
+    <li>state-space representations</li>
+    <li>embodied simulation</li>
+    <li>evaluation functions</li>
+    <li>search</li>
+  </ul>
+  <p class="incremental">
+    HOWEVER, the open-ended nature of the real-world situations makes
+    everything more difficult. In particular, "the" search space may be
+    ill-defined and "the" relevant evaluation function may be unknown.
+  </p>
+  
+</div>
+
+
+
+
+<div CLASS="slide">
+  <h1>saving Apollo 13</h1>
+
+  <p>
+    "Cognition in the wild" is often <sc>distributed</sc> among a
+    group of people —
+    the <a href="http://kybele.psych.cornell.edu/%7Eedelman/Psych-3140/Apollo-13-fix-instructions.pdf"
+    target="new">19-step procedure</a> for saving Apollo 13 was
+    developed [through <b>simulation</b>] by a large crew of engineers
+    at the mission control center, in close collaboration with the
+    spacecraft's designers and with the astronauts themselves.
+  </p>
+  <p>
+    A solitary "rocket scientist" is normally of very little use to
+    "rocket science".
+  </p>
+
+</div>
+
+
+
+
+<div class="slide">
+  <h1>Apollo 13: PROBLEM SOLVED</h1>
+
+  <img src="Apollo-13-CO2-filter.jpg" class="figure-right">
+  <p>
+    <I>Right:</I> the jury-rigged attachment for the CO<sub>2</sub>
+    chemical scrubber filter (square box, held together
+    with <a href="http://en.wikipedia.org/wiki/Duct_tape"
+    target="new">duct tape</a>), which had been cannibalized from the
+    crippled Service Module, is shown here after its improvised
+    installation in the Lunar Module.
+  </P>
+
+  <p>
+    "Cognition in the wild" is often <sc>situated</sc>  — apart from the
+    two <a href="http://en.wikipedia.org/wiki/Lithium_hydroxide" target="new">lithium
+      hydroxide</a> canisters cannibalized from the Service Module, the solution
+    used the following items: 
+  </p>
+  <ul>
+    <li>one cardboard cover to the Apollo 13 flight plan;</li>
+      <li>one roll of gray duct tape;</li>
+      <li>two hoses from the astronauts' suits;</li>
+      <li>two socks</li>
+      <li>one bungee cord.</li>
+      <li>two<sup>*</sup> plastic bags;</li>
+  </ul>
+  <hr>
+    <sup>*</sup>Only three were available on board. <b>And <sc>what if</sc> there were none?</b>
+
+</div>
+
+
+
+<div CLASS="slide">
+  <h1>counterfactual thinking</h1>
+
+  <img src="MLK.jpg" class="figure-right">
+  <p>
+    The tip of
+    the <a href="http://www.nbcnewyork.com/news/local/The-Day-Martin-Luther-King-Jr-Was-Stabbed-in-Harlem-81964952.html"
+    target="new">blade</a> was on the edge of my aorta... it came out
+    in the New York Times the next morning that if I had sneezed I
+    would have died... and I want to say tonight, I want to say that
+    I'm happy I didn't sneeze... Because if I had sneezed, I wouldn't
+    have been around here in 1960 when students from all over the
+    South started sitting-in at lunch counters... if I had sneezed, I
+    wouldn't have been here in 1963 when the black people of
+    Birmingham, Alabama aroused the conscience of this nation and
+    brought into being the civil rights bill... If I had sneezed I
+    wouldn't have had the chance later that year in August to try
+    to <a href="http://www.americanrhetoric.com/speeches/mlkihaveadream.htm"
+    target="new">tell America about a dream</a> that I had had... I'm
+    so happy that I didn't sneeze.
+  </p><dir><dir>
+    <a href="http://en.wikipedia.org/wiki/Martin_Luther_King,_Jr." target="new">Martin Luther King, Jr.</a>, in a 1968 speech 
+  </dir></dir>
+  <p>
+  </p><hr>
+  <p>
+  From <i>Mental models and counterfactual thoughts about what might have
+  been</i>, <a href="https://www.tcd.ie/research/profiles/?profile=rmbyrne" target="new">Ruth M. J. Byrne</a>, TiCS 6:426-431 (2002). 
+  
+</div>
+
+
+
+
+<div CLASS="slide">
+  <h1>counterfactual thinking in problem solving</h1>
+
+  <img src="apollo13_tank2.jpg" class="figure-right">
+  <p>
+    The liquid oxygen tank, whose explosion <a href="http://nssdc.gsfc.nasa.gov/planetary/lunar/ap13acc.html" target="new">caused</a> the
+    Apollo 13 accident:
+  </p>
+  <p>
+  <small><b>if</b> the tank had not been dropped during transportation
+  (causing the fill line to bend), and <b>if</b> the temperature
+  sensor had not been damaged by being run off 65 instead of 28 volts
+  (causing it to fuse), the contents of the tank would not have
+  overheated when an in-flight "cryo-stir" was attempted, and the
+    explosion would have been prevented.</small>
+  </P>
+  
+</div>
+  
+  
+
+<!--
+
+<div CLASS="slide">
+  <h1>counterfactual thinking in problem solving</h1>
+
+  <img src="dead%2520battery.jpg" class="figure-right">
+  <p>
+  <br>
+  A couple of down-to-earth examples:
+  </p><p>
+  </p><ul class="incremental">
+    <li>"If I hadn't left the ignition on overnight, the car battery would
+    not have died."</li>
+    <p>
+    </p><li>"If it were not for global warming, my clavicles would each still be in one
+    piece."</li>
+  </ul>
+  <hr>
+  <p class="incremental">
+  Note connection to forethought/foresight.
+  </p><p>
+  
+</div>
+  
+  
+-->
+
+
+<div CLASS="slide">
+  <h1>subject consistency in counterfactual thinking</h1>
+
+  <p>
+  <img src="worsemorelikely.gif" width="900">
+  </p><p>
+  The patterns of counterfactuals generated by different people in a given
+  situation are similar to each other.
+  </p><p>
+  A likely explanation: this is because they all reflect the same
+  <sc>statistical</sc> — and ultimately <sc>causal</sc> — knowledge about the world.
+
+  
+</div>
+
+
+<!--
+
+<div CLASS="slide">
+  <h1>counterfactual thinking</h1>
+
+  <img src="San-Andreas-fault.jpg" class="figure-right" title="San Andreas Fault">
+  <p>
+  <br>
+  A memorable expression: counterfactuals follow
+  <br>
+  "the <a href="http://en.wikipedia.org/wiki/Fault_line" target="new">fault lines</a> of the imagination" 
+  </p><dir>
+    — <a href="http://en.wikipedia.org/wiki/Daniel_Kahneman" target="new">Kahneman</a> and Tversky (1982)
+  </dir>
+
+</div>
+
+-->
+
+
+
+<div CLASS="slide">
+  <h1>counterfactual thinking and creativity</h1>
+
+  <a href="http://en.wikipedia.org/wiki/RFK" target="new"><img src="RFK-June-1963.jpg" class="figure-right" title="Robert F. Kennedy"></a>
+  <p>
+  <font size="+3">
+  You see things as they are and ask, 'Why?' </font></p><p><font size="+3">
+  I dream things as they never were and ask, 'Why not?'
+  </font>
+
+</div>
+
+
+
+<div class="slide">
+  <h1>counterfactual thinking and creativity</h1>
+  <a href="http://en.wikipedia.org/wiki/RFK" target="new"><img src="RFK-June-1963.jpg" class="figure-right" title="Robert F. Kennedy"></a>
+
+  <p>
+  <font size="+3">
+  You see things as they are and ask, 'Why?' </font></p><p><font size="+3">
+  I dream things as they never were and ask, 'Why not?' 
+  </font>
+  </p><dir>
+    <a href="http://en.wikipedia.org/wiki/The_Worship_of_the_Serpent" target="new">Serpent</a> to <a href="http://en.wikipedia.org/wiki/Eve_%28Bible%29" target="new">Eve</a>,
+    <br>
+    in <a href="http://en.wikipedia.org/wiki/Back_to_Methuselah" target="new"><i>Back
+    to Methuselah</i></a><br>
+    by <a href="http://en.wikipedia.org/wiki/George_Bernard_Shaw" target="new">George Bernard Shaw</a>
+  </dir>
+
+</div>
+
+
+
+
+<div class="slide">
+  <h1>creativity: from problem solving to meta-problem solving</h1>
+
+  <img src="house-on-fire.jpg" class="figure-right"
+  height=400 title="everything is fine">
+  <p>
+  The generic <sc>meta-problem</sc>: realizing and evaluating the
+  problematicity of a given situation.
+  </p>
+  <!--
+  <p>
+  </p><hr>
+  <p class="incremental">
+  Some questions that are always relevant: "What if...?"; "Why not...?"
+  </p>
+  <p class="incremental">
+  <font color="red"><b>Any other ideas?</b></font>
+  </p>
+  -->
+
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>extra: meta-meta-problem solving</h1>
+  <P>
+  <BR>
+  The <SC>ultimate problem</SC>, and its resolution:
+  <DIR>
+    <a href="http://en.wikipedia.org/wiki/Epimenides"
+    target=new>Epimenides</A>, who once became interested in Eastern philosophy  
+    made a long pilgrimage to meet <a
+    href="http://en.wikipedia.org/wiki/Buddha" target=new>Buddha</a>. When he finally met him,
+    Epimenides said, "I have come to ask a question. What is the best
+    question that can be asked, and what is the best answer that can be
+    given?" Buddha replied, "The best question that can be asked is the
+    question you have just asked, and the best answer that can be given
+    is the answer I am giving."
+    <P>
+    <DIR><DIR>
+      &#151; <a href="http://en.wikipedia.org/wiki/Raymond_Smullyan"
+      target=new>Raymond Smullyan</A> (1983)
+    </DIR></DIR>
+  </DIR>
+
+</div>
+
+-->
+
+<DIV CLASS="slide">
+  <h1>from thinking to creativity via...</h1>
+
+  <img src="Snow84-redrawn.jpg" class="figure-right"  height=500>
+
+  <P>
+    General intelligence (gF or IQ) relies heavily on
+    interference-resistant working memory.
+  <BR>
+    In what general type of task is this computational tool
+    indispensable?
+  </P>
+  <P class="incremental">
+  <font color=red><B>ANALOGY</B>.</font>
+  </P>
+  <P>
+  <HR>
+  <P>
+    <I>Right:</I> a schematic summary of a meta-analysis of scores of
+    results quantifying the relationships among various intelligence
+    tests.
+  </P>
+  <P>
+    <a href="http://en.wikipedia.org/wiki/Raven%27s_Progressive_Matrices"
+       target=new>Raven's Progressive Matrices</a> and other <SC>analogy</SC>
+    tests turn out to be central to these tests.
+  </P>
+
+</div>
+
+  
+
+<DIV CLASS="slide">
+  <h1>a <I>computational</I> path from "mere" thinking to creativity</h1>
+
+  <img src="Ravens.gif" class="figure-right" height=325>
+  <P>
+    <a href="http://en.wikipedia.org/wiki/Raven%27s_Progressive_Matrices"
+       target=new>Raven's Progressive Matrices</a> and
+       other <B>ANALOGY</B> tests are central in any numerical
+       assessment of general cognitive function.
+  </P>
+  <P>
+    To solve <SC>matrix analogy</SC> problems such as this one, it is
+    necessary to carry out the following computations:
+  <ol>
+    <li>identify the primitive elements;</li>
+    <li>determine the relevant features;</li>
+    <li>describe each of the given items in terms of these;</li>
+    <li>infer the rules that hold for each row and column;</li>
+    <li>derive a description of the missing item;</li>
+    <li>scan the candidate answers for an item that fits best the expected
+    missing item.</li>
+  </ol>
+  <P class="incremental">
+    Can you tell which mode of reasoning (deduction, abduction,
+    induction, ...), if any, is used at each step?
+  </P>
+  <HR>
+  <P class="incremental">
+  Much as in visual scene interpretation, the information that is critical to this
+  analogy task has two components: the ROLES of the elements and their POSITIONS.
+  </P>
+  
+</div>
+
+
+
+
+<div  CLASS="slide">
+  <h1>analogy and variations on a theme as the crux of creativity (after D. Hofstadter)</h1>
+
+  <img class="figure-right" src="Jastrow's&#32;kookaburra.jpg" title="duck or rabbit?">
+  <P>
+    For a brilliant discussion of the centrality of ROLE-playing to
+      analogy and creativity, see Douglas Hofstadter's essay
+    <a href="https://www.foundalis.com/res/drh/OnSeeingAs.htm"
+       target=new><I>on seeing A's and seeing As</I></a>.
+  </P>
+  <P>
+    In the remainder of this lecture: 
+    <ul>
+      <li>A computational model of analogy and creativity</li>
+      <a href="http://en.wikipedia.org/wiki/Picasso" target=new>
+	<img class="figure-right" src="Picasso-head2.gif" title="Bull's head (P. Picasso)"></a> 
+	<li>Case studies in creativity</li>
+      </ul>
+    </P>
+    <P>
+      <small><font color=gray>
+	  [optional extra] <a href="http://kybele.psych.cornell.edu/~edelman/Psych-3140/Archive/Kolodny-Edelman-Lotem-animal-creativity-CurrZoo15.pdf"><I>Evolved to adapt: A
+	      computational approach to animal innovation and creativity</I></a>, Oren
+	  Kolodny, Shimon Edelman, and Arnon Lotem, Current Zoology 61:350-367
+	  (2015). 
+    </font></small>
+    </P>
+
+
+    
+</div>
+
+  
+<!--  
+
+<DIV CLASS="slide">
+  <h1>creativity: some general observations</h1>
+
+  <P>
+  Traits implicated in creativity:
+  <ul>
+    <li>verbal fluency</li>
+    <li>fluency of ideas</li>
+    <li>redefinition and <B>divergent thinking</B> (DT)</li>
+    <li>openness to experience</li>
+    <li>independence of thought</li>
+    <li>capacity to bring together remote associations</li>
+    <li>capacity to expend effort in the production of ideas</li>
+  </ul>
+
+    <P class="incremental">
+  There is no correlation, above an IQ level of 120, between IQ scores and 
+  creative ability, however measured [D. W. McKinnon (1962). "The
+  nature and nurture of creative talent", American Psychologist
+  17:484-495.]
+  </P>
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>backtracking and divergent thinking</h1>
+
+  <img src="nazgul.gif" class="figure-right" >
+  <P>
+  <BR>
+  <ul>
+  <li>
+      A man in a certain town in the US married twenty women from the
+      town. All the women are still alive, none has been divorced, the man
+      is not a Mormon, and yet the man broke no law. How is that possible?
+  </li>
+      <P>
+  <li>
+      Yesterday, when I went to sleep, I turned off the light and then got
+      into bed. My bed is located twenty feet from the light switch, and yet
+      I got into bed before the room got dark. How is that possible?
+  </li>
+      <P>
+  <li>
+      Our basketball team won a game last week by the score of 73-49, and
+      yet not one man on our team scored as much as a single point. How is
+      that possible?
+  </li>
+</ul>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>divergent thinking</h1>
+
+  <img src="EowynNazgul-1.jpg" class="figure-right" height=400>
+  <DIR>
+    &#151; Begone, foul <a
+ href="http://tolkiengateway.net/wiki/Dwimmerlaik" target=new>dwimmerlaik</a>, lord of carrion! Leave the dead in peace!
+  </DIR>
+  A cold voice answered:
+  <DIR>
+    &#151; Come not between the <a
+ href="http://tolkiengateway.net/wiki/Nazg%C3%BBl" target=new>Nazgûl</a> and his prey! Or he will not slay thee in thy
+    turn. He will bear thee away to the houses of lamentation, beyond all
+    darkness, where thy flesh shall be devoured, and thy shrivelled mind be
+    left naked to the <a
+ href="http://tolkiengateway.net/wiki/Lidless_Eye" target=new>Lidless Eye</a>.
+  </DIR>
+  A sword rang as it was drawn.
+  <DIR>
+    Do what you will; but I will hinder it if I may.
+    <br>
+    &#151; Hinder me? Thou fool. <B>No living man may hinder me!</B>
+  </DIR>
+  Then Merry heard of all sounds in that hour the strangest. It seemed that
+  Dernhelm laughed and the clear voice was like the ring of steel.
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>divergent thinking</h1>
+
+  <img src="EowynNazgul-2.jpg" height=400>
+  <P>
+  "<B>'But no living man am I!</B> You look upon a woman. Éowyn am I, daughter
+  of Éomund.'"
+  <br>
+  <DIR>
+    [From the <a
+    href="http://www.houghtonmifflinbooks.com/features/lordoftheringstrilogy/"
+    target=new>LOTR</a>, The Battle of the Pelennor Fields.]
+  </DIR>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>divergent thinking</h1>
+
+  <img src="four-squares.jpg" height=450>
+  <P>
+  Move two matches and make four squares, one of them larger than the other
+  three. 
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>divergent thinking (the Duncker task)</h1>
+
+  <img src="Duncker-candle.jpg" height=450>
+  <P>
+  Attach a candle to the wall using only the objects shown in the picture.
+
+</div>
+
+  -->
+  
+
+<DIV CLASS="slide">
+  <h1>an opportunity for getting creative with roles and fillers in analogy problems</h1>
+
+  <a href="http://www.wikipedia.org/wiki/Penrose_triangle"
+  target=new><img src="Penrose-triangle.gif" class="figure-right" ></a>
+  <P>
+  <font color=gray>
+  What is to a triangle as a triangle is to
+  a square?
+  <P>
+  What is to four dimensions as the Penrose triangle is to three?
+  <P>
+  What is to Greece as the Falkland Islands are to Britain?
+  <P>
+  What is to the US as the Eiffel Tower is to France?
+  <P>
+  What is to German as Shakespeare's plays are to English?
+  <P>
+  What is to 1-2-3-4-4-3-2-1 as 4 is to 1-2-3-4-5-5-4-3-2-1 ?
+  </font>
+  <P>
+  <B>What is to <I>xyz</I> as <I>abd</I> is to <I>abc</I>?</B>
+  <P>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>a computational model of analogy: MetaCat (Hofstadter, 1995; Marshall, 2002)</h1>
+
+  <img src="Metacat-example-3.jpg" height=600 class="figure-right">
+  <P>
+  The domain: letter string analogies.
+  <P>
+  <HR>
+  <P>
+  <B>Slipnet</B>:
+  <BR>
+  conceptual spaces.
+  <P>
+  <B>Coderack</B>:
+  <BR>
+  procedures for SEARCHING problem spaces.
+  <P>
+  <B>Workspace</B>:
+  <BR>
+  working memory.
+
+</div>
+
+
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>search / variations on a theme as the crux of creativity</h1>
+
+  <img src="hei.jpg">
+  <img src="thinking-creativity-As.jpg" class="figure-right">
+  <P>
+  The computational challenge in <a href="http://en.wikipedia.org/wiki/Typeface" target=new>typeface
+  design</a>: capture the spirit of <B><I>A</I></B> or <a
+ href="http://www.chinese-tools.com/tools/sinograms.html?q=黑"
+ target=new>黑</a> in a low-dimensional
+  space (the pixel space of a typical <a
+ href="http://en.wikipedia.org/wiki/Glyph#Typography" target=new>glyph</a>: 800x600
+  dims).
+  <P>
+  [from <I>Variations on a Theme as the Crux of Creativity</I>, Douglas
+  Hofstadter, <I>Scientific American</I>, 1982]
+
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>analogies and joint parameterization</h1>
+
+  <P>
+  What is to <a href="http://www.flash.net/~park29/rachmaninoff.htm"
+  target=new>Rachmaninoff</a> as <a
+  href="http://www.flash.net/~park29/rachmaninoff.htm"
+  target=new>Rachmaninoff</a> is to <a
+  href="http://w3.rz-berlin.mpg.de/cmp/beethoven.html"
+  target=new>Beethoven</a>?
+  <P>
+  What is the mid-point between
+  <ul>
+    <li>
+    <a href="http://www.jsbach.org/"
+    target=new>Johann Sebastian Bach</a>,
+    </li>
+    <P>
+    <li>
+    <a
+    href="http://en.wikipedia.org/wiki/Krzysztof_Penderecki"
+    target=new>Krzysztof Penderecki</a>, and
+    </li>
+    <P>
+    <li>
+    <a href="http://en.wikipedia.org/wiki/Angelo_Badalamenti"
+    target=new>Angelo Badalamenti</a>?
+    </li>
+  </ul>
+
+</div>
+
+
+-->
+
+
+<DIV CLASS="slide">
+  <h1>search / variations on a theme / continuity in creativity</h1>
+
+  <table cellpadding=50>
+    <tr>
+      <td align=center>
+	<a href="http://en.wikipedia.org/wiki/Creativity" target=new><img
+	src="da-Vinci-helicopter.jpg" title="da Vinci's helicopter design">
+      </td>
+      <td align=center>
+	<a href="http://en.wikipedia.org/wiki/Archimedes_screw" target=new><img
+	src="Archimedes'_screw.jpg" width=300></a>
+      </td>
+    </tr>
+    <tr>
+      <td align=center>A helicopter design<BR> by <a
+	href="http://en.wikipedia.org/wiki/Leonardo" target=new>Leonardo da
+	Vinci</a></td> 
+      <td align=center>A water pump called after <a
+	href="http://en.wikipedia.org/wiki/Archimedes"
+	target=new>Archimedes</a> <BR>(probably known already in
+	ancient Mesopotamia)
+      </td>
+    </tr>
+  </table>
+  <HR>
+  <P class="incremental">
+  Metacat's Coderack includes the knowledge of reasonable/effective VARIATIONS
+  <BR>
+  [for the letter string domain]
+  </P>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>continuity in creativity</h1>
+
+  <table cellspacing=25>
+    <tr><td colspan=2><B>ENGINEERING:</b></td></tr>
+    <tr>
+      <td>
+	<a href="http://www.cottontimes.co.uk/watto.htm"
+	target=new>Watt's engine</a>
+      </td>
+      <td> &#151; </td>
+      <td><a
+	href="http://www.technology.niagarac.on.ca/people/mcsele/newcomen.htm"
+	target=new>Newcomen's engine</a>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+	<a href="https://en.wikipedia.org/wiki/Kinetoscope"
+	target=new>Edison's kinetoscope</a>
+      </td>
+      <td> &#151; </td>
+      <td>
+	<a href="https://en.wikipedia.org/wiki/Phonograph"
+	target=new>Edison's phonograph</a> 
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+	<a
+	href="http://en.wikipedia.org/wiki/Wright_Flyer"
+	target=new>Wrights' biplane</a>
+      </td>
+      <td> &#151; </td>
+      <td>
+	<a
+	href="http://en.wikipedia.org/wiki/Octave_Chanute"
+	target=new>Chanute</A>'s <a 
+	href="http://en.wikipedia.org/wiki/Biplane"
+	target=new>biplane</a>
+      </td>
+    </tr>
+  </table>
+  <P>
+  [from <I>Beyond the myth of the genius</I>, Robert Weisberg (1993)]
+
+</DIV>
+
+
+
+<DIV CLASS="slide">
+  <h1>continuity in creativity</h1>
+
+
+  <table cellspacing=25>
+    <tr><td colspan=2><B>SCIENCE:</b></td></tr>
+    <tr>
+      <td>
+	<a href="http://www.nobel.se/medicine/laureates/1962/"
+	target=new>Watson & Crick's helix</a> 
+      </td>
+      <td> &#151; </td>
+      <td>
+	<a
+	href="https://en.wikipedia.org/wiki/Linus_Pauling"
+	target=new>Pauling</a>'s <a
+	href="https://en.wikipedia.org/wiki/Alpha_helix"
+	target=new>alpha-helix</a>
+      </td>
+    </tr>
+  
+    <tr>
+      <td>
+	<a href="https://en.wikipedia.org/wiki/Charles_Darwin"
+	target=new>Darwin</a>'s <a
+	href="http://books.google.com/books?id=YIoGFZz4yQMC&pg=PA106&lpg=PA106&dq=Darwin+monads&source=web&ots=_ZY7j40BfO&sig=i1NlNgK3h5HQ9VMYNnBvhllC5NQ&hl=en&sa=X&oi=book_result&resnum=1&ct=result" 
+	target=new>monad theory</a>
+      </td>
+      <td> &#151; </td>
+      <td>
+	<a href="https://en.wikipedia.org/wiki/Jean-Baptiste_Lamarck"
+	target=new>Lamarck</a>, <a
+	href="https://en.wikipedia.org/wiki/Erasmus_Darwin"
+	target=new>E. Darwin</a>; <a
+ href="https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz"
+	target=new>Leibniz</a> (<a
+	href="https://en.wikipedia.org/wiki/Monadology"
+	target=new>monad</a> concept)
+      </td>
+    </tr>
+  </table>
+  <P>
+  [from <I>Beyond the myth of the genius</I>, Robert Weisberg (1993)]
+
+</DIV>
+
+
+
+<DIV CLASS="slide">
+  <h1>continuity in creativity</h1>
+
+  <table cellspacing=25>
+  <tr><td colspan=2><B>ART:</b></td></tr>
+  <tr>
+    <td>
+      <a href="http://www.calder.org/" target=new>Calder</a>'s mobiles
+    </td>
+      <td> &#151; </td>
+      <td>
+	<a href="http://www.calder.org/" target=new>Calder</a>'s earlier
+	moving sculpture 
+      </td>
+    </tr>
+    <tr>
+      <td>
+	<a href="http://www.picasso.fr/" target=new>Picasso</a>'s <a
+	href="http://en.wikipedia.org/wiki/Les_Demoiselles_d%27Avignon"
+	target=new><I>Les Demoiselles</I></a>
+      </td>
+      <td> &#151; </td>
+      <td>
+	<a href="http://www.ibiblio.org/wm/paint/auth/ingres/"
+	target=new>Ingres</a>, <a
+	href="http://www.ibiblio.org/wm/paint/auth/cezanne/"
+	target=new>Cezanne</a>, <a
+	href="http://www.ibiblio.org/wm/paint/auth/delacroix/"
+	target=new>Delacroix</a>, <a
+	href="http://www.ibiblio.org/wm/paint/auth/matisse/"
+	target=new>Matisse</a>, etc.
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+	<a href="http://www.picasso.fr/" target=new>Picasso</a>'s
+	<a href="http://web.org.uk/picasso/secret_guernica.html"
+	target=new><I>Guernica</I></a>
+      </td>
+      <td> &#151; </td>
+      <td>
+	<a href="http://www.picasso.fr/" target=new>Picasso</a>'s <a
+	href="http://web.org.uk/picasso/r20.html" 
+	target=new><I>Minotauromachy</I></a>, etc.
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+	<a href="http://users.lycaeum.org/~sputnik/People/coleridg.html"
+	target=new>Coleridge</a>'s <a
+	href="http://en.wikipedia.org/wiki/Kubla_Khan"
+	target=new><I>Kubla Khan</I></a>
+      </td>
+      <td> &#151; </td>
+      <td>
+	<a
+	href="https://en.wikipedia.org/wiki/Samuel_Purchas" target=new>Purchas's <I>Pilgrimage</I></a>, etc.
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+	<a href="http://en.wikipedia.org/wiki/Mozart"
+	target=new>Mozart</a>'s early works
+      </td>
+      <td> &#151; </td>
+      <td>
+	<a href="http://en.wikipedia.org/wiki/Leopold_Mozart"
+	target=new>L. Mozart</a>'s music exercises, etc. 
+      </td>
+    </tr> 
+  </table>
+  <P>
+  [from <I>Beyond the myth of the genius</I>, Robert Weisberg (1993)]
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>James Watt's steam engine</h1>
+
+  <a
+  href="http://en.wikipedia.org/wiki/Watt_steam_engine"
+  target=new><img src="thinking-creativity-watt1.gif"></a>
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>Watt and Newcomen</h1>
+
+  <img src="thinking-creativity-Watt.jpg">
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>steam engineering in ancient Egypt</h1>
+
+  <a href="http://www.history.rochester.edu/steam/hero/section38.html"
+  target=new><img src="thinking-creativity-temple-doors-steam.jpg"
+  class="figure-right" ></a>
+  <P>
+  <BR>
+  Opening temple doors when a fire is lit on the altar &#151;
+  <P>
+  Cf. <a href="https://en.wikipedia.org/wiki/Arthur_C._Clarke" target=new>Arthur C. Clarke</a>'s
+  Third <a href="http://en.wikipedia.org/wiki/Clarkes_Three_Laws"
+  target=new>Law</a>:
+  <dir>
+    <dir>
+      <B><I>Any sufficiently advanced technology is indistinguishable from
+      magic.</I></B>
+    </dir>
+  </dir>
+  <P class="incremental">
+  Corollary: if a piece of technology is distinguishable from magic, it is
+  insufficiently advanced (by <a
+ href="http://en.wikipedia.org/wiki/Modus_tollens" target=new>modus tollens</a>).
+  </P>
+  
+</div>
+
+
+<!--
+
+<DIV class="slide">
+  <h1>Mozart and Salieri</h1>
+
+  <img src="Mozart-and-Salieri.jpg" class="figure-right">
+  <P>
+  <BR>
+  The Mozart (and Salieri) <a
+  href="http://rogerbourland.com/blog/2006/06/21/source-of-the-salierimozart-myth/"
+ target=new>myth</a> &#151;
+
+</DIV>
+
+-->
+
+
+<DIV CLASS="slide">
+  <h1>the Wright brothers: the thrill of invention</h1>
+
+  <img src="thinking-creativity-wright.m.jpg" class="figure-right" >
+  <table border=1 cellspacing=5  >
+  <tr>
+    <td rowspan=3 align=top><B>1899</b></td> <td>biplane</td>
+    <td>Chanute? Langley?</td> 
+  </tr>
+  <tr>
+    <td>hinged wing</td><td>Chanute</td>
+  </tr>
+  <tr>
+    <td>wing warping</td><td>bird wing tips</td>
+  </tr>
+  <tr>
+    <td rowspan=3 align=top><B>1900</B></td>
+    <td><a href="http://www.grc.nasa.gov/WWW/K-12/airplane/geom.html"
+	target=new>dihedral angle</a>
+    </td>
+    <td>precedents</td> 
+  </tr>
+  <tr>
+    <td>flat rudder</td><td>precedents</td>
+  </tr>
+  <tr>
+    <td>operator prone</td><td>[reduce drag]</td>
+  </tr>
+  <tr>
+    <td rowspan=3 align=top><B>1901</B></td> <td>larger wings</td><td>[need
+	more lift]</td> 
+  </tr>
+  <tr>
+    <td>skids</td><td>[safer landing]</td>
+  </tr>
+  <tr>
+    <td>change cloth</td><td>[more lift]</td>
+  </tr>
+  <tr>
+    <td rowspan=4 align=top><B>1902</B></td> <td>fixed
+	tail</td><td>[stability]</td> 
+  </tr>
+  <tr>
+    <td>wing shape</td><td>[<a href="https://en.wikipedia.org/wiki/Wind_tunnel"
+	target=new>wind tunnel</a> experiments]</td>
+  </tr>
+  <tr>
+    <td>varied <a href="http://www.grc.nasa.gov/WWW/K-12/airplane/geom.html"
+	target=new>camber</a></td><td>[wind tunnel]</td>
+  </tr>
+  <tr>
+    <td>rudder shape</td><td>[wind tunnel]</td>
+  </tr>
+  <tr>
+    <td rowspan=2 align=top><B><font color=red>1903</font></B></td> <td>new
+	motor</td><td>adapted 
+	auto engine</td> 
+  </tr>
+  <tr>
+    <td>better propellers</td><td>[wind tunnel; trial & error]</td>
+  </tr>
+</table>
+<P>
+<font color=red>the Wright brothers: the <B>thrill</B> of invention</font>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>the Wright brothers: first in flight</h1>
+
+  <a href="http://www.wright-house.com/wright-brothers/taleplane.html"
+  target=new><img src="thinking-creativity-Flight_distances.jpg" height=580></a> 
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>first in flight</h1>
+
+  <img src="thinking-creativity-Kitty-Hawk.jpg" class="figure-right" >
+
+</div>
+
+
+
+<div class="footer">
+<p>Last modified: Wed Apr 14 2021 at 18:44:35 EDT</p>
+</div>
+</body>
+</html>

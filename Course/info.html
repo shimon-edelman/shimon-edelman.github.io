@@ -1,0 +1,76 @@
+<!DOCTYPE HTML SYSTEM "html.dtd">
+<HTML><HEAD><TITLE>Techniques for computational and biological vision</TITLE></HEAD>
+<BODY><H1>Stuff available for downloading:</H1>
+<DL>
+  
+  <DT><A HREF="ftp://ftp.wisdom.weizmann.ac.il/pub/edelman/weeks.ps.Z">Schedule:</A></DT>
+  <DD><P>
+       A week-by-week schedule of the lectures, accompanied by a list of suggested reading material. 
+       </P></DD>
+
+
+  <DT>Assignment 1 (due Nov. 22):</DT>
+  <DD><P>
+       Write a simple regularized stereo matcher, in Matlab. The program should
+       read in a pair of images, and compute a disparity field optimizing the
+       match between the two images and a measure of smoothness of the disparities.
+       Test the program on the stereo pair available via ftp 
+       (<A HREF="ftp://ftp.wisdom.weizmann.ac.il/pub/edelman/ball-1-1.gif">left</A>
+       and
+       <A HREF="ftp://ftp.wisdom.weizmann.ac.il/pub/edelman/ball-1-2.gif">right</A>
+       images, both in GIF format; set the Options menu in Mosaic to <I>"Load to
+       local disk"</I> if you wish to download the images rather than see them on
+       the screen). Submit the program, the output, and a short discussion of your
+       approach and results. Compare your approach with the one described in an
+       upcoming CVGIP paper,
+       <a href="ftp://ftp.nj.nec.com/pub/ingemar/papers/cvgip.ps.Z">
+       A Maximum Likelihood Stereo Algorithm </a> from NEC Research.
+       <P> NOTE: make use of the optimization and the
+       image processing toolboxes in Matlab. For example, you can run the matching
+       algorithm after extracting the intensity edges in the original images.
+       To find an appropriate built-in function in Matlab, use the "lookfor"
+       and the "help" commands.
+       </P></DD>
+       
+  <DT>Assignment 2 (due Dec. 22):</DT>
+  <DD><P>
+       Write a neural-network surface interpolator that would take a
+       set of disparities at discrete points (either artificially created,
+       or obtained with a stereo matcher), and produce a surface passing
+       through or near the points. Compare multilayer perceptrons, available
+       as a part of the Neural Network toolbox in Matlab, or some other
+       method of your choice, with the surface interpolation functions
+       built into Matlab.
+       <P> Make your program
+       general enough so that it can be applied to multidimensional function
+       approximation. Test it on a number of artificial examples of your
+       choice. Describe the performance of the program for different ratios
+       of the number of examples to the number of dimensions and the number
+       of weights in the network.
+       <P>
+       A textbook on neural networks is available online <A HREF="ftp://ftp.wisdom.weizmann.ac.il/pub/edelman/neuro-intro.300.ps.Z">here</A>. Check out
+       <A HREF="http://www.neuronet.ph.kcl.ac.uk/">this</A> URL for more on neural nets.
+       
+       </P></DD>
+
+  <DT>Assignment 3 (due Jan. 22):</DT>
+  <DD><P>
+       State any formalization of your choice for the problem of learning a
+       visual representation within the PAC framework (there is no need to
+       prove theorems, but please make the <I>statement</I> formal); compare with the
+       <I>k</I>-inaccurate copy, defined in the lecture notes; discuss
+       advantages and disadvantages, applicability to real-world problems.
+       <P>
+       If you are interested in machine learning, have a look at the
+       <A HREF="http://www.cs.cmu.edu:8001/afs/cs.cmu.edu/user/avrim/www/ML94/courseinfo.html">notes</A> (handouts and slides) for a course held at CMU last fall.
+       </P></DD>
+
+</DL></BODY>
+<HR>
+The teaching assistant for this course is Uri Pryadkin (uri@wisdom.weizmann.ac.il).
+Please coordinate with him the submission of the exercises.
+<HR>
+If you are interested in computer vision, check out <A HREF="http://www.cs.cmu.edu:8001/afs/cs/project/cil/ftp/html/vision.html">this</A> URL.
+<HR>
+
+</HTML>

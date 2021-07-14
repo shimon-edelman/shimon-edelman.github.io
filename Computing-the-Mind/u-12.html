@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computational Psychology — Unit 12</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2010-2019 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+</head>
+<body>
+
+<!-- 
+<rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+<permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+<requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+<permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+<requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+</License>
+</rdf:RDF>
+-->
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 12 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computational Psychology</h1>
+        <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 12: language III</h2>
+  </div>
+  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%>
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+<div  CLASS="slide">
+  <h1>language learning and use</h1>
+
+  <img src="language-acquisition.gif" class="figure-right" >
+  <P>
+  <BR>
+  Computational modeling of language acquisition (and use) —
+  <ul>
+    <li>Kinds of language structure and how to find them in a corpus</li>
+    <P>
+    <li>The role of <B>probabilities</B> in learning and using language</li>
+    <P>
+    <li>A modest example: machine translation</li>
+  </ul>
+  
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>a taxonomy of computational models of language acquisition and use</h1>
+
+  <img src="taxonomy-of-models.png" height=550 class="figure-right">
+    <P>
+      <BR>
+	I am the most sympathetic to the ones on the right of this
+	diagram.
+	<P>
+	  [S. Edelman
+    (2017). <a href="http://doi.org/10.1016/j.langsci.2017.04.003"
+    target=new><I>Language and other complex behaviors: 
+    unifying characteristics, computational models, neural mechanisms</I></a>,
+    Language Sciences 62:91-123.]
+
+</div>    
+    
+
+	
+
+<DIV CLASS="slide">
+  <h1>kinds of language structure</h1>
+
+  <img src="centaur+satyr-small.jpg" class="figure-right" height=550
+  title="All I can say is thank goodness for teleconferencing.">
+
+  <P>
+  <BR>
+  <a href="http://en.wikipedia.org/wiki/Collocation" target=new>Collocations</a>
+  <P>
+  <a href="http://en.wikipedia.org/wiki/Contrastive_distribution" target=new>Distributional equivalences</a>
+  <P>
+  Other dependencies (such as <a
+  href="http://en.wikipedia.org/wiki/Agreement_%28linguistics%29"
+  target=new>agreement</a>)
+  <P>
+  <HR>
+  <P class="incremental">
+  All these seemingly disparate kinds of structure are at the bottom one and
+  the same: they have to do with the CONDITIONAL PROBABILITY of
+  an item appearing in an utterance, given that certain other items
+  appear in that utterance, or elsewhere in the discourse, or in the
+  situation in which it is
+  embedded.
+  </P>
+  <P class="incremental">
+  (Cf. <a href="https://linguistlist.org/issues/3/3-445.html"
+  target=new>Zellig Harris</a>: "dependencies on dependencies".)
+  </P>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>structure from corpus: collocations</h1>
+
+  <img src="lang-collocations-tab7-1.jpg" class="figure-right">
+
+    <P>
+      <BR>
+    The pattern "What's all  this, then?" recurs suspiciously often (in
+  particular contexts).
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>structure from corpus: distributional equivalences</h1>
+
+  <img src="lang-complementary-distribution-tab7-2.jpg" class="figure-right">
+  <P>
+  <BR>
+  "tobacconist's" and "record" can be interchanged in the context of
+  <P> "I will not buy this ___, it is scratched"
+  <P>
+    <video src="Monty Python's Flying Circus - Dirty Hungarian Phrasebook.mov" 
+	   controls="controls">
+    </video>
+	   
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>structure from corpus: agreement</h1>
+
+  <img src="lang-agreement.png" class="figure-right">
+
+  <P>
+  <BR>
+  The choice of an item for one of the slots in a structure affects the
+  choice of items for the other slots:
+  <P style="font-family : courier;">
+  <B>[I ] sleep[_]
+  <BR>[he] sleep[s]</B>
+  </P>
+  <P style="font-family : courier;">
+  <B>[I ] work[_]
+  <BR>
+  [he] work[s]</B>
+  </P>
+  <video src="Monty-Python-Lumberjack-song-dependency.mov"
+	 controls="controls"
+	 </video>
+  
+</div>
+
+
+-->
+  
+
+<DIV CLASS="slide">
+  <h1>a corpus of utterances has the form of a GRAPH, which can be
+  used for alignment and comparison</h1>
+
+  <img src="ADIOS-graph.gif" class="figure-right" height=450>
+  <P>
+  <BR>
+  <SC>Collocations</SC>, <SC>equivalences</SC>, and other
+  <SC>dependencies</SC> can be discovered by <SC>aligning</SC> and 
+  <SC>comparing</SC> paths through the corpus <a href="http://en.wikipedia.org/wiki/Graph_%28mathematics%29"
+  target=new><SC>graph</SC></a>. 
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>patterns over patterns ("going recursive")</h1>
+
+  <img src="lang-fig7-9.gif" class="figure-right"  height=500>
+  <P>
+    <SC>Recursive</SC> application of pattern extraction by the ADIOS
+    algorithm to a corpus of data
+    yields hierarchical tree-like structures ("rules").
+  </P>
+  <P>
+    [Z. Solan, D. Horn, E. Ruppin and S. Edelman, (2005). <a
+							    href="../SolanHornRuppinEdelman-PNAS05.pdf"
+							    target=new><I>Unsupervised Learning of Natural Languages</I></a>,  
+    Proc. Natl. Acad. Sci. 102:11629-11634.]
+  </P>
+  <P>
+    [The results shown here are from
+    the <a href="https://github.com/howl-anderson/ATIS_dataset"
+	   target=new>ATIS (Air Traffic Information System)</a> corpus.]
+  </P>
+
+  <!--
+
+  <P>
+  <HR>
+  <P>
+  Whether or not such structures are psychologically real is a separate
+  question (which is part of the subject matter of <a
+  href="http://en.wikipedia.org/wiki/Psycholinguistics"
+  target=new>psycholinguistics</a>).
+
+  -->
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>patterns/<SC>constructions</SC> are <B>generative</B>; they FORM
+  meaningful TOOLS</h1>
+  
+  <img src="lang-fig7-11.gif" height=375 class="figure-right">
+  <P>
+  A pattern learned from the <a href="https://childes.talkbank.org/"
+  target=new>CHILDES</a> corpus, which generates such sentences as:
+  <P>
+    <B>where's the big room?</B>
+    <P>
+    <B>where's the yellow one?</B>
+    <P>
+    <B>where's Becky?</B>
+    <P>
+    <B>where's that?</B>
+  
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>this kind of learning works not just in English</h1>
+
+  <img src="Bellagio.025.png" class="figure-right" height=500>
+    <P>
+      <BR>
+	Half of these sentences are from one of the Mandarin corpora
+	in <a href="https://childes.talkbank.org/"
+  target=new>CHILDES</a>. The other half were generated by the ADIOS
+	algorithm after learning from these corpora.
+
+</div>
+
+
+
+
+
+<DIV CLASS="slide">
+  <h1>populating the open slots in the patterns: probabilities at work</h1>
+
+  <img src="ADIOS-SLM.gif" class="figure-right" >
+  <P>
+  <BR>
+  Conditional probabilities on constructions: <SC>selection</SC> ("food"
+  vs. "victuals")
+  
+  <P>
+  Conditional probabilities on constructions: <SC>dependencies</SC>
+  ("served" vs. "serving")
+
+  <P>
+  The structural/statistical
+  <a href="https://en.wikipedia.org/wiki/Language_model"
+  target=new>language model</a> learned by the ADIOS algorithm
+  captures those probabilities and puts them to use.
+  <P>
+    <HR>
+      <P>
+	So it cannot be just rules!
+
+</div>
+
+
+
+
+
+<DIV CLASS="slide">
+  <h1>populating the open slots in the patterns: probabilities at work</h1>
+
+  <img src="fakeSmithBarney.gif" height=450 class="figure-right">
+    <P>
+      <BR>
+	Getting these probabilities wrong is often the downfall of
+	Internet scams.
+	<P class="incremental">
+	  "obligatory to follow" WTF?
+	  </P>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>the probability of "obligatory to follow"</h1>
+  
+  <img src="obligatory-to-follow.jpg" class="figure-right" height=550>
+    <P>
+      <BR>
+	745
+	<a href="https://en.wikipedia.org/w/index.php?title=Ghit&redirect=no"
+	target=new>Ghits</a> for "obligatory to follow"
+
+</div>
+
+
+
+  <DIV CLASS="slide">
+    <h1>the probability of "must be followed"</h1>
+
+    <img src="must-be-followed.jpg" class="figure-right" height=550>
+      <P>
+	<BR>
+	  5,650,000 Ghits for "must be followed"
+	  <P class="incremental">
+	    ...but even this sounds off in the context of a letter
+	    from a bank... (a propos
+	    <a href="https://en.wikipedia.org/wiki/Pragmatics"
+	    target=new>pragmatics</a>, <a href="https://en.wikipedia.org/wiki/Register_(sociolinguistics)"
+	    target=new>register</a>, etc.) 
+	  </P>
+
+</div>
+
+
+<DIV CLASS="slide">
+ <h1>the language model	in your phone</h1>
+
+ <a href="https://xkcd.com/1427/" target=new><img src="xkcd-ios-keyboard-language-model.png" class="figure-right"></a>
+   <P>
+     [An intro to a (relatively) modern
+     <a href="https://openai.com/blog/better-language-models/"
+	target=new>language model</a> (February 2019).]
+   </P>
+   <P>
+     [The <a href="https://en.wikipedia.org/wiki/GPT-3"
+	     target=new>latest version</a>.]
+   </P>
+    
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>recap: the structure of language is like...</h1>
+
+  <a href="http://www.tfl.gov.uk/tfl/tube_map.shtml" target=new><img src="tube_map.gif" height=500></a>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>recap: the structure of language is like a subway system</h1>
+
+  <font size=+3>
+  <table cellspacing=10>
+    <tr><td><SC>lexicon-grammar</SC></td><td>&#8596;</td><td>the entire transit system</td></tr>
+    <tr><td><SC>grammatical utterances</SC></td><td>&#8596;</td><td>possible trips</td></tr>
+    <tr><td><SC>learning</SC></td><td>&#8596;</td><td>constructing the transit system</td></tr>
+    <tr><td><SC>probabilistic selection</SC></td><td>&#8596;</td><td>traffic flow</td></tr>
+    <tr><td><SC>structure vs. statistics</SC></td><td>&#8596;</td><td>routes vs. traffic</td></tr>
+    <tr><td><SC>fluency and disfluency</SC></td><td>&#8596;</td><td>navigation proficiency</td></tr>
+    <tr><td><SC>meaning</SC></td><td>&#8596;</td><td>the <strike>&nbsp;outside&nbsp;</strike> world</td></tr>
+  </table>
+  </font>
+
+</div>
+
+-->
+
+
+<DIV CLASS="slide">
+  <h1>language comprehension and production</h1>
+
+  <img src="EdelmanSolan09-fig1.png" class="figure-right" height=500>
+    <P>
+      <BR>
+	A working model of machine translation, which at the time (in
+	2009) outperformed Google Translate.
+	<P>
+	  <small>[S. Edelman and
+	Z. Solan
+	(2009). <a href="../Edelman-Solan-PACLIC09.pdf" target=new><I>Machine
+	Translation Using Automatically
+	Inferred Construction-based Correspondence and Language
+	Models</I></a>, Proc. 23rd Pacific Asia Conference on Language,
+	Information, and Computation (PACLIC-23), Hong Kong, December
+	    2009.]</small>
+
+	  <!--
+	<P class="incremental">
+	  To replicate the dynamics of dialogic language use, the same
+	  approach can be combined with
+	  <a href="https://pdfs.semanticscholar.org/0036/cd484a3a9517653aecf13a1d14201b32c18f.pdf"
+	  target=new>competitive queuing</a>.
+	  <img src="Bohland10-competitive-queuing.jpg" height=200>
+	  </P>
+	  -->
+
+</div>    
+
+    
+
+
+<DIV CLASS="slide">
+  <h1>in conclusion: still a long way to go</h1>
+
+  <img src="More&#32;Steps.gif" height=600>
+  <P>
+  <BR>
+
+</div>
+
+
+<div class="footer">
+<p>Last modified: Fri Aug 7 2020 at 14:47:34 EDT</p>
+</div>
+</body>
+</html>

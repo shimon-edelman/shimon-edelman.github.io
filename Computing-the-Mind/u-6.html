@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computational Psychology — Unit 6</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2010-2019 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+</head>
+<body>
+
+<!-- 
+<rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+<permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+<requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+<permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+<requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+</License>
+</rdf:RDF>
+-->
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 6 &#151;
+    <!-- hhmts start --> Last modified on Thu Feb 23 08:42:05 2012
+<!-- hhmts end --> 
+    <!-- doc-lang: english -->
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computational Psychology</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 6: Perception II, constancies, learning, and generalization</h2>
+  </div>
+  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%>
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+
+<div  CLASS="slide">
+  <h1>perceptual constancies, categories, and generalization</h1>
+
+  <img src="Chicken.jpg" class="figure-right" >
+  <P>
+  <BR>
+  <ul>
+    <li>The problem of dimensionality</li>
+    <P>
+    <li>The problem of indeterminacy</li>
+    <P>
+    <li>A common solution: 
+    <DIR>
+      <B>assume</B> the world to be well-behaved,
+      <BR>
+      that is, characterized by <SC>statistical regularities</SC>
+    </DIR>
+    </li>
+    <li>  
+      <font color=gray>[EXTRA: the technique known as <a
+      href="http://en.wikipedia.org/wiki/Regularization_(mathematics)" 
+      target=new>regularization</a> is a mathematical expression of this
+    trust]</font>
+    </li>
+  </ul>
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>constancy and the nature of perception</h1>
+
+  <img src="vision-flowchart.gif" class="figure-right" height=550>
+  <P>
+  <BR>
+  <font size=+3>
+  All perceptual problems share the same computational structure,
+  </font>
+  illustrated on the right.
+  <P>
+  <HR>
+  <P>
+  What is "intrinsic" and what is "extrinsic" depends on the task.
+  
+</div>
+
+
+<DIV CLASS="slide">
+  <h1 >the problem of dimensionality</h1>
+
+  <table cellspacing=5>
+    <tr>
+      <td><img src="Chicken.jpg" height=250></td>
+      <td><img src="some-spectra.gif"  ></td>
+    </tr>
+    <tr>
+      <td align=center>a multidimensional chicken</td>
+      <td align=center>a multidimensional illumination space</td>
+    </tr>
+  </table>
+  <P>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1 >the problem of dimensionality</h1>
+
+  <table cellspacing=25>
+    <tr>
+      <td><img src="Chicken.jpg" height=250></td>
+      <td><img src="some-spectra.gif" height=250 ></td>
+    </tr>
+    <tr>
+      <td align=center>a multidimensional chicken</td>
+      <td align=center>a multidimensional illumination space</td>
+    </tr>
+  </table>
+  Solution: <SC><B>assume</B></SC> that the world is statistically well-behaved
+  &#151;
+  <ul>
+    <li>a few dimensions suffice to distinguish between chickens and
+    ducks, or between horses and donkeys;</li>
+    <li>a few dimensions <a
+ href="http://books.google.com/books?id=g4T-gP7JCXIC&pg=PA60&lpg=PA60&dq=judd+illumination+pca&source=web&ots=2ots-LswDz&sig=I0inTDLwAsJ-H8dSn6Eq2HbTmeI&hl=en&sa=X&oi=book_result&resnum=2&ct=result"
+ target=new>suffice</a> to characterize illumination.</li>
+ </ul>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1 >the problem of indeterminacy</h1>
+
+  <img src="lightness-problem.jpg">
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1 >the problem of indeterminacy</h1>
+
+  <img src="lightness-problem.jpg">
+  <BR>
+  Solution: <SC><B>assume</B></SC> that the world is statistically well-behaved
+  &#151;
+  <ul>
+    <li>illumination usually varies gradually over the scene;</li>
+    <li>surface lightness (reflectance) is piecewise constant over the
+    scene, with occasional abrupt changes.</li>
+  </ul>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1 >understanding lightness constancy</h1>
+
+  <img src="Retinex-path.gif" class="figure-right" >
+  <P>
+  <BR>
+  To separate lightness from illumination, <SC><B>assume</B></SC> that:
+  <ul>
+    <li>illumination changes slowly over the image;</li>
+    <li>lightness (reflectance) changes in jumps.</li>
+  </ul>
+  <P>
+  This suggests the following algorithm for recovering lightness:
+  <ol>
+    <li>scan the image seeking abrupt jumps in intensity;</li>
+    <li>attribute every such jump to a change in lightness (as opposed to
+    illumination);</li>
+    <li>at the end of this process, calibrate the extreme values ("black" and
+    "white").</li>
+  </ol>
+  <P>
+  <HR>
+  <small>
+  For details, see <a
+  href="http://white.stanford.edu/~brian/papers/color/BrainardWandell1986.pdf"
+  target=new><I>Analysis of the Retinex theory of color vision</I></a> by
+  D. H. Brainard and B. A. Wandell (<a
+  href="http://josaa.osa.org/Issue.cfm" target=new>JOSA</a>, 1986).</small>
+
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1 >achieving lightness constancy</h1>
+
+  <table>
+    <tr>
+      <td>A challenge for any lightness algorithm: <B>two identical color
+	charts, on a half-sunlit deck</B><P> [to understand why the two
+	squares look different <I>to us</I>, see
+	this <a href="http://colorisrelative.com/bwbox.html"
+	target=demo>demo of simultaneous lightness contrast</a>]</td>
+	<td><img src="Mondrian-McCann-fig6a.gif"></td>
+      </tr>
+      <tr>
+	<td>A modern version of <a href="http://en.wikipedia.org/wiki/Edwin_Land"
+	  target=new>Edwin H. Land</a>'s <a 
+	  href="http://en.wikipedia.org/wiki/Retinex"
+	  target=new>Retinex</a> algorithm (1971) meets the challenge
+	</td>
+	<td><img src="Mondrian-McCann-fig6b.gif"></td>
+      </tr>
+    </table>
+
+</div>
+
+-->
+
+
+
+<DIV CLASS="slide">
+  <h1>an example of a failure of lightness constancy</h1>
+
+  <img src="Cornsweet2.jpg" class="figure-right" >
+  
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>an example of a failure of lightness constancy</h1>
+
+  <img src="Cornsweet2-annotated.jpg" class="figure-right" >
+  <P>
+  <BR>
+  The constancy computation fails when <SC><B>assumptions</B></SC> behind it are
+  violated.
+  <P>
+  <img src="Cornsweet-profile-rotated.jpg" height=350>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>an example of a failure of "structure from motion" constancy</h1>
+
+  <embed src="KDE_new&#32;(Converted).mov"  width=386 height=392 align=right controller=true loop=true>
+  <P>
+  <BR>
+  The constancy computation fails when <SC><B>assumptions</B></SC> behind it are
+  violated. 
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>an example of a failure of shape constancy</h1>
+
+  <img src="Raetz-glass-bottle-left.jpg">
+  <img src="Raetz-glass-bottle-right.jpg">
+  <P>
+  Wire sculpture by <a href="http://www.crownpoint.com/artists/raetz" target=new>Markus Raetz</a>.
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>perceptual learning, categories, and generalization</h1>
+  
+  <a
+  href="http://en.wikipedia.org/wiki/Unusual_depiction_of_a_religious_figure"
+  target=new><img src="original-toast-virgin-mary.jpg" class="figure-right"
+  title="religious pareidolia" ></a>
+  <P>
+  <BR>
+  <ul>
+    <li><font color=gray>The emergence of perceptual categories <BR>[see sec. 5.4.1 in the
+    textbook]</font></li>
+    <li><font color=gray>Perceptual adaptation [see sec. 5.4.2]</font>
+    </li>
+    <li>Shepard's Universal Law of Generalization</li>
+  </ul>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>perceptual learning from examples</h1>
+
+  <img src="categ-perception-1.gif" class="figure-right" >
+  <P>
+  <I>Top:</I> acquiring the examples and forming a <a
+ href="http://en.wikipedia.org/wiki/Decision_boundary" target=new>decision boundary</a> in the
+  representation space.
+  <P>
+  <I>Bottom:</I> <a
+  href="http://en.wikipedia.org/wiki/Categorical_perception"
+  target=new><SC>categorical perception</SC></a> through a <SC>warping</SC> of the
+  representation space. 
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>categorical perception</h1>
+
+  <img src="categ-perception-2-classification.gif" class="figure-right" >
+  <img src="categ-perception-2-faces.gif" class="figure-right" >
+  <P>
+  <BR>
+  A morph sequence of face images, and a telltale sign of <a
+  href="http://en.wikipedia.org/wiki/Categorical_perception"
+  target=new><SC>categorical perception</SC></a>:
+  <ul>
+    <li><a
+    href="http://en.wikipedia.org/wiki/Sigmoid_function"
+    target=new><SC>sigmoidal</SC></a> response probability in a
+    <SC>classification</SC> (for a single image, "which category is this?")
+    task.</li>
+    As the image is chosen from a morph sequence between category A (e.g., "male")  and
+    category B ("female"), the probability of subjects choosing B first
+    stays close to 0, then rapidly swings closer to 1, then slowly
+    approaches 1. The rapid change occurs around the category boundary.
+  </ul>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>categorical perception</h1>
+
+  <img src="categ-perception-2-discrimination.gif" class="figure-right" >
+  <img src="categ-perception-2-faces.gif" class="figure-right" >
+  <P>
+  <BR>
+  A morph sequence of face images, and a telltale sign of <a
+  href="http://en.wikipedia.org/wiki/Categorical_perception"
+  target=new><SC>categorical perception</SC></a>:
+  <ul>
+    <li><SC>peaked</SC> performance (% correct) in a pairwise
+    <SC>discrimination</SC> (for a pair of images, "are these same or different?") task.</li>
+    The best performance (highest % correct) is obtained for pairs of stimuli that
+    straddle the category boundary. 
+  </ul>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>categorical perception</h1>
+
+  <img src="categ-perception-2.gif" class="figure-right" >
+  <P>
+  <BR>
+  A morph sequence of face images, and <I>two</I> telltale signs of <a
+  href="http://en.wikipedia.org/wiki/Categorical_perception"
+  target=new><SC>categorical perception</SC></a>:
+  <ul>
+    <li><a
+    href="http://en.wikipedia.org/wiki/Sigmoid_function"
+    target=new><SC>sigmoidal</SC></a> response probability in a
+    <SC>classification</SC> ("which category is this?")
+    task.</li>
+    <li><SC>peaked</SC> performance (% correct) in a pairwise
+    <SC>discrimination</SC> ("are these same or different?") task.</li>
+  </ul>
+  <B>The inflection point of the sigmoid and the peak are both centered on the
+  category boundary.</B>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>categorical perception: the powerful pull of perceptual categories</h1>
+
+  <img src="Cydonia-1976.jpg" height=400>  <img src="Cydonia-1998.gif" height=400>
+  <BR>
+  <a href="http://en.wikipedia.org/wiki/Pareidolia"
+  target=new>Pareidolia</a>: seeing meaningful forms (such as faces) in
+  random stimuli.
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1 >categories and generalization</h1>
+
+  <img src="apple-varieties.jpg" class="figure-right" >
+  <P>
+  <BR>
+  Categories would be of little use if it were not possible to extend
+  classification to <B>new stimuli</B>.
+  <P>
+  [Think <a href="http://sweetango.com/" target=new>Sweetango</a>!]
+
+</div>
+  
+
+
+<DIV CLASS="slide">
+  <h1>the basis of generalization in similarity</h1>
+
+  <img src="Shepard-consequential-regions.gif" class="figure-right" >
+    
+  <P>
+  <BR>
+  Categories would be of little use if it were not possible to extend
+  classification to new stimuli.
+  </P>
+  "In reality, all <B>arguments from experience</B> are founded on the
+  <SC><B>similarity</B></SC> which we discover among natural objects, and by
+  which we are induced to expect effects similar to those which we
+  have found to follow from such objects. [...] <B>From causes which
+  appear similar we expect similar effects.</B>"
+  <DIR><DIR>
+    <a href="http://en.wikipedia.org/wiki/David_Hume" target=new>David Hume</a><BR>
+    <a href="http://www.gutenberg.org/etext/9662"
+    target=new><I>An Enquiry Concerning Human Understanding</I></a> (1748) 
+  </DIR></DIR>
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1 >categories and generalization</h1>
+
+  <img src="Shepard-consequential-regions.gif" class="figure-right" >
+  <P>
+    The key concept (introduced
+      by <a href="http://en.wikipedia.org/wiki/Roger_Shepard"
+      target=new>Roger Shepard</a>):
+      <a href="https://link.springer.com/content/pdf/10.3758/BF03206455.pdf" target=new><B>consequential
+	  region</B></a>: the set of points in the representation
+	  space, which stand for stimuli whose consequences are the
+	  same as those of the original stimulus.
+  </P>
+  <P>
+    According to Shepard, a useful <I>a priori</I> assumption that
+    could be made is that consequential regions are
+    <a href="https://en.wikipedia.org/wiki/Connectedness"
+       target=new>contiguous</a> (additional assumptions can be made,
+       depending on the context).
+  </P>
+
+  <!--
+  <P>
+  <HR>
+  <P class="incremental">
+  <font color=gray>
+  <embed src="Monty-Python-Sermon-on-the-Mount.mp4" scale=aspect>  
+  Example: <a href="http://www.youtube.com/watch?v=XiDmMBIyfsU"
+ target=new>Monty Python's Sermon on the Mount</a> &#151; how many examples
+  of extending category labels to new items can you spot in that clip?
+  </font>
+  </P>
+  -->
+  <!--
+  <DIR>
+    generalization: "cheesemakers" &rarr; "any manufacturers of dairy products"
+  </DIR>
+  <P>
+  Issues at hand: categories and individuals; <a
+ href="http://psp.sagepub.com/cgi/content/abstract/34/10/1332" target=new>stereotyping</a> ("nose city").
+  -->
+
+</DIV>
+  
+
+
+
+<DIV CLASS="slide">
+  <h1>for generalization, (dis)similarity = distance in a representation space</h1>
+
+  <P>
+  <BR>
+  <a href="http://en.wikipedia.org/wiki/Roger_Shepard" target=new>Roger
+  Shepard</a>'s <SC><a
+ href="http://www.sciencemag.org/cgi/content/abstract/237/4820/1317" target=new>universal law of generalization</a>:</SC>
+  <ul class="incremental">
+    <li>[<SC>goal</SC>: explaining subjects' behavior towards a set of stimuli]
+    </li>
+    <P>
+    <li>a set of relatable stimuli can be arranged in a representation space
+    <font color=gray>[which Shepard calls "psychological space"]</font>...
+    </li>
+    <P>
+    <li>... in such a manner that the likelihood that the subject 
+    will generalize the category label ["tasty"] from one stimulus [<I>this</I>
+ apple] to another [<I>that</I> apple] diminishes
+    <a href="http://en.wikipedia.org/wiki/Exponential_decay"
+    target=new>exponentially</a> with their distance in that space.
+    </li>
+  </ul>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>Shepard's Law of Generalization</h1>
+
+  <img src="Shepard-law.gif" >
+  <P>
+  
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>Shepard's Law of Generalization: empirical support</h1>
+
+  <img src="Newton-color-circle.gif" title="Newton's color circle"
+  class="figure-right" width=250>
+  <P>
+  <ol>
+    <li>Gather subject responses reflecting perceived similarity among a set
+    of stimuli.</li>
+    <P>
+    <li>Use <a
+  href="http://en.wikipedia.org/wiki/Multidimensional_scaling"
+  target=new>MDS</a> to embed the stimuli in a low-dimensional <B>"psychological
+    space"</B>.</li> 
+    <P>
+    <img src="Shepard-color-circle-fig11_72.jpg" title="Shepard's color circle"
+    class="figure-right" width=250>
+  </ol>
+  <img src="spectrum.jpg">
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>Shepard's Law of Generalization: empirical support</h1>
+
+  <img src="Shepard01-color.jpg" class="figure-right" >
+  <P>
+  <ol>
+    <li>Gather subject responses reflecting perceived similarity among a set
+    of stimuli.</li>
+    <P>
+    <li>Use <a
+    href="http://en.wikipedia.org/wiki/Multidimensional_scaling"
+    target=new>MDS</a> to embed the stimuli in a low-dimensional "psychological
+    space".</li> 
+    <P>
+    <li>In this representation space, the <B>probability of
+    generalization</B> from one stimulus to another <B>falls exponentially with</B> their
+    <B>distance</B>.
+    </li>
+  </ol>
+  <HR>
+  This dependence of generalization on (dis)similarity is <SC>invariant</SC> across
+  domains, tasks, and subjects.
+
+  <!-- <B>cf. <a
+ href="http://en.wikipedia.org/wiki/Jean_Baptiste_Perrin" target=new>Jean Perrin</a> on the <a
+ href="http://books.google.com/books?g=PR9&lpg=PR9&dq=jean+perrin+simple+invisible+complex+visible&source=web&ots=qTnNHKNjYE&sig=YexUGupAVXicc3i0Ij7bBur3J0g"
+ target=new>simple invisible</a></B>]. -->
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>pause and consider: two universal laws</h1>
+
+  <table cellspacing=20>
+    <tr>
+      <td align=center><a href="http://en.wikipedia.org/wiki/Isaac_newton"
+ target=new><img src="isaac-newton.jpg" height=300 title="Isaac Newton"></a></td>
+      <td align=center><a href="http://en.wikipedia.org/wiki/Roger_Shepard"
+ target=new><img src="roger-shepard.jpg" height=300 title="Roger N. Shepard"></a></td>
+    </tr>
+    <tr>
+      <td>
+	<a
+ href="http://www.aps.org/publications/apsnews/200002/zero-gravity.cfm" target=new><B>Every</B></a> massive particle in the universe attracts every other massive
+	particle with a force which is directly proportional to the product of
+	their masses and inversely proportional to the square of the distance
+	between them.
+      </td>
+      <td>
+	<B>Every</B> set of relatable stimuli can be arranged in a psychological
+	space so that the likelihood of response generalization among them diminishes
+	exponentially with their distance.
+      </td>
+  </table>
+
+</div>
+  
+
+<!-- doc-lang: english -->
+</body>
+</html>

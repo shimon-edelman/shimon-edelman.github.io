@@ -1,0 +1,1694 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computational Psychology — Unit 9</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2008-2019 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- 
+<rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+<permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+<requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+<permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+<requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+</License>
+</rdf:RDF>
+-->
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 9 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computational Psychology</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 9: actions and consequences; reinforcement learning</h2>
+  </div>
+  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%>
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+<div  CLASS="slide">
+  <h1>reinforcement learning in motor and other tasks</h1>
+
+  <img src="reinforcement-learning.jpg" class="figure-right" >
+  <P>
+  <BR>
+  <ul>
+    <li>A closer look at motor learning</li>
+    <P>
+    <!--
+    <li>Sensorimotor learning and game theory</li>
+    <P>
+    -->
+    <li>Classes of control</li>
+    <P>
+    <li>From error-based to reinforcement learning</li>
+    <P>
+    <li>Representations in reinforcement learning. The Credit Assignment
+    Problem</li>
+    <P>
+    <li>Hierarchical RL</li>
+  </ul>
+  
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>levels of understanding of motor learning (after Wolpert, 2011)</h1>
+
+  <ul>
+    <li>The <B>task components</B> that must be
+    learned for skilled performance, including:
+    <ul>
+      <li>efficient gathering of task-relevant sensory information;</li>
+      <li>selection strategy;</li>
+      <li>decision making;</li>   
+      <li>balancing predictive and reactive control.</li>
+    </ul>
+    </li>
+    <P>
+    <li>The <B>learning processes</B> that apply to these components:
+    <ul>
+      <li>how errors and rewards drive learning;</li>
+      <li>what are the representations involved and how they are
+      modified;</li>
+      <li>how credit is assigned and how learning generalizes to novel
+      situations.</li>
+    </ul>
+    </li>
+    <P>
+      <font color=gray>
+    <li>the <B>neural mechanisms</B> of motor learning and memory,
+    including: 
+    <ul>
+      <li>the circuits involved;</li>
+      <li>synaptic modification.</li>
+    </ul>
+    </li>
+    </font>
+    </ul>
+
+</div>
+
+
+
+<!--
+
+<div  CLASS="slide">
+  <h1>decision making in "cognition" vs. perception/action</h1>
+
+  <P>
+  <BR>
+  The distinctions among sensorimotor, perceptual, and cognitive components
+  of the task are blurred.
+  <P>
+  However:
+  <ul class="incremental">
+    <li>
+    In many explicit cognitive tasks, people make suboptimal judgments when
+    faced with a set of decisions with uncertain outcomes.
+    </li>
+    <P>
+    <li>
+    By contrast, when confronted with the motor variants of the same tasks,
+    people often exhibit close to optimal decisions (as the next slide
+    illustrates). 
+    </li>
+  </ul>
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>an example from game theory: the Prisoner's Dilemma</h1>
+
+  <img src="prisoners_dilemma.jpg" height=350 class="figure-right">
+  <P>
+  <BR>
+  Closing the sensorimotor loop between two people also allows an
+  examination of strategy in tasks that are either combative or
+  cooperative. Such decision making is typically examined within the
+  framework of <a href="http://en.wikipedia.org/wiki/Game_theory" target=new>game theory</a>.
+  <P>
+  For example, in classical <a
+ href="http://en.wikipedia.org/wiki/Prisoner%27s_dilemma"
+   target=new>Prisoner's Dilemma</a> (see also <a
+ href="https://xkcd.com/1016/" target=new>St. Valentine's Day Dilemma</a>),
+  two prisoners each choose to cooperate (claim the other person is
+  innocent) or defect (claim the other person is guilty). If both cooperate,
+  they each receive a short sentence (1 years), whereas if both 
+  defect they each receive a moderate sentence (5 years), and if one
+  cooperates and the other defects, the defector is freed and the cooperator
+  receives a lengthy sentence (20 years).
+  <P>
+  The globally optimal solution in which the players benefit the most is for
+  both players to cooperate. However, if one of the players decides to
+  defect, the defector reduces their sentence at the expense of the other
+  player. In such a non-cooperative setting, the Nash solution, which
+  minimizes each player's maximum possible punishment, is for both players
+  to defect. When people have to make decisions based on a set of rules 
+  such as these, they are typically sub-optimal — but not if it's a motor task!
+
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>multi-person sensorimotor learning</h1>
+
+  <img src="Wolpert11-box1.png" height=300 class="figure-right">
+  <P>
+  <BR>
+  <B>(a)</B>
+  A motor version of the <a
+  href="http://en.wikipedia.org/wiki/Prisoner%27s_dilemma"
+  target=new>Prisoner's Dilemma</a> game. Each player makes a 
+  reaching movement from a starting position to a target bar and can choose
+  any path between the bars. A robot simulates a stiff spring that resists
+  the subjects' movements. The spring constant for each subject depends on
+  the lateral position of both players. The lateral position of each
+  subject's hand is mapped from "fully cooperate" at one extreme to "fully
+  defect" at the other.
+  <P>
+  <B>(b)</B>
+  The spring constant for each player matches the typical prisoner's dilemma
+  payoff at the extremes and is linearly interpolated between these
+  extremes. 
+  <P>
+  <B>(c)</B> 
+  When a single subject controls both robots with their two arms (not shown)
+  the dominant strategy is cooperative, whereas in the two-player game the
+  <a
+ href="http://en.wikipedia.org/wiki/Nash_equilibrium" target=new>Nash
+  solution</a> becomes dominant. Thus, in contrast to the cognitive version 
+  of the game, in such two-player motor games subjects rapidly develop
+  near-optimal game-theoretic solutions, namely, the <a
+ href="http://en.wikipedia.org/wiki/Nash_equilibrium" target=new>Nash
+  equilibrium</a> 
+  solutions in which they choose actions so that neither has anything to
+  gain by changing only his or her strategy. 
+
+</div>
+
+-->
+
+
+
+<div  CLASS="slide">
+  <h1>classes of control</h1>
+
+  <img src="Koerding-TiCS06-fig3.png" class="figure-right">
+  <P>
+  In general, optimizing motor performance is achieved through
+  three classes of control:
+  <ul>
+    <li>
+    <B>predictive</B> or <B>feedforward</B> control, which is critical given the
+    feedback delays in the sensorimotor system;
+    </li>
+    <li>
+    <B>reactive</B> or <B>feedback</B> control, which involves the use of
+    sensory inputs to update ongoing motor commands; and
+    </li>
+    <li>
+    <B>biomechanical</B> control, which involves modulating the
+    <a href="https://en.wikipedia.org/wiki/Stiffness#Compliance" target=new>compliance</a> of the limb.
+    </li>
+  </ul>
+  <HR>
+  <small><font color=gray>[EXTRA] The Bayesian framework has many uses
+  in sensorimotor learning. <B>Sensory integration.</B> Multiple
+  streams of sensory information, within and across modalities (for
+  example, visual and tactile inputs), can be optimally combined to
+  achieve estimates that reduce the effects of noise. This integration
+  process can take into account the properties of external objects,
+  such as tools, so that the visuo-haptic integration is optimal even
+  when the tactile input comes through a hand-held tool. <B>Learning
+  priors.</B> By learning the statistical distribution of possible
+  states of the world, the estimate can be further
+  refined. <B>Developing and using internal models.</B> By combining
+  these processes with internal models of the body that map the motor
+  commands (as signalled through the efference copy) into the expected
+  sensory inputs, Bayesian inference can be used to estimate the
+  evolving state of our body and the world.</font></small>
+
+
+</div>
+
+
+<!--
+
+<div  CLASS="slide">
+  <h1>minimum-intervention control</h1>
+
+  <img src="finger-control-muscles.jpg" class="figure-right">
+  <P>
+  <BR>
+  Feedback controllers must only correct for variation that is deleterious
+  to the task goal. Corrections of task-irrelevant errors are not only
+  wasteful but they can also generate task-relevant errors.
+  <P>
+  This <B>minimum intervention principle</B> has now been demonstrated in a number
+  of tasks including the seemingly simple task of generating a target force
+  with the tip of the index finger. The control of this task can be
+  characterized within a 7-dimensional space representing the seven
+  muscles that regulate index finger force. The variability in this space can
+  be partitioned into a <I>task-relevant component</I> that modulates force in the
+  target direction and a <I>task-irrelevant component</I> that does not. During
+  this task, task-irrelevant variability is consistently larger than
+  task-relevant variability, suggesting that at the muscle level there is a
+  preferential control of task-relevant dimensions.
+  <P class="incremental">
+  <font color=gray>[As <a href="http://en.wikipedia.org/wiki/Laozi"
+ target=new>Laozi</a>'s (rather extreme) version of this principle states, under <a href="http://m.litread.in/read/92568/94671-95816?page=6"
+  target=new>maxim #48</a>,  
+  "To conquer the world, accomplish nothing."]</font>
+  </P>
+
+</div>
+
+  -->
+
+
+<div  CLASS="slide">
+  <h1>learning from one's errors</h1>
+
+  <P>
+  <BR>
+  <B>Error-based learning</B> is the key process in many well-studied
+  ADAPTATION paradigms, including 
+  <ul>
+    <li><a href="http://en.wikipedia.org/wiki/Prism_adaptation" target=new>prism adaptation</a>,</li>
+    <li>saccade adaptation,</li>
+    <li>reaching in force fields,</li>
+    <li>visuomotor adaptation,</li>
+    <li>grip force adaptation.</li>
+  </ul>
+  <P>
+  <!--
+  It can also drive motor learning and movement corrections in
+  the absence of external perturbations.
+  <P>
+  -->
+  A common feature across these different task domains:
+  <DIR>  <DIR>
+    The system can — and will — <B>learn</B> from an error <B>in a single
+	trial</B>.
+    <BR>
+      Thus, adaptation is observable even when all perturbations are
+    random (that is, unexpected) and the subject is told not to adapt.
+  </DIR>  </DIR>
+  
+</div>
+
+  
+
+<div  CLASS="slide">
+  <h1>from error-based to reinforcement learning</h1>
+
+  <img src="Wolpert11-fig1.png" class="figure-right">
+  <P>
+  <B>(a)</B> A simple redundant task in which a target has to be reached
+  with a stick using two effectors: shoulder and arm, whose rotations
+  together contribute to a combined outcome.
+  <BR>
+  <B>(b)</B> Many combinations of the two rotations will on average produce
+  the correct solution. The locus of these is the <I>solution
+  <a href="https://en.wikipedia.org/wiki/Manifold" target=new>manifold</a></I>; the error signal corresponds to deviations from it (<font
+  color=navy><B>blue double arrow</B></font>).
+  <ul>
+    <li>For error-based learning to occur, the system needs to apportion the
+    error to each of the two effectors, by following the error-based
+    learning gradient (<font color=red>red arrows</font>).
+    </li>
+    <li>
+    However, to find a less variable or less effortful 'optimal' solution
+    (<font color=green>green circle</font>) <I>along</I> the solution manifold
+    (direction shown by a dashed arrow), other learning mechanisms, such as
+    <B>reinforcement learning (RL)</B>, are needed.
+    </li>
+  </ul>
+  <P class="incremental">
+  In contrast to an error signal, reinforcement signals — which can be as
+  simple as "success" or "failure" — do not give information about the
+  required control change. Thus, the learner must explore the possibilities to
+  gradually improve its motor commands. Like error-based learning,
+  RL can also be used to guide learning towards the solution
+  manifold. However, because the signal (the reward) provides less 
+  information than in error-based learning (the vector of errors), such
+  learning tends to be SLOW.
+  </P>
+  
+</div>
+
+
+<!--
+
+<div  CLASS="slide">
+  <h1>reinforcement learning</h1>
+
+  <img src="Lee12-fig1.png" class="figure-right" height=350>
+  <P>
+  <BR>
+  In contrast to an error signal, <B>reinforcement</B> signals such as
+  <B><I>success</I></B> or <B><I>failure</I></B>  do not give information
+  about the required control change. 
+  <P>
+  Thus, the motor system needs to explore different possibilities to
+  gradually improve its motor commands. Like error-based learning,
+  reinforcement learning can also be used to guide learning towards the
+  solution manifold. However, because the signal (the reward) provides less
+  information than in error-based learning (the vector of errors), such
+  learning tends to be <B>slow</B>.
+  <P class="incremental">
+  <font color=red>RPE</font>: <a
+ href="http://www.scholarpedia.org/article/Reward_signals#Reward_prediction_error"
+ target=new>reward prediction error</a>
+  </P>
+
+</div>
+
+-->
+
+
+<div  CLASS="slide">
+  <h1>representations (models) in reinforcement learning</h1>
+
+  <P>
+  <BR>
+  Information obtained during a single movement is often too
+  sparse or too noisy to unambiguously determine the source of the
+  error. Therefore, it underspecifies the way in which the
+  motor commands should be updated, resulting in an  <a href="http://en.wikipedia.org/wiki/Inverse_problem"
+  target=new<B>inverse problem</B></a> (differences in control uniquely specify
+  differences in outcome, but not vice versa).
+  <P>
+  To resolve this issue, the system does not start from a blank
+  slate. Instead, it uses <B>models</B> of the task: representations that reflect its
+  assumptions about the task structure and that constrain error-driven
+  learning. Such models can be mechanistic or normative.
+  <P>
+  <B>Mechanistic models</B> specify the representations and learning
+  algorithms directly. In this framework, representations are often
+  considered to be based on motor primitives (the neural building blocks out
+  of which new motor memories are formed; cf. synergies illustrated in
+ slides 9—11).
+  <P>
+  <B>Normative models</B> specify optimal ways for the learner to adapt when 
+  faced with errors. A
+  <a href="https://en.wikipedia.org/wiki/Normative"
+  target=new>normative</a> model includes two key components:
+  <ol>
+    <li>a <a href="https://en.wikipedia.org/wiki/Generative_model" target=new>GENERATIVE MODEL</a> of the situation, which specifies how different
+    factors, such as tools or levels of fatigue, influence performance;
+    </li>
+    <li>a prior distribution, which states how these factors are likely to
+    vary over space and time.
+    </li>
+  </ol>
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>mechanistic models: motor primitives and structural learning</h1>
+
+  <P>
+  <BR>
+  <B>Motor primitives</B> can be thought of as neural control modules that can be
+  flexibly combined to generate a large repertoire of behaviors. For
+  example, a primitive might represent the temporal profile of a particular
+  muscle activity. The overall motor output <strike>will be</strike>
+  could be the sum of all
+  primitives, weighted by the level of the activation of each module. The
+  makeup of the population of such primitives then determines which
+  <B>structural constraints</B> are imposed on learning.
+  <P>
+  Several recent models have been developed to account for the reduction in
+  interference in the presence of contextual cues. These models propose
+  multiple, overlapping internal representations that can be selectively
+  engaged by each movement <B>context</B>.
+  <P>
+  A general underlying principle of what can or cannot serve as a
+  contextual switch has NOT been identified.
+  <P>
+  <font color=gray>[Compare the <a
+  href="http://en.wikipedia.org/wiki/Frame_problem" target=new>Frame
+  Problem</a> that arises in connection with <a
+  href="http://en.wikipedia.org/wiki/Knowledge_representation"
+  target=new>knowledge representation</a> and <a
+ href="http://en.wikipedia.org/wiki/Reason_maintenance" target=new>truth maintenance</a>.]</font> 
+
+</div>
+
+
+<!--
+
+<div  CLASS="slide">
+  <h1>mechanistic models: motor primitives and structural learning</h1>
+
+  <img src="Wolpert11-fig2ab.png" class="figure-right">
+  <P>
+  <BR>
+  <B>(a)</B> The motor system may have primitives for controlling force
+  magnitude through the course of a reaching movement. Each primitive
+  represents a <B>time course of force production</B> for the duration of the
+  movement. The final output is the sum of the primitives weighted by their
+  activation. Primitives can be purely position- or velocity-dependent
+  (primitives on x and y axes, respectively) or represent a combination of
+  the two force components (off axis examples).
+  <P>
+  <B>(b)</B> A prior may favor control that combines position- and
+  velocity-dependent forces in the same direction. This can be represented
+  as a non-isotropic distribution of motor primitives, with more primitives
+  on the positive diagonal (<font color=navy><B>blue ellipsoid</B></font>). The
+  prior leads to faster learning of perturbations that lie along the
+  preferred direction (<font color=green>green disk</font>)
+  compared to perturbations that lie off the diagonal (<font color=red>red
+  disk</font>).   
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>mechanistic models: motor primitives and structural learning</h1>
+
+  <img src="Wolpert11-fig2cd.png">
+  <P>
+  <BR>
+  <B>(c)</B> Structural learning can be achieved by changing the prior
+  distribution of primitives through experience. For example, in a
+  visuomotor rotation learning experiment, two groups of participants were
+  either exposed to random horizontal perturbations (left part; shown by the
+  double-ended arrow) or to random vertical perturbations (right part; shown
+  by the double-ended arrow). After experience, adaptation to the matching
+  perturbation type was accelerated, suggesting that the primitives become
+  aligned with the axis. 
+
+</div>
+
+-->
+
+
+<!-- SYNERGIES -->
+
+<div  CLASS="slide">
+  <h1>motor primitives: synergies in monkey motor cortex</h1>
+
+  <img src="Graziano02-fig2.jpg" class="figure-right" height=500>
+  <P>
+  <BR>
+  Motor control is HIERARCHICAL: some of the primitives
+  (units) of action that it involves are very high-level.
+  <P>
+  The illustration shows the postural MOVEMENT
+  <a href="https://en.wikipedia.org/wiki/Synergy"
+  target=new>SYNERGIES</a> evoked by stimulating single neurons in
+  monkey <a href="http://en.wikipedia.org/wiki/Precentral_gyrus"
+  target=new>precentral gyrus</a> (from Graziano et al., 2002).
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>synergies in ant motor control</h1>
+
+<!--  <img src="tree-cutting.jpg" class="figure-right"> -->
+  <img src="zombie_ant_2.jpg" class="figure-right">
+  <P>
+  <BR>
+
+  The <a
+ href="http://www.livescience.com/47751-zombie-fungus-picky-about-ant-brains.html"
+ target=new>zombie ant</a> phenomenon shows what happens when motor/action <a
+  href="http://en.wikipedia.org/wiki/Synergy"
+  target=new><SC>synergies</SC></a> are hijacked.
+
+</div>
+
+
+<div  CLASS="slide">
+  <h1>postural synergies (from Graziano et al., 2002)</h1>
+
+  <P>
+  <BR>
+  <table cellspacing=10>
+    <tr>
+      <td><img src="Graziano02-fig4a.jpg"></td>
+      <td><img src="Graziano02-fig4b.jpg"></td>
+    </tr>
+  </table>
+  <P>
+  Defense postures in monkey, man, and woman (the painting is a detail from
+  <a href="http://en.wikipedia.org/wiki/Michelangelo" target=new>Michelangelo</a>'s <a
+ href="http://www.wga.hu/frames-e.html?/html/m/michelan/3sistina/1genesis/4sin/04_3ce4.html"
+ target=new><I>Fall and Expulsion from Eden</I></a>).
+
+</div>
+
+
+
+
+<div  CLASS="slide">
+  <h1>normative models: the credit assignment problem</h1>
+  <P>
+  <BR>
+  Within the normative framework, the process of motor [or any other kind of] learning can be
+  understood as a <a
+ href="http://www.bcp.psych.ualberta.ca/~mike/Pearl_Street/Dictionary/contents/C/creditassign.html"
+ target=new>credit assignment problem</a> (see Marvin Minsky's <a
+ href="http://web.media.mit.edu/~minsky/papers/steps.html" target=new>1960
+ paper</a> where it is first stated): how to attribute an error
+  signal to the underlying causes.
+  <P>
+  <font color=gray>
+  For example, if a tennis player starts hitting shots into the net on the
+  serve, the problem could be that the ball was not thrown high enough,
+  was hit too early, that the racquet strings are loose or that he or she is
+  fatigued. If the racquet dynamics have changed, the player would do well
+  to learn these dynamics and remember them for the next time that they
+  use this particular racquet. Conversely, if the player is simply tired, the
+  necessary adjustments should only be temporary but should be applied
+  even if the racquet is changed at that moment.
+  </font>
+  <P>
+  Two types of credit assignment can be distinguished:
+  <ul>
+    <li>contextual/structural;</li>
+    <li>temporal.</li>
+  </ul>
+
+</div>
+
+
+
+<!--
+
+<div  CLASS="slide">
+  <h1>structural learning</h1>
+
+  <P>
+  <BR>
+  Both mechanistic and normative models can support structural learning. 
+  In general there are at least three levels of representation that are
+  relevant:
+  <ul class="incremental">
+    <li>
+    the structure of the task,
+    </li>
+    <li>
+    its parameters, and
+    </li>
+    <li>
+    the relevant state.
+    </li>
+  </ul>
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>credit assignment in redundant systems</h1>
+
+  <img src="Wolpert11-box3.png" class="figure-right">
+  <P>
+  <BR>
+  <B>(a)</B> In redundant systems, the actions of multiple effectors
+  contributes to the outcome. For instance, in this bimanual control task,
+  subjects control a visual cursor that is located at the spatial
+  average of the positions of the two hands, leading to a fundamental
+  ambiguity as to which hand caused the error. 
+  <P>
+  <B>(b)</B> Right-handed participants corrected errors more with their left
+  hands (correction asymmetry < 0.5), presumably because the left hand is
+  more likely to make errors. Across participants, the hand that was most
+  involved in the corrective response within a movement also showed the
+  biggest adaptive change in the next movement (adaptation symmetry reflects
+  the proportion of the total adaptation for which the right hand is
+  responsible), suggesting that participants assigned errors in a unified
+  manner for correction and adaptation. 
+
+</div>
+
+-->
+
+
+
+
+<div  CLASS="slide">
+  <h1>from motor control to general decision-making (Dayan & Niv, 2008)</h1>
+
+  <P>
+  <BR>
+  Like motor control, general decision making environments are characterized by:
+  <ul>
+    <li>
+    a STATE SPACE (states are such things as locations in a maze or board
+    positions in a game);
+    </li>
+    <li>
+    a set of actions (directions of travel, moves on a board);
+    </li>
+    <li>
+    affectively important outcomes (finding cheese, obtaining water,
+    winning).
+    </li>
+  </ul>
+  <P>
+  Actions can move the decision-maker from one state to another and they can
+  produce outcomes.
+  <P>
+  The outcomes are assumed to have numerical (positive or negative)
+  UTILITIES, which can change according to the motivational state of the 
+  decision-maker (e.g. food is less valuable to a satiated
+  animal).
+  <P>
+  Typically, the decision-maker starts off not knowing the rules of the
+  environment (the state transitions and outcomes brought about by the
+  actions), and has to learn or sample these from experience.
+
+</div>
+
+
+  
+
+<div CLASS="slide">
+  <h1>an example of a STATE SPACE: the Towers of Hanoi problem</h1>
+
+<table cellspacing="30">
+  <tbody><tr>
+    <td>
+	<a href="https://www.mathsisfun.com/games/towerofhanoi.html"
+	target="new"><img src="toh.gif" height=200></a> 
+    </td>
+    <td>
+      <img src="hanoi_graph.gif" height=350>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      The 3-disk version of the Towers of Hanoi problem...
+    </td>
+    <td>
+      ...and its <a href="https://en.wikipedia.org/wiki/State_diagram"
+      target=new>STATE SPACE</a>.
+    </td>
+  </tr>
+    </tbody></table>
+
+</div>
+    
+
+  
+<div  CLASS="slide">
+  <h1>model-free compared to model-based RL (Dayan & Niv, 2008)</h1>
+
+  <img src="DayanNiv08-fig1.png" class="figure-right" height=350>
+  <I>Right:</I> an illustration of the difference between model-free
+  and model-based approaches to decision-making.
+  <P>
+  <HR>
+    <P>
+      <font color=gray>
+    Model-free vs. model-based RL,
+   from <a href="https://arxiv.org/pdf/1801.04016.pdf" 
+   target=new><I>Theoretical Impediments to Machine Learning With
+   Seven Sparks from the Causal Revolution</I></a> (2018) by the great
+   <a href="http://bayes.cs.ucla.edu/jp_home.html" target=new>Judea
+   Pearl</a>:
+   <DIR><DIR>
+    "The philosopher Stephen Toulmin (1961) identifies model-based
+    vs. model-blind dichotomy as the key to understanding the ancient
+    rivalry between Babylonian and Greek science. According to
+    Toulmin, the Babylonians astronomers were masters of black-box
+    prediction, far surpassing their Greek rivals in accuracy and
+    consistency (Toulmin, 1961, pp. 27–30). Yet Science favored the
+    creative-speculative strategy of the Greek astronomers which was
+    wild with metaphysical imagery: circular tubes full of fire, small
+    holes through which celestial fire was visible as stars, and
+    hemispherical earth riding on turtle backs. Yet it was this wild
+    modeling strategy, not Babylonian rigidity, that jolted
+    <a href="https://en.wikipedia.org/wiki/Eratosthenes"
+    target=new>Eratosthenes</a> (276-194 BC) to perform one of the
+    most creative experiments in the ancient world and measure the
+    radius of the earth. This would never have occurred to a
+    Babylonian curve-fitter." 
+   </DIR></DIR>
+      </font>
+   
+</div>
+
+
+<!--
+
+<div  CLASS="slide">
+  <h1>[EXTRA] repertoire of possible world models (Shteingart & Loewenstein, 2014)</h1>
+
+  <img src="Shteingart14-fig1.png" class="figure-right" height=400>
+  <P>
+  <small>
+  In this example, a participant is tested in the <a
+ href="http://en.wikipedia.org/wiki/Multi-armed_bandit" target=new>two-armed bandit</a> task.
+  <BR>
+  <B>(a)</B> From the experimentalist's point of view (scientist
+  caricature), the world is characterized by a single state (\(S_0\)) and two
+  actions: left (blue, L) or right (red, R) button press. However, from the  
+  participant's point of view there is an infinite repertoire of possible
+  world models characterized by different sets of states and actions.
+  <BR>
+  <B>(b)</B> With respect to the <B>action</B> sets, she may assume that there is
+  only a single available action, pressing any button, regardless of its
+  location (purple, L/R).
+  <BR>
+  <B>(c)</B> With respect to the <B>state</B> sets, the participant may assume that
+  the state is defined by her last action (\(S_L\) and \(S_R\), for previous
+  L and R action, respectively).
+  <BR>
+  <B>(d)</B> Moreover, the participant may assume she is playing a
+  <a href="http://en.wikipedia.org/wiki/Matching_pennies" target=new>penny-matching game</a> with another human.
+  <BR>
+  <B>(e)</B> These and other possible assumptions may 
+  lead to very different predictions in the framework of RL.
+  </small>
+  <HR>
+  <P class="incremental">
+    If the RL task involves a video game,
+    humans have a leg up in the form of
+    <a href="https://rach0012.github.io/humanRL_website/"
+    target=new>sophisticated priors / world knowledge</a>.
+  </P>
+
+</div>
+
+-->
+
+
+<div  CLASS="slide">
+  <h1>types of operant learning (Shteingart & Loewenstein, 2014)</h1>
+
+  <img src="Shteingart14-fig2.png" class="figure-right" height=450>
+  <P>
+  In <a href="http://en.wikipedia.org/wiki/Operant_conditioning"
+  target=new>operant learning</a>, experience (left trapezoid), composed of
+  present and past observations, actions and rewards, is used to learn a
+  "policy". 
+  <P>
+  <B>(a)</B>
+  Standard RL models typically assume that the learner (brain gray icon) has
+  access to the relevant states and actions set (represented by a bluish
+  world icon) before the learning of the policy. Alternative suggestions are
+  that the state and action sets are learned from experience and from prior
+  expectations (different world icons) before <B>(b)</B> or in parallel
+  <B>(c)</B> to the learning of the policy. <B>(d)</B> Alternatively, the
+  agent may directly learn without an explicit representation of states and
+  actions, but rather by tuning a parametric policy (cog wheels icon), for
+  example, using stochastic gradient methods on this policy’s parameters.
+
+</div>
+
+
+
+
+<div CLASS="slide">
+  <h1>reinforcement learning: the MDP formulation and link to algorithms</h1>
+
+  <img src="Markov-Decision-Process.gif" height=200 class="figure-right">
+  <P>
+  <BR>
+  The best studied case is when RL can be formulated as a class of Markov Decision Problems
+  (<a href="http://en.wikipedia.org/wiki/Markov_decision_process" target=new>MDP</a>).
+  <P>
+  The agent can visit a finite number of states \(S_i\). In visiting a
+  state, it collects a numerical reward \(R_i\), where negative numbers may
+  represent punishments. Each state has a changeable value \(V_i\) attached
+  to it. From every state there are subsequent states that can 
+  be reached by means of actions \(A_{ij}\). The value \(V_i\) of a state
+  \(S_i\) is defined by the averaged future reward \(\tilde{R}\) which can
+  be accumulated by selecting actions from this particular state. Actions
+  are selected according to a <I>policy</I> which can also change. The goal of an RL 
+  algorithm is to select actions that maximize the <B>expected cumulative
+  reward</B> (the return) of the agent.
+  <P>
+  [<font color=gray>For a useful introduction to RL, MDP, and the basic algorithms, see the <a
+  href="http://www.scholarpedia.org/article/Reinforcement_learning"
+  target=new>Scholarpedia article</a>.]</font>
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>the agent, the environment, and the nature of reward (Barto, 2013)</h1>
+
+  <img src="Barto13-fig1.png" class="figure-right" width=300>
+  <P>
+  <BR>
+  The old/standard view of agent-environment interaction in
+  RL. Primary reward signals are supplied to the agent from a "critic" in its environment.
+  <P>
+  <HR>
+  <P>
+  <img src="Barto13-fig2.png" class="figure-right" width=400>
+  <P>
+  A refined view, in which the environment is divided into an internal and
+  external environment, with all reward signals coming from the former. 
+  The shaded box corresponds to what we would think of as the
+  "organism."
+  <P>
+  <HR>
+  <P class="incremental">
+    With this insight into the nature of the reward, the proper approach to
+    RL is
+    <a href="https://link.springer.com/chapter/10.1007/978-3-642-32375-1_2"
+       target=new><B>intrinsically motivated reinforcement learning</B></a>.
+  </P>
+
+</div>
+
+
+<!--
+  
+<div  CLASS="slide">
+  <h1>hierarchical RL</h1>
+
+  <a href="http://pusheen.com/" target=new><img src="Pusheen-plans.jpg" class="figure-right"></a>
+  <P>
+  <BR>
+  <ul>
+    <li>Tasks with a hierarchical structure</li>
+    <P>
+    <li>Two models of hierarchically structured behavior</li>
+    <P>
+    <li><font color=gray>A hierarchy of brain areas and circuits</font></li>
+    <P>
+    <li>A block diagram of a system for hierarchical RL</li>
+    <P>
+    <li>Option switching</li>
+    <P>
+    <li>Where does the hierarchy come from?</li>
+  </ul>
+  
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>hierarchical structure of a task (Botvinick 2008)</h1>
+
+  <img src="Botvinick08-fig1.png" class="figure-right">
+  <P>
+  <BR>
+  <B>(a)</B> An ACTION SEQUENCE for locking money in a safe. Arrows denote
+  means-ends relationships. <font color=red>Red</font> indicates that the
+  action accomplishes one component of the goal (money in the safe with the
+  door closed and locked).
+  <P>
+  <B>(b)</B> The sequence in (a) redrawn to highlight the presence of a
+  PART-WHOLE STRUCTURE. <font color=navy>Blue</font> indicates coherent parts and sub-parts of
+  the action sequence. At the coarsest level, the sequence breaks down into
+  two parts, one organized around the sub-goal of depositing the money, the
+  other around the sub-goal of locking the safe door. The action "pick up
+  key" subserves both goals. Also indicated is a subordinate or nested
+  sequence, which is organized around opening the safe door.
+  <P>
+  <B>(c)</B> One way of representing the sequence as a schema-, sub-task- or
+  SUBGOAL HIERARCHY. Temporally abstract actions are in <font
+  color=navy>blue</font>.
+
+  <P class="incremental">
+  Note that there is both <font color=red>instrumental structure</font>
+  and <font color=navy>correlational structure</font> here.
+  </P>
+  
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>a model of hierarchical behavior (Cooper & Shallice)</h1>
+
+  <img src="Botvinick08-fig2a.png" class="figure-right">
+  <P>
+  <BR>
+  <B>(a)</B> Schematic of the coffee-making model from Cooper and
+  Shallice, based on the assumption that the control system has a
+  hierarchical architecture that maps directly onto the structure of the
+  task domain.
+  <P>
+  The units, one per basic event or action, carry scalar activation values,
+  which are influenced by (1) excitatory input from higher-level units,
+  (2) inhibitory input from competing units at the same hierarchical
+  level, and (3) excitatory input from perceptual inputs. Top-down input to
+  each unit is also gated by a "goal node", which prevents top-down
+  excitation from activating any action for which the outcome has already
+  occurred (e.g. top-down excitation to the action "empty spoon" is gated if the
+  spoon is already empty). 
+  
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>a model of hierarchical behavior (Cooper & Shallice)</h1>
+
+  <img src="Botvinick08-fig2b.png" class="figure-right">
+  <P>
+  <BR>
+  <B>(b)</B> Activation of the schema nodes in the model from (a) over the course of
+  one task-completion episode. Performance of the task is simulated
+  by assigning a positive activation to the top-level
+  schema node and applying external inputs representing
+  the initial state of the environment.
+  
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>another model of hierarchical behavior (Botvinick & Plaut)</h1>
+
+  <img src="Botvinick08-fig2c.png" class="figure-right">
+  <P>
+  <BR>
+  <B>(c)</B> Schematic of the model from Botvinick and Plaut (<I>right</I>),
+  showing only a subset of the units in each layer. Arrows indicate
+  all-to-all connections.
+  <P>
+  <img src="Elman-SRN.png" height=450 class="figure-left">
+  Compare this with the <a
+ href="http://en.wikipedia.org/wiki/Recurrent_neural_network#Elman_networks_and_Jordan_networks"
+ target=new>Simple Recurrent Network</a> (SRN) architecture (<I>left</I>).
+  <P>
+  Rather than relying on an explicitly hierarchical architecture, this model
+  learns to represent structure by distributed activation of its internal
+  units. The hierarchy is encoded implicitly in its dynamics, shaped through
+  domain-general learning mechanisms.
+  
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>the representation space in Botvinick & Plaut's SRN model</h1>
+
+  <img src="Botvinick08-fig2d.png" class="figure-right">
+  <P>
+  <BR>
+  <B>(d)</B> A two-dimensional representation of a series of internal
+  representations arising in the Botvinick and Plaut model, generated using
+  multi-dimensional scaling.
+  <P>
+  Each point corresponds to a 50-dimensional
+  pattern of activation across the hidden units of the network. Both traces
+  are based on patterns arising during performance of the sugar-adding
+  subtask (o = first action, locate-sugar; x = final action, stir). The solid
+  trajectory shows patterns arising when the sequence is performed as part
+  of coffee-making, the dashed trajectory when it is performed as part of
+  another task (tea-making).
+  <P>
+  The <I>resemblance</I> between the two trajectories
+  reflects the fact that the sugar-adding subtask involves the same sequence
+  of stimuli and responses across the two contexts. The <I>difference</I> between
+  trajectories reflects the fact that the internal units of the model
+  maintain information about the overall task context throughout the course
+  of this sub-task. 
+  
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>two models of hierarchical behavior</h1>
+
+  <img src="Botvinick08-fig2c.png" class="figure-right">
+  <img src="Botvinick08-fig2a.png" class="figure-left">
+  <P>
+  The difference between the two models, (a) and (c), parallels research that suggests the
+  existence of two systems for action control:
+  <UL>
+    <li>
+    — a <font color=navy><B>habit</B></font> system based on context-response
+    associations, and
+    </li>
+    <li>
+    — a <font color=red><B>goal-directed</B></font> system that aims at
+    action outcomes.
+    </li>
+  </UL>
+  <P class="incremental">
+    Can you tell which is more like which here?
+  </P>
+  <HR>
+  <P class="incremental">
+    How can hierarchical structure be integrated into reinforcement learning?      
+  </P>
+    
+
+  <P class="incremental">
+  In humans, both these systems may be capable of
+  encoding hierarchical structure but may encode it differently, with the habit system capturing
+  <font color=navy><B>correlational structure</B></font> and the goal-directed system
+  capturing <font color=red><B>instrumental structure</B></font>.
+  </P>
+
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>hierarchical organization in (posterior and) frontal cortex</h1>
+
+  <img src="Botvinick08-fig3a.png" class="figure-right">
+  <P>
+  <BR>
+  <B>(a)</B> A hierarchy of (posterior and) frontal cortical areas, as described by <a
+  href="http://bi.snu.ac.kr/Courses/aplc12/2-2-1.pdf" target=new>Fuster</a>. 
+  <P>
+  <img src="Botvinick08-fig3b.png" class="figure-right">
+  <P>
+  <BR>
+  <B>(b)</B> Levels of control represented in different sectors of frontal
+  cortex, according to <a
+ href="http://www.educacaocerebral.com/artigos/The%20architecture%20of%20cognitive%20control%20in%20the%20human%20prefrontal%20cortex.pdf"
+ target=new>Koechlin</a>. Representations become progressively
+  more abstract towards the rostrum (front, here on the left). 
+  
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>hierarchical organization in frontal cortex</h1>
+
+  <img src="Botvinick08-fig3c.png" class="figure-right">
+  <P>
+  <BR>
+  <B>(c)</B> The hierarchically structured network studied by Botvinick,
+  showing only a subset of units in each layer. Arrows indicate 
+  all-to-all connections.
+  <P>
+  When trained on a hierarchically structured task,
+  units nearer the apex spontaneously come to represent context
+  information more strongly than do groups further down the hierarchy. 
+  
+</div>
+
+
+
+
+<div  CLASS="slide">
+  <h1>hierarchical organization in frontal cortex</h1>
+
+  <img src="Botvinick08-fig3de.png" class="figure-right">
+  <P>
+  <BR>
+  <B>(d)</B> Schematic of the gating model proposed by O'Reilly and Frank,
+  during performance of a task requiring maintenance of the stimuli '1' and
+  'A' in working memory. At the point shown, a '1' has already occurred and
+  has been gated into a prefrontal (PFC) stripe via a pathway through the
+  striatum, substantia nigra (SNr) and thalamus (Thal). At the moment shown,
+  an 'A' stimulus occurs (Stim) and is gated into another PFC stripe. Two
+  levels of context are thus represented.
+  <P>
+  <B>(e)</B> Koechlin's model of FPC function. Orbitofrontal cortex
+  (Ofc) encodes the incentive value of various tasks. When two tasks are both
+  associated with a high incentive value, the one with the highest value is
+  selected within lateral PFC (Lpc) for execution, while the runner-up is
+  held in a pending state by the frontopolar cortex (Fpc). 
+  
+</div>
+
+-->
+
+
+<div  CLASS="slide">
+  <h1>HIERARCHICAL [model-free] reinforcement learning</h1>
+
+  <img src="Botvinick08-figIab.png" class="figure-right">
+  <P>
+  <BR>
+  <B>(a)</B> A schematic of action selection in the OPTIONS framework. At
+  the first time-step, a primitive action, <I>a1</I>, is selected. At time-step
+  two, an option, <I>o1</I>, is selected, and the policy of this option leads to
+  selection of a primitive action, <I>a2</I>, followed by selection of another
+  option, <I>o2</I>. The policy for <I>o2</I>, in turn, selects primitive actions <I>a3</I> and
+  <I>a4</I>. The options then terminate, and another primitive action, <I>a5</I>, is
+  selected at the top-most level.
+  <P>
+  <B>(b)</B> Inset: the rooms domain (Sutton et al.), as
+  implemented by Botvinick et al.
+  <P>
+  S, start; G, goal. <I>Primitive
+  actions</I> include single-step moves in the eight cardinal
+  directions. <I>Options</I> contain policies to reach each door. Arrows show a
+  sample trajectory involving selection of two options (<font
+ color=red>red</font> and <font color=navy>blue</font> arrows)
+  and three primitive actions (black). The plot shows the mean number of
+  steps required to reach the goal over learning episodes with and without
+  inclusion of the door options. 
+  
+</div>
+
+
+  
+<div  CLASS="slide">
+  <h1>HIERARCHICAL [model-based] reinforcement learning</h1>
+
+  <img src="SolwayEtAl14-fig1A.png" height=350 class="figure-right">
+  <P>
+  <BR>
+    Looking for optimal task hierarchy:
+    <P>
+    "Arranging actions hierarchically has well established benefits,
+    allowing behaviors to be represented efficiently by the brain, and
+    allowing solutions to new tasks to be discovered easily. However,
+    these payoffs depend on the particular way in which actions are
+    organized into a hierarchy, the specific way in which tasks are
+    carved up into subtasks. We provide a mathematical account for
+    what makes some hierarchies better than others, an account that
+    allows an optimal hierarchy to be identified for any set of
+    tasks. We then present results from four behavioral experiments,
+    suggesting that human learners spontaneously discover optimal
+    action hierarchies."
+    <DIR>
+      — <a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003779"
+      target=new><I>Optimal Behavioral Hierarchy</I></a> (2014), by Alec Solway,
+      Carlos Diuk, Natalia Córdova, Debbie Yee, Andrew
+      G. Barto, Yael Niv, and Matthew M. Botvinick.
+    </DIR>
+    <HR>
+    (<B>A</B>). Rooms domain. Vertices represent states
+    (<font color=green>green</font> = start, <font color=red>red</font> = 
+    goal), and edges feasible transitions.
+
+</div>
+  
+
+
+<div  CLASS="slide">
+  <h1>[EXTRA] optimal behavioral hierarchy (Solway et al. 2014) </h1>
+
+  <P>
+  <BR>
+  "The optimal hierarchy is one that best facilitates
+  adaptive behavior in the face of new problems. [...] This
+  notion can be made precise using the framework of
+  <a href="https://en.wikipedia.org/wiki/Bayes_factor" target=new>Bayesian model
+  selection</a>. [...] The agent is assumed to occupy a world in which it
+  will be faced with a specific <I>set</I> of tasks in an unpredictable
+  order, and the objective is to find a hierarchical representation
+  that will beget the best performance on average across this set of
+  tasks. An important aspect of this scenario is that the agent may
+  <I>reuse</I> subtask policies across tasks (as well as task policies if
+  tasks recur)."
+  <P>
+  In <a href="https://en.wikipedia.org/wiki/Bayes_factor"
+  target=new>Bayesian model selection</a>, each candidate model is assumed
+  to be associated with a set of parameters \(\theta\), and the fit
+  between the model and the target data is quantified by the marginal
+  likelihood or <I>model evidence</I>:
+  $$
+  Pr(data\vert model)=\sum_{\theta\in\Theta} Pr(data\vert model,\theta)
+  Pr(\theta\vert model)
+  $$
+  where \(\Theta\) is the set of feasible model parameterizations
+  <font color=gray>(in the above formula, the likelihood is called
+  "marginal" because it is marginalized over all possible choices of
+  \(\theta\))</font>. 
+
+</div>
+  
+
+
+<div  CLASS="slide">
+  <h1>[EXTRA] optimal behavioral hierarchy (Solway et al. 2014) </h1>
+
+  <img src="SolwayEtAl14-fig1CD.png" height=400 class="figure-right">
+  <P>
+  <BR>
+  In the present setting, where the models in question are different
+  possible hierarchies, and the data are a set of target behaviors,
+  the model evidence becomes:
+  $$
+  Pr(behavior\vert hierarchy)=\sum_{\pi\in\Pi} Pr(behavior\vert hierarchy,\pi)
+  Pr(\pi\vert hierarchy)
+  $$
+  where \(\Pi\) is the set of behavioral policies \(\pi\) available to the
+  candidate agent, given its inventory of subtask representations (this
+  includes the root policy for each task in the target ensemble, as
+  well as the policy for each subtask itself).
+  <HR>
+  <P>
+  (<B>C</B>). Optimal decomposition. (<B>D</B>). An alternative
+  decomposition. 
+
+</div>
+  
+
+
+  
+<div  CLASS="slide">
+  <h1>[EXTRA] optimal behavioral hierarchy (Solway et al. 2014) </h1>
+
+  <img src="SolwayEtAl14-fig1B.png" height=400 class="figure-right">
+    <P>
+      <BR>
+	(<B>B</B>). Mean performance of three hierarchical reinforcement
+	learning agents in the rooms task.
+	<P>
+	  Inset: Results based on four
+  graph decompositions. <font color=blue>Blue</font>: decomposition
+  from panel C [previous slide]. <font color=purple>Purple</font>: 
+  decomposition from panel D. Black: entire graph treated as one
+  region. <font color=orange>Orange</font>: decomposition with orange
+  vertices in panel A segregated out as singleton regions.
+	<P>
+	  <small>
+<font color=gray>  Model evidence is on a log
+  scale (data range \( -7.00 \times 10^4\) to \( -1.19 \times
+  10^5\)). Search time 
+  denotes the expected number of trial-and-error attempts to discover
+  the solution to a randomly drawn task or subtask (geometric mean;
+  range 685 to 65947; tick mark indicates the
+  origin). <a href="https://en.wikipedia.org/wiki/Minimum_description_length"
+  target=new>Codelength</a>
+  signifies the number of bits required to encode the entire data-set
+  under a <a href="https://en.wikipedia.org/wiki/Shannon_coding"
+  target=new>Shannon code</a> (range \(1.01\times 10^5\) to
+  \(1.72\times 10^5\)). Note that the abscissa refers both to model
+  evidence and codelength. Model evidence increases left to right, and
+  codelength increases right to left.
+  </font>
+  </small>
+
+</div>
+  
+
+
+    
+<div  CLASS="slide">
+  <h1>[EXTRA] optimal behavioral hierarchy (Solway et al. 2014) </h1>
+
+  <img src="SolwayEtAl14-fig2BC.png" height=250 class="figure-right">
+  <P>
+  <BR>
+  (<B>B</B>). Task display from Experiment 1. Participants used the
+  computer mouse to select three locations adjacent to the probe
+  location.
+  <P>
+  (<B>C</B>). Graph employed in Experiment 1, showing the optimal 
+  decomposition. Width of each gray ring indicates mean proportion of
+  cases in which the relevant [bus
+  stop<sup><font color=red>*</font></sup>] location was chosen.
+  <P>
+    <HR width=30% align=left>
+      <P>
+	<sup><font color=red>*</font></sup><small>
+	  Following this training period, participants were informed that
+they would next be asked to navigate through the town in order to
+make a series of deliveries between randomly selected locations,
+receiving a payment for each delivery that rewarded use of the
+fewest possible steps. Before making any deliveries, however,
+participants were asked to choose the position for a ‘‘bus stop’’
+within the town. Instructions indicated that, during the subsequent
+deliveries, participants would be able to ‘‘take a ride’’ to the bus
+stop’s location from anywhere in the town, potentially saving steps
+and thereby increasing payments. Participants were asked to
+identify three locations as their first-, second- and third-choice busstop
+sites. </small>
+
+</div>
+  
+
+
+  
+<div  CLASS="slide">
+  <h1>[EXTRA] optimal behavioral hierarchy (Solway et al. 2014) </h1>
+
+  <img src="SolwayEtAl14-fig2F.png" height=250 class="figure-right">
+  <P>
+    <BR>
+      (<B>F</B>). State-transition graph for the Tower of Hanoi
+      puzzle, showing the optimal decomposition and indicating the
+      start and goal configurations of the kind studied in Experiment
+      4. 
+
+</div>
+
+
+
+<!--
+
+<div  CLASS="slide">
+  <h1>actor-critic closed-loop RL</h1>
+
+  <img src="actor-critic-RL.gif" class="figure-right">
+  <P>
+  <BR>
+  <B>(A)</B>
+  A basic closed-loop controller.
+  <P>
+  <B>(B)</B>
+  An Actor-Critic controller. The Critic produces evaluative reinforcement feedback for the Actor by
+  observing the consequences of its actions. The feedback signals the
+  TD-error, which gives an indication if things have gone better or worse
+  than expected with the preceding action. If the TD-error is positive, the
+  probability of selecting the action is increased; otherwise, it is
+  decreased.
+  <P>
+  <font color=gray>
+  <B>(C)</B>
+  An ISO (Isotropic Sequence Order) controller.
+  </font>  
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>hierarchical actor-critic reinforcement learning</h1>
+
+  <img src="Botvinick08-figIcd.png" class="figure-right">
+  <P>
+  <BR>
+  <B>(c)</B> An actor-critic implementation of HRL, from Botvinick, Niv and
+  Barto. Standard elements are the actor, which implements the policy
+  (\(\pi\)), and the critic, which stores state values (\(V\)), monitors rewards (\(R\)),
+  computes reward-prediction errors (\(\delta\)) and drives learning. To these, a new
+  component is added that represents the currently active option (\(o\)), which
+  impacts the operation of both actor and critic.
+  <P>
+  <font color=gray>
+  <B>(d)</B> Neural correlates of the elements in (c), as proposed by
+  Botvinick et al. <BR>
+  DA, dopamine; DLPFC+, dorsolateral prefrontal cortex, plus other frontal
+  structures potentially including premotor, supplementary motor and
+  presupplementary motor cortices; DLS, dorsolateral striatum; HT+,
+  hypothalamus and other structures, potentially including the habenula, the
+  pedunculopontine nucleus and the superior colliculus; OFC, orbitofrontal
+  cortex; VS, ventral striatum.
+  </font>
+  
+</div>
+
+
+
+
+<div  CLASS="slide">
+  <h1>"a puzzling and challenging paradox"</h1>
+
+  <img src="Botvinick09-fig6.png" class="figure-right">
+  <P>
+  <BR>
+  "The human brain presents a puzzling and challenging paradox: Despite a
+  fixed anatomy, characterized by its connectivity, its functional
+  repertoire is vast, enabling action, perception, and cognition. This
+  contrasts with organs like the heart that have a dynamic anatomy but just
+  one function" (Park & Friston, 2013).
+  <HR>
+  <I>Right:</I> the role of the prefrontal cortex, as postulated by
+  guided activation theory (Miller & Cohen, 2001). Patterns of activation in
+  prefrontal cortex (filled elements in the boxed region) effectively select
+  among stimulus-response pathways lying elsewhere in the brain (lower
+  area). Here, representations within prefrontal cortex correspond to option
+  identifiers in HRL, while the stimulus-response pathways selected
+  correspond to option-specific policies.
+
+</div>
+
+-->
+
+
+
+
+<!--
+
+<div  CLASS="slide">
+  <h1>EXTRA: goal-directed decision making — a kind of inverse inference (Solway & Botvinick, 2012)</h1>
+
+  <P>
+  <BR>
+  Goal-directed decision making, like so many other forms of human and
+  animal information processing, can be fruitfully understood in terms of
+  probabilistic inference. In particular, we [Solway & Botvinick 2012]
+  propose that goal-directed decisions arise out of an internal generative
+  model, which captures how situations, plans, actions, and outcomes
+  interact to generate reward. Decision making, as we characterize it,
+  involves <B>inverse</B> inference within this generative model: The decision
+  process takes the occurrence of reward as a premise and leverages the
+  generative model to determine which course of action best explains the
+  observation of reward.
+  <P>
+  Goal-directed decision making can be viewed as a version of model-based
+  reinforcement learning. The "model" referred to in this term comes in two
+  parts: a state-transition function, which maps from situation-action pairs
+  to outcomes, and a reward function, which attaches a reward value to each
+  world state. Model-based reinforcement learning refers to the project of
+  discovering an optimal (reward-maximizing) policy, or mapping from states
+  to actions, given this two-part model.
+  
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>reframing the computational problem</h1>
+
+  <P>
+  <BR>
+  Model-based reinforcement learning begins with a set of givens, which
+  include a set of states, \(S\); a set of actions, \(A\); a
+  state-transition function \(T\left(s\in S, a\in A, s^{\prime}\in
+  S\right)\), which specifies the probability of arriving in state
+  \(s^{\prime}\) after having performed action \(a\) in state \(s\); and 
+  a reward function \(R(s)\), which assigns a scalar reward value to each
+  state. The computational problem is then to choose a policy
+  \(\pi(s,a,t) = p(a\mid s,t)\) that maximizes expected cumulative reward
+  over steps of action \(t\) up to some planning horizon \(T\):
+  $$
+  argmax_{\pi} E\left[\sum_{t=1}^{T} p_t\left(s\mid\pi\right)
+  R\left(s\right)\right]
+  $$
+  Our objective is to reframe this problem in terms of probabilistic
+  inference.
+  
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>a generative model for reward</h1>
+
+  <img src="SolwayBotvinick12-fig2.png" class="figure-right">
+  <P>
+  <BR>
+  <B>(A)</B> The node \(S\) represents the decision maker's current state
+  (known). The node \(A\) represents available actions, and \(\Pi\) represents
+  state-specific policy variables, with values corresponding to state-action
+  pairs. Node A is associated with the conditional probability distribution
+  \(p\left(A = a \mid S = s, \Pi = \pi\right)\).
+  <P>
+  <B>(B)</B> incorporates the transition function, defined as
+  \(p\left(s^{\prime}\mid s,a\right)\), where \(s^{\prime}\) 
+  represents action outcomes or successor states.
+  <P>
+  <B>(C)</B> incorporates the reward function. Node \(\hat{R}\) represents
+  reward value.
+  <P>
+  <B>(D)</B> The model structure so far addresses only a single step of
+  action. However, it is readily extended to sequences, by duplicating part
+  of the existing structure, providing a series of state, action, policy,
+  and reward nodes, one for each step of the action sequence. In extending
+  the architecture in this way, we also introduce one final new element: a
+  variable representing the cumulative reward accrued over an action
+ sequence \(\hat{R}_c\).
+  
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>a generative model for reward</h1>
+
+  <img src="SolwayBotvinick12-fig2.png" class="figure-right">
+  <P>
+  <BR>
+  In the conventional case, where reward is represented as an ordinary real
+  number (which we shall continue to denote by \(r\)), the problem is to
+  find the policy that maximizes expected reward magnitude.
+  <P>
+  In contrast, in the scenario we are considering, the problem is instead to
+  maximize the probability of a discrete event, \(p\left(\hat{r} = 1 \mid
+  \pi\right)\). Goal-directed decision making thus becomes a
+  likelihood maximization problem. This seemingly incidental point has
+  far-reaching ramifications, which we unpack in what follows.
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>a generative model for reward</h1>
+
+  <img src="SolwayBotvinick12-fig3.png" class="figure-right">
+  <P>
+  <BR>
+  <B>The graphical model can be seen as simply one way of representing the
+  standard ingredients of a model-based reinforcement learning
+  problem. However, another way of viewing it is as a generative model for
+  reward.</B> That is, the model represents the interrelated factors — initial states, policies,
+  actions, and outcomes — that together give rise to reward events.
+  To illustrate, we can "query" the variable \(\hat{R}\) , asking for the 
+  marginal probability \(p\left(\hat{r}\mid s\right)\). In the one-step
+  model, this probability depends on the remaining variables as
+  follows:
+  $$
+  p\left(\hat{r}\mid s\right) = \sum_{s^{\prime},a,\pi} p\left(\hat{r}\mid
+  s^{\prime}\right) p\left(s^{\prime}\mid s,a\right) p\left(a\mid
+  s,\pi\right) p\left(\pi\right)
+  $$
+  <small>
+  Note that the first factor in this sum is simply the reward
+  function. The second term is the transition function, and the
+  third expresses the effect of policies on action selection. The
+  final term represents the decision maker's prior bias toward
+  specific policies, expressed as a probability distribution. Each
+  of these factors corresponds to the conditional probability distribution
+  (CPD) at a specific node in the graph.
+  </small>
+  
+</div>
+
+
+
+
+<div  CLASS="slide">
+  <h1>conditional inference</h1>
+
+  <img src="SolwayBotvinick12-fig3.png" class="figure-right">
+  <P>
+  <BR>
+  Probabilistic graphical models provide a substrate for conditional
+  inference. Given an observed or known value for one or more variables, one
+  can query the conditional distribution for any other set of variables. We
+  saw an illustration of this on the previous slide, where the value of the
+  initial state \(s\) was an observed quantity. The same approach could be
+  used to obtain the marginal probability of \(p\left(\hat{r}=1\right)\),
+  given a commitment to a specific policy. This is obtained by treating
+  \(\Pi\) as an observed variable (\(\Pi =\pi\); see top figure), and
+  computing
+  $$
+  p\left(\hat{r}\mid s,\pi\right) = \sum_{s^{\prime},a} p\left(\hat{r}\mid
+  s^{\prime}\right) p\left(s^{\prime}\mid s,a\right) p\left(a\mid
+  s,\pi\right) 
+  $$
+  Conditioning on a policy and querying the reward variable in this way
+  offers one potential method for solving the computational problem we have
+  laid out. The decision maker could iterate through all available policies,
+  keeping a record of the expected reward for each, and then choose the
+  policy that maximizes that quantity. However, there is also another, more
+  interesting route to solving the computational problem.
+  
+</div>
+
+
+
+
+<div  CLASS="slide">
+  <h1>abductive inference</h1>
+
+  <img src="SolwayBotvinick12-fig3.png" class="figure-right">
+  <P>
+  <BR>
+  Rather than conditioning on policies and computing rewards,
+  it is possible to invert the model to reason from
+  rewards to policies (bottom figure). Specifically, leveraging
+  our binary representation of reward, we can condition on \(\hat{r} = 1\)
+  and apply Bayes' law to compute
+  $$
+  p\left(\pi\mid s,\hat{r}\right) ~ \propto ~ \sum_{s^{\prime},a}
+  p\left(\hat{r}\mid s^{\prime}\right) p\left(s^{\prime}\mid s,a\right)
+  p\left(a\mid s,\pi\right) p\left(\pi\right)
+  $$
+  If there is no initial bias toward any specific policy
+  (uniform priors \(p(\pi)\)), then
+
+  -- right-hand side of Equation 5 is identical to that of Equation
+  4. That is, --
+  
+  \(p\left(\pi\mid s,\hat{r}\right) = p\left(\hat{r}\mid s,\pi\right)\).
+  This suggests an alternative way of framing the computational
+  problem involved in goal-directed decision making. According to
+  our earlier formulation, the objective was to find a policy to
+  maximize \(p(\hat{r}\mid \pi)\). It is now evident that an equally valid
+  objective is to find a policy to maximize
+  \(p(\pi\mid\hat{r})\). Conditioning on \(\hat{r}=1\), the 
+  task is to identify the policy that best explains that "observation."
+  This is <B>policy abduction</B>: it involves reasoning from effects
+  (reward) to their explanations or causes (policies for action).
+
+</div>
+
+-->
+
+
+
+<div class="footer">
+<p>Last modified: Mon Aug 3 2020 at 22:24:46 EDT</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,994 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Psych 3140/6140 w-11-1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2008-2021 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- 
+<rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+<permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+<requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+<permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+<requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+</License>
+</rdf:RDF>
+-->
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Week 11 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Psych 3140/6140</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Week 11: intro to neural computation; neurons I</h2>
+    <h3>&nbsp;Lecture 11.1</h3>
+  </div>
+  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%>
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+<div  CLASS="slide">
+  <h1>Lecture 11.1: the basics</h1>
+
+  <img src="SMBC-analog-computation-20130719.png" title="SMBC" class="figure-right" height=450>
+  <P>
+  <ul>
+    <li><font color=gray>[how everything computes]</font></li>
+    <P>
+    <li>how a neuron computes
+    <ul>
+      <li>signal transduction: interfacing to the world</li>
+      <P>
+      <li>the representational versatility and power of numbers
+      [recall <a
+  href="https://en.wikipedia.org/wiki/Wigner" target=new>Wigner</a>'s <a
+  href="https://www.maths.ed.ac.uk/~v1ranick/papers/wigner.pdf"
+ target=new>comments on the role of math in science</a>]</li>
+    </ul>
+    </li>
+    <P>
+    <li>what neurons compute <B>natively</B> (as opposed to <a
+    href="https://en.wikipedia.org/wiki/Virtual_machine" target=new>virtually</a>) (a partial list):
+    <ul>
+      <li>vector projection (inner product)</li>
+      <P>
+      <li>tuned receptive fields</li>
+      <P>
+      <li>maps</li>
+    </ul>
+    </li>
+  </ul>
+  
+</div>
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>HOW a neuron computes</h1>
+
+  <a href="https://en.wikipedia.org/wiki/Artificial_neuron"
+  target=new><img src="formal-neuron.png" class="figure-right"></a> 
+  <P>
+    A generally useful (but actually quite sketchy) summary of the
+    basic <SC>computation</SC> performed by a
+    <a href="https://en.wikipedia.org/wiki/Neuron"
+    target=new>neuron</a>:
+  </P>
+  <P>
+    <OL>
+      <li>multiply each incoming signal \(x_i\) by its synaptic
+      <a href="https://en.wikipedia.org/wiki/Synaptic_weight"
+      target=new><SC>weight</SC></a> \(w_i\) (in the illustration,
+      \(k\) is an index over the neurons);</li>
+      <li><SC>sum</SC> all the resulting products;</li>
+      <li>pass the sum through a <SC>nonlinearity</SC>
+	\(\varphi(\cdot)\), such as
+	the <a href="http://en.wikipedia.org/wiki/Logistic_sigmoid"
+	target=new>logistic sigmoid</a>;</li>
+      <li><SC>compare</SC> the result to a <SC>threshold</SC>;</li>
+      <li><SC><B>if</B></SC> it exceeds the threshold,
+	<B><SC>then</SC></B> output an
+	<SC><a href="http://en.wikipedia.org/wiki/Action_potential"
+	       target=new>action potential</a></SC> (spike).</li>
+    </OL>
+  </P>
+
+</div>
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>WHAT neurons compute (the first example of many)</h1>
+
+  <img src="Churchland-10-7.jpg" class="figure-right" height=400>
+  <P>
+    A pattern of connections between two bundles of wires can directly
+    implement vector PROJECTION.
+  </P>
+  <P>
+    Mathematically, projecting one <I>N</I>-dimensional
+    <a href="http://en.wikipedia.org/wiki/Vector_space"
+       target=new>vector</a> (a list of
+    <I>N</I> numbers; here, \([a,b,c,d]\)) onto another vector (here,
+    \([p_1, p_2, p_3, p_4]\)) is implemented by
+    the <a href="http://en.wikipedia.org/wiki/Dot_product"
+    target=new>"dot product"</a>: elementwise multiplication of
+    corresponding elements of the two vectors, followed by a summation
+    of the results &#151; just like the computation that neurons carry
+    out natively:
+
+    $$
+    x = [a,b,c,d] \cdot [p_1,p_2,p_3,p_4] = a p_1+b p_2+c p_3+d p_4
+    $$
+  </P>
+  <P>
+    To project onto another vector (as in the \(y\) output here), use
+    another set of neural
+    <a href="https://en.wikipedia.org/wiki/Synaptic_weight"
+    target=new>"weights"</a> (here, \([q_1, q_2, q_3, q_4]\)).
+  </P>
+
+</div>
+
+
+
+  
+<DIV  CLASS="slide">
+  <h1>WHAT is projection good for? Dimensionality reduction</h1>
+
+  <P>
+    A projection circuit can carry out "information-preserving"
+    reduction of dimensionality (recall the "curse of dimensionality"
+    from
+    <a href="wk-5-2.html#(24)"
+       target=n>Lecture 5.2</a>):
+  </P>
+
+  <table cellspacing=10>
+    <tr>
+      <td align=center><img src="Hastie-dataset.jpg"></td>
+      <td align=center><img src="Hastie-pca.jpg"></td>
+<!--      <td align=center><img src="Hastie-pc-curve.jpg"></td> -->
+    </tr>
+    <tr>
+      <td align=center>a 2D dataset &#151; think apples that vary in (1)
+	color and (2) mushiness</td>
+      <td align=center>the same data, mapped into 1D by Principal Component
+	Analysis (<a href="http://ordination.okstate.edu/PCA.htm"
+ target=new>PCA</a>) = <a
+ href="http://www.cs.mcgill.ca/~sqrt/dimr/dimreduction.html" target=new><B>projection</B></a> onto the first principal direction</td> 
+ <!--
+ <td align=center>a more sophisticated way of <a
+	href="http://en.wikipedia.org/wiki/Dimensionality_reduction" target=new>reducing the
+	dimensionality</a> of this dataset
+      </td>
+      -->
+    </tr>
+  </table>
+  
+</div>
+
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>neurons can reduce dimensionality NATIVELY, by doing what they do [= projection]</h1>
+
+  <img src="Churchland-10-7.jpg" class="figure-right" height=400>
+  <P>
+  A neuron <SC>projects</SC> its input space onto the single dimension (single
+  number) represented by its output.
+  <P>
+  A set of <I>K</I> neurons fed by the same set of <I>N</I> input fibers project their common
+  <I>N</I>-dimensional input space onto the <I>K</I>-dimensional space
+  spanned by their outputs.
+  <P>
+  In this illustration, <I>N=4</I> and <I>K=3</I>.
+  <P>
+  <B>Dimensionality reduction is very broadly applicable, and often
+  indispensable, in cognitive computation.</B>
+  </P>
+  
+</DIV>
+
+
+<DIV  CLASS="slide">
+  <h1>a side remark on real brain circuitry</h1>
+
+  <img src="Churchland-10-1.jpg" height=500 class="figure-right">
+  <P>
+    Some brain circuits are relatively well-ordered; for instance,
+    the <a href="http://en.wikipedia.org/wiki/Parallel_fiber"
+	   target=new>parallel fibers</a>
+    / <a href="http://en.wikipedia.org/wiki/Purkinje_cell" 
+	 target=new>Purkinje cell</a> circuit in the
+    <a href="http://en.wikipedia.org/wiki/Cerebellum"
+    target=new>cerebellar</a> cortex.
+  </P>
+  <P class="incremental">
+    However, even in such places there is much extra complexity that
+    is difficult to grasp intuitively. In the brain, mind-boggling
+    circuit complexity is the rule (evolution does not provide for
+    easy reverse engineering).
+  </P>
+
+</div>
+
+
+  
+<DIV  CLASS="slide">
+  <h1>a side remark on vector space vs. neural activity space</h1>
+
+  <img src="CS92-fig3.3.jpg" class="figure-right" height=350>
+  <P>
+    An ordered list of the activities of a set of \(N\) neurons is commonly
+    thought of as spanning an \(N\)-dimensional
+    <a href="https://en.wikipedia.org/wiki/Vector_space"
+       target=new>vector space</a>.
+  </P>
+  <P>
+    However, this view has some serious limitations/flaws:
+    <ul class="incremental">
+      <li>rate vs. spike time coding</li>
+      <li>simultaneity (remember
+	<a href="https://en.wikipedia.org/wiki/Special_relativity"
+	  target=new>special relativity</a>)</li>
+    </ul>
+  </P>
+  <P class="incremental">
+    A sound approach to theorizing about the joint activity of a set of neurons
+    is via the concept of READ-OUT, to be discussed
+    <a href="w-11-2.html#(6)"
+       target=a>on Thursday</a>.
+  </P>
+
+</div>
+
+
+
+
+<!-- visual and auditory simple cells -->
+
+
+
+<DIV CLASS="slide">
+  <h1>neuronal TUNING as a functional building block</h1>
+
+  <img src="simple-cells.png" class="figure-right" height=600>
+  <P>
+    Hubel and Wiesel (1962):
+    <a href="https://en.wikipedia.org/wiki/Simple_cell"
+    target=new>"simple cells"</a> in the
+    <a href="http://www.scholarpedia.org/article/Area_V1"
+    target=new>primary visual cortex</a>, V1 — 
+  <P>
+    <I>Top:</I> the orientation selectivity of a simple cell. The
+    response of a cell to a bar of light is shown for different
+    locations and orientations of the bar relative to the receptive
+    field (RF). <B>Note</B> the spatially distinct ON and OFF regions
+    within the RF.
+  <P>
+    <I>Bottom:</I> Hubel and Wiesel's proposal of how the simple
+    cell's RF could be formed by combining
+    several <I>center-surround</I> RFs arranged along a line.
+  <P class="incremental">
+    Does the existence of distinct ON and OFF regions serve a purpose? 
+  </P>
+  <P class="incremental">
+    <B>Are such visually tuned cells "feature detectors" or ...?</B>
+  </P>
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>to find out what tuning is for, must understand what it means to see</h1>
+
+  <img src="what-does-it-mean-to-see.png" class="figure-right"
+       height=500>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>more visual tuning: complex cells in V1</h1>
+
+  <img src="complex-cells.png" class="figure-right" height=600>
+  <P>
+    Hubel and Wiesel (1962):
+    <a href="https://en.wikipedia.org/wiki/Complex_cell"
+       target=new>"complex cells"</a> in
+    the <a href="http://www.scholarpedia.org/article/Area_V1"
+	   target=new>primary visual cortex</a>, V1 —
+  <P>
+    <I>Top:</I> the orientation selectivity of a complex cell. Note that,
+    unlike a simple cell, the complex cell does not care where exactly the
+    stimulus bar is within its RF, as long as it has the "correct"
+    orientation. <B>Note</B> the absence of spatially distinct ON and OFF
+    regions within the RF.
+  </P>
+  <P>
+    <I>Bottom:</I> Hubel and Wiesel's proposal of how the complex cell's
+    RF could be formed by combining several simple RFs arranged next to each
+    other.
+  </P>
+  
+</div>
+
+  
+
+<DIV CLASS="slide">
+  <h1>Tian (2013): similar RF functionalities are found in the auditory
+  processing stream</h1>
+
+  <img src="Tian13-fig2.png" class="figure-right" >
+  <P>
+    Excitatory response profiles of monkey
+    <a href="http://en.wikipedia.org/wiki/A1_%28primary_auditory_cortex%29"
+       target=new>A1</a> neurons in response to the onset and offset
+       of a band-pass noise (BPN) burst with varying
+       frequency. <font color=green>Green:</font> ON
+       responses. <font color=red>Red:</font> OFF responses.
+  </P>
+  <P>
+    <B>(A)</B> Response profiles of a typical type-S (simple-like)
+    cell. <small><font color=gray>[The panels correspond to different
+    bandwidths of the BPN stimuli (in
+    <a href="https://en.wikipedia.org/wiki/Octave_(electronics)"
+    target=new>octaves</a>).]</font></small> <B>Note:</B> ON- and
+    OFF-response profiles appear largely separated into distinct
+    frequency ranges — just like in the case of vision, the ON- and
+    OFF-response regions are spatially separate within the receptive
+    field.
+  </P>
+  <P>
+    <B>(B)</B> Three examples of type-C (complex-like) cells. In all cases,
+    the response profiles of ON and OFF responses significantly
+    overlap.
+  </P>
+  <HR>
+    <P class="incremental">
+      Consider also the analogy between retinotopy and tonotopy in sensory
+      <a href="http://en.wikipedia.org/wiki/Topographic_map_%28neuroanatomy%29"
+	 target=new>world-to-brain mapping</a> (illustrated and
+	 discussed at length in the textbook).  
+    </P>
+  
+</div>
+
+  
+<!--
+
+<DIV CLASS="slide">
+  <h1>Tian (2013): classification of A1 neurons into type-S and type-C classes</h1>
+
+  <img src="Tian13-fig3.png" class="figure-right" >
+  <P>
+  <BR>
+  <B>(A)</B> ON/OFF-area overlap plotted as a smoothed histogram. The
+  histogram demonstrates bimodal distribution of ON/OFF-area overlap.
+  <P>
+  <B>(B)</B> ON/OFF-area overlap plotted against K–S distance as a smoothed
+  bivariate histogram. Distinct clusters are apparent in the density plot.
+  <P>
+  <B>(C)</B> Scatterplot of ON/OFF-area overlap against K–S distance. Each
+  dot represents one neuron.
+  <P>
+  <B>(D)</B> Class assignments resulting from k-means clustering are shown
+  in black (type S) and gray (type C) in the plot of ON/OFF-area overlap
+  against K-S distance (compare with C). 
+  
+</div>
+
+-->
+
+<!-- cognitive maps in rats and in bats -->
+
+
+<DIV CLASS="slide">
+  <h1>MAPS and TUNING in other domains: spatial location [also ABSTRACT
+  STATE SPACES]</h1>
+
+  <table>
+    <tr>
+      <td><img src="Tolman46-1.gif"></td>
+      <td><img src="Tolman46-2.gif"></td>
+      <td><img src="Tolman46-3.gif"></td>
+    </tr>
+  </table>
+  <P>
+    Behavioral evidence for cognitive maps,
+		from <a href="http://psychclassics.yorku.ca/Tolman/Maps/maps.htm"
+			target=new><I>Cognitive maps in rats and men</I></a>,
+    Edward C. Tolman, Psychological Review 55:189-208
+    (1948).
+  </P>
+
+</div>
+
+  
+
+<DIV CLASS="slide">
+  <h1>the <SC>spatial</SC> receptive field of a CA1 place cell</h1>
+
+  <img src="Minai-fig1.jpg" class="figure-right" >
+  <P>
+    The rat's path has been recorded as
+    the rat explored the enclosure it was in.
+  </P>
+  <P>
+    The path is shown in gray; the black dots
+    mark the locations where the <a
+				   href="http://en.wikipedia.org/wiki/Place_cell"
+				   target=new><SC>place cell</SC></a> fired.
+    <img src="rat-helmet.jpg" title="a rat with electrodes implanted in its brain"
+	 class="figure-left" height=270>
+    </P>
+    
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>tuning in "memory space" (Howard & Eichenbaum, 2014)</h1>
+
+  <img src="HowardEichenbaum14-place-and-time-cells.png" height=200 class="figure-right">
+  <P>
+    "Hippocampal place cells and time cells seem well-suited to
+    represent the spatial and temporal locations of distant stimuli in
+    order to support learning of [their] relationships. [...]
+  </P>
+  <P>
+    We suggest that there is a deep computational connection between
+    spatial and temporal coding in the hippocampus and that both serve
+    the overarching function of learning relationships between
+    stimuli: constructing a 'memory space'."
+  </P>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>spatial RFs of place cells</h1>
+
+  <img src="Wilson93-fig1.jpg" class="figure-right" >
+  <P>
+    Spatial firing distribution of 80 simultaneously recorded cells in
+    rat hippocampus, during unrestrained exploration of the familiar
+    half of the enclosure.
+  </P>
+  <P>
+    <small>
+      <I>Dynamics of the hippocampal ensemble code for space</I>,
+      M. A. Wilson and B. L. McNaughton, Science 261:1055-1058 (1993).
+    </small>
+  </P>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>using place cells</h1>
+
+  <img src="Wilson93-fig2.jpg" class="figure-right" >
+  <P>
+    <ol type=A>
+      <li>A typical place field in the familiar region.</li>
+      <P>
+	<li>A place field that developed following exploration of the initially
+	  unfamiliar region.</li> 
+      <P>
+	<li>Examples of rat trajectory, reconstructed from cell population
+	  activity data (<font color=red>red</font>: reconstructed; black: actual).</li>
+      <P>
+	<li>Spatial distribution of reconstruction error.</li>
+      </ol>
+      </P>
+
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+<h1>reconstructing the rat's path from place cell activities</h1>
+
+  <img src="Wilson93-reconstructed-paths.jpg" height=400>
+
+  <P> Rat paths reconstructed from hippocampus place-cell population activity
+ (<font color=red>red</font>), shown alongside the actual paths (black).
+
+</div>
+
+  -->
+  
+
+<DIV CLASS="slide">
+  <h1>reconstruction fidelity</h1>
+
+  <img src="Wilson93-fig3.jpg" class="figure-right" >
+  <P>
+    <ol type=A>
+      <li>Mean error of trajectory reconstruction, plotted against the number
+	of cells included in the population vector (familiar enclosure).</li>
+      <P>
+	<li>The number of cells required for a resolution of 1 <I>cm</I>, for
+	  different integration times.</li>
+      </ol>
+    </P>
+  <HR>
+  <P>
+    These cells clearly carry the information needed for locating the animal
+    (which the animal can use to locate itself). However, this information (i)
+    depends on the inputs and support from the rest of the brain and (ii) is in
+    turn used by the rest of the brain. The place cells is merely where it is
+    <B>made explicit</B> (a concept due to David Marr, 1982).
+  </P>
+  <P>
+    Consider also:
+    <ul>
+      <li><a href="http://artint.info/html/ArtInt_46.html"
+	     target=new>searching state spaces</a>;</li>
+      <li>balancing <a href="http://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613%2814%2900233-2" 
+		       target=new>exploitation and exploration</a>;</li>
+      <li><font color=gray><a href="https://en.wikipedia.org/wiki/Reason_maintenance"
+	    target=new>truth maintenance</a> in
+	    reasoning</font>.</li>
+    </ul>
+  </P>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>using place cells: from episodic memory to PROSPECTION</h1>
+
+  <embed src="Prospective_Encoding_in_the_Hippocampus.mov" controller="true" autoplay="false" loop="false" vspace="20" width="480" align="right" height="376">
+  <p>
+  The firing of hippocampal <a href="http://en.wikipedia.org/wiki/Hippocampus_anatomy#Hippocampus_proper" target="new">CA3</a> neurons while the rat is
+  running an 8-maze. The white circle shows the rat's position. Colored
+  squares in the maze indicate the firing rates of neurons with 
+  place fields in the corresponding location.
+  </p><p>
+  At the decision point, activity sweeps down both arms away from the rat
+  before the rat chooses a particular arm.
+  </p><p>
+  </p><hr>
+  <p>
+  <small>
+  <i>Neural ensembles in CA3 transiently encode paths forward of the animal at a
+  decision point</i>,
+  A. Johnson and A. D. Redish,  J. Neurosci 27:12176
+  (2007).
+  </small>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>place cells that code bad places; REPLAY and prospection</h1>
+
+  <img src="bad-place-cells.png" class="figure-right" height=450>
+  <P>
+  Awake <a href="https://en.wikipedia.org/wiki/Hippocampal_replay" target=new>replay</a> during <a
+  href="https://en.wikipedia.org/wiki/Sharp_waves_and_ripples"
+  target=new>sharp wave-ripples</a> (SWRs) supports recall of fear 
+  memory.
+  <P>
+  "Rats paused as they approached the
+  shock zone, and hippocampal SWRs occurred. During these SWRs, place cells
+  replayed the memory of the path previously associated with the aversive
+  experience in the shock zone. Place cell replay of paths extending to the
+  shock zone was reliably followed by animals actively turning and moving
+  away from the shock zone."
+  </P>
+  <P class="incremental">
+  "In  periods of rest, SWRs may allow animals to imagine where they plan to
+  go or where they want to avoid going or even to imagine an experience they
+  have never had."
+  </P>
+  <small>
+  <I>Hippocampal awake replay in fear memory retrieval</I>, Wu, C.,
+  Haggerty, D., Kemere, C. & Ji, D. Nat. Neurosci. 20, 571-580 (2017).
+  </small>
+  <P>
+    <HR>
+      <P class="incremental">      
+	— computation by a brain vs. computation by a stomach
+	<BR>
+	  — sandboxing
+	  <P>
+
+</div>
+
+
+
+<!-- place cells and maps in bats -->
+
+<DIV CLASS="slide">
+  <h1>3D place cells in free-flying bats (Yartsev & Ulanovsky, 2013)</h1>
+
+  <img src="Yartsev13-fig1fg.png" class="figure-right" >
+  <P>
+  <B>(F)</B> Telemetry system on a flying bat, drawn to scale.
+  <P>
+  <B>(G)</B> Neural traces (right) from the four channels of a tetrode,
+  recorded from bat
+  <a href="https://en.wikipedia.org/wiki/Hippocampus_anatomy#Hippocampus_proper"
+  target=new>CA1</a> during one flight segment (left, gray; the magenta
+  portion corresponds to the duration of the neural traces shown on the
+  right). 
+  
+</div>
+
+  
+
+<DIV CLASS="slide">
+  <h1>an example place cell</h1>
+
+  <img src="Yartsev13-fig2a.png" class="figure-right" >
+  <P>
+  <B>(A)</B> 3D representation of the neuron's spatial firing.
+  <P>
+  <I>Top left:</I>
+  Spikes (red dots) overlaid on bat's position (gray lines); shown also are
+  the spike waveforms on the four channels of the tetrode (mean ± SD).
+  <P>
+  <I>Top right:</I> 3D color-coded rate map, with peak firing rate
+  indicated.
+  <P>
+  <I>Bottom:</I>
+  Convex hull encompassing the neuron's place field (red polygon) and the
+  volume covered by the bat during flight (gray polygon). 
+  
+</div>
+
+  
+
+<DIV CLASS="slide">
+  <h1>3D space representation by place cells</h1>
+
+  <img src="Yartsev13-fig3abcd.png" class="figure-right" >
+  <P>
+  3D space is encoded uniformly and nearly isotropically in the
+  hippocampus of flying bats.
+  <P>
+  <B>(A to D)</B> All the place fields recorded from the hippocampus of four
+  individual bats (different colors denote different neurons). Bats 1 to 3
+  (A) to (C) were tested in the cuboid-shaped flight-room, bat 4 (D) in the
+  cubic enclosure. 
+  
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>bats and rats and tricks of trade in navigation</h1>
+
+  <img src="Ulanovsky15-box1.png" class="figure-right" height=550>
+  <P>
+    Echolocation modes in bats (and a comparison with rat whisking).
+  </P>
+  <P>
+    From: <I>Spatial cognition in bats and rats: from sensory
+      acquisition to multiscale maps and navigation.</I>  Maya
+    Geva-Sagiv, Liora Las, Yossi Yovel, and Nachum Ulanovsky
+    (2015). Nature Reviews Neuroscience 16:94.
+  </P>
+    
+</div>
+
+  
+<DIV CLASS="slide">
+  <h1>bats and rats and tricks of trade in navigation</h1>
+
+  <img src="Ulanovsky15-box3.png" class="figure-right" height=550>
+  <P>
+      Egyptian fruit bats navigate dozens of kilometres to a specific
+      fruit tree, and return night after night to forage in the same
+      individual tree. The figure, part <B>a</B>, shows global position
+      system (GPS) tracking of a single bat over 7 consecutive 
+      nights.
+  </P>
+  <P>
+    From: <I>Spatial cognition in bats and rats: from sensory
+      acquisition to multiscale maps and navigation.</I> Maya
+      Geva-Sagiv, Liora Las, Yossi Yovel, and Nachum Ulanovsky
+    (2015). Nature Reviews Neuroscience 16:94.
+  </P>
+
+</div>
+
+  
+<DIV CLASS="slide">
+  <h1>bats and rats and tricks of trade in navigation</h1>
+
+  <img src="Ulanovsky15-fig3.png" class="figure-right" height=550>
+  <P>
+      <B>a</B>, A hypothesis re how the home range of a
+      bat or a rat may be represented on multiple spatial scales:
+      a higher-resolution representation (smaller place fields) for
+      more important locations such as the cave or burrow, or the
+      feeding tree, and a lower-resolution representation (larger
+      place fields) at less important locations such as at a 500‑m
+      altitude in mid-flyway. <B>b</B>, <B>c</B>, <B>d</B>: data.
+  </P>
+  <P>
+    From: <I>Spatial cognition in bats and rats: from sensory
+      acquisition to multiscale maps and navigation.</I> Maya
+      Geva-Sagiv, Liora Las, Yossi Yovel, and Nachum Ulanovsky
+      (2015). Nature Reviews Neuroscience 16:94.
+  </P>
+
+</div>
+
+  
+<DIV CLASS="slide">
+  <h1>tuning and MAPS of abstract (non-spatial) feature dimensions</h1>
+
+  <img src="Kossl14-fig3.png" class="figure-right" height=550>
+  <P>
+  Target range maps in different bat species (Kössl, 2014).
+  <P>
+  <I>Left:</I> representative spectrograms of echolocation calls.
+  <P>
+  <I>Middle:</I> brain overview with the position of auditory cortex.
+  <P>
+  <I>Right:</I> detailed view of chronotopic maps within auditory
+  cortex.
+  <P>
+  <small>
+  <font color=turquoise><B>Blue</B>:</font> target range computing areas;
+  <BR>
+  White arrows: the direction of of decreasing echo delay.
+  <BR>
+  Black arrows: increasing characteristic frequency in tonotopic
+  areas.
+  <BR>
+    [FM = frequency modulation; CF = characteristic frequency]
+  </small>
+  <HR>
+  <P class="incremental">
+  What are orderly sensory maps good for?
+  </P>
+  <P class="incremental">
+  [Think about how similarity-sensitive
+  use/<a href="w-11-2.html#(6)"
+  target=a>read-out</a> of a representation is facilitated by a
+  spatially ordered map.]
+  </P>  
+  
+</div>
+
+
+  
+
+<DIV CLASS="slide">
+  <h1>place cells and social behavior (Danjo et al., 2018)</h1>
+
+  <img src="Danjo18-fig1A.png" class="figure-right" height=250>
+  <P>
+      "We investigated neuronal representations of other animals’ locations in the
+      dorsal
+      <a href="https://en.wikipedia.org/wiki/Hippocampus_anatomy#Hippocampus_proper"
+      target=new>CA1</a> region of the hippocampus with an observational T-maze task in which one
+      rat was required to observe another rat’s trajectory to
+      successfully retrieve a reward.
+      <P>
+      Information reflecting the spatial location of both the self and the other was jointly and
+      discretely encoded by
+      <a href="https://en.wikipedia.org/wiki/Hippocampus_anatomy#Hippocampus_proper"
+      target=new>CA1</a> pyramidal cells in the observer rat. A subset of CA1 pyramidal
+      cells exhibited spatial receptive fields that were identical for
+      the self and the other. These findings demonstrate that
+      hippocampal spatial representations include dimensions for both
+      self and nonself."
+      <DIR><DIR><DIR>
+	    — Danjo et al. (2018). <I>Spatial representations of self and
+	      other in the hippocampus</I>. Science 359:213-218.
+      </DIR></DIR></DIR>
+      <HR>
+      <P class="incremental">
+	Again, these cells is merely where the social location
+	information is MADE EXPLICIT (a concept due to David Marr,
+	1982).
+      </P>
+
+</div>
+
+
+ 
+<DIV CLASS="slide">
+  <h1>place cells and social behavior (Omer et al., 2018)</h1>
+
+  <img src="Omer18-fig1A.png" class="figure-right" >
+  <P>
+      "We designed a spatial observational learning
+      task, in which an observer bat mimicked a demonstrator bat while we recorded
+      hippocampal
+      dorsal-<a href="https://en.wikipedia.org/wiki/Hippocampus_anatomy#Hippocampus_proper"
+		target=new>CA1</a> neurons from the observer bat.
+  </P>
+  <P>
+    A neuronal subpopulation represented the position of the other
+    bat, in
+      <a href="https://en.wikipedia.org/wiki/Allothetic"
+      target=new>allocentric coordinates</a>. About half of these
+      “social place cells” represented also the observer’s own
+      position — that is, were place cells. The representation of the
+      demonstrator bat did not reflect self-movement or trajectory
+      planning by the observer. Some neurons represented also the
+      position of inanimate moving objects; however, their
+      representation differed from the representation of the
+      demonstrator bat. This suggests a role for hippocampal
+      <a href="https://en.wikipedia.org/wiki/Hippocampus_anatomy#Hippocampus_proper"
+      target=new>CA1</a> neurons in social-spatial cognition."
+      <DIR><DIR><DIR>
+	    — David Omer, Shir Maimon, Liora Las, Nachum
+	    Ulanovsky. (2018). <I>Social place-cells in the 
+	      bat hippocampus</I>. Science 359:218-224.
+      </DIR></DIR></DIR>
+  </P>
+
+</div>
+
+
+ 
+<DIV CLASS="slide">
+  <h1>place cells and social behavior (Omer et al., 2018)</h1>
+
+  <img src="Omer18-fig1F.png" class="figure-right" >
+  <P>
+      "Locations of peak firing for all the significant maps for place
+      cells (red dots, n = 371 cells × directions), and social
+      place-cells (blue dots, n = 76 cells × directions); cells that
+      had significant tuning in both directions were depicted
+      twice. [...] Dots were randomly jittered by up to ±5 cm (half
+      bin) for display purposes."  
+      <DIR><DIR><DIR>
+	    — Omer et al. (2018). <I>Social place-cells in the
+	      bat hippocampus</I>. Science 359:218-224.
+      </DIR></DIR></DIR>
+
+</div>
+
+
+ 
+<DIV CLASS="slide">
+  <h1>place cells, path replay, and reinforcement learning (Ambrose et al., 2016)</h1>
+
+  <img src="Ambrose16-fig3CF.png" height=350 class="figure-right" >
+  <P>
+    <ul>
+      <li>Reverse, but not
+	      forward, <a href="https://en.wikipedia.org/wiki/Hippocampal_replay"
+	      target=new>replays</a> are sensitive to reward
+	      context</li>
+      <li><a href="https://en.wikipedia.org/wiki/Sharp_waves_and_ripples"
+	      target=new>Sharp Wave Ripples</a> (SWRs) and replay
+	      rates adaptively code the given range of reward
+	      magnitudes</li>
+      <li>Reverse replay rates are altered by changes in reward from
+	previous experience</li>
+      <li>Reverse replay rates reflect relative reward magnitudes in
+	the same experience</li>
+    </ul>
+    <DIR><DIR><DIR>
+	    — R. Ellen Ambrose, Brad E. Pfeiffer, David
+	    J. Foster. (2016). <I>Reverse Replay of Hippocampal 
+	    Place Cells Is Uniquely Modulated by Changing
+	    Reward</I>. Neuron 91:1124-1136.   
+    </DIR></DIR></DIR>
+  </P>
+
+</div>
+
+
+ 
+
+
+<DIV CLASS="slide">
+  <h1>lessons?</h1>
+
+<!--   <img src="" class="figure-right" >  -->
+  <P>
+  <BR>
+  So, what is it that neurons compute natively?
+  <ul class="incremental">
+    <li>
+    Do linear algebra (vector projection / inner product, matrix
+    multiplication).</li>
+    <P>
+    <li>
+    Implement dimensionality reduction (from many dimensions to one),
+    including similarity-preserving DR by random projections (recall
+    <a href="wk-5-2.html#(28)"
+    target=lec>Lecture 5.2</a>).
+    </li>
+    <P>
+    <li>
+    <font color=gray>Perform function approximation (when arranged in multilayer networks).</font>
+    </li>
+    <P>
+    <li>
+    Respond selectively (exhibit tuning) and thus serve as
+    landmarks/prototypes in a similarity-based representation scheme,
+    a.k.a. the Chorus Transform (again, Lecture 5.2).
+    </li>
+    <P>
+    <li>
+    Form spatial maps, presumably to facilitate navigation, episodic
+    memory and prospection, and social cognition. 
+    <P>
+    <li>
+    Form abstract maps (retinotopic, tonotopic, chronotopic, etc.),
+    presumably to facilitate similarity-based readout. 
+    </li>
+    <P>
+  </ul>
+  
+</div>
+
+  
+
+
+<div class="footer">
+<p>Last modified: Mon Apr 19 2021 at 15:28:32 EDT</p>
+</div>
+</body>
+</html>

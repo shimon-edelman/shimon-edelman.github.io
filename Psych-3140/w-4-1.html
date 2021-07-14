@@ -1,0 +1,1437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Psych 3140/6140 w-4-1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2014-2017 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- 
+<rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+<permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+<requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+<permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+<requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+</License>
+</rdf:RDF>
+-->
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Week 4 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Psych 3140/6140</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Week 4: probability and the ace of Bayes</h2>
+    <h3>&nbsp;Lecture 4.1</h3>
+  </div>
+  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%>
+
+</div>
+<!-- END COVER PAGE -->
+
+
+<div  CLASS="slide">
+  <h1>Lecture 4.1: getting to know the world; probability in cognition; the Ace of Bayes</h1>
+
+  <P>
+  <BR>
+  <ul>
+    <li>Getting to know the world</li>
+    <P>
+    <li>The fundamental role of probability in cognition</li>
+    <P>
+    <li>The Bayes Theorem [including a proof, which also appears in Appendix A in the book]</li>
+    <P>
+    <li>Examples of the Bayes Theorem at work</li>
+  </ul>
+      
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>the role of probability and statistics in cognition</h1>
+
+  <P>
+  <BR>
+  How and in what sense can a cognitive system such as the brain get to KNOW
+  the world?
+  <P class="incremental">
+  [Recall the war room analogy.]
+  </P>
+  <P class="incremental">
+  Any system trying to get to know the world must deal with
+  UNCERTAINTY. Therefore, ...
+  </P>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>the role of probability and statistics in cognition</h1>
+
+  <P>
+  <BR>
+  How and in what sense can a cognitive system such as the brain get to KNOW
+  the world?
+  <P>
+  [Recall the war room analogy.]
+  </P>
+  <P>
+  Any system trying to get to know the world must deal with
+  UNCERTAINTY. Therefore, the following observation is crucially important:    
+  <P>
+  <B>"All knowledge resolves itself into <SC>probability</SC>"</B>
+  <DIR><DIR>
+    <a href="http://en.wikipedia.org/wiki/David_Hume" target=new>David Hume</a><BR>
+    <a href="http://www.gutenberg.org/etext/4705"
+    target=new><I>A Treatise of Human Nature</I></a> (1740) 
+  </DIR></DIR>
+  <P>
+  <HR>
+  <P>
+  <font color=red><a
+  href="http://en.wikipedia.org/wiki/Probability_theory"
+  target=new><SC>Probability</SC> theory</a> is NOT about capitulating in
+  the face of uncertainty: it quantifies uncertainty and makes it formally
+  manageable. </font>
+
+</div>
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>on the importance of statistical data and methods</h1>
+
+  <img src="2D-histogram.png" title="2D histogram" class="figure-right">
+  <P>
+  <BR>
+  The joint <a
+ href="http://en.wikipedia.org/wiki/Probability_density_function"
+ target=new>probability distribution</a>
+  $$
+  p(X,Y)
+  $$
+  is <B>the most that can be known</B> about
+  \(X\) and \(Y\) through observation.
+  <P>
+  [If you are allowed to <a href="http://en.wikipedia.org/wiki/Experiment" target=new>intervene</a>, you can
+  learn <a
+ href="http://alisongopnik.com/Papers_Alison/Explain%20final.pdf" target=new>more</a>, by doing <a href="http://en.wikipedia.org/wiki/Science" target=new><SC>science</SC></a>.]
+  <P>
+  You can estimate \(p(X,Y)\) by dividing the range of \(X\) and of \(Y\) into bins and
+  counting items that fall within each bin.
+  <HR>
+  <P>
+  [Think of the values of \(X\) coding apple color; \(Y\) coding apple crunchiness.]
+
+</DIV>
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>on the importance of statistical data and methods</h1>
+
+  <a
+  href="http://www.statisticalengineering.com/joint_marginal_conditional.htm"
+  target=new><img src="joint_marginal_conditional.gif" title="joint and marginal probability distributions"
+  class="figure-right"></a>
+  <P>
+  <BR>
+  From the joint <a
+ href="http://en.wikipedia.org/wiki/Probability_density_function"
+ target=new>probability distribution function</a> \(p(X,Y)\), one can compute the <a 
+  href="http://en.wikipedia.org/wiki/Marginal_probability" 
+  target=new>marginal</a> distributions \(p(X)\) and \(p(Y)\).
+  <P>
+  More importantly, from these, one can compute the <a
+  href="http://en.wikipedia.org/wiki/Conditional_probability_distribution"
+  target=new>conditional</a> distributions. By definition of <a
+  href="http://en.wikipedia.org/wiki/Conditional_probability"
+  target=new><SC>conditional probability</SC></a>, 
+  <BR>
+  $$
+  p(Y\mid X) = \frac{p(X,Y)}{p(X)} ~~~~~~~~~~~~~~~~  p(X\mid Y) = \frac{p(X,Y)}{p(Y)}
+  $$
+  If \(X\) and \(Y\) are
+  <a href="https://en.wikipedia.org/wiki/Independence_(probability_theory)"
+  target=new>independent</a>, then \(p(Y\mid X)=p(Y)\) and \(p(X\mid Y)=p(X)\).
+  <HR>
+  <P>
+    An <a href="http://setosa.io/conditional/" target=demo>interactive
+      visual
+      demo</a>
+  </P>
+  <P>
+    Another <a href="http://demonstrations.wolfram.com/ConditionalProbability/" target=demo>interactive visual demo</a>
+  </P>
+
+</DIV>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>conditional probability, darts, and Venn diagrams</h1>
+
+  \(\require{color}\)
+  <img src="Venn-darts.png" class="figure-right">
+  The <a href="http://en.wikipedia.org/wiki/Conditional_probability"
+  target=new><SC>conditional probability</SC></a> of putting a <a href="http://en.wikipedia.org/wiki/Darts"
+  target=new>dart</a> into that part of the inside of the big \(\textrm{O}\)
+  which is
+  \({\color{red} &#9825;}\)-colored
+  is defined as
+  $$
+  P(\textrm{O} \mid {\color{red} &#9825;}) = \frac{P(\textrm{O},{\color{red} &#9825;})}{P({\color{red} &#9825;})}
+  $$
+  <P>
+  <ul class="incremental">
+    <li>
+    Intuition: the conditional \(P(\textrm{O} \mid {\color{red} &#9825;})\)
+    is larger when the joint (intersection) \(P(\textrm{O},{\color{red}
+    &#9825;})\) is larger; and smaller when the marginal \(P({\color{red}
+    &#9825;})\) is larger (because then there are more ways of landing within
+    \({\color{red} &#9825;}\) but not within \(\textrm{O}\)).
+    </li>
+    <li>
+    An example: if you know how often apples are both OMGtasty and
+    \({\color{red} red}\),
+    \(P(OMGtasty,{\color{red} red})\), you can calculate the <a
+    href="http://en.wikipedia.org/wiki/Conditional_probability" 
+    target=new><SC>conditional probability</SC></a> of an apple
+    being OMGtasty, <I>given</I> that it is \({\color{red} red}\): by
+    definition,
+    </li>
+  </ul>
+  <P class="incremental">
+  $$
+  P(OMGtasty \mid {\color{red} red}) = \frac{P(OMGtasty,{\color{red}
+ red})}{P({\color{red} red})}
+  $$
+  </P>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>using conditional probability in data-driven learning and generalization</h1>
+
+  <img src="classification-and-regression-feasible.gif" class="figure-right" >
+  <P>
+  The computational essence of categorization and input/output
+  mapping:<sup><font color=red>*</font></sup>
+  <P>
+  <a href="http://en.wikipedia.org/wiki/Statistical_classification"
+    target=new><SC>Classification</SC></a> 
+  <BR>
+  <B>1. <SC>estimate</SC></B> the probability of each possible class label, given the values
+  of the object's features:
+  $$
+  p({\cal C}_i \mid x_1, x_2)
+  $$
+  <B>2. <SC>choose</SC></B>
+  the class with the largest probability.<BR>
+  <small>Example: categorization (given \(size\) and \(color\), predict \(crunchy/mushy\)).</small>
+  <P>
+  <a href="http://en.wikipedia.org/wiki/Regression_analysis"
+  target=new><SC>Regression</SC></a>
+  <BR>
+  <B>1. <SC>estimate</SC></B> the probability of each possible output value,
+ given the input value(s):
+  $$
+  p(y \mid x)
+  $$
+  <B>2. <SC>choose</SC></B> the output value
+  with the largest probability.<BR>
+  <small>Example: estimation (given \(color\), predict \(HOW tasty\)); also
+    visual-motor coordination.</small>
+  <HR width=30% align=left>
+  <P>
+  <P class="incremental">
+    <sup><font color=red>*</font></sup>
+    NOTE: categorization and I/O mapping by no means cover
+    everything that's needed to explain the mind or to control behavior, but this is an
+    indispensable conceptual starting point.
+  </P>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>conditional probability and the view of generalization as statistical inference</h1>
+
+  <img src="classification-and-regression.gif" class="figure-right" >
+  <P>
+  <BR>
+  The computational essence of categorization and input/output mapping:
+  <P>
+  &#151; Both classification and regression are <SC>underdetermined</SC> and
+  therefore must rely on extra assumptions (as in <a
+    href="http://en.wikipedia.org/wiki/Regularization_%28mathematics%29"
+    target=new>regularization</a>; more about this in a couple of weeks).
+  <P>
+  &#151; Both reduce to <SC>probability estimation</SC>.
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>the kind of probability estimation required for learning and generalization</h1>
+
+  <img src="classification-only.gif" class="figure-right" >
+  <P>
+  Continuing the example of learning to deal with apples:
+  <DIR><DIR>
+    \({\cal C}_1\) = "crunchy apple"<BR>
+    \({\cal C}_2\) = "mushy apple"
+    <P>
+    \(x_1\) : color dimension<BR>
+    \(x_2\) : size dimension
+  </DIR></DIR>
+  There is a bit of a problem.
+  <BR>
+  Suppose that we're looking at an apple \(A\)
+  that has color \(x_1^{(A)}\) and size \(x_2^{(A)}\).
+  <table cellspacing=10>
+    <tr>
+      <td>from experience, we may know</td>
+      <td width=25%>\(p\left(x_1^{(A)}, x_2^{(A)} \mid {\cal C}_1\right)\)</td>
+      <td>&#151; how often the crunchy apples we tasted happened to be of
+	this color and size</td> 
+    </tr>
+    <tr>
+      <td><B>but</B> what we need to know is</td>
+      <td width=25%>\(p\left({\cal C}_1 \mid x_1^{(A)}, x_2^{(A)}\right)\)</td>
+      <td>&#151; how likely an apple \(A\) of this color and
+	size is to be crunchy (<B>before tasting it</B>)</td>
+    </tr>
+  </table>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>the kind of probability estimation required for learning</h1>
+
+  <font size=+10>
+  <P>
+  <BR>
+  HELP!!!
+  <P class="incremental">
+  <B>is on the way: the Bayes Theorem.</B>
+  </P>
+  </font>
+    
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>the Bayes Theorem follows immediately from the definition of conditional probability</h1>
+
+  <img src="bayes.jpg" class="figure-right" height=200>
+  The <a
+  href="http://en.wikipedia.org/wiki/Conditional_probability"
+  target=new><SC>conditional probability</SC></a> of <I>B</I> given <I>A</I>
+  <font color=gray>(think <a href="http://en.wikipedia.org/wiki/Darts"
+ target=new>darts</a>)</font> is defined as the ratio of two areas:
+  $$
+    p(B \mid A) = \left\vert A \& B\right\vert / \left\vert A\right\vert
+  $$
+  On the right, divide numerator and denominator by the area of the
+  "universe" \(\left\vert U\right\vert\) to obtain a ratio of probabilities: 
+  $$
+    p(B \mid A) = p(A \& B) / p(A)
+  $$
+  Now, by the definition of <a
+  href="http://en.wikipedia.org/wiki/Conditional_probability"
+  target=new><SC>conditional probability</SC></a>, 
+  the <SC>joint probability</SC>, which depends symmetrically on \(A\)
+ and \(B\), can be expressed in two equivalent ways:
+  $$
+  \begin{align}
+  p(A \& B) &= p(A) p(B \mid A) =  \\
+  &= p(B) p(A \mid B) = p(B \& A)
+  \end{align}
+  $$
+  Suppose <B><font color=gray>\(B\) is a hypothesis</font></B> ("apple is
+  crunchy"), and <B><font color=black>\(A\)
+  is data</font></B> ("apple is red"). We can now <a
+  href="http://www.autonlab.org/tutorials/naive.html"
+  target=new>estimate</a> the
+  probability of the <font color=gray><B>hypothesis</B></font> being true, given the
+  <font color=black><B>data</B></font>:
+  $$
+    p({\color{gray} B} \mid \mathbf{A}) = \frac{p(\mathbf{A} \mid
+  {\color{gray} B}) p({\color{gray} B})}{p(\mathbf{A})}
+  $$
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>an application: Bayes in wireframe shape perception</h1>
+
+  <table cellspacing=10>
+    <tr>
+      <td align=center width=50%><img src="Kersten03-fig2b.jpg"></td>
+      <td align=center><img src="Kersten03-fig2c-cropped.jpg"></td>
+    </tr>
+    <tr>
+      <td>
+	Must find the probabilities of various conceivable shape
+	interpretations (hypotheses),
+	given the image (data). According to Bayes, $$p(S\mid I) \propto p(I\mid S)p(S)$$
+      </td>
+      <td>
+	The likelihood term, \(p(I\mid S)\), rules out shapes \(S\)
+	that are inconsistent with the image \(I\) (here, spheres,
+	cones, etc.).
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>Bayes in wireframe shape perception (cont.)</h1>
+
+  <img src="Kersten03-fig2d.jpg">
+
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>and another application: sound localization in the owl, revisited</h1>
+
+  <img src="barn-owl-time-space.gif" height=300 class="figure-right" >
+  <P>
+  <BR>
+  "The classical view of auditory-space coding in the owl is that sound-source
+  direction is represented in a <B>place code</B>. In this framework, the direction
+  of a sound source is determined by the position in a topographic map of
+  auditory space with the greatest activity level.
+  <P>
+  <img src="barn-owl-drawing.jpg" height=150 class="figure-left">
+  However, this model has not been directly compared to the owl’s
+  behavior. Thus, although considerable progress has been made in determining
+  how ITD is <B>encoded</B>, it remains unclear how ITD is <B>decoded</B> to support the
+  owl’s localization behavior."  
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>Owl’s behavior and neural representation predicted by Bayesian inference</h1>
+
+  <img src="Fischer-Pena-owl-Bayes-NatNeuro11-fig1e.png" class="figure-right">
+  <P>B. J. Fischer & J. L. Peña, <I>Nature Neuroscience</I> 14:1061-1067 (2011)</P>
+  <P>
+  "The owl captures prey using sound localization. In the classical model, the
+  owl infers sound direction from the position of greatest activity in a
+  brain map of auditory space. However, this model fails to describe the
+  actual behavior. <B>Although owls accurately localize sources near the center
+  of gaze, they systematically underestimate peripheral source directions. We
+  found that this behavior is predicted by statistical inference, formulated
+  as a Bayesian model that emphasizes central directions.</B> [...] Thus, a
+  probabilistic model describes both how the map of auditory space supports
+  behavior and why this representation is optimal." 
+  </P>
+
+</div>
+
+-->
+
+<!--
+
+<DIV CLASS="slide">
+<h1>Bayes in decision-making</h1>
+
+  <img src="Bayes-1.jpg">
+  <P>
+  <table cellpadding=10>
+    <tr>
+      <td width=25%>P(<I>h</I> | <I>K</I>)</td>
+      <td><SC>prior</SC> probability</td>
+      <td>prevalence of a certain disease in the general population</td>
+    </tr>
+    <tr>
+      <td>P(<I>D</I> | <I>h,K</I>) / P(<I>D</I> | <I>K</I>)</td>
+      <td><SC>likelihood<BR>ratio</SC></td>
+      <td>how likely the test result is, given that the patient has the
+	hypothesized disease</td>
+    </tr>
+    <tr>
+      <td>P(<I>h</I> | <I>D,K</I>)</td>
+      <td><SC>posterior</SC> probability</td>
+      <td>how probable the hypothesized disease is, given the test result</td>
+    </tr>
+  </table>
+    <P>
+  <HR>
+  <P>
+  <font color=gray><I>P(D | K)</I> &#151; normalization factor, which ensures that
+  probabilities sum to 1,</font> <div align=center><img src="Bayes-2.jpg" height=50></div>
+
+  
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>RATIONAL COGNITION, the most general case: using the Bayes Theorem</h1>
+
+  <img src="Bayes-1.jpg">
+  <P>
+  <I>D</I> &#151; the observed <SC>data</SC>;
+  <BR>
+  <I>h</I> &#151; the <SC>hypothesis</SC> in question;
+  <BR>
+  <I>H</I> &#151; the space of all possible hypotheses;
+  <BR>
+  <I>K</I> &#151; the background <SC>domain</SC> knowledge.
+  <P>
+  <HR>
+  <P>
+  <font color=gray><I>P(D | K)</I> &#151; normalization factor, which ensures that
+  probabilities sum to 1,</font> <div align=center><img src="Bayes-2.jpg" height=50></div>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>another example: Bayes in surface shape perception</h1>
+  <img src="Kersten04-fig1.jpg" class="figure-right" height=450>
+
+  <ol type=A>
+    <li>The given image is consistent with many shape / viewpoint combinations.
+    </li>
+    <li>The <SC>likelihood</SC>: how compatible (likely) are different scene
+    interpretations with the observed image; here, "small <a
+ href="http://en.wikipedia.org/wiki/Curvature" target=new>curvature</a> and
+    large <a href="http://www.merriam-webster.com/dictionary/slant"
+ target=new>slant</a>" hypotheses are more compatible with the image.
+    </li>
+    <li>The <SC>prior</SC>: highly convex objects viewed from above are expected.
+    </li>
+    <li>
+    A Bayesian observer combines likelihood and prior to 
+    estimate the <SC>posterior</SC> probability for each possible
+    interpretation of the given image in terms of the
+    curvature and the slant of the perceived shape.
+    </li>
+  </ol>
+
+</div>
+
+-->
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>an excerpt from "An Intuitive Explanation of Bayes' Theorem"</h1>
+
+  <P>
+  <BR>
+  <a href="http://yudkowsky.net/rational/bayes"
+  target=new><I>Bayes' Theorem for the curious and bewildered; an excruciatingly
+  gentle introduction</I></a>:
+  <P>
+  Your friends and colleagues are talking about something called "Bayes'
+  Theorem" or "Bayes' Rule", or something called Bayesian reasoning.  They
+  sound really enthusiastic about it, too, so you google and find a webpage
+  about Bayes' Theorem and... 
+  <P>
+  It's this equation.  That's all.  Just one equation.  The page you found
+  gives a definition of it, but it doesn't say what it is, or why it's
+  useful, or why your friends would be interested in it.  It looks like this
+  random statistics thing. 
+  <P>
+  Why does a mathematical concept generate this strange enthusiasm in its
+  students?  What is the so-called <font color=red>Bayesian Revolution</font> now sweeping through
+  the sciences, which claims to subsume even the experimental method itself
+  as a special case?  What is the secret that the adherents of Bayes know?
+  What is the light that they have seen?
+
+</div>
+
+
+
+
+<div  CLASS="slide">
+  <h1>the Ace of Bayes</h1>
+
+  <a href="http://www.youtube.com/watch?v=qItugh-fFgg"
+ target=new><img src="all-your-Bayes-are-belong-to-us.jpg" class="figure-right"></a>
+  <P>
+  <BR>
+
+</div>
+  
+
+
+
+<DIV CLASS="slide">
+  <h1><font color=red>[EXTRA]</font> Bayes in perception: kinds of tasks</h1>
+  
+  <img src="Kersten03-fig4.jpg" height=550>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>Bayes networks (graphical models): representing <SC>causality</SC></h1>
+
+  <a href="http://en.wikipedia.org/wiki/Bayesian_network" target=new><img
+ src="Bayes-network.png" title="a simple Bayes network" class="figure-right"></a>
+  
+  <p>The joint probability is:</p>
+  <dl>
+    <dd><span class="texhtml">P(<i>G</i>,<i>S</i>,<i>R</i>) =
+      <BR>
+      = P(<i>G</i>|<i>S</i>,<i>R</i>) P(<i>S</i>|<i>R</i>) P(<i>R</i>)</span></dd>
+
+  </dl>
+  <P>
+  <p>The model can answer questions like "What is the probability that it is raining, given the grass is wet?" by using the <a href="http://en.wikipedia.org/wiki/Conditional_probability" title="Conditional probability">conditional probability</a> formula and summing over all <a href="http://en.wikipedia.org/wiki/Nuisance_variable" title="Nuisance variable">nuisance variables</a>:</p>
+  <dl>
+
+    <dd><img class="tex" alt=" \mathrm P(\mathit{R}=T \mid \mathit{G}=T)
+      =\frac{\mathrm P(\mathit{G}=T,\mathit{R}=T)}{\mathrm P(\mathit{G}=T)}
+      =\frac{\sum_{\mathit{S} \in \{T, F\}}\mathrm P(\mathit{G}=T,\mathit{S},\mathit{R}=T)}{\sum_{\mathit{S}, \mathit{R} \in \{T, F\}} \mathrm P(\mathit{G}=T,\mathit{S},\mathit{R})}
+      " src="http://upload.wikimedia.org/math/1/e/9/1e9696954df2f0bab7c49a645260669e.png" />
+      <dl>
+	<dd><img class="tex" alt=" = \frac{(0.99 \times 0.01 \times 0.2 = 0.00198_{TTT}) + (0.8 \times 0.99 \times 0.2 = 0.1584_{TFT})}{0.00198_{TTT} + 0.288_{TTF} + 0.1584_{TFT} + 0_{TFF}} \approx 35.77&#160;%." src="http://upload.wikimedia.org/math/e/c/e/ece16a9a2c6d0d6408ec4e2e95b00c7e.png" /></dd>
+      </dl>
+    </dd>
+  </dl>
+
+</DIV>
+
+
+
+<DIV CLASS="slide">
+  <h1>[EXTRA] Bayes in perception: kinds of tasks</h1>
+  
+  <img src="KerstenEtAl04-fig1-AB.png" >
+  <P>
+  <BR>
+  <img src="KerstenEtAl04-fig1-legend.png" >
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>[EXTRA] Bayes in perception: kinds of tasks (cont.)</h1>
+  
+  <img src="KerstenEtAl04-fig1-CD.png" >
+  <P>
+  <BR>
+  <img src="KerstenEtAl04-fig1-legend.png" >
+
+</div>
+
+
+
+
+
+<DIV CLASS="slide">
+  <h1>[EXTRA] Bayes for classification and regression</h1>
+
+  <ol class="incremental">
+    <li>a <a href="http://en.wikipedia.org/wiki/Linear"
+    target=new>linear</a> solution in the form of a weighted sum of nonlinear
+    <a href="http://en.wikipedia.org/wiki/Basis_function" target=new>basis functions</a></li>
+    <P>
+    <li>a <a
+    href="http://en.wikipedia.org/wiki/Regularization_%28mathematics%29"
+    target=new>regularized</a> <a
+ href="http://en.wikipedia.org/wiki/Least_squares"
+    target=new>least-squares</a> solution that avoids 
+    <a href="http://en.wikipedia.org/wiki/Overfitting" target=new>overfitting</a></li> 
+    <P>
+    <li>a probabilistically motivated <a
+ href="http://en.wikipedia.org/wiki/Point_estimate" target=new>point-estimate</a> regularized solution</li>
+    <P>
+    <li>a better idea: a Bayesian solution, which integrates over a
+    distribution of possible solutions instead of offering just a point
+    estimate</li>
+    <P>
+    <li>a powerful method for achieving (2): <a
+ href="http://en.wikipedia.org/wiki/Support_vector_machine" target=new>Support Vector Machines</a>
+    (SVM)</li>
+    <li>a better, Bayesian method: <a
+ href="http://en.wikipedia.org/wiki/Relevance_vector_machine"
+ target=new>Relevance Vector Machines</a> (RVM)</li>
+  </ol>
+  <HR>
+  [for details, see extra reading: <a
+  href="http://research.microsoft.com/en-us/um/people/cmbishop/downloads/bishop-nato-bayes.pdf"
+  target=new><I>Bayesian Regression and  
+  Classification</I></a>, C. M. Bishop and M. E. Tipping, in <I>Advances in
+  Learning Theory: Methods, Models and Applications</I>, J. A. K. Suykens et
+  al. (Editors), IOS Press, NATO Science Series III: Computer and Systems
+  Sciences, volume 190 (2003)]
+
+</DIV>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>[extra reading] more Bayesian examples</h1>
+
+  <P>
+  <BR>
+  Two example studies that apply the  Bayesian approach to the modeling of cognition:
+  <ul>
+    <li>
+    <I>Bayesian models of object perception</I><BR>
+    <a
+    href="http://gandalf.psych.umn.edu/~kersten/kersten-lab/kersten-lab.html"
+    target=new>Daniel Kersten</a> and Alan Yuille<BR>
+    <I>Current Opinion in Neurobiology</I> 13:1-9 (2003).
+    </li>
+    <P>
+    <li>
+    <I>Theory-based Bayesian models of inductive learning and reasoning</I><BR>
+    <a href="http://web.mit.edu/cocosci/josh.html" target=new>Joshua
+    B. Tenenbaum</a>, Thomas L. Griffiths, and Charles Kemp<BR> 
+    <I>Trends in Cognitive Sciences</I> 10:309-318 (2006).
+    </li>
+  </ul>
+</DIV>
+
+
+
+<DIV CLASS="slide">
+  <h1>  A hierarchical Bayesian framework for theory-based induction</h1>
+
+  <img src="Tenenbaum06-fig1.jpg" class="figure-right" height=350>
+  The learner observes data about the world (e.g. examples of objects that a
+  word refers to) and must predict other unobserved data (e.g. which other
+  objects the word can refer to).
+  <BR>
+  The learner's intuitive theory generates hypotheses that can explain the
+  observed data and that support the desired predictions. The theory
+  represents knowledge on at least two levels of abstraction:
+  <ul>
+    <li>a <SC>structured probabilistic model</SC> generates expectations about
+    the probability of possible data sets;</li>
+    <li>additional abstract <SC>domain principles</SC> generate the space of possible
+    structures.</li>
+  </ul>
+  Priors for abstract domain principles can come from multiple sources,
+  including higher-level domain knowledge or domain-general conceptual
+  resources. 
+  
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>Bayes in word learning</h1>
+
+  <img src="Tenenbaum06-fig2a.jpg" class="figure-right" height=400>
+  The <SC>hypothesis space</SC> of word meanings: a tree-structured taxonomy.
+  <HR>
+  <SC>Domain principles</SC> constrain the structure of the hypothesis
+  space and generate  the necessary priors and likelihoods:
+  <ul>
+    <li>taxonomic principle</li>
+    <li>contrast principle</li>
+    <li>competent and cooperative speaker</li>
+    <li>randomly sampled examples</li>
+  </ul>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>Bayes in word learning</h1>
+
+  <img src="Tenenbaum06-fig2b.jpg" class="figure-right" >
+  <P>
+  Compare the model's predictions with 4-year-old children's patterns
+  of generalization.
+  <P>
+  For both, the probability of generalization
+  decreases with taxonomic distance to the examples.
+  <P>
+  This gradient becomes sharper as more examples are observed.
+  <P>
+  <HR>
+  <P>
+  Observing several examples drawn at random, it would
+  be a highly suspicious coincidence for all examples to fall
+  within a given taxonomic category (e.g. <I>basset hounds</I>) if
+  the word in fact had a much broader extension (e.g. <I>dogs</I>),
+  so the most specific consistent hypothesis is strongly preferred.
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>theory-based Bayesian property induction</h1>
+
+  <img src="Tenenbaum06-fig3a.jpg" class="figure-right" >
+  <P>
+  Three models for property induction: a <I>taxonomic</I> model (left), a
+  <I>food-web</I> model (center) and a <I>dimensional threshold</I> model
+  (right).
+  <P>
+  <HR>
+  <P>
+  The "Data" level shows properties with high prior probability under each
+  of these models.
+  <P>
+  For example, the dimensional threshold model favors hypotheses
+  that include all species beyond some point in the linear order.
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>Learning a theory for how biological properties are
+  distributed over species</h1> 
+
+  <img src="Tenenbaum06-fig4a.jpg" class="figure-right" >
+  <P>
+  A Bayesian learner can infer the tree structure that best explains a set
+  of observed properties.
+  <P>
+  Two candidate taxonomies are shown.
+  <P>
+  The preferred structure will be the tree that <a
+ href="http://en.wikipedia.org/wiki/Maximum_Likelihood" target=new>maximizes the likelihood</a>
+  <I>P(Data|Structure)</I>.
+  <P>
+  <HR>
+  <P>
+  Intuitively, the best choice allows features to vary smoothly over the tree: for
+  example, because gorillas and monkeys share many properties, these species
+  should be located nearby in the tree.
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>Learning a theory for how biological properties are distributed over species</h1>
+  
+  <img src="Tenenbaum06-fig4b.jpg" class="figure-right" >
+  <P>
+  Animal species may be organized according to various structural
+  principles, such as the three shown here.
+  <P>
+  Bayesian inference in the hierarchical framework can select
+  the organizing principles best supported by a set of observed properties.
+  <P>
+  <HR>
+  <P>
+  Choosing the best structure involves a <SC>trade-off between complexity and
+  fit to the data</SC> [a kind of <a
+  href="http://en.wikipedia.org/wiki/Regularization_%28mathematics%29"
+  target=new>regularization</a>], which can be formalized in terms of
+  the hierarchical Bayesian framework.
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>extra: Bayesian causal induction</h1>
+  <img src="Tenenbaum06-fig5a.jpg" height=500 class="figure-right" >
+
+  <P>
+  Abstract knowledge in a medical domain can be represented using a
+  <SC>graph schema</SC>, a probabilistic generative grammar for graphs.
+  Variables fall into three classes: risk factors, diseases, and
+  symptoms.
+  <P>
+  Given a newly observed correlation (e.g. between working in a factory and
+  chronic chest pain), the graph schema generates hypotheses for explaining
+  the data (<font color=red>red</font>). In the simplest hypotheses, a
+  disease known to be caused by working in a factory might cause chest pain,
+  or a disease known to cause chest pain might actually be produced by
+  working in a factory. 
+  <P>
+  Failing that, the learner could posit a new disease <font
+  color=red>X</font>, which has chest pain as a symptom and is caused by
+  working in a factory. Other hypotheses that may be simpler a priori but
+  which violate the theory would never be considered, such as a direct causal
+  link from working in a factory to chest pain, or from chest pain to
+  working in a factory. 
+
+</div>
+
+-->
+
+
+<DIV CLASS="slide">
+  <h1>the big picture: the probabilistic approach to cognition (Chater et al., 2006)</h1>
+
+  <P>
+  <BR>
+  "The brain is an information processor; and information processing
+  typically involves inferring new information from information that has
+  been derived from the senses, from linguistic input, or from memory. This
+  process of <B>inference from old to new is</B>, outside pure mathematics,
+  typically <B>uncertain</B>."
+  <P>
+  "Probability theory is, in essence, a calculus for uncertain inference,
+  according to the <a href="http://en.wikipedia.org/wiki/Subjective_probability"
+  target=new>SUBJECTIVE INTERPRETATION OF PROBABILITY</a>.
+  <P>
+  Thus probabilistic methods have potentially broad application 
+  to uncertain inferences:
+  <BR>
+  — from sensory input to environmental layout;
+  <BR>
+  — from speech signal to semantic interpretation;
+  <BR>
+  — from goals to motor output;
+  <BR>
+  — or from observations and experiments to regularities in nature."
+  <P>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>subjective probability (Chater et al., 2006)</h1>
+  
+  <P>
+  <BR>
+  "Crucially, the frequency interpretation of probability is not in play
+  here — in cognitive science applications, probabilities refer to 'DEGREES
+  OF BELIEF'.
+  <P>
+  Thus, a person's degree of belief that a coin that has rolled
+  under the table has come up heads might be around 1/2; this degree of
+  belief might well increase rapidly to 1 as she moves her head, bringing
+  the coin into view.  Her friend, observing the <B>same event</B>, might have
+  <B>different prior assumptions</B> and obtain a <B>different stream of sensory
+  evidence</B>.
+  <P>
+  Thus the two people are viewing the same event, but their belief
+  states and hence their subjective probabilities might differ. Moreover,
+  the relevant information is defined by the specific details of the
+  situation. This particular pattern of prior information and evidence will
+  <B>never be repeated</B>, and hence cannot define a limiting frequency."  
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>working with subjective probabilities (Chater et al., 2006)</h1>
+  
+  <P>
+  <BR>
+  "The subjective interpretation of probability generally aims to
+  evaluate CONDITIONAL PROBABILITIES, \(Pr(h_j\mid d)\), that is,
+  probabilities of alternative hypotheses, \(h_j\) (about the state of
+  reality), given certain data, \(d\) (e.g. available to the senses). By the
+  definition of conditional probability, for any propositions, \(A\) and
+  \(B\), the probability that both are true, \(Pr(A, B)\), is by definition
+  the probability that \(A\) is true, \(Pr(A)\) , multiplied by the
+  probability that \(B\) is true, given that \(A\) is true, \(Pr(B\mid
+  A)\) .
+  <P>
+  Applying this identity, simple algebra [see slide 12] gives Bayes' Theorem:
+  $$
+  Pr(h_j \mid d) = \frac{Pr(d \mid h_j) Pr(h_j)}{Pr(d)}
+  $$
+  The centrality of Bayes' Theorem to the subjective approach to
+  probability has led to the approach commonly being known as the
+  Bayesian approach. But <B>the real content of the approach is the
+  subjective interpretation of probability</B>; Bayes' Theorem itself is just an
+  elementary, if spectacularly productive, identity in probability theory."
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>probability models are useful on many levels (Chater et al., 2006)</h1>
+  
+  <P>
+  <BR>
+  "Sophisticated probabilistic models can be related to cognitive processes
+  in a variety of ways. This variety can usefully be understood in terms of
+  Marr's celebrated distinction between three levels of computational
+  explanation: the <B>computational level</B>, which specifies the nature of the
+  cognitive problem being solved, the information involved in solving it,
+  and the logic by which it can be solved; the <B>algorithmic level</B>, which
+  specifies the representations and processes by which solutions to the
+  problem are computed; and the <B>implementational level</B>, which specifies how
+  these representations and processes are realized in neural terms. 
+  <P>
+  Finally, turning to the implementational level, one may
+  ask whether THE BRAIN ITSELF SHOULD BE VIEWED IN PROBABILISTIC
+  TERMS. Intriguingly, many of the sophisticated probabilistic models that
+  have been developed with cognitive processes in mind map naturally onto
+  highly distributed, autonomous, and parallel computational architectures,
+  which seem to capture the qualitative features of neural
+  architecture."
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>basic Bayes: how to use the estimated posterior? (Griffiths & Yuille, 2006)</h1>
+  
+  <P>
+  <BR>
+  Assume that we have an agent who is attempting to infer the process that
+  was responsible for generating some data, \(d\). Let \(h\) be a hypothesis about
+  this process, and \(P(h)\) — the <I>prior</I> probability that the agent would have 
+  accepted \(h\) before seeing \(d\). How should the agent's beliefs change
+  in the light of the evidence provided by \(d\)? To answer this question, we
+  need a procedure for computing the <I>posterior</I> probability, \(P(h
+  \mid d)\). This is provided by the Bayes Theorem:
+  $$
+  P(h \mid d) = \frac{P(d \mid h) P(h)}{P(d)}
+  $$
+  <P>
+    <B>How can the posterior be used to guide action?</B>
+  </P>
+  <HR align=left width=30%>
+  <P>
+  <font color=gray>
+  The denominator is obtained by summing over [the mutually exclusive]
+  hypotheses, a procedure known as <I>marginalization</I>:
+  $$
+  P(d) = \sum_{h^{\prime}\in H} P(d \mid h^{\prime}) P(h^{\prime})
+  $$
+  where \(H\) is the set of all hypotheses considered by the agent.
+  </font>
+
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>using the posterior: Bayesian decision & control (Griffiths & Yuille, 2006, Box 1)</h1>
+  
+  <P>
+  Bayesian decision theory introduces a <I>loss function</I> \(L\left(h,
+  \alpha\left(d\right)\right)\) for the cost of making a decision \(\alpha(d)\) when the
+  input is \(d\) and the true hypothesis [true state of affairs] is \(h\). It proposes selecting the
+  decision function or rule \(\alpha^{\star}(\cdot)\) that MINIMIZES the <I>risk</I>, or
+  <a href="http://en.wikipedia.org/wiki/Loss_function" target=new>EXPECTED LOSS</a>:
+  $$
+  R(\alpha) = \sum_{h,d} L\left(h, \alpha\left(d\right)\right) P(h, d)
+  $$
+  This is the basis for RATIONAL DECISION MAKING.
+  <P>
+  <HR>
+  <P>
+  In classification, \(L\) can be chosen so that the same penalty is paid for all
+  wrong decisions:
+  <P>
+  \(L\left(h, \alpha\left(d\right)\right) = 1\) if \(\alpha\left(d\right) \neq h\)
+  </P>
+  <P>
+  and
+  </P>
+  <P>
+  \(L\left(h, \alpha\left(d\right)\right) = 0\) if \(\alpha\left(d\right) = h\).
+  </P>
+  <P>
+  Then the best decision rule
+  is the <a
+ href="https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation"
+ target=new><I>maximum a posteriori (MAP) estimator</I></a> 
+  \(\alpha^{\star}(d) = \textrm{argmax}_{h} P(h \mid d)\).
+  </P>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>using the posterior: Bayesian decision & control (Griffiths & Yuille, 2006, Box 1)</h1>
+  
+  <P>
+  Bayesian decision theory introduces a <I>loss function</I> \(L\left(h,
+  \alpha\left(d\right)\right)\) for the cost of making a decision \(\alpha(d)\) when the
+  input is \(d\) and the true hypothesis [true state of affairs] is \(h\). It proposes selecting the
+  decision function or rule \(\alpha^{\star}(\cdot)\) that MINIMIZES the <I>risk</I>, or
+  <a href="http://en.wikipedia.org/wiki/Loss_function" target=new>EXPECTED LOSS</a>:
+  $$
+  R(\alpha) = \sum_{h,d} L\left(h, \alpha\left(d\right)\right) P(h, d)
+  $$
+  This is the basis for RATIONAL DECISION MAKING.
+  <P>
+  <HR>
+  <P>
+  <P>
+  In regression, the loss function can take the form of the square of the error:
+  <P>
+  \(L\left(h, \alpha\left(d\right)\right) = \left\{h−\alpha\left(d\right)\right\}^2\)
+  </P>
+  <P>
+  Then the best solution is the 
+  posterior <a href="https://en.wikipedia.org/wiki/Expected_value"
+  target=new>mean</a>, that is, the probabilistically weighted average
+  of all possible (numerical in this case) hypotheses: \(\sum_{h} h P(h \mid d)\). 
+  </P>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>generative vs. empirical risk minimization approaches</h1>
+  
+  <P>
+  <BR>
+  An important distinction: <a href="https://en.wikipedia.org/wiki/Generative_model"
+  target=new>generative models</a> vs. <a
+  href="https://en.wikipedia.org/wiki/Empirical_risk_minimization"
+  target=new>empirical risk minimization</a> approaches — <P>
+  In many situations, we will not know the distribution \(P(h, d)\) exactly
+  but will instead have a set of labelled samples \(\left\{\left(h_i, d_i\right) : i =
+  1,\dots,N\right\}\). The risk
+  $$
+  R(\alpha) = \sum_{h,d} L\left(h, \alpha\left(d\right)\right) P(h, d)
+  $$
+  can then be approximated by the <I>empirical
+  risk</I>,
+  $$
+  R_{emp}(\alpha) = \frac{1}{N} \sum_{i=1}^{N} L\left(h_i, \alpha\left(d_i\right)\right)
+  $$
+  <font color=gray>
+  Some methods used in machine learning, such as certain "neural networks" and support
+  vector machines, attempt to learn the decision rule directly by minimizing
+  \(R_{emp}(\alpha)\) instead of trying to model \(P(h, d)\).
+  </font>
+  <P class="incremental">
+  More importantly for us, BRAINS may have evolved to apply either or
+  both of these two approaches in the context of a particular class of
+  tasks. The distinction between them is similar to the one between
+  "model-based" and "model-free" reinforcement learning, which we'll
+  discuss in <a href="week-8-2.html" target=s>week 8</a>.
+  </P>
+
+
+</div>
+
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>working with structured probability distributions (Griffiths & Yuille, 2006)</h1>
+
+  <P>
+  <font color=red>[Postpone this till week 13, when we discuss REASONING]</font>
+  <BR>
+  Probabilistic models go beyond 'hypotheses' and 'data'. More generally, a
+  probabilistic model defines the joint distribution for a set of random
+  variables.
+  <P>
+  For example, imagine that a friend of yours claims to possess the power of
+  psychokinesis. He proposes to demonstrate these powers by flipping a coin,
+  and influencing the outcome to produce heads. How would you respond? 
+  <P>
+  We can express all possible outcomes of the proposed tests, as well as
+  their causes, using binary random variables:
+  <BR>
+  \(X_1\) — coin being flipped and producing heads
+  <BR>
+  \(X_2\) — the pencil levitating
+  <BR>
+  \(X_3\) — your friend having psychic powers
+  <BR>
+  \(X_4\) — the use of a two-headed coin
+  </P>
+  <P>
+  Any set of of beliefs about these outcomes can be encoded in a joint
+  probability distribution, \(P(X_1, X_2, X_3, X_4)\). For example, the
+  probability that the coin comes up heads (\(X_1 = 1\)) should be higher if
+  your friend actually does have psychic powers (\(X_3 = 1\)).
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>working with structured probability distributions (Griffiths & Yuille, 2006)</h1>
+
+  <P>
+  <BR>
+  Once we have defined a joint distribution on \(\{X_i\}\), we can
+  reason about the implications of events involving these variables. For
+  example, if flipping the coin produces heads (\(X_1 = 1\)), then the
+  probability distribution over the remaining variables is
+  $$
+  P(X_2,X_3,X_4 \mid X_1=1) = \frac{P(X_1=1,X_2,X_3,X_4)}{P(X_1=1)}
+  $$
+  This equation can be interpreted as an application of Bayes' rule, with
+  \(X_1\) being the data, and \(X_2,X_3,X_4\) being the hypotheses.
+  <P>
+  In principle, the rules of probability can be used with models involving
+  any number of variables. However, two factors can make large probabilistic
+  models difficult to use.
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>working with structured probability distributions (Griffiths & Yuille, 2006)</h1>
+
+  <P>
+  <BR>
+  Why working with multivariate probability distributions is hard:
+  <ul>
+    <li>It is hard to write down a sensible joint distribution over a large set of
+    variables.</li>
+    <li>The computational complexity of working with probability
+    distributions is exponential in the number of variables involved.</li>
+  </ul>
+  A probability distribution over four binary random variables requires
+  \(2^4-1 = 15\) numbers to specify, which might seem quite reasonable. If
+  we double the number of random variables to eight, we would need to
+  provide \(2^8-1 = 255\) numbers.
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>working with structured probability distributions (Griffiths & Yuille, 2006)</h1>
+
+  <P>
+  <BR>
+  To keep the computational complexity in check, we can use directed
+  graphical models, also known as Bayesian networks or Bayes nets.
+  <P>
+  The directed graph used in a Bayes net has one node for each random
+  variable in the associated probability distribution. The directed edges
+  express the statistical dependencies between the variables in a fashion
+  consistent with the <I>Markov condition</I>:
+  <blockquote>
+  Conditioned on its parents, each variable is independent of all other
+  variables except its descendants.
+  </blockquote>
+  This has an important implication: a Bayes net specifies a
+  canonical factorization of a probability distribution into the product of
+  the conditional distribution for each variable conditioned on its
+  parents:
+  $$
+  P(X_1, X_2, \dots, X_m) = \prod_i P(X_i \mid \textrm{PAR}(X_i))
+  $$
+  where \(\textrm{PAR}(X_i)\) is the set of parents of \(X_i\).
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>working with structured probability distributions (Griffiths & Yuille, 2006)</h1>
+
+  <img src="GriffithsYuille06-fig2.png" class="figure-right">
+  <P>
+  <BR>
+  A Bayes net for the "psychic friend" example. This graph identifies
+  several assumptions about the relationship between the variables
+  involved. For example, \(X_1\) and \(X_2\) are assumed to be independent
+  given \(X_3\), indicating that once it is known whether or not the
+  friend is psychic, the outcomes of the coin flip and the levitation
+  experiments are completely unrelated. By the Markov condition, we can
+  write: 
+  $$
+  P(X_1, X_2, X_3, X_4) = P(X_1 \mid X_3, X_4) \cdot P(X_2 \mid X_3) \cdot P(X_3) \cdot P(X_4)
+  $$
+  This factorization allows us to use fewer numbers in specifying the
+  distribution over these four variables: 8 rather than 15. Furthermore,
+  recognizing the structure in this probability distribution simplifies some
+  of the computations we might want to perform. There are several specialized
+  algorithms for efficient probabilistic inference in Bayes nets, which make
+  use of the dependencies among variables.
+
+</div>
+  
+-->
+
+
+<!-- From Bishop, 2006, pp.197-198: -->
+
+<DIV CLASS="slide">
+  <h1><font color=red>EXTRA</font>: Bayes Theorem helps unify classification and regression (Bishop, 2006, pp.196-199)</h1>
+
+  <P>
+  <font color=red>EXTRA</font>: Here's how a classification problem can be reformulated as a regression
+  problem.
+  <P>
+  Consider the case of two classes, \({\cal C}_1\) and \({\cal C}_2\). The
+  posterior probability for class \({\cal C}_1\) can be written as
+  $$
+  \begin{array}
+  &nbsp;
+  p({\cal C}_1\mid \textbf{x}) &= \frac{p(\textbf{x}\mid {\cal C}_1) p({\cal
+  C}_1)}{p(\textbf{x}\mid {\cal C}_1)p({\cal C}_1) + p(\textbf{x}\mid {\cal
+ C}_2)p({\cal C}_2)} \\
+  &= \frac{1}{1+exp(-a)} = \sigma(a)
+  \end{array}
+  $$
+  where \(a\) is the log likelihood ratio
+  $$
+  a = \ln \frac{p(\textbf{x}\mid {\cal C}_1)p({\cal C}_1)}{p(\textbf{x}\mid
+ {\cal C}_2)p({\cal C}_2)}
+  $$
+  and \(\sigma(a)\) is the <a
+ href="http://en.wikipedia.org/wiki/Logistic_sigmoid" target=new><I>logistic sigmoid</i></a> function, defined by
+  $$
+  \sigma(a) = \frac{1}{1+exp(-a)}
+  $$
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1><font color=red>[EXTRA]</font> an immediate application of the Bayes Theorem (cont.)</h1>
+
+  <P>
+  Now let's assume that the class-conditional densities are
+  <a href="http://en.wikipedia.org/wiki/Multivariate_normal_distribution" target=new>\(D\)-dimensional Gaussian</a> with the same covariance matrix \(\Sigma\):
+  $$
+  p(\textbf{x}\mid {\cal C}_k) = \frac{1}{(2\pi)^{D/2}}
+  \frac{1}{|\Sigma|^{1/2}} exp\left\{-\frac{1}{2} (\textbf{x}
+ -\mu_k)^{T} \Sigma^{-1} (\textbf{x} -\mu_k)\right\}
+  $$
+  For two classes, \(k=2\), the expression for \(p({\cal C}_1\mid
+ \textbf{x})\) from the previous slide yields:
+  $$
+  p({\cal C}_1\mid \textbf{x}) = \sigma(\textbf{w}^{T}\textbf{x} + w_0)
+  $$
+  <font color=gray>
+  where
+  $$
+  \textbf{w} = \Sigma^{-1}(\mu_1 - \mu_2)
+  $$
+  and
+  $$
+  w_0 = - \frac{1}{2} \mu_1^{T} \Sigma^{-1} \mu_1 +
+  \frac{1}{2} \mu_2^{T} \Sigma^{-1} \mu_2 +
+  \ln\frac{p({\cal C}_1)}{p({\cal C}_2)}
+  $$
+  </font>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1><font color=red>[EXTRA]</font> an immediate application of the Bayes Theorem (cont.)</h1>
+
+  <img src="Bishop06-fig-4-10-left.png" class="figure-right">
+  <P>
+  CLASSIFICATION reformulated as REGRESSION:
+  $$
+  p({\cal C}_1\mid \textbf{x}) = \sigma(\textbf{w}^{T}\textbf{x} + w_0)
+  $$
+  <P>
+  The quadratic terms in \(\textbf{x}\) from the exponents of
+  the Gaussian densities have cancelled (due to the assumption of common
+  covariance matrices) leading to a linear function of \(\textbf{x}\) in the
+  argument of the <a href="http://en.wikipedia.org/wiki/Logistic_sigmoid"
+  target=new>logistic sigmoid</a>.  
+  <P>
+  <I>Top:</I> the class-conditional densities for two classes,
+  red and blue.
+  <img src="Bishop06-fig-4-10-right.png" class="figure-right">
+  <P>
+  <I>Bottom:</I> the corresponding posterior probability
+  \(p({\cal C}_1\mid x)\), given by a <a
+ href="http://en.wikipedia.org/wiki/Logistic_sigmoid"
+   target=new>logistic sigmoid</a> of a linear
+  function of \(\textbf{x}\).
+  The surface on the right is colored
+  using a proportion of red ink given by \(p({\cal C}_1\mid \textbf{x})\)
+  and a proportion of blue ink given by \(p({\cal C}_2\mid \textbf{x}) = 1 -
+  p({\cal C}_1\mid \textbf{x})\).
+
+</div>
+
+
+<div class="footer">
+<p>Last modified: Thu Feb 15 2018 at 09:21:36 EST</p>
+</div>
+</body>
+</html>

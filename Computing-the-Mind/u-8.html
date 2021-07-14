@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computational Psychology — Unit 8</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2008-2019 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- 
+<rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+<permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+<requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+<permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+<requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+</License>
+</rdf:RDF>
+-->
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 8 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computational Psychology</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 8: managing action; motor control</h2>
+  </div>
+  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%>
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+<div  CLASS="slide">
+  <h1>motor control</h1>
+
+  <img src="cat-math-small.gif" class="figure-right" >
+  <P>
+  <BR>
+  <ul>
+    <li>The problem(s) of motor control</li>
+    <P>
+    <li>The agonist/antagonist principle</li>
+    <P>
+    <li>Decision-making in motor control</li>
+    <P>
+    <li>The Bayesian perception/action loop</li>
+  </ul>
+  
+</div>
+
+
+
+
+<div  CLASS="slide">
+  <h1>the problem(s) of motor control</h1>
+
+  <img src="cat-math-small.gif" class="figure-right" height=350>
+  <P>
+  <BR>
+  This cat cartoon is a very incomplete illustration of the problem of motor
+  control, because a jump is ballistic (= hardly any control past the launch
+  phase). 
+  <P>
+  Generally, there are three aspects of control that must be addressed:
+  <ol start=0 >
+    <li>[environmental situation] geometry</li>
+    <P>
+    <li>[body+environment configuration] <a href="http://en.wikipedia.org/wiki/Kinematics" target=new>kinematics</a> and <a
+    href="http://en.wikipedia.org/wiki/Inverse_kinematics" target=new>inverse kinematics</a></li>
+    <P>
+    <li>[body+environment forces] <a href="http://en.wikipedia.org/wiki/Analytical_dynamics"
+    target=new>dynamics</a> and <a
+    href="http://en.wikipedia.org/wiki/Inverse_dynamics" target=new>inverse dynamics</a></li>
+  </ol>
+  <P>
+  [Note that the <a href="http://en.wikipedia.org/wiki/Inverse_problem"
+  target=new>inverse</a> nature of the problems implies difficulties, such
+  as under-determination of the solution by data and other types of <a
+  href="http://en.wikipedia.org/wiki/Ill-posed_problem"
+ target=new>ill-posedness</a>.]
+  </P>
+  <P class="incremental">
+  In general, motor control involves planning the desired movement and 
+  coordinating the forces needed to execute it — typically INCREMENTALLY and
+  subject to ON-THE-FLY CORRECTIONS.
+  </P>
+  
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>OPTIONAL: brain basis of ON-THE-FLY perception/action (after Sherman & Guillery, 2006)</h1>
+
+  <img src="Sherman06-fig10.1.png" height=550 class="figure-right">
+    <P>
+      <BR>
+    <P>
+      "Schematic, and simplified, representation of
+      <a href="https://en.wikipedia.org/wiki/Thalamus"
+	 target=new>thalamic</a> and 
+      <a href="https://en.wikipedia.org/wiki/Cerebral_cortex" target=new>cortical</a> connections 
+      with motor centers. Only some of the corticocortical links are shown. 
+    <BR><B>A</B>. A widely
+      used representation of
+      <a href="https://en.wikipedia.org/wiki/Afferent_nerve_fiber"
+      target=new>afferent</a> pathways entering through thalamus being 
+      processed through a parallel and hierarchical series of cortical connections, and
+      then passed on to motor centers or memory
+      storage. <font color="gray">[Consider <a href="thalamus-and-cortex.jpg"
+      target=pic>this
+      example</a> from some online course or other.]</font>
+    <BR><B>B</B>. A representation of the connections described in
+      earlier chapters and in this chapter, showing first order (FO)
+      and higher order (HO) thalamic relays receiving from ascending
+      and corticothalamic afferents, respectively, with each of these
+      afferents sending axonal branches to motor or premotor centers. 
+    <BR><B>C</B>. A schema to stress that essentially all
+      cortical areas have connections to motor or premotor centers. The extent to
+      which they have branches going to the thalamus remains largely
+      unexplored."
+    <P>
+      <HR>
+	<P>
+	  "Not only CAN `motor assembly begin before sensory signals reach
+	  the highest levels' but that it MUST begin before the
+	  sensory signals even reach the thalamus, and that it must
+	  accompany corticocortical processing at essentially every
+	  stage."
+	  <BR>
+— S. M. Sherman and R. W. Guillery
+	    (2006). <a href="https://mitpress.mit.edu/books/exploring-thalamus-and-its-role-cortical-function"
+	    target=new><I>Exploring the 
+	    Thalamus and Its Role in Cortical Function</I></a>, MIT
+	    Press, p.362.
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>OPTIONAL: brain basis of ON-THE-FLY perception/action (after
+  Sherman & Guillery, 2006)</h1>
+
+  <img src="Sherman06-fig10.4.png" height=450 class="figure-right">
+    <P>
+      <BR>
+      <small>
+      <B>A</B>. Direct
+      <a href="https://en.wikipedia.org/wiki/Lemniscus_(anatomy)"
+      target=new>lemniscal</a> (continuous lines) and
+      <a href="https://en.wikipedia.org/wiki/Anterior_spinothalamic_tract"
+      target=new>anterolateral</a> 
+      (interrupted lines) pathways to the thalamus.
+      <BR>
+	<B>B</B>. Additional connections
+	established by branches of the direct pathways.
+	<P>
+	  </small>
+	  <HR>
+    <P>
+      "Each axon reaching the thalamus
+      will carry messages about the condition of one or several receptors and
+      in addition will carry information about the instructions that are already
+      on their way to one or more motor pathways. One should not expect
+      that the cortical analysis will reject or annul this “additional” information
+      simply because it is not a part of what classical physiology has seen
+      as the information carried in sensory pathways. It is reasonable to expect
+      this copy of motor instructions to be an integral part of the perceptual
+      process."
+	  <BR>
+	  — S. M. Sherman and R. W. Guillery
+	    (2006). <a href="https://mitpress.mit.edu/books/exploring-thalamus-and-its-role-cortical-function" target=new><I>Exploring
+	    the
+	    Thalamus and Its Role in Cortical Function</I></a>, MIT
+	    Press, p.367.
+
+</div>
+
+-->
+
+
+<div  CLASS="slide">
+  <h1>motor control: embodiment and situatedness</h1>
+
+  <P>
+  <BR>
+  Key constraints that apply to the problem of motor control stem
+  from the principles of <a
+  href="http://en.wikipedia.org/wiki/Embodied_cognition" target=new>embodiment</a> and <a
+  href="http://en.wikipedia.org/wiki/Situated_cognition" target=new>situatedness</a>.
+  <P>
+  <table cellspacing=10>
+    <tr>
+      <td>
+	<a href="https://en.wikipedia.org/wiki/John_Carter_(film)"
+	target=new>John Carter</a> of Virginia discovers that he needs
+	to recalibrate. 
+      </td>
+      <td align=center>
+	<video src="JohnCarter-jump.mp4" controls="controls"
+	       height=270 width=608>
+	</video>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+
+
+<div  CLASS="slide">
+  <h1>motor control: embodiment and situatedness</h1>
+
+  <P>
+  <BR>
+  Key constraints that apply to the problem of motor control stem
+  from the principles of <a
+  href="http://en.wikipedia.org/wiki/Embodied_cognition" target=new>embodiment</a> and <a
+  href="http://en.wikipedia.org/wiki/Situated_cognition" target=new>situatedness</a>.
+  <table cellspacing=10>
+    <tr>
+      <td>
+	The octopus <I>Octopus aculeatus</I> maintains its algae-like
+	camouflage while walking backwards on two arms, using the outer part
+	of each arm like a conveyor belt (video by Crissy Huffard/UC Berkeley).
+      </td>
+      <td align=center>
+	<video src="octopus-walk.mov" height=446 width=540 controls="controls"
+	       align=center>
+	</video>
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+
+
+
+<div  CLASS="slide">
+  <h1>motor control: agonist/antagonist</h1>
+
+  <img src="arm-muscles.gif" class="figure-right">
+  <P>
+  <BR>
+  Key constraints that apply to the problem of motor control stem
+  from the principles of <a
+  href="http://en.wikipedia.org/wiki/Embodied_cognition" target=new>embodiment</a> and <a
+  href="http://en.wikipedia.org/wiki/Situated_cognition" target=new>situatedness</a>.
+  <P>  
+  Although some of the information relied upon by the motor system
+  (especially for locomotion, orientation and reproduction) is innate, 
+  individuals must LEARN — acquire and store <I>motor memories</I> — during their 
+  lifetimes.
+  <P>
+  In <a href="https://en.wikipedia.org/wiki/Vertebrate"
+  target=new>vertebrates</a>, many of these take the form of activation values for
+  <I>agonist-antagonist</I> muscle pairs, as illustrated here for the case
+  of arm control.
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>motor control as equilibrium trajectory (Shadmehr)</h1>
+
+  <img src="Shadmehr-stiffness-2.jpg" class="figure-right">
+  <img src="Shadmehr-stiffness-1.jpg">
+  <P>
+  <BR>
+  Arm position, represented here by the shoulder and elbow angles,
+  \(q_1\) and \(q_2\), can be controlled by setting the
+  <I>equilibrium</I> point of the arm musculature.
+  <P>
+  <I>Left:</I>
+  the restoring force generated by a subject's arm can be measured by
+  a robotic manipulator that attempts to displace it from the
+  equilibrium position. <I>Center and right:</I> Maps showing the
+  force fields generated by the arm in the two configurations
+  indicated in the left panel. 
+
+</div>
+  
+
+
+
+<div  CLASS="slide">
+  <h1>reality check: the agonist-antagonist picture is overly simple</h1>
+
+  <img src="finger-control-muscles.jpg" class="figure-right">
+  <P>
+  <BR>
+  On the right: finger control.
+  <P>
+  The <a
+  href="http://hospitalforspecialsurgery.interactive.understand.com/view/shoulder/clavicle-fracture"
+  target=new>shoulder complex</a> is a design/control mess, too.
+  </P>
+  <HR>
+  <P>
+  What about learning?
+    <DIR>
+      "It takes a human being about 14 thousand brain-hours to learn to
+      run. An AI can learn to do it in less than half as many CPU-hours, but
+      the results are
+      <a href="https://twitter.com/eron_gj/status/967672260147470336"
+	 target=new>like this</a>."
+    </DIR>
+  </P>
+  <HR>
+
+</div>
+
+
+<div  CLASS="slide">
+  <h1>the overarching problem in control</h1>
+
+  <P>
+  <BR>
+  Consider the problems that are the staple of psychology textbooks, such as:
+  <ul>
+    <li>(under "perception") object recognition, etc.</li>
+    <li>(under "memory") storage, retrieval, etc.</li>
+    <li>(under "attention") focusing, steering, etc.</li>
+  </ul>
+  Who orchestrates the processes that solve these problems?
+  <P>
+    Allegedly, the so-called <a
+ href="https://books.google.com/books?id=l8j_z5-qZfAC&pg=PA300&lpg=PA300&dq=%22central+executive%22+psychology&source=bl&ots=iDs4z2yE__&sig=saPBzHTKej4J6_AoXTF3ZW47isQ&hl=en&sa=X&ved=0ahUKEwijua6a58zKAhXJGj4KHbZDAEYQ6AEIZjAL#v=onepage&q=%22central%20executive%22%20psychology&f=false"
+ target=new>"central executive"</a>.
+  </P>
+  <P class="incremental">
+    Having a "central executive" seems to be the only possible
+    solution to the ultimate challenge in behavior — DECIDING WHAT TO
+    DO NEXT. 
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>motor control and decision making</h1>
+
+  <img src="rat-decision-making.jpg" class="figure-right">
+  <P>
+  <BR>
+  Behavior doesn't just "happen": each motor act is the result of a DECISION on
+  the part of the animal.
+  <P class="incremental">
+  Decision making is HIERARCHICAL: typically, only the most abstract
+  (high-level) decisions are explicit (and perhaps conscious); most are not.
+  </P>
+  <P class="incremental">
+    [Hierarchical decision making in 
+    <a href="https://www.youtube.com/watch?v=wXxrmussq4E"
+    target=new>these robots</a> is most probably carried out by
+    humans.] 
+  </P>
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>the "central executive" and the homunculus fallacy</h1>
+
+  <video src="homunculus-MiB-2.mov" height=496 width=640
+         controls="controls" class="figure-right" >
+  </video>
+  <img src="homunculus2.jpg" class="figure-right"> 
+<!--  <img src="homunculus-MiB.jpg" class="figure-left" height=400> -->
+  <P>
+  <BR>
+  The central executive / homunculus "explanation" invites an <a
+					    href="http://en.wikipedia.org/wiki/Infinite_regress"
+					    target=new>infinite
+					    regress</a>, so this
+					    cannot be how decisions
+  are made.
+  <P class="incremental">
+    A better [mechanism-level] explanation: the multiple computational
+    processes that constitute a mind interact dynamically; decisions,
+    along with the other aspects of behavior, emerge from
+    these interactions incrementally, over time.
+  </P>
+  
+</DIV>
+
+  
+<div CLASS="slide">
+  <h1>[problem- and algorithm-level] decision theory (Körding & Wolpert)</h1>
+
+  <img src="in-astronaut-suit.jpg" class="figure-right" height=200>
+  <P>
+  <BR>
+  <B>Decision theory</B> quantifies how people [and other animals] should choose in the context
+  of a given <a href="http://en.wikipedia.org/wiki/Utility"
+  target=new>utility</a> function and some partial knowledge of the world. 
+  The expected utility is defined as:
+  $$
+  E\left[Utility\right] = \sum_{possible~outcomes} p\left(outcome \mid
+  action\right)U\left(outcome\right)
+  $$
+  where \(p(outcome\mid action)\) is the probability of an outcome given an 
+  action and \(U(outcome)\) is the utility associated with this outcome.
+  <P>
+  <small>
+  According to DECISION THEORY people choose the action so as to
+  maximize the expected value of utility. Choosing according to this
+  criterion is the definition of choosing rationally. Within the framework
+  of ECONOMICS, numerous problems have been described in
+  these terms. For example, people's decision about the ratio of risky
+  to non-risky assets in their <B>portfolio</B> has been described in terms of
+  people having partial knowledge about their future earnings while
+  maximizing their future utility. Companies' decisions about
+  <B>wages</B> and employment of workers have been modelled in terms of
+  the company having partial information about workers' ability and
+  maximizing <B>profits</B>. The decisions of the central bank
+  to increase or decrease <B>interest rates</B> have been modelled in terms of
+  optimally reducing the uncertainty about future inflation.
+  </small>
+
+</div>
+
+
+
+<div CLASS="slide">
+  <h1>decision theory (Körding & Wolpert, 2006)</h1>
+
+  <P>
+  <BR>
+  <B>Decision theory</B> quantifies how people should choose in the context
+  of a given <a href="http://en.wikipedia.org/wiki/Utility"
+  target=new>utility</a> function and some partial knowledge of the world.
+  The expected utility is defined as:
+  $$
+  E\left[Utility\right] = \sum_{possible~outcomes} p\left(outcome \mid
+  action\right)U\left(outcome\right)
+  $$
+  where \(p(outcome\mid action)\) is the probability of an outcome given an 
+  action and \(U(outcome)\) is the utility associated with this outcome. 
+  <P>
+  <B>Economics</B> tries to understand both how agents should optimally
+  behave when deciding under uncertainty and how they actually
+  behave in such cases. Bayesian decision making is the systematic
+  way of combining Bayesian estimates of probability with
+  utility functions.
+  <P>
+  <font color=red><B>Optimal control</B> aims to solve similar problems where the decision
+  is not just happening at one point of time but a continuous output
+  (such as muscle force).</font> The expected utility changes constantly
+  according to new information coming in. Solutions to this problem
+  typically use the notion of 'cost-to-go': the average integrated cost from
+  a current state to a target state.  
+
+</div>
+
+
+
+<div CLASS="slide">
+  <h1>estimating utility functions through psychophysical experimentation (Körding & Wolpert, 2006)</h1>
+
+  <img src="Koerding-TICS06-fig2.png" class="figure-right" height=250>
+  <P>
+  <BR>
+  <B>(a)</B> Indifference curves in the force–time space as predicted by
+  different cost (utility) functions. The cost is the same along each curve.
+  <P>
+  <B>(b)</B> The cost is inferred from the subject's decisions. The "hotter"
+  the colour, the less desirable the force.
+  <P>
+  <font color=gray>
+  <small>
+  Human volunteers had to produce forces of varying
+  magnitude and duration. During each trial subjects
+  had to choose which of two combinations of force
+  magnitude and duration they prefer. From a large number
+  of such choices it is possible to infer the indifference lines
+  in the F–T space. From these indifference
+  curves it is possible to infer the cost function.
+  </small>
+  </font>
+
+</div>
+  
+  
+
+<div CLASS="slide">
+  <h1>a refresher: Bayesian integration of priors with observations (Körding & Wolpert, 2006)</h1>
+
+  \(\require{color}\)
+  <img src="Koerding-TiCS06-figI.png" class="figure-right">
+  <P>
+  <BR>
+  When we have a <a href="https://en.wikipedia.org/wiki/Normal_distribution" target=new>Gaussian</a> prior distribution \(p\left(x\right)\) and we have a noisy
+  observation \(o\) of the position that leads to a Gaussian likelihood
+  \(p\left(o\mid x\right)\), it is possible to use Bayes rule to 
+  calculate the posterior distribution (how probable
+  is each value given both the observation and the prior knowledge):
+  $$
+  p\left(x\mid o\right) = \frac{p\left(o\mid x\right) p(x)}{p(o)}
+  $$
+  This equation assigns a probability to every possible value. If we
+  assume that the prior distribution \(p\left(x\right)\) is a 
+  Gaussian with variance \(\sigma^2_p\) and mean \({\color{green}\mu}\) [<font color=green>green</font>]
+  and that the likelihood \(p\left(o\mid x\right)\) is
+  also a Gaussian with variance \(\sigma^2_o\) and mean \({\color{red}o}\) [<font
+  color=red>red</font>], it is 
+  possible to compute analytically the posterior, which is then also
+  Gaussian [<font color=orange>yellow</font>]. <strike>The</strike> An optimal estimate
+ \(\hat{x}\) that is the maximum of the 
+  posterior is \(\hat{x} = \alpha {\color{red}o} + \left(1 - \alpha\right){\color{green}\mu}\),
+  where \(\alpha = \frac{\sigma^2_p}{\sigma^2_p + \sigma^2_o} \le 1\).
+  Moreover the width of the posterior is \(\sigma^2 =
+  \alpha\sigma_o\). 
+
+</div>
+
+
+
+  <div CLASS="slide">
+  <h1>Bayesian integration in a perceptual-motor task (Körding & Wolpert, 2006)</h1>
+
+  <img src="Koerding-TiCS06-Bayesian-motor-control.png" height=500 class="figure-right">
+  <P>
+  (a) Perception and movement are beset by uncertainty. <small>When we briefly look at
+  our hand we cannot be certain where exactly it is. The resulting
+  uncertainty is sketched as the grey probability distribution around the 
+  finger at upper left. When we only feel our hand without looking we might have
+  more uncertainty (below). Right: if we make a fast movement from a starting
+  position to a target we will not always hit the target (<font color=red>X</font>) but there will be some
+  probability distribution of endpoint position.</small>
+  <P>
+  (b) Example: The other player is hitting the ball. Seeing the ball, we can
+  estimate that it will land in the red region. We have a prior belief that
+  the ball will land in the green region. The black ellipses denote the
+  posterior, the region where the Bayesian estimate would predict the ball
+  to land. 
+  <P>
+  (c) The experimental set-up in typical movement psychophysics
+  experiments.
+  <P>
+  (d) Human subjects' reliance on the prior as a function of increasing
+  perceptual uncertainty. (From the previous slide, the larger the
+  likelihood noise \(\sigma_o\), the larger the weight of the prior
+  mean \(\mu\) in the posterior maximum \(\hat{x}\).)
+  <P>
+  (e) The prior inferred from subject behavior, for the different
+  conditions and subjects. The actual distribution used in the
+  experiment is shown in red. 
+
+</div>
+
+  
+
+<div CLASS="slide">
+  <h1>the (Bayesian) motor control loop (Körding & Wolpert, 2006)</h1>
+
+  <img src="Koerding-TiCS06-fig3.png" class="figure-right">
+  <P>
+  <BR>
+  In generating a movement, the controller, an optimal decision maker, takes
+  into account both the output of the Bayesian estimation process and
+  the utility function.
+  <P>
+  The Bayesian estimator combines:
+  <ol>
+    <li>inputs from the sensors (for example, about limb positions);</li>
+    <li>prior knowledge;</li>
+    <li>the <a href="http://en.wikipedia.org/wiki/Efference_copy"
+    target=new>efference copy</a> (a copy of the signal sent by the central
+    nervous system to the muscles).</li> 
+  </ol>
+  This Bayesian approach leads to a better estimate of possible outcomes than any
+  estimate that is only based on the sensory input. 
+
+</div>
+
+
+
+
+<div  CLASS="slide">
+  <h1>[EXTRA] reality check: some major components of the behavioral control system (Wise & Shadmehr)</h1>
+
+  <img src="Wise-Shadmehr-02-fig1.png" title="motor control"
+  class="figure-right">
+  <P>
+  <BR>
+  Speaking of control loops: there are MANY of those in the brain...
+  <P>
+  <font color=gray>
+  Gray arrows: <a href="http://en.wikipedia.org/wiki/Cerebral_cortex" target=new>cortico</a>fugal projections; open arrows and arrowheads: projections to
+  effectors; gray box: the <a
+ href="http://en.wikipedia.org/wiki/Basal_ganglia" target=new>basal
+ ganglia</a>; stippled ovals: preganglionic 
+  autonomic motor nuclei. GPi, internal segment of <a
+ href="http://en.wikipedia.org/wiki/Globus_pallidus" target=new>globus pallidus</a>; GPe, 
+  external segment of <a href="http://en.wikipedia.org/wiki/Globus_pallidus"
+ target=new>globus pallidus</a>; STN, sub<a
+ href="http://en.wikipedia.org/wiki/Thalamus" target=new>thalamic</a> nucleus; SNr,
+  <a href="http://en.wikipedia.org/wiki/Substantia_nigra"
+  target=new>substantia nigra</a> pars reticulata. 
+  <BR>
+  <small>[<I>Motor Control</I>, 
+  Steven P. Wise and Reza Shadmehr, Encyclopedia of the Human Brain, vol.3
+  (2002)]</small>
+  </font>
+  <P>
+<!--
+    <P>
+  [Recall also slide #24 from <a href="http://kybele.psych.cornell.edu/~edelman/Psych-3140/w-7-1.html#(24)" target=s>lecture 7.1</a>]
+  </P>
+-->
+  
+</div>
+
+
+<div class="footer">
+<p>Last modified: Thu Jul 30 2020 at 08:42:19 EDT</p>
+</div>
+</body>
+</html>

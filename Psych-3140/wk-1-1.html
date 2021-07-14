@@ -1,0 +1,1851 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Psych 3140/6140 wk-1-1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2014-2021 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- 
+<rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+<permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+<requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+<permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+<requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+</License>
+</rdf:RDF>
+-->
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Week 1.2 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Psych 3140/6140</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Week 1: the fundamentality of computation</h2>
+    <h3>&nbsp;Lecture 1.1</h3>
+  </div>
+  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%>
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+
+<div  CLASS="slide">
+  <h1>computational psychology</h1>
+
+  <P>
+  <BR>
+  Fundamental observation #1:
+  </P>
+  <P>
+  — "<B>cognitive</B> psychology" — a term introduced in 1967 by <a
+  href="http://www.psychologicalscience.org/index.php/publications/observer/2012/may-june-12/remembering-the-father-of-cognitive-psychology.html"
+  target=new>Ulric Neisser</a> of Cornell as a collective label for
+  the faculties of the mind such as perception, memory, decision-making, etc. — has turned out to mean
+  "<B>computational</B> psychology".
+  </P>
+  <P>
+  <img src="CtM-wordle.png" title="a word cloud generated from the textbook">
+  </P>
+
+</div>
+
+
+
+
+
+<div  CLASS="slide">
+  <h1>computational is special</h1>
+
+  <P>
+  <BR>
+  Fundamental observation #2:
+  </P>
+  <P>
+  — <B>computational</B> (&asymp; mathematical) understanding is special
+  [consider <a
+  href="https://en.wikipedia.org/wiki/Wigner" target=new>Eugene Wigner</a>'s <a
+  href="http://www.dartmouth.edu/~matc/MathDrama/reading/Wigner.html"
+									       target=new>comments</a> on math].
+  </P>
+  <P class="incremental">
+  <img src="certainty.png">
+  </P>
+  <P class="incremental">
+    <B>"I am not here to tell you the news, ..."</B>
+  </P>
+  
+</div>
+
+  
+
+<div  CLASS="slide">
+  <h1>what is computational/cognitive psychology about?</h1>
+
+  <P>
+    <B>Computational psychology is about how the mind works.</B>
+  </P>
+  <P>
+  <ul>
+    <li>Developmental psychology is about how the mind gets to work the way it does.</li>
+    <P>
+    <li>Personality psychology is about how my mind works differently from yours.</li>
+    <P>
+    <li>Clinical psychology is about how the mind sometimes works <I>very</I> differently.</li>
+    <P>
+    <li>Social psychology is about how multiple minds work together;
+        also, about how the mind <I>thinks</I> it works (prescientifically).</li> 
+    <P>
+    <li>[Artificial Intelligence is about how machines can be made to
+        solve some of the problems that minds can also solve.]</li>
+    <P>
+    <li>[Machine Learning is about how machines can <I>learn</I> to
+        solve some of the problems that minds can also solve.]</li>
+  </ul>
+    <P>
+      But what problems <I>do</I> minds solve?
+    </P>
+    <P class="incremental">
+      <B>What problems do minds confront, in natural situations?</B>
+    </P>
+  
+</DIV>
+
+
+
+<!--
+
+<div  CLASS="slide">
+  <h1>cognitive psychology: seeing through the magic</h1>
+
+  <P>
+  <BR>
+  <a
+ href="http://www.facebook.com/album.php?aid=54888&id=774724257&l=636fea99c6"
+ target=new><img src="The-Human-Condition.JPG" class="figure-right"
+  title="The Human Condition (photograph by S. Edelman)" height=500></a>
+  <P>
+  <font color="gray">WHY CARE about <I>cognitive</I> psychology?</font>
+  <P>
+  The Universe is filled with <B>magic</B>.
+  <P>
+  Cognitive psychology is the key
+  to some of its most striking manifestations.
+
+</DIV>
+
+
+  
+<div  CLASS="slide">
+  <h1>cognitive psychology: understanding the human condition</h1>
+
+  <P>
+  <BR>
+  <a
+ href="http://www.facebook.com/album.php?aid=54888&id=774724257&l=636fea99c6"
+ target=new><img src="The-Human-Condition.JPG" class="figure-right"
+  title="The Human Condition (photograph by S. Edelman)" height=500></a>
+  <P>
+  <font color="gray">WHY CARE about <I>cognitive</I> psychology?</font>
+  <P>
+  Studying cognitive psychology is the only way to truly understand <a
+    href="http://en.wikipedia.org/wiki/The_Human_Condition" 
+    target=new>the human condition</a>.
+
+</DIV>
+
+
+  
+<div  CLASS="slide">
+  <h1>cognitive psychology: understanding the human condition</h1>
+
+  <P>
+  <BR>
+  <a
+ href="http://www.facebook.com/album.php?aid=54888&id=774724257&l=636fea99c6"
+ target=new><img src="The-Human-Condition-2.jpg" class="figure-right"
+  title="The Human Condition (photograph by S. Edelman)" height=500></a>
+  <P>
+  <font color="gray">WHY CARE about <I>cognitive</I> psychology?</font>
+  <P>
+  Studying cognitive psychology is the only way to understand <a
+    href="http://en.wikipedia.org/wiki/The_Human_Condition" 
+    target=new>the human condition</a>.
+
+</DIV>
+
+  
+<div  CLASS="slide">
+  <h1>cognitive psychology: understanding the human condition</h1>
+
+  <P>
+  <BR>
+  <a
+ href="http://www.facebook.com/album.php?aid=54888&id=774724257&l=636fea99c6"
+ target=new><img src="The-Human-Condition-3.jpg" class="figure-right"
+  title="The Human Condition (photograph by S. Edelman)" height=500></a>
+  <P>
+  <font color="gray">WHY CARE about <I>cognitive</I> psychology?</font>
+  <P>
+  Studying cognitive psychology is the only way to understand <a
+    href="http://en.wikipedia.org/wiki/The_Human_Condition" 
+    target=new>the human condition</a>.
+
+</DIV>
+
+  
+<div  CLASS="slide">
+  <h1>cognitive psychology: understanding the human condition</h1>
+
+  <P>
+  <BR>
+  <a
+ href="http://www.facebook.com/album.php?aid=54888&id=774724257&l=636fea99c6"
+ target=new><img src="The-Human-Condition-4.jpg" class="figure-right"
+  title="The Human Condition (photograph by S. Edelman)" height=500></a>
+  <P>
+  <font color="gray">WHY CARE about <I>cognitive</I> psychology?</font>
+  <P>
+  Studying cognitive psychology is the only way to understand <a
+    href="http://en.wikipedia.org/wiki/The_Human_Condition" 
+    target=new>the human condition</a>.
+
+</DIV>
+
+  
+<div  CLASS="slide">
+  <h1>cognitive psychology: understanding the human condition</h1>
+
+  <P>
+  <BR>
+  <a
+ href="http://www.facebook.com/album.php?aid=54888&id=774724257&l=636fea99c6"
+ target=new><img src="The-Human-Condition-5.jpg" class="figure-right"
+  title="The Human Condition (photograph by S. Edelman)" height=500></a>
+  <P>
+  <font color="gray">WHY CARE about <I>cognitive</I> psychology?</font>
+  <P>
+  Studying cognitive psychology is the only way to understand <a
+    href="http://en.wikipedia.org/wiki/The_Human_Condition" 
+    target=new>the human condition</a>.
+
+</DIV>
+
+  
+<div  CLASS="slide">
+  <h1>cognitive psychology: understanding the Self</h1>
+
+  <P>
+  <BR>
+  <img src="Magritte-La-reproduction-interdite.jpg" class="figure-right"
+  title="La reproduction interdite (R. Magritte)" height=500>
+  <P>
+  <font color="gray">WHY CARE about <I>cognitive</I> psychology?</font>
+  <P>
+  Cognitive psychology is about what makes <B>you</B> tick.
+  <P>
+  Studying cognitive psychology is the only way to understand what you see when you
+  look in the mirror.
+
+</DIV>
+
+-->
+
+  
+
+<div  CLASS="slide">
+  <h1>computational psychology is about...</h1>
+
+  <img src="Wittgenstein-duck-rabbit-Jastrow.jpg" title="Jastrow's
+							 duck-rabbit"
+       class="figure-right" height=550>
+  <P>
+  <BR>
+  <B>What problems do minds <I>confront</I>, naturally?</B>
+  <P>
+    <ul class="incremental">
+      <li>Consider the problems that are the staple of psychology
+      textbooks, such as:  
+	<ul>
+	  <li>perception</li>
+	  <li>memory</li>
+	  <li>attention</li>
+	</ul>
+	Are these problems really the ones that minds confront and solve?</li>
+      <li>And are the kinds of answers/explanations that psychologists
+	typically offer any good? — 
+	<ul>
+	  <li>under "perception": scene reconstruction</li>
+	  <li>under "memory": storage and retrieval</li>
+	  <li>under "attention": focusing, steering, etc.</li>
+	</ul>
+      </li>
+    </ul>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>converging on a real explanation of how the mind works</h1>
+
+  <a
+ href="http://www.cc.com/video-clips/n36pgb/the-colbert-report-steven-pinker"
+  target=new><img src="Pinker-Colbert.jpg"
+  title="Pinker's explanation: brain cells fire in patterns"
+  class="figure-right"></a>
+  <P>
+  <BR>
+  <P>
+    <ul>
+      <li>Consider the explanations typically offered by
+	psychologists and neuroscientists, like the one on the right —</li>
+      <li>
+      What would a <B>real</B> explanation look like?
+      </li>
+      <P>
+      <li>
+      It would have to be <a
+ href="http://books.google.com/books?id=FvRqtnpVotwC&lpg=PA81&ots=c8lvl_pZ2d&dq=Dennett%20%22we%20must%20distinguish%22%20reductionism&pg=PA81#v=onepage&q=&f=false"
+			    target=new><I>intelligently</I> reductionist</a>, by showing how
+      <DIR>
+	<B>complexity arises from simpler interacting elements</B>.
+      </DIR>
+      </li>
+      <P>
+      <li>
+      It would have to be literal (as opposed to metaphorical) at its core.
+      </li>
+      </ul>
+      <HR>
+      <P class="incremental">
+	The real explanation:
+	<BR>
+	  Minds are bundles of dynamical, open-ended COMPUTATIONS over
+	REPRESENTATIONS of the world that brains carry out so as to
+	maximize the probability of their continuing existence, by
+	  exercising FORETHOUGHT.
+      </P>
+  
+</DIV>
+
+
+<!--
+
+<div  CLASS="slide">
+  <h1>converging on a real explanation</h1>
+
+  <table>
+    <tr>
+      <td><a
+	href="http://www.class.uidaho.edu/mickelsen/ToC/hume%20treatise%20ToC.htm"
+	target=new><I>A Treatise of Human Nature</I> (1740)</a>
+	<BR>
+	<a href="http://plato.stanford.edu/entries/hume/" target=new>David Hume</a>
+      </td>
+      <td>
+	<img src="David-Hume.jpg" title="David Hume" height=150>
+      </td>
+    </tr>
+    <tr>
+      <td>
+	<a href="http://psychclassics.yorku.ca/James/Principles/index.htm"
+	target=new><I>The Principles of Psychology</I> (1890)</a>
+	<BR>
+	<a href="http://plato.stanford.edu/entries/james/" target=new>William James</a>
+      </td>
+      <td>
+	<img src="William-James.jpg" title="William James" height=150>
+      </td>
+    </tr>
+    <tr>
+      <td colspan=2>
+	<HR>
+      </td>
+    </tr>
+    <tr>
+      <td>
+	<a href="http://www.us.oup.com/us/catalog/general/subject/Psychology/Cognitive/?view=usa&ci=9780195320671"
+	target=new><I>Computing the Mind: How the Mind Really Works</I> (2008)</a>
+	<BR>
+	<a href="http://kybele.psych.cornell.edu/~edelman/" target=new>Shimon Edelman</a>
+      </td>
+      <td>
+	<img src="no-self-no-spoon.jpg" title="Shimon Edelman" height=150>
+      </td>
+    </tr>
+  </table>
+  
+</DIV>
+
+
+<div  CLASS="slide">
+  <h1>a side remark: on the value of a broad perspective in science</h1>
+
+  <a href="http://en.wikipedia.org/wiki/Orion_%28mythology%29"
+  target=new><img src="Orion_aveugle_cherchant_le_soleil.jpg"
+  class="figure-right" 
+  title="Blind Orion looking for the sun" ></a>
+  <P>
+  <BR>
+  <a href="http://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants"
+  target=new>"If I have seen a little further it is by standing 
+  on the shoulders of Giants."</a>
+  <DIR><DIR>
+    <a href="http://en.wikipedia.org/wiki/Isaac_Newton" target=new>Isaac Newton</a> (February 5, 1676)
+  </DIR></DIR>
+
+</DIV>
+
+-->
+  
+
+
+<div  CLASS="slide">
+  <h1>is COMPUTATION just a metaphor?</h1>
+
+  <ul class="incremental">
+    <li>
+    the clockwork metaphor: the brain is like...
+    <img src="gearclock.jpg" height=125 align=top>
+    </li>
+    <li>
+    the switchboard metaphor: the brain is like...
+    <img src="telephone-switchboard.gif" height=125 align=top>
+    </li>
+    <li>
+    the computer metaphor: the brain is like...
+    <img src="Computer.jpg" height=125 align=top>
+    </li>
+    <li>
+    the truth: the brain is like...
+    <img src="question-mark.jpg" height=125 align=top>
+    </li>
+  </ul>
+  
+</DIV>
+
+
+
+
+<div  CLASS="slide">
+  <h1>COMPUTATION is what brains literally do for a living</h1>
+
+  <ul>
+    <li>
+    <font color=gray>the clockwork metaphor: the brain is like...</font>
+    <img src="gearclock.jpg" height=125 align=top>
+    </li>
+    <li>
+    <font color=gray>the switchboard metaphor: the brain is like...</font>
+    <img src="telephone-switchboard.gif" height=125 align=top>
+    </li>
+    <li>
+    <font color=gray>the computer metaphor: the brain is like...</font>
+    <img src="Computer.jpg" height=125 align=top>
+    </li>
+    <li>
+    the truth: the brain is <strike>&nbsp;like&nbsp;</strike>
+    <I>literally</I> a kind of <B>computer</B>.
+    <!--
+    The computer <a href="http://en.wikipedia.org/wiki/Metaphor"
+    target=new>metaphor</a> is not.
+    -->
+    </li>
+
+    </li>
+  </ul>
+  
+</DIV>
+
+
+
+
+
+
+<div  CLASS="slide">
+  <h1>the truth about the brain: it is a kind of computer</h1>
+
+  <P>
+  <BR>
+  How come the brain is a kind of computer?
+
+  <P>
+  <ul class="incremental">
+    <li><font color=gray>[the trivial reason]</font>
+    <BR>
+    Because everything is. [Consider again <a
+ href="https://en.wikipedia.org/wiki/Wigner" target=new>Wigner</a>'s <a
+ href="http://www.dartmouth.edu/~matc/MathDrama/reading/Wigner.html" target=new>comments</a>.]
+    </li>
+  </ul>
+
+</div>
+  
+
+
+
+
+<div  CLASS="slide">
+  <h1>the truth about the brain: it is a kind of computer</h1>
+
+  <img src="SMBC-analog-computation-20130719.png" title="SMBC" class="figure-right" height=450>
+  <P>
+  <BR>
+  How come the brain is a kind of computer?
+
+  <P>
+  <ul>
+    <li><font color=gray>[the trivial reason]</font>
+    <BR>
+    Because everything is. [Consider again <a
+ href="https://en.wikipedia.org/wiki/Wigner" target=new>Wigner</a>'s <a
+ href="http://www.dartmouth.edu/~matc/MathDrama/reading/Wigner.html" target=new>comments</a>.]
+    </li>
+  </ul>
+
+</div>
+  
+
+
+
+
+<div  CLASS="slide">
+  <h1>the truth about the brain: it is a kind of computer</h1>
+
+  <img src="evolution-by-Gahan-Wilson.png" class="figure-right" height=450
+  title="Well, that was a total waste of time">
+  <P>
+  <BR>
+  How come the brain is a kind of computer?
+
+  <P>
+  <ul>
+    <li><font color=gray>[the trivial reason]</font>
+    <BR>
+    Because everything is. [Consider again <a
+ href="https://en.wikipedia.org/wiki/Wigner" target=new>Wigner</a>'s <a
+ href="http://www.dartmouth.edu/~matc/MathDrama/reading/Wigner.html" target=new>comments</a>.]
+    </li>
+    <P>
+    <li><font color=gray>[the special reason]</font>
+    <BR>
+    Because the computing that the brain carries
+    out — e.g., in seeking a conspecific in <a href="http://kybele.psych.cornell.edu/~edelman/Psych-3140/RF-DavidField.jpg"
+    target=img>sensory data</a> — is what pays its bills. <a 
+    href="http://www.pbs.org/wgbh/evolution/library/10/2/text_pop/l_102_01.html"
+    target=new><B>Evolution</B></a> judges brains by the degree to
+    which they succeed in computing what they must compute to survive and
+    procreate.
+  </ul>
+  <P class="incremental">
+    Compare:
+    <BR>
+      — a piece of chalk computing its trajectory as it falls
+      <BR>
+      — a cash register
+  </P>
+
+</div>
+  
+
+
+<div  CLASS="slide">
+  <h1>what determines whether or not an object is a cash register?</h1>
+
+  <table cellspacing=20 align=right>
+    <tr>
+      <td><img src="cash-register-1.gif" height=150></td>
+      <td><img src="cash-register-2.jpg" height=150></td>
+      <td><img src="cash-register-3.jpg" height=150></td>
+    </tr>
+    <tr>
+      <td><img src="cash-register-4.jpg" height=150></td>
+      <td><img src="cash-register-5.jpg" height=150></td>
+      <td><img src="cash-register-6.gif" height=150></td>
+    </tr>
+  </table>
+  <P>
+    Selection (natural or artificial) pushes
+    information-processing systems (natural or artificial) to succeed in
+    processing information.
+  </P>
+  <HR>
+  <P class="incremental"><B>Cash-registerhood cannot be about what it IS MADE OF.</B></P>
+  <P class="incremental"><B>It must be about what it DOES.</B></P>
+
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>what determines whether or not an object is sentient? (= is of interest to psychology)</h1>
+
+  <table cellspacing=10>
+    <tr>
+      <td>
+	<img src="riddle-of-representation.jpg" height=300
+	title="the brain/mind riddle">
+      </td>
+      <td valign=center>
+	<!-- http://www.origami.vancouver.bc.ca/Gallery/jwu.html" -->
+	<img src="predator.jpg">
+      </td>
+    </tr>
+  </table>
+  <P>It cannot be about what it <B>IS MADE OF</B>.</P>
+  <P>It must be about what it <B>DOES</B>.</P>
+  <P class="incremental">[And no, brain scans are not the answer: all
+  they show is brain cells firing in patterns]</P> 
+  
+</DIV>
+
+
+
+<DIV CLASS="slide">
+  <h1>minds <I>consist</I> of computations: example #1 (perception)</h1>
+
+  <P>
+  <BR>
+  the <SC>lightness perception</SC> problem
+  <P>
+  <img src="lightness-problem.jpg" class="figure-right">
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>minds <I>consist</I> of computations: example #2 (thinking)</h1>
+
+  <img src="Wegmans-cashiers.jpg"  class="figure-right">
+  <P>
+  <BR>
+  the <SC>supermarket queuing</SC> problem
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>minds <I>consist</I> of computations: example #3 (action)</h1>
+
+  <P>
+  <BR>
+  <img src="cat-math-small.gif" class="figure-right" title="cat math" width=450>
+  <P>
+  the <SC>motor control</SC> problem
+  
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>minds <I>consist</I> of computations: example #3 (action)</h1>
+
+  <P>
+  <BR>
+  <video src="cat-calculating-jump.mp4" controls class="figure-right"
+	 title="cat math" width=450>
+    </video>
+  <P>
+  the <SC>motor control</SC> problem
+  
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>minds <I>consist</I> of computations: example #3 (action)</h1>
+
+  <P>
+  <BR>
+  <img src="cat-math-small.gif" class="figure-right" title="cat math" width=450>
+  <P>
+  the <SC>motor control</SC> problem
+  <P>
+    <video src="cat-jump-1.mov" height=255 width=320
+	   controls="controls" class="figure-left" >
+    </video>
+  
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>minds <I>consist</I> of computations: example #3 (action)</h1>
+
+  <P>
+  <BR>
+  <img src="cat-math-small.gif" class="figure-right" title="cat math" width=450>
+  <P>
+  the <SC>motor control</SC> problem
+  <P>
+  <video src="cat-fan.mov" height=255 width=320 controls="controls">
+  </video>
+  <P class="incremental">
+  [For a more auspicious example of cat antics, see <a
+ href="https://www.facebook.com/ClassWarKitteh/videos/1395549557156153/"
+  target=new>this video</a>]
+  </P>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>minds, computations, and a bet</h1>
+
+  <P>
+  <BR>
+    A standing bet that I offer:
+    <DIR><DIR>
+	For ANY aspect or faculty of the mind that you would care to
+	name, I can state and motivate a computational formulation.
+    </DIR></DIR>
+    <P>
+      <font color=gray>
+	For certain aspects and faculties of the mind, some actual
+	<I>understanding</I> is also available.
+      </font>
+    </P>
+    
+</DIV>
+
+
+
+<DIV CLASS="slide">
+  <h1>now: a refresher on computation</h1>
+
+  <P>
+  <BR>
+  <UL>
+    <li>
+    Dynamical systems
+    </li>
+    <P>
+    <li>
+    How to get complexity from simplicity
+    </li>
+    <P>
+    <li>
+    Turing Machines
+    </li>
+  </ul>
+
+</div>
+
+
+<!-- DYNAMICAL SYSTEMS -->
+
+
+<DIV  CLASS="slide">
+  <h1>a dynamical system: a piece of chalk + the earth, gravitating to each other</h1>
+  
+  <video src="dropnew.mov" width="320" height="495" controls="controls" class="figure-right">
+    </video>
+  <P>
+  <BR>
+  An object in free fall — part of a dynamical system<sup><font
+  color=red>*</font></sup> consisting of the 
+  object and the earth, gravitating to each other — <B>computes</B> its
+  instantaneous velocity and location, given the elapsed time (the key
+  factor being the <a href="http://www.astronomynotes.com/gravappl/s6.htm" 
+  target=new>acceleration due to gravity</a>).
+  <P>
+  <img src="office-chair.jpg" height=350 class="figure-left">
+  On the left: our experience of the world incorporates knowledge of
+  the dynamics of gravitation and other laws of physics.
+  <!-- my anticipation of falling down as I press the lever that releases
+  the chair and allows it to go down -->
+  <P>
+  <HR width=30% align=left>
+  <sup><font color=red>*</font></sup>A <a href="http://en.wikipedia.org/wiki/Dynamical_system"
+  target=new><SC>dynamical system</SC></a> is a system that computes
+  the succession of its <SC>states</SC> 
+  over <SC>time</SC> as prescribed by a function
+  of the current state (and possibly also past states and any
+  inputs). 
+  
+</div>
+
+
+
+
+<!--
+
+<DIV  CLASS="slide">
+  <h1>the phase portraits of three dynamical systems</h1>
+
+  <img src="HottonYoshimi10-fig1.png" title="three phase portraits">
+  <P>
+  <BR>
+  The <a href="http://en.wikipedia.org/wiki/Phase_portrait" target=new>phase portraits</a> of three simple dynamical systems:
+  <ul class=A>
+    <li>
+    A <a href="https://en.wikipedia.org/wiki/Harmonic_oscillator" target=new>harmonic oscillator</a>
+    </li>
+    <li>
+    An undamped <a href="https://en.wikipedia.org/wiki/Pendulum" target=new>pendulum</a>
+    </li>
+    <li>
+    A damped pendulum
+    </li>
+  </ul>
+
+</div>
+
+-->
+
+
+
+<DIV  CLASS="slide">
+  <h1>a dynamical system: the Game of Life</h1>
+
+  <video src="glider-gun.mp4" title="Gosper's glider gun (Conway's Game of Life)"
+	 controls="controls" class="figure-right" loop>
+  </video>
+  <P>
+  <BR>
+  <a href="http://en.wikipedia.org/wiki/John_Horton_Conway" target=new>Conway</a>'s game of <a
+  href="http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"
+  target=new><SC>Life</SC></a> is a (digital/discrete) dynamical system<sup><font color=red>*</font></sup> —
+  <P class="incremental">
+  Observe: it possesses a hierarchical structure.
+  </P>
+  <P class="incremental">
+  Hierarchical structure is what makes complexity tractable.
+  </P>
+
+</div>
+
+
+
+
+
+
+<!-- Complexity from simplicity; hierarchical abstraction -->
+
+<DIV  CLASS="slide">
+  <h1>complexity from simplicity: a check point</h1>
+
+  <P>
+  <BR>
+  Most behavioral tasks DO NOT reduce to a simple function that neatly maps
+  inputs to outputs in one step.
+  <P>
+  Compare, for example
+  <ul>
+    <li>playing <a
+		  href="https://en.wikipedia.org/wiki/Deep_Blue_versus_Garry_Kasparov"
+		  target=new>chess</a> or <a
+					    href="http://www.wired.com/2016/01/in-a-huge-breakthrough-googles-ai-beats-a-top-player-at-the-game-of-go/"
+					    target=new>Go</a></li>
+    with
+    <li>getting lunch</li>
+  </ul>
+  <P>
+  <HR>
+  <P class="incremental">
+  A complex problem is tractable insofar as it can be approached as a
+  <a href="http://en.wikipedia.org/wiki/Hierarchical"
+  target=new><SC>hierarchy</SC></a> of simpler problems.
+  </P>
+  <P class="incremental">
+  [NOTE that even then a closed-form ahead-of-time solution may not exist
+  and active "online" control may be required].
+  </P>
+  <B>Complexity emerges out of simplicity.</B>
+  </P> 
+
+</DIV>
+
+<!--
+
+<DIV  CLASS="slide">
+  <h1>hierarchical abstraction</h1>
+
+  <P>
+  <BR>
+  "Scientific knowledge is organized in levels, not because reduction
+  in principle is impossible, but 
+  [...] because <SC>nature is
+  organized in levels</SC>, and the pattern at each level is most clearly
+  discerned by abstracting from the detail of the levels far
+  below.
+  <img src="chineseboxes.jpg" align=right hspace=10>
+  <P>
+  And nature is organized in levels because hierarchic structures &#151;
+  systems of Chinese boxes &#151; provide the most viable form for any system
+  of even moderate complexity."
+  <DIR>  <DIR>  <DIR>
+    [from <I>The organization of complex systems</I> by <a
+ href="http://nobelprize.org/nobel_prizes/economics/laureates/1978/simon-autobio.html"
+ target=new>Herbert A. Simon</a> (1973)]
+  </DIR>  </DIR>  </DIR>
+
+</div>
+
+  -->
+  
+
+<DIV  CLASS="slide">
+  <h1>computing the mind HIERARCHICALLY, level by level</h1>
+
+  <img src="homunculus2.jpg" class="figure-right"
+  title="A recursive homunculus (drawing by S. Edelman)" height=400> 
+  <P>
+  <BR>
+  A computation that is reducible to a series of simple (= "stupid")
+  steps (perhaps hierarchically) is called <a
+ href="http://en.wikipedia.org/wiki/Effective_method" target=new><SC>effective</SC></a>.
+
+  <HR>
+  <P>
+  [An effective explanation of the mind would need no miracles and no <a
+  href="http://en.wikipedia.org/wiki/Homunculus#Homunculus_argument_or_fallacy_in_the_philosophy_of_mind"   
+  target=new>homunculus</a>.]
+  
+</div>
+
+
+
+<!-- Effective computation; Turing Machines -->
+
+<DIV  CLASS="slide">
+  <h1>effective computation</h1>
+
+  <P>
+  <BR>
+  A procedure P for achieving some desired result is called
+  <SC>effective</SC> or "mechanical" if:
+  <ol>
+    <li>
+    P is set out in terms of a <b>finite number of exact instructions</b>  
+    (each instruction being expressed by means of a finite number of
+    symbols); 
+    </li>
+    <li>
+    P will, if carried out without error, always produce the desired
+    result in a <b>finite number of steps</b>;
+    </li>
+  </ol>
+  <HR>
+  <P>
+  Because each step in an effective procedure &#151; even in a very complex one
+  &#151; is specified in simple terms, it can be executed by a machine whose
+  components are simple (stupid).
+
+  <!--
+  <P class="incremental">
+  What are such machines capable of?
+  </P>
+  -->
+
+  <!--
+  <P>
+  Together, the bundle of simple components <I>and</I> the procedure they
+  implement can be smart: <SC>complexity and sophistication effectively emerge
+  from simplicity.</SC>
+  -->
+  
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>an epitome of "complexity out of simplicity": the Turing Machine</h1>
+
+  <P><BR>
+  A key conceptual tool for understanding how complexity can emerge out of
+  simplicity is the <b><a href="http://www.turing.org.uk/turing/"
+  target=new>Turing</a> 
+  Machine</b>.
+  <P>
+  The Turing Machine is a very general formalism for describing an
+  <SC>effective</SC> mapping between input and output symbol streams.
+  <P>
+  <!--
+  You may think of it as an abstract <SC>computer</SC>.
+  -->
+  
+</div>
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>TMs are a general formalism for effectively mapping inputs to outputs</h1>
+
+  <img src="TM.png" class="figure-right" width=55%>
+  <P>
+  <BR>
+  A <a href="http://en.wikipedia.org/wiki/Turing_machine"
+  target=new><SC>Turing Machine</SC></a> consists of:
+  <ol>
+    <li>
+    a table that specifies exactly how the machine's <SC>state</SC> changes...
+    </li>
+    <li>
+    ...in response to <SC>symbols</SC>...
+    </li>
+    <li>
+    ...that it <SC>reads</SC> (and <SC>writes</SC>)...
+    </li>
+    <li>
+    ...on a <SC>memory tape</SC>.
+    </li>
+  </ol>
+
+</div>
+
+
+<DIV  CLASS="slide">
+  <h1>the Turing Machine is a very powerful formalism</h1>
+
+  <img src="TM.png" class="figure-right" width=55%>
+  <P>
+    Amazingly, various apparent enhancements (such as adding more tapes or
+    more read/write heads) do not increase the power of the <a
+							      href="http://plato.stanford.edu/entries/turing-machine/" 
+							      target=new>Turing
+      Machine</a> as originally defined.
+  </P>
+  <P>
+    <B>Any general-purpose programmable <a
+					  href="http://en.wikipedia.org/wiki/Computer"
+					  target=new>computer</a> has
+      that same power.</B>
+  </P>
+
+</div>
+
+
+<!--
+
+<DIV  CLASS="slide">
+  <h1>[a fun digression: a Turing Machine made out of Lego]</h1>
+  <P>
+  <BR>
+  <video src="Lego-TM.mov" height=256 width=320  autoplay=false controller=true>
+
+</DIV>
+
+-->
+
+
+
+<DIV  CLASS="slide">
+  <h1>how much should we care about Turing Machines?</h1>
+
+  <img src="miracle.gif" height=500 class="figure-right">
+
+  <P>
+  <BR>
+  The TM is a proof of the principle that very complex computations can be
+  broken down into sequences of very simple ones.
+  <HR>
+    To the extent that cognitive computations can be
+    expressed as sequences of <I>very simple</I> elementary steps (such as
+    TM operations), cognition can be explained so that there is no "devil in
+    the details" and no recourse to miracles.
+    <HR>
+
+</div>
+  
+
+
+  
+<DIV  CLASS="slide">
+  <h1>Turing Machines and dynamical interactive computation</h1>
+
+  <img src="turingmachine.gif" class="figure-right">
+  <P>
+  <BR>
+    IMPORTANTLY, real behavior does not reduce to completing a computation
+  that maps a fully given input to an output: DYNAMICAL ONGOING CONTROL is typically
+    needed.
+    <!--
+  <P>
+    <font color=gray>[For some relevant developments, see
+    <a href="http://research.cs.queensu.ca/home/akl/cisc879/papers/SELECTED_PAPERS_FROM_VARIOUS_SOURCES/turing04.pdf"
+       target=new><I>Turing's Ideas
+	and Models of Computation</I></a> by E. Eberbach, D. Goldin, and
+    P. Wegner (2004).]</font>
+  </P>
+-->
+
+</div>
+
+
+  
+
+<DIV  CLASS="slide">
+  <h1>how much should we care about Turing Machines?</h1>
+
+  <img src="human-Turing-Machine.png" class="figure-right" height=225>
+  <P>
+    [<font color=gray>The paper, published in <I>Trends in Cognitive Sciences</I> 15:293-300
+      (2011), can be found 
+      <a href="http://www.unicog.org/publications/ZylberbergDehaeneRoelfsemaSigman_TuringMachine_TICS2011.pdf"
+	 target=pap>here</a>.</font>]
+  </P>
+  <HR>
+  <P class="incremental">
+    The brain can <a href="https://en.wikipedia.org/wiki/Emulation"
+    target=new>EMULATE</a> (carry on the operations that correspond to
+    the running of) a Turing Machine, but this is not its NATIVE mode
+    of operation. There is always a difference between native
+    computation and emulation (more about this later in the course).
+  </P>
+  
+</div>
+
+
+<!-- 
+
+<DIV  CLASS="slide">
+  <h1>an example of a TM in action</h1>
+
+  <video src="tmScreencast.mov" height=548 width=626
+  autoplay=false controller=true align=right hspace=20>
+  <P>
+  <BR>
+  A  <a href="http://ironphoenix.org/tril/tm/"
+  target=new>program</a> that examines a string of symbols and decides
+  whether or not it is a <a href="http://en.wikipedia.org/wiki/Palindrome"
+  target=new>palindrome</a> &#151;
+  <P>
+  <HR>
+  <P>
+  Examples:
+  <DIR>
+  <SC>was it a cat i saw</SC>
+  </DIR>
+  <DIR>
+  <SC>BABBBAABBBAB</SC>
+  </DIR>
+  
+</div>
+
+<DIV  CLASS="slide">
+  <h1>an example of a TM in action</h1>
+
+  <video src="tmScreencast.mov" height=548 width=626 autoplay=false 
+  controller=true align=right hspace=20>
+  <P>
+  <BR>
+  NOTE: <I>the program itself can be read off the tape</I> &#151; which means that the
+  machine itself can modify its own program and <SC>learn</SC> (remember the <a
+  href="http://en.wikipedia.org/wiki/Zen" target=new>Zen</a> hot dog).
+  <P>
+  <img src="hot-dog.jpg">
+
+</div>
+
+
+-->
+
+
+
+<DIV  CLASS="slide">
+  <h1>Turing Machines, brains, dynamics, and representation</h1>
+
+  <P>
+  <BR>
+  A Turing Machine and the brain are both examples of
+  <B><SC>dynamical systems</SC></B> with a very rich capacity (1) for
+  stringing together elementary actions and (2) for building up 
+  hierarchically structured complex actions out of simple ones.
+  </P>
+  <P>
+  However, brains are very much unlike — and with regard to what they
+  compute natively, entirely unlike — Turing Machines.
+  </P>
+  <P>
+  Functionally, brains particularly excel at ongoing
+  control of flexible behavior.<BR> 
+  In this, and in everything else that brains do, they rely on the
+  critically important ability to REPRESENT cognitive
+  PROBLEM AND SOLUTION SPACES, including the dynamics of the world. 
+  <HR>
+
+  <table>
+    <tr>
+      <th>
+	a dynamical system<BR>(e.g., a brain, or a computer)
+      </th>
+      <td>
+	state 1
+      </td>
+      <td>
+	&rarr;
+      </td>
+      <td>
+	state 2
+      </td>
+      <td>
+	&rarr;
+      </td>
+      <td>
+	state 3
+      </td>
+      <td>
+	&rarr;
+      </td>
+      <td>
+	[...]
+      </td>
+    </tr>
+    <tr>
+      <th>
+	a dynamical system<BR>(in the world at large)
+      </th>
+      <td>
+	state A
+      </td>
+      <td>
+	&rarr;
+      </td>
+      <td>
+	state B
+      </td>
+      <td>
+	&rarr;
+      </td>
+      <td>
+	state C
+      </td>
+      <td>
+	&rarr;
+      </td>
+      <td>
+	[...]
+      </td>
+    </tr>
+  </table>
+  <HR>
+  
+</DIV>
+
+
+
+<!--
+
+<DIV  CLASS="slide">
+  <h1>a Turing Machine is a kind of dynamical system</h1>
+
+  <P>
+  <BR>
+  A Turing Machine is, by definition, a kind of dynamical system:
+  <DIR>
+    &#151; a TM is a digital (discrete) dynamical system whose state
+    changes over time according to rules defined in terms of the current state
+    and the tape input.
+  </DIR>
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>the brain is a dynamical system</h1>
+
+  <video src="aud.mpg" height=416 width=400 autoplay=false controller=true
+  align="right">
+  <img src="MEGSUBJ_2.jpg">
+  <P>
+  [Magnetoencephalography (<a
+ href="http://en.wikipedia.org/wiki/Magnetoencephalography"
+  target=new>MEG</a>) data collected by the <a 
+  href="http://tng.ccs.fau.edu/projects/brain-imaging" 
+  target=new>Theoretical Neuroscience Group</a> at FAU and CNRS]
+  <HR>
+    A <a href="http://en.wikipedia.org/wiki/Dynamical_system"
+  target=new><SC>dynamical system</SC></a> is a system whose state changes
+  over time according to a rule that is defined in terms of the current
+  state... and any input.
+
+</div>
+
+-->
+
+
+
+<DIV  CLASS="slide">
+  <h1>the basic explanatory concepts coming together</h1>
+
+  <img src="riddle-of-representation.jpg" height=150 class="figure-right" title="the brain/mind riddle">
+  <table>
+    <tr>
+      <th>
+	a dynamical system<BR>(e.g., a brain, or a computer)
+      </th>
+      <td>
+	state 1
+      </td>
+      <td>
+	&rarr;
+      </td>
+      <td>
+	state 2
+      </td>
+      <td>
+	&rarr;
+      </td>
+      <td>
+	state 3
+      </td>
+      <td>
+	&rarr;
+      </td>
+      <td>
+	[...]
+      </td>
+    </tr>
+    <tr>
+      <th>
+	a dynamical system<BR>(e.g., a brain, or a computer)
+      </th>
+      <td>
+	state I
+      </td>
+      <td>
+	&rarr;
+      </td>
+      <td>
+	state II
+      </td>
+      <td>
+	&rarr;
+      </td>
+      <td>
+	state III
+      </td>
+      <td>
+	&rarr;
+      </td>
+      <td>
+	[...]
+      </td>
+    </tr>
+    <tr>
+      <th>
+	a dynamical system<BR>(in the world at large)
+      </th>
+      <td>
+	state A
+      </td>
+      <td>
+	&rarr;
+      </td>
+      <td>
+	state B
+      </td>
+      <td>
+	&rarr;
+      </td>
+      <td>
+	state C
+      </td>
+      <td>
+	&rarr;
+      </td>
+      <td>
+	[...]
+      </td>
+    </tr>
+  </table>
+  <HR>
+
+  <ul class="incremental">
+    <li><SC>computation</SC> is everywhere: every <SC>dynamical system</SC> computes
+    its next state;</li>
+    <li>some computations <SC>represent</SC> each other because of their
+    matching <SC>causal organization</SC> (dynamics);</li>
+    <li>recurring causal patterns of events in the world make <SC>forethought</SC> possible;</li>
+    <li><SC>minds</SC> evolve and function by making use of all of the above.</li>
+  </ul>
+  <P>
+  MINDS are bundles of dynamical, open-ended COMPUTATIONS over
+  REPRESENTATIONS of the world that brains carry out so as to
+  maximize the probability of their continuing existence, by
+  exercising FORETHOUGHT.
+  </P>
+
+</DIV>
+
+
+<DIV CLASS="slide">
+  <h1>[EXTRA: concerning forethought and prediction]</h1>
+
+  <img src="Sivak-thermodynamics-of-prediction-abstract.png"
+  height=500
+  title="forethought and prediction">
+
+</div>
+
+
+<!-- WHAT NEXT -->
+
+<DIV CLASS="slide">
+  <h1>what next? (the approach that this course takes)</h1>
+
+<!--   <img src="chimp-eating.jpg" class="figure-right" title="food --
+  --   thought"> -->
+  <font color=gray>
+  <ul class="outline">
+    <li>food for thought &#151; superficial accounts of aspects of cognition
+    <ul>
+      <li>perception</li>
+      <li>memory</li>
+      <li>learning</li>
+      <li>decision making and action</li>
+      <li>sequential behavior</li>
+      <li>language</li>
+      <li>reasoning</li>
+      <li>problem solving</li>
+    </ul>
+    </li>
+  </ul>
+  </font>
+  <P>
+  <HR>
+<!--  <img src="evolution-1.gif" title="tools for thinking"
+  class="figure-right"> -->
+  <ul>
+    <li>
+    tools for thinking &#151; <BR> in what terms cognition can be understood, and
+    how it should be studied:
+    <ul>
+      <li>computational analysis of the <B>problems</B> that arise in
+      cognition</li>
+      <P>
+      <li><B>experiments</B> motivated by, or shedding light on, computational theories</li>
+      <P>
+      <li>a glimpse of the power and the limitations of <B>neural computation</B></li>
+      <P>
+      <li>insights into actual <B>brain mechanisms</B> of cognition</li>
+    </ul>
+    </li>
+  </ul>
+
+</div>
+
+
+<DIV CLASS="slide">
+<h1>what next? (the content)</h1>
+
+<div style="font-size: 70%">
+  <ul>
+    <li>
+    Week 1. Motivation.
+    </li>
+    <li>
+    Week 2. Universal tools, I: methodology.
+    </li>
+    <li>
+    Week 3. Universal tools, II: probability, Bayes.
+    </li>
+    <li>
+    Week 4. Universal tools, III: similarity, generalization.
+    </li>
+    <li>
+    Week 5. Universal tools, IV: representing similarities, veridicality.
+    </li>
+    <li>
+    Week 6. Memory.
+    </li>
+    <li>
+    Week 7. Actions and consequences, reinforcement learning.
+    </li>
+    <li>
+    Week 8. Higher cognition, I: language.
+    </li>
+    <li>
+    Week 9. Higher cognition, II: reasoning. 
+    </li>
+    <li>
+    Week 10. Higher cognition, III: general intelligence,
+    problem-solving, analogy, creativity.
+    </li>
+    <li>
+    Week 11. Real neural computation, I.
+    </li>
+    <li>
+    Week 12. Neural computation, II.
+    </li>
+    <li>
+    Week 13. Neural computation, III. Brains.
+    </li>
+    <li>
+    Week 14. Advanced topics.
+    </li>
+  </ul>
+</div>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>administrative details</h1>
+
+  <P>
+  <BR>
+  The team:
+
+  <ul>
+    <li><a
+    href="http://kybele.psych.cornell.edu/~edelman"
+    target=new><B>Shimon Edelman</B></a>
+    <BR>Office hours: Tuesdays, 11:10am-12:00pm, via Zoom (see Canvas for the link).
+    </li>
+    <li><B>Pablo Contreras</B>
+    <BR>Office hours: TBA.
+    </li>
+    </ul>
+    </P>
+    <HR>
+      <P>
+	<ul>
+	  <li>Canvas!</li>
+	  <li>The Cornell Learning Strategies Center (LSC) maintains a page
+	    that can help you find study partners:
+	    <DIR>
+	      <A href="http://lsc.cornell.edu/studying-together/"
+		 target=new>http://lsc.cornell.edu/studying-together/</a>
+	    </DIR>
+	  </li>
+	</ul>
+    </P>
+
+</div>
+
+
+<!--
+
+<DIV class="slide">
+  <h1>technical details: how to find where this course lives</h1>
+
+  <img src="Shimon-googled-21-Jan-2011.png" title="Shimon googled on Jan. 21, 2011">
+  
+</DIV>
+
+-->
+
+
+<DIV CLASS="slide">
+  <h1>technical details: navigating the web site</h1>
+
+  <P>
+  <BR>
+  The <B>home page</B>:
+  <P>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color=red
+  size=+3>http://kybele.psych.cornell.edu/~edelman/Psych-3140</font>
+
+  <P> To <B>navigate</B> the slides for a given lecture, use the keyboard
+  arrows (click the help button in the toolbar below for help).
+
+  <P> To get a (relatively) <B>printer-friendly</B> version of a lecture
+  slide set, press "A".
+  <P>
+  
+
+</DIV>
+
+
+
+<!--
+
+<DIV CLASS="slide">
+<h1>administrative details: getting credit</h1>
+
+  <P>
+  <BR>
+  Components of the <B>final grade</B> (3140 and 6140 students):
+  <table cellspacing=10>
+    <tr>
+      <td>1st prelim:</td>
+      <td>20%</td>
+      <td>Thursday, February 28, in class</td>
+      <td>3/4 short essays (75%) and 5 multiple-choice questions (25%)</I></td> 
+    </tr>
+    <tr>
+      <td>2nd prelim:</td>
+      <td>20%</td>
+      <td>Thursday, March 28, in class</td>
+      <td>3/4 short essays (75%) and 5 multiple-choice questions (25%)</I></td> 
+  </tr>
+  <tr>
+    <td>weekly write-ups:</td>
+    <td>20%</td>
+    <td>via email to the TA</td>
+    <td>(see <a
+    href="Psych-3140-computational-psychology-syllabus.pdf" target=new>syllabus</a> for instructions)</td>
+    </tr>
+    <tr>
+      <td>final exam:</td>
+      <td>40% (6140: 30%)</td>
+      <td><a href="http://registrar.sas.cornell.edu/Sched/EXSP.html"
+	target=new>[date/time TBA]</a> in TBA<BR>NO EXCEPTIONS</td> 
+      <td><I><B>cumulative</B>; 3/4 short essays (75%) and 10 multiple-choice questions (25%)</I></td> 
+    </tr>
+  </table>
+
+  <P>
+  <hr>
+  <P>
+  <B>Note:</B> up to 3 bonus points can be earned through participation in
+  experiments advertised on <a href="https://cornellpsych.sona-systems.com/Default.aspx?ReturnUrl=%2f"
+  target=new>SONA</a>. These get added to the final course score before it is 
+  converted into a letter grade. 
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>administrative details: getting credit</h1>
+
+  <P>
+  <BR>
+  To get <B>credit</B> (3140 and 6140 students):
+  <ul>
+    <li>attend the lectures;</li>
+    <P>
+    <li>read the assigned book chapters and papers (see the <a
+    href="Psych-3140-computational-psychology-syllabus.pdf" target=new>reading list</a>; the PDFs of the papers
+      are on Blackboard);</li>
+    <P>
+      <li>submit the weekly write-ups</li>
+    <P>
+    <li>do the exams.</li>
+  </ul>
+  
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>administrative details: getting credit</h1>
+
+  <P>
+  <BR>
+  To get <B>graduate credit</B> (6140 students only): 
+  <ul>
+    <li>attend the lectures;</li>
+    <P>
+    <li>read the assigned book chapters and papers (see the <a
+    href="Psych-3140-computational-psychology-syllabus.pdf" target=new>reading list</a>);</li>
+    <P>
+      <li>submit the weekly write-ups</li>
+    <P>
+    <li>read some of the extra papers from the reading list;</li>
+    <P>
+    <li>do the exams;</li>
+    <P>
+    <li>submit a 1,000 to 3,000-word final <a href="614-essay.html" target=new>essay</a> (in PDF via email to Shimon by
+    Monday, May 15, noon).</li>
+    <P>
+  </ul>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>administrative details:  course policy</h1>
+
+  <P>
+  <BR>
+  <ul>
+    <li>
+    <B>Laptops, tablets, and smartphones</B> may be used in class only for taking notes or browsing the
+    course website or Blackboard. Any other use will be deemed <a
+    href="http://www.theuniversityfaculty.cornell.edu/AcadInteg/code.html#misconduct"
+    target=new>academic misconduct</a> and will result in a grade
+    penalty.
+    </li>
+    <li>
+    <B>Make-up exams:</B> none are planned.
+    </li>
+    <li>
+    <B>Missing an exam</B> without notifying the instructor <I>ahead of
+    time</I> (before the exam starts) of the reason for doing so will result
+    in a grade of 0. 
+    </li>
+   </ul>
+
+</div>
+
+-->
+
+
+<DIV CLASS="slide">
+  <h1>readings: the book and the papers</h1>
+
+  <P>
+  <BR>
+  <ul>
+    <li>
+    The textbook is <a
+      href="http://www.amazon.com/Computing-Mind-How-Really-Works/dp/0195320670/ref=sr_1_1?ie=UTF8&qid=1327335897&sr=8-1"
+      target=new><I>Computing the Mind: How the Mind Really Works</I></a><BR>
+      (Oxford University Press, 2008).
+  </li>
+  <P>
+  <li>It is available in the Campus Store (if sold out, you
+  <B>must</B> notify the Book Department, so that they order
+  more!)</li>
+  <!--
+  <P>
+  <li>The book is lurking on Facebook (in the form of a <a
+  href="http://www.facebook.com/pages/Computing-the-Mind/22775925605?ref=mf"
+  target=fb>Page</a>). Feel free to socialize with it.
+  </li> 
+  -->
+  <P>
+  <li>
+  I maintain an online <a
+  href="http://kybele.psych.cornell.edu/~edelman/Computing-the-Mind-corrigenda.html"
+  target=mood>list of corrections</a>. If you find an error, <I>please</I>
+  let me know.
+  </li>
+  <li>
+    <font color=gray>
+      For an informal introduction to the material covered in this course,
+ see my slightly newer (and much lighter) book, <a
+ href="https://www.kirkusreviews.com/book-reviews/shimon-edelman/happiness-pursuit-neuroscience-good-life/"
+ target=new><I>The
+	  Happiness of Pursuit</I></a> (Basic Books, 2012).
+    </font>
+  </li>
+  <li>
+    The syllabus has altogether too many references (I can never
+    resist listing a paper that I think is relevant and clever) — but
+    the number of assigned readings per week is really small. You can
+    do it!
+  </li>
+</ul>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>closing remarks for today</h1>
+
+  <P>
+  There will be math</a>...&nbsp;&nbsp;
+  \(
+  \bar{L}\left(\tilde{\textbf{x}}\mid\textbf{y}\right) =
+  \int_{\textbf{x}} L\left(\tilde{\textbf{x}},\textbf{x}\right)
+  p\left(\textbf{x}\mid \textbf{y}\right) d\textbf{x}
+  \)
+  </P>
+  <P class="incremental">
+    ...but it's nothing you can't manage.
+  <img src="calculus-defused.jpg" height=550>
+  </P>
+    <!--
+  <a
+ href="http://www.wordsinspace.net/wordpress/2012/03/17/parabolic-post-hermeneutics/"
+  target=new><img src="Zak-Smith-Pynchon-double-integral.jpg"
+  title="One of the double integrals in Pynchon's `Gravity's Rainbow'"
+		  height=400
+		  class="figure-right"></a>
+-->
+  
+  <!--
+<table cellspacing=20>
+  <tr>
+    <td><img src="ESRB_E.jpg"></td>
+    <td>
+      "Contents suitable for persons ages six and older<SUP>*</SUP>. They may contain
+      some comic mischief, coarse language, or minimal violence." 
+    </td>
+  </tr>
+</table>
+
+<P>
+<img src="ESRB-banner.gif">
+
+<P>
+<HR align=left width=30%>
+<SUP>*</SUP> This does not mean the course is easy. Remember, some six year
+ olds become Bart, and some &#151; Lisa.
+</P>
+-->
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>and now to work</h1>
+
+  <P>
+    I will stay on Zoom for a while, in case there are any questions.
+  </P>
+
+<!--
+  <center>
+  <img src="we-begin.jpg" title="and now we begin..." align=center height=550>
+  </center>
+-->
+
+</div>
+
+<div class="footer">
+<p>Last modified: Tue Feb 9 2021 at 09:12:29 EST</p>
+</div>
+</body>
+</html>

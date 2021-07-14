@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>Computing Societies</title>
+<script src="http://kybele.psych.cornell.edu/~edelman/Computing-Societies/listCollapse.js" type="text/javascript"
+ language="javascript1.2">
+</script>
+<script src="http://kybele.psych.cornell.edu/~edelman/Computing-Societies/cookie.js" type="text/javascript"
+ language="javascript">
+</script>
+<script src="http://kybele.psych.cornell.edu/~edelman/Computing-Societies/nicelists.js" type="text/javascript"
+ language="javascript">
+</script>
+</head>
+
+<body text="#000000" bgcolor="#AFAFFF" link="#0000EE" vlink="#551A8B"
+alink="#FF0000">
+
+<!--
+collapsible lists from:
+http://www.howtocreate.co.uk/tutorials/jsexamples/listCollapseExample.html
+
+uncomment these if not using nicelists.js:
+compactMenu('lecturesID',true,'&plusmn; ',true);
+compactMenu('admID',true,'&plusmn; ');
+-->
+
+<body
+onload="stateToFromStr('lecturesID',retrieveCookie('menuState'));"
+onunload="setCookie('menuState',stateToFromStr('lecturesID'),31536000);"
+>
+
+<base href="">
+
+<style>
+* {
+	font-size:12px;
+	font-family:Verdana;
+}
+ul {
+	margin:0px 0px 0px 18px;
+	padding:0px;
+}
+li {
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+	border:0px;
+	line-height:14px;
+	background-image: url(http://kybele.psych.cornell.edu/~edelman/Computing-Societies/more_to_come.gif);
+	background-position: top left;
+	background-repeat: repeat-y;
+}
+.liLastChild {
+	background-image: url(http://kybele.psych.cornell.edu/~edelman/Computing-Societies/empty.gif);
+}
+.liBefore {
+	padding:0px;
+	margin:0px 2px 0px 0px;
+	padding:0px;
+	display:inline;
+}
+li .plus_minus {
+	margin-left:-38px;
+	padding:0px 20px 0px 0px;
+	border:0px;
+}
+
+</style>
+
+<h4>Computing Societies</h4>
+<p>
+
+<small>
+&#151; <img SRC="../work2.gif" height=37 width=46 align=right>future-dated
+      materials always under construction
+</small>
+
+<P>
+<B>overview:</B>
+<ul id="readID">
+  <li><a href="readme-first.html" target=contentframe>READ ME
+      FIRST</a></li>
+  <P>
+  <li><a href="Edelman-CIS-syllabus.pdf" target=read>syllabus</a></li>
+</ul>
+
+<P>
+<B>the lectures:</B>
+<ul id="lecturesID">
+  <li><a href="unit-1.html" target=contentframe>1. Introduction</a></li>
+  <li><a href="unit-2.html" target=contentframe>2. Extended evolutionary synthesis</a></li>
+  <li><a href="unit-3.html" target=contentframe>3. A view from cognitive and social psychology</a></li>
+  <li><a href="unit-4.html" target=contentframe>4. A view from sociology</a></li> 
+  <li><a href="unit-5.html" target=contentframe>5. Introduction to Agent-Based Modeling (ABM)</a></li> 
+  <li><a href="unit-6.html" target=contentframe>6. ABM and complexity</a></li>
+  <li><a href="unit-7.html" target=contentframe>7. Using ABM to seek patterns</a></li>
+  <li><a href="unit-8.html" target=contentframe>8. Modeling civil violence</a></li>
+  <li><a href="unit-9.html" target=contentframe>9. Learning norms</a></li>
+  <li><a href="unit-10.html" target=contentframe>10. Political institutions</a></li> 
+  <li><a href="unit-11.html" target=contentframe>11. Inequality</a></li> 
+  <li><a href="unit-12.html" target=contentframe>12. Inequality (cont.)</a></li> 
+  <li><a href="unit-13.html" target=contentframe>13. Inequality (cont.)</a></li> 
+  <li><a href="unit-14.html" target=contentframe>14. Happiness</a></li> 
+  <li><a href="unit-15.html" target=contentframe>15. Happiness (cont.)</a></li> 
+  <li><a href="unit-16.html" target=contentframe>16. Morality</a></li> 
+  <li><a href="unit-17.html" target=contentframe>17. Morality (cont.)</a></li> 
+  <li><a href="unit-18.html" target=contentframe>18. Morality (cont.)</a></li> 
+  <li><a href="unit-19.html" target=contentframe>19. Morality (cont.)</a></li> 
+  <li>20. Project presentations</li> 
+</ul>
+
+<P>
+  <B>interactive forum:</B>
+  <ul id="intID">
+    <li>
+      <a href="https://edu.cathaypath.com/console/course/62/info"
+	 target=forum>bulletin board</a>
+    </li>
+    <!--
+	<li>
+	  <a href="questions-2014.html" target=quest>questions</a>
+	</li>
+	-->
+  </ul>
+</P>
+
+<hr>
+
+<script type="text/javascript" language="javascript1.2"><!--
+
+compactMenu('lecturesID',false,'<img src="plus_.gif" onclick="togglePlusMinusButton(this); return true;" class="plus_minus" />', true);
+
+compactMenu('readID',false,'<img src="plus_.gif" onclick="togglePlusMinusButton(this); return true;" class="plus_minus" />', true);
+
+compactMenu('intID',false,'<img src="plus_.gif" onclick="togglePlusMinusButton(this); return true;" class="plus_minus" />', true);
+
+setUpListTree('lecturesID');
+setUpListTree('readID');
+setUpListTree('intID');
+
+//--></script>
+
+<p>Last modified: Wed Jul 22 2020 at 22:57:50 EDT</p>  
+</body>
+</html>

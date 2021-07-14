@@ -1,0 +1,1021 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Psych 3140/6140 wk-5-1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2014-2019 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- 
+<rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+<permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+<requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+<permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+<requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+</License>
+</rdf:RDF>
+-->
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+    Week 5.1 &#151; 
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Psych 3140/6140</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Week 5: universal tools, IV</h2>
+    <h3>&nbsp;Lecture 5.1: the representation of similarities; veridicality</h3>  
+  </div>
+  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%>
+
+</div>
+<!-- END COVER PAGE -->
+
+
+<!-- ---------------------------------------------------------------------------------- -->
+<!-- LIGHTNESS -->
+
+
+
+<div  CLASS="slide">
+  <h1>a universal tool for recognition and representation</h1>
+
+  <img src="rbf.png" class="figure-right" height=250>
+  <P>
+  <BR>
+  Ensembles of TUNED UNITS are great building blocks for:
+  <ul>
+    <li>
+    FUNCTION APPROXIMATION, as used in object recognition and more
+    generally in classification and regression tasks
+    </li>
+    <li>
+    DIMENSIONALITY REDUCTION, as used in embedding 
+    representations into spaces that have manageably few dimensions
+    </li>
+  </ul>
+  
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>constancy and the nature of perception</h1>
+
+  <img src="vision-flowchart.gif" class="figure-right" height=450>
+  <P>
+  <BR>
+  <font size=+3>
+  All perceptual problems share the same computational structure,
+  </font>
+  illustrated on the right.
+  <P>
+  <HR>
+  <P>
+  What is "intrinsic" and what is "extrinsic" depends on the task.
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1 >the problem of dimensionality</h1>
+
+  <table cellspacing=25>
+    <tr>
+      <td><img src="Chicken.jpg" height=250></td>
+      <td><img src="some-spectra.gif" height=250></td>
+    </tr>
+    <tr>
+      <td align=center>a multidimensional chicken</td>
+      <td align=center><font color=gray>a multidimensional illumination space</font></td>
+    </tr>
+  </table>
+  <P>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1 >the problem of dimensionality</h1>
+
+  <table cellspacing=25>
+    <tr>
+      <td><img src="Chicken.jpg" height=250></td>
+      <td><img src="some-spectra.gif" height=250></td>
+    </tr>
+    <tr>
+      <td align=center>a multidimensional chicken</td>
+      <td align=center><font color=gray>a multidimensional illumination space</font></td>
+    </tr>
+  </table>
+  Solution: <SC><B>assume</B></SC> that the world is statistically well-behaved
+  &#151;
+  <ul>
+    <li>a few dimensions suffice to distinguish between chickens and
+    ducks, or between horses and donkeys;</li>
+    <li><font color=gray>a few dimensions <a
+ href="http://books.google.com/books?id=g4T-gP7JCXIC&pg=PA60&lpg=PA60&dq=judd+illumination+pca&source=web&ots=2ots-LswDz&sig=I0inTDLwAsJ-H8dSn6Eq2HbTmeI&hl=en&sa=X&oi=book_result&resnum=2&ct=result"
+ target=new>suffice</a> to characterize illumination.</font></li>
+ </ul>
+
+</div>
+
+-->
+
+
+<DIV CLASS="slide">
+  <h1>(I) recognition from examples; (II) representation <strike>&nbsp;by&nbsp;</strike> of similarity</h1>
+
+  <img src="world-to-brain-mapping.png" height=250 class="figure-right">
+  <P>
+  <BR>
+  If the world-to-brain mapping is <a href="http://en.wikipedia.org/wiki/Smooth_function"
+				      target=new>smooth</a>,
+				      shape constancy and veridical
+  perception are possible:
+  <ul>
+    <li>SHAPE CONSTANCY because view and shape spaces can then be
+    interpolated from examples (using regression).
+    </li>
+    <li>VERIDICAL PERCEPTION because a smooth world-to-representation
+      space mapping preserves local similarities.
+    </li>
+  </ul>
+  <HR>
+  <P>
+  <font color=red>EXTRA:</font> 
+  <font color=gray>"A generic smooth and regular mapping \(F\) will
+	       [...] support veridical 
+  representation, if the aim is <B>approximate and local preservation of
+  similarity ranks</B>. [...] Intuitively, a
+	       <a href="https://en.wikipedia.org/wiki/Conformal_map"
+  target=new>conformal</a> mapping is locally 
+  an <a href="https://en.wikipedia.org/wiki/Isometry"
+  target=new>isometry</a>; a
+  <a href="https://en.wikipedia.org/wiki/Quasiconformal_mapping"
+  target=new>quasiconformal</a> mapping is locally 
+  <a href="https://en.wikipedia.org/wiki/Affine_transformation"
+  target=new>affine</a>. Under such  
+  a mapping, the ranks of distances between points are preserved 
+  approximately, and on a small scale. Because any
+  <a href="https://en.wikipedia.org/wiki/Diffeomorphism" target=new>diffeomorphism</a>
+  restricted to a
+  <a href="https://en.wikipedia.org/wiki/Compact_space" target=new>compact</a> subset of its domain is quasiconformal, any
+  smooth and regular mapping \(F\) will result in a representation that is
+  locally approximately veridical. In other words, similarities among
+  shapes that are close to each other in the distal shape space will be
+  represented faithfully." (Edelman, 1999, p.108)</font>
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>view spaces are continuous and (mostly) smooth</h1>
+
+  <img src="calf-shape-view-space.png" height=450 class="figure-right">
+  <img src="Raetz-1-head.jpg" title="a set of drawings by M. Raetz">
+    <P>
+      <BR>
+    
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>view spaces AND shape spaces are continuous and (mostly) smooth</h1>
+
+  <img src="Edelman-Godzilla-view-and-shape-space.png" height=500 class="figure-right">
+    <P>
+      <BR>
+	Illustrated here are four samples each from the view spaces of
+	a human (left) and Godzilla, as well as seven samples from the
+	human-Godzilla morph curve passing through their joint shape
+	space. 
+    
+</div>
+
+<!--
+<DIV CLASS="slide">
+  <h1>a general approach to view and shape space interpolation from examples</h1>
+
+  <img src="Edelman-Godzilla-view-and-shape-space.png" height=500 class="figure-right">
+    <P>
+      <BR>
+    
+</div>
+-->
+
+<DIV CLASS="slide">
+  <h1>interpolation from examples for object recognition: what needs to happen</h1>
+
+  <img src="generic-interpolation-mechanism.png" height=500 class="figure-left">
+  <P>
+  <BR>
+  The desired response of a mechanism that is TUNED to a cow shape to
+  a series of cow views, as well as to views of shapes that
+  progressively differ from that of a cow.
+    
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>a generic mechanism for interpolation from examples, applied to
+  object recognition</h1>
+
+  <img src="generic-interpolation-mechanism.png" height=500
+       class="figure-left">
+  <img src="PoggioEdelman90-fig1a.png" class="figure-right" >
+  <img src="RBF-module.png" height=200 class="figure-right" >
+  <P>
+  <BR>
+    <I>Above</I>: the building blocks of a shape-tuned mechanism —
+    view-tuned units and a weighted summation unit. <P>
+      <I>Right</I>: an implementation by a function approximation
+      "neural" network.
+    <P>
+      As noted earlier, regression by function approximation from examples will
+      only work if the view and shape spaces are SMOOTH.
+    
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>visual object recognition as function approximation (Poggio & Edelman, 1990)</h1>
+
+  <img src="PoggioEdelman90-fig2a.png" class="figure-right" >
+  <P>
+  <BR>
+  A general-purpose tool for (multivariate) function approximation<sup><font color=red>*</font></sup> can be
+  applied to the problem of recognizing a 3D object from any of its
+  views (projections) — a kind of <SC>shape constancy</SC>. 
+  <P>
+  Here, the "black box" capable of function approximation is trained to
+  produce the standard view of the wireframe object, given a sample of \(M\)
+  views of the same object. 
+  <P>
+  Each view is represented — not very realistically — as a vector \(\left(x_1, y_1, x_2, y_2, \dots, x_n,
+  y_n\right)\) of the coordinates of the (projections) of the object's \(n\)
+  vertices, which is the same as a point in a \(2n\)-dimensional space.
+  <P>
+  <hr width=30% align=left>
+  <sup><font color=red>*</font></sup>In the illustration, RBF stands for the <a
+ href="http://en.wikipedia.org/wiki/Radial_basis_function" target=new>Radial Basis Function</a>
+  approximation method, which we already encountered (recall <a
+ href="http://kybele.psych.cornell.edu/~edelman/Psych-3140/w-6-2.html#(7)"
+ target=new>Lecture 6.2, slide #7</a>).
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>one way of using a function approximation "black box"</h1>
+
+  <img src="PoggioEdelman90-fig2b.png" class="figure-right" >
+  <P>
+  <BR>
+  When given a new test view of the same object, the system recognizes it
+  by producing the standard view.
+  <P>
+  Other objects are rejected by thresholding the dissimilarity (output-space
+  distance) between the actual output of the model and the standard view. 
+  
+</div>
+
+  -->
+
+
+<DIV CLASS="slide">
+  <h1>function approximation by radial basis functions (RBFs) (Poggio & Edelman, 1990)</h1>
+
+  <img src="PoggioEdelman90-fig1a.png" class="figure-right" >
+  <P>
+  <BR>
+  A network that implements the RBF (<a
+ href="http://en.wikipedia.org/wiki/Radial_basis_function" target=new>radial basis function</a>) approximation method. The
+  centers of the basis functions, \(\textbf{t}_i\), can be (a subset
+  of) the training views of the object. 
+  <P>
+  Each basis function unit \(i\) computes the distance of the actual input
+  \(\textbf{x}\) from its center \(\textbf{t}_i\):
+  \(d = \|\textbf{x}-\textbf{t}_{i}\|\). It then applies to it the
+  radial<SUP><font color=red>*</font></SUP> function, such as the Gaussian: \(G\left(d\right) =
+ e^{-d^2/\sigma^2}\) (as in the six red "bumps" in the illustration on <a
+ href="wk-4-2.html#(7)"
+ target=new>slide #7 of Lecture 4.2</a>).
+  The resulting value can be thought of as the activity of the unit.
+  <P>
+  The output of the entire network is a vector of the same size as the
+  input, in which the \(j\)'th element is a weighted sum of the activities of
+  the basis units: \(\sum_{i=1}^{k} w_{ij}
+  G\left(\|\textbf{x}-\textbf{t}_i\|\right)\), as in the pink transparent
+  surface formed by the weighted sum of the six red "bumps" in <a
+ href="wk-4-2.html#(7)"
+ target=new>slide #7 of Lecture 4.2</a>.
+  <P>
+  Note that each basis function unit exhibits TUNING to a specific view of
+  the target object, whereas the entire network is TUNED to the
+  object's shape irrespective of the view.
+  </P>
+  <HR width=30% align=left>
+  <P>
+  <SUP><font color=red>*</font></SUP>"radial" because it depends on the <I>distance</I> from the
+  center to the test point — but not on the <I>direction</I> to it.
+
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>[EXTRA: a more realistic way to represent a view, using Gaussian RBFs]</h1>
+
+  <img src="PoggioEdelman90-fig1b.png" class="figure-right" >
+  <P>
+  <BR>
+  <font color=gray>
+  If the (multidimensional) basis function, TUNED to a view of
+  an object, is Gaussian, it can be thought of as a product of
+  (two-dimensional) <SC>receptive fields</SC>. 
+  <P>
+  A multidimensional Gaussian radial basis function can be decomposed into a
+  product of Gaussians of lower dimensions. The solid circles represent the
+  image-plane receptive fields feeding into the first radial basis function,
+  which codes the first view of the object. The dotted circles represent the
+  receptive fields feeding into the basis function that codes another view.
+  <P>
+  The center of a basis unit corresponds to a sample view; the unit
+  itself is synthesized as the product of feature detectors with two-dimensional
+  Gaussian receptive fields (i.e., the activity of a detector depends on the
+  distance \(d\) between the stimulus and the center of the receptive field
+  as \(e^{-d^2/\sigma^2}\).
+  </font>
+
+</div>
+
+  
+
+<DIV CLASS="slide">
+  <h1>object recognition with RBFs: examples</h1>
+
+  <img src="PoggioEdelman90-fig3.png" class="figure-right" >
+  <P>
+  <BR>
+  Some examples of this model's operation.
+  <P>
+  <I>Top row:</I> a "standard" view of a wireframe object, superimposed on
+  its estimate by the RBF network (large dots), which had been given as
+  input a random view of the same object (<I>second from top row</I>). 
+  <P>
+  <I>Bottom two rows:</I> the fit is not so good if the input view
+  belongs to a different object.
+  <P>
+  <font color=gray>In these experiments, the number of training views was
+  \(M = 40\), the number of RBFs \(k = 20\) and the range of viewpoint
+  angles \(\theta,\phi\) is \(0^{\circ}\) to \(90^{\circ}\). Gradient
+  descent was used to obtain the optimal positions of the RBF
+  centers. Within a smaller range of \(\theta,\phi \in 
+  [0^{\circ}, 45^{\circ}]\), the performance was acceptable with just two
+  radial basis units \((M = 40, k = 2)\).</font>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>object recognition with RBFs: performance</h1>
+
+  <img src="PoggioEdelman90-fig4ac.png" class="figure-right" >
+  <P>
+  <BR>
+
+  <B>(a)</B> Performance of an RBF module trained to recognize a specific object
+  over the full range of \(\theta,\phi\) (the entire viewing sphere). Views
+  were encoded as vectors of \(2N\) vertex coordinates (solid curve; error
+  bars show the standard deviations of the performance indices, computed
+  over a set of ten objects, each of which served in turn as the target) or
+  as vectors of \(N-2\) angles formed by pairs of segments (dashed
+  curve).
+  <small>The number of training views \(M\) was set equal to the number of
+  radial basis functions, \(K\). The performance index, \(MIN/MAX\), is 
+  defined as the ratio of the smallest euclidean distance \(E\) obtained for
+  views of different objects to the largest \(E\) obtained over a set of novel
+  random views of the object on which the module has been trained. \(MIN/MAX
+  > 1\) is required for a perfect separation between the target and other
+  objects using a simple threshold decision. 80-100 views suffice for a
+  nearly perfect recognition.</small>
+  <P>
+  <B>(c)</B> Performance degrades slowly with increasing range of the
+  viewpoint coordinates \(\theta,\phi\) (the objects are a cube and an
+  octahedron, \(M = K = 40\); error bars are standard deviations over 10
+  sets of random training and testing views).  
+
+</div>
+  
+-->
+
+<!-- to HERE -->
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>shape constancy and the shape space</h1>
+
+  \(\require{color}\)
+  <img src="viewspace+shapespace.png" class="figure-right">
+  <P>
+  SHAPE CONSTANCY: the cow and the pig shapes here don't change (only their
+  orientation does).
+  <P>
+  A shape space \({\color{red} s}\) for four-legged animal shapes, with two view
+  spaces \({\color{red} v}\) (for <font face="courier">cow</font>
+  and <font face="courier">pig</font>) perpendicular to it.
+  <P>
+  <HR>
+  If the mapping from the world to the measurement space
+  \({\color{red} {\cal M}}\) is <a
+ href="http://en.wikipedia.org/wiki/Smooth_function" target=new>smooth</a>,
+ then:
+  <DIR>
+    — one could use regression (function approximation) to learn it from
+    examples;
+    <P>
+    <B>Can you explain why and how?</B>
+  </DIR>
+  <DIR>
+    <font color=gray>
+    — the representations in \({\color{red} {\cal M}}\) will be veridical
+    (truth-preserving) for similarity-based categorization
+    (Edelman, 1999).
+    </font>
+  </DIR>
+  </ol>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>measurement space; view space; shape space [RECAP]</h1>
+
+  \(\require{color}\)
+  <img src="viewspace+shapespace.png" class="figure-right">
+  <P>
+  SHAPE CONSTANCY: the cow and the pig shapes here don't change (only their
+  orientation does).
+  <P>
+  A shape space \({\color{red} s}\) for four-legged animal shapes, with two view
+  spaces \({\color{red} v}\) (for <font face="courier">cow</font>
+  and <font face="courier">pig</font>) perpendicular to it.
+  <P>
+  <HR>
+  If the mapping from the world to the measurement space
+  \({\color{red} {\cal M}}\) is <a
+ href="http://en.wikipedia.org/wiki/Smooth_function" target=new>smooth</a>,
+ then:
+  <DIR>
+    <font color=gray>— one could use regression (function approximation) to learn it from
+    examples;</font>
+  </DIR>
+  <DIR>
+    — the representations in \({\color{red} {\cal M}}\) will be VERIDICAL
+    (truth-preserving) for similarity-based categorization
+    (Edelman, 1999). 
+  </DIR>
+
+</div>
+
+-->
+
+
+<DIV CLASS="slide">
+  <h1>why should view and shape spaces be SMOOTH?</h1>
+
+  <img src="components-of-M.png" class="figure-right">
+  <P>
+  <BR>
+  IF (<B>a</B>) changes in object shape and viewing parameters "out there" in
+  the world, which need to be represented, are smooth, AND IF (<B>b</B>) the
+  world-to-representation mapping is smooth, THEN the represented view
+  and shape spaces will be smooth too (and learnable from examples by
+  function approximation).
+  <P>
+    Here are the components of the world-to-representation mapping:
+    <BR>
+  \(f_1\) — image formation;<BR>
+  \(f_2\) — measurement;<BR>
+  \(f_3\) — <B>dimensionality reduction</B>.
+  <P>	
+    It is easy to see that \(f_1\) is generically smooth; and it is easy
+    to ensure that \(f_2\) is, too (hint: use graded tuned units). What about \(f_3\)?
+  </P>
+    
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>dimensionality reduction is critically important</h1>
+
+  <a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality" target=new><img src="curse-of-dimensionality.png" height=450 class="figure-right"></a>
+  <P>
+  <BR>
+    A reminder why \(f_3\) — dimensionality reduction — is even needed:
+    <P>
+  learning directly in a high-dimensional representation space is
+  intractable, because it requires a number of examples that grows
+  exponentially with the number of dimensions. 
+
+</div>
+  
+
+<DIV CLASS="slide">
+  <h1>implementing a smooth \(f_3\) with a Chorus of Prototypes</h1>
+
+  <img src="Chorus-principle.png" height=350 class="figure-right">
+  <P>
+  <BR>
+  A potential solution to the need for smooth dimensionality reduction: the Chorus Transform.
+  <P>The Chorus Transform of a point \(\textbf{x}\) (here, <font
+  face="courier">giraffe</font>) is related to what the middle layer of an
+  <a
+ href="http://en.wikipedia.org/wiki/Radial_basis_function" target=new>RBF</a> network (slides 7,8) computes. It is defined as the vector of
+  distances between \(\textbf{x}\) and the <a
+ href="http://en.wikipedia.org/wiki/Radial_basis_function" target=new>RBF</a> 
+ "centers" or <SC>landmarks</SC> \(\textbf{p}_i\) (here, <font
+  face="courier">pig, camel, goat</font>):
+  $$
+  CT({\bf x}) = \left( \begin{array}{c} 
+  \| {\bf x} - {\bf p}_1 \| \\ \vdots \\ \| {\bf x} - {\bf p}_{n} \| 
+  \end{array} \right)
+  $$
+  The application of the norm function \(\|\cdot\|\) to each difference vector \({\bf
+  x} - {\bf p}_i\) yields its length and therefore the distance between \({\bf x}\) and \({\bf
+  p}_i\).
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>Chorus of Prototypes: an implemented system (S. Duvdevani-Bar & S. Edelman, 1999)</h1>
+
+  <img src="DuvdevanEdelman-similarity-table.png" height=500 class="figure-right">
+  <P>
+  <BR>
+  The response of a system trained on images of 10 objects to 8 new
+  test objects —
+  <P class="incremental">
+  Note that the representation space spanned by this system's
+  responses is 10-dimensional.
+  </P>
+  
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>smooth dimensionality reduction with a Chorus of Prototypes</h1>
+
+  <img src="chorus.jpg" height=350 class="figure-right">
+  <P>
+  <BR>
+  The Chorus Transform of a point in a \(D\)-dimensional space \(\textbf{x}\in R^{D}\) — the vector of distances 
+  between it and the landmarks \(\textbf{p}_i\) — performs dimensionality
+  reduction from \(dim(\textbf{x}) = D\) to a potentially much smaller \(n \ll D\):
+  $$
+  CT({\bf x}) = \left( \begin{array}{c} 
+  \| {\bf x} - {\bf p}_1 \| \\ \vdots \\ \| {\bf x} - {\bf p}_{n} \| 
+  \end{array} \right)
+  $$
+  In other words, it maps points in a \(D\)-dimensional input space to
+  points in a space whose dimensionality \(n\) is the same as the number of
+  landmarks.
+  <HR>
+  <P>
+    Note that \(CT\) is smooth in the requisite sense, and
+    therefore the reduced-dimensionality representations it forms
+    will be veridical (true) to those in the original space.
+  </P>
+  <P>
+  <font color=gray>There is a deep and interesting link here to <a
+  href="http://en.wikipedia.org/wiki/Kernel_method" 
+  target=new>kernel methods</a> in machine learning, which are beyond the
+  scope of this course.</font>
+
+</div>
+
+
+
+
+
+<DIV CLASS="slide">
+  <h1>dimensionality reduction with a Chorus of Prototypes: the mathematical principles</h1>
+
+  <img src="projection.png" height=300 class="figure-right">
+  <P>
+  <BR>
+  According to the <a
+  href="http://en.wikipedia.org/wiki/Johnson%E2%80%93Lindenstrauss_lemma"
+  target=new>Johnson-Lindenstrauss Lemma</a> (1984), a cloud of points in a
+  high-dimensional space can be projected onto a space of a VERY much lower
+  (logarithmically lower) dimensionality, while largely preserving the
+  relative distances among points.<sup><font color=red>*</font></sup> 
+  <P>
+  Relying on a related idea, Edelman (1999, App.B) showed that the Chorus Transform can
+  support a logarithmic dimensionality reduction, while approximately
+  preserving the relative distances among points (based on a
+  theorem due to <a
+ href="http://www.mathunion.org/o/General/Prizes/Fields/1994/" target=new>Bourgain</a>, 1985). 
+  <P>
+  In other words, even with a very small number of landmarks — on the order
+ of \(\log
+  D\), where \(D\) is the dimensionality of the original problem — the layout
+  of the data points in the new, low-dimensional space
+  approximates their original layout, implying that the <B>original similarity</B>
+  relations, and with them category boundaries, etc., are <B>largely
+  preserved</B>.
+  <P>
+  <HR width=30% align=left>
+  <sup><font color=red>*</font></sup><font color=gray>Specifically, any \(n\)-point subset of Euclidean space can be
+  embedded in \(O(\epsilon^{−2} \log n)\) dimensions with at most \((1 +
+  \epsilon)\) distortion of the inter-point distances.</font>
+
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>dimensionality reduction by CT: a numerical assessment</h1>
+
+  <img src="sh1.png" height=450 class="figure-right">
+  <P>
+  <BR>
+  Preservation of distance ranks by the dimensionality-reducing Chorus
+  Transform, \(CT\). 
+  <P>
+  The plot
+  shows <a
+ href="https://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient"
+ target=new>Pearson product-moment correlation</a> (dashed line) and <a
+ href="https://en.wikipedia.org/wiki/Spearman's_rank_correlation_coefficient"
+ target=new>Spearman rank
+  correlation</a> (solid line) between the original and the \(CT\)-transformed
+  distances among 25 points in a space of dimensionality 1000, plotted
+  against the number of landmarks ("prototypes") employed by \(CT\). Error bars represent
+  the mean standard error of the mean, calculated over 10 runs. 
+
+</div>
+
+
+  
+
+<DIV CLASS="slide">
+  <h1>dimensionality reduction by CT (cont.)</h1>
+
+  <img src="sh2.png" height=450 class="figure-right">
+  <P>
+  <BR>
+  A comparison between the dimensionality-reducing property 
+  of \(CT\) and the prediction of the Johnson-Lindenstrauss (1984)
+  embedding theorem. The quality of the embedding was examined for
+  varying values of the distance distortion index \(0 <
+  \epsilon \le 1\).
+  <P>
+  The high <a
+ href="https://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient"
+ target=new>Pearson</a> and <a
+ href="https://en.wikipedia.org/wiki/Spearman's_rank_correlation_coefficient"
+ target=new>Spearman</a> correlation between the
+  original and \(CT\)-transformed pairwise distances among 100 points
+  (picked at random from the unit hypercube in \(R^{10000}\)) indicates
+  how well the distances are preserved.  For example, a distortion
+  of \(\epsilon = 1\), which allows an embedding into 5 dimensions,
+  results in Pearson and Spearman correlations of 0.9316
+  and 0.9460, respectively.
+
+</div>
+
+
+
+
+
+<DIV CLASS="slide">
+  <h1>dimensionality reduction by CT (cont.)</h1>
+
+  <img src="sh3.png" height=450 class="figure-right">
+  <P>
+  <BR>
+  The dimensionality reduction for a set of \(n=100\) points, afforded by the
+  various values of \(\epsilon\).
+  <P>
+  The theoretical prediction is
+  \(O\left(\frac{\log n}{\epsilon^2}\right)\).   
+
+</div>
+
+-->
+
+
+<DIV CLASS="slide">
+  <h1>the Chorus Transform as a model of visual shape representation</h1>
+
+  <img src="Chorus-human+model.jpg" height=500 class="figure-right">
+  <P>
+  <BR>
+  <I>Top:</I> the layout of nine parametrically controlled stimulus shapes in a shape
+  space.
+  <P>
+  <I>Bottom left:</I> the layout of the stimuli recovered by MDS from human
+  response data.
+  <P>
+  <I>Bottom right:</I> the layout of the stimuli recovered by MDS from the
+  responses of a Chorus model, based on four landmark (prototype) shapes.
+  <P>
+  <font color=red>
+  NOTE: this model explains VERIDICAL, LOW-DIMENSIONAL REPRESENTATION,
+  which can be used in a variety of tasks, of which recognition is just one.
+  </font>
+  </P>
+  <small>
+  <font color=gray>
+  F. Cutzu and S. Edelman. Faithful representation of similarities among three-dimensional shapes in
+  human vision. Proceedings of the National Academy of Science,
+ 93:12046–12050, 1996.
+  </font>
+  </small>
+  
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>a reminder: vision DOES NOT reduce to "object recognition"</h1>
+
+  <img src="object-recognition.png">
+  <img src="what-does-it-mean-to-see.png" height=400 class="figure-right">
+  <P>
+    <BR>
+      <HR>
+	<P>
+  What does it mean to see?
+  <P>
+    <I>Left:</I> tired. <BR><I>Center:</I> wired.<BR> <I>Right:</I> woke.
+
+</div>
+
+<!-- EXTRAS -->  
+
+  
+<!--
+
+<DIV CLASS="slide">
+  <h1>EXTRA (1/3): veridicality and correspondence between vision and language spaces</h1>
+
+  <img src="Amatuni18-fig1.png" height=500 class="figure-right">
+  <P>
+  <BR>
+  <a href="https://arxiv.org/abs/1802.00840" target=new>Andrei
+  Amatuni, Estelle He, and Elika Bergelson (2018)</a> used a set of 27
+  items (e.g. ‘dog’) that are 
+  highly common in infants’ input, and used both image- and word-based
+  algorithms to independently compute similarity among them. Here's
+  what they found:
+  <P>
+    First, the pairwise item similarities derived
+    within image-space and word-space are correlated, suggesting
+    preserved structure among these extremely different representational
+    formats.
+  <P>
+    <hr>
+      <P>
+      Relative cosine distance between points in word
+      embedding space (x-axis) and image embedding space (y-axis),
+      for every item pair. Fitted line reflects linear fit with
+      SE (\(R = 0.30, p < 1.5\cdot 10^{-8}\)).
+    
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>EXTRA (2/3): veridicality and correspondence between vision and language spaces</h1>
+
+  <img src="Amatuni18-tab1.png" height=550 class="figure-right">
+  <P>
+  <BR>
+    <a href="https://arxiv.org/abs/1802.00840" target=new>Andrei
+  Amatuni, Estelle He, and Elika Bergelson (2018)</a> used a set of 27
+  items (e.g. ‘dog’) that are 
+  highly common in infants’ input, and used both image- and word-based
+  algorithms to independently compute similarity among them. Here's
+  what they found:
+  <P>
+    Second, the closest ‘neighbors’ for each
+    item, within each space, showed significant overlap (e.g. both
+    found ‘egg’ as a neighbor of ‘apple’).
+  <P>
+    <HR>
+      <P>
+    Neighbors in image- and word-space. Neighbors in
+<font color=red><B>bold and red</B></font> are shared between spaces; <I>italicised</I> words are
+image-neighbors only, <U>underlined</U> words are word-neighbors
+only. Overlap ratio reflects shared neighbors over total neighbors. 
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>EXTRA (3/3): veridicality and correspondence between vision and language spaces</h1>
+
+  <img src="Amatuni18-fig2.png" height=500 class="figure-right">
+  <P>
+  <BR>
+  <a href="https://arxiv.org/abs/1802.00840" target=new>Andrei
+  Amatuni, Estelle He, and Elika Bergelson (2018)</a> used a set of 27 items (e.g. ‘dog’) that are
+  highly common in infants’ input, and used both image- and word-based
+  algorithms to independently compute similarity among them. Here's
+  what they found:
+  <P>
+    Third, items with the
+    most overlapping neighbors are later-learned by infants and
+    toddlers.
+  <P>
+    <HR>
+      <P>
+    Proportion of children in WordBank reported to understand
+    (left, averaged over 8-18 months) or produce (right,
+    averaged over 16-30 months) the 27 items, as a function of
+    how many overlapping neighbors they have (i.e. in both
+    image- and word-space). Lines indicate linear fit with SE
+    confidence bands (both \(R>-.45, p<.05\)).
+    
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>does the Chorus framework [or Deep Networks; more on this in week 14] "solve" vision?</h1>
+
+  <P>
+  <BR>
+  Only if vision reduces to "object recognition", which it doesn't. 
+  <P>
+    What <I>does</I> it mean, then, "to see"?
+  </P>
+
+  </div>
+
+
+<DIV CLASS="slide">
+  <h1>how IS vision involved in behavior?</h1>
+
+  <a href="https://www.researchgate.net/figure/Cognitive-map-of-the-perception-action-cycle-in-the-PFC-We-present-a-diagram-of-the_fig1_291385023" target=new><img src="perception-action-cycle-2016.png"
+  height=500 class="figure-right"></a> 
+    <P>
+      The infamous "perception-action cycle" (recall Dewey's critique
+      of the "reflex arc" concept, from
+      <a href="http://kybele.psych.cornell.edu/~edelman/Psych-3140/w-1-2.html#(22)"
+      target=s>week 1</a>).
+    
+</div>
+
+  
+
+
+<DIV CLASS="slide">
+  <h1>how vision is involved in behavior (after Sherman and Guillery, 2006)</h1>
+
+  <img src="Sherman06-fig10.1.png" height=550 class="figure-right">
+    <P>
+      "Schematic, and simplified, representation of
+      <a href="https://en.wikipedia.org/wiki/Thalamus"
+	 target=new>thalamic</a> and 
+      <a href="https://en.wikipedia.org/wiki/Cerebral_cortex" target=new>cortical</a> connections 
+      with motor centers. Only some of the corticocortical links are shown. 
+    <BR><B>A</B>. A widely
+      used representation of
+      <a href="https://en.wikipedia.org/wiki/Afferent_nerve_fiber"
+      target=new>afferent</a> pathways entering through thalamus being 
+      processed through a parallel and hierarchical series of cortical connections, and
+      then passed on to motor centers or memory
+      storage. <font color="gray">[Consider <a href="thalamus-and-cortex.jpg"
+      target=pic>this
+      example</a> from some online course or other.]</font>
+    <BR><B>B</B>. A representation of the connections described in
+      earlier chapters and in this chapter, showing first order (FO)
+      and higher order (HO) thalamic relays receiving from ascending
+      and corticothalamic afferents, respectively, with each of these
+      afferents sending axonal branches to motor or premotor centers. 
+    <BR><B>C</B>. A schema to stress that essentially all
+      cortical areas have connections to motor or premotor centers. The extent to
+      which they have branches going to the thalamus remains largely
+      unexplored."
+    <P>
+      <HR>
+	<P>
+	  "Not only CAN `motor assembly begin before sensory signals reach
+	  the highest levels' but that it MUST begin before the
+	  sensory signals even reach the thalamus, and that it must
+	  accompany corticocortical processing at essentially every
+	  stage."
+	  <BR>
+	  (p.362, S. M. Sherman and R. W. Guillery (2006). <a href="https://mitpress.mit.edu/books/exploring-thalamus-and-its-role-cortical-function" target=new><I>Exploring the
+	    Thalamus and Its Role in Cortical Function</I></a>, MIT Press).
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>how vision is involved in behavior (after Sherman and Guillery, 2006)</h1>
+
+  <img src="Sherman06-fig10.4.png" height=450 class="figure-right">
+    <P>
+      <B>A</B>. Schematic representation of the direct
+      <a href="https://en.wikipedia.org/wiki/Lemniscus_(anatomy)"
+      target=new>lemniscal</a> (continuous lines) and
+      <a href="https://en.wikipedia.org/wiki/Anterior_spinothalamic_tract"
+      target=new>anterolateral</a> 
+      (interrupted lines) pathways to the thalamus.
+      <BR>
+	<B>B</B>. Additional connections
+	established by branches of the direct pathways.
+	<P>
+	  <HR>
+    <P>
+      "Each axon reaching the thalamus
+      will carry messages about the condition of one or several receptors and
+      in addition will carry information about the instructions that are already
+      on their way to one or more motor pathways. One should not expect
+      that the cortical analysis will reject or annul this “additional” information
+      simply because it is not a part of what classical physiology has seen
+      as the information carried in sensory pathways. It is reasonable to expect
+      this copy of motor instructions to be an integral part of the perceptual
+      process. It is not surprising that some who have thought seriously about
+      the nature of perceptual processing have been led to a view of sensory
+      processes as “interactive” finding that there is no “pure sensation”
+      [...] and that there are
+      complex and often extremely elusive “sensorimotor contingencies”
+      <a href="http://nivea.psycho.univ-paris5.fr/Manuscripts/ORegan;Noe.BBS.pdf"
+      target=new>(O’Regan & Noë, 2001)</a>."
+	  <BR>
+	  (p.367, S. M. Sherman and R. W. Guillery
+	    (2006). <a href="https://mitpress.mit.edu/books/exploring-thalamus-and-its-role-cortical-function" target=new><I>Exploring
+	    the
+	    Thalamus and Its Role in Cortical Function</I></a>, MIT Press).
+
+</div>
+
+-->  
+
+	  
+<div class="footer">
+<p>Last modified: Thu Feb 21 2019 at 09:53:18 EST</p>
+</div>
+</body>
+</html>

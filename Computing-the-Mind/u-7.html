@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computational Psychology — Unit 7</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2012-2019 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="11" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+</head>
+<body>
+
+<!-- 
+<rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+<permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+<requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+<permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+<requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+</License>
+</rdf:RDF>
+-->
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 7 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computational Psychology</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 7: Perception III: perceptual truth</h2>
+  </div>
+  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%>
+
+</div>
+<!-- END COVER PAGE -->
+
+
+<div  CLASS="slide">
+  <h1>perceptual veridicality</h1>
+
+  <img src="Magritte-human-condition.jpg" title="The Human Condition (Rene Magritte)"
+  class="figure-right" height=550>
+  <ul>
+    <li>How neurons can be truthful</li>
+    <li>Veridical representation: a computational definition</li>
+    <li>Visualizing representational spaces with MDS (a refresher)</li>
+    <li>Behavioral evidence for veridical perception of shape similarities</li>
+    <li>Electrophysiological evidence for veridical representation of shape similarities</li>
+    <li><font color=gray>Using fMRI to map the brain's shape representation space</font></li>
+  </ul>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>on truth in perception</h1>
+
+  <img src="Joshua_Reynolds_Self_Portrait.jpg" title="Joshua Reynolds (self-portrait)"
+  class="figure-right">
+  <P>
+  <BR>
+  The natural appetite or taste of the human mind is for
+  <SC>truth</SC>; whether that truth results from the real agreement
+  or equality of original ideas among themselves; from <B>the agreement
+  of the representation of any object with the thing represented</B>; or
+  from the correspondence of the several parts of any arrangement with
+  each other.
+  <P>
+  <DIR><DIR>
+    <a href="http://en.wikipedia.org/wiki/Joshua_Reynolds" target=new>Joshua Reynolds</a><BR>
+    <a href="http://www.authorama.com/seven-discourses-on-art-9.html"
+ target=new><I>Seven discourses on art</I></a><BR>
+    1776
+  </DIR></DIR>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>on truth in perception</h1>
+
+  <img src="Joshua_Reynolds_Self_Portrait.jpg" title="Joshua Reynolds (self-portrait)"
+  class="figure-right">
+  <P>
+  <BR>
+  The natural appetite or taste of the human mind is for
+  <SC>truth</SC>; whether that truth results from the real agreement
+  or equality of original ideas among themselves; from <B> the agreement
+  of the representation of any object with the thing represented</B>; or
+  from the correspondence of the several parts of any arrangement with
+  each other.
+  <P>
+  <DIR><DIR>
+    <a href="http://en.wikipedia.org/wiki/Joshua_Reynolds" target=new>Joshua Reynolds</a><BR>
+    <a href="http://www.authorama.com/seven-discourses-on-art-9.html"
+ target=new><I>Seven discourses on art</I></a><BR>
+    1776
+  </DIR></DIR>
+  <P>
+  <HR>
+  <P>
+  How can a <B>neural representation</B> be truthful??
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>how neurons can be truthful</h1>
+
+  <img src="Locke-covariance.gif" height=450>
+  
+  <BR>
+  (1) by <SC>selectively</SC> responding to external ("distal") stimuli; (2)
+  by being <SC>causally effective</SC>, as appropriate, towards other
+  neurons; and (3) <B>by <SC>veridically</SC> representing distal relationships</B>
+  (for instance, shape differences between objects "out there" in the world).
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>veridical representation</h1>
+
+  <img src="2nd-order-isomorphism.gif" class="figure-right" height=550>
+  <P>
+  <BR>
+  <P>Perception of distal entities (objects or events) can be
+    <SC>veridical</SC> (truthful) with respect to categorization IF
+  their <strike>natural</strike> relevant distal similarities are
+  expressed in the internal representation space on which
+  categorization is based.
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>mapping the similarity space from behavioral data</h1>
+
+  <img src="DMTS+MDS.gif" height=450>
+  <P>
+  Cutzu, F., and S. Edelman (1996). <a
+  href="../Archive/CutzuEdelman-PNAS96.pdf"><I>Faithful representation of 
+  similarities among three-dimensional shapes in human vision</I></a>,
+  Proc. Natl. Acad. Sci. (USA) 93:12046-12050.
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>behavioral evidence for veridical perception of shape similarities</h1>
+
+  <img src="CutzuEdelman.jpg" class="figure-right" height=550>
+
+  <small>
+  <ul>
+    <li><I>Top left:</I> seven computer-generated humanoid shapes used as
+    stimuli, arranged so as to make explicit their similarity
+    relationships.</li>
+    <li><I>Top right:</I> the star-shaped layout of the true
+    similarity space is revealed in this MDS map of one of the subjects'
+    <B>response</B> data.  The fit between the true and
+    actual configurations is highly significant.</li>
+    <li><I>Bottom left:</I> the same analysis, applied to data from a study in
+    which subjects judged similarities among <B>memorized</B> shapes.</li>
+    <li><I>Bottom right:</I> a <B>computer model</B> replicates perfectly the pattern of 
+    human performance.</li>
+  </ul>
+  </small>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>neuron-level veridicality in the monkey (Op de Beeck et al., 2001): the stimuli</h1>
+
+  <img src="OpDeBeeck-01-fig1.png" class="figure-right">
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>veridicality: stimuli configuration vs. human #1's behavioral data</h1>
+
+  <img src="OpDeBeeck-01-fig2a.png">
+  <img src="OpDeBeeck-01-fig2b.png">
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>veridicality: stimuli configuration vs. human #2's behavioral data</h1>
+
+  <img src="OpDeBeeck-01-fig2a.png">
+  <img src="OpDeBeeck-01-fig2c.png">
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>veridicality: stimuli configuration vs. monkey Y's behavioral data</h1>
+
+  <img src="OpDeBeeck-01-fig2a.png">
+  <img src="OpDeBeeck-01-fig2d.png">
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>veridicality: stimuli configuration vs. monkey E's behavioral data</h1>
+
+  <img src="OpDeBeeck-01-fig2a.png">
+  <img src="OpDeBeeck-01-fig2e.png">
+
+</div>
+
+
+
+
+
+<DIV CLASS="slide">
+  <h1>veridicality: stimuli configuration vs. combined neurons' response data</h1>
+
+  <img src="OpDeBeeck-01-fig2a.png">
+  <img src="OpDeBeeck-01-fig2f.png">
+
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>veridicality: correlation between real and MDS-recovered configurations</h1>
+
+  <img src="OpDeBeeck-01-tab1.png">
+
+</div>
+
+-->
+
+
+
+<DIV CLASS="slide">
+  <h1>veridicality: some details regarding neurons' responses</h1>
+
+  <table cellspacing=15>
+    <tr>
+      <td align=center><img src="OpDeBeeck-01-fig5a.png"></td>
+      <td align=center><img src="OpDeBeeck-01-fig3a.png"></td>
+    </tr>
+    <tr>
+      <td align=center>correlation <I>C</I> between the configuration
+	recovered by MDS from neurons' responses and the real configuration,
+	vs. the # of neurons <font color=gray>(dashed line: threshold of significant
+	difference from baseline)</font></td>
+      <td align=center>the responses of one of the neurons to the 8
+	stimuli</td> 
+    </tr>
+  </table>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>SUMMARY: neuron-level veridicality in the monkey</h1>
+
+  <img src="OpdeBeeck.jpg" class="figure-right" height=550>
+
+  <P>
+  <BR>
+  The square arrangement of eight stimuli in a parameter space is
+  reflected in the layout of the eight corresponding points recovered by MDS
+  from inter-stimulus distances, as measured in the image space (squares) and
+  in a 124-neuron ensemble response space (diamonds).
+  <P>
+  H. Op de Beeck, J. Wagemans, and R. Vogels, <I>Inferotemporal neurons
+  represent low-dimensional configurations of parameterized shapes</I>,
+  Nature Neuroscience 4:1244-1252 (2001).
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>visualizing the human brain space</h1>
+
+  <video src="kalanit-morph&#32;(Converted).mov" controls class="figure-right">
+  </video>
+  <P>
+  <BR>
+  A sequence of fMRI snapshots of the brain activity of a
+  subject watching a series of visual stimuli &#151;
+  <P>
+  [Courtesy of <a href="http://www-psych.stanford.edu/~kalanit/"
+ target=new>Kalanit Grill-Spector</a>]
+  <P>
+  <HR>
+  <P>
+  The result on the next slide is from <a
+  href="../Archive/EdelmanEtAl-fMRI-brain-space-Psychbio98.pdf"
+  target=new><i>Towards direct visualization of the internal shape
+  representation space by fMRI</i></a>, S. Edelman, K. Grill-Spector, T. Kushnir, and R. Malach, 
+  Psychobiology 26:309-321 (1998).
+  <P>
+  For a review, see <a
+ href="http://www.sciencedirect.com/science?_ob=ArticleURL&_udi=B6VH9-4KKNNHN-8&_user=492137&_handle=V-WA-A-W-AW-MsSAYZA-UUW-U-AAZWWDADYB-AACEYCWCYB-AZZADDWAA-AW-U&_fmt=full&_coverDate=09%2F30%2F2006&_rdoc=12&_orig=browse&_srch=%23toc%236061%232006%23999899990%23631261!&_cdi=6061&view=c&_acct=C000022719&_version=1&_urlVersion=0&_userid=492137&md5=46da1a6341a677994e52014b7d1de686"
+ target=new><I>Beyond mind-reading: multi-voxel
+  pattern analysis of fMRI data</I></a>, K. A. Norman, S. M. Polyn, G. J. Detre,
+  and J. V. Haxby, Trends in Cognitive Sciences 10:424-430 (2006).
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>visualizing human brain activity space</h1>
+  <img src="Kalanit-PsychBio.gif" align=right height=500>
+  
+</div>
+
+
+
+
+
+<DIV CLASS="slide">
+  <h1>representation and reality</h1>
+
+  <img src="Magritte-Arnheim-32.jpg" title="The Domain of Arnheim (Rene Magritte)" class="figure-right" height=550>
+
+  <P>
+  <BR>
+  The perceptual representation of certain aspects of the world in the
+  brain is <B>veridical</B>.
+  <P>
+  Veridicality is ill-defined for a single stimulus. It can only be
+  properly assessed for a <B><I>set</I></B> of stimuli (which makes it
+  fundamentally <B>statistical</B>, of course).
+  <P>
+  <HR>
+  <P>
+  To find out more about veridicality and what characteristics of neural
+  computation make it possible, see <i><a
+  href="http://cognet.mit.edu/library/books/book.tcl?isbn=0262050579" target=new>Representation
+  and Recognition in Vision</a></i>, S. Edelman, MIT Press, 1999.
+  
+</div>
+
+
+<div class="footer">
+<p>Last modified: Tue Jun 25 2019 at 16:00:44 EDT</p>
+</div>
+</body>
+</html>

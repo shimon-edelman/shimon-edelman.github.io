@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computational Psychology — Unit 19</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2014-2019 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- 
+<rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+<permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+<requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+<permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+<requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+</License>
+</rdf:RDF>
+-->
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 19 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computational Psychology</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 19: brain dynamics</h2>
+  </div>
+  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%>
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>what the brain does: dynamics</h1>
+
+  <!--
+  <embed src="brain-scan.mp4" height=256 width=320 controller=true
+  autoplay=false align=right hspace=20>
+  -->
+  <img src="Fernando-fig1.png" title="Liquid Brain (Fernando & Sojakka, 2003)"
+  class="figure-right">
+  <P>
+  <BR>
+  <ul>
+    <li>
+    The restless brain (<I>Two views of brain function</I>, M. Raichle,
+    Trends in Cognitive Sciences 14:180-190, 2010).
+    </li>
+    <li>
+    State-space trajectories (<a href="wk-11-2.html">lecture 11.2</a>:
+    Buszaki on neurons doing readout, etc.).
+    </li>
+    <P>
+    <li>
+    Liquid state machines (this lecture: Buonomano & Maass, 2009).
+    </li>
+    <P>
+    <li>
+    Why dynamics?
+    </li>
+    <P>
+    <li>
+    Tools for understanding brain dynamics (Rabinovich et al., 2015).
+    </li>
+  </ul>
+  
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>the restless brain (Raichle, 2010)</h1> 
+
+  <img src="Raichle10-fig1.png" height=350 class="figure-right">
+  <P>
+  <BR>
+  <B>The brain is NOT primarily about merely responding to stimuli —</B>
+  <P>
+  <blockquote>
+  "Whilst part of what we perceive comes through our
+  senses from the object before us, another part (and it
+  may be the larger part) always comes out of our own
+  head."
+  <DIR><DIR><DIR>
+	— William James (1890)
+  </DIR></DIR></DIR>
+  </blockquote>
+  <P>
+  [Compare with <a href="../Psych-3140/wk-1-1.html#(22)"
+  target=bb>Lecture 1.1, slide 22</a>]
+  <HR>
+  <P>
+  <small>
+  "In the resting state, brain blood flow accounts for 11% of the
+  cardiac output and brain metabolism accounts for 20% of the energy
+  consumption of the body, overshadowing the metabolism of other organs such
+  as the heart, liver and skeletal muscle as shown on the left (above) in
+  this classic image of whole body glucose consumption. The changes in
+  regional blood flow associated with task performance are 
+  often no more than 5% of the resting  blood flow of the brain from which
+  they were derived (center) and, hence, only discernable in difference
+  images averaged across subjects as shown above on the
+ <strike>left</strike> right. These modest
+  modulations in ongoing circulatory and metabolic activity rarely affect the
+  overall rate of brain blood flow and metabolism during even the most
+  arousing perceptual and vigorous motor activity."
+  </small>
+
+</div>
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>the liquid state analogy (Buonomano and Maass, 2009)</h1>
+
+<!--  <img src="" class="figure-right">  -->
+  <P>
+  <BR>
+  <B>Inputs interact with internal states.</B> The response of a population of
+  neurons in a network is determined not only by the characteristics of the
+  external stimulus but also by the dynamic changes in the internal state of
+  the network.
+  <P>
+  For instance, whether a neuron responds to a tone depends
+  not only on the frequency of the tone but also on whether the neuron is
+  receiving additional internally generated excitatory and inhibitory inputs
+  and on the current strength of each of its synapses (which vary on a rapid
+  timescale).
+  <P>
+  <B>This general point can be intuitively understood by making an analogy
+  between neural networks and a liquid.</B> A pebble thrown into a pond will
+  create a spatiotemporal pattern of ripples, and the pattern produced by any
+  subsequent pebbles will be a complex nonlinear<sup><font
+  color=red>*</font></sup> function of the interaction 
+  of the stimulus (the pebble) with the internal state of the liquid (the
+  pattern of ripples when the pebble makes contact). Ripples thus establish a
+  shortlasting and dynamic memory of the recent stimulus history of the
+  liquid. Similarly, the interaction between incoming stimuli and the
+  internal state of a neural network will shape the population response in a
+  complex fashion.
+  <P>
+  <HR align=left width=30%>
+  <sup><font color=red>*</font></sup>Not true: for small-amplitude surface
+  waves, the interaction (superposition) is linear. See for instance <a
+  href="https://thayer.dartmouth.edu/~d30345d/books/EFM/chap4.pdf"
+  target=new>here</a>. 
+  
+</DIV>
+
+
+
+<DIV  CLASS="slide">
+  <h1>a neural state-space trajectory</h1>
+
+  <img src="BuonomanoMaass09-fig1a.png" class="figure-right">
+  <P>
+  <BR>
+  <B>(a)</B> A schematic of a neural trajectory.
+  <P>
+  The firing pattern of two neurons over five [six, actually] time bins
+  constitutes the trajectory of this two-neuron network, with the number of
+  spikes of each neuron during each time bin plotted on the axes of a
+  two-dimensional plot. The spikes generated by two different hypothetical
+  stimuli are represented in <font color=blue>blue</font> and <font
+  color=red>red</font>, and each produces a different neural trajectory
+  (lower plot). Importantly, each point on the trajectory can potentially be
+  used to determine not only which stimulus was presented, but also how long
+  ago the stimulus was presented (color-coded circles). Thus, the neural
+  trajectory can inherently encode spatial and temporal stimulus
+  features. The coordinates represent the number of spikes of each neuron at
+  each time bin (derived from the upper plot). 
+
+</DIV>
+
+
+
+<DIV  CLASS="slide">
+  <h1>a neural trajectory in the locust olfactory system</h1>
+
+  <img src="BuonomanoMaass09-fig1b.png" class="figure-right">
+  <P>
+  <BR>
+  <B>(b)</B> An example of the active trajectory of a population of neurons
+  from the locust antennal lobe [recall
+  <a href="../Psych-3140/wk-11-2.html#(10)"
+     target=pp>Lecture 11.2</a>].
+  <P>
+    When the number of neurons is large, dimensionality reduction must
+  be performed before the trajectory can be visualized. Here,
+  87 projection neurons from the locust were recorded during multiple
+  presentations of 2 odours 
+  (<a href="https://en.wikipedia.org/wiki/Citral"
+  target=new>citral</a> and
+  <a href="https://en.wikipedia.org/wiki/Geraniol" target=new>geraniol</a>). These data were
+  used to calculate the firing rate of each neuron using 50 ms time bins. The
+  87 vectors were then reduced to 3 dimensions. The resulting
+  three-dimensional plot reveals that each odour produces a different
+  trajectory, and thus different spatiotemporal patterns of activity. The
+  numbers along the trajectory indicate time points (seconds), and the point
+  marked <B>B</B> indicates the resting state of the neuronal population.  
+  
+</DIV>
+
+
+
+<DIV  CLASS="slide">
+  <h1>short-term synaptic plasticity</h1>
+
+  <img src="BuonomanoMaass09-fig2a.png" class="figure-right">
+  <P>
+  <BR>
+  <B>(a)</B> An example of short-term plasticity of excitatory postsynaptic
+  potentials
+  (<a href="https://en.wikipedia.org/wiki/Excitatory_postsynaptic_potential"
+  target=new>EPSP</a>s) in excitatory synapses between
+  <a href="https://en.wikipedia.org/wiki/Cerebral_cortex#Layered_structure"
+  target=new>[cortical]
+  layer</a> 5 <a href="https://en.wikipedia.org/wiki/Pyramidal_cell" target=new>pyramidal
+  neurons</a>. The traces represent the EPSPs from
+  paired recordings; each presynaptic action potential is marked by a dot. 
+  Short-term plasticity can take the form of either short-term
+  depression [contrast with
+  <a href="https://en.wikipedia.org/wiki/Long-term_depression" target=new>LTD</a>] (<I>left</I>) or short-term facilitation [contrast with
+  <a href="https://en.wikipedia.org/wiki/Long-term_potentiation" target=new>LTP</a>] (</I>right</I>).
+  <P>
+  The plots show that the strength of synapses can vary dramatically as a
+  function of previous activity, and thus function as a short-lasting memory
+  trace of the recent stimulus history. 
+  
+</DIV>
+
+
+
+<DIV  CLASS="slide">
+  <h1>hidden and active states in a network</h1>
+
+  <img src="BuonomanoMaass09-fig2b.png" class="figure-right" height=450>
+  <P>
+  <BR>
+  <B>(b)</B> Excitatory (<font color=blue>blue</font>) and inhibitory (<font
+  color=red>red</font>) neurons and some of their connections.
+  <P>
+  <I>Top left:</I> the baseline state, represented as quiescent (in reality there is
+  spontaneous activity).
+  <P>
+  <I>Top right:</I> a brief stimulus generates
+  action potentials in a subpopulation of the neurons (light gray shades).
+  <P>
+  <I>Bottom left:</I> "hidden" state. After the stimulus, as a result of
+  short-term synaptic plasticity (dashed lines) and changes in intrinsic and
+  synaptic currents (different color shades), the internal state may
+  continue to change for hundreds of ms. Thus, although it is 
+  quiescent, the network should be in a different functional state at the
+  time of the next stimulus (at t = 100ms).
+  <P>
+  <I>Bottom right:</I> because the network is in a different state,
+  it would generate a different response pattern to the next stimulus, even
+  if the stimulus is identical to the first one (a different pattern of
+  <font color=blue>blue</font> spheres).   
+  
+</DIV>
+
+
+
+<DIV  CLASS="slide">
+  <h1>discrimination of complex spatiotemporal patterns</h1>
+
+  <img src="BuonomanoMaass09-fig3ab.png" class="figure-right">
+  <P>
+  <BR>
+  <B>(a)</B> A spectrogram of the spoken word "one".
+  <P>
+  <B>(b)</B> A <a href="https://en.wikipedia.org/wiki/Cochlea"
+  target=new>cochlear</a> model [here, a 40-neuron one] can be used to
+  generate a spatiotemporal  
+  pattern of spikes generated by the word "one" (lower left). This
+  pattern can be reversed (lower right) to ensure that the network is
+  discriminating the spatiotemporal patterns of action potentials, as
+  opposed to only the spatial structure. One can perform a
+  principal-component analysis on the [binned averages of the] spikes of the input patterns, and 
+  by plotting the first three dimensions create a visual representation of
+  the input trajectory. The upper panels show that the trajectories are
+  identical except that they flow in opposite temporal directions. Time is
+  represented in color: note the reverse color gradient.
+  <P class="incremental">
+    Note that this signal from the cochlear model is just the input to
+    the cortical model, illustrated on the next slide.
+  </P>
+  
+</DIV>
+
+
+
+<DIV  CLASS="slide">
+  <h1>discrimination performance: active states in a cortical microcircuit model</h1>
+
+  <img src="BuonomanoMaass09-fig3cd.png" class="figure-right" height=500>
+  <P>
+  <BR>
+  <B>(c)</B> The raster of the [80-neuron]
+  <a href="https://en.wikipedia.org/wiki/Recurrent_neural_network" target=new><B>recurrent network</B></a> in response to forward
+  (<font color=blue>blue</font>) and reverse (<font color=red>red</font>)
+  directions. The neural trajectories (lower plots) show that the
+  spatiotemporal spike patterns are no longer the reverse of each other. The
+  response shown represents a subsample of the 280 neurons of a
+  model.
+  <!--
+  The trajectory calculations plotted the fourth, fifth and sixth
+  dimensions of the principal-component analysis to improve visualization.
+  -->
+  <P>
+  <B>(d)</B> A <SC>linear read-out</SC> can distinguish between the original speech
+  input and its time reversal at most points in time. A single linear
+  read-out that received synaptic inputs from all neurons in the circuit was
+  trained to produce large output values for any active state that occurred
+  when the word "one" was spoken, but low output values at any time during
+  the time-reversed version of "one". The resulting output values of the
+  read-out are shown for a new trial that included noise injections into the
+  neurons. The ability of this simple linear read-out to distinguish
+  original and time-reversed spike patterns demonstrates that not only does
+  the circuit process the <B>spatial</B> (= neural-space) aspects of these input patterns, but every
+  active state also transmits information about the <B>temporal</B> context of each
+  spatial input pattern. 
+  
+</DIV>
+
+
+
+<DIV  CLASS="slide">
+  <h1>read-out</h1>
+
+  <img src="BuonomanoMaass09-fig3e.png" class="figure-right" height=550>
+  <P>
+  <BR>
+    On the right — <B>(e)</B> A schematic of the [cortical microcircuitry model] <B>recurrent network</B>, with the
+  components aligned with the relevant sections of parts (b)-(d). Several
+  neurons provide input to excitatory neurons that are part of a recurrent
+  network. The excitatory neurons in this network send a multi-dimensional
+    signal to a single downstream read-out neuron.
+      <P>
+  <a href="https://link.springer.com/chapter/10.1007%2F978-3-540-39432-7_63" target=new><img src="Fernando-fig1.png"
+  title="Pattern Recognition in a Bucket (Fernando & Sojakka, 2003)"
+											     class="figure-left"></a>
+    On the left — pattern recognition in a bucket.
+  
+</DIV>
+
+
+
+<DIV  CLASS="slide">
+  <h1>read-out from high-dimensional representations</h1>
+
+  <img src="BuonomanoMaass09-box2.png" class="figure-right">
+  <P>
+  <BR>
+  <B>(a)</B> Read-out can be computed as a weighted sum \(w_1 x_1 + w_2 x_2 + \ldots
+  w_d x_d\) of the inputs \(x\). Geometrically, the locus of points at which
+  the weighted sum is exactly equal to a threshold is a hyperplane in the
+  \(d\)-dimensional input space, illustrated here for \(d = 3\),
+  together with two trajectories. Such perfect separation, however, cannot
+  be expected in general.
+  <P>
+  <B>(b)</B> Mathematical results imply that linear separation becomes much
+  easier when the dimension of the state space exceeds the "complexity" of
+  the trajectories. <B>Black:</B> the probability that 2 trajectories that
+  each linearly connect 100 randomly chosen points can be separated by a
+  hyperplane. <B><font color=green>Green:</font></B> the average of the
+  minimal Euclidean distance between pairs of trajectories. In higher
+  dimensions, not only is it more likely that any two such trajectories can
+  be separated, but also they can be separated by a hyperplane with a larger
+ <a href="https://en.wikipedia.org/wiki/Support_vector_machine" target=new>"safety margin"</a>.
+  <P>
+  <small>Projections of external inputs into higher dimensions are
+  quite common in the brain. For example, ~1 million axons from each optic
+  nerve send visual information to the lateral geniculate nucleus, where it
+ is combined with information from the pulvinar (another thalamic nucleus)
+  and sent on to the primary visual cortex, in which there are ~500 million
+  neurons.</small>  
+  
+</DIV>
+
+
+
+<DIV  CLASS="slide">
+  <h1>population activity in the cat brain</h1>
+
+  <img src="BuonomanoMaass09-fig4ab.png" class="figure-right">
+  <P>
+  <BR>
+  Population activity from the
+  <a href="https://twitter.com/curiouszelda?lang=en"
+  target=new>cat</a> visual cortex encodes both the current 
+  and previous stimuli.
+  <P>
+  <B>(a)</B> A sample stimulus, with the receptive fields (squares) of the
+  recorded neurons superimposed.
+  <P>
+  <B>(b)</B> The spike output of neuron number 10 for 50 trials with the
+  letter sequence A, B, C as the stimulus and 50 trials with the letter
+  sequence D, B, C as the stimulus. The temporal spacing and duration of
+  each letter is indicated through <font color=green>green
+  shading</font>. The lower plot is a post-stimulus time histogram (PSTH)
+  showing the response of neuron 10  (shown in <font color=blue>blue</font>
+  in part <B>c</B> on the next slide) over the 50 trials shown.
+  <P>
+  
+</DIV>
+
+
+
+<DIV  CLASS="slide">
+  <h1>population activity in the cat brain</h1>
+
+  <img src="BuonomanoMaass09-fig4c.png" class="figure-right">
+  <P>
+  <BR>
+  <B>(c)</B> The spike response of 64 neurons during trial number 38
+  for the letter sequence A, B, C (left), and the read-out mechanism that was used
+  to decode information from these 64 spike trains (upper right). Each spike
+  train was low-pass filtered with an exponential and sent to a linear
+  discriminator. Traces of the resulting weighted sum are shown in the lower
+  right-hand plot both for the trajectory of active states resulting from
+  stimulus sequence A, B, C (<B>black</B> trace) and for 
+  stimulus sequence D, B, C (<font color=orange>orange</font> trace). For
+  the purpose of classifying these active states, a subsequent threshold was
+  applied. The weights and threshold of the linear discriminator were chosen
+  to discriminate active states resulting from letter sequence A, B, C and
+  those resulting from the letter sequence D, B, C. The <font
+ color=blue>blue</font> trace in part <B>c</B> shows the behavior of
+  neuron 10 [from the previous slide].
+  
+</DIV>
+
+
+
+<DIV  CLASS="slide">
+  <h1>decoding population activity in the cat brain</h1>
+
+  <img src="BuonomanoMaass09-fig4d.png" class="figure-right">
+  <P>
+  <BR>
+  <B>(d)</B> The performance of a linear discriminator at various points in
+  time. The red line shows the percentage of the <a
+ href="https://en.wikipedia.org/wiki/Cross-validation_(statistics)" target=new>cross-validated</a> trials that
+  the read-out correctly classified as to whether the first stimulus was A or
+  D. The read-out neuron contained information about the first letter of the
+  stimulus sequence even several hundred milliseconds after the first letter
+  had been shown (and even after a second letter had been shown in the
+  meantime). Note that discrimination is actually poor during the A and D
+  presentation because of the low average firing rate (<font
+  color=blue>blue</font> dashed lines).  
+    <HR>
+      <P class="incremental">
+	[EXTRA: Are cats <a href="https://www.youtube.com/watch?v=nluSTnmP-yU"
+		    target=new>spying</a> on us?]
+      </P>
+  
+</DIV>
+
+
+<!--
+  
+<DIV  CLASS="slide">
+  <h1>[EXTRA]: reservoir computing for predicting chaotic dynamics</h1>
+
+  <img src="Pathak18-fig1.png" class="figure-right">
+  <P>
+    [The
+    <a href="https://www.quantamagazine.org/machine-learnings-amazing-ability-to-predict-chaos-20180418/"
+       target=new>Quanta Magazine story</a>.]<BR>
+      <font color=gray>
+    (a) Training data gathering phase. (b) Predicting phase.
+    It is assumed that the parameters of the reservoir are chosen such
+    that the “echo state property” is satisfied; i.e., all of the
+    conditional
+    <a href="https://en.wikipedia.org/wiki/Lyapunov_exponent"
+    target=new>Lyapunov exponents</a> of the training reservoir
+    dynamics 
+    conditioned on \({\bf u}(t)\) are negative so that, for large
+    \(t\), the reservoir state \({\bf r}(t)\) does not depend on
+    initial conditions. 
+  </P>
+  <img src="Pathak18-fig4.png" class="figure-right" height=250>
+  <P>
+    Prediction of
+    <a href="https://en.wikipedia.org/wiki/Kuramoto%E2%80%93Sivashinsky_equation"
+    target=new>KS equation</a> \((L = 200, Q = 512,
+    \mu = 0.01, \lambda = 100)\) with the parallelized reservoir
+    prediction scheme using 64 reservoirs. (a) Actual KS equation data.
+    (b) Reservoir prediction \([\tilde{{\bf u}}(t)]\). (c) Error in the
+    reservoir prediction. (d) Error in a prediction made by
+    integrating the KS equation when it uses the reservoir output at
+    \(t = 0\),  \([\tilde{{\bf u}}(0)]\), as its initial condition.    
+  </P>
+  <DIR><DIR><DIR>
+  — <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.120.024102"
+  target=new><I>Model-free prediction of large 
+  spatiotemporally chaotic systems from data: a reservoir computing
+  approach</I></a> (2018). J. Pathak et al., 
+  Physical Review Letters 120:024102. 
+  </DIR></DIR></DIR>
+  </font>
+
+</div>
+
+    -->
+
+    
+
+<DIV  CLASS="slide">
+  <h1>next: brain-scale dynamics and the brain as a complex system</h1>
+
+  <a href="https://en.wikipedia.org/wiki/Complex_systems" target=new><img src="Complex_systems_organizational_map.jpg"
+  class="figure-right" height=500></a> 
+  <P>
+  <BR>
+  On the right: the subfields of the field of   <a href="https://en.wikipedia.org/wiki/Complex_systems" target=new>complex dynamical systems</a>.
+  <P>  
+  Why consider the DYNAMICS of the brain (as opposed to just the anatomy, or static
+      snapshots of activity)???
+  <ul>
+    <li>time</li>
+    <P>
+    <li>collective action</li>
+    <P>
+    <li>specific and nonlinear interaction</li>
+  </ul>
+  <P>
+  A key concept is <a href="https://en.wikipedia.org/wiki/Metastability"
+  target=new>metastability</a>.
+
+
+</div>
+
+
+  
+
+<DIV  CLASS="slide">
+  <h1>brain dynamics: transient functional dynamics (Rabinovich et al., 2015)</h1>
+
+  <img src="Rabinovich15-fig2ab.png" width=45% class="figure-right">
+  <P>
+  <BR>
+  <B>(A)</B> Time series of anticorrelated switching in different FUNCTIONAL
+  NETWORKS during resting state. <font color=gray>Arrows indicate intraparietal sulcus (IPS),
+  posterior cingulate/precuneus (PCC), and medial prefrontal cortex
+  (MPF).</font>
+  <P>
+  <B>(B)</B> Stimulus-dependent reorganization of the FUNCTIONAL
+  CONNECTIVITY by the frontoparietal brain network (FPN) among visual,
+  auditory, and motor systems across two different tasks. Global variable
+  connectivity is depicted by the shifting connectivity pattern (red lines
+  connecting FPN to other brain networks). The importance of sequential
+  switching between network arrangements is signified by blue lines between
+  the two networks. 
+
+</div>
+
+
+<DIV  CLASS="slide">
+  <h1>brain dynamics: winnerless competition (WLC) dynamics (Rabinovich et al., 2015)</h1>
+
+  <img src="Rabinovich15-fig3.png" width=70% class="figure-right">
+  <P>
+  <BR>
+  <B>(A,B)</B> the response to an
+  odorant in an insect antennal lobe. It is the intrinsic transient dynamics
+  of the complex antennal lobe system that maps such input to a sequential
+  representation as seen in these single-trial responses of 110 antennal
+  lobe neurons to one odor shown in (A) (gray bar, 1 s). Panel (B) shows the
+  projections of neuron trajectories, representing the succession of states
+  visited by this neural network in response to one odor. Red lines,
+  individual trials; black line, average of ten trials. Abbreviations: B,
+  baseline state; FP, fixed point, reached after 1.5 s.
+  <P>
+  <B>(C)</B> the taste-specific robust sequential pattern observed in
+  neurons of the gustatory cortex of the rat in response to four taste
+  stimuli. A model of joint temporal activity reveals that the network
+  behavior is best represented by four discrete states in a WLC setting. 
+
+</div>
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>brain dynamics: landscape metaphors for transient dynamics with metastable states (Rabinovich et al., 2015)</h1>
+
+  <img src="Rabinovich15-fig4.png" width=60% class="figure-right">
+  <P>
+  <BR>
+  <B>(A)</B> A saddle with two stable and two unstable separatrices
+  (boundaries separating two modes of behavior). A set of saddles can 
+  be sequentially connected by unstable separatrices <B>(B)</B> to form a
+  stable heteroclinic channel <B>(C)</B>.
+  <BR>
+  <B>(D)</B> The low-dimensional heteroclinic dynamics of a large  neuronal
+  model network – 200 excitatory/inhibitory neuronal clusters.
+  <BR>
+  <B>(E)</B> The transient dynamics of attention; in this case, one
+  cognitive modality out of three requires full attention.
+  <BR>
+  <B>(F)</B> Attention sharing (sequential switching of attention among
+  three different modalities) in the same model with different
+  intrinsic/extrinsic inputs.
+  <P>
+  Heteroclinic dynamics may serve an appropriate mathematical  framework for
+  robust transient processes that can be treated as an itinerary pass through
+  <a href="https://en.wikipedia.org/wiki/Metastability"
+ target=new>metastable</a> states. A heteroclinic channel is robust provided
+  that the 
+  compression of the phase volume in the vicinity of the metastable states
+  is stronger than the stretching, and trajectories that come to this area
+  become prisoners, and thus unable to leave it.
+
+</div>
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>brain dynamics: multimodality interactions (Rabinovich et al., 2015)</h1>
+
+  <img src="Rabinovich15-fig5.png" width=60% class="figure-right">
+  <P>
+  <B>(A)</B> An example of three modality binding networks in the context of
+  the discussed model (filled and unfilled circles: inhibitory and
+  excitatory connections).
+  <BR>
+  <B>(B)</B> The corresponding <a
+ href="https://en.wikipedia.org/wiki/Phase_portrait" target=new>phase
+  portrait</a> of the binding dynamics. The 
+  unstable separatrices that connect different metastable states are 2D in
+  this case. Q and \(\Gamma\): the metastable states; S are the corresponding
+  separatrices.
+  <BR>
+  <B>(C)</B> An example of a three-level chunking hierarchical network
+  architecture. It can be, for example, text creation: with the first level
+  representing the organization of sentences; second level, paragraph
+  creation; and upper level, chapter organization. Spheres represent the
+  informational items or units (metastable states). Different colors
+  indicate different chunks. All connections inside the elementary items are
+  inhibitory.
+  <BR>
+  <B>(D)</B>  The corresponding phase portrait of the chunking activity in
+  the phase space of auxiliary variables. Blue trajectories represent the
+  dynamics inside the chunk. Green trajectories represent the chunk
+  sequential switching. 
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>lessons?</h1>
+
+
+  <!--   <img src="" class="figure-right" >  -->
+  <P>
+  <BR>
+  So, what is it that neurons do natively?
+  <ul>
+    <font color=gray>
+    <li>
+    Respond selectively (tuning) [recall the idea of representation by
+    similarities to landmarks/prototypes, a.k.a. the Chorus Transform].
+    </li>
+    <P>
+    <li>
+    Form maps (retinotopy, tonotopy, chronotopy, etc.) to address various
+    cognitive tasks.
+    </li>
+    <P>
+    <li>
+    Do linear algebra (vector projection / inner product, matrix
+    multiplication).
+    </li>
+    <P>
+    <li>
+    Implement dimensionality reduction (from many dimensions to one),
+    including similarity-preserving DR by random projections.
+    </li>
+    <P>
+    <li>
+    Perform function approximation (when arranged in multilayer networks).
+    </li>
+    <P>
+    <li>
+    Learn (BCM; STDP).
+    </li>
+    </font>
+    <P>
+    <li>
+    Organize in dynamic assemblies (nonlinear computation and read-out;
+    itinerancy, winnerless competition, sequence processing).
+    </li>
+  </ul>
+  
+</div>
+
+
+
+<div class="footer">
+<p>Last modified: Wed Jul 17 2019 at 21:47:30 EDT</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Psych 3140/6140 wk-6-2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2014-2021 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- 
+<rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+<permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+<requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+<permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+<requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+</License>
+</rdf:RDF>
+-->
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+    Week 6.2 &#151; 
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Psych 3140/6140</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Week 6: Memory</h2>
+    <h3>&nbsp;Lecture 6.2: associative memory and hashing</h3>  
+  </div>
+  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%>
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+
+<div  CLASS="slide">
+  <h1>computational aspects of information retrieval</h1>
+
+  <a href="https://en.wikipedia.org/wiki/Droodles"
+       target=new><img src="pig-around-barn-droodle.jpg"
+       class="figure-right" 
+       title="a droodle"></a>
+  <P>
+  <ul>
+    <li>
+      Even though storage for its own sake is NOT what memory is for
+      (memory is always for behavior), managing a large store of
+      information presents a real computational challenge.
+    </li>
+    <li>
+      A real-world behavioral task that illustrates this challenge:
+      associative lookup (as in "this reminds me of...").
+    </li>
+    <li>
+      An algorithm-level approach: hashing.
+      <ul>
+	<li>locality-sensitive hashing (LSH)</li>
+      </ul>
+    </li>
+    <li>An implementation-level solution: random projection followed
+      by "pigeonholing".
+      <ul>
+	<li>
+	  "projection" onto a set of landmarks (Chorus Transform, hinted at but not discussed last week
+	  in <a href="wk-5-2.html" 
+		target=s>Lecture 5.2</a>)
+	</li>
+      </ul>
+    </ul>
+  </P>
+  
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>memory lookup as falling into an attractor</h1>
+
+    <table cellspacing=5>
+    <tr>
+      <td>
+	<P>
+	  Memory storage: creating <a href="http://en.wikipedia.org/wiki/Attractor"
+		    target=new>attractors</a>.
+	</P>
+	<P>
+	  Memory recall: falling into an attractor.
+	</P>
+      </td>
+      <td rowspan=2 align=center>
+	<img src="pig-around-barn-droodle.jpg">
+      </td>
+    </tr>
+    <tr>
+      <td>
+	<img src="energy-landscape-trajectory.gif">
+      </td>
+    </tr>
+  </table>  
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>associative lookup as falling into an attractor</h1>
+
+  <table cellspacing=5>
+    <tr>
+      <td>
+	<P>
+	  ASSOCIATIVE recall: falling into an attractor <B>from a nearby
+	    location</B>.
+	</P>
+	<P>
+	  But how to get to the right neighborhood in the first place?
+	</P>
+      </td>
+      <td rowspan=2 align=center>
+	<img src="energy-surface-four.jpg" height=500 title="an energy surface of a system with four attractor states">
+      </td>
+    </tr>
+    <tr>
+      <td>
+	<P>
+	  <img src="pig-around-barn-droodle.jpg" title="a droodle">
+	  </P>
+      </td>
+    </tr>
+  </table>  
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>vagaries of autoassociative recall</h1>
+
+  <P>
+    ASSOCIATIVE recall: falling into an attractor <B>from a nearby
+      location</B>.
+  </P>
+  <P>
+    But how to get to the right neighborhood in the first place? And
+    what to do if more than one item is retrieved?
+  </P>
+
+  <table cellspacing=15 class="figure-right">
+    <tr>
+      <td rowspan=2 align=center>
+	<img src="pig-around-barn-droodle.jpg" title="Part of the mouth control circuit of Aplysia">
+      </td>
+      <td>
+	<img src="dog-tail.jpg">
+      </td>
+    </tr>
+    <tr>
+      <td>
+	<img src="pig-tail.jpg">
+      </td>
+    </tr>
+  </table>  
+  
+
+</div>
+
+      
+
+<div  CLASS="slide">
+  <h1>the problem: managing MASSIVE storage and retrieval</h1>
+
+  <a href="https://en.wikipedia.org/wiki/Columbarium"
+     target=new><img src="columbarium.jpg"
+		     class="figure-right"
+		     title="a columbarium"
+		     width=560></a>
+  <P>
+    How to get to the right neighborhood in the first place? <BR>
+      And what to do if more than one item is retrieved?
+  </P>
+  <P>
+    Answers to those questions will not be found on the implementation
+    level (attractors dynamics) — we must consider the more abstract
+    levels (behavioral / computational / algorithmic).
+  </P>
+  <P>
+    Let's start with the task: storage/retrieval. What we need is:
+      <ul>
+	<li>high capacity (room for many items)</li>
+	<li>convenient addressing (easy to figure out at what address a given
+	  item is stored)</li>
+	<li>quick access (not having to sift through too many items to find the
+	  needed one)</li>
+      </ul>
+    </P>
+      
+</div>
+
+
+  
+<div  CLASS="slide">
+  <img src="pandemonium.jpg" class="figure-right" >
+  <h1>welcome to Pandemonium</h1>
+
+  <P>
+    The requirements: a storage/retrieval mechanism with
+    <ul>
+      <li>high capacity (room for many items)</li>
+      <li>convenient addressing (easy to figure out at what address a given
+	item is stored)</li>
+      <li>quick access (not having to sift through too many items to find the
+	needed one)</li>
+    </ul>
+  </P>
+  <P>
+    One way of going about it: <a href="http://en.wikipedia.org/wiki/Oliver_Selfridge"
+				  target=new>Selfridge</a>'s
+    <a href="https://en.wikipedia.org/wiki/Pandemonium_architecture" 
+       target=new>Pandemonium</a> model (1959). The illustration here
+       is from
+    <a href="https://books.google.com/books/about/Human_information_processing.html?id=SZsQAQAAIAAJ"
+    target=new><I>Human Information Processing</I></a> (Lindsay & Norman, 1972)
+  </P>
+  <HR>
+  <P class="incremental">
+    A better, general-purpose algorithmic approach: HASHING.
+  </P>
+
+</div>
+
+
+  
+
+<DIV CLASS="slide">
+  <h1>associative memory and hashing</h1>
+
+  <img src="hashing.png" height=350 class="figure-right">
+  <P>
+    Hashing is a family of storage/retrieval algorithms that use
+       a <a href="http://en.wikipedia.org/wiki/Hash_function"
+	    target=new>hash function</a> to map content to an address.
+  </P>
+  <P>
+    Hashing supports one-step (constant-time) access. But there are
+    also downsides.
+  </P>
+  <P>
+    Using hashing to implement associative memory leads to tension between
+    two conflicting requirements:
+    <ul>
+      <li>
+	on the one hand, we need fast recall with low probability of
+	error ("collision", red arrows on the right);
+      </li>
+      <li>
+	on the other hand, we need to preserve the similarity
+	structure of the data (map similar items to nearby
+	addresses). 
+      </li>
+    </ul>
+  </P>
+  <P>
+    A way out through compromise: <B>locality-sensitive hashing</B>
+    (think of the
+    <a href="https://en.wikipedia.org/wiki/Dewey_Decimal_Classification"
+       target=new>Dewey Decimal</a> library indexing)  —
+  </P>
+    <img src="general_vs_lsh.jpg" height=100>
+      
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>an illustration of locality-sensitive hashing (Kulis et al., IEEE TPAMI 2009)</h1>
+
+  <img src="Kulis09-LSH-summary.png" height=300 class="figure-right">
+  <P>
+    Locality-sensitive hashing (LSH) combines one-step associative
+    recall with <I>partial</I> preservation of the local similarity
+    structure of the data.
+  </P>
+  <P>
+    <I><B>Training</B> (top left of the diagram):</I> A list of \(k\) hash functions
+    \(h_{r_1},\ldots,h_{r_k}\) (here, \(k=6\) for a six-bit address) is
+    applied to <a href="https://en.wikipedia.org/wiki/Columbarium" target=new>pigeonhole</a> the \(N\)  items that need to be stored into the
+    cells of a hash table, so that <font color=red>similar items</font> (here,
+    similar-color) <font color=red>are likely to share a cell</font>.
+  </P>
+  <P>
+    <I><B>Use</B> (bottom left):</I> To obtain the approximate near-neighbors for a query
+    \(Q\), one need only hash it and then evaluate its similarity to the
+    set of examples with which it collides (not to the contents of the entire
+    database).
+  </P>
+  <P>
+    <I><B>Outcome</B> (bottom right):</I> The 3 out of 4 items in bin 110111 whose
+    relevant characteristic (here, color) matches that of \(Q\).
+  </P>
+
+</div>
+
+
+
+<div class="slide">
+  <h1>hashing: post-processing after recall</h1>
+
+  <table cellspacing="15">
+    <tbody>
+      <tr>
+	<td rowspan="2" align="center">
+	  <img src="pig-around-barn-droodle.jpg" title="Part of the mouth control circuit of Aplysia">
+	  </td>
+	<td>
+	  <img src="dog-tail.jpg">
+	  </td>
+	<td rowspan=2 align="left">
+	  Post-processing (further filtering) will typically be
+	  required, but its complexity [number of elementary
+	  operations needed to complete] is low, because most irrelevant
+	  items have already been filtered out when the hash table was
+	  populated with data.
+	</td>
+	</tr>
+	  <tr>
+	    <td>
+	      <img src="pig-tail.jpg">
+	      </td>
+	    </tr>
+	  </tbody>
+	</table>
+      
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>what kind of hashing function is needed for locality-sensitive hashing (LSH)?</h1>
+
+  <img src="approximate-nearest-neighbor.jpg" class="figure-right">
+  <P>
+  ANY hashing function \(h\) that maps the data space to the memory
+  address space is suitable for LSH, provided that the LSH condition is
+  satisfied (Indyk & Motwani, 1998): 
+  <DIR><DIR>
+    <ul>
+      <li>
+      If two data points \({\bf p},{\bf q}\) are close to each other, the
+      probability of mapping them to the same bin (memory cell) must be
+      relatively large (below, larger than some \(P_1\)).
+      </li>
+      <li>
+      If the two data points are not so close to each other, the probability
+      of mapping them to the same bin must be relatively small (below,
+      smaller than some small \(P_2\)).
+      </li>
+    </ul>
+    $$
+    \begin{alignat}{2}
+    \textrm{if}~\|{\bf p} - {\bf q}\| \leq
+    &~r~~~~&\textrm{then}~~~&~\textrm{P}\left[h({\bf p})=h({\bf q})\right]
+    \geq P_1 \phantom{\ll P_1} ~~~(P_1~is~a~large~probability)\\
+    \textrm{if}~\|{\bf p} - {\bf q}\| \geq
+    &~cr~~~~&\textrm{then}~~~&~\textrm{P}\left[h({\bf p})=h({\bf q})\right]
+    \leq P_2 \ll P_1 ~~~(P_2~is~a~small~probability)
+    \end{alignat}
+    $$
+    </DIR></DIR>
+    
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>locality-sensitive hashing (LSH) and the so-called "Chorus Transform" (Edelman & Shahbazi, 2012)</h1>
+
+  <P>
+  One of the LSH families described by Andoni and Indyk (2008) is 
+  "multidimensional line partitioning":
+  </P>
+  <ol>
+    <li> perform a <B>random projection</B> of the data point
+    \(\bf{p}\) onto a space that consists of <I>a few</I> lines — that
+    is, \(\mathbb{R}^t\), where \(t\) grows slowly with \(n\), as for
+    instance in \(t \sim \log n\); 
+    </li>
+    <li>
+    <B>partition</B> the space \(\mathbb{R}^t\) into cells;
+    </li>
+    <li>
+    make the hash function <B>return the index</B> of the cell that contains the
+    projected point \(\bf{p}\).
+    </li>
+  </ol>
+  <P>
+    <img src="Chorus-LSH.png" height=300 class="figure-right">
+    </P>
+    <HR>
+      <P>
+	This is precisely what happens when the location of the data
+	point relative to several LANDMARKS is computed, as
+	illustrated here. A point projected onto the gray plane
+	activates four units TUNED to landmark locations; the relative
+	activation of each unit is depicted by the size of the
+	corresponding blue circle. The resulting list of four numbers
+	is the output of the hash function: the memory address
+	associated with the data point.
+      </P>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>the Chorus [of Prototypes or Landmarks] Transform</h1>
+
+  <img src="Chorus-principle.png" height=350 class="figure-right">
+    <P>
+      An object can be effectively represented by the responses of
+      several units that are broadly TUNED to LANDMARK shapes.
+    </P>
+    <P>
+      A set of such tuned units are said to compute a <I>Chorus Transform</I> of the
+      stimulus  \(\textbf{x}\)
+      (here, <font face="courier">giraffe</font>), defined as the
+      vector of distances (inverse similarities) between \(\textbf{x}\) and the landmarks
+      \(\textbf{p}_i\)
+      (here, <font 
+	       face="courier">pig,
+	camel,
+	goat</font>): 
+      $$
+      CT({\bf x}) = \left( \begin{array}{c} 
+      \| {\bf x} - {\bf p}_1 \| \\ \vdots \\ \| {\bf x} - {\bf p}_{n} \| 
+      \end{array} \right)
+      $$
+    </P>
+    <P>
+      The application of the
+      <a href="https://en.wikipedia.org/wiki/Norm_(mathematics)"
+      target=new>norm function</a> \(\|\cdot\|\) to each 
+      difference vector \({\bf x} - {\bf p}_i\) yields its length and
+      therefore the distance between \({\bf x}\) and \({\bf p}_i\).
+    </P>
+    <P>
+      CT maps points from the original space with \(dim(\textbf{x}) = D\)
+      dimensions to a space  spanned by distances to
+      landmarks, which has \(n \ll D\) dimensions (\(n\) being the number of
+      landmarks). In a typical situation in vision, this is some
+      SERIOUS dimensionality reduction. 
+    </P>
+
+</div>
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>smooth dimensionality reduction with a Chorus of Prototypes</h1>
+
+  <img src="chorus.jpg" height=350 class="figure-right">
+  <P>
+  The Chorus Transform of a point in a \(D\)-dimensional space \(\textbf{x}\in R^{D}\) — the vector of distances 
+  between it and the landmarks \(\textbf{p}_i\) — performs dimensionality
+  reduction from \(dim(\textbf{x}) = D\) to a potentially much smaller \(n \ll D\):
+  $$
+  CT({\bf x}) = \left( \begin{array}{c} 
+  \| {\bf x} - {\bf p}_1 \| \\ \vdots \\ \| {\bf x} - {\bf p}_{n} \| 
+  \end{array} \right)
+  $$
+  In other words, it maps points in a \(D\)-dimensional input space to
+  points in a space whose dimensionality \(n\) is the same as the number of
+  landmarks.
+  <HR>
+  <P>
+    Note that \(CT\) is smooth in the requisite sense, and
+    therefore the reduced-dimensionality representations it forms
+    will be veridical (true) to those in the original space.
+  </P>
+  <P>
+  <font color=gray>There is a deep and interesting link here to <a
+  href="http://en.wikipedia.org/wiki/Kernel_method" 
+  target=new>kernel methods</a> in machine learning, which are beyond the
+  scope of this course.</font>
+
+</div>
+
+-->
+
+
+
+<DIV CLASS="slide">
+  <h1>how can CT be good both at dimensionality reduction and at preserving veridicality?</h1>
+
+  <img src="projection.png" height=300 class="figure-right">
+  <P>
+    According to the <a
+		       href="http://en.wikipedia.org/wiki/Johnson%E2%80%93Lindenstrauss_lemma"
+		       target=new>Johnson-Lindenstrauss Lemma</a> (1984), a cloud of points in a
+    high-dimensional space can be projected onto a space of a VERY much lower
+    (logarithmically lower) dimensionality, while largely preserving the
+    relative distances among
+    points.<sup><font color=red>*</font></sup>
+  </P>
+  <P>
+    Relying on a related idea, Edelman (1999, App.B) showed that the
+    Chorus Transform can support a logarithmic dimensionality
+    reduction, while approximately preserving the relative distances
+    among points (based on a theorem due
+    to <a href="https://en.wikipedia.org/wiki/Jean_Bourgain"
+    target=new>Jean Bourgain</a>, 1985).
+  </P>
+  <P>
+    In other words, even with a very small number of landmarks — on
+    the order of \(\log D\), where \(D\) is the dimensionality of the
+    original problem — the layout of the data points in the new,
+    low-dimensional space approximates their original layout, implying
+    that the <B>original similarity</B> relations, and with them
+    category boundaries, etc., are <B>largely preserved</B>.
+  </P>
+  <P>
+    <HR width=30% align=left>
+      <P>	
+	<sup><font color=red>*</font></sup><font color=gray>Specifically, any \(n\)-point subset of Euclidean space can be
+	  embedded in \(O(\epsilon^{−2} \log n)\) dimensions with at most \((1 +
+	  \epsilon)\) distortion of the inter-point distances.</font>
+      </P>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>back to locality-sensitive hashing (LSH) and the CT (Edelman & Shahbazi, 2012)</h1>
+
+  <font color=gray>
+    <P>
+      One of the LSH families described by Andoni and Indyk (2008) is 
+      "multidimensional line partitioning":
+    </P>
+    <P>
+      <ol>
+	<li> perform a <B>random projection</B> of the data point
+	  \(\bf{p}\) onto a space that consists of <I>a few</I> lines — that
+	  is, \(\mathbb{R}^t\), where \(t\) grows slowly with \(n\), as in
+	  \(t \sim \log n\); 
+	</li>
+	<li>
+	  <B>partition</B> the space \(\mathbb{R}^t\) into cells;
+	</li>
+	<li>
+	  make the hash function <B>return the index</B> of the cell that contains the
+	  projected point \(\bf{p}\).
+	</li>
+      </ol>
+    </P>
+  </font>
+  <HR width=50% align=left>
+  <P>
+    <img src="Chorus-LSH.png" height=300 class="figure-right">
+    </P>
+  <P>
+    This is precisely what the Chorus Transform does:
+    <ol>
+      <li>Project \(\bf{p}\) onto the space
+	(<a href="https://en.wikipedia.org/wiki/Manifold" target=new>manifold</a>)
+	defined implicitly by the choice of landmarks/prototypes;</li>
+      <li>Use the <a href="https://en.wikipedia.org/wiki/Receptive_field"
+		     target=new>receptive field</a> of each tuned prototype unit 
+	as a "feature detector" to compute part of the address 
+	of the <a href="https://en.wikipedia.org/wiki/Columbarium"
+		  target=new>"pigeonhole"</a> where the item will be stored. 
+      </li>
+    </ol>
+  </P>
+
+</div>
+
+    
+  
+
+<DIV CLASS="slide">
+  <h1>[EXTRA] CT and locality-sensitive hashing (Edelman & Shahbazi, 2012)</h1>
+
+    <font color=gray>
+      <P>
+	To form a "digital" address,
+	the outputs of the tuned units can be thresholded, in which
+	case the address consists of the list of indices of units
+	  whose activation by the probe point exceeds the threshold.
+      </P>
+      <P>
+	Without thresholding, the Chorus Transform can be seen to carry out
+	kernelized LSH (Kulis and Grauman, 2009). For instance, we may define
+	the space \(V_j\) onto which the data are projected by the \(j\)-th hashing function
+	as a linear combination of "landmarks" \(\left\{{\bf{z}}_n\right\}\) in the
+	kernel space. This idea leads to the hash function
+	$$
+	\begin{eqnarray}
+	h({\bf p}) = sign\left({\bf a}^{T} {\bf k}_{{\bf p}} - {\bf
+	b}\right) 
+	\end{eqnarray}
+	$$
+	where \(\bf{a}\) are the linear combination weights and
+	$$
+	\begin{eqnarray}
+	{\bf k}_{\bf x}= \left[K\left({\bf x}, {\bf z}_{1}\right), \ldots,
+	K\left({\bf x}, {{\bf z}}_{n}\right)\right]^{T}
+	\end{eqnarray}
+	$$
+	are the kernel values between \(\bf{x}\) and each of the landmark points
+	\({\bf{z}}_n\). With the distance function \(\|\cdot\|\) serving as the
+	kernel and \({\bf{z}}_n\) as the prototypes, this is precisely the Chorus
+	Transform of the data point \(\bf{x}\).
+      </P>
+    </font>
+
+</div>
+
+
+
+<div class="footer">
+<p>Last modified: Thu Mar 18 2021 at 06:50:07 EDT</p>
+</div>
+</body>
+</html>

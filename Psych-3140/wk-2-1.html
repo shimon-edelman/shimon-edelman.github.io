@@ -1,0 +1,1171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Psych 3140/6140 wk-2-1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2014-2021 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+</head>
+<body>
+
+<!-- 
+<rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+<permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+<requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+<permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+<requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+</License>
+</rdf:RDF>
+-->
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Week 2.1 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Psych/Cogst/Info 3140/6140</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Week 2: Universal tools, I</h2>
+    <h3>&nbsp;Lecture 2.1: THE methodology</h3>
+  </div>
+  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%>
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+<div  CLASS="slide">
+  <h1>moral (from Lecture 1.2): divided we fall</h1>
+
+  <img src="shepard-elephant.gif" class="figure-right" title="An elephant (Roger Shepard)">
+  <P>
+  Four case studies — four approaches to understanding the brain, and their limitations:
+  <ol>
+    <li>
+    An ambitious broad-scope "computational" theory (ACT-R): based on a
+    single top-down assumption <I>about the solution/mechanism</I> —
+    not about any of the problems that arise.
+    </li>
+    <li>
+    A single-cell electrophysiology study (microstimulation): neat, but
+    leaves most questions unresolved.
+    </li>
+    <li>
+    An imaging study (fMRI): trying to pinpoint where in the brain
+    particular operations happen is not only not informative; localization
+    of function is a fool's hope, even if we're confident about what
+    the function is.
+    </li>
+    <li>
+    Throwing machine learning at problems
+    (<a href="https://en.wikipedia.org/wiki/Deep_learning"
+    target=new>Deep Learning</a> etc.): even if the hack succeeds, it
+    doesn't reveal much about how the brain works, or how to scale
+    apps up.
+    </li>
+  </ol>
+  </P>
+  <P>
+    <B>What to do?</B>
+  </P>
+  
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>what to do? open your eyes!</h1>
+
+  <img src="elephant-in-the-classroom.jpg" class="figure-right" height=450>
+  <P>
+    <font color=gray>
+      [from Lecture 1.1] A <B>real</B> explanation of some aspect of
+	 the mind — or of any other information-processing /
+	 computational system — would have to be:
+      <ul>
+	<li>
+	  <B><I>intelligently</I> reductionist</B>, by showing how its
+	    complexity arises from simpler interacting elements;
+	  </li>
+	<li>
+	  <B>literal</B> (as opposed to metaphorical) at its core.
+	</li>
+	</ul>
+      </font>
+  </P>
+  <P>
+    [from Lecture 1.2] A <B>complete</B> explanation of some aspect of
+    the mind would have to be:
+    <ul>
+      <li>
+	exhaustive with regard to its causes, properties, and
+	consequences — typically on <B>multiple levels</B>.
+      </li>
+    </ul>
+  </P>
+  <P class="incremental">
+    Across these levels, different types of questions about the
+    computation at hand are identified, discussed, and
+    addressed. (Consider the questions from Lecture 1.2, raised /
+    answered by the ACT theory; by the single-neuron current-injection
+    study; by the whole-brain imaging study; by the machine learning
+    gameplaying study.)
+  </P>
+
+</div>
+
+
+<div  CLASS="slide">
+  <h1>the Marr & Poggio program: a multi-level explanatory methodology</h1>
+
+  <BR>
+  <P>
+  On the agenda today:
+  <DIR><DIR>
+    the <a href-"https://en.wikipedia.org/wiki/Ernst_Mayr"
+    target=new>Mayr</a> &
+    <a href="https://en.wikipedia.org/wiki/Nikolaas_Tinbergen"
+    target=new>Tinbergen</a>
+    & <B><a href="../marr/marr.html"
+    target=new>Marr</a>
+    & <a href="http://mcgovern.mit.edu/principal-investigators/tomaso-poggio"
+    target=new>Poggio</a></B> program for understanding
+    cognitive/computational systems (including brains).
+  </DIR></DIR>
+  <P>
+  <HR>
+  <P>
+  A typical specific question of potential interest about behavior
+  (more about behavior in general later this week):
+  <DIR><DIR>
+    <table border=1 cellpadding=20>
+      <tr>
+	<td>
+	  <font size=+3>
+	    <a href="https://en.wikipedia.org/wiki/Why_did_the_chicken_cross_the_road%3F"
+	    target=new><SC>Why</SC> 
+	    did the chicken cross the road?</a>
+	  </font>
+	</td>
+	<td>
+	  <img src="chicken-crossing.gif">
+	</td>
+      </tr>
+    </table>
+  </DIR></DIR>
+  
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>why did the chicken cross the road?</h1>
+
+  <DIV style="position:absolute; left:8">
+    <img src="chicken-crossing-table.jpg">
+      <P>
+      <SC>Source of explanation:</SC>
+	<BR>
+	  (1) <a
+    href="https://www.youtube.com/watch?v=AsXKS8Nyu8Q"
+    target=new>Baldrick</a>, (2) <a
+    href="http://en.wikipedia.org/wiki/Jack_Nicholson" target=new>Jack
+    Nicholson</a>, (3) <a href="http://www.friesian.com/marx.htm" target=new>Karl
+    Marx</a>, (4) <a href="http://en.wikipedia.org/wiki/Mr_Spock" target=new>Mr
+    Spock</a>, (5) <a href="http://en.wikipedia.org/wiki/Sigmund_Freud"
+    target=new>Sigmund Freud</a>, (6)-(8) academic papers on avian
+    brain neuroscience.
+  </DIV>
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>why did the chicken cross the road?</h1>
+
+  <DIV style="position:absolute; left:8">
+    <img src="chicken-crossing-table.jpg">
+    <P>
+      <SC>Classification of explanation:</SC>
+      <BR>
+      (1) cultural reference joke; (2) cultural reference joke; (3)
+      political satire; (4) cultural reference joke;
+      (5) <a href="http://www.vordenker.de/ggphilosophy/mcculloch_past_delusion.pdf"
+      target=new>psychoanalysis</a> (a joke in itself); <B>(6)
+      developmental neuropsychology; (7) neurophysiology; (8)
+      psychopharmacology.</B>
+  </DIV>
+  
+</div>
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>a brief rant, to prevent an unduly exclusive focus on brains</h1>
+
+  <img src="my-brain-made-me-do-it.jpg" class="figure-right">
+    <P>
+      A typical excuse for / non-explanation of some behavior:
+      <DIR><DIR>
+	  "MY BRAIN MADE ME DO IT"
+      </DIR></DIR>
+    </P>
+    <P class="incremental">
+      For sure, but WHY? And HOW?
+      <BR>
+	(Repeat until all is fully understood.)
+      </P>
+
+</div>
+
+
+  
+
+<DIV  CLASS="slide">
+  <h1>a key methodological observation: there are multiple levels of analysis/understanding</h1>
+
+  <video src="crow-problem-solving-food-in-a-plexiglas-trap.mov" controls="controls" width=720 height=500 class="figure-right">
+  </video>
+  <P>
+  Just like chicken-crossing, any instance of applied computation — which is
+  what cognition is — <strike>&nbsp;can&nbsp;</strike> MUST be
+  examined on a number of LEVELS. 
+  </P>
+  <ul class="outline">
+    <li><a href="https://en.wikipedia.org/wiki/Ernst_Mayr"
+    target=new>Ernst Mayr</a>'s two types of causes/explanations —  
+    <ul>
+      <li>proximate causes — immediate, mechanical influences on a trait.</li>
+      <li>ultimate causes — historical explanations of why an organism has one
+      trait rather than another, often in terms of natural selection.</li>
+    </ul>
+    <small>[E. Mayr (1961). <I>Cause and effect in biology</I>. Science 134:1501]</small>
+    </li>
+    <li><a href="https://en.wikipedia.org/wiki/Nikolaas_Tinbergen"
+    target=new>Niko Tinbergen</a>’s four questions —  
+    <ul>
+      <li>survival value — What is it for?</li>
+      <li>ontogeny — How did it develop during the lifetime of the individual?</li>
+      <li>evolution — How did it evolve over the history of the species?</li>
+      <li>causation — How does it work?</li>
+    </ul>
+    <small>[N. Tinbergen (1963). <I>On aims and methods in ethology</I>. Z. Tierpsychol. 20:410]</small>
+    </li>
+    <li>David Marr’s three levels of understanding — 
+    <ul>
+      <li>what problem does the system solve?</li>
+      <li>what representations and algorithms does it employ?</li>
+      <li>how are these implemented?</li>
+    </ul>
+    <small>[D. Marr (1982). <I>Vision</I>. WH Freeman, San Francisco, CA.]</small>
+    </li>
+    </ul>
+
+</div>
+  
+
+
+<DIV  CLASS="slide">
+  <h1>interrelationships among Marr’s three levels of analysis (from Krakauer et al., 2017)</h1>
+
+  <img src="Krakauer17-fig2.png" class="figure-right" height=400>
+    <P>
+      <ol type=A>
+	<li>
+	  A bird attempts to fly (goal) by flapping its wings
+	  (algorithmic realization) whose aerodynamics depend on the
+	  features of its feathers (physical implementation). Feathers
+	  ‘‘have something to do’’ with flight and flapping, but what
+	  level of understanding do we achieve if we dissect the
+	  properties of the feathers alone? Bats fly but don’t have
+	  feathers, and birds can fly without flapping.
+	</li>
+	<li>
+	  The relationship [in scientific analysis] between the three
+	  levels is not arbitrary. The first step comes first, before
+	  the second step: the algorithmic level of understanding is
+	  essential to interpret its mechanistic implementation. The
+	  second step: implementation level work feeds back to inform
+	  the algorithmic level.
+	</li>
+	<li>
+	  Science suffers from an epistemological bias toward
+	  manipulation-based [experimental] view of understanding,
+	  induced by technology (black filled arrow).
+	</li>
+      </ol>
+    </P>
+
+</div>
+  
+
+
+<DIV  CLASS="slide">
+  <h1>the levels of analysis/understanding framework</h1>
+
+  <!--  <img src="levels-microscope.gif" class="figure-right">  -->
+    <P>
+      <font color=red>Mayr</font> & <font color=red>Tinbergen</font> &
+      Marr & Poggio —
+    </P>
+  <ul class="outline">
+    <li><font color=red>
+	Understanding <sc>the behavioral and evolutionary context and needs</sc>, shedding
+	light on computational problems that may need to be solved.</font>
+	<ul>
+	  <li>What does the animal do in general (to survive and procreate)?</li>
+	  <li>In the present context?</li>
+	  <li>What are the effects of evolutionary pressures on its
+	    behavior?</li>
+	  <li>What are its evolutionary roots?</li>
+	</ul>
+    </li>
+    <li>Understanding <SC>the computational problem</SC>, leading to a <SC>theory</SC>.
+      <ul>
+	<li>What <I>could be</I> the goal of the computation?</li>
+	<li>What <I>is</I> the goal of the computation?</li>
+	<li>Why is it appropriate?</li>
+	<li>What is the logic behind the strategy by which it can be
+	  carried out?</li>
+      </ul>
+    </li>
+    <li>Understanding/developing <SC>representations and <a
+							   href="http://en.wikipedia.org/wiki/Algorithm"
+							   target=new>algorithms</a></SC> that solve the problem.
+      <ul>
+	<li>What <I>could be</I> the input and output representations and
+	  the algorithm for mapping inputs to outputs?</li>
+	<li>What <I>are</I> the representations and algorithms in the
+	  given system?</li>
+      </ul>
+    </li>
+    <li>Understanding/developing <SC>the mechanism</SC> that implements the algorithm.
+      <ul>
+	<li>How <I>could</I> a given representation and algorithm be
+	  realized physically?</li>
+	<li>How <I>are</I> they realized in a given system?</li>
+      </ul>
+    </li>
+  </ul>
+
+</div>
+
+
+<!--
+
+<DIV  CLASS="slide">
+  <h1>the model system to consider: the barn owl</h1>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">When you come home late from the pub. <a href="https://t.co/ZYkVdETY7y">pic.twitter.com/ZYkVdETY7y</a></p>&mdash; Paul Bronks (@SlenderSherbet) <a href="https://twitter.com/SlenderSherbet/status/1081996824892854272?ref_src=twsrc%5Etfw">January 6, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+-->    
+
+<DIV  CLASS="slide">
+  <h1>exemplary full understanding: sound localization in the barn owl</h1>
+
+  <P>
+    The <strong>barn owl</strong>, <a
+				     href="http://www.owlpages.com/species/tyto/alba/Default.htm"
+				     target=new><em>Tyto alba</em></a> 
+  </P>
+  <P>
+    <table cellspacing=20>
+      <tr>
+	<td><img src="barn-owl-drawing.jpg"></td>
+	<td><img src="barn-owl-capturing-prey.jpg"></td>
+	</tr>
+	</table>
+      </P>
+      <HR width=30% align=left>
+	<P>
+	  <a href="https://www.theatlantic.com/photo/2021/02/photos-superb-owl-sunday-v/617957/"
+	     target=new>Superb Owl Sunday, 2021</a>
+	</P>      
+
+</div>
+
+
+    
+<DIV  CLASS="slide">
+  <h1>the barn owl: hunting behavior</h1>
+
+  <img src="Massa15-figs-3-4.png" height=450 class="figure-right">
+    <P>
+      Level 0: <B>behavior</B>, evolution.
+    </P>
+    <P>
+      Tracking owls with GPS (Massa et al., 2015). <I>Left:</I> activity
+      by time of <strike>day</strike> night. <I>Right:</I> preferred
+      terrain type.
+    </P>
+
+  </DIV>
+
+    
+
+<DIV  CLASS="slide">
+  <h1>the hunting owl</h1>
+
+  <img src="barnowl1.jpg" class="figure-right" >
+  <P>
+  <BR>
+  In the wild, the barn owl finds and catches mice in <strong>total darkness</strong>,
+  presumably by <a href="http://en.wikipedia.org/wiki/Sound_localization" target=new>homing in on the sound</a> of their movement.
+  <P>
+    <video src="barn-owl.mov" controls="controls" width=320 height=260>
+    </video>
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>barn owl &#151; posing the computational challenge</h1>
+
+  <img src="az-el.jpg" class="figure-right" height=350>
+  <P>
+  <BR>
+  Level 1 (<I>the computational problem</I>):
+  <BR>what is it that needs to be done for the hunting behavior to succeed?
+  <DIR>
+    <strong>&#151; find target coordinates (<a
+    href="http://www-istp.gsfc.nasa.gov/stargaze/Scelcoor.htm"
+    target=new>azimuth, elevation</a>)</strong>
+  </DIR>
+  <P>
+  <HR>
+  <P class="incremental">
+  Can you think of any alternative formulations of the problem?
+  </P>
+
+</div>
+
+
+<DIV  CLASS="slide">
+  <h1>barn owl &#151; a classical experimental setup for behavioral
+  study of sound localization</h1>
+
+  <img src="barnowl-8_2.jpg" class="figure-right">
+  <P>
+  <BR>
+  To address Levels 2 (<em>representation and algorithm</em>) and 3
+  (<em>mechanism</em>), <strong>controlled 
+  experimentation</strong> is required.
+  <P>
+  The diagram on the right illustrates the behavioral testing setup.
+
+</div>
+
+
+
+<!--  
+
+<DIV  CLASS="slide">
+  <h1>the barn owl: a recent behavioral study of sound+vision
+  localization IN THE LAB</h1>
+
+  <img src="Hazan15-fig1.png" height=500 class="figure-right">
+    <P>
+      Studying owl auditory-visual cue integration in the lab (Hazan
+      et al., 2015).
+    </P>
+    (<B>A</B>) The dark spots on the arena designate possible
+    positions of four food items. Items were spread so that each
+    quadrant will contain one item. The gray spot on the arena
+    designates a possible location of the loudspeaker. (<B>B</B>) An
+    owl with the OwlCam attached to its head. (<B>C</B>) A close view
+    of the OwlCam with the attachment unit and the battery in
+    place. The scale bar designates 10mm.
+      
+  </DIV>
+
+
+
+<DIV  CLASS="slide">
+  <h1>the barn owl: a recent behavioral study of sound+vision
+  localization IN THE LAB</h1>
+
+  <img src="Hazan15-fig6cd.png" height=500 class="figure-right">
+    <P>
+      Studying owl auditory-visual cue integration in the lab (Hazan
+      et al., 2015).
+    </P>
+    <P>
+      Note how bad auditory orienting (<I>left</I>) is, compared to
+      visual (<I>right</I>).
+    </P>
+      
+</DIV>
+  
+-->
+  
+
+<DIV  CLASS="slide">
+  <h1>barn owl &#151; a classical experimental setup for behavioral study of sound localization</h1>
+
+  <img src="barnowl-8_2.jpg" class="figure-right">
+  <P>
+  <BR>
+  To address Levels 2 (<em>representation and algorithm</em>) and 3
+  (<em>mechanism</em>), controlled 
+  experimentation is required.
+  <P>
+    <B>Conducting the experiment in darkness approximates the natural
+      hunting conditions</B> in the wild.
+  </P>
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>barn owl &#151; localization performance</h1>
+
+  <img src="barnowl-8_4.gif" height=450 class="figure-right" >
+  <P>
+  <BR>
+  Here's how they found that the owl uses <strong><a href="http://en.wikipedia.org/wiki/Binaural"
+  target=new>binaural</a> hearing</strong>.
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>barn owl &#151; from problem to algorithm and implementation</h1>
+
+  <img src="sound-localization-aid-3.jpg" class="figure-right" height=500>
+  <P>
+  How <I>could</I> binaural audio information be used to localize sound source?
+  <P>
+  Note that this question straddles <SC>computation</SC> and
+  <SC>algorithm</SC> levels.
+  <P class="incremental">
+  Remember that a particular system such as the barn owl may or may not use
+  a particular algorithm.
+  </P>
+  <P class="incremental">
+    <img src="barn-owl-skull.jpg">
+    </P>
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>barn owl &#151; from problem to algorithm and implementation</h1>
+
+  <img src="barn-owl-temporal-disparity.jpg" height=400 class="figure-right">
+  <P>
+  <BR>
+  How <I>could</I> binaural audio information be used to localize sound source?
+  <ol>
+    <li>
+    by noting <strong>level difference</strong> between the two ears
+    (interaural level difference, ILD);
+    </li>
+    <P>
+    <li>
+    by noting <strong>timing difference</strong> between the two ears
+    (interaural timing difference, ITD).
+    </li>
+  </ol>
+  <P>
+  <HR>
+  <P>
+  The barn owl uses both.
+  <P>
+  How?
+
+</div>
+
+
+  
+<DIV  CLASS="slide">
+  <h1>barn owl &#151; from problem to algorithm and implementation</h1>
+
+  <img src="Grothe18-fig1.png" class="figure-right" height=500>
+    <P>
+      (A) Barn owls can accurately localize prey based on interaural
+      disparities even in total darkness. If, for instance, the sound
+      origin is slightly to the left from the vertical and below the
+      horizontal midline, it will arrive at the left ear slightly
+      earlier (interaural time difference, ITD) and with a somewhat
+      larger amplitude (interaural level difference, ILD).
+    </P>
+    <P>
+      (B) Barn owls belong to the group of asymmetrical owls. The
+      asymmetry of their skull does not significantly affect ITDs,
+      which provide accurate information for the azimuthal
+      position.
+    </P>
+    <P>
+      (C) However, the asymmetry does affect ILDs. As a consequence,
+      iso-ILD-lines are strongly tilted and, therefore, provide
+      information about the vertical position of a sound source.
+    </P>
+    <P>
+      [from Grothe, Trends in Neurosciences, March 2018, Vol. 41,
+      No. 3] 
+    </P>
+
+</div>
+
+
+  
+<DIV  CLASS="slide">
+  <h1>barn owl &#151; algorithm, implementation (focusing on time difference)</h1>
+
+  <img src="barn-owl-delay-line.gif"  class="figure-right" >
+  <P>
+    A possible way of physically computing <B>time difference</B>
+    (<a href="https://en.wikipedia.org/wiki/Lloyd_A._Jeffress"
+	target=new>Lloyd Jeffress</a>, 1948) using:
+    <ol>
+      <li>
+	a <SC><a
+		href="http://en.wikipedia.org/wiki/Coincidence_detection_in_neurobiology"
+		target=new>coincidence detector</a></SC>
+      </li>
+      <B>and</B>
+      <li>
+	a calibrated time <SC><a
+				href="http://en.wikipedia.org/wiki/Delay_line" target=new>delay
+	    line</a></SC>
+      </li>
+    </ol>
+    In air, a distance of 1 <I>cm</I> results in a 30 <I>&#181;s</I>
+    time delay.  [This is an example of
+    <a href="https://en.wikipedia.org/wiki/Analog_computer"
+       target=new>analog computation</a>.]
+  </P>
+  <P>
+    <a href="http://www.sciencenter.org"
+       target=new><img src="sciencecenter.jpg" width=250></a>
+    </P>
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>barn owl &#151; implementation</h1>
+
+  <img src="barn-owl-time-space.gif" height=475 class="figure-right" >
+  <P>
+  <BR>
+  An elaboration of the coincidence + calibrated delay model by <a
+  href="http://www.bbe.caltech.edu/people/masakazu-mark-konishi"
+ target=new>Masakazu Konishi</a> &#151;
+  <P>
+  <strong>The key idea</strong>:<BR>
+  convert time delay information into a <em>place code</em>.
+  <P>
+  <HR>
+  <P>
+  Does the barn owl use this method? <strong>Yes!</strong>
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>barn owl &#151; neural circuitry; Jeffress/Konishi model supported</h1>
+
+  <table cellspacing=10>
+  <tr>
+    <td align=center>
+	<img src="barn-owl-anatomy.jpg" height=350>
+    </td>
+    <td align=center>
+	<img src="barn-owl-physiology.jpg" height=350>
+    </td>
+  </tr>
+  <tr>
+    <td align=center>
+	<strong>anatomy</strong>: <a
+	href="http://en.wikipedia.org/wiki/Axon"
+	target=new>axons</a> carrying information from the two
+	ears enter the <em>nucleus laminaris</em> from opposite sides,
+	and run parallel to each other. 
+    </td>
+    <td align=center>
+	<strong>physiology</strong>: neurons at the top of <em>nucleus
+	laminaris</em> show response time LEAD to the <a
+	href="http://en.wikipedia.org/wiki/Ipsilateral#Other_directional_terms"
+	target=new>ipsilateral</a> ear,
+	changing to LAG as the recording electrode descends into NL.
+    </td>
+  </tr>
+</table>
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>the Jeffress model: 50 years later</h1>
+
+  <img src="Joris98-fig1.jpg" height=525 class="figure-right" >
+  <P>
+  (A) The original Jeffress (1948) delay line +
+    coincidence model.
+  <P>
+  (B) Delay line configuration of a bushy cell
+  axon (<font color=red><B>red</B></font>) from the contralateral <a
+    href="http://en.wikipedia.org/wiki/Cochlear_nuclei"
+    target=new>AVCN</a> (Anterior Ventral Cochlear Nucleus) projecting
+    to the <a href="http://en.wikipedia.org/wiki/Superior_olivary_nucleus"
+    target=new>MSO</a> (Medial Superior Olive; <B>black</B>). 
+  <P>
+  (C) Jeffress model, current view. Monaural channels feed into a binaural
+    processor: a bank of <a
+    href="http://en.wikipedia.org/wiki/Cross-correlation" target=new>cross-correlators</a>
+    that tap the signal at a different
+    <a href="http://en.wikipedia.org/wiki/Interaural_time_difference"
+    target=new>ITD</a>. Cells for which the delay exactly 
+    offsets the <a
+    href="http://en.wikipedia.org/wiki/Interaural_time_difference"
+    target=new>ITD</a> are maximally active.
+  <P>
+  <HR align=left width=30%>
+  <font color=gray >
+  An update on the algorithmic level:
+  <DIR>  <DIR>
+  B. J. Fischer and J. L. Peña (2011). <I>Owl's behavior and neural representation predicted by <a
+  href="http://en.wikipedia.org/wiki/Bayesian_inference" target=new>Bayesian</a> inference.</I>
+  Nature Neuroscience 14:1061-1067.
+  </DIR>  </DIR>
+  Probabilistic/Bayesian computation will be discussed in <a
+  href="wk-3-1.html">lecture 3.1</a>. 
+  </font>
+  
+</div>
+
+
+<!--
+
+<DIV  CLASS="slide">
+  <h1>[EXTRA] the Jeffress model: 50 years later</h1>
+
+  <img src="Joris98-fig2a.jpg" class="figure-right" >
+  <P>
+  [A and B] Comparison of stimulus synchronization in an auditory nerve
+  fiber and <a href="http://en.wikipedia.org/wiki/Cochlear_nuclei"
+  target=new>AVCN</a> bushy cell.
+  <P>
+  [LEFT PANELS] Each dot in the rasters
+  indicates a spike occurrence to a short tone at the cell's best frequency
+  (350 <I>Hz</I> in [A] and 340 <I>Hz</I> in [B]); each row of dots is the
+  response to one of the 200 repetitions.
+  <P>
+  [RIGHT PANELS] The responses are
+  <a href="https://en.wikipedia.org/wiki/Arnold_tongue"
+  target=new>phase locked</a> to the stimulus, as seen in the tendency
+  of spikes to occur at a particular phase angle by graphing the
+  response relative to stimulus phase.
+  <HR>
+  Spikes in the bushy cell are temporally less dispersed than in the
+  auditory nerve and occur in each stimulus cycle, whereas cycles are
+  often skipped in the nerve.
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>[EXTRA] the Jeffress model: 50 years later</h1>
+
+  <img src="Joris98-fig2b.jpg" height=550 class="figure-right" >
+  <P>
+  Sensitivity to     <a href="http://en.wikipedia.org/wiki/Interaural_time_difference"
+  target=new>ITD</a> in <a href="http://en.wikipedia.org/wiki/Superior_olivary_nucleus"
+  target=new>MSO</a> neurons.
+  <P>
+  [C] Responses to a binaural 1 <I>kHz</I> tone as a function of     <a
+    href="http://en.wikipedia.org/wiki/Interaural_time_difference" 
+    target=new>ITD</a>. Positive     <a
+    href="http://en.wikipedia.org/wiki/Interaural_time_difference" 
+    target=new>ITD</a>s represent a lead of the contralateral (C) relative
+    to the ipsilateral (I) tone.
+  <P>
+  [D] Period histograms of the same cell to the same monaural ipsi- or
+    contralateral 1 <I>kHz</I> tone show average response phases (arrows) that differ
+  by 0.14 cycles, or 140 <I>us</I>.
+  <P>
+  [E] Responses of the same cell at many different frequencies.
+  
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>a remark on (analog) representation</h1>
+
+  <img src="Duck-Soup-Groucho-Marx.jpg" class="figure-right">
+  <P>
+  <BR>
+  To remember how non-trivial it is for one dynamical system to represent another,
+  watch the Marx brothers' 1933 film <a href="http://en.wikipedia.org/wiki/Duck_Soup_%281933_film%29"
+  target=new><I>Duck Soup</I></a>.
+
+</DIV>
+
+  -->
+  
+
+<DIV  CLASS="slide">
+  <h1>evolutionary origins of sound localization in BIRDS and in MAMMALS (from Grothe, 2003)</h1>
+
+  <img src="Grothe03-fig1.png" height=400 class="figure-right">
+    <P>
+      The evolution of tympanic ears
+      (<a href="https://en.wikipedia.org/wiki/Eardrum"
+      target=new>tympanum</a> and middle ear), a prerequisite for
+      localizing airborne sound, occurred independently and almost
+      simultaneously in several clades of tetrapods. During the
+      Triassic period, tympanic ears evolved in frogs (Anura), several
+      lines of ‘reptiles’, including those leading to archosaurs and
+      later from archosaurs to birds, and in early mammals.
+    </P>
+    <P>
+      <B>There is no common ancestor of birds and mammals that had the
+      anatomical substrate for localizing airborne sounds by means of
+      interaural comparison. The neural system for interaural time
+      difference processing evolved independently during parallel
+      evolution in birds and mammals.</B> Number show millions of
+      years ago.
+  </P>
+
+</div>
+
+
+<DIV  CLASS="slide">
+  <h1>using ITD for sound localization (from Grothe, 2003)</h1>
+
+  <img src="Grothe03-fig2.png" height=450 class="figure-right">
+    <P>
+      The interaural time difference (ITD) is the main cue for
+      localizing low-frequency sounds. If a sound source is straight
+      ahead, the ITD is zero. If a sound source comes from one side,
+      the sound will reach the ear on that side first, creating an
+      ITD.  Depending on the head size (the distance between the
+      ears), ITDs are not greater than 100 ms for the gerbil, but can
+      be up to several hundred microseconds for larger
+      animals.
+    </P>
+    <P>
+      Low-frequency hearing mammals, such as the
+      <a href="https://en.wikipedia.org/wiki/Mongolian_gerbil"
+      target=new>Mongolian gerbil</a>, evolved ITD detection to avoid
+      predators such as the
+      <a href="https://en.wikipedia.org/wiki/Horned_owl"
+      target=new>eagle owl</a>.
+  </P>
+
+</div>
+
+
+<DIV  CLASS="slide">
+  <h1>[EXTRA] different strategies for encoding ITDs (from Grothe, 2003)</h1>
+
+  <img src="Grothe03-fig3.png" height=450 class="figure-right">
+    <P>
+      <ul class="outline">
+	<li>In birds:
+	  <ul>
+	    <li>
+	      (a) The bird ITD-encoding structure, the nucleus
+	      laminaris, operates in a way that is similar to the
+	      model suggested by Jeffress in 1948. Arrays of
+	      coincidence detector neurons (coloured circles) on both
+	      sides of the brainstem receive excitatory inputs (red
+	      lines) from the two ears (only inputs to the left
+	      nucleus laminaris are shown). Depending on the axonal
+	      length (delay line) of the two inputs, each coincidence
+	      detector neuron responds maximally to a particular ITD,
+	      which compensates for differences in the internal neural
+	      delays. A systematic arrangement of the delay lines from
+	      the contralateral ear creates a map of horizontal
+	      auditory space.
+	    </li>
+	    <li>
+	      <font color=gray>(b) The maxima of the ITD functions of
+		different neurons in one nucleus laminaris distribute
+		across the physiologically relevant range (shaded
+		area). The width of ITD functions depends on the
+		stimulus frequency and, for lower frequencies, might
+		be broader than shown.</font>
+	    </ul>
+	  </li>
+	<li>
+	  In mammals:
+	  <ul>
+	    <li>
+	      (c) The mammalian ITD encoder is the medial superior
+	      olive (MSO; coloured circles). MSO neurons that are
+	      tuned to the same frequency preferentially respond to
+	      the same ITD. The ITD functions are adjusted to bring
+	      the maximal slope close to zero. The opposite MSO is
+	      adjusted like a mirror image. Therefore, the relative
+	      activity of the entire population of MSO cells, rather
+	      than the distribution within an MSO, represents the
+	      horizontal position of a sound in space. The ITD tuning
+	      is achieved by a complex interaction of binaural
+	      excitatory and inhibitory inputs.
+	    </li>
+	    <li>
+	      <font color=gray>(d) ITD functions of MSO neurons are
+		adjusted so that the maximal slope preferentially
+		occurs close to zero ITD. For a given frequency, the
+		ITD tuning of the population of MSO neurons in the
+		left MSO mirrors that of the corresponding population
+		of cells in the right MSO.</font>
+	    </ul>
+	  </li>
+      </ul>	  
+  </P>
+
+</div>
+
+
+<DIV  CLASS="slide">
+  <h1>[EXTRA] sound localization CIRCUITS in birds and in mammals (from Grothe, 2003)</h1>
+
+  <img src="Grothe03-fig4.png" height=550 class="figure-right">
+    <P>
+      <B>(a)</B> The mammalian ITD encoder is the medial superior olive
+      (MSO), an auditory brainstem structure (inset). 
+    </P>
+    <P>
+      <B>(b)</B> The avian counterpart of the MSO is the nucleus
+      laminaris (NL, here shown for the chick). 
+  </P>
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>summary of the barn owl case study &#151; integrated understanding</h1>
+
+  <!-- <a href="http://kybele.psych.cornell.edu/~edelman/marr.pdf"
+  target=new>David Marr</a>'s -->
+  <P>
+  The multiple levels of analysis, applied to sound
+  localization by the owl:
+
+  <ol start=0>
+    <li>
+    <SC>The evolutionary and behavioral context:</SC>
+    <DIR>
+      In the ecological niche they reside in, owls employ passive sound
+      localization to pinpoint prey, by using interaural time (and
+      intensity) differences.
+    </DIR>
+    </li>
+    <li>
+    <SC>The computational problem:</SC>
+    <DIR>
+      Given timing (and intensity) differences measured at two locations,
+      pinpoint the source of the sound.
+    </DIR>
+  </li>
+  <li>
+  <SC>Representation and algorithm:</SC>
+  <DIR>
+    Use coincidence detection and delay lines to transform time difference
+    into a place code in the brain.
+  </DIR>
+</li>
+<li>
+<SC>The mechanism:</SC>
+<DIR>
+  Arrange the neurons and wire them up via delay lines to reflect the algorithmic
+  solution.
+</DIR>
+</li>
+</ol>
+<HR>
+<P class="incremental">
+The bottom line: a <B>complete</B> understanding of the system in question.
+</P>
+
+</div>
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>levels of understanding and multiple realizability of computation</h1>
+
+  <P>
+  <BR>
+  <img src="Marr-levels.png" title="multiple realizability" height=400>
+
+</div>
+
+
+
+<!--
+
+<DIV  CLASS="slide">
+  <h1>a recap:  computation and psychology</h1>
+
+  <P>
+  <BR>
+  <ul>
+    <li><B>The brain is a complex dynamical system &#151; an aggregate of
+    many interacting special-purpose computers</B>. These act like <a
+    href="http://en.wikipedia.org/wiki/Analog_computer" target=new>analog
+    computers</a> on some levels, and like digital computers on other levels.
+    </li>
+    <li><SC><B>The brain generates the mind by implementing various
+    computations.</B></SC> It can simulate computations for which it has no direct
+    circuit-level support. However: the brain is NOT a general-purpose
+    programmable <a href="http://en.wikipedia.org/wiki/Digital_computer" 
+    target=new>digital computer</a>.
+    </li>
+    <li><B>A computer can simulate a brain</B>.
+    A general-purpose programmable computer can simulate the brain (and
+    therefore the mind) in the same way that <a href="http://www.noaa.gov/"
+    target=new>NOAA</a> computers simulate weather. 
+    </li>
+  </ul>
+
+</div>
+
+
+
+<DIV  CLASS="slide">
+  <h1>a computer can simulate a brain</h1>
+
+  <P>
+  <SC>Why</SC> is the possibility of simulating the brain important? Observe:
+  <ol>
+    <li>
+    A simulation of a computation and the computation itself are 
+    equivalent.
+    </li>
+    <li>
+    Because the mind is a computational entity, a simulation of all of the
+    computations that comprise a mind constitutes a fully functional replica
+    of that mind.
+    <BR>
+    <small>[Recall <a href="http://www.gregegan.net/"
+    target=new>Greg Egan</a>'s story <a
+    href='javascript:passWord("Egan")'>*<I>Learning to Be Me</I></a>; see also his story <a
+    href="http://www.fictionwise.com/ebooks/eBook876.htm"
+    target=new><I>Transition Dreams</I></a>]</small>
+    </li>
+  </ol>
+  <HR>
+  <P>
+  <a href="http://www.sciflicks.com/existenz/" target=new><img
+  src="existenz.jpg"  class="figure-right" height=290></a>
+  This insight revives the old <a
+  href="http://www.ourladyswarriors.org/dissent/defgnost.htm"
+  target=new>Gnostic</a> concept of <a
+  href="http://www.newadvent.org/cathen/04707b.htm" target=new>demiurge</a>,
+  by supporting idea that <a
+  href="http://en.wikipedia.org/wiki/Simulated_reality"
+  target=new>reality may be a computer simulation</a>.
+
+</div>
+
+-->
+
+
+
+<DIV  CLASS="slide">
+  <h1>armed with the proper methodology, we can move on</h1>
+
+  <P>
+    <B>What next?</B>
+  </P>
+  <P>
+<div style="font-size: 85%">
+  <ul>
+    <li>
+      <B>A closer look at the concept of behavior.</B>
+    </li>
+    <li>
+      Universal tools, I: measurement; representation.
+    </li>
+    <li>
+      Universal tools, II: probability; the ace of Bayes.
+    </li>
+    <li>
+      Universal tools, III: learning; similarity, generalization.
+    </li>
+    <li>
+      Universal tools, IV: dimensionality; complexity; memory.
+    </li>
+    <li>
+      Actions and consequences: decision making; reinforcement learning; problem solving.
+    </li>
+    <li>
+      Higher cognition; sequential behaviors and language.
+    </li>
+    <li>
+      Neural computation I, II, III; brains.
+    </li>
+    <li>
+      Advanced topics.
+    </li>
+  </ul>
+</div>
+
+</div>
+
+
+
+<div class="footer">
+  <p>Last modified: Wed Feb 17 2021 at 22:18:38 EST</p>
+</div>
+</body>
+</html>

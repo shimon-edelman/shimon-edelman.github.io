@@ -1,0 +1,23 @@
+img.figure-right {
+    float: right;
+    margin: 10px 10px 10px 10px;
+}
+
+img.figure-left {
+    float: left;
+    margin: 10px 10px 10px 10px;
+}
+
+.125 {
+    font-size: 125%;
+}
+
+.150 {
+    font-size: 150%;
+}
+
+.200 {
+    font-size: 200%;
+}
+
+SC { font-variant: small-caps }

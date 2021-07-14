@@ -1,0 +1,1174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computational Psychology — Unit 2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2014-2019 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+</head>
+<body>
+
+<!-- 
+<rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+<permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+<requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+<permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+<requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+</License>
+</rdf:RDF>
+-->
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 2 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computational Psychology</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 2: the blind men and the elephant</h2>
+  </div>
+  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%>
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+
+<div  CLASS="slide">
+  <h1>the blind men and the elephant</h1>
+
+  <P>
+  <BR>
+    <a href="http://www.kheper.net/topics/blind_men_and_elephant/Buddhist.html"
+	 target=new><img src="Hokusai-blind-men-and-the-elephant.jpg" 
+	 title="Blind men and an elephant (Hokusai Katsushika)"></a>
+
+      <img src="Itamars-elephant.JPG" class="figure-right"
+	   title="An elephant, by Itamar Edelman">
+
+</div>
+
+
+
+
+
+<div  CLASS="slide">
+  <h1>the blind men and the elephant</h1>
+
+  <P>
+  Four case studies — four approaches to understanding the brain, and their limitations:
+  <ol class="incremental">
+    <li>
+    An ambitious broad-scope "computational" theory
+    (<a href="https://www.cmu.edu/news/stories/archives/2016/january/anderson-atkinson-award.html"
+    target=new>J. R. Anderson</a>. <I>ACT: A simple theory of
+    complex cognition.</I> American Psychologist, 51:355-365, 1996).
+    </li>
+    <li>
+    A single-cell electrophysiology study (C. D. Salzman, K. H. Britten, and
+    W. T. Newsome. <I>Cortical microstimulation influences perceptual
+    judgements of motion direction.</I> Nature, 346:174-177, 1990).
+    </li>
+    <li>
+    An imaging study (J. V. Haxby, M. I. Gobbini, M. L. Furey, A. Ishai,
+    J. L. Schouten, and P. Pietrini. <I>Distributed and overlapping
+    representations of faces and objects in ventral temporal cortex.</I> Science,
+    293:2425-2430, 2001).
+    </li>
+    <li>
+    A "big data" / "deep learning" hack (V. Mnih et al., <I>Human-level control through deep reinforcement
+    learning</I>, Nature 518:529-518, 2015).
+    </li>
+  </ol>
+
+  [NOTE: I did not include an example of a purely behavioral study
+    ("experimental psychology") — criticizing something like that would be
+    like shooting fish in a barrel.]
+  
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>case study #1: ACT-R (John Anderson)</h1>
+
+  <P>
+  <BR>
+  <font color=gray>
+  "The ACT-R (Adaptive Control of Thought, Rational) theory rests upon three
+  important components: <B>rational</B> [= "effective + adaptive"] analysis
+  (Anderson, 1990), the distinction between <B>procedural</B> and
+  </B>declarative</B> memory (Anderson, 1976), and a <B>modular</B> 
+  structure in which components communicate through buffers."
+  </font>
+  </P>
+  <P>
+  "The actual substrate of cognition is an interconnected network of
+  neurons. Whether or not this is a significant source of constraint is open
+  to debate."
+  </P>
+  <P align=right>
+  — Taatgen, N.A. & Anderson, J.R. (2008). 
+  <a
+  href="http://act-r.psy.cmu.edu/papers/844/architectures.pdf"
+  target=new><I>ACT-R</I></a>.<BR>
+  In R. Sun (ed.), 
+  <I>Constraints in Cognitive Architectures</I>.
+  <BR>
+  Cambridge University Press, 170-185.
+  </P>
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>ACT-R: a "simple theory of complex cognition"</h1>
+
+  <P>
+  <BR>
+  "<B>All that there is to intelligence</B> is the simple accrual and tuning of
+  many small units of knowledge that in total produce complex cognition. The
+  whole is no more than the sum of its parts, but it has a lot of parts."
+  <P>
+
+  <P align=right>
+  <small>
+  — Anderson, J. R. (1996). <I>ACT: A simple theory of complex
+  cognition</I>.<BR>
+  American Psychologist, 51, 355-365.
+  </small>
+  </P>
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>ACT-R: a "simple theory of complex cognition"</h1>
+
+  <P>
+  <BR>
+  "All this knowledge creates a serious problem. How does one select the
+  appropriate knowledge in a particular context?"
+  <P>
+  "ACT-R has developed a two-pass solution for knowledge deployment. An
+  initial <B>parallel activation</B> process identifies the knowledge structures
+  (<a href="https://en.wikipedia.org/wiki/Chunking_%28psychology%29"
+ target=new>chunks</a> and <a
+ href="https://en.wikipedia.org/wiki/Production_system"
+ target=new>productions</a>) that are most likely to be useful in 
+  the context, 
+  and then those knowledge structures determine performance."
+
+  <P align=right>
+  <small>
+  — Anderson, J. R. (1996). <I>ACT: A simple theory of complex
+  cognition</I>.<BR>
+  American Psychologist, 51, 355-365.
+  </small>
+  </P>
+
+</div>
+
+
+
+
+<div  CLASS="slide">
+  <h1>ACT-R as a theory of cognition</h1>
+
+  <P>
+  <BR>
+  "ACT-R is a hybrid architecture in the sense that it has both symbolic and
+  subsymbolic aspects. The symbolic aspects involve declarative <a
+	href="https://en.wikipedia.org/wiki/Chunking_%28psychology%29"
+  target=new><B>chunks</B></a> and 
+  procedural <a
+ href="https://en.wikipedia.org/wiki/Production_system"
+  target=new><B>production rules</B></a>. The declarative chunks are the 
+  knowledge-representation units that reside in declarative memory, and the
+  production rules are responsible for the control of cognition. Access to
+  these symbolic structures is determined by a subsymbolic level of
+  <B>neural-like activation</B> quantities."  
+  <P align=right>
+  <small>
+  — Anderson, J. R., & C. Lebiere (2003).
+  <BR>
+  <I>The Newell Test for a theory of cognition</I>.
+  <BR>
+  Behavioral and Brain Sciences 26:587-640.
+  </small>
+  </P>
+
+</div>
+
+
+
+
+<div  CLASS="slide">
+  <h1>ACT-R as a theory of cognition</h1>
+
+  <P>
+  <BR>
+  "ACT-R consists of two key memories — a declarative memory and a
+  procedural memory.
+  <!--
+  The next slide illustrates how ACT-RN implements
+  declarative <a
+	href="https://en.wikipedia.org/wiki/Chunking_%28psychology%29"
+  target=new>chunks</a>.
+  -->
+  The system has separate memories for each different 
+  type of chunk — for example, addition facts are represented by one type
+  memory, whereas integers are represented by a separate type memory."
+  <P align=right>
+  <small>
+  — Anderson, J. R., & C. Lebiere (2003).
+  <BR>
+  <I>The Newell Test for a theory of cognition</I>.
+  <BR>
+  Behavioral and Brain Sciences 26:587-640.
+  </small>
+  </P>
+
+</div>
+
+
+
+<!--
+
+<div  CLASS="slide">
+  <h1>ACT-R chunks</h1>
+
+  <table cellspacing=20>
+    <tr>
+      <td><img src="ACT-R-chunk-wiring.png"></td>
+      <td><img src="ACT-R-chunk-abstract.png"></td>
+    </tr>
+    <tr>
+      <td align=center>the internal structure of a <a
+	href="https://en.wikipedia.org/wiki/Chunking_%28psychology%29" target=new>chunk</a></td>
+      <td align=center>links to other <a
+	href="https://en.wikipedia.org/wiki/Chunking_%28psychology%29" target=new>chunks</a></td>
+    </tr>
+  </table>
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>ACT-R chunks</h1>
+
+  <P>
+  <BR>
+  "Each type memory is implemented as a special version of <a
+ href="https://en.wikipedia.org/wiki/Hopfield_net" target=new>Hopfield nets</a>. A
+  chunk in ACT-R consists of a unique identifier called the header, together
+  with a number of slots, each containing a value, which can be the
+  identifier of another chunk. Each slot, as well as the chunk identifier
+  itself, is represented by a separate pool of units, thereby achieving a
+  distributed representation. A chunk is represented in the pattern of
+  connections between these pools of units.
+  <P>
+  <B>Retrieval</B> involves activating patterns
+  in some of the pools and trying to fill in the remaining patterns
+  corresponding to the retrieved chunk. If some slot
+  patterns are activated, they are mapped to the header units
+  to retrieve the chunk identifier that most closely matches
+  these contents (path 1). Then, the header is mapped
+  back to the slots to fill the remaining values (path 5)."
+  <P align=right>
+  <small>
+  — Anderson, J. R., & C. Lebiere (2003).
+  <BR>
+  <I>The Newell Test for a theory of cognition</I>.
+  <BR>
+  Behavioral and Brain Sciences 26:587-640.
+  </small>
+  </P>
+
+
+</div>
+
+
+
+
+<div  CLASS="slide">
+  <h1>ACT-R productions</h1>
+
+  <P>
+  <BR>
+  <blockquote>
+  <B>IF</B> the goal is to add n<sub>1</sub> and n<sub>2</sub> in a column <BR>
+     and n<sub>1</sub>+n<sub>2</sub>=n<sub>3</sub> <BR>
+  <B>THEN</B> set as a subgoal to write n<sub>3</sub> in that column
+  </blockquote>
+  <P>
+  "<a
+  href="https://en.wikipedia.org/wiki/Production_system"
+  target=new>Productions</a> [...] retrieve information from a type memory
+  and deposit it 
+  in central memory. [...] For example, given the goal of adding 2 and 3, a
+  production would copy to the addition-fact memory the <a
+ href="https://en.wikipedia.org/wiki/Chunking_%28psychology%29" target=new>chunks</a> 2 and 3 in
+  the proper slots by enabling (gating) the proper connections between
+  central memory and that type memory, let the memory retrieve the sum 5,
+  and then transfer that <a
+ href="https://en.wikipedia.org/wiki/Chunking_%28psychology%29" target=new>chunk</a> to the appropriate goal slot."
+  </P>
+  <P align=right>
+  <small>
+  — Anderson, J. R., & C. Lebiere (2003).
+  <BR>
+  <I>The Newell Test for a theory of cognition</I>.
+  <BR>
+  Behavioral and Brain Sciences 26:587-640.
+  </small>
+  </P>
+
+</div>
+
+
+-->
+
+
+<div  CLASS="slide">
+  <h1>ACT-R: a "simple theory of complex cognition"</h1>
+  
+  <P>
+  <BR>
+  <font color=gray>
+  "Activation [of an item] in ACT-R theory reflects its log posterior odds of being
+  appropriate in the current context. This is calculated as a sum of the log
+  odds that the item has been useful in the past (log prior odds) plus an
+  estimate that it will be useful given the current context (log likelihood
+  ratio). [This is a <a href="http://en.wikipedia.org/wiki/Bayesian"
+  target=new><B>Bayesian</B></a> approach, more about which <a
+  href="http://kybele.psych.cornell.edu/~edelman/Computing-the-Mind/w-4-1.html">later</a>.]
+  </font>
+  <P>
+  Thus, the ACT-R claim is that the mind keeps track of general
+  usefulness and combines this with contextual appropriateness to make some
+  inference about what knowledge to make available in the current
+  context. The basic equation is <BR>
+  <blockquote>
+  Activation-Level = Base-level + Contextual-Priming
+  </blockquote>
+
+  <P align=right>
+  <small>
+  — Anderson, J. R. (1996). <I>ACT: A simple theory of complex
+  cognition</I>.<BR>
+  American Psychologist, 51, 355-365.
+  </small>
+  </P>
+
+</div>
+
+
+
+
+
+
+<div  CLASS="slide">
+  <h1>ACT-R as a theory of cognition</h1>
+
+  <P>
+  <BR>
+  "In addition to the learning mechanisms that update activation and
+  expected outcome, ACT-R can also <B>learn</B> new <a
+	href="https://en.wikipedia.org/wiki/Chunking_%28psychology%29" target=new>chunks</a> and <a
+ href="https://en.wikipedia.org/wiki/Production_system" target=new>production</a> rules."
+  <P>
+  "New chunks are learned automatically: Each time a goal is completed or a
+  new percept is encountered, it is added to declarative memory. New
+  production rules are learned by combining existing production rules. The
+  circumstance for learning a new production rule is that two rules fire one
+  after another, with the first rule retrieving a chunk from memory. A new
+  production rule is formed that combines the two into a macro-rule but
+  eliminates the retrieval. Therefore, everything in an ACT-R 
+  model (chunks, productions, activations, and utilities) is learnable."  
+  <P align=right>
+  <small>
+  — Anderson, J. R., & C. Lebiere (2003).
+  <BR>
+  <I>The Newell Test for a theory of cognition</I>.
+  <BR>
+  Behavioral and Brain Sciences 26:587-640.
+  </small>
+  </P>
+
+</div>
+
+
+
+<!--
+
+<div  CLASS="slide">
+  <h1>memory control in ACT-R</h1>
+
+  <img src="ACT-R-production-control.png" class="figure-right">
+  <P>
+  <BR>
+  "ACT-R is a <B>goal</B>-oriented system. To implement this, ACT-RN has a central
+  memory, which at all times contains the current goal <a
+ href="https://en.wikipedia.org/wiki/Chunking_%28psychology%29" target=new>chunk</a> with
+  connections to and from each type memory. Central memory consists of pools
+  of units, where each pool encodes a slot value of the goal."
+
+  <P align=right>
+  <small>
+  — Anderson, J. R., & C. Lebiere (2003).
+  <BR>
+  <I>The Newell Test for a theory of cognition</I>.
+  <BR>
+  Behavioral and Brain Sciences 26:587-640.
+  </small>
+  </P>
+
+</div>
+
+-->
+
+
+
+<div  CLASS="slide">
+  <h1>ACT-R as a theory of cognition</h1>
+
+  <P>
+  <BR>
+  "It might seem strange that neural computation should just so happen to
+  satisfy the well-formedness constraints required to correspond to the
+  symbolic level of a system like ACT-R. This would indeed be <B>miraculous</B> if
+  the brain started out as an unstructured net that had to organize itself
+  just in response to experience. However, as illustrated in the tentative
+  brain correspondences for ACT-R components [next slide] and in the [preceding]
+  description of ACT-RN, the symbolic structure emerges out of the structure
+  of the brain."
+  <P align=right>
+  <small>
+  — Anderson, J. R., & C. Lebiere (2003).
+  <BR>
+  <I>The Newell Test for a theory of cognition</I>.
+  <BR>
+  Behavioral and Brain Sciences 26:587-640.
+  </small>
+  </P>
+
+</div>
+
+
+
+
+<div  CLASS="slide">
+  <h1>ACT-R architecture</h1>
+
+  <img src="ACT-R-architecture.png" height=450 class="figure-right">
+  <P>
+  <BR>
+  The organization of information in ACT-R. Information in the buffers
+  associated with modules is responded to and changed by <a
+ href="https://en.wikipedia.org/wiki/Production_system" target=new>production
+  rules</A>.<BR>
+  <small>DLPFC: dorsolateral prefrontal cortex; VLPFC: ventrolateral
+  prefrontal cortex.</small>
+
+  <P align=right>
+  <small>
+  — Anderson, J. R., et al. (2004).
+  <BR>
+  <I>An Integrated Theory of the Mind</I>.
+  <BR>  
+  Psychological Review 111:1036-1060
+  </small>
+  </P>
+  
+</div>
+
+
+<div  CLASS="slide">
+  <h1>[but consider the octopus]</h1>
+
+  <img src="Octopus&#32;CNS&#32;from&#32;Budelmann&#32;1995.png" width=45% class="figure-right">
+  <video src="Octopus&#32;Escapes&#32;Jar[HD,1280x720,&#32;Mp4].mp4" width=45% controls="controls">
+  </video>
+  <P>
+    <small>
+      On the right: octopus central nervous system (Fig. 6B from <I>The cephalopod nervous
+	system: What evolution has made of the molluscan design</I>,
+      B. U. Budelmann, 1995).
+    </small>
+  </P>
+  
+</div>
+    
+
+<div  CLASS="slide">
+  <h1>[but consider the actual interconnection pattern of primate visual cortical areas]</h1>
+
+  <img src="ACT-R-architecture.png" width=35% class="figure-right">
+  <img src="Felleman-VanEssen.gif">
+  <P>
+  <small>
+  Felleman, D. J., and D. C. Van Essen (1991).
+  <BR>
+  <I>Distributed hierarchical processing in the primate cerebral cortex.</I>
+  <BR>
+  Cerebral Cortex 1:1-47.
+  </small>
+  </P>
+
+</div>
+
+
+
+
+<div  CLASS="slide">
+  <h1>self-critique by Anderson: what ACT-R doesn't do</h1>
+
+  <P>
+  <BR>
+  "Sometimes the suspicion is stated that <B>ACT-R is a general computational
+  system that can be programmed to do anything</B>. To address this issue, we
+  would like to specify four senses in which the system falls short of
+  that. 
+  <ol>
+    <li>Limitations: timing; serial bottleneck.</li>
+    <li>Mechanisms not yet incorporated: e.g., speech.</li>
+    <li>Domains not yet addressed: e.g., perceptual recognition (as opposed
+    to attention).</li>
+    <li>Technical issues: e.g., temporal bounds for utility learning [cf. <a
+ href="http://www.bcp.psych.ualberta.ca/~mike/Pearl_Street/Dictionary/contents/C/creditassign.html"
+ target=new>credit
+    assignment problem</a>, due to <a
+ href="http://web.media.mit.edu/~minsky/papers/steps.html" target=new>Minsky</a>].</li>
+  </ol>
+
+  <P align=right>
+  <small>
+  — Anderson, J. R., & C. Lebiere (2003).
+  <BR>
+  <I>The Newell Test for a theory of cognition</I>.
+  <BR>
+  Behavioral and Brain Sciences 26:587-640.
+  </small>
+  </P>
+  
+</DIV>
+
+
+<!-- SINGLE-CELL PHYSIOLOGY -->
+
+<!--
+
+<div  CLASS="slide">
+  <h1>case study #2: single-cell physiology (W. T. Newsome)</h1>
+
+  <P>
+  <BR>
+  Since I left you, mine eye is in my mind;<BR>
+  And that which governs me to go about<BR>
+  Doth part his function and is partly blind,<BR>
+  Seems seeing, but effectually is out;<BR>
+  For it no form delivers to the heart<BR>
+  Of bird or flower, or shape, which it doth latch:<BR>
+  Of his quick objects hath the mind no part,<BR>
+  Nor his own vision holds what it doth catch:<BR>
+  For if it see the rudest or gentlest sight,<BR>
+  The most sweet favour or deformed'st creature,<BR>
+  The mountain or the sea, the day or night,<BR>
+  The crow or dove, it shapes them to your feature:<BR>
+  <SC>Incapable of more, replete with you,<BR>
+  <B>My most true mind thus makes mine eye untrue</B>.</SC>
+  <DIR>  <DIR>  <DIR>
+    &#151; William Shakespeare,
+    <a href="http://www.shakespeare-online.com/sonnets/113.html"
+    target=new>Sonnet CXIII</a>
+  </DIR>  </DIR>  </DIR>
+  
+</div>
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>Sonnet CXIII</h1>
+
+  <P>
+  <BR>
+  Since I left you, mine eye is in my mind;<BR>
+  And that which governs me to go about<BR>
+  Doth part his function and is partly blind,<BR>
+  Seems seeing, but effectually is out;<BR>
+  For it no form delivers to the heart<BR>
+  Of bird or flower, or shape, which it doth latch:<BR>
+  Of his quick objects hath the mind no part,<BR>
+  Nor his own vision holds what it doth catch:<BR>
+  For if it see the rudest or gentlest sight,<BR>
+  The most sweet favour or deformed'st creature,<BR>
+  The mountain or the sea, the day or night,<BR>
+  The crow or dove, it shapes them to your feature:<BR>
+  <SC>Incapable of more, replete with you,<BR>
+  My most true mind thus makes mine eye untrue.</SC>
+  <P>
+
+  <a
+  href="http://www.nature.com/nature/journal/v442/n7103/full/nature04982.html"
+  target=new><img src="face-or-flower.jpg"></a>
+
+</div>
+
+
+<DIV  CLASS="slide">
+  <h1>Sonnet CXIII</h1>
+
+  <embed src="Sonnet-113-2.mov" width=640 height=496 autoplay=false align=right>
+  <P>
+  <BR>
+  <SC>Incapable of more, replete with you / My most true mind thus makes
+  mine eye untrue.</SC> 
+
+</DIV>
+
+-->
+
+
+
+<DIV  CLASS="slide">
+  <h1>case study #2: single-cell physiology (W. T. Newsome)</h1>
+
+  <P>
+  <BR>
+  Localized brain stimulation for diagnostic purposes, pioneered by <a
+  href="http://en.wikipedia.org/wiki/Wilder_Penfield" target=new>Wilder
+  Penfield</a>, or: how to smell   <a href="Wilder-Penfield-127th-birthday.gif" target=new>
+burnt toast</a> that's not there &#151;
+
+  <P>
+  <video src="Wilder-Penfield.mov" height=400 width=600 controls="controls">
+  </video>
+
+</DIV>
+
+
+<!--
+
+<DIV  CLASS="slide">
+  <h1>what makes <SC>microstimulation</SC> studies possible</h1>
+
+  <img src="Newsome-ILAR-fig4.gif" class="figure-right" height=300>
+  <P>
+  <BR>
+  <a
+  href="http://www.ncbi.nlm.nih.gov/bookshelf/br.fcgi?book=frrec&part=ch3"
+ target=new><SC>Microstimulation</SC></a> works in the cortical <a
+  href="http://en.wikipedia.org/wiki/Visual_cortex#V5.2FMT" target=new>area
+  MT</a> because of its <B>functional architecture</B> &#151; it is
+  organized in <a href="http://en.wikipedia.org/wiki/Cortical_column"
+  target=new><SC>columns</SC></a>, within each of which neurons are tuned to
+  the same direction of visual motion.
+  <P class="incremental">
+  A weak electrical current injected into a column reaches a large
+  population of neurons with similar response properties. This makes it more
+  likely to affect the animal's perception and behavior.
+  </P>
+
+</DIV>
+
+
+
+<DIV  CLASS="slide">
+  <h1>minimal cues for visual motion</h1>
+
+  <P>
+  <BR>
+  Figure/ground segmentation on the basis of motion coherence cues <SC>only</SC>:
+  <P>
+  <embed src="phi.mov" height=246 loop=true align=right hspace=20 autoplay=false  scale=aspect>
+  <img src="Newsome-psi_animacija.gif" height=300>
+
+</div>
+
+-->
+
+
+
+<DIV  CLASS="slide">
+  <h1>the cue chosen for Newsome's study: visual motion</h1>
+
+  <video src="WALK.mp4" loop=true controls="controls"
+	 class="figure-right">
+  </video>
+  <P>
+  <BR>
+  Motion is a powerful cue to 3D structure and to "abstract"
+  features of the moving object:
+  <P>
+    <video src="NBM.mov" loop=true controls="controls">
+      </video>
+  <P>
+    <video src="Cat.mov" loop=true controls="controls">
+      </video>
+  <P>
+
+</div>
+
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>inducing motion perception by microstimulation of cortical area MT</h1>
+
+  <table>
+    <tr>
+      <td>
+	<img src="Newsome-monkey-chair.gif">
+      </td>
+      <td align=center>
+	<img src="Newsome-ILAR-fig2.gif" height=350>
+	<br>
+	cortical area MT, which "specializes" in motion processing
+      </td>
+    </tr>
+  </table>
+  
+</div>
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>microstimulation of area MT: behavioral tasks and neural data</h1>
+
+  <img src="Newsome-ILAR-fig1.gif" class="figure-right" height=550>
+  <P>
+  Behavioral tasks:
+  <ul>
+    <li>fixation</li><P>
+    <li>saccade (gaze shift)</li><P>
+    <li><font color=gray>reaching</font></li>
+  </ul>
+  <HR>
+  <P>
+  The data: parallel recordings of &#151;
+  <ul>
+    <li>cell activity</li>
+    <li>visual stimulus presence/absence</li>
+    <li>gaze direction</li>
+  </ul>
+
+</div>
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>microstimulation of cortical area MT: stimulus properties</h1>
+
+  Moving-dots stimuli at varying degrees of coherence:
+  <P>
+  <img src="Newsome-ILAR-fig5.gif" height=250>
+  <P>
+  The behavioral task is to detect and signal the direction of coherent
+  motion. Its difficulty (and therefore the performance) depends on the
+  degree of coherence.
+
+</div>
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>degrees of motion coherence: four <a href="http://monkeybiz.stanford.edu/research.html" target=new>examples</a> </h1>
+
+  <table cellspacing=5>
+    <tr>
+      <td align=right>0% <embed src="0coh_circle.mov" loop=true autoplay=false controller=true width=320 height=260></td>
+      <td align=right>5% <embed src="05coh_circle.mov" loop=true autoplay=false controller=true width=320 height=260></td>
+    </tr>
+    <tr>
+      <td align=right>30% <embed src="30coh_circle.mov" loop=true autoplay=false controller=true width=320 height=260></td>
+      <td align=right>100% <embed src="100coh_circle.mov" loop=true autoplay=false controller=true width=320 height=260></td>
+    </tr>
+  </table>
+
+</div>
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>typical responses of an MT cell to motion stimuli</h1>
+
+  <table cellspacing=10>
+  <tr> 
+    <td align=center><img src="Newsome-ILAR-fig3.gif" height=400></td>
+    <td align=center><img src="Newsome-ILAR-fig4.gif" height=300></td>
+  </tr>
+  <tr>
+    <td align=center>the typical response of a single neuron in area MT</td>
+    <td align=center>area MT is organized in columns by the neurons'
+      preferred direction of motion</td> 
+    </tr>
+  </table>
+
+</div>
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>the outcome: inducing perception by cortical microstimulation</h1>
+  <img src="Newsome-ILAR-fig6.gif" class="figure-right" height=550 >
+
+  <P>
+  From <a href="http://monkeybiz.stanford.edu/bill/" target=new>William T.
+  Newsome</a>'s lab (Stanford): 
+  <P>
+  <ul class="incremental">
+    <li>
+    (A) spatial layout of fixation point and eye movement targets
+    </li>
+    <P>
+    <li>
+    (B) tuning curve illustrating collective <B>responses of neurons</B> in a
+    single MT area column; data obtained from 100%-coherence trials
+    </li>
+    <P>
+    <li>
+    (C) <B>behavioral data</B> obtained by electrically stimulating the column
+    whose tuning is shown in (B); <BR><font color=red><B><SC>these data are from
+    0%-coherence trials!</SC></B> </font>
+    </li>
+  </ul>
+
+</div>
+
+
+<!--
+
+<DIV  CLASS="slide">
+  <h1>Sonnet CXIII</h1>
+
+  <embed src="Sonnet-113-1.mov" width=640 height=496 autoplay=false align=right>
+  <P>
+  <BR>
+  <SC>Incapable of more, replete with you / My most true mind thus makes
+  mine eye untrue.</SC> 
+
+</DIV>
+
+-->
+
+
+<!-- fMRI -->
+
+<div  CLASS="slide">
+  <h1>case study #3: fMRI (J. Haxby)</h1>
+
+  <img src="Haxby01-fig1.png" class="figure-left">
+  <P>
+  <BR>
+  "Schematic diagram illustrating the locations of the fusiform face area
+  (FFA), which also has been implicated in expert visual recognition, and
+  the parahippocampal place area (PPA) on the ventral surface of the right
+  temporal lobe. In most brains, these areas are bilateral."
+  <P align=right>
+  <small>
+  — J. V. Haxby, M. I. Gobbini, M. L. Furey, A. Ishai, J. L. Schouten, and
+  P. Pietrini (2001).<BR>
+  <I>Distributed and overlapping representations of faces and
+  objects in ventral temporal cortex.</I><BR>
+  Science 293:2425-2430.
+  </small>
+  </P>
+
+</div>
+
+  
+<div  CLASS="slide">
+  <h1>stimulus set</h1>
+
+  <img src="Haxby01-fig2a.png" class="figure-right">
+  <P>
+  <BR>
+  "Examples of stimuli. Subjects performed a one-back repetition detection
+  task in which repetitions of meaningful pictures were different views of
+  the same face or object."
+
+</div>
+
+  
+<div  CLASS="slide">
+  <h1>stimulus set, continued</h1>
+
+  <img src="Haxby01-fig2b.png" class="figure-right">
+  <P>
+  <BR>
+  "Examples of stimuli. Subjects performed a one-back repetition detection
+  task in which repetitions of meaningful pictures were different views of
+  the same face or object."
+
+</div>
+
+  
+<div  CLASS="slide">
+  <h1>brain response (average across categories)</h1>
+
+  <img src="Haxby01-fig3c.png" class="figure-right">
+  <P>
+  <BR>
+  "The category specificity of patterns of response was analyzed with
+  pairwise contrasts between within-category and between-category
+  correlations. These patterns were normalized to a mean of zero
+  in each voxel across categories by subtracting the mean response across
+  all categories. Brain images shown here are the normalized patterns of
+  response in two axial slices in a single subject. Responses in all
+  object-selective voxels in ventral temporal cortex are shown."
+  <P>
+  <B>(C)</B> Mean response across all categories relative to a
+  resting baseline.
+
+
+</div>
+
+
+<!--
+  
+<div  CLASS="slide">
+  <h1>brain response (faces vs. houses)</h1>
+
+  <img src="Haxby01-fig3a.png" class="figure-right">
+  <P>
+  "The category specificity of patterns of response was analyzed with
+  pairwise contrasts between within-category and between-category
+  correlations. Brain images shown here are the normalized patterns of
+  response in two axial slices in a single subject. Responses in all
+  object-selective voxels in ventral temporal cortex are shown. For each
+  pairwise comparison, the within-category correlation is compared with one
+  between-category correlation."
+  <P>
+  <B>(A)</B> Comparisons between the patterns of response to faces and houses
+  in one subject. The within-category correlations for faces (r=0.81) and
+  houses (r=0.87) are both markedly larger than the between-category
+  correlations, yielding correct identifications of the category being
+  viewed.
+
+</div>
+
+  
+<div  CLASS="slide">
+  <h1>brain response (chairs vs. shoes)</h1>
+
+  <img src="Haxby01-fig3b.png" class="figure-right">
+  <P>
+  "The category specificity of patterns of response was analyzed with
+  pairwise contrasts between within-category and between-category
+  correlations. Brain images shown here are the normalized patterns of
+  response in two axial slices in a single subject. Responses in all
+  object-selective voxels in ventral temporal cortex are shown. For each
+  pairwise comparison, the within-category correlation is compared with one
+  between-category correlation."
+  <P>
+  <B>(B)</B> Comparisons between the patterns of response to chairs and shoes
+  in the same subject. The category being viewed was identified correctly for
+ all comparisons. 
+
+</div>
+
+  
+<div  CLASS="slide">
+  <h1>within- and between-category correlations</h1>
+
+  <img src="Haxby01-fig4.png" class="figure-right">
+  <P>
+  <BR>
+  "Mean within-category and between-category correlations (+-SE) between
+  patterns of response across all subjects for all ventral temporal
+  object-selective cortex (red and dark blue) and for ventral temporal
+  cortex excluding the cortex that responded maximally to either of two
+  categories being compared (orange and light blue). The SE of
+  within-category correlations after excluding maximally responsive cortex
+  was based on the mean correlation across 14 pairwise comparisons for each
+  subject."
+
+
+</div>
+
+-->
+
+  
+<div  CLASS="slide">
+  <h1>classification based on multivoxel response</h1>
+
+  <img src="Haxby01-tab1.png">
+  <P>
+  <BR>
+
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>regarding multivoxel response</h1>
+
+  <P>
+  <BR>
+  "All 66 regions were active in at least one domain; 65 (98.5%)
+  were active in two or more domains. [...] The 66 regions were active in an
+  average of 9.09 (SD 2.27) different domains. The 60 regions active in 
+  action tasks were also active in an average 7.38 (SD 0.98) non-action
+  domains and 5.5 (SD 0.81) cognitive domains. The 64 regions active in
+  perception tasks were also active in 7.39 (SD 1.87) non-perceptual domains 
+  and 5.34 cognitive domains. The 59 regions active in both perception and
+  action tasks were also active in an average of 5.53 (SD 0.80) other
+  domains, and the 7 regions not active in both perception and action tasks 
+  were active in an average of 3.00 (SD 1.41) of the cognitive domains. Only
+  one region was active in only cognitive tasks, and that region was active
+  only in memory."
+  
+  <P align=right>
+  — Anderson, M. L. (2010).
+  <BR>
+  <I>Neural reuse: A fundamental organizational principle of the brain</I>
+  <BR>
+  Behavioral and Brain Sciences
+  33:245-266. 
+  </P>
+
+</div>
+
+
+<!--
+
+<div  CLASS="slide">
+  <h1>[an aside: regarding the concept of "brain region"]</h1>
+
+  <img src="ZengSanes17-fig2a.png" class="figure-right" height=550>
+  <P>
+  <BR>
+    A single neuron reconstructed using the
+    <a href="http://mouselight.janelia.org/" target=new>MouseLight</a> system, a
+    high-speed two-photon microscope integrated with a tissue
+    vibratome. The axons of this neuron project to multiple cortical
+    and subcortical regions, as shown. Axonal arbours originating from
+    common branch points are shown in the same shade of red.
+    <P align=right>
+      [From <a href="https://www.nature.com/articles/nrn.2017.85"
+      target=new>H. Zeng & J. R. Sanes</a>, Nature Neuroscience
+      Reviews (2017).]
+    </P>
+
+
+</div>
+  
+  -->
+
+  
+<div  CLASS="slide">
+  <h1>case study #4: a ML hack — learning to play Atari (V. Mnih et al.)</h1>
+
+  <img src="MnihHassabis15-fig3.png" height=550 class="figure-right">
+  <P>
+  <BR>
+  Mnih, V., et al. (2015). <a
+  href="http://www.nature.com/nature/journal/v518/n7540/full/nature14236.html"
+  target=new><I>Human-level control through deep reinforcement
+  learning</I></a>. Nature 518:529-533. 
+  <P class="incremental">
+  "games demanding more temporally extended planning strategies still
+  constitute a major challenge for all existing agents [...] (for
+  example, <a
+  href="http://en.wikipedia.org/wiki/Montezuma%27s_Revenge_%28video_game%29"
+  target=new>Montezuma's Revenge</a>)." 
+  </P>
+  <P class="incremental">
+    <img src="Montezumas-Revenge.png" height=250>
+  </P>
+
+</div>
+
+
+
+
+<!-- CONCLUSIONS -->
+
+<div  CLASS="slide">
+  <h1>moral: ??? [the blind men and the elephant]</h1>
+
+  <img src="shepard-elephant.gif" class="figure-right" title="An elephant (Roger Shepard)">
+  <P>
+  <BR>
+  Four case studies — four approaches to understanding the brain, and their limitations:
+  <ol>
+    <li>
+    An ambitious broad-scope "computational" theory (ACT-R): based on a
+    single top-down assumption.
+    </li>
+    <li>
+    A single-cell electrophysiology study (microstimulation): neat, but
+    leaves most questions unresolved.
+    </li>
+    <li>
+    An imaging study (fMRI): trying to pinpoint where in the brain
+    particular operations happen is not only not informative; localization
+    of function is a fool's hope.
+    </li>
+    <li>
+    Throwing machine learning at problems (Deep Learning etc.): even
+    if the hack succeeds, it doesn't reveal much about how the brain works.
+    </li>
+  </ol>
+
+
+</div>
+
+
+
+<div class="footer">
+  <p>Last modified: Tue Jun 25 2019 at 15:15:46 EDT</p>
+</div>
+</body>
+</html>

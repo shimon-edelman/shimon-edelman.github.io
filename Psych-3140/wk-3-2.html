@@ -1,0 +1,1523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Psych 3140/6140 wk-3-2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2014-2021 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- 
+<rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+<permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+<requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+<permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+<requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+</License>
+</rdf:RDF>
+-->
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+    Week 3 &#151; 
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Psych 3140/6140</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Week 3: applying Bayes</h2>
+    <h3>&nbsp;Lecture 3.2: Bayesian lightness</h3>  
+  </div>
+  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%>
+
+</div>
+<!-- END COVER PAGE -->
+
+
+<!-- ---------------------------------------------------------------------------------- -->
+<!-- LIGHTNESS -->
+
+
+
+<div  CLASS="slide">
+  <h1>a general problem-level analysis of perception</h1>
+
+  <img src="Chicken.jpg" class="figure-right" >
+  <P>
+  <BR>
+  Problems:
+  <ul>
+    <li>dimensionality</li>
+    <li>indeterminacy</li>
+    <li>the ever-present uncertainty in measurement (due to noise and
+      incomplete or lost information)</li>
+  </ul>
+  <P>
+  A common solution: 
+  <ul>
+    <li><B>assume</B> the world to be well-behaved —
+      that is, characterized by <SC>statistical regularities</SC>
+      <P>
+      <font color=gray>[The technique known as <a
+      href="http://en.wikipedia.org/wiki/Regularization_(mathematics)" 
+      target=new>regularization</a> is a mathematical expression of this
+    trust]</font>
+    </li>
+  </ul>
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>the need for constancy in the face of INDETERMINACY</h1>
+
+  <img src="vision-flowchart.gif" class="figure-right" height=550>
+  <P>
+  <BR>
+  Where indeterminacy comes from: 
+  <DIR>  <DIR>
+    <font size=+2>
+      All perceptual problems share the same computational structure,
+    </font>
+    illustrated on the right.
+    <P>
+      What is "intrinsic" (relevant) and what is "extrinsic" (irrelevant)
+      depends on the task.
+  </DIR>  </DIR>
+  <P>
+  CONSTANCY requires that irrelevant variation be
+  ignored/suppressed. 
+  
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>the need for constancy in the face of DIMENSIONALITY</h1>
+
+  <table cellspacing=5>
+    <tr>
+      <td><img src="Chicken.jpg" height=250></td>
+      <td><img src="some-spectra.gif"  ></td>
+    </tr>
+    <tr>
+      <td align=center>a multidimensional chicken:<BR> how to boil it
+      down to bare essentials</td>
+      <td align=center>a multidimensional illumination space:<BR> how
+      to prevent the brain from exploding</td>
+    </tr>
+  </table>
+  <P>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>constancy in the face of dimensionality: a solution</h1>
+
+  <table cellspacing=25>
+    <tr>
+      <td><img src="Chicken.jpg" height=250></td>
+      <td><img src="some-spectra.gif" height=250 ></td>
+    </tr>
+    <tr>
+      <td align=center>a multidimensional chicken</td>
+      <td align=center>a multidimensional illumination space</td>
+    </tr>
+  </table>
+  Solution: <SC><B>assume</B></SC> that the world is statistically well-behaved
+  &#151;
+  <ul>
+    <li>a few dimensions suffice to distinguish between chickens and
+    ducks, or between horses and donkeys;</li>
+    <li>a few dimensions <a
+ href="http://books.google.com/books?id=g4T-gP7JCXIC&pg=PA60&lpg=PA60&dq=judd+illumination+pca&source=web&ots=2ots-LswDz&sig=I0inTDLwAsJ-H8dSn6Eq2HbTmeI&hl=en&sa=X&oi=book_result&resnum=2&ct=result"
+ target=new>suffice</a> to characterize illumination.</li>
+ </ul>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>lightness constancy in the face of INDETERMINACY</h1>
+
+  <img src="lightness-problem.jpg" class="figure-right">
+  <BR>
+  What can be done here?
+  <!--
+  Solution: <SC><B>assume</B></SC> that the world is statistically well-behaved
+  &#151;
+  <ul>
+    <li>illumination usually varies gradually over the scene;</li>
+    <li>surface lightness (reflectance) is piecewise constant over the
+    scene, with occasional abrupt changes.</li>
+  </ul>
+  -->
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>lightness constancy in the face of indeterminacy: a [class of] solution[s]</h1>
+
+  <img src="lightness-problem.jpg" class="figure-right">
+  <BR>
+  Solution: <SC><B>assume</B></SC> that the world is statistically well-behaved
+  &#151;
+  <ol>
+    <li>illumination usually varies gradually over the scene;</li>
+    <li>surface lightness (reflectance) is usually piecewise constant over the
+    scene, with occasional abrupt or stepwise changes.</li>
+  </ol>
+
+</div>
+
+
+  
+
+<DIV CLASS="slide">
+  <h1>when assumptions do not hold, perception fails, which may result in illusions</h1>
+
+  <img src="Cornsweet2.jpg" class="figure-right" >
+    <P>
+      The breakdown of lightness constancy in this image is known as
+      the <a href="https://en.wikipedia.org/wiki/Cornsweet_illusion"
+      target=new>Cornsweet illusion</a>. 
+    </P>
+  
+</div>
+
+
+
+  
+<DIV CLASS="slide">
+  <h1>a failure of lightness constancy, explained</h1>
+
+  <img src="Cornsweet2-annotated.jpg" class="figure-right" >
+  <img src="Cornsweet-profile-rotated.jpg" height=350
+       class="figure-left">
+    <P>
+      The breakdown of lightness constancy in this image is known as
+      the <a href="https://en.wikipedia.org/wiki/Cornsweet_illusion"
+      target=new>Cornsweet illusion</a>. 
+    <P>
+    <P>
+      The illusion happens because the assumptions — that illumination
+      changes gradually and that reflectance changes stepwise — do not
+      hold for this image, whose intensity profile (shown on the left)
+      has been engineered so as to violate them.
+    </P>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>lightness constancy: a Bayesian perspective</h1>
+
+  <img src="lightness-problem.jpg" height=250 class="figure-right">
+    <P>
+      These assumptions can be cast as Bayesian priors (as explained
+      on slides 19—24).
+    </P>
+    <P>
+      First, however, I will outline an example of a generic Bayesian
+      approach to THE COMPUTATIONAL PROBLEM that is at the core of
+      lightness estimation:
+      <DIR><DIR>
+	  How to find two unknown numbers from their product.
+      </DIR></DIR>
+    </P>
+    
+</div>
+    
+
+<!--
+
+
+<DIV CLASS="slide">
+  <h1 >understanding lightness constancy</h1>
+
+  <img src="Retinex-path.gif" class="figure-right" >
+  <P>
+  To separate lightness from illumination, <SC><B>assume</B></SC> that:
+  <ul>
+    <li>illumination changes slowly over the image;</li>
+    <li>lightness (reflectance) changes in jumps.</li>
+  </ul>
+  <P>
+  This suggests an algorithm for recovering lightness:
+  <ol>
+    <li>scan the image for abrupt jumps in intensity;</li>
+    <li>attribute every such jump to a change in lightness (as opposed to
+    illumination);</li>
+    <li>at the end of this process, calibrate the extreme values ("black" and
+    "white").</li>
+  </ol>
+  <P>
+  <HR>
+  <small>
+  For details, see <a
+  href="http://white.stanford.edu/~brian/papers/color/BrainardWandell1986.pdf"
+  target=new><I>Analysis of the Retinex theory of color vision</I></a> by
+  D. H. Brainard and B. A. Wandell (<a
+  href="http://josaa.osa.org/Issue.cfm" target=new>JOSA</a>, 1986).</small>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1 >achieving lightness constancy</h1>
+
+  <table>
+    <tr>
+      <td>A challenge for any lightness algorithm: <B>two identical color
+	charts, on a half-sunlit deck</B><P> [to understand why the two
+	squares look different <I>to us</I>, see
+	this <a href="http://colorisrelative.com/bwbox.html"
+	target=demo>demo of simultaneous lightness contrast</a>]</td>
+	<td><img src="Mondrian-McCann-fig6a.gif"></td>
+      </tr>
+      <tr>
+	<td>A modern version of <a href="http://en.wikipedia.org/wiki/Edwin_Land"
+	  target=new>Edwin H. Land</a>'s <a 
+	  href="http://en.wikipedia.org/wiki/Retinex"
+	  target=new>Retinex</a> algorithm (1971) meets the challenge
+	</td>
+	<td><img src="Mondrian-McCann-fig6b.gif"></td>
+      </tr>
+    </table>
+
+</div>
+
+
+
+
+
+<DIV CLASS="slide">
+  <h1>an example of a failure of lightness constancy</h1>
+
+  <img src="Cornsweet2.jpg" class="figure-right" >
+  
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>an example of a failure of lightness constancy</h1>
+
+  <img src="Cornsweet2-annotated.jpg" class="figure-right" >
+  <P>
+  <BR>
+  The constancy computation fails when <SC><B>assumptions</B></SC> behind it are
+  violated.
+  <P>
+  <img src="Cornsweet-profile-rotated.jpg" height=350>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>an example of a failure of "structure from motion" constancy</h1>
+
+  <embed src="KDE_new.mov"  width=386 height=392 align=right controller=true loop=true>
+  <P>
+  <BR>
+  The constancy computation fails when <SC><B>assumptions</B></SC> behind it are
+  violated. 
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>an example of a failure of shape constancy</h1>
+
+  <img src="Raetz-glass-bottle-left.jpg">
+  <img src="Raetz-glass-bottle-right.jpg">
+  <P>
+  Wire sculpture by <a href="http://www.crownpoint.com/artists/raetz" target=new>Markus Raetz</a>.
+
+</div>
+
+
+-->
+
+
+<!-- BAYESIAN LIGHTNESS -->
+
+
+<div  CLASS="slide">
+  <h1>a very simple example: Bayesian untangling of a product of two
+  unknowns (Brainard & Freeman, 1997)</h1>
+
+  <img src="hyperbola.png" class="figure-right">
+  <P>
+  The rendering equation \(I = E * R\)
+  is
+  <a href="http://mathworld.wolfram.com/BilinearFunction.html"
+  target=new><I>bilinear</I></a>. This means that the relation between
+  \(I\) and \(E\) is <a
+  href="http://mathworld.wolfram.com/LinearFunction.html"
+  target=new>linear</a> when \(R\) is
+  held fixed and that the relation between \(I\) and
+  \(R\) is <a
+  href="http://mathworld.wolfram.com/LinearFunction.html"
+  target=new>linear</a> when \(E\) is held fixed. 
+  <P>
+    The computational problem is finding two unknown numbers from
+    their product.  Suppose that we observe a number \(y\) and are
+    told that it is the product of two other numbers, \(y = ab\). The
+    problem is to estimate the two numbers \(a\) and \(b\).
+  </P>
+  <P>
+  This problem is clearly UNDERDETERMINED. Let us say
+  that the observation is \(y = 1\) and that we know that
+  \(0 \le a, b \le 4\). From the constraint \(ab = 1\) we can say
+  only that the solution must lie on the <a
+ href="http://en.wikipedia.org/wiki/Hyperbola" target=new>hyperbola</a>
+  plotted here.
+  <P>
+  <font color=red>A Bayesian analysis can yield more.</font>
+  </P>
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>Bayesian untangling of a product of two unknowns</h1>
+
+  <img src="Brainard97-fig2a.png" class="figure-right">
+  <P>
+  Let's find the posterior \(p(\textbf{x}\mid\textbf{y})\) of 
+  \(\textbf{x} = (a,b)^T\) given the observation \(\textbf{y}=y\). With the
+  rendering equation \(\textbf{y}=ab\) and <a
+ href="http://en.wikipedia.org/wiki/Normal_distribution" target=new>normally</a>
+  distributed observation noise with mean \(0\) 
+  and variance \(\sigma^2\), the likelihood is
+  $$
+  p(\textbf{y}\mid\textbf{x}) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-
+ \frac{\left\vert\textbf{y} - ab\right\vert^2}{2\sigma^2}}
+  $$
+  [The above merely states that the noise, which is the difference between
+  the true value of the product \(ab\) and the measured value \(y\), is <a
+ href="http://en.wikipedia.org/wiki/Normal_distribution"
+  target=new>normally</a> distributed.]
+  <P>
+<!--  <img src="Brainard97-eq7.png">  -->
+  Assuming (i) that the prior is uniform, \(p(\textbf{x})=1/16\) over the range
+  \([0, 4]\times[0, 4]\) and \(0\) elsewhere; (ii) that \(y=1\); and
+  (iii) that \(\sigma^2=0.18\), the Bayes rule
+  yields this posterior (plotted on the right):
+  $$
+  p(\textbf{x}\mid\textbf{y}) =
+  \begin{cases}
+  Ce^{-\frac{\left\vert 1-ab\right\vert^2}{2\cdot 0.18}}, & \mbox{if}\ 0 \le a,b \le 4 \\
+  0, & \mbox{otherwise}
+  \end{cases}
+  $$
+  <!--  <img src="Brainard97-eq8.png">  -->
+
+</div>
+
+
+
+
+<div  CLASS="slide">
+  <h1>Bayesian untangling of a product of two unknowns</h1>
+
+  <img src="Brainard97-fig2b.png" class="figure-right">
+  <P>
+  From the previous slide, the posterior \(p(\textbf{x}\mid\textbf{y})\) of 
+  \(\textbf{x} = (a,b)^T\) given the observation \(\textbf{y}=1\) is:
+  $$
+  p(\textbf{x}\mid\textbf{y}) =
+  \begin{cases}
+  Ce^{-\frac{\left\vert 1-ab\right\vert^2}{2\cdot 0.18}}, & \mbox{if}\ 0 \le a,b \le 4 \\
+  0, & \mbox{otherwise}
+  \end{cases}
+  $$
+<!--  <img src="Brainard97-eq8.png">  -->
+  This posterior distribution is plotted in the figure on the previous
+  slide. The set of points with highest probability forms a ridge along the <a
+ href="http://en.wikipedia.org/wiki/Hyperbola" target=new>hyperbola</a>
+ whose equation is
+  \(ab=1\).
+  <P>
+  While the ridge has equal height everywhere, it is <B>wider</B> near
+  \((1, 1)\) than at other points. 
+
+</div>
+
+
+<div  CLASS="slide">
+  <h1>Bayesian untangling of a product of two unknowns</h1>
+
+  <img src="Brainard97-fig2b.png" class="figure-right">
+  <img src="Brainard97-fig2a.png">
+  <P>
+  While the ridge has equal height everywhere, it is <B>wider</B> near
+  \((1, 1)\) than at other points.
+  <P>
+  This property of the posterior distribution — in the present case —
+  points at a possibility for resolving the problem of
+  indeterminacy. Can you see how?
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>Bayesian untangling of a product of two unknowns</h1>
+
+  <img src="Brainard97-fig2a.png" height=200 class="figure-right">
+  <P>
+  The posterior probability distribution provides a <I>COMPLETE</I>
+  description of what we know, given the data and the
+  prior.
+  <P>
+  In a typical estimation problem, however, the goal
+  is to choose <I>ONE</I> best estimate of the scene parameters, \(\tilde{\textbf{x}} =
+  (\tilde{a}, \tilde{b})^T\).
+  <P>
+  In practice, MAP and MMSE loss functions are almost universally used; Brainard &
+  Freeman (1997) discuss also a third one, MLM:
+
+  <ul>
+    <li>
+    MAP, or <I>maximum a posteriori</I> — choose scene parameter
+    values that maximize the posterior distribution (closely related to
+    <I>maximum likelihood</I> methods).
+    </li>
+    <li>
+    MMSE, or <I>minimum mean-squared-error</I> — choose values corresponding
+    to the mean of the posterior distribution.
+    </li>
+    <li>
+    MLM, or <I>maximum local mass</I> — choose values that maximize the
+    probability mass in the vicinity of the solution.
+    </li>
+  </ul>
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>Bayesian untangling of a product of two unknowns: MAP</h1>
+
+<!--  <img src="Brainard97-eq9-MAP.png" class="figure-left"> -->
+  <img src="Brainard97-fig3-MAP.png" class="figure-right">
+  <P>
+  The maximum a posteriori (MAP) loss function stipulates that even small
+  estimation errors are as bad as large ones.
+  <P>
+  NOTE that under the MAP loss function in this case there is NO
+  UNIQUE point of minimum loss. The smallest value of loss is obtained
+  for the entire set of points along the (constant-height) "summit" of
+  the ridge.
+  <P>
+  <HR>
+  <P>
+  <font color=gray>
+  The MAP loss function is 
+  $$
+  L(\tilde{\textbf{x}},\textbf{x}) =
+ -\delta(\tilde{\textbf{x}}-\textbf{x})
+  $$
+  Since convolving the posterior with the <a
+  href="https://en.wikipedia.org/wiki/Dirac_delta_function" target=new>Dirac
+ \(\delta\)</a> &nbsp; function leaves the
+  relative shape of the posterior unchanged, the estimate that maximizes the
+  posterior also minimizes the corresponding expected loss.
+  </font>
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>Bayesian untangling of a product of two unknowns: MMSE</h1>
+
+  <!-- <img src="Brainard97-eq10-MMSE.png" class="figure-left"> -->
+  <img src="Brainard97-fig3-MMSE.png" class="figure-right">
+  <P>
+  The minimum mean squared error (MMSE) loss function stipulates a loss that
+  accelerates with the magnitude of the estimation error.
+  <P>
+   Now there is a single optimal solution!
+  </P>
+  <HR>
+  <P>
+  <font color=gray>
+  The MMSE loss function is:
+  $$
+  L(\tilde{\textbf{x}},\textbf{x}) =
+  \|\tilde{\textbf{x}}-\textbf{x}\|^2
+  $$
+  </font>
+
+</div>
+
+
+
+
+<div  CLASS="slide">
+  <h1>Bayesian untangling of a product of two unknowns: MLM</h1>
+
+<!--  <img src="Brainard97-eq11-MLM.png" class="figure-left"> -->
+  <img src="Brainard97-fig3-MLM.png" class="figure-right">
+  <P> 
+  The loss function for the maximum local mass (MLM) estimate rewards
+  approximately correct estimates and penalizes grossly incorrect ones. 
+  <P>
+  For this loss function too, there is a single optimal solution!
+  </P>
+  <HR>
+  <P>
+  <font color=gray>
+  The MLM loss function is:
+  $$
+  L(\tilde{\textbf{x}},\textbf{x}) =
+  -exp\left[-\left\|\left(\tilde{\textbf{x}}-\textbf{x}\right)^T \textbf{K}_L^{-1}
+ \left(\tilde{\textbf{x}}-\textbf{x}\right)\right\|^2\right]
+  $$
+  where the matrix \(\textbf{K}_L\) must have sufficiently small <a
+  href="http://en.wikipedia.org/wiki/Eigenvalues"
+  target=new>eigenvalues</a>. 
+  </font>
+
+</div>  
+
+
+
+<div  CLASS="slide">
+  <h1>FINALLY: a Bayesian formulation of the lightness problem (Brainard & Freeman, 1997)</h1>
+
+  <img src="Brainard97-fig1.png" height=250 class="figure-right">
+  <P>
+  Given: a surface consisting of \(j\) patches, each with a different
+  lightness (reflectance) function.
+  <P>
+  \(\textbf{s}_j\) — how much the surface reflects
+  <BR><font color=gray>(a column vector representing the
+  reflectance function of the \(j\)-th surface patch; the entries specify
+  the fraction of incident light reflected in \(N_l\) evenly
+  spaced wavelength bands throughout the visible spectrum).</font>
+  <P>
+  \(\textbf{e}\) — how much light falls onto the surface
+  <BR><font color=gray>(a
+  column vector representing the illuminant spectral power 
+  distribution; its entries specify the radiant power in each of the \(N_l\)
+  wavelength bands).</font>
+  <P>
+  How much light gets to the eye/camera —
+  <BR><font color=gray>(the \(N_l\) samples of the spectral power distribution of
+  the light reaching the imaging device from the \(j\)-th surface patch)</font>:
+  $$
+  \textbf{c}_j = \textbf{e} .\!* \textbf{s}_j
+  $$
+  <P>
+    [The \(.\!*\) notation means "multiply the two vectors elementwise."]      
+  </P>
+
+</div>
+
+
+<div  CLASS="slide">
+  <h1>Bayesian lightness (cont.)</h1>
+
+  <img src="Brainard97-fig1.png" height=250 class="figure-right">
+  <P>
+  [From the previous slide] How much light gets to the eye/camera —
+  $$
+  \textbf{c}_j = \textbf{e} .\!* \textbf{s}_j
+  $$
+  <P>
+  The eye/camera samples each patch \(\textbf{c}_j\) with
+  \(N_r\) classes of linear photosensors, each characterized
+  by a spectral sensitivity function (think of the <a
+ href="http://en.wikipedia.org/wiki/Rod_cell" target=new>rods</a> and the three types
+  of <a href="http://en.wikipedia.org/wiki/Cone_cell" target=new>cones</a> in the human eye). These are specified by an
+  \(N_r \times N_l\) matrix \(\textbf{R}\). The
+  \((p,q)\)'th element of \(\textbf{R}\) specifies the sensitivity of the 
+  \(p\)'th sensor class to light in the \(q\)'th wavelength band.
+  <P>
+  Let the \(N_r\)-dimensional column vector
+  \(\textbf{r}_j\) represent the responses of all
+  \(N_r\) sensor classes to the spectrum sample
+  \(\textbf{c}_j\). This is obtained via the
+  <I>rendering equation</I>, which, for the \(j\)'th  surface patch, is:
+  $$
+  \textbf{r}_j = \textbf{R}\textbf{c}_j = \textbf{R}\left(\textbf{e} .\!*
+ \textbf{s}_j\right)
+  $$
+  These are the measurements that the eye/camera makes available.
+  <BR>
+  COLOR CONSTANCY is the problem of estimating \(\textbf{e}\) and the
+  \(\textbf{s}_j\) from the ensemble of sensor responses
+  \(\textbf{r}_j\).   
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>Bayesian lightness (cont.)</h1>
+
+  <P>
+  [From the previous slide] The measurements that the eye/camera makes available: 
+  $$
+  \textbf{r}_j = \textbf{R}\textbf{c}_j = \textbf{R}\left(\textbf{e} .\!*
+ \textbf{s}_j\right)
+  $$
+  COLOR CONSTANCY is the problem of estimating the illumination vector
+ \(\textbf{e}\) and the surface reflectance vectors \(\textbf{s}_j\) from
+  the ensemble of sensor responses \(\textbf{r}_j\). 
+  <P>
+  The above equation describes the "forward" process of image
+  formation (a.k.a. <I>rendering</I>) and
+  measurement. The <a href="https://en.wikipedia.org/wiki/Inverse_problem" 
+  target=new>"inverse" problem</a> associated with it is difficult for two
+  reasons: 
+  <ul>
+    <li>It is UNDERDETERMINED — there are more scene parameters than there
+    are degrees of freedom (independent measurements) in the data.
+    </li>
+    <li>
+    It is NON<a href="http://en.wikipedia.org/wiki/Linear_map" target=new>LINEAR</a> — some unknown scene parameters multiply others.
+    </li>
+  </ul>
+</div>
+
+
+
+
+<div  CLASS="slide">
+  <h1>the Bayesian formula</h1>
+
+  <P>
+  The Bayesian framework provides a prescription for how
+  to use ALL OF THE INFORMATION about the illuminant and the surface, contained
+  in the sensor responses \(\textbf{r}_j\).
+  <P>
+  Three probability distributions play key roles:
+  <ul>
+    <li>
+    The prior probability — what is known about the parameters before
+    observing the data. If we need to estimate \(\textbf{x}\), then the
+    prior is the probability density \(p(\textbf{x})\).
+    </li>
+    <li>
+    The posterior probability — what is known after observing the data.
+    </li>
+    <li>
+    The likelihood \(p(\textbf{y}\mid\textbf{x})\) — the relation between
+    the data \(\textbf{y}\) (here, the sensor responses \(\textbf{r}_j\))
+    and the unknown parameters \(\textbf{x}\) (here, the illumination and
+    the reflectance \(\textbf{e},\textbf{s}_j\)).
+    <P class="incremental">
+    NOTE: The likelihood may be thought
+    of as the <I>rendering</I> equation expressed as a probability distribution
+    \(p(\textbf{r}_j \mid \textbf{e},\textbf{s}_j)\); compare this
+    with the process of rendering a wireframe object, illustrated on
+    slide 13 of Lecture 3.1, on the right.
+    </P>
+    </li>
+  </ul>
+
+</div>
+
+
+
+
+
+<div  CLASS="slide">
+  <h1>the Bayesian formula</h1>
+
+  <P>
+  The Bayesian framework provides a prescription for how
+  to use ALL OF THE INFORMATION about the illuminant and the surface, contained
+  in the sensor responses \(\textbf{r}_j\).
+  <P>
+  Given the prior \(p(\textbf{x})\) and the likelihood
+  \(p(\textbf{y}\mid\textbf{x})\), the posterior 
+  probability \(p(\textbf{x}\mid\textbf{y})\) is computed by using the Bayes
+  rule: 
+  $$
+  p(\textbf{x}\mid\textbf{y}) = \frac{p(\textbf{y}\mid\textbf{x})
+  p(\textbf{x})}{p(\textbf{y})} = C\cdot p(\textbf{y}\mid\textbf{x})p(\textbf{x})
+  $$
+<!--  <img src="Brainard97-eq2-Bayes.png"> -->
+  where \(C = \frac{1}{p(\textbf{y})}\) is a normalizing constant that depends on the data \(\textbf{y}\) but
+  not on the as yet unknown parameters \(\textbf{x}\).
+
+</div>
+
+
+
+
+<div  CLASS="slide">
+  <h1>the Bayesian loss function</h1>
+
+  <P>
+  To use the posterior distribution to estimate a unique value \(\tilde{\textbf{x}}\) for the
+  parameters \(\textbf{x}\), we need to specify a loss function \(L\left(\tilde{\textbf{x}},\textbf{x}\right)\). This function
+  specifies the penalty for choosing \(\tilde{\textbf{x}}\) when the actual parameters are
+  \(\textbf{x}\). Given the posterior and a loss function, we may compute the loss
+  expected in choosing \(\tilde{\textbf{x}}\), called the <a
+ href="http://en.wikipedia.org/wiki/Loss_function#Bayesian_expected_loss" target=new>Bayesian expected loss</a>:
+  $$
+  \bar{L}\left(\tilde{\textbf{x}}\mid\textbf{y}\right) =
+  \int_{\textbf{x}} L\left(\tilde{\textbf{x}},\textbf{x}\right)
+  p\left(\textbf{x}\mid \textbf{y}\right) d\textbf{x}
+  $$
+<!--  <img src="Brainard97-eq3-expected-loss.png">  -->
+  <font color=gray>[Remember the advice from <a href="wk-1-1.html#(51)" target=w>week 1</a>
+regarding the \(\int\) notation.]</font>
+  <P>
+  The value of \(\tilde{\textbf{x}}\) is chosen to minimize the expected loss.
+  <P>
+  <font color=gray>
+  Often the loss function is shift-invariant, so that the loss depends only
+  on the difference \(\tilde{\textbf{x}} - \textbf{x}\).
+  <BR>
+  Example: a "zero-tolerance" loss function: zero penalty for
+ \(\tilde{\textbf{x}} - \textbf{x} = 0\) and infinite penalty for
+ \(\tilde{\textbf{x}} - \textbf{x} \neq 0\)
+  <!--
+  In this case the
+  expected loss is simply the posterior convolved by the loss function with
+  its argument negated.
+  -->
+  </font>
+  <P>
+  Bayesian estimation provides a principled way to choose an optimal
+  estimate that uses all of the information contained in the data.
+
+</div>
+
+
+  
+
+<div  CLASS="slide">
+  <h1>Bayesian approach to lightness: a summary</h1>
+
+  <P>
+  <BR>
+  The Bayesian approach has three explicit components:
+  <ul>
+    <li>
+    To calculate the likelihood, we must model image formation (which is
+    what the rendering equation does).
+    </li>
+    <li>
+    To specify the prior, we must quantify our assumptions
+    about images.
+    </li>
+    <li>
+    And to minimize the expected loss, we must state the cost of estimation
+    errors.
+    </li>
+  </ul>
+  Within the Bayesian framework, each of these components may be
+  considered separately: We need not confound our assumptions
+  about the world (the prior) with how we will
+  use our estimate (the loss function).
+  <P>
+  <font color=gray>(For the actual algorithm and a description of its
+  performance, see the optional sections 3 and 4 of the Brainard &
+  Wandell paper.)</font> 
+
+</div>
+
+  
+  
+
+<!-- ---------------------------------------------------------------------------------- -->
+<!-- BAYESIAN STEREO -->
+
+<!--
+
+<DIV CLASS="slide">
+  <h1><font color=red>[extra]</font> binocular stereopsis: the correspondence problem</h1>
+
+  <img src="MarrPoggio79-fig1.png">
+  <P>
+  Each of the four points in one eye's view could match any of the four
+  projections in the other eye's view. Of the 16 possible matchings, only
+  four are correct (here, filled circles); the other 12 are false matches.
+  <P>
+  Without further constraints on the solution to the correspondence problem,
+  such ambiguities cannot be resolved. 
+  <P>
+  <small>[Marr & Poggio, 1979; after Julesz, 1971]</small>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>binocular stereopsis: the double-nail illusion</h1>
+
+  <img src="Read02b-fig1.png">
+  <P>
+  Two different scenes (3D arrangements of two small black objects) that
+  create identical pairs of retinal images (view from above). There is no
+  way to distinguish between the two possible interpretations of the retinal
+  image pair without imposing further constraints on the solution.
+  <P>
+  The <a
+ href="http://www.docstoc.com/docs/84254586/The-double-nail-illusion-experiments-on-binocular-vision-with"
+ target=new>double-nail illusion</a> induced by this stimulus suggests that one such
+  constraint amounts to a prior that favors small disparities. 
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>binocular stereopsis: a random-dot stereogram</h1>
+
+  <img src="Read02-fig2ab.jpg" height=400>
+  <P>
+  If you succeed to match and fuse the left and right images in this
+  <a href="https://en.wikipedia.org/wiki/Random_dot_stereogram"
+  target=new>random-dot stereogram</a> (RDS), a 3D structure defined by the
+  disparities of some of the pixels becomes apparent. 
+
+</div>
+
+
+  
+<DIV CLASS="slide">
+  <h1>Bayesian binocular stereopsis: viewing geometry (Read, 2002)</h1>
+
+  <img src="Reed02-fig1.png" height=400 class="figure-right">
+  <P>
+  Object P has disparity
+  $$
+  \delta = x_L - x_R
+  $$
+  where \(x_L\),\(x_R\) are the
+  horizontal positions of its image in the two eyes. If
+  fixation is far enough, 
+  <BR>
+  \(d \approx (x_L-x_R)I/2\alpha^2\)
+  <BR>
+  Each potential match between \((x_L, y)\) and \((x_R, y)\) implies a percept
+  of an object at P, with luminance depending on the mean of the two light
+  intensities. The strength of the perception is presumed to increase
+  monotonically with the match probability \(P\{(x_L, y) \leftrightarrow (x_R,
+  y)\}\).  
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>Bayesian binocular stereopsis: simple cell RFs</h1>
+
+  <table cellpadding=5>
+    <tr>
+      <td><img src="Read02b-fig2.png" height=275></td>
+      <td><img src="Read02b-fig3.png" height=275></td>
+    </tr>
+    <tr>
+      <td>
+	Receptive fields (RFs) of even-phase and odd-phase <a
+	href="https://en.wikipedia.org/wiki/Simple_cells" target=new>simple cells</a>,
+	modeled as <a href="https://en.wikipedia.org/wiki/Gabor_wavelet"
+	target=new>Gabor functions</a>. Bright regions represent ON regions of 
+	the RF; dark regions represent OFF regions of the RF.
+      </td>
+      <td>
+	A binocular <a href="https://en.wikipedia.org/wiki/Complex_cell"
+	target=new>complex cell</a> response is modeled by a sum of squares of 
+	the responses of two antiphase simple cells, one from each eye,
+	positioned so as to incorporate the appropriate disparity.
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+
+
+  
+<DIV CLASS="slide">
+  <h1>Bayesian binocular stereopsis: the RDS processed by complex-cell RFs</h1>
+
+  <img src="Read02-fig2cd.jpg" height=400>
+  <P>
+  (C) The sum of left and right images \(I_L(x_L,y)+I_R(x_R,y)\)
+  at \(y_L=y_R=y\).
+  <BR>
+  (D) The response of complex cells, summed over all spatial frequency and
+  orientation channels. The grayscale at \(x_L,x_R\) represents the total
+  response of cells with left- and right-eye RFs at \((x_L,y)\) and
+  \((x_R,y)\), respectively.  
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>Bayesian binocular stereopsis: general form</h1>
+
+  <P>
+  <BR>
+  Assume that the brain knows the likelihood \(P(I \mid S)\) of obtaining
+  an image \(I\) given a scene \(S\); also that it has an a priori estimate
+  of the probability \(P(S)\) that a particular scene occurs.
+  <P>
+  According to the Bayes Theorem, the posterior probability of a
+  particular scene \(S\), given the image \(I\) is:
+  $$
+  P(S \mid I) = \frac{P(I \mid S) P(S)}{P(I)}
+  $$
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>Bayesian binocular stereopsis: motivation</h1>
+
+  <P>
+  <BR>
+  Advantages of the Bayesian approach:
+  <ul>
+    <li>
+    A natural way of specifying constraints as priors (e.g., the
+    small-disparity constraint in the double-nail illusion).
+    </li>
+    <li>
+    A natural way of handling ambiguity (e.g., a "soft" uniqueness constraint,
+    which accommodates occlusions).
+    <P>
+    Let \(P\{(x_L, y) \leftrightarrow (x_R, y)\}\) denote the probability that
+    the point \((x_L, y)\) in the left eye corresponds to \((x_R, y)\) in the
+    right eye, that is, both are images of the same object. High probability
+    can be assigned to several matches for a given object without necessarily
+    having to enforce "hard" uniqueness.
+    </li>
+  </ul>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>Bayesian binocular stereopsis: the key observation</h1>
+
+  A binocular complex cell can be used to test the hypothesis that the
+  region of the stimulus within its RF has the disparity that it is tuned
+  to:
+  <DIR><DIR>
+    If this is the case, then the image region under the left RF
+    should be identical to the region under the right RF. Thus,
+    the response of the binocular complex cell could be predicted from a
+    knowledge of the firing rates of simple cells with receptive fields in one
+    eye only.
+  </DIR></DIR>
+  In the light of this observation, one can estimate the <B>likelihood</B>:
+  the probability of obtaining the observed binocular complex cell response,
+  given the response of the monocular simple cells from one eye, conditioned
+  on the assumption that the disparity the complex cell is tuned to is that
+  actually present in the stimulus. 
+  <P>
+  According to the Bayes Theorem, the likelihood estimate can then be inverted to
+  obtain the <B>posterior</B> probability that the stimulus really does have
+  the disparity that the complex cell is tuned to, given the observed
+  responses of the binocular complex cell and the monocular simple cells
+  that feed into it. 
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>Bayesian binocular stereopsis: the technicalities</h1>
+
+  <P>
+  <P>
+  The likelihood is computed as the average of local single-channel match
+  probabilities over all spatial frequency and orientation channels:
+  $$
+  P\{(x_L,y) \leftrightarrow (x_R,y)\} =
+  \sum_{\lambda\theta}P_{\lambda\theta}\{(x_L,y) \leftrightarrow (x_R,y)\}
+  $$
+  This estimate is heuristic: an analytic derivation would require the joint
+  probability of obtaining a particular set of responses from the entire
+  population of complex cells. 
+  <P>
+  The Bayesian prior for disparity \(\delta\) is assumed to be
+  $$
+  P\{\delta\} = [D^2 + (\delta - D/2)^2]^{-3/2} + [D^2 + (\delta + D/2)^2]^{-3/2} 
+  $$
+  This closely resembles a Gaussian but is less sharply peaked at the
+  origin and decays less steeply; \(D\) is a scale parameter, effectively
+  defining which disparities are counted as small.
+  <P>
+  All that remains is to compute the posterior from the likelihood and the
+  prior, as per the Bayes Theorem.
+
+</div>
+
+  
+
+  
+<DIV CLASS="slide">
+  <h1>binocular stereopsis: the RDS solved</h1>
+
+  <img src="Read02-fig2f.jpg" height=400 class="figure-right">
+  <P>
+  <BR>
+  The probabilistic disparity map, in which the grayscale at \(x_L,x_R\)
+  represents the probability \(P\{(x_L,y) \leftrightarrow (x_R,y)\}\) that
+  \((x_L,y)\) matches \((x_R,y)\).
+  <P>
+  Note that the central portion of the high-probability strip lies below the
+  zero-disparity diagonal. Can you tell what this means in terms of the 3D
+  structure of the scene from which the left and right images were
+  generated?  
+
+</div>
+
+
+-->
+
+
+<!-- ---------------------------------------------------------------------------------- -->
+
+<!-- BAYES IN SHAPE PERCEPTION -->
+
+<!--
+
+
+<DIV CLASS="slide">
+  <h1>Bayes in perception: the general form</h1>
+
+  <img src="Bayes-1.jpg">
+  <P>
+  <table cellpadding=10>
+    <tr>
+      <td width=25%>P(<I>h</I> | <I>K</I>)</td>
+      <td><SC>prior</SC> probability</td>
+      <td>prevalence of a certain category of shapes in the world</td>
+    </tr>
+    <tr>
+      <td>P(<I>D</I> | <I>h,K</I>) / P(<I>D</I> | <I>K</I>)</td>
+      <td><SC>likelihood<BR>ratio</SC></td>
+      <td>how likely the image is, given that the object has the hypothesized shape</td>
+    </tr>
+    <tr>
+      <td>P(<I>h</I> | <I>D,K</I>)</td>
+      <td><SC>posterior</SC> probability</td>
+      <td>how probable the hypothesized shape is, given the image</td>
+    </tr>
+  </table>
+  <P>
+  <HR>
+  <P>
+  <font color=gray><I>P(D | K)</I> &#151; normalization factor, which ensures that
+  probabilities sum to 1,</font> <div align=center><img src="Bayes-2.jpg" height=50></div>
+  
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>an example: Bayes in wireframe shape perception</h1>
+
+  <table cellspacing=10>
+    <tr>
+      <td><img src="Kersten03-fig2b.jpg"></td>
+      <td><img src="Kersten03-fig2c-cropped.jpg"></td>
+    </tr>
+    <tr>
+      <td align=center width=50%>
+	must find the probabilities of various conceivable shape
+	interpretations <I>S</I> (hypotheses),
+	given the image <I>I</I> (data)
+      </td>
+      <td align=center>
+	likelihood ~ probability of <I>I</I> given <I>S</I>
+	<BR>
+	(rule out shapes that are inconsistent with the image)
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>Bayes in wireframe shape perception (cont.)</h1>
+
+  <img src="Kersten03-fig2d.jpg">
+
+</div>
+
+
+
+
+
+<DIV CLASS="slide">
+  <h1>another example: Bayes in surface shape perception</h1>
+  <img src="Kersten04-fig1.jpg" class="figure-right" height=450>
+
+  <ol type=A>
+    <li>The image is consistent with many shape / viewpoint combinations.
+    </li>
+    <li>The <SC>likelihood</SC>: how compatible (likely) are different scene
+    interpretations with the observed image; here, "small <a
+ href="http://en.wikipedia.org/wiki/Curvature" target=new>curvature</a> and
+    large <a href="http://www.merriam-webster.com/dictionary/slant"
+ target=new>slant</a>" hypotheses are more compatible with the image.
+    </li>
+    <li>The <SC>prior</SC>: highly convex objects viewed from above are expected.
+    </li>
+    <li>
+    A Bayesian observer combines likelihood and prior to 
+    estimate the <SC>posterior</SC> probability for each possible
+    interpretation of the given image in terms of the
+    curvature and the slant of the perceived shape.
+    </li>
+  </ol>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>[EXTRA] Bayes in perception: kinds of tasks</h1>
+  
+  <img src="Kersten03-fig4.jpg" height=550>
+
+</div>
+
+
+
+
+
+<DIV CLASS="slide">
+  <h1>[EXTRA] Bayes in perception: kinds of tasks</h1>
+  
+  <img src="KerstenEtAl04-fig1-AB.png" >
+  <P>
+  <BR>
+  <img src="KerstenEtAl04-fig1-legend.png" >
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>[EXTRA] Bayes in perception: kinds of tasks (cont.)</h1>
+  
+  <img src="KerstenEtAl04-fig1-CD.png" >
+  <P>
+  <BR>
+  <img src="KerstenEtAl04-fig1-legend.png" >
+
+</div>
+
+
+
+
+
+<DIV CLASS="slide">
+  <h1>sound localization in the owl, revisited</h1>
+
+  <img src="barn-owl-time-space.gif" height=300 class="figure-right" >
+  <P>
+  <BR>
+  "The classical view of auditory-space coding in the owl is that sound-source
+  direction is represented in a <B>place code</B>. In this framework, the direction
+  of a sound source is determined by the position in a topographic map of
+  auditory space with the greatest activity level.
+  <P>
+  <img src="barn-owl-drawing.jpg" height=150 class="figure-left">
+  However, this model has not been directly compared to the owl’s
+  behavior. Thus, although considerable progress has been made in determining
+  how ITD is <B>encoded</B>, it remains unclear how ITD is <B>decoded</B> to support the
+  owl’s localization behavior."  
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>Owl’s behavior and neural representation predicted by Bayesian inference</h1>
+
+  <img src="Fischer-Pena-owl-Bayes-NatNeuro11-fig1e.png" class="figure-right">
+  <P>B. J. Fischer & J. L. Peña, <I>Nature Neuroscience</I> 14:1061-1067 (2011)</P>
+  <P>
+  "The owl captures prey using sound localization. In the classical model, the
+  owl infers sound direction from the position of greatest activity in a
+  brain map of auditory space. However, this model fails to describe the
+  actual behavior. <B>Although owls accurately localize sources near the center
+  of gaze, they systematically underestimate peripheral source directions. We
+  found that this behavior is predicted by statistical inference, formulated
+  as a Bayesian model that emphasizes central directions.</B> [...] Thus, a
+  probabilistic model describes both how the map of auditory space supports
+  behavior and why this representation is optimal." 
+  </P>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+<h1>Bayes in decision-making</h1>
+
+  <img src="Bayes-1.jpg">
+  <P>
+  <table cellpadding=10>
+    <tr>
+      <td width=25%>P(<I>h</I> | <I>K</I>)</td>
+      <td><SC>prior</SC> probability</td>
+      <td>prevalence of a certain disease in the general population</td>
+    </tr>
+    <tr>
+      <td>P(<I>D</I> | <I>h,K</I>) / P(<I>D</I> | <I>K</I>)</td>
+      <td><SC>likelihood<BR>ratio</SC></td>
+      <td>how likely the test result is, given that the patient has the
+	hypothesized disease</td>
+    </tr>
+    <tr>
+      <td>P(<I>h</I> | <I>D,K</I>)</td>
+      <td><SC>posterior</SC> probability</td>
+      <td>how probable the hypothesized disease is, given the test result</td>
+    </tr>
+  </table>
+    <P>
+  <HR>
+  <P>
+  <font color=gray><I>P(D | K)</I> &#151; normalization factor, which ensures that
+  probabilities sum to 1,</font> <div align=center><img src="Bayes-2.jpg" height=50></div>
+
+  
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>RATIONAL COGNITION, the most general case: using the Bayes Theorem</h1>
+
+  <img src="Bayes-1.jpg">
+  <P>
+  <I>D</I> &#151; the observed <SC>data</SC>;
+  <BR>
+  <I>h</I> &#151; the <SC>hypothesis</SC> in question;
+  <BR>
+  <I>H</I> &#151; the space of all possible hypotheses;
+  <BR>
+  <I>K</I> &#151; the background <SC>domain</SC> knowledge.
+  <P>
+  <HR>
+  <P>
+  <font color=gray><I>P(D | K)</I> &#151; normalization factor, which ensures that
+  probabilities sum to 1,</font> <div align=center><img src="Bayes-2.jpg" height=50></div>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>an excerpt from "An Intuitive Explanation of Bayes' Theorem"</h1>
+
+  <P>
+  <BR>
+  <a href="http://yudkowsky.net/rational/bayes"
+  target=new><I>Bayes' Theorem for the curious and bewildered; an excruciatingly
+  gentle introduction</I></a>:
+  <P>
+  Your friends and colleagues are talking about something called "Bayes'
+  Theorem" or "Bayes' Rule", or something called Bayesian reasoning.  They
+  sound really enthusiastic about it, too, so you google and find a webpage
+  about Bayes' Theorem and... 
+  <P>
+  It's this equation.  That's all.  Just one equation.  The page you found
+  gives a definition of it, but it doesn't say what it is, or why it's
+  useful, or why your friends would be interested in it.  It looks like this
+  random statistics thing. 
+  <P>
+  Why does a mathematical concept generate this strange enthusiasm in its
+  students?  What is the so-called <font color=red>Bayesian Revolution</font> now sweeping through
+  the sciences, which claims to subsume even the experimental method itself
+  as a special case?  What is the secret that the adherents of Bayes know?
+  What is the light that they have seen?
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>the Ace of Bayes</h1>
+
+  <a href="http://www.youtube.com/watch?v=qItugh-fFgg"
+ target=new><img src="all-your-Bayes-are-belong-to-us.jpg" class="figure-right"></a>
+  <P>
+  <BR>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>Bayes networks (graphical models): representing <SC>causality</SC></h1>
+
+  <a href="http://en.wikipedia.org/wiki/Bayesian_network" target=new><img
+ src="Bayes-network.png" title="a simple Bayes network" class="figure-right"></a>
+  
+  <p>The joint probability is:</p>
+  <dl>
+    <dd><span class="texhtml">P(<i>G</i>,<i>S</i>,<i>R</i>) =
+      <BR>
+      = P(<i>G</i>|<i>S</i>,<i>R</i>) P(<i>S</i>|<i>R</i>) P(<i>R</i>)</span></dd>
+
+  </dl>
+  <P>
+  <p>The model can answer questions like "What is the probability that it is raining, given the grass is wet?" by using the <a href="http://en.wikipedia.org/wiki/Conditional_probability" title="Conditional probability">conditional probability</a> formula and summing over all <a href="http://en.wikipedia.org/wiki/Nuisance_variable" title="Nuisance variable">nuisance variables</a>:</p>
+  <dl>
+
+    <dd><img class="tex" alt=" \mathrm P(\mathit{R}=T \mid \mathit{G}=T)
+      =\frac{\mathrm P(\mathit{G}=T,\mathit{R}=T)}{\mathrm P(\mathit{G}=T)}
+      =\frac{\sum_{\mathit{S} \in \{T, F\}}\mathrm P(\mathit{G}=T,\mathit{S},\mathit{R}=T)}{\sum_{\mathit{S}, \mathit{R} \in \{T, F\}} \mathrm P(\mathit{G}=T,\mathit{S},\mathit{R})}
+      " src="http://upload.wikimedia.org/math/1/e/9/1e9696954df2f0bab7c49a645260669e.png" />
+      <dl>
+	<dd><img class="tex" alt=" = \frac{(0.99 \times 0.01 \times 0.2 = 0.00198_{TTT}) + (0.8 \times 0.99 \times 0.2 = 0.1584_{TFT})}{0.00198_{TTT} + 0.288_{TTF} + 0.1584_{TFT} + 0_{TFF}} \approx 35.77&#160;%." src="http://upload.wikimedia.org/math/e/c/e/ece16a9a2c6d0d6408ec4e2e95b00c7e.png" /></dd>
+      </dl>
+    </dd>
+  </dl>
+
+</DIV>
+
+
+
+<DIV CLASS="slide">
+  <h1>[EXTRA] Bayes for classification and regression</h1>
+
+  <ol class="incremental">
+    <li>a <a href="http://en.wikipedia.org/wiki/Linear"
+    target=new>linear</a> solution in the form of a weighted sum of nonlinear
+    <a href="http://en.wikipedia.org/wiki/Basis_function" target=new>basis functions</a></li>
+    <P>
+    <li>a <a
+    href="http://en.wikipedia.org/wiki/Regularization_%28mathematics%29"
+    target=new>regularized</a> <a
+ href="http://en.wikipedia.org/wiki/Least_squares"
+    target=new>least-squares</a> solution that avoids 
+    <a href="http://en.wikipedia.org/wiki/Overfitting" target=new>overfitting</a></li> 
+    <P>
+    <li>a probabilistically motivated <a
+ href="http://en.wikipedia.org/wiki/Point_estimate" target=new>point-estimate</a> regularized solution</li>
+    <P>
+    <li>a better idea: a Bayesian solution, which integrates over a
+    distribution of possible solutions instead of offering just a point
+    estimate</li>
+    <P>
+    <li>a powerful method for achieving (2): <a
+ href="http://en.wikipedia.org/wiki/Support_vector_machine" target=new>Support Vector Machines</a>
+    (SVM)</li>
+    <li>a better, Bayesian method: <a
+ href="http://en.wikipedia.org/wiki/Relevance_vector_machine"
+ target=new>Relevance Vector Machines</a> (RVM)</li>
+  </ol>
+  <HR>
+  [for details, see extra reading: <a
+  href="http://research.microsoft.com/en-us/um/people/cmbishop/downloads/bishop-nato-bayes.pdf"
+  target=new><I>Bayesian Regression and  
+  Classification</I></a>, C. M. Bishop and M. E. Tipping, in <I>Advances in
+  Learning Theory: Methods, Models and Applications</I>, J. A. K. Suykens et
+  al. (Editors), IOS Press, NATO Science Series III: Computer and Systems
+  Sciences, volume 190 (2003)]
+
+</DIV>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>[extra reading] more Bayesian examples</h1>
+
+  <P>
+  <BR>
+  Two example studies that apply the  Bayesian approach to the modeling of cognition:
+  <ul>
+    <li>
+    <I>Bayesian models of object perception</I><BR>
+    <a
+    href="http://gandalf.psych.umn.edu/~kersten/kersten-lab/kersten-lab.html"
+    target=new>Daniel Kersten</a> and Alan Yuille<BR>
+    <I>Current Opinion in Neurobiology</I> 13:1-9 (2003).
+    </li>
+    <P>
+    <li>
+    <I>Theory-based Bayesian models of inductive learning and reasoning</I><BR>
+    <a href="http://web.mit.edu/cocosci/josh.html" target=new>Joshua
+    B. Tenenbaum</a>, Thomas L. Griffiths, and Charles Kemp<BR> 
+    <I>Trends in Cognitive Sciences</I> 10:309-318 (2006).
+    </li>
+  </ul>
+</DIV>
+
+-->
+
+
+<div class="footer">
+<p>Last modified: Wed Feb 24 2021 at 18:26:35 EST</p>
+</div>
+</body>
+</html>
