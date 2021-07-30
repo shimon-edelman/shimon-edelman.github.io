@@ -1,0 +1,76 @@
+<head>
+<title>Computing Societies</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+
+<h3>Computing societies</h3>
+
+This is the second part of a two-part course. It focuses on the role
+of computational simulation in two disciplines — evolutionary science
+and sociology — which are both uniquely important to the understanding
+of the world we live in, and at the same time uniquely difficult to
+study by the traditional scientific method, which tries to derive
+mathematical models from experimental data. In both these domains of
+study, scientists often resort to simulation, using an agent-based
+modeling (ABM) approach. In evolutionary ABM, simulated actors
+(agents) carrying various traits of interest share an environment in
+which they undertake actions and compete for resources. The agent’s
+cumulative outcomes determine its fitness, which in turn affects its
+chances for reproduction. The effectiveness of traits can then be
+assessed by tracking their prevalence in the population over
+evolutionary time. Similarly, in computational social science, the ABM
+approach involves simulated agents with controlled cognitive
+abilities, “personalities,” and interpersonal attitudes. The social
+dynamics that arises out of the agents’ interactions is then analyzed
+and used to support theory development.
+
+<h4>Key information</h4>
+
+<ul>
+  <li>
+    As with Part I, reading comprehension and speaking fluency in
+    English is an absolute requirement.  Furthermore, the key
+    <B>prerequisite</B> for this part of the course is an ability to write
+    code, in any programming language. <B>If you cannot program, you will
+    not be able to complete a project and should not take this
+    course.</B> We will use the Python programming environment, which can
+    be easily mastered by anyone with prior experience in Java,
+    Scheme, or any other popular language. Playing with Python before
+    the course starts will make it easier for you to keep up with the
+    material (see <a href="https://mesa.readthedocs.io/en/master/"
+    target=mesa>https://mesa.readthedocs.io/en/master/</a>).
+  </li>
+  <P>
+    <li>
+      The course will be taught over a period of 4 weeks, 5 days/week,
+      in 1.5-hour <B>units</B>, for a total of 45 hours (see separate
+      detailed schedule).
+    </li>
+  <P>
+    <li>
+      The required <B>readings</B> are academic papers, which will be made
+      available in PDF format, as a zipped archive. You should try to
+      read each paper before its assigned date, but please note that
+      the papers will be thoroughly explained and discussed in class.
+    </li>
+  <P>
+    <li>
+      The <B>final project</B>, due on the last day of class, will
+      consist of a summary paper and a presentation of the ABM
+      simulation, which you will develop during the course. NOTE:
+      group projects (2-3 students per group) will be acceptable.
+    </li>
+</ul>
+
+<h4>The units</h4>
+
+See the <a href="Edelman-CIS-syllabus.pdf" target=read>syllabus</a>.
+
+<P>
+<HR width=30% align=left>
+<div class="footer">
+<p>Last modified: Thu Jun 11 2020 at 13:07:40 EDT</p>
+</div>
+</body>
+</html>

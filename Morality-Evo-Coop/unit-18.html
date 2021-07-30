@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computing Societies — Unit 18</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2020 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 18 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computing Societies</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 18: case study: morality (cont.)</h2>
+  </div>
+<!--  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%> -->
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+<div  CLASS="slide">
+  <h1>further exploration of altruistic punishment</h1>
+
+  <P>
+  <BR>
+    <ul>
+      <li>
+	<li>
+	  <I>Altruistic punishment and other theories</I> [Smirnova,
+	  2019].
+	</li>
+      </ul>
+      <P>
+	The Python/Mesa code for this project is available
+	<a href="Morality-Project-master.zip" target=zip>HERE</a>
+	(courtesy of Diana Smirnova).
+      </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the goal: replicating and extending the work of Boyd et al.</h1>
+
+  <P>
+    As in the Boyd model [see <a href="unit-9.html">Unit 9</a>], here
+    groups of agents undergo the stages of signaling, cooperation, and
+    punishment. Each agent has a running count of payoff, which may
+    change at each stage. The groups split up every 25 "years", and a
+    new generation of agents replaces the previous one and forms new
+    groups. The proportion of punishers and non-punishers in each
+    generation is determined by their comparative fitness in the
+    previous generation.  The simulation has the following parameters:
+    <ul>
+      <li>
+	Initial proportion of punishers in the population.
+      </li>
+      <li>
+	Threshold proportion of punishers needed for punishment to
+	occur.
+      </li>
+      <li>
+	Benefit from cooperation (ratio of value obtained from a
+	cooperative act to cost to cooperating agents).
+      </li>
+      <li>
+	Cost to defecting agents.
+      </li>
+      <li>
+	Cost to punishers (divided among all punishers in the group).
+      </li>
+      <li>
+	Number of groups of agents.
+      </li>
+      <li>
+	Number of agents in each group.
+      </li>
+    </ul>
+  <P>
+    [Only biological (not cultural) evolution was simulated in this project.]
+  </P>
+   
+</DIV>    
+    
+
+
+<div  CLASS="slide">
+  <h1>possible types of outcomes from the model</h1>
+
+  <img src="Smirnova19-fig1.png" class="figure-right" height=400>
+    <P>
+      The proportion of punishers in the population changed over the
+      course of the simulation. The pattern of change followed one of
+      the following trends, depending on the parameters settings:
+      <ol type=a>
+	<li>
+	  Decreased to 0.
+	</li>
+	<li>
+	  Decreased until a certain point, then remained in a steady
+	  state.
+	</li>
+	<li>
+	  Increased exponentially until a certain point, then remained
+	  in a steady state.
+	</li>
+	<li>
+	  Increased exponentially until a certain point, then
+	  continued to increase at a slower rate, becoming
+	  asymptotically closer to 100%.
+	</li>
+      </ol>
+      <P>
+	The outcome in case (c) was the "desired" outcome for the
+	simulation.  Error bars represent 95%
+	<a href="https://en.wikipedia.org/wiki/Confidence_interval"
+	target=new>confidence interval</a> over 10 runs of the
+	simulation.
+      </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the effect of initial vs. threshold proportion of punishers</h1>
+
+  <img src="Smirnova19-fig2a.png" class="figure-right" height=400>
+    <P>
+      If threshold proportion is too high compared to initial
+      proportion of punishers, no groups or very few groups reach the
+      threshold, so punishers are unable to retaliate against
+      defectors, and therefore have no use. The proportion of
+      punishers decreases to 0
+      (outcome <B><font color=black>a</font></B>).
+    </P>
+    <P>
+      If threshold proportion is lower than initial proportion, the
+      proportion of punishers decreases from the original level before
+      eventually reaching a steady state
+      (outcome <B><font color=red>b</font></B>).
+    </P>
+    <P>
+      If there is a good balance between threshold proportion and
+      initial proportion, the proportion of punishers increases and
+      then reaches a steady state (outcome <B><font color=green>c</font></B>).
+    </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the effect of benefit of cooperation vs. the cost to punishers</h1>
+
+  <img src="Smirnova19-fig2b.png" class="figure-right" height=400>
+    <P>
+      If benefit from cooperation is low, cooperation does not make
+      enough of a difference to make up for the cost to
+      punishers. The percentage of punishers decreases to 0 (outcome
+      <B>a</B>).
+    </P>
+    <P>
+      If benefit from cooperation is high and cost to punishers is
+      low, being a punisher pays off, so the proportion of punishers
+      in the population increases to nearly 100% (outcome
+      <B><font color=blue>d</font></B>).
+    </P>
+    <P>
+      If there is a good balance between benefit from cooperation and
+      cost to punishers (top right), the proportion of punishers
+      increases and then reaches a steady state
+      (outcome <B><font color=green>c</font></B>).
+    </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the effect of benefit of cooperation vs. threshold proportion
+  of punishers </h1>
+
+  <img src="Smirnova19-fig2c.png" class="figure-right" height=400>
+    <P>
+      If benefit from cooperation is low, cooperation does not make
+      enough of a difference to justify the cost to punishers. The
+      percentage of punishers decreases to 0 (outcome <B>a</B>).
+    </P>
+    <P>
+      If threshold proportion is high, few groups have enough
+      punishers to reach the threshold. If benefit from cooperation is
+      not high enough, the punishers in those groups will not make
+      enough of a difference for punishers to become better-off than
+      non-punishers. The percentage of punishers also decreases to 0
+      (outcome <B>a</B>).
+    </P>
+    <P>
+      If benefit from cooperation is relatively low and threshold
+      proportion is equal to original proportion (.1), the proportion
+      of punishers decreases from the original proportion before
+      reaching a steady state
+      (outcome <B><font color=red>b</font></B>).
+    </P>
+    <P>
+      If there is a good balance between benefit from cooperation and
+      threshold proportion, the proportion of punishers increases and
+      then reaches a steady state
+      (outcome <B><font color=green>c</font></B>).
+    </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the effect of threshold proportion of punishers vs group size</h1>
+
+  <img src="Smirnova19-fig2d.png" class="figure-right" height=400>
+    <P>
+      If threshold proportion is high and group sizes are large, most
+      groups do not reach the threshold proportion. Punishers are be
+      unable to retaliate against defectors, so having the punisher
+      gene is useless. The proportion of punishers decreases to 0
+      (outcome <B>a</B>).
+    </P>
+    <P>
+      If there is a good balance between threshold proportion and
+      number of agents per group, cost to punishers increases and then
+      reaches a steady state
+      (outcome <B><font color=green>c</font></B>).
+    </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>final vs. threshold proportion of punishers</h1>
+
+  <img src="Smirnova19-fig3.png" class="figure-right" height=400>
+    <P>
+      Previously, Boyd et al. found that the final proportion of
+      punishers reached once the simulation was in its steady state
+      depended on the threshold proportion needed for punishment to
+      occur.
+    </P>
+    <P>
+      Likewise, in this version of the simulation, a higher threshold
+      proportion resulted in a higher final proportion of
+      punishers. The final proportion tended to be slightly higher
+      than the threshold proportion.
+    </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>final proportion of punishers vs. cost to defectors</h1>
+
+  <img src="Smirnova19-fig4.png" class="figure-right" height=400>
+  <P>
+    In Boyd's version of the simulation, an agents’ choice to
+    cooperate or defect was influenced only by whether or not
+    defecting agents were punished in the previous round. The extent
+    of the punishment did not influence the decision.
+  </P>
+  <P>
+    I [Smirnova] replicated this in my version of the simulation,
+    leading to a counterintuitive result: a higher cost to defectors
+    did not lead to a higher proportion of punishers in the
+    population; rather, it led to a lower one.
+  </P>
+    
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>possible future directions: improving the mechanics of the model</h1>
+
+  <P>
+    The current implementation of reproduction in the model determines
+    the proportion of punishers and non-punishers in the next
+    generation based on the respective success of these groups in the
+    previous generation. This method of modeling reproduction was
+    chosen because it gives smoother and more consistent results than
+    modeling reproduction on an individual basis. Moreover, agents can
+    only reproduce at the end of each generational cycle. The
+    simulation could potentially be improved by modeling reproduction
+    more realistically. For instance, an agent could be required to
+    have fitness above a certain threshold in order to produce
+    offspring. Reproducing would cause the agent’s fitness to
+    decrease, and it could not reproduce again until its fitness
+    increased to the required level again.
+  </P>
+  <P>
+    Boyd's version of the simulation modeled the decision of whether
+    to defect or cooperate as independent of the cost to the
+    defectors. Thus, incurring a higher cost to defectors actually
+    harmed punishers more than non-punishers. Choosing to model the
+    probability of defecting as a function of cost to defectors would
+    allow varying this parameter to have meaningful results on the
+    outcome of the simulation.
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>possible future directions: modeling secrecy and shame</h1>
+
+  <P>
+    What role do secrecy and <B>shame</B> play in morality? One way to
+    address this question may be this: at randomly chosen times,
+    certain agents become “invisible” [compare this to the mythical
+    <a href="https://en.wikipedia.org/wiki/Ring_of_Gyges"
+    target=new>Ring of Gyges</a>], so that potential punishers cannot
+    catch them in the act. Invisible agents are aware that they cannot
+    be seen – however, because we do not always know when someone may
+    be watching, there is a small chance that they may be mistaken and
+    believe that they are invisible when, in reality, they are
+    not. The way an agent behaves when invisible (in other words, the
+    chance of cooperation vs. defection) would be a heritable trait,
+    because the model intends to show how agents can evolve to take
+    advantage of the ability to hide from society.
+  </P>
+  <P>
+    Agents who defect, either because they falsely believe that they
+    are invisible or because they took their chances, face harsh
+    repercussions from the punishers. People often respond to
+    accusations of immorality with displays of shame. This could be a
+    useful strategy for avoiding punishment. In this simulation, when
+    faced with the threat of punishment, agents have the option of
+    “retreating” in shame – not collecting any benefit from the
+    group’s cooperation in the next round. This withdrawal would have
+    a negative impact on the agents, but the impact would not be as
+    great as that of the actual punishment. Punishers would accept
+    this act of penance because retaliating against others has a
+    negative impact on their health, while accepting the shame of
+    others does not.
+    
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>possible future directions: modeling secrecy and shame (cont.)</h1>
+
+  <P>
+    Some theories view shame as a result of fear of judgement by
+    others (Scheff, 2000). However, some studies have also shown that
+    shame has an introspective component, and is experienced even when
+    there is no one around to cast judgement (Tangney, 1996). One
+    possibility for why this introspective component may have evolved
+    is that it could be a preemptive measure – if someone experiences
+    shame and its negative effects even when others do not know that
+    he has acted immorally, this may deter him from acting immorally
+    in the future and facing even harsher punishment.
+  </P>
+  <P>
+    However, it is not clear that this form of shame is beneficial
+    from an evolutionary standpoint, since choosing the immoral action
+    when no one is watching still seems to be the most successful
+    strategy. Thus, the self-directed aspect of shame remains a
+    mystery and fertile ground for future research.
+  </P>
+  <P>
+    [Indeed, the follow-up study, described in the next Unit, focuses
+    on <B>conscience</B>, which is related to shame.]
+  </P>
+
+</DIV>
+  
+<div class="footer">
+<p>Last modified: Tue Aug 18 2020 at 21:44:00 EDT</p>
+</div>
+</body>
+</html>

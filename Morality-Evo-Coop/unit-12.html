@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computing Societies — Unit 12</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2020 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 12 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computing Societies</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 12: inequality (cont.)</h2>
+  </div>
+<!--  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%> -->
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+<div  CLASS="slide">
+  <h1>inequality</h1>
+
+  <P>
+  <BR>
+    <ul>
+      <li>
+	<I>The spread of inequality</I> [Rogers, Deshpande, and Feldman, 2011].
+      </li>
+    </ul>
+  </P>
+  <P>
+    The causes of socioeconomic inequality have been debated since the
+    time of <a href="https://en.wikipedia.org/wiki/Plato"
+    target=new>Plato</a>. Many reasons for the development of
+    <B>stratification</B> have been proposed, from the need for
+    hierarchical control over large-scale irrigation systems to the
+    accumulation of small differences in wealth over time via
+    inheritance processes.  However, none of these explains how
+    unequal societies came to completely displace egalitarian cultural
+    norms over time.
+  </P>
+  <P>
+    This study models demographic consequences associated with the
+    unequal distribution of resources in stratified
+    societies. Agent-based simulation results show that in constant
+    environments, unequal access to resources can be demographically
+    destabilizing, resulting in the outward migration and spread of
+    such societies even when population size is relatively small. In
+    variable environments, stratified societies spread more and are
+    also better able to survive resource shortages by sequestering
+    mortality in the lower classes.
+  </P>
+  <P>
+    The predictions of our simulation have modest support from a range
+    of existing empirical studies. In short, the fact that stratified
+    societies today vastly outnumber egalitarian societies may not be
+    due to the transformation of egalitarian norms and structures, but
+    may instead reflect the more rapid migration of stratified
+    societies and consequent conquest or displacement of egalitarian
+    societies over time.
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>introduction and motivation of the study</h1>
+
+  <P>
+    Early foraging societies enforced social and economic leveling to
+    prevent any individual or group from acquiring more status,
+    authority, or resources than others. A central adaptation of human
+    evolution may have been the
+    <a href="https://www.journals.uchicago.edu/doi/10.1086/204166"
+    target=new>suppression of older dominance instincts</a> through
+    egalitarian cultural norms. Early societies were less complex and
+    more equal than societies arising over the past 10,000 years. How
+    did stratified societies with institutionalized inequality become
+    dominant during the
+    <a href="https://en.wikipedia.org/wiki/Neolithic"
+    target=new>Neolithic period</a>?
+  </P>
+  <P>
+    Some of the explanations offered:
+    <ul>
+      <li>
+	Population growth led to the need for
+	agriculture, which generated surplus and required managers and
+	other specialized roles, leading to various classes.
+      </li>
+      <li>
+	Resource depletion necessitated further expansion, conflict
+	and conquest, which resulted in greater hierarchy.
+      </li>
+      <li>
+	Natural tendencies toward selfishness and dominance
+	may impart individual selective advantage.
+      </li>
+      <li>
+	Socioeconomic stratification promotes cooperation or confers
+	economic and organizational efficiencies that enable societies
+	to cope with new technologies, larger populations, competition
+	and conflict.
+      </li>
+      <li>
+	Patchy landscapes, private property and inheritance mechanisms
+	lead to the accumulation of small differences in wealth over
+	time.
+      </li>
+    </ul>
+  <P>
+    None of these explain the dynamics of the process by which unequal
+    societies displaced more egalitarian societies.
+  </P>
+    
+</DIV>    
+    
+
+
+<div  CLASS="slide">
+  <h1>demic diffusion as a possible explanation</h1>
+
+  <P>
+    Why did early <a href="https://en.wikipedia.org/wiki/Pastoralism"
+    target=new>pastoralists</a> and agriculturalists relinquish a
+    communal approach to property and cease to enforce the leveling
+    mechanisms that had previously prevented individual differences
+    and stochastic economic shocks from resulting in permanent
+    inequalities?
+  </P>
+  <P>
+    Empirical data on cultural transmission indicate that norms,
+    values, social structures and other foundational features of
+    culture tend to be transmitted conservatively and vertically
+    within groups. Such communally-held traits are not likely to be
+    altered by individual choices or by transmission from group to
+    group. However, they may instead spread through demic [population]
+    <a href="https://en.wikipedia.org/wiki/Diffusion"
+    target=new>diffusion</a>; i.e. population growth or migration of
+    the groups carrying the culture.
+  </P>
+  <P>
+    We hypothesize, therefore, that the spread of socioeconomic
+    stratification may have been a result of cultural change via demic
+    diffusion. In other words, socioeconomic stratification may have
+    spread across the globe over the past several thousand years, not
+    because it provided apparent advantages that led to its adoption
+    by egalitarian cultures, but because it altered demographic
+    outcomes in ways that produced an increase in frequency of
+    stratified populations, through population expansion or the
+    outward migration of populations in search of additional territory
+    and resources.
+  </P>
+  <P>
+    To explore this hypothesis, we developed an explicit quantitative
+    demographic model of the process, ran various agent-based
+    simulation trials, developed predictions based on model results,
+    and tested some of these using available data.
+  </P>
+
+</DIV>
+
+
+  
+<div  CLASS="slide">
+  <h1>egalitarian and stratified populations, constant environment, baseline parameter values</h1>
+
+  <img src="Rogers11-fig1.png" class="figure-right" height=550>
+    <P>
+      Egalitarian populations (A) are able to stabilize, although no
+      logistic or density-dependent growth function was used, while
+      stratified populations (B, C, D) cannot stabilize because upper
+      classes continue to thrive even as resources are being depleted.
+    </P>
+    <P>
+      <small>
+	This is an unexpected outcome in a complex system.  Reaching
+	this balance appears to depend on the stochastically
+	determined magnitude of the rebound following a population
+	crash.  Stratified populations were never able to stabilize
+	because the upper classes continued to thrive even as
+	resources were being depleted and the population was headed
+	for trouble. In other words, stratification disrupted
+	stabilizing feedback in the system. However, stratified
+	populations did not cause more resource depletion, as
+	originally predicted on the basis of excess resource
+	consumption by upper classes. Instead, stratified populations
+	in our simulation depleted the resource base significantly
+	less because high mortality rates in lower classes kept the
+	total population relatively low compared to carrying capacity.
+      </small>
+    </P>
+   
+</DIV>    
+    
+
+
+<div  CLASS="slide">
+  <h1>egalitarian and stratified populations in constant and variable environments, with and without storage of surplus</h1>
+
+  <img src="Rogers11-fig2.png" class="figure-right" height=600>
+    <P>
+      [Black bars: no storage; white bars: storage.]  Egalitarians
+      have larger, more stable populations in constant environments
+      (A, C); storage causes them to overshoot carrying capacity and
+      go extinct (E). In variable environments, egalitarian
+      populations are unstable and go extinct (B, D, F). Stratified
+      groups have smaller, less stable populations in constant
+      environments (A, C), and are more likely to go extinct (E). In
+      variable environments, stratified populations are protected
+      against extinctions because mortality is sequestered in the
+      lower classes; storage gives further protection (B, D, F).
+    </P>
+    <P>
+      <small>
+	Stratified groups have a lower mean population size than
+	egalitarians, both because the upper classes reduce the
+	carrying capacity by taking extra resources, and because lower
+	classes suffer high mortality. Resource storage raises the
+	population size slightly for stratified groups but not for
+	egalitarians.  In constant environments, egalitarians have no
+	extinctions without storage, but storage causes them to
+	overshoot carrying capacity by a greater amount, leading to
+	extinctions. In variable environments, egalitarians have very
+	unstable populations and go extinct rapidly; storage does not
+	afford them protection. Stratification protects populations
+	against environmental variation because mortality in bad years
+	is sequestered in the lower classes, allowing upper classes to
+	survive, while in egalitarian societies the entire population
+	is at risk.
+      </small>
+    </P>
+   
+</DIV>    
+    
+
+
+<div  CLASS="slide">
+  <h1>representative migration competition OUTCOMES in constant and variable environments</h1>
+
+  <img src="Rogers11-fig3.png" class="figure-right" height=600>
+    <P>
+      [Solid lines: number of sites held by stratified societies;
+      dotted lines: number of sites held by egalitarian societies.]
+      <BR>
+	— <B>(A, C)</B>: rate of occupying sites
+	during the ‘‘frontier phase’’ when uninhabited sites are still
+	available.
+	<BR>
+	  — <B>(B, D)</B>: what
+      happens after all sites are occupied (‘‘carrying capacity
+      phase’’), and thus expansion can only take place when a site
+	  opens up because another population goes extinct.
+	</P>
+	<P>
+	  <small>
+	    In these plots, population decline triggers migration;
+	    results for the other two migration triggers (resource
+	    deprivation threshold for individuals, and resource
+	    depletion threshold for sites) are similar. Stratified
+	    societies always migrate outward more frequently, and thus
+	    take over quickly (A, C). Over the long term, in
+	    comparison with egalitarian societies they experience a
+	    higher rate of group extinctions in constant environments
+	    (B), and a lower rate in variable environments (D).
+	  </small>
+	</P>
+   
+</DIV>    
+    
+
+
+<div  CLASS="slide">
+  <h1>discussion</h1>
+
+  <P>
+    These simulation results support the hypothesis that
+    socioeconomic stratification may have spread due to its effects
+    on the demography of small groups—i.e. by demic diffusion—rather
+    than cultural adoption.
+  </P>
+  <P>
+    The demic diffusion shown in our model is based not on population
+    expansion but rather on migration due to population
+    instability. If demic diffusion were simply a function of
+    population growth, then in constant environments egalitarians
+    would take over sites available for colonization much more
+    rapidly. In our demographic simulation, however, three different
+    plausible migration triggers all lead stratified groups to take
+    over unoccupied sites faster.
+  </P>
+  <P>
+    In <B>constant environments</B>, inequalities in resource
+    allocation appear to disrupt the feedback between population
+    growth and resource depletion, preventing stratified groups from
+    achieving an equilibrium size and driving them to migrate more
+    despite their smaller populations.
+  </P>
+  <P>
+    In <B>variable environments</B>, stratified groups migrate more
+    and are less likely to go extinct than egalitarian groups. While
+    rapid migration and protection against extinction in variable
+    environments may be viewed as an adaptive advantage of
+    stratification, it is more probably a result of individual
+    selection, as certain individuals survive at the expense of
+    resource deprivation and mortality for others.
+  </P>
+  <P>
+    Structure or stratification of populations have been identified as
+    important keys to game theoretic models on the evolution of
+    cooperation. In a spatial network-based
+    <a href="https://en.wikipedia.org/wiki/Prisoner%27s_dilemma"
+    target=new>Prisoner’s Dilemma game</a>, inequality (the presence
+    of high-ranking cooperative individuals) counterintuitively
+    promoted the evolution of cooperation by providing successful
+    nodes around which other cooperators could cluster.
+  </P>
+   
+</DIV>    
+    
+
+
+<div  CLASS="slide">
+  <h1>discussion (cont.): empirical evidence</h1>
+
+  <P>
+    There is evidence for higher migration rates from countries with
+    greater inequality.  After controlling for a country’s wealth (GNP
+    per capita) and unemployment rate, Liebig and Sousa-Poza (2004)
+    found a strong and significant relationship between income
+    inequality
+    (<a href="https://en.wikipedia.org/wiki/Gini_coefficient"
+    target=new>Gini coefficient</a> and other income disparity
+    measures) and propensity to emigrate out of 23 countries (survey
+    of 28,000 individuals).  Stark (2006) developed a model to explain
+    these results, showing that if total income is held constant,
+    total relative deprivation, and thus, according to his model,
+    desire to emigrate, is positively related to income inequality
+    (Gini coefficient).
+  </P>
+  <P>
+    In our simulation, upper classes co-opt a disproportionate share
+    of resources, leaving lower classes to bear the brunt of any
+    mortality caused by resource shortages. Empirical studies suggest
+    that this may actually occur. Historical data on changes in
+    mortality as prices and production of food fluctuated from year to
+    year across Europe and in China showed that in response to a 4– 6%
+    average consumption decline, the increase in mortality ranged from
+    less than 0% (i.e. mortality actually decreased) to over 15%,
+    depending on gender, age group, and socioeconomic class.
+  </P>
+  <P>
+    Case histories from the archeological literature on the spread of
+    stratified societies constitute a rich source of relevant
+    observations.  As a test of the explanatory powers of our model,
+    we summarized 15 such studies without regard to their implications
+    for our predictions. We noted whether the following indicators,
+    predicted by our model, were observed in conjunction with the rise
+    of stratified societies: unequal allocation of resources,
+    population instability, migration, conflict, storage of surplus,
+    variable environments, and increased frequency of stratified
+    societies through their spread rather than through internal
+    development.  The results of this analysis (see
+    <a href="https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0024683.s001&type=supplementary"
+    target=new>Supporting Information S1</a>) provide modest support
+    for our model.
+  </P>
+
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>conclusions</h1>
+
+  <P>
+    Our hypothesis fits available data relatively well, and should be
+    tested with additional empirical data, both contemporary and
+    ethnographic. This is not simply an academic exercise.
+    Socioeconomic inequality may:
+    <ul>
+      <li>
+	promote conflict within and between ethnic groups, classes and
+	societies;
+      </li>
+      <li>
+	drive international immigration;
+      </li>
+      <li>
+	raise prevalence of poor health and mental illness;
+      </li>
+      <li>
+	increase crime, violence, and other societal ills;
+      </li>
+      <li>
+	reduce cultural diversity through disempowerment
+	of local minority communities;
+      </li>
+      <li>
+	 harm working relationships
+	 within businesses;
+      </li>
+      <li>
+	inhibit economic growth in developing countries;
+      </li>
+      <li>
+	reduce sustainability;
+      </li>
+      <li>
+	promote corruption;
+      </li>
+      <li>
+	play a role in destabilizing economies;
+      </li>
+      <li>
+	<B>erode trust and blocks cooperative solutions to
+	urgent social, economic and political problems.</B>
+      </li>
+    </ul>
+    Understanding the causes and consequences of inequality is clearly
+    one of the central challenges of the social sciences.
+  </P>
+  <P>
+    Further research on this critical topic will attempt to
+    identify behavioral traits that tend to increase in frequency in
+    unequal societies, as well as leverage points for shifting
+    societies towards greater stability and social sustainability.
+  </P>
+   
+</DIV>    
+    
+
+
+  
+<div class="footer">
+<p>Last modified: Mon Aug 3 2020 at 22:24:07 EDT</p>
+</div>
+</body>
+</html>

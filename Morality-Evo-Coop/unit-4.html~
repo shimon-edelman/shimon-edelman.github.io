@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computing Societies — Unit 4</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2020 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 4 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computing Societies</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 4: A view from sociology</h2>
+  </div>
+<!--  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%> -->
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+<div  CLASS="slide">
+  <h1>From factors to actors: computational sociology and agent-based modeling [Macy & Willer, 2002]</h1>
+
+  <P>
+    <BR>
+      Sociologists often model social processes as
+      <a href="https://en.wikipedia.org/wiki/Interaction_(statistics)"
+	 target=new>interactions among variables</a>.  We review an
+      alternative approach that models social life as interactions among
+      adaptive agents who influence one another in response to the
+      influence they receive.
+    </P>
+  <P>
+    These agent-based models (ABMs) show how simple and predictable
+    local interactions can generate familiar but enigmatic global
+    patterns, such as the diffusion of information, emergence of
+    norms, coordination of conventions, or participation in collective
+    action.  <a href="https://www.quantamagazine.org/emergence-how-complex-wholes-emerge-from-simple-parts-20181220/"
+    target=new>Emergent</a> social patterns can also appear
+    unexpectedly and then just as dramatically transform or disappear,
+    as happens in revolutions, market crashes,
+    <a href="https://en.wiktionary.org/wiki/fad#Noun"
+    target=new>fads</a>, and
+    <a href="https://en.wikipedia.org/wiki/Feeding_frenzy"
+       target=new>feeding frenzies</a>.
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>motivation: the flocking of geese</h1>
+
+  <table>
+    <tr>
+      <td>
+	Consider a flock of
+	<a href="https://en.wikipedia.org/wiki/Goose"
+	target=new>geese</a> flying in tight formation. Collectively
+	they form the image of a giant delta-shaped bird that moves as
+	purposively as if it were a single organism. Yet the flock has
+	no "group mind" nor is there a "leader bird" choreographing
+	the formation. Rather, each bird reacts to the movement of its
+	immediate neighbors who in turn react to it. The result is the
+	graceful dancelike movement of the flock whose hypnotic rhythm
+	is clearly patterned yet also
+	highly <a href="https://en.wikipedia.org/wiki/Nonlinear_system"
+	target=new>nonlinear</a>.
+      </td>
+      <td>
+	<video src="Bird Flocks Collide While Flying.mp4" height=450 controls="controls">>
+	</video>
+      </td>
+    </tr>
+  </table>
+    
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>boids</h1>
+
+  <P>
+  If we tried to model the elegance of the flock at the
+  global<sup>*</sup> level, the effort would be misleading because the
+  flock is not governed by a system-wide program.  Moreover, the task
+  would be immensely difficult because of the extreme complexity of a
+  nonlinear system. Yet the task turns out to be remarkably easy if
+  instead we model the flock as the aggregation of local interactions.
+  <P>
+    This was demonstrated by
+    <a href="https://en.wikipedia.org/wiki/Craig_Reynolds_(computer_graphics)"
+    target=new>Craig Reynolds</a> (1987) when he modeled the
+    movement of a population of artificial
+    <a href="https://en.wikipedia.org/wiki/Boids"
+    target=new>"boids"</a> based on three simple rules:
+    <ul>
+      <li><I>Separation:</I> Don’t get too close to any object,
+	including other boids.
+      </li>
+      <li>
+	<I>Alignment:</I> Try to match the speed and direction of
+	nearby boids.
+      </li>
+      <li>
+	<I>Cohesion:</I> Head for the perceived center of mass of the
+	boids in your immediate neighborhood.
+      </li>
+    </ul>
+  <P>
+    Had Reynolds chosen instead to write a top-down program for the
+    global behavior of the flock, he might still be working on it.
+  <P>
+    Note that Reynolds did not model the flock, nor did he model
+    isolated birds. He modeled their <I>interaction</I>, at the
+    relational level.
+
+<hr align=left width=30%>
+<sup>*</sup>
+<small>
+  "Global" refers to population-level dynamics that
+  determine the macro behavior of the flock, while "local" refers to
+  micro processes at the level of individuals interacting with
+  neighbors. 
+</small>
+
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>ABMs and sociology</h1>
+
+  <P>
+  <BR>
+    Agent-based models (ABMs) of human social interaction are based on
+    this same theory-building strategy. Sociologists have
+    traditionally understood social life as a
+    <a href="https://en.wikipedia.org/wiki/Hierarchy"
+    target=new>hierarchical</a> system of institutions and norms that
+    shape individual behavior from the top down. Interest in ABMs
+    reflects growing interest in the possibility that human groups,
+    like flocks of birds, may be highly complex, nonlinear,
+    path-dependent, and
+    <a href="https://en.wikipedia.org/wiki/Self-organization"
+    target=new>self-organizing</a>. We may be able to understand these
+    dynamics much better by trying to model them, not at the global
+    level but instead
+    as <a href="https://www.quantamagazine.org/emergence-how-complex-wholes-emerge-from-simple-parts-20181220/"
+    target=new>emergent</a> properties of local interaction among
+    adaptive agents who influence one another in response to the
+    influence they receive.
+  </P>
+  <P>
+    Although sociology has lagged behind other social sciences in
+    appreciating this new methodology, a distinctive sociological
+    contribution is evident in the papers we review. <I>First</I>,
+    theoretical interest focuses on dynamic social networks that shape
+    and are shaped by agent interaction. <I>Second</I>, ABMs are used
+    to perform virtual experiments that test macrosociological
+    theories by manipulating structural factors such as network
+    topology, social stratification, or spatial mobility.
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>ABM simulation in sociology</h1>
+
+  <P>
+  <BR>
+  The third wave in social simulation, agent-based modeling, coincided
+  with the advent of the personal computer in the 1980s. Like
+  microsimulation, these bottom-up models explored the
+  microfoundations of global patterns. The difference is that, unlike
+  the socially isolated actors in microanalytical simulation, the
+  agents now interact interdependently.
+  <P>
+    ABMs impose four key assumptions:
+    <ol>
+      <li>
+	<I>Agents are autonomous.</I>  Systemic patterns emerge from
+	the bottom up, coordinated not by centralized authorities or
+	institutions (although these may exist as environmental
+	constraints) but by local interactions among autonomous
+	decision-makers.  This process is known as
+	<a href="https://en.wikipedia.org/wiki/Self-organization"
+	   target=new>"self-organization"</a>.
+      </li>
+      <li>
+	<I>Agents are interdependent.</I> Interdependence may involve
+	processes like persuasion, sanctioning, and imitation, in
+	which agents influence others in response to the influence
+	that they receive. Interdependence may also be indirect, as
+	when agents&rsquo; behaviors change some aspect of the
+	environment, which in turn affects the behavior of other
+	agents, such that the consequences of each agent&rsquo;s
+	decisions depend in part on the choices of others.
+      </li>
+    </ol>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>ABM simulation in sociology (cont.)</h1>
+
+  <P>
+  <BR>
+  <ol start=3>
+    <li>
+      <I>Agents follow simple rules.</I> Global complexity does not
+      necessarily reflect the cognitive complexity of
+      individuals. Although the rules [that guide individual behavior]
+      may be quite simple, they can produce global patterns that may
+      not be at all obvious and are very difficult to understand (like
+      Reynolds&rsquo; "boids"). ABMs explore the simplest set of
+      behavioral assumptions required to generate a macro pattern of
+      explanatory interest.
+    </li>
+    <li>
+      <I>Agents are adaptive and backward-looking.</I> When
+      interdependent agents are also adaptive, their interaction can
+      generate a
+      <a href="https://en.wikipedia.org/wiki/Complex_adaptive_system"
+      target=new>"complex adaptive system"</a>. Agents adapt by
+      moving, imitating, replicating, or learning, but not by
+      calculating the most efficient action. They can adapt at two
+      levels, the individual and the population.  Individuals learn
+      through processes
+      like <a href="https://en.wikipedia.org/wiki/Reinforcement_learning"
+      target=new>reinforcement</a>,
+      <a href="https://en.wikipedia.org/wiki/Bayesian_optimization"
+      target=new>Bayesian updating</a>, or the
+      <a href="https://en.wikipedia.org/wiki/Backpropagation"
+      target=new>back-propagation of error</a> in artificial neural
+      networks. Learning alters the probability distribution of
+      behaviors competing for attention within each individual.
+      Populations learn through evolutionary processes of selection,
+      imitation, and social influence. Evolution alters the frequency
+      distribution of agent-types competing for reproduction within a
+      population.
+    </li>
+  </ol>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>from prediction to explanation</h1>
+
+  <P>
+  <BR>
+  Unlike earlier approaches to computer simulation, whose value
+  depends largely on predictive accuracy, agent-based models are much
+  more concerned with theoretical development and <I>explanation</I>
+  than with prediction.
+  <P>
+  The power of emergence:
+  <DIR><DIR> 
+      The macrosocial outcome is also more than the sum of its
+      parts. This concept, known as emergence, was anticipated by
+      <a href="https://en.wikipedia.org/wiki/%C3%89mile_Durkheim"
+      target=new>Durkheim</a> (1901): "The hardness of
+      <a href="https://en.wikipedia.org/wiki/Bronze"
+      target=new>bronze</a> lies neither in the
+      <a href="https://en.wikipedia.org/wiki/Copper"
+      target=new>copper</a>, nor the
+      <a href="https://en.wikipedia.org/wiki/Tin" target=new>tin</a>,
+      nor in the <a href="https://en.wikipedia.org/wiki/Lead"
+      target=new>lead</a> which have been used to form it, which are
+      all soft or malleable bodies. The hardness arises from the
+      mixing of them".
+      <P>
+	"[Social] facts reside in the society itself that produces
+	them and not in its parts — namely, its members."
+    </DIR></DIR>
+    <P>
+      Without a model of the microfoundations of emergent properties,
+      path-dependent self-organizing processes (such as informal
+      social control) are likely to be mistaken for institutions that
+      are globally coordinated (such as bureaucratic controls in
+      formal organizations). 
+    <P>
+      ABMs defy classification as either micro or macro but instead
+      provide a theoretical bridge between levels.
+
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>two complementary phenomena</h1>
+
+  <P>
+  <BR>
+    <B>Emergent structure.</B> In these models, agents and
+    agent-behaviors move through social and physical space in response
+    to social influences and selection pressures. Agents may start out
+    undifferentiated and then change location or behavior so as to
+    avoid becoming different or isolated (or in some cases,
+    overcrowded). Rather than producing homogeneity, however, these
+    <a href="https://en.wikipedia.org/wiki/Conformity"
+    target=new>conformist</a> decisions may aggregate to produce
+    global patterns of
+    <I>cultural differentiation</I>, <I>stratification</I>, and
+    <I>homophilous clustering</I> in social networks.  Other studies
+    reverse the process, starting with a heterogeneous population and
+    ending in convergence: the coordination, diffusion, and sudden
+    collapse of norms, institutions, beliefs, innovations, standards,
+    etc.
+    <P>
+    <B>Emergent social order.</B> These studies show how egoistic
+    adaptation can lead to successful collective action without either
+    <a href="https://en.wikipedia.org/wiki/Altruism"
+    target=new>altruism</a> or global (top-down) imposition of
+    control. A key finding across numerous studies is that the
+    viability of trust, cooperation, and collective action depends
+    decisively on the social embeddedness of interaction.
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>ABM design questions</h1>
+
+  <ol>
+    <li>Is interaction global or local, that is, is the population
+      fully connected or is interaction constrained by the structure
+      of social ties?</li>
+    <li>If interaction is local, are the constraints on tie
+      formation spatial or social?</li> 
+    <li>Are ties elective (formed and broken through movement, exit,
+      or assortative mating) or is interaction forced?  </li>
+    <li>Is adaptation based on learning (which modifies the
+      probability distribution of behaviors in each agent&rsquo;s
+      repertoire) or evolution (which modifies the frequency
+      distribution of behaviors across the population of agents)?</li>
+    <li>If evolution, does reproduction involve
+      competition for survival or social influence?</li>
+    <li>If influence, is this limited to external states of the agent
+      (e.g., behavior) or do agents copy other agents&rsquo; internal
+      programming, even though this cannot be directly observed?</li>
+    <li>Is influence based on attainment (success, fitness, payoffs,
+      status) or familiarity (proximity, frequency)?</li>
+    <li>Is the model used as an experiment (parameters are
+      manipulated to test for predicted differences) or a
+      demonstration (parameters are manipulated to test for
+      predicted robustness)? </li>
+    <li>If used experimentally, are the manipulations mainly of
+      agent-level parameters (to test a micro theory about the
+      global implications of behavioral assumptions) or system-level
+      parameters (to test a macro theory about the dynamical
+      implications of environmental assumptions)?
+    </li>
+  </ol>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>social influence and the paradox of mimetic divergence</h1>
+
+      Two examples of unexpected results:
+      <ul>
+	<li>
+	  Latane’s (1996) Social Impact Model uses a rule to mimic
+	  one’s neighbors in a two-dimensional lattice. From a random
+	  start, a population of mimics might be expected to converge
+	  inexorably on a single profile, leading to the conclusion
+	  that cultural diversity is imposed by factors that
+	  counteract the effects of
+	  <a href="https://en.wikipedia.org/wiki/Conformity"
+	  target=new>conformist</a> tendencies. However,
+	  the <I>surprising result</I> was that "the system achieved
+	  stable diversity. The minority was able to survive, contrary
+	  to the belief that social influence inexorably leads to
+	  uniformity."
+	</li>
+	<li>
+	  Carley’s (1991) and Axelrod’s (1997) models couple local
+	  influence (the tendency for people who interact frequently
+	  to become more similar over time) and homophily (the
+	  tendency to interact more frequently with similar
+	  agents). This closes the loop — the more agents interact,
+	  the more similar they become, and the more similar they
+	  become, the more likely they are to interact. More
+	  precisely, neighboring agents on a two-dimensional lattice
+	  interact with a likelihood determined by the similarity of
+	  their cultural traits (given by a simple, randomly assigned
+	  string of numbers). Interaction, in turn, reduces remaining
+	  differences. Axelrod expected this self-reinforcing dynamic
+	  would lead inexorably to cultural convergence and
+	  homogeneity. Again <I>the result was surprising</I>. He
+	  found that "local convergence can lead to global
+	  polarization" and that unique subcultures can survive in the
+	  face of a seemingly relentless march toward cultural
+	  conformity. Stable minority subcultures persist because of
+	  the protection of structural holes created by cultural
+	  differences that preclude interaction, thereby insulating
+	  agents from homogenizing tendencies.
+	</li>
+      </ul>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>social pressure</h1>
+
+  <P>
+    <BR>
+      More surprises:
+      <ul>
+	<li>
+	  Kim & Bearman (1997) model collective action among agents
+	  whose interest in the public good is heavily influenced by
+	  social pressure from other participants in their local
+	  network. This causes interest in the collective action to
+	  spread like a contagion through network channels.  The
+	  authors find that participation spreads most effectively
+	  within densely clustered subnetworks comprising a critical
+	  mass of highly interested primary contributors.
+	  <P>
+	    This study reflects the conventional wisdom that social
+	    pressure to participate is needed to overcome the
+	    temptation to free ride. It follows that dependence on the
+	    group for social direction promotes compliance with group
+	    obligations. Yet a number of
+	    <a href="https://en.wikipedia.org/wiki/Ethnography"
+	    target=new>ethnographic</a> studies of deviant cliques
+	    have shown that conformist pressures can also undermine
+	    <a href="https://en.wikipedia.org/wiki/Normative"
+	    target=new>normative</a> compliance, leading to badly
+	    suboptimal outcomes for all group members, including the
+	    deviants. This led Flache & Macy (1996) to investigate the
+	    possibility that <I>dependence on peer approval can
+	    backfire</I>, leading to collective action failure rather
+	    than success.
+	  </li>
+	</ul>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>in conclusion: some methodological recommendations</h1>
+
+  <ol>
+    <li>
+      <I>Start it simple.</I> Analysis of very simple and unrealistic
+      models can reveal new theoretical ideas that have broad
+      applicability, beyond the stylized models that produced
+      them. Pressure to make models more realistic (and agents more
+      cognitively sophisticated) is misguided if models become so
+      complex that they are as difficult to interpret as natural
+      phenomena. ... Models should start out simple and complications
+      should be added one at a time, making sure that the dynamics are
+      fully understood before proceeding.
+    </li>
+    <li>
+      <I>Avoid reliance on biological metaphors.</I> Is cultural
+      evolution the same as genetic? What is the mechanism that
+      eliminates poor performers from the population and allows others
+      to propagate?  Imitation of the fittest may be more applicable
+      than starvation and reproduction, but unlike survival of the
+      fittest, mimetic selection replicates only observed behavior and
+      does not copy the underlying (unobservable) rules. Biological
+      metaphors paper over the importance of this distinction. For
+      example, in repeated
+      <a href="https://en.wikipedia.org/wiki/Prisoner%27s_dilemma"
+      target=new>Prisoner’s Dilemma</a> games, it is plausible that an
+      agent observes and then copies the cooperative behavior of
+      successful neighbors, but how does the agent know that this
+      behavior is based on a rule (or supergame strategy) like
+      <a href="https://en.wikipedia.org/wiki/Tit_for_tat"
+      target=new>Tit for Tat</a> and not
+      <a href="https://en.wikipedia.org/wiki/Win%E2%80%93stay,_lose%E2%80%93switch"
+      target=new>Win-Stay, Lose-Shift</a> or Always Cooperate that
+      generate identical behavior with cooperative partners?
+    </li>
+  </ol>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>in conclusion: some methodological recommendations (cont.)</h1>
+
+  <ol start=3>
+    <li>
+      <I>Experiment, don’t just explore.</I> Agent-based modeling is
+      an experimental tool for theoretical research. While important
+      discoveries can be made by open-ended exploration of theoretical
+      possibilities, researchers need to resist the temptation to
+      become freewheeling adventurers in artificial worlds.  Careful,
+      systematic mapping of a parameter space may be less engaging,
+      but it makes for better science. This requires theoretically
+      motivated manipulation of parameters, based on careful review of
+      current theoretical and empirical knowledge, and a clear
+      statement of the hypotheses that guided the experimental design.
+    </li>
+    <li>
+      <I>Test robustness.</I> Although simulation designs should use
+      experimental rather than post-hoc statistical controls to
+      identify underlying causal processes, that does not mean
+      researchers should avoid statistical analysis of the results.
+      On the contrary, ABMs, especially those that include stochastic
+      algorithms, require replications that demonstrate the stability
+      of the results. Where possible, replications should include
+      variation in parameters that are theoretically arbitrary or of
+      secondary interest. Authors then need to be careful to
+      distinguish between experimental manipulations (where results
+      are expected to change with the parameters) and robustness tests
+      (where they are not).  
+    </li>
+    <li>
+      <I>Test external validity.</I> Virtual experiments test the
+      <a href="https://en.wikipedia.org/wiki/Internal_validity"
+      target=new>internal validity</a> of a theory, without which
+      there is no need to test the
+      <a href="https://en.wikipedia.org/wiki/External_validity"
+      target=new>external validity</a>. However, this does not mean
+      there is never such a need. ABMs are often used to grow familiar
+      macrosocial patterns, as a way to identify possible causal
+      mechanisms. When this succeeds, researchers need to think about
+      ways these mechanisms can be operationalized and tested in
+      laboratory or natural conditions.
+    </li>
+  </ol>
+
+</DIV
+
+
+<div  CLASS="slide">
+  <h1>in conclusion: some methodological recommendations (cont.)</h1>
+
+  <ol start=6>
+    <li>
+      <I>Test domain validity.</I> Do two different models of the same
+      phenomenon produce the same results? If they do not, find out
+      why. Identify the assumptions that are the logical source of
+      divergent implications by carefully aligning the
+      models. 
+    </li>
+    <li>
+      <I>Bring factors back in.</I> The bottom-up approach in ABMs
+      might seem to imply that these models can only be used to test
+      microsociological theories.  That is a tragic misunderstanding
+      because it precludes what is most exciting to sociologists about
+      this methodology. An artificial world populated by computational
+      agents is a laboratory in which researchers can manipulate
+      structural conditions to test macrosociological theories without
+      <a href="https://en.wiktionary.org/wiki/reification"
+      target=new>reifying</a> causal factors at the macro
+      level. Contrary to the
+      <a href="https://en.wiktionary.org/wiki/holistic"
+      target=new>holistic</a>
+      <a href="https://en.wiktionary.org/wiki/epistemology"
+      target=new>epistemology</a> of an earlier generation of
+      equation-based simulations, changes in population density or
+      network structure, for example, do not directly lead to the
+      diffusion of innovations. The causal process is effected through
+      individual choices.  Computational experiments in virtual worlds
+      provide a rigorous methodology for studying the microfoundations
+      of macro dynamics. However, the shift from factors to actors
+      should not limit experimenters to manipulation of agent
+      attributes (such as cognitive or behavioral
+      assumptions). Bringing factors back in as experimental
+      manipulations will realize the full potential of agent-based
+      modeling, especially in sociology.
+    </li>
+  </ol>
+  
+</DIV>
+
+
+
+<div class="footer">
+<p>Last modified: Wed Jul 8 2020 at 12:55:36 EDT</p>
+</div>
+</body>
+</html>

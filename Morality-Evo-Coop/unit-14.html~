@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computing Societies — Unit 14</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2020 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 14 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computing Societies</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 14: case study: happiness</h2>
+  </div>
+<!--  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%> -->
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+<div  CLASS="slide">
+  <h1>case study: happiness</h1>
+
+  <P>
+    <ul>
+      <li>
+	<I>Between pleasure and contentment: evolutionary dynamics
+	  of some possible parameters of happiness</I> [Gao and
+	Edelman, 2016a].
+      </li>
+      <li>
+	[OPTIONAL background reading]
+	  <a href="https://www.amazon.com/Happiness-Pursuit-Neuroscience-Teach-About/dp/0465022243/ref=ntt_at_ep_dpi_1" target=new><I>The
+	  happiness of
+	  pursuit</I></a> [Edelman, 2012].
+      </li>
+    </ul>
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1><I>Between Pleasure and Contentment: Evolutionary Dynamics of Some Possible Parameters of Happiness</I> [Gao & Edelman, 2016]</h1>
+
+  <P>
+    We offer and test a simple operationalization of
+    <a href="https://en.wikipedia.org/wiki/Hedonism"
+       target=new>hedonic</a> and
+    <a href="https://en.wikipedia.org/wiki/Eudaimonia"
+       target=new>eudaimonic</a> well-being (“happiness”) as mediating
+       variables that link outcomes to
+    <a href="https://en.wikipedia.org/wiki/Motivation"
+       target=new>motivation</a>. In six evolutionary agent-based
+    simulation experiments, we compared the relative performance of
+    agents endowed with different combinations of happiness-related
+    traits (parameter values), under four types of environmental
+    conditions.
+  </P>
+  <P>
+    We found that:
+    <ol type=i>
+      <li>
+	the effects of attaching more weight to longer-term than to
+	momentary happiness and of extending the memory for past
+	happiness are both stronger in an environment where food is
+	scarce;
+      </li>
+      <li>
+	 in such an environment
+	"<a hre="https://en.wikipedia.org/wiki/Relative_income_hypothesis"
+	target=new>relative consumption</a>," in which the agent’s
+	well-being is negatively affected by that of its neighbors, is
+	more detrimental to survival when food is scarce; and
+      </li>
+      <li>
+	 having a positive outlook, under which agents’ longer-term
+	happiness is increased by positive events more than it is
+	decreased by negative ones, is generally advantageous.
+      </li>
+    </ol>
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>assumptions</h1>
+
+  <P>
+  <BR>
+    <ol>
+      <li>
+	Subjectivity, including
+	<a href="https://en.wikipedia.org/wiki/Consciousness"
+	target=new><I>phenomenal awareness</I></a>, evolves to serve
+	as an effective tool for connecting <I>action outcomes</I>
+	to <a href="https://en.wikipedia.org/wiki/Motivation"
+	target=new><I>motivation</I></a>.
+      </li>
+      <li>
+	Subjective
+	<a href="https://en.wikipedia.org/wiki/Value_theory"
+	target=new><I>valuation</I></a> and the affective states
+	or <a href="https://en.wikipedia.org/wiki/Emotion"
+	target=new><I>emotions</I></a> that mediate it,
+	including <I>happiness</I>, serve as a key pressure point
+	through which <I>evolution</I> acts on the mind.
+      </li>
+      <li>
+	Emotions are information channels whereby phenomenal states
+	and valuation processes motivate decisions, <I>regulate
+	behavior</I>, and fine-tune learning. As such, emotions
+	pervade all of cognition.
+      </li>
+      <li>
+	There exist <I>heritable individual differences</I> in the
+	contributions of cognitive, motivational, and affective states
+	and processes to well-being.
+      </li>
+      <li>
+	Happiness-related traits affect the
+	evolutionary
+	<a href="https://en.wikipedia.org/wiki/Fitness_(biology)"
+	target=new><I>fitness</I></a> of their carriers, in ways that
+	depend on physical and social circumstances.
+      </li>
+    </ol>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the factorization of happiness</h1>
+
+  <P>
+  A distinction is commonly drawn between two major components of
+  happiness, operationalized as subjective well-being: the hedonic
+  component, estimated through responses to questions such as “How
+  happy are you right now?”, and the eudaimonic component, based on
+  responses to questions such as “How happy are you with your life in
+  general?”. To be useful in an ABM setting, each of these components
+  must be given an explicit mathematical definition in terms of the
+  independent variables of the model.
+  <P>
+  <img src="GaoEdelman16-1-fig1.png" height=300 class="figure-right">
+    <B>An agent’s basic action loop.</B> <small>Motivation prompts
+    actions, which lead to outcomes. Outcomes reap external hedonic
+    rewards (food-related \(_{f}H\), and social \(_{s}H\)) and affect
+    reproductive fitness. Hedonic states influence motivation, both
+    directly, with the weight c, and through longer-term
+    (“eudaimonic”) well-being \(E\), via the weight \(1 − c\). The
+    parameters \(\Delta t\) and \(\lambda\) control, respectively, the
+    time window over which \(E\) is estimated and the relative
+    contributions of positive and negative changes of \(H\). After a
+    set number of action cycles, each agent in the top half of the
+    fitness distribution is allowed to produce offspring, which form
+    the next generation; agents that belong to the current generation
+    are terminated.</small>
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the individual agent: motivation, action, rewards, and well-being</h1>
+
+  <img src="GaoEdelman16-1-alg1.png" height=550 class="figure-right">
+  <P>
+    <BR>
+      <a href="https://en.wikipedia.org/wiki/Pseudocode"
+      target=new>Pseudocode</a> for the evolutionary simulation of the
+      dynamics of well-being.
+
+</DIV>      
+
+    
+
+<div  CLASS="slide">
+  <h1>the individual agent: motivation, action, rewards, and well-being</h1>
+
+  <P>
+  <BR>
+  The motivation \(M\) of agent \(k\) is a weighted sum of its hedonic
+  and eudaimonic well-being, \(H\) and \(E\), with the parameter \(0
+  \leq c \leq 1\) controlling their relative direct contributions;
+  note that \(H\) also contributes to \(M\) indirectly, via its effect
+  on \(E\):
+
+  \begin{equation}
+  \begin{split}
+  M_k  = c \cdot H_k + (1-c) \cdot E_k
+  \end{split}
+  \end{equation}
+
+  The effect of motivation is controlled by a threshold \(\theta\),
+  which depends on the agent's past motivation:
+
+  \begin{equation}
+  \begin{split}
+  \theta_k^{t}  = \frac{1}{\sum_{j=1}^{t-1} (\gamma ^j)}\sum_{i=1}^{t-1} \left(\gamma^{t-i} M_k \right)
+  \end{split}
+  \end{equation}
+
+  where the threshold for agent \(k\) at time \(t\) is a weighted sum
+  of past motivation values, \(\gamma \in [0,1]\) being the forgetting
+  factor, which gives more weight to recent motivations.  When an
+  agent's motivation exceeds the threshold \(\theta\), it chooses a
+  more aggressive action, by venturing farther away from its present
+  location, in a random direction. If the motivation is below the
+  threshold, the exploration range is shorter.
+
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the individual agent (cont.)</h1>
+
+  <P>
+  After carrying out the chosen action, the agent updates \(H\), which
+  consists of two components: \(_{f}H\), based on finding food during
+  exploration, and \(_{s}H\), based on social comparison:
+
+  \begin{equation}
+  H_k=  (1-s_k) \cdot {_{f}H_k} + s_k \cdot {_{s}H_k}
+  \end{equation}
+
+  where \(s_k \in [0,1]\) is agent \(k\)'s sociality/food weighting
+  parameter. The food-based component is:
+
+  \begin{equation}
+  _{f}H_k^{t} = {_{f}H_k^{t-1}} + \alpha_k F_k^{t} - \beta_f
+  \end{equation}
+
+  where \(F\) is the number of food units that the action yielded
+  and \(\alpha_k\)controls the contribution of food to agent \(k\)'s
+  hedonic well-being; \(\beta_f\) is the food equivalent of the
+  agents' energy consumption per action cycle. For each agent, there
+  is an upper bound on the maximum amount of food an agent can gain
+  per cycle.
+
+  The social component of hedonic well-being \(_{s}H\) for agent \(k\)
+  at time \(t\) is:
+
+  \begin{equation}
+  \begin{split}
+    _{s}H_k^t = H_k^t  - \cfrac{1}{n_k} \sum_{j=1}^{n_k} \left(  H_j^t \right) + \beta_s
+  \end{split}
+  \end{equation}
+
+  where the trait \(n_k\) represents the size of agent \(k\)'s social
+  comparison group.  Intuitively, an agent is happier when it is doing
+  better than group average and less happy otherwise; \(\beta_s\) is the
+  base hedonic well-being gain from socialization.
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the individual agent (cont.)</h1>
+
+  <P>
+    The agent's eudaimonic well-being \(E\) is then computed from its
+    present value of \(H\), the memory of the past values of \(H\)
+    extending over a number of cycles, and the rates of rise and fall
+    of \(H\):
+
+    \begin{equation}
+    E^t_k = \cfrac{1}{\Delta t_k} \sum_{i=t- \Delta t_k}^t \left( H_k^i +
+    s_p\left(\cfrac{d H_k^i}{di}\right) + s_n\left(\cfrac{d H_k^i}{di}\right) \right) \;\;\;\;\;\;\;\;\\
+    s_p (x) = \left\{ \begin{array}{lc}
+      _p\lambda_k \cdot x & x\geq0 \\  
+      0 & x < 0
+    \end{array}\right. \;\;\;\;\;\;
+    s_n (x) = \left\{ \begin{array}{lc}
+      0 & x \geq 0 \\  
+      _n\lambda_k \cdot x & x < 0
+    \end{array}\right. \;\;
+   \end{equation}
+
+   where \(\Delta t_k\) is the extent of the memory window for
+   agent \(k\). The step function \(s_p\) selects the weight assigned to
+   upswings of \(H\) and and \(s_n\) — to downswings; \(_p\lambda_k\) and
+   \(_n\lambda_k\) are the respective weights. Thus, every individual can in
+   principle value positive and negative events differently.
+
+  In parallel with computing \(H\) and \(E\) (which are subsequently fed
+  back and used to determine motivation, the agent&rsquo;s fitness is
+  updated: 
+
+  \begin{equation}
+  \mathcal{F}_k^t = \sum_{i=1}^t (F_k^i -A_k^i - \beta_0)
+  \end{equation}
+
+  Thus, the fitness \(\mathcal{F}\) of agent \(k\) at time \(t\) is
+  the total amount of food \(F_k^t\) that it consumed, less the cost
+  \(A_k^t\) of its actions (with aggressive and conservative actions
+  weighted appropriately) and a base metabolic cost \(\beta_0\).
+
+  At the end of each generation, agents within the top \(50\%\) of the
+  fitness distribution reproduce, passing their traits to their
+  offspring, whose number is proportional to the parent&rsquo;s
+  fitness. All agents in the current generation are then terminated.
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the simulated environment</h1>
+
+  <img src="GaoEdelman16-1-fig2.png" height=550 class="figure-right">
+  <P>
+    Four types of environment, which differed in the spatial
+    distribution of food: random scarce (top left); random average
+    (top right); patchy average (bottom left); and patchy abundant
+    (bottom right). Each \(200\times 200\) environment was populated
+    in every generation by \(400\) agents. At the end of every
+    generation cycle, the environments were initialized anew with
+    their corresponding food distributions.
+<P>
+  In each of the experiments described below, the parameter (trait) of
+  interest was discretized as appropriate, so that equal proportions
+  of the population carried each level of the trait; the other
+  parameters were kept fixed. Each experiment was repeated 10 times;
+  each of the Figures below shows the means and the 95% confidence
+  intervals for the number of carriers in the population of each level
+  of the trait of interest, plotted against generation number.
+<P>
+  The complete ABM model code (in Matlab) is available at
+  <a href="https://www.openabm.org/model/4934"
+  target=code>https://www.openabm.org/model/4934</a>. In addition, the
+  details of the implementation are described in the S1 Appendix,
+  which follows the standard ODD (Overview, Design concepts, and
+  Details) protocol.
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the effect of the contribution of hedonic happiness to motivation</h1>
+
+  <img src="GaoEdelman16-1-fig4.png" height=550 class="figure-right">
+  <P>
+  <BR>
+    <B>Experiment 1B:</B> here, subpopulations with two values of
+    \(c\), \(0.3\) and \(0.7\), were pitched against each other.
+    <P>
+      The lower value, corresponding to immediate or hedonic
+    well-being \(H\) contributing less to motivation, appears to be
+    advantageous only in the scarce-food environment. The higher value
+    of \(c\), is more advantageous when food is patchy but not rare.
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the effect of social comparison</h1>
+
+  <img src="GaoEdelman16-1-fig8.png" height=550 class="figure-right">
+  <P>
+  <BR>
+    <B>Experiment 3B:</B> subpopulations with two values of \(s\),
+    \(0.2\) and \(0.8\), were pitched against each other.
+    <P>
+      The higher value of \(s\), corresponding to social comparison
+      contributing more towards \(H\), appears to be advantageous only
+      in the scarce-food environment. The lower value of \(s\) is more
+      advantageous when food is average or abundant.
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the effect of rise and fall rates of hedonic happiness</h1>
+
+  <img src="GaoEdelman16-1-fig11.png" height=550 class="figure-right">
+  <P>
+  <BR>
+    <B>Experiment 5:</B> the dependence of eudaimonic well-beingon the
+    rise and fall of hedonic states.
+    <P>
+      Agents with a more positive outlook (\({_p}\lambda = 2,
+    {_n}\lambda = 0.5\)) tend to do better in all four types of
+    environments.
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>summary of findings</h1>
+
+  <P>
+    <ul>
+      <li>
+	<I>Exp.1</I> The effects of the relative contributions of
+	\(H\) and \(E\) to motivation: When food is scarce, agents
+	that are motivated more by eudaimonic (longer-term) well-being
+	\(E\) than by hedonic (momentary) well-being \(H\)
+	dominate. When food is abundant, agents that are motivated
+	more by \(H\) than by \(E\) dominate.
+      </li>
+      <li>
+	<I>Exp.2</I> The effects of the contribution of food to \(H\):
+	Agents that get a larger hedonic boost from finding food
+	dominate, to a degree that depends on food distribution.
+      </li>
+      <li>
+	<I>Exp.3</I> The effects of the size of social comparison
+	circle: When food is scarce, agents that give more weight to a
+	comparison of their outcomes with those of their “friends” do
+	better.  When food is abundant, this effect is reversed.
+      </li>
+      <li>
+	<I>Exp.4</I> The effects of memory for past \(H\) values: When
+	food is scarce, agents that integrate their hedonic states
+	over a longer time dominate. When food is abundant,
+	there&rsquo;s no advantage of having longer memory.
+      </li>
+      <li>
+	<I>Exp.5</I> The effects of the differential contribution of
+	positive and negative changes in \(H\): Agents with a more
+	positive outlook, which attach more importance to upswings in
+	\(H\) than to downswings, dominate in all four types of
+	environment.
+      </li>
+      <li>
+	<I>Exp.6</I> The effects of the differential contribution of
+	positive and negative changes in \(H\) in environments with
+	both positive and negative events: In relatively harsh
+	mixed-valence environments, agents with a more conservative
+	outlook (larger \({_n}\lambda\)) have higher fitness.
+      </li>
+    </ul>
+
+</DIV>
+
+
+  
+<div  CLASS="slide">
+  <h1>lessons</h1>
+
+  <P>
+    <BR>
+      The general lesson from these findings is that the optimal mix
+      of happiness-related behavioral control parameters (traits whose
+      carriers dominate the population) depends on the environment.
+      <P>
+	More specific lessons:
+	<ul>
+	  <li>
+	    The effects of attaching more weight to longer-term than
+	    to momentary happiness and of extending the memory for
+	    past happiness are both stronger in an environment where
+	    food is scarce.
+	  </li>
+	  <li>
+	    Furthermore, in such an environment the “arms race” of
+	    relative consumption, in which the agent’s well-being is
+	    diminished if its neighbors are also well or better off,
+	    is more detrimental to survival.
+	  </li>
+	  <li>
+	    Finally, a positive outlook, under which longer-term
+	    happiness gets more increase from positive events than
+	    decrease from negative ones, is generally advantageous,
+	    except in particularly harsh environments.
+	  </li>
+	</ul>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>lessons</h1>
+
+  <P>
+    <BR>
+      This set of findings may be compared to the sentiment expressed
+      in <a href="https://en.wikipedia.org/wiki/Laozi"
+      target=new>Laozi</a>’s
+      <a href="https://en.wikipedia.org/wiki/Tao_Te_Ching"
+	 target=new><I>Dao De Jing</I></a> under the heading of
+	 curbing desire
+	 (<a href="http://www.egreenway.com/taoism/ttclz46.htm"
+	 target=new>chapter 46</a>): “The satisfaction of contentment
+      is an everlasting competence” —
+
+      <pre>
+	
+	天下有道. 
+	卻走馬以糞. 
+	天下無道.
+	戎馬生於郊. 
+	禍莫大於不知足.
+	咎莫大於欲得. 
+	故知足之足, 常足矣.
+	</pre>
+
+      <P>
+	It may indeed be advisable, at least under conditions of
+	scarcity or adversity, to focus on longer-term well-being or
+	eudaimonia (“contentment”) over momentary pleasures and to be
+	less envious of one’s neighbors; also, in general, to mark
+	happy events more than unhappy ones.
+
+</DIV>	  
+
+<div class="footer">
+<p>Last modified: Fri Aug 7 2020 at 14:52:02 EDT</p>
+</div>
+</body>
+</html>

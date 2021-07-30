@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computing Societies — Unit 9</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2020 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 9 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computing Societies</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 9: learning social norms</h2>
+  </div>
+<!--  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%> -->
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+<div  CLASS="slide">
+  <h1>learning social norms</h1>
+
+  <P>
+    <ul>
+      <li>
+	<I>Learning to be thoughtless: social norms and individual competition</I> [Epstein, 2001].
+      </li>
+    </ul>
+  </P>
+  <P>
+    This work studies "a phenomenon that has been essentially ignored,
+    namely that individual thought – or computing – is often inversely
+    related to the strength of a social norm. Once a norm is
+    entrenched, we conform thoughtlessly. In this model, agents learn
+    how to behave (what norm to adopt), but – under a strategy I term
+    Best Reply to Adaptive Sample Evidence – they also learn how much
+    to think about how to behave. How much they are thinking affects
+    how they behave, which – given how others behave – affects how
+    much they think. In short, there is feedback between the social
+    (interagent) and internal (intra-agent) dynamics. In addition, we
+    generate the stylized facts regarding the spatio-temporal
+    evolution of norms: local conformity, global diversity, and
+    punctuated equilibria."
+  </P>
+	
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>motivation</h1>
+
+  <P>
+    "When I’d had my coffee this morning and went upstairs to get
+    dressed for work, I never considered being a nudist for the
+    day. When I got in my car to drive to work, it never crossed my
+    mind to drive on the left. And when I joined my colleagues at
+    lunch, I did not consider eating my salad barehanded; without a
+    thought, I used a fork."
+  </P>
+  <P>
+    The point is that many social conventions have two features
+    of interest:
+    <ul>
+      <li>
+	First, they are self-enforcing behavioral
+	regularities.
+      </li>
+      <li>
+	But second, once entrenched, we conform without
+	thinking about it.
+      </li>
+    </ul>
+  </P>
+  <P>
+    Indeed, this is one reason why social norms are useful; they
+    obviate the need for a lot of individual computing. After all, if
+    we had to go out and sample people on the street to see if nudism
+    or dress were the norm, and then had to sample other drivers to
+    see if left or right were the norm, and so on, we would spent most
+    of the day figuring out how to operate, and we would not get much
+    accomplished.
+  </P>
+  <P>
+    Thoughtless conformity, while useful in such contexts, is
+    frightening in others – as when norms of discrimination become
+    entrenched. The literature on the evolution of norms and
+    conventions has focused almost exclusively on the first feature of
+    norms – that they are self-enforcing behavioral regularities.
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>an agent-based computational model</h1>
+
+  <P>
+    This model posits a ring of interacting agents. Each agent
+    occupies a fixed position on the ring and has two attributes:
+    <ol>
+      <li>
+	A binary ‘norm’ (as in ‘drive on the right (R) vs. drive on
+	the left (L)’). Initially, agents are assigned norms.
+      </li>
+      <li>
+	A sampling radius.
+      </li>
+    </ol>
+  </P>
+  <P>
+    Agents update their norms based on observation of agents within
+    their sampling radius, which is heterogeneous across agents.  It
+    is updated, or ‘adapted’, incrementally according to a simple
+    rule.
+  </P>
+  <P>
+    <B>Radius Update Rule.</B>  Imagine being an agent with current
+    sampling radius of \(r\).
+    <ul>
+      <li>
+	First, survey all \(r\) agents to the left and all \(r\)
+	agents to the right. Some have \(L\) as their norm and some
+	have \(R\).
+      </li>
+      <li>
+	Let \(F(r)\) be the relative frequency of \(R\)s at radius
+	\(r\). Now, make the same computation for radius \(r + 1\).
+      </li>
+      <li>
+	If \(F(r + 1) \neq F(r)\), then increase your search radius to
+	\(r + 1\); otherwise, compute \(F(r-1)\).
+      </li>
+      <li>
+	If \(F(r-1) = F(r)\), then reduce your search radius to
+	\(r-1\).
+      </li>
+      <li>
+	If neither condition obtains (i.e., if \(F(r +1) = F(r) \neq
+	F(r −1))\), leave your search radius unchanged at \(r\).
+      </li>
+    </ul>
+  </P>
+  <P>
+    <small>
+      Agents are ‘lazy statisticians’. If they are getting a different
+      result at a higher radius \((F(r+1) \neq F(r))\), they increase
+      the radius (because larger-sample statistics are more
+      reliable). But they are also lazy: if there’s no difference at
+      the higher radius, they check a lower one.  If there is no
+      difference between that and their current radius \((F(r-1) =
+      F(r))\), they reduce the radius.
+    </small>
+  </P>
+    
+</DIV>
+
+
+<div  CLASS="slide">
+  <h1>norm update rule</h1>
+
+  <P>
+    The <B>Norm Update Rule</B> is extremely simple:
+    <DIR><DIR> Match the majority within your radius.
+    </DIR></DIR>
+  </P>
+  <P>
+    If, at the updated radius, Ls outnumber Rs, then adopt the L
+    norm. In summary, the rule is: <I>When in Rome, do as the
+    (majority of) Romans do, with the (adaptive) radius determining
+    the ‘city limits’.</I> 
+  </P>
+  <P>
+    This rule is equivalent to <I>Best Reply to Sample Evidence</I> with a
+    symmetric payoff matrix:
+    <div align=center>
+    <table>
+      <tr>
+	<td></td><td align=center>L</td><td align=center>R</td>
+      </tr>
+      <tr>
+	<td>L</td><td>(1,1)</td><td>(0,0)</td>
+      </tr>
+      <tr>
+	<td>R</td><td>(0,0)</td><td>(1,1)</td>
+      </tr>
+    </table>
+    </div>
+  </P>
+  <P>
+    The rule maximizes the expected utility (sum of payoffs) in
+    playing the agent’s sample population. The key point introduced
+    here is that each individual’s sample size is itself
+    adaptive. This is why the individual’s combined (norm and search
+    radius) updating procedure can be called <I>Best Reply to Adaptive
+    Sample Evidence.</I>
+  </P>
+  <P>
+    Finally, there is generally some probability that an agent will
+    adopt a random L or R ("noise").
+  </P>
+
+</DIV>
+
+
+<div  CLASS="slide">
+  <h1>the graphics</h1>
+
+  <P>
+    With this set-up, there are two things to keep track of: the
+    evolution of social norm patterns on the agent ring, and the
+    evolution of individual search radii.
+  </P>
+  <P>
+    In the runs shown below, there are 191 agents. They are drawn at
+    random and updated asynchronously.  Clearly, each agent’s
+    probability of being drawn k times per cycle (191 draws with
+    replacement) has the Binomial distribution \(b(k; n, 1/n)\), with
+    \(n = 191\).  Agents who are not drawn keep their previous
+    norm. After 191 draws – one cycle – the new ring is redrawn below
+    the old one (as a horizontal series of small contiguous black and
+    white dots), so time is progressing down the page.
+  </P>
+  <P>
+    There are two Panels. The left Panel shows the evolution of norms,
+    with L-agents colored black and R-agents colored white. With the
+    exception of Run 4, each entire Panel displays 300 cycles (each
+    cycle, again, being a sequence of 191 random calls.)  The right
+    window shows the evolution of search radii, using
+    grayscale. Agents are colored black if \(r = 1\), with
+    progressively higher radii depicted as progressively lighter
+    shades of gray.
+  </P>
+
+</DIV>
+
+
+<div  CLASS="slide">
+  <h1>monolithic social norm, individual computing dies out</h1>
+
+  <img src="Epstein01-fig1.png" class="figure-right" height=450>
+  <P>
+    For this first run, we set all agents to the L norm (coloring them
+    black) initially and set noise to zero. Each agent has a random
+    initial search radius between 1 and 60 (artificially high to show
+    the strength of the result in the monolithic case).
+  </P>
+  <P>
+    <I>Right panel.</I> The uppermost line (the initial population
+    state) (191 agents across) is multi-shaded, reflecting the random
+    initial radii. Let us now apply the radial update rule to an
+    arbitrary agent with radius r.  First look out further. We find
+    that \(F(r + 1) = F(r)\), because all agents are in the L norm
+    (black). Now, try a smaller radius. Because \(F(r−1) = F(r)\), the
+    agent reduces from \(r\) to \(r - 1\).
+  </P>
+  <P>
+    <I>Left panel.</I> Now, apply the norm update rule. At this new
+    radius, match the majority. Clearly, this is L (black), so stay
+    L. This is the same logic for all agents. Thus, the social norm
+    remains entrenched, and, as shown in the right panel, individual
+    ‘thinking’ dies out – radii all shrink to the minimum of 1
+    (colored black).
+  </P>
+
+</DIV>
+
+
+<div  CLASS="slide">
+  <h1>random initial norms, individual computing at norm boundaries</h1>
+
+  <img src="Epstein01-fig2.png" class="figure-right" height=450>
+  <P>
+    With noise still at zero, we now alter the initial conditions
+    slightly. In this, and all subsequent runs, the initial maximum
+    search radius is 10. Rather than set all agents in the L norm
+    initially, we give them random norms. The typical result is shown
+    here. 
+  </P>
+  <P>
+    <I>Left panel.</I> There is rapid lock-in to a global pattern of
+    alternating local norms on the ring.
+  </P>
+  <P>
+    <I>Right panel.</I> Deep in each local norm, agents are colored
+    black: there is no individual computing (no ‘thinking’). In
+    contrast, agents at the boundary of two norms must worry about how
+    to behave, and so are bright-shaded.
+  </P>
+
+</DIV>
+
+
+<div  CLASS="slide">
+  <h1>complacency in new norms</h1>
+
+  <img src="Epstein01-fig3.png" class="figure-right" height=450>
+  <P>
+    In the 1960’s, people smoked in airplanes, restaurants, and
+    workplaces, and no one gave it much thought. Today, it is equally
+    entrenched that smoking is prohibited in these circumstances.
+    After the ‘revolution’ entirely new norms prevail, but once
+    entrenched, people become inured to them; they are observed every
+    bit as thoughtlessly (in our sense) as before.
+  </P>
+  <P>
+    This run begins as before, with randomly distributed initial norms
+    and zero noise. The system reaches equilibrium, locking into
+    neighborhood norms (as before, these appear as vertical stripes
+    over time). Then, at t = 130, we shock the system, boosting the
+    level of noise to 1.0, and holding it there for ten periods. Then
+    we turn the noise off and watch the system re-equilibrate.
+  </P>
+  <P>
+    After the shock, an entirely new pattern of norms is evident on
+    the left. But, looking at the right (radius) panel, we see that
+    many agents who were thoughtlessly in the L norm (black) before
+    the shock are equally thoughtlessly in the R norm (white) after.
+  </P>
+
+</DIV>
+
+
+<div  CLASS="slide">
+  <h1>time series plot</h1>
+
+  <img src="Epstein01-fig4.png" class="figure-right" height=450>
+  <P>
+    A time series plot of average radius over the course of this
+    experiment is also revealing. Following an initial transient
+    phase, the mean radius attains a steady state value of roughly
+    2.25. During the brief ‘shock’ period of maximum noise, the
+    average radius rises sharply, reflecting the agents’ search for
+    appropriate behavior in a period of social turmoil.
+  </P>
+  <P>
+    One might expect that, with noise restored to zero, the average
+    radius would relax back to its pre-shock value.  In fact, the
+    post-shock steady state depends on the postshock number of local
+    norms. The lower the diversity, the lower the number of borders
+    and, as in the present run, the lower the average radius.
+  </P>
+
+</DIV>
+
+
+<div  CLASS="slide">
+  <h1>noise of 0.15 and endogenous neighborhood norms</h1>
+
+  <img src="Epstein01-fig5.png" class="figure-right" height=450>
+  <P>
+    Now, noise levels of zero and one are not especially plausible.
+    The next four runs use the same initial conditions as Run 2, but
+    add increasing levels of noise.  With noise set at 0.15, we obtain
+    dynamics of the sort shown here.  Again, we see that individual
+    computing is most intense at the norm borders – regions outlining
+    the norms. We also see the emergence and disappearance of norms,
+    the most prominent of which is the white island that comes into
+    being and then disappears. One can think of islands as indicating
+    punctuated equilibria.
+  </P>
+
+</DIV>
+
+
+<div  CLASS="slide">
+  <h1>time series for noise of 0.15</h1>
+
+  <img src="Epstein01-fig6.png" class="figure-right" height=450>
+  <P>
+    Following an initial transient phase, the average search radius
+    clearly settles at roughly 2.0 for this realization.5 Even at zero
+    cost of sampling, in other words, a ‘stopping rule’ for the
+    individual search radius emerges endogenously through local agent
+    interactions. And this obtains at all levels of noise.
+  </P>
+
+</DIV>
+
+
+<div  CLASS="slide">
+  <h1>maximum noise</h1>
+
+  <img src="Epstein01-fig11.png" class="figure-right" height=350>
+  <P>
+    Finally, we fix the noise level at its maximum value of 1.0,
+    meaning that agents are adopting the Left and Right convention
+    totally at random. One might assume that, in this world of maximum
+    randomness, agents would continue to expand their search to its
+    theoretical maximum of \((n - 1)/2\), or 95 in this case. But this
+    is not what happens.
+  </P>
+  <img src="Epstein01-fig12.png" class="figure-right" height=300>
+    <P>
+      Indeed, as the time series plot shows, it rises only to about
+      4.5 (the 95% confidence interval is [4.53, 4.63]).  Thinking –
+      individual computing – is minimized in the monolithic world of
+      Run 1.  But, it does not attain its theoretical maximum in the
+      totally random world of this run.
+    </P>
+    <HR>
+    <P>
+      Bottom line:
+      <blockquote>
+	Individual computing is often inversely related to the strength of a social
+	norm. As norms become entrenched, we conform thoughtlessly.
+      </blockquote>
+    </P>
+
+</DIV>
+
+
+<div class="footer">
+<p>Last modified: Tue Jun 23 2020 at 11:11:05 EDT</p>
+</div>
+</body>
+</html>

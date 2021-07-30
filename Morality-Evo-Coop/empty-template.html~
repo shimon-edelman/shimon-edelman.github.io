@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computing Societies</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2020 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="+0" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+</head>
+<body>
+
+<!-- 
+<rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+<permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+<requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+<permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+<requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+</License>
+</rdf:RDF>
+-->
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Week 1 &#151;
+    <!-- hhmts start --> Last modified on Mon Sep  8 09:00:51 2014
+<!-- hhmts end --> 
+    <!-- doc-lang: english -->
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>PSYCH 4320 / COGST 4310 / BioNB 4330</h1>
+    <p>Consciousness and Free Will</p>
+  </div>
+    <img src="swallow-over-pond.jpg" title="The Tyranny of Now (photograph by S. Edelman)"
+    class="cover">
+  <div style="float:left">
+    <h2>Introduction</h2>
+    <h3>&nbsp; Week 1</h3>
+  </div>
+
+</div>
+<!-- END COVER PAGE -->
+
+
+<div  CLASS="slide">
+  <h1>Week 1: introduction</h1>
+
+  <img src="Magritte-La-reproduction-interdite.jpg" class="figure-right"
+  title="La reproduction interdite (R. Magritte)" height=600>
+  <P>
+  <BR>
+  The nature of the quest [for self-knowledge]
+  
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>self-knowledge: Computing the Mind</h1>
+
+  <table cellspacing=5>
+    <tr>
+      <th><font color=gray>Part I</font></th><th>Part II</th>
+    </tr>
+    <tr>
+      <td align=top width=40%><font color=gray>
+	<ol>
+	  <li>Brains, Minds, and Numbers</li>
+	  <li>Computing Minds</li>
+	  <li>Computing Brains</li>
+	  <li>The Astonishing Hypothesis</li>
+	  <li>Perception</li>
+	  <li>Memory</li>
+	  <li>Language</li>
+	  <li>Thinking</li>
+	  </font>
+      </td>
+      <td>
+	<ol>
+	  <li value=9><EM>Being No One:</EM>
+	  <BR>Attention; The phenomenal Self and the brain; Access
+	  consciousness; Narrative selves; Dreaming; <font color=gray>Solitude</font>.
+	  </li>
+	  <li><EM>Imagine:</EM>
+	  <BR>Free will; Ethics; Wisdom and happiness; Time.
+	  </li>
+	  <li><EM>The Mind in the Act of Finding:</EM>
+	  <BR>Reality.
+	  </li>
+	</ol>
+      </td>
+    </tr>
+  </table>
+  
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>self-knowledge: profit and peril</h1>
+
+  <img src="Mirror_of_Galadriel.jpg" title="the Mirror of Galadriel" class="figure-right" height=450>
+  <P><BR>
+  <P><BR>
+  'Do you advise me to look?' asked Frodo.<P>
+  
+  'No,' <a href="http://en.wikipedia.org/wiki/Galadriel" target=new>she</a>
+  said. 'I do not counsel you one way or the other. I am not a
+  counsellor. You may learn something, and whether what you see be fair or 
+  evil, that may be profitable, and yet it may not. Seeing is both good and
+  perilous. Yet I think Frodo, that you have courage and wisdom enough for
+  the venture, or I would not have brought you here. Do as you will!'
+
+  <DIR><DIR>
+    <a href="http://en.wikipedia.org/wiki/The_Lord_of_the_Rings" target=new><I>The Lord of the Rings</I></a><BR>
+    <a href="http://en.wikipedia.org/wiki/J._R._R._Tolkien" target=new>J. R. R. Tolkien</a>
+  </DIR></DIR>
+
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>self-knowledge</h1>
+
+  <img src="self-knowledge-banner.gif" class="figure-left">
+  <a href="http://www.shankar-gallery.com/frameC-pages/advaita.page/adv4.html"
+  target=extra><img src="atma-jnana-self-know-adv.jpg" class="figure-right"></a>
+
+  <P>
+  <a href="http://www.perseus.tufts.edu/cgi-bin/siteindex?entry=Delphi" target=extra><img src="oracle.jpg" title="Delphi - the site of the Temple of Apollo"></a>
+  <BR>
+  <a href="http://www.bartleby.com/66/64/16064.html"><img
+  src="GNWQI_SEAUTON.gif"  title="gnothi seauton - know thyself"></a>
+  <P>
+  Self-knowledge, East and West
+
+</div>
+
+-->
+
+
+<!--
+% Ariyapariyesana-Sutta -- The Buddha on self-knowledge
+% Charles Eliot, "Hinduism and Buddhism"
+% http://www.gutenberg.org/files/15255/15255-h/15255-h.htm
+
+Self-knowledge has been highly valued by many philosophical and
+religious traditions, East and West. Laozi's comment ``knowing others
+is wisdom; knowing the self is enlightenment'' and the Buddha's gospel
+of self-knowledge would not have sounded out of place in Greece, where
+the entrance to the shrine of Apollo's Oracle at Delphi bore the
+injunction ``know thyself.''\pagenote{The value of
+  \textsc{self-knowledge} is a central tenet of all three great
+  philosophical traditions: Greek (Aristotle, 350BCE; Nagel, 1972)
+  \nocite{AristotleNEthics,Nagel72} Chinese
+  \citep[ch.XXXIII]{LaoTze1904}, and Indian \citep[p.475]{Eliot21}. }
+-->
+
+<DIV CLASS="slide">
+  <h1>self-knowledge, East and West</h1>
+
+  <P>
+  <BR>
+  <UL class="incremental">
+    <li>
+    "know thyself" [the <a
+ href="https://en.wikipedia.org/wiki/Delphic_oracle"
+     target=new>Delphic Oracle</a>]
+    </li>
+    <P>
+    <li>
+    "knowing others is wisdom; knowing the self is enlightenment" [<a
+    href="https://en.wikipedia.org/wiki/Laozi" target=new>Laozi</a>]
+    </li>
+    <P>
+    <li>
+    "[...] [C]omplete self-mastery by means of self-knowledge [...] allows
+    nothing to be done heedlessly and mechanically and controls not merely
+    recognized acts of volition but also those sense-impressions in which we
+    are apt to regard the mind as merely receptive. <font
+ color=gray>[Cf. Dewey, 1896]</font> 'Self is the lord of self:
+    who else should be the lord? With self well subdued, a man finds a lord
+    such as few can find.' " [The <a
+    href="https://en.wikipedia.org/wiki/Dhammapada" target=new>Dhammapada</a>]
+    </li>
+  </UL>
+
+</DIV>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>mystical self-knowledge</h1>
+
+  <a href="http://www.digiovanni.co.uk/borges/the-garden-of-branching-paths/the-approach-to-al-mu%27tasim.htm"
+ target=links><img src="cover-Approach-to-al-Mutasim.jpg" class="figure-right"
+  height=300></a>
+  <P>
+"I have referred, in the course of this note, to the <a
+ href="http://en.wikipedia.org/wiki/The_Conference_of_the_Birds" target=new><I>Mantiq
+ ut-Tair</I></a> (Colloquy of the Birds) by the Persian mystic <a
+ href="http://en.wikipedia.org/wiki/Fariduddin_Attar" target=new>Farid ud-Din Abu
+ Talib Mehammed ibn-Ibrahim Attar</a>, who was assassinated by the soldiers
+ of <a href="http://en.wikipedia.org/wiki/Tului" target=new>Tului</a>,
+ Genghis Khan's son, when <a href="http://en.wikipedia.org/wiki/Nishapur"
+ target=new>Nishapur</a> was sacked. Perhaps it will not prove idle to
+ summarize the poem. The faraway king of the birds, the <a
+ href="http://en.wikipedia.org/wiki/Simurgh" target=new>Simurg</a>, drops an
+ exquisite feather in the middle of China; weary of their ancient anarchy,
+ the birds determine to find it. They know that their king's name means
+ "Thirty Birds"; they know that his royal palace stands on the Kaf, the
+ circular mountain which surrounds the earth. They undertake the almost
+ infinite adventure. They fly over seven valleys, or seven seas; the
+ next-to-the-last one is called Vertigo; the last, Annihilation. Many of the
+ pilgrims desert; others perish. Thirty of them, purified by their labors,
+ set foot upon the Mountain of the Simurg. At last they contemplate it: they
+ perceive that they are the Simurg, and that the Simurg is each one of them
+ and all of them."
+<DIR>
+  Jorge Luis Borges, <a href="al-mutasim.html" target=boo><I>The Approach to
+ al-Mu'tasim</I></a>
+</DIR>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>the Simurg: composite selfhood</h1>
+
+
+  <P>
+  <BR>
+  <img src="conference-of-birds4.jpg" title="The Simurg">
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>self-knowledge: 2140/3140 to 4320</h1>
+  
+  <P>
+  <BR>
+  We've seen and heard so much &#151; what have we learned?<BR>
+  Not for one moment has the Self been spurned;<BR>
+  Fools gather round and hinder our release:<BR>
+  When will their stale, insistent whining cease?<BR>
+  We have no freedom to achieve our goal<BR>
+  Until from Self and fools we free the <a
+ href="http://www.mrbauld.com/keatsva.html" target=new>soul</a>.<BR>
+  <DIR>  <DIR>  <DIR>
+    from <a href="http://en.wikipedia.org/wiki/The_Conference_of_the_Birds" target=new><I>The
+    Conference of the Birds</I></a> (1177) <BR> 
+    by <a href="http://en.wikipedia.org/wiki/Fariduddin_Attar" target=new>Farid ud-Din al-Attar</a>
+  </DIR>  </DIR>  </DIR>
+
+  <HR>
+  <P class="incremental">
+  "Call the world if you Please 'The vale of Soul-making.' [...] Soul as
+  distinguished from an Intelligence &#151; There may be intelligences or
+  sparks of the divinity in millions  &#151; but they are not Souls 
+  till they acquire identities, till each one is personally itself." [John
+  Keats, 1819]
+  </P>
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>self-knowledge: Computing the Mind</h1>
+
+  <table cellspacing=5>
+    <tr>
+      <th><font color=gray>Part I</font></th><th>Part II</th>
+    </tr>
+    <tr>
+      <td align=top width=40%><font color=gray>
+	<ol>
+	  <li>Brains, Minds, and Numbers</li>
+	  <li>Computing Minds</li>
+	  <li>Computing Brains</li>
+	  <li>The Astonishing Hypothesis</li>
+	  <li>Perception</li>
+	  <li>Memory</li>
+	  <li>Language</li>
+	  <li>Thinking</li>
+	  </font>
+      </td>
+      <td>
+	<ol class="incremental">
+	  <li value=9><EM>Being No One:</EM>
+	  <BR>Attention; The phenomenal Self and the brain; Access
+	  consciousness; Narrative selves; Dreaming; <font color=gray>Solitude</font>.
+	  </li>
+	  <li><EM>Imagine:</EM>
+	  <BR>Free will; Ethics; Wisdom and happiness; Time.
+	  </li>
+	  <li><EM>The Mind in the Act of Finding:</EM>
+	  <BR>Reality.
+	  </li>
+	</ol>
+      </td>
+    </tr>
+  </table>
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1 >technicalities</h1>
+
+  <P>
+  <BR>
+  <ul>
+    <li>Weekly topics
+    <ul class="incremental">
+      <li>brief lecture/overview</li>
+      <li>discussion</li>
+    </ul>
+    </li>
+    <li>Readings
+    <ul class="incremental">
+      <li>the textbook <font color=gray>(+ two optional books)</font></li>
+      <li>journal papers (password needed to access)</li>
+      <li>Borges</li>
+    </ul>
+    </li>
+    <li>Writing: this is <B>not</B> a writing seminar, but...
+    <ul class="incremental">
+      <li>weekly discussion questions, to be submitted in class</li>
+      <li><font color=gray>[optional discussion on Blackboard (you are enrolled automatically)]</font></li>
+      <li>final essay</li>
+    </li>
+  </ul>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1 >[a propos writing] Borges: a sentence as a lightning illuminating a mountain</h1> 
+
+  <P>
+  <BR>
+  "Mir Bahadur Ali is, as we have seen, incapable of evading the most vulgar
+  of art's temptations: that of being a genius."
+  <DIR>  <DIR>  <DIR>
+    Jorge Luis Borges, <a href="al-mutasim.html" target=boo><I>The Approach to
+    al-Mu'tasim</I></a>
+  </DIR>  </DIR>  </DIR>
+  <P>
+  "He died in exile; like all men, he was given bad times in which to live."
+  <DIR>  <DIR>  <DIR>
+    Jorge Luis Borges, Preface to <I>A New Refutation of Time</I></a>
+  </DIR>  </DIR>  </DIR>
+  
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1 >the Zen of writing</h1>
+
+  <a href="http://www.friesian.com/divebomb.htm" target=extra><img
+  src="yama-zen.gif" height=500></a>
+  <P>
+  <small>
+  [Cf. <I>Mountains are just mountains</I>, J. L. Garfield and G. Priest, 
+  in M. D'Amato et al., eds., <I>Pointing at the Moon: Buddhism, Logic,
+  Analysis</I>, New York: Oxford University Press, 71-82 (2009)]
+  </small>
+
+</div>
+
+-->
+
+
+<DIV CLASS="slide">
+  <h1 >a writing example: the art of asking a question</h1>
+
+  <P>
+  <BR>
+  <img src="wsm.jpg" class="figure-left" vspace=10 title="Warren McCulloch" width=250> 
+  In the fall of 1917, I [<a
+  href="http://www.vordenker.de/metaphysics/metaphysics.htm"
+  target=new>Warren S. McCulloch</a>] entered <a
+  href="http://www.haverford.edu/" target=new>Haverford</a> with two 
+  strings to my bow &#151; facility in Latin and a sure foundation in
+  mathematics. I "honored" in the latter and was seduced by it. That
+  winter, <a href="http://en.wikipedia.org/wiki/Rufus_Jones"
+  target=new>Rufus Jones</a> [the President of Haverford] called me
+  in. "Warren," said he, "what is thee going to be"?
+  <img src="rmj.jpg" class="figure-right"  title="Rufus Jones" width=250>
+  And I said, "I don't know." "And what is thee going to do?" And again I
+  said, "I have no idea; but there is one question I would like to answer:
+  <B>What is a <a href="http://en.wikipedia.org/wiki/Number"
+  target=new>number</a>, that a man may know it, and what a <a
+  href="http://www.psychologytoday.com/blog/the-happiness-pursuit/201205/what-do-you-mean-human" target=new>man</a>, that he may 
+  know a number?</B>" He smiled and said, "<a
+  href="http://en.wikipedia.org/wiki/Religious_Society_of_Friends"
+  target=new>Friend</a>, thee will be busy as long as thee lives!"
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1 >an improved version of McCulloch's question</h1>
+
+  <P>
+  <BR>
+  Our question, to emphasize it once again, is not to ask what kind of thing
+  a number <B>is</B>, but to think what kind of mechanism could represent so many
+  physically possible or impossible, and yet self-consistent, processes as
+  number does.
+  <P>
+  <DIR><DIR>
+    <a href="http://www.philosophers.co.uk/cafe/phil_sep2002.htm"
+    target=new>Kenneth J. W. Craik</a> (1914 &#151; 1945)<BR> 
+    <I>The Nature of Explanation</I> (1943)
+  </DIR></DIR>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1 >the last word, from McCulloch</h1>
+
+  <P>
+  <BR>
+  <B>We have learned that the answer depends upon how we ask the
+  question.</B> And we have learned to ask the question so as to get an
+  answer of a kind that we can use.
+  <P>
+  <DIR><DIR>
+    Warren S. McCulloch<BR>
+    <I>Through the Den of the Metaphysician</I>,  
+    <I>Thales</I> 7:37-49, 1951;
+    <BR>reprinted in <I>The Embodiments of
+    Mind</I>, MIT Press, 1965
+  </DIR></DIR>
+  
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1 >"... the answer depends upon how we ask the question"</h1>
+
+  <P>
+  <BR>
+  <object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/x_rhvuJQffE&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/x_rhvuJQffE&hl=en&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed></object>
+  
+  <center>
+  <embed src="42.mp4" height=255 width=320 controller=true align=center>
+  </center>
+</div>
+
+-->
+
+
+
+<DIV CLASS="slide">
+  <h1>a pretty famous question: what are the neural correlates of consciousness?</h1>
+
+  <P>
+  <BR>
+  It is probable that at any moment some active neuronal processes in
+  your head correlate with consciousness, while others do not;
+    <I>what is the difference between them?</I>
+    <P>
+    <DIR><DIR>
+      <a
+ href="http://www.nobelprize.org/nobel_prizes/medicine/laureates/1962/crick-bio.html"
+ target=new>Francis Crick</a> and Christof Koch (1998)
+    </DIR></DIR>
+
+    <HR>
+
+    <P class="incremental">
+    "Imagine this: Through some quirk of fate it happens that you and all
+    your associates have no knowledge whatsoever of the principle and workings
+    of internal combustion engines. [...] No descriptions are available, and you
+    interpret this to mean that you may be faced with quite a difficult
+    problem. You therefore decide on a research strategy of circumspection,
+    caution, and minimal initial assumptions, namely to study the 'material
+    correlates of internal combustion engines.' [...] This may lead to rigorous
+    studies of gas stations, rubber plantations on Sri Lanka, gasket retailers
+    in Birmingham, oil prospecting in Alaska, and pattern design for automobile
+    upholstery, all without guaranteeing convergence on the functional
+    principle of internal combustion." — B. Merker
+    </P>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>a CRUCIAL methodological point</h1>
+
+  <P><BR>
+  "Understanding consciousness means finding the biophysical mechanisms
+  that generate it."
+  <P>
+  <DIR><DIR><DIR>
+      <a href="http://en.wikipedia.org/wiki/Richard_Rhodes"
+      target=new>Richard Rhodes</a>, writing in a <a
+      href="http://www.wired.com/wired/archive/15.02/bigquestions.html?pg=3#consciousness"
+      target=new>wiki on consciousness</a> at <I><a
+      href="http://www.wired.com" target=new>Wired</a></I>
+  </DIR></DIR></DIR>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>a CRUCIAL methodological point</h1>
+
+  <P><BR>
+  "Understanding consciousness means finding the biophysical mechanisms
+  that generate it."
+  <P>
+  <DIR><DIR><DIR>
+      <a href="http://en.wikipedia.org/wiki/Richard_Rhodes"
+      target=new>Richard Rhodes</a>, writing in a <a
+      href="http://www.wired.com/wired/archive/15.02/bigquestions.html?pg=3#consciousness"
+      target=new>wiki on consciousness</a> at <I><a
+      href="http://www.wired.com" target=new>Wired</a></I>
+  </DIR></DIR></DIR>
+  <a href="http://jolyon.co.uk/menu/IllustrationsMenu.htm" target=new><img src="1.1_Magic_Consciousness.jpg" height=450></a>
+
+</div>
+
+
+  
+<DIV CLASS="slide">
+  <h1>a CRUCIAL methodological point</h1>
+
+  <P><BR>
+  "Understanding consciousness means finding the biophysical mechanisms
+  that generate it."
+  <P>
+  <DIR><DIR><DIR>
+      <a href="http://en.wikipedia.org/wiki/Richard_Rhodes"
+      target=new>Richard Rhodes</a>, writing in a <a
+      href="http://www.wired.com/wired/archive/15.02/bigquestions.html?pg=3#consciousness"
+      target=new>wiki on consciousness</a> at <I><a
+      href="http://www.wired.com" target=new>Wired</a></I>
+  </DIR></DIR></DIR>
+  <img src="12-Pressure-on-Consciousness1.jpg" height=380
+  class="figure-right">
+  <HR>
+  <P>
+  "We know that we are a compound of tissues, organs, fluids, and
+  consciousness."
+    <DIR><DIR><DIR>
+      <a href="http://en.wikipedia.org/wiki/Alexis_Carrel" target=new>Alexis
+      Carrel</a>,<BR> writing in <I>Man, the Unknown</I> 
+    </DIR></DIR></DIR>
+	
+</div>
+
+
+  
+<DIV CLASS="slide">
+  <h1>a CRUCIAL methodological point</h1>
+
+  <P><BR>
+  "Understanding consciousness means finding the biophysical mechanisms
+  that generate it."
+  <P>
+  <DIR><DIR><DIR>
+    <a href="http://en.wikipedia.org/wiki/Richard_Rhodes"
+    target=new>Richard Rhodes</a>, writing in a <a
+    href="http://www.wired.com/wired/archive/15.02/bigquestions.html?pg=3#consciousness"
+    target=new>wiki on consciousness</a> at <I><a
+    href="http://www.wired.com" target=new>Wired</a></I>
+  </DIR></DIR></DIR>
+  <P>
+  "To which the acute and judicious proposer answers, 'Not.'"
+  <P>
+  <DIR><DIR><DIR>
+    <a href="http://plato.stanford.edu/entries/locke/" target=new>John Locke</a>, a propos <a
+    href="http://plato.stanford.edu/entries/molyneux-problem/"
+    target=new>Molyneux's Problem</a>,<BR> 
+    <I><a
+    href="http://oregonstate.edu/instruct/phl302/texts/locke/locke1/Essay_contents.html"
+    target=new>An Essay Concerning Human Understanding</a></I> [ii.ix.8] (1690)
+  </DIR></DIR></DIR>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>a CRUCIAL methodological point</h1>
+
+  <P><BR>
+  Understanding consciousness means finding out
+  <ul class="incremental">
+    <li><B>what kind of thing/process it is</B>;</li>
+    <li><B>why it is there</B>;</li>
+    <li><B>how it can be computed</B>;</li>
+    <li><B>how it <I>is</I> computed [by the brain]</B>.</li>
+  </ul>
+  <P>
+  <HR>
+  <ul class="incremental">
+    <img src="just-married-philosophy.png" height=225 class="figure-right">
+    <li>Compare this stance to the view from: <BR>
+    &#151; neuroscience;<BR>
+    &#151; social psychology;<BR>
+    &#151; philosophy.<BR>
+    </li>
+  </ul>
+  <P class="incremental">
+  What we're after is "a view from everywhere".
+  </P>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>what next</h1>
+
+  <img src="Magritte-son-of-man1964.jpg" class="figure-right" 
+  title="Son of Man (R. Magritte)" height=360>
+
+  <P>
+  <BR>
+  What next? Bite into the apple.
+
+  <P>
+  <embed src="APPLES.mov" autoplay=false controller=true height=360 width=500>
+
+</div>
+
+
+
+<!-- doc-lang: english -->
+</body>
+</html>

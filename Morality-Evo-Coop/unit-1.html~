@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computing Societies — Unit 1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2020 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 1 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computing Societies</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 1: General introduction</h2>
+  </div>
+<!--  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%> -->
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+<div  CLASS="slide">
+  <h1>Unit 1: computing societies — general introduction</h1>
+
+  <P>
+  <BR>
+    <ul>
+      <li>
+	The key disciplines:
+	<a href="https://en.wikipedia.org/wiki/Cognitive_psychology"
+	target=new>cognitive psychology</a>,
+	<a href="https://en.wikipedia.org/wiki/Social_psychology"
+	target=new>social psychology</a>,
+	<a href="https://en.wikipedia.org/wiki/Sociology"
+	target=new>sociology</a>, <a href="https://en.wikipedia.org/wiki/Ethology"
+	target=new>ethology</a>.
+      </li>
+      <li>
+	The centrality of evolutionary theory:
+	<DIR>
+	  <I>Nothing in biology makes sense except in the light of
+	    evolution</I> [Dobzhansky, 1973].
+	</DIR>
+      </li>
+      <li>
+	The multilevel nature of explanation in "special" sciences:
+	<ul>
+	  <li><I>On aims and methods in
+	      <a href="https://en.wikipedia.org/wiki/Ethology"
+		 target=new><B>ethology</B></a></I> [Tinbergen, 1963].</li> 
+	  <li><I>Cause and effect in biology</I> [Mayr, 1961].</li>
+	  <li><I>From understanding computation to understanding neural
+	    circuitry</I> [Marr and Poggio, 1977]. </li>
+	</ul>
+      </li>
+    </ul>
+  
+</DIV>
+
+
+  
+<div  CLASS="slide">
+  <h1>the key disciplines</h1>
+
+  <P>
+  <BR>
+    <ul>
+      <li>
+	<a href="https://en.wikipedia.org/wiki/Cognitive_psychology"
+	target=new>cognitive psychology</a> 
+      </li>
+      <li>
+	<a href="https://en.wikipedia.org/wiki/Social_psychology"
+	target=new>social psychology</a>
+      </li>
+      <li>
+	<a href="https://en.wikipedia.org/wiki/Sociology"
+	target=new>sociology</a>
+      </li>
+      <li>
+	<a href="https://en.wikipedia.org/wiki/Ethology"
+	   target=new>ethology</a>
+      </li>
+    </ul>
+
+</DIV>
+
+
+  
+
+<div  CLASS="slide">
+  <h1><I>On aims and methods in ethology</I> [Tinbergen, 1963]</h1>
+
+  <P>
+    <BR>
+      <a href="https://en.wikipedia.org/wiki/Nikolaas_Tinbergen"
+      target=new>Tinbergen</a>'s famous "four questions" that need to
+      be answered so that a particular behavior can be fully
+      understood (the first three
+      are <a href="https://en.wikipedia.org/wiki/Julian_Huxley"
+      target=new>Huxley</a>'s "three major problems of biology"):
+    <ul>
+      <li>
+	<I>Causation:</I> what traits and events caused the behavior?
+      </li>
+      <P>
+	<li>
+	  <I>Survival value:</I> how does the behavior affect the
+	  species survival?
+	</li>
+      <P>
+	<li>
+	  <I>Evolution:</I> how did it evolve in the species in question?
+	</li>
+      <P>
+	<li>
+	  <I>Ontogeny:</I> how does its development in the individual animal proceed?
+	</li>
+      </ul>
+
+</DIV>
+
+  
+
+<div  CLASS="slide">
+  <h1> Bateson & Laland, 2013 — a retrospective on Tinbergen, 1963</h1>
+
+  <img src="BatesonLaland13-fig1.png" class="figure-right" height=550>
+  <P>
+    <BR>
+      "Despite Tinbergen's emphasis on the need for an integrated
+      understanding, in few study systems have all four of Tinbergen's
+      questions been addressed. One such system is
+      <a href="https://en.wikipedia.org/wiki/Bird_vocalization"
+	 target=new>bird song</a>."
+      
+</DIV>      
+      
+      
+  
+<div  CLASS="slide">
+  <h1><I>Cause and effect in biology</I> [Mayr, 1961]</h1>
+
+  <P>
+  <BR>
+    <I>Functional biology.</I> The functional biologist is vitally
+    concerned with the operation and interaction of structural
+    elements, from molecules up to organs and whole individuals. His
+    ever-repeated question is "How?" How does something operate, how
+    does it function?
+    <P>
+    <I>Evolutionary biology.</I> The evolutionary biologist differs in
+    his method and in the problems in which he is interested.  His
+    basic question is "Why?"  When we say "why" we must always be
+    aware of the ambiguity of this term. It may mean "how come?," but
+    it may also mean the finalistic "what for?" It is obvious that the
+    evolutionist has in mind the historical "how come?" when he asks
+    "why?"
+    <P>
+      <DIR>
+	Is <a href="https://en.wikipedia.org/wiki/Causality"
+	target=new>CAUSE</a> the same thing in functional and
+	evolutionary biology?
+      </DIR>
+
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1><I>Cause and effect in biology</I> [Mayr, 1961]</h1>
+
+  <P>
+  <BR>
+    What is the cause of bird migration? Or more specifically: Why did
+    the <a href="https://en.wikipedia.org/wiki/Warbler"
+    target=new>warbler</a> on my summer place in
+    <a href="https://en.wikipedia.org/wiki/New_Hampshire"
+    target=new>New Hampshire</a> start his southward migration on the
+    night of the 25th of August? 
+    <OL>
+      <li>
+	<I>An ecological cause.</I> The warbler, being an insect
+	eater, must migrate, because it would starve to death if it
+	should try to winter in New Hampshire.
+      </li>
+      <li>
+	<I>A genetic cause.</I> The warbler has acquired a genetic
+	constitution in the course of the evolutionary history of its
+	species which induces it to respond appropriately to the
+	proper stimuli from the environment. On the other hand, the
+	<a href="https://en.wikipedia.org/wiki/Screech_owl"
+	target=new>screech owl</a>, nesting right next to it, lacks
+	this constitution and does not respond to these stimuli. As a
+	result, it is sedentary.
+      </li>
+      <li>
+	<I>An intrinsic physiological cause.</I>  The warbler flew
+	south because its migration is tied in with
+	<a href="https://en.wikipedia.org/wiki/Circadian_rhythm"
+	target=new>photoperiodicity</a>. It responds to the decrease
+	in day length and is ready to migrate as soon as the number of
+	hours of daylight have dropped below a certain level.
+      </li>
+      <li>
+	<I>An extrinsic physiological cause.</I>  Finally, the warbler
+	migrated on the 25th of August because a cold air mass, with
+	northerly winds, passed over our area on that day. The sudden
+	drop in temperature and the associated weather conditions
+	affected the bird, already in a general physiological
+	readiness for migration, so that it actually took off on that
+	particular day.
+      </li>
+    </OL>
+
+</DIV>
+
+
+  
+<div  CLASS="slide">
+  <h1><I>Cause and effect in biology</I> [Mayr, 1961]</h1>
+
+  <P>
+  <BR>
+    <UL>
+      <li><a href="https://en.wikipedia.org/wiki/Proximate_and_ultimate_causation"
+      target=new>proximate vs. ultimate</a> causes</li>
+      <P>
+	<li>prediction and  indeterminacy in biology</li>
+      <P>
+	<li>reasons for indeterminacy in biology</li>
+      </ul>
+    
+</DIV>
+
+  
+
+<div  CLASS="slide">
+  <h1><I>Cause and Effect in Biology Revisited</I> [Laland et al., 2011]</h1>
+
+  <img src="Laland11-fig1A.png" height=450 class="figure-right">
+  <P>
+    Graphs depicting the causal pathways involved in the evolution and
+    development of
+    <a href="https://en.wikipedia.org/wiki/Phenotypic_trait"
+    target=new>traits</a>. Arrows represent possible causal
+    influences; dashed lines represent features that persist over
+    time.
+  </P>
+  <P>
+    (A) <a href="https://en.wikipedia.org/wiki/Ernst_Mayr"
+	   target=new>Ernst Mayr</a>'s (1961) perspective.
+  </P>
+
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1><I>Cause and Effect in Biology Revisited</I> [Laland et al., 2011]</h1>
+
+  <img src="Laland11-fig1B.png" height=450 class="figure-right">
+  <P>
+  <BR>
+    (B) A modern developmental perspective. Red arrows denote additional
+    causal influences relative to (A) recognized by fields such as
+    <a href="https://en.wikipedia.org/wiki/Evolutionary_developmental_biology"
+    target=new>evo-devo</a> and
+    <a href="https://en.wikipedia.org/wiki/Niche_construction"
+    target=new>niche construction</a> theory. During development,
+    features of the trait cause changes in both gene expression and
+    environment, which feed back to the developmental process,
+    resulting in a different trait in the adult and modifications of
+    both developmental and selective environments. Development cannot
+    be considered purely proximately causal because it results in
+    additional causal pathways from the trait in one generation to the
+    trait in future generations.
+
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1><I>Cause and Effect in Biology Revisited</I> [Laland et al., 2011]</h1>
+
+  <img src="Laland11-fig2.png" height=500 class="figure-right">
+  <P>
+  <BR>
+    Alternative evolutionary processes.
+    <ol type=A>
+      <li>
+	<I>Biological evolution:</I> The ultimate explanation for the
+	behavior is its effect on biological
+	<a href="https://en.wikipedia.org/wiki/Fitness_(biology)"
+	target=new>fitness</a>. 
+      </li>
+      <li>
+	Cultural evolution: The behavior can be inherited
+	from the previous generation through intergenerational cultural
+	transmission and differential cultural selection. Here, the
+	ultimate explanation for the behavior is its effect on cultural
+	fitness.
+      </li>
+      <li>
+	Gene-culture coevolution: Genetically and culturally
+	inherited traits coevolve, with each trait affecting the fitness
+	of the other. [For illustration, trait 1 might be lactose
+	absorption and trait 2 dairy farming or milk use.]
+	Inheritance pathways are shown in red. For any given data set,
+	causal modeling can be used to establish whether a particular
+	causal influence is operating.
+      </li>
+    </ol>
+
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1><I>From understanding computation to understanding neural circuitry</I> [Marr and Poggio, 1977]</h1>
+
+  <P>
+  <BR>
+    "Complex systems cannot be understood as simple extrapolations of
+    the properties of their elementary components. [...]  The core of
+    the problem is that a system as complex as a nervous system or a
+    developing embryo must be analyzed and understood at several
+    different levels. For a system that solves an information
+    processing problem, we may distinguish four important levels of
+    description.
+    <P>
+      [HARDWARE] <BR> At the lowest, there is basic component and
+      circuit analysis — how do transistors, neurons, diodes, and
+      synapses work?
+    <P>
+      [MECHANISMS] <BR> The second level is that of particular
+      mechanisms: adders, multipliers, and memories accessed by
+      address or by content.
+    <P>
+      [ALGORITHM] <BR> The third level is that of the algorithm, and
+	...
+    <P>
+      [COMPUTATION] <BR> ... the top level contains the theory of the
+	overall computation.
+    <P>
+      In general, mechanisms are strongly determined by hardware, the
+      nature of the computation is determined by the problem, and the
+      algorithms are determined by the computation and the available
+      mechanisms."
+
+</DIV>
+
+
+
+<DIV  CLASS="slide">
+  <h1>the (Mayr & Tinbergen &) Marr & Poggio levels of analysis/understanding</h1>    
+  <P>
+  <ul>
+    <font color=red>
+    <li>Understanding <sc>the behavioral and evolutionary context and needs</sc>, shedding
+    light on computational problems that may need to be solved.
+    <DIR>
+      What does the animal do in general (to survive and procreate)?
+      In the present context? What are the effects of evolutionary pressures
+      on its behavior? What are its evolutionary roots?
+    </DIR>
+    </li>
+    </font>
+    <li>Understanding <SC>the computational problem</SC>, leading to a <SC>theory</SC>.
+    <DIR>
+      What <I>could be</I> the goal of the computation? What <I>is</I> the goal of the
+      computation, why is it appropriate, and what
+      is the logic behind the strategy by which it can be carried out?
+    </DIR>
+    </li>
+    <P>
+    <li>Understanding/developing <SC>representations and <a
+    href="http://en.wikipedia.org/wiki/Algorithm"
+    target=new>algorithms</a></SC> that solve the problem.
+    <DIR>
+      What <I>could be</I> the input and output representations and
+      the algorithm for mapping inputs to outputs? What <I>are</I> the
+      representations and algorithms in the given system?
+    </DIR>
+    </li>
+    <P>
+    <li>Understanding/developing <SC>the mechanism</SC> that implements the algorithm.
+    <DIR>
+      How <I>could</I> a given representation and algorithm be
+      realized physically? How <I>are</I> they realized in a given system?
+    </DIR>
+    </li>
+  </ul>
+
+</DIV>
+    
+
+
+
+<DIV  CLASS="slide">
+  <h1>levels of understanding and multiple realizability of computation</h1>
+
+  <P>
+  <BR>
+  <img src="Marr-levels.png" title="multiple realizability" height=500>
+
+</div>
+
+
+    
+<div class="footer">
+<p>Last modified: Tue Jul 7 2020 at 10:50:26 EDT</p>
+</div>
+</body>
+</html>

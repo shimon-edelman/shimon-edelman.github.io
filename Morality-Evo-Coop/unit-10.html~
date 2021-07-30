@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computing Societies — Unit 10</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2020 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 10 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computing Societies</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 10: political institutions</h2>
+  </div>
+<!--  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%> -->
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+<div  CLASS="slide">
+  <h1>political institutions</h1>
+
+  <P>
+    <ul>
+      <li>
+	<I>Political institutions and sorting in a
+	  <a href="https://en.wikipedia.org/wiki/Tiebout_model" target=new>Tiebout model</a></I>,
+	[Kollman, Miller, and Page, 1997]. 
+      </li>
+    </ul>
+  </P>
+
+  <a href="https://im-an-economist.blogspot.com/2012/07/voting-with-feet-part-1.html" target=new><img src="Tiebout-US-migration.png" class="figure-right" height=450></a>
+    <P>
+      This paper describes a computational model
+      of <a href="https://en.wikipedia.org/wiki/Tiebout_model"
+      target=new>Tiebout</a> competition and shows that political
+      institutions differ in their ability to sort citizens
+      effectively. In particular, we find that certain types of
+      institutions — those that become more "politically unstable" as
+      citizen heterogeneity increases — perform relatively poorly
+      given a single jurisdiction, yet these same institutions perform
+      relatively well when there are multiple jurisdictions.  An
+      explanation for this phenomenon is offered, which draws upon
+      <a href="https://en.wikipedia.org/wiki/Simulated_annealing"
+       target=new>simulated annealing</a>, a discrete nonlinear
+       <a href="https://en.wikipedia.org/wiki/Search_algorithm"
+       target=new>search algorithm</a>.
+    </P>
+    <P>
+      On the right: Americans "voting with their feet" in choosing
+      which state to live in (click on the image for details). 
+    </P>
+      
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>introduction</h1>
+
+  <P>
+    Political or economic institutions are often evaluated by their
+    ability to structure micro-level incentives to be in agreement
+    with macro-level goals. In many important situations, micro- level
+    incentives are consistent with multiple equilibria, and one role
+    of institutions may be to steer agents in the direction of
+    configurations of highest aggregate utility.
+  </P>
+  <P>
+    This paper compares the performance of three common political
+    institutions — (i) democratic referenda, (ii) direct competition,
+    and (iii) proportional representation — in a model of Tiebout
+    competition. We examine the ability of alternative political
+    institutions to induce better sorting of citizens among competing
+    local jurisdictions, where better sorting means higher aggregate
+    utility among citizens.
+  </P>
+  <P>
+    While the focus of this paper is on Tiebout models, the underlying
+    process we analyze — the decentralized sorting of interacting
+    individuals — is of much broader interest, playing a role in labor
+    markets, industrial location, and coalition formation.
+  </P>
+  <P>
+    In a Tiebout model, local jurisdictions compete for citizens by
+    offering bundles of public goods. Citizens then sort themselves
+    among jurisdictions according to their preferences. Our focus on
+    dynamics (as opposed to final equilibrium states), and the use of
+    institutions that resemble those actually employed (versus a
+    fictional, profit-maximizing entrepreneur), distinguish our work
+    from prior research on the Tiebout hypothesis.
+  </P>
+   
+</DIV>    
+    
+
+
+<div  CLASS="slide">
+  <h1>the model</h1>
+
+  <P>
+    We construct a simple version of a Tiebout world. Agents
+    (citizens) seek their favorite location from among a fixed set of
+    jurisdictions each of which offers a particular
+    <a href="https://en.wikipedia.org/wiki/Party_platform"
+    target=new>platform</a> of local public goods and policies. Each
+    jurisdiction's platform is then determined by a political
+    institution that aggregates the preferences of the agents
+    currently residing in the jurisdiction. Once new platforms are
+    determined, agents are allowed to move, and the above process is
+    iterated. Agents do not take into account the effects of their own
+    movements on future policies.
+  </P>
+  <P>
+    There are \(N_a\) agents, each residing in one of \(N_j\) possible
+    jurisdictions. Within any jurisdiction, the local government must
+    decide binary (Yes/No) positions on a set of \(N_i\) local public
+    issues (examples: whether or not to build a community swimming
+    pool; whether or not to allow smoking in public buildings).
+  </P>
+  <P>
+    Let \(p_{ji} \in \{Yes, No\}\) be the position of jurisdiction
+    \(j\) on issue \(i\); the vector of those is the platform
+    \(\textbf{P}_j \in \{Yes, No\}^{N_i}\). The utility of agent \(a\)
+    from \(\textbf{P}_j\) is
+    $$
+    u_a(\textbf{P}_j) = \sum_1^{N_i} \nu_{ai}\cdot \delta(p_{ji})
+    $$
+    where \(\delta(Yes)=1\) and \(\delta(No)=0\). The expected value
+    to an agent of an arbitrary platform is 0, and the expected
+    value of its optimal platform is 100. 
+  </P>
+  
+</DIV>    
+    
+
+
+<div  CLASS="slide">
+  <h1>political institutions</h1>
+
+  <P>
+    <ul>
+      <li>
+	<B>Democratic referenda</B>: simple majority rule on each
+	issue. Generally speaking, democratic
+	<a href="https://en.wikipedia.org/wiki/Referendum"
+	target=new>referenda</a> adopt platforms of relatively high
+	aggregate utility given a group of agents. Democratic
+	referenda are relatively stable, since the implied platform is
+	unique and in- dividual agents migrating into or out of a
+	jurisdiction rarely change the platform.
+      </li>
+      <li>
+	<B>Direct Competition</B>:
+	<a href="https://en.wikipedia.org/wiki/Plurality_voting"
+	target=new>winner-take-all plurality voting</a> among parties
+	advocating different platforms. Each agent votes for the party
+	proposing the platform that yields for it the highest utility;
+	the winning party wholly implements its platform in the
+	jurisdiction. Direct competition may not be as stable as
+	democratic referenda: policy predictions cannot be guaranteed
+	to produce unique solutions without severe restrictions on
+	preferences.
+      </li>
+      <li>
+	<B>Proportional Representation</B>: each agent votes for a
+	single party, and each party receives a number of seats in a
+	decision-making body
+	<a href="https://en.wikipedia.org/wiki/Proportional_representation"
+	target=new>proportional to its popular vote</a>. The present
+	models assumes no distortion between the percentage of the
+	vote that a party receives and the percentage of seats it
+	obtains in the legislature.
+	</li>
+      </ul>
+  </P>
+   
+</DIV>    
+ 
+
+
+<div  CLASS="slide">
+  <h1>parties</h1>
+
+  <P>
+    Parties are modeled as incrementally adaptive and incompletely
+    informed. This contrasts with standard rational choice approaches
+    in which parties are either completely informed optimizers (with
+    knowledge of each voter's utility function) or act as
+    <a href="https://en.wikipedia.org/wiki/Bayesian_inference"
+    target=new>Bayesians</a>.
+  </P>
+  <P>
+    In reality, practical considerations impose restrictions on a
+    party's computational ability, the amount and type of information
+    it has access to, and on the maximum allowable policy change it
+    can make in any one election. For example, parties rely on
+    imperfect and imprecise polling data to gather information about
+    voters' preferences, and must restrict platform changes from year
+    to year to maintain both credibility and a coherent organization.
+  </P>
+  <P>
+    Adaptivity is modeled by
+    <a href="https://en.wikipedia.org/wiki/Hill_climbing"
+    target=new>hill-climbing</a>. A randomly generated current
+    platform is given to each party prior to any elections. When a
+    party is given a chance to adapt, it first generates a new
+    platform by randomly perturbing its current platform on up to
+    three issues. Thus, the new platform is constrained to lie in a
+    neighborhood of the current one. If the new platform yields a
+    higher vote total, it becomes the party's current platform; other-
+    wise the current platform remains unchanged. This search process
+    continues for eight iterations. Hill-climbing always bases its
+    search on the current best-known platform. After the eighth
+    iteration, another party is given a similar chance to adapt. After
+    each party adapts, we return to the first party and begin a new
+    cycle of adaptation.
+  </P>
+   
+</DIV>    
+    
+
+
+<div  CLASS="slide">
+  <h1>single-jurisdiction findings</h1>
+
+  <img src="Kollman97-tab1.png" class="figure-right">
+  <P>
+    All results are from a model with 1,000 agents and 11 binary
+    issues. 
+  </P>
+  <P>
+    First, each agent is assigned random preferences and placed in a
+    random jurisdiction. Next, a series of ten Tiebout cycles is
+    initiated. In each cycle, agents are first allowed to
+    relocate. Each agent then moves to the jurisdiction which offers
+    it the highest utility. Each jurisdiction then modifies its
+    platform. Under democratic referenda, it adopts the median
+    position on each issue. With direct competition and proportional
+    representation, parties alternate adapting their platforms via
+    hill-climbing.
+  </P>
+   
+</DIV>    
+    
+
+
+<div  CLASS="slide">
+  <h1>multiple jurisdictions</h1>
+
+  <img src="Kollman97-tab2.png" height=275>
+  <P>
+    With multiple jurisdictions agents can begin to sort according to
+    their preferences. As long as jurisdictions are responsive to
+    constituencies, aggregate utility should be nondecreasing in the
+    number of jurisdictions, and will likely increase as multiple
+    jurisdictions are better able to sort agents by preferences.
+    Indeed, for all institutions considered, per capita utility
+    increases with the number of jurisdictions. The addition of even a
+    few jurisdictions allows a dramatic increase in utility.
+  </P>
+  <P>
+    While the increase in utility was expected, what was not
+    anticipated was that the performance of the various political
+    institutions completely reverses. Democratic referenda, which were
+    best in the one-jurisdiction model, are now worst, while
+    proportional representation now performs best. With seven or more
+    jurisdictions, three-party proportional representation is
+    significantly better than two-party direct competition, which is
+    significantly better than democratic referenda.
+
+  </P>
+   
+</DIV>    
+    
+
+
+<div  CLASS="slide">
+  <h1>mathematical insight into the optimization power of political instability</h1>
+
+  <P>
+    With multiple jurisdictions, the lack of a unique outcome — in
+    other words, the <B>instability</B> associated with a political
+    institution — may induce sorting and increase aggregate
+    utility. This increase in utility requires a temporary decrease of
+    utility in a given jurisdiction in order to induce agent
+    migration. However, the migration eventually leads to a higher
+    aggregate utility for the overall system.
+  </P>
+  <P>
+    Specifically, democratic referenda yielded a unique platform in
+    each jurisdiction, while direct competition led to instability
+    less, because it may alternate platforms from among those
+    available in the top-cycle set. This instability can be
+    interpreted as <I>making mistakes</I>, in the sense that the platforms
+    chosen by direct competition typically have lower utility than the
+    median platforms generated by democratic referenda. As this study
+    showed, these mistakes can be useful in the long run, as they
+    allow the system to break out of old equilibrium and to form new
+    configurations of agents that promote the creation of new,
+    utility-improving equilibria. 
+  </P>
+  <P>
+    Mathematically, this resembles
+    <a href="https://en.wikipedia.org/wiki/Mathematical_optimization"
+    target=new>optimization</a> by
+    <a href="https://en.wikipedia.org/wiki/Simulated_annealing"
+    target=new>simulated annealing</a>. Institutions that make more
+    mistakes in relatively low-valued configurations will enable the
+    system to act "as if" it recognizes the potential value of a local
+    optimum and to escape inferior equilibria.
+  </P>
+  <P>
+    The dynamics of the present model generate this fortuitous bias in
+    error-making. If agents in a configuration are not very
+    homogeneous at each jurisdiction, aggregate utility will be low,
+    and direct competition will generate new platforms which render
+    the existing configuration unstable. If, however, the agents in a
+    configuration are homogeneous at each jurisdiction, aggregate
+    utility will be high and platforms will be stable. Thus, Tiebout
+    equilibria with respect to direct competition are biased towards
+    those platforms and agent configurations with higher aggregate
+    utility.
+  </P>
+   
+</DIV>    
+    
+
+
+<div  CLASS="slide">
+  <h1>the power of political instability (cont.)</h1>
+
+  <img src="Kollman97-tab4.png" height=300>
+  <P>
+    If instability in the better performing institutions induces
+    superior sorting, then we should observe significantly more
+    relocations of agents under the better institutions. This table
+    shows the average number of agent relocations observed during each
+    ten- cycle trial. As predicted, the performance of a given
+    institution is closely tied to the number of relocations
+    observed.
+  </P>
+   
+</DIV>    
+    
+
+
+<div  CLASS="slide">
+  <h1>conclusions</h1>
+
+  <P>
+    In a model of Tiebout competition with multiple jurisdictions,
+    some political institutions perform better than others by inducing
+    better agent sorting and thereby generating higher aggregate
+    utility. Ironically, these same institutions often perform
+    relatively poorly in a single-jurisdiction model. The reason for
+    this performance reversal is that multiple jurisdictions create a
+    system with multiple equilibria. A minor mistake, which is harmful
+    in the single-jurisdiction model, may be beneficial in the
+    multiple-jurisdiction model since it can dislodge the system from
+    a relatively bad local optimum, and induce agents to re-sort
+    themselves into a better configuration.
+  </P>
+  <P>
+    The notion that institutions can act as natural annealing
+    mechanisms may be useful in understanding the dynamic behavior and
+    performance characteristics of many other systems. Tiebout models
+    are just one example of a broad class of phenomena that must
+    "sort" agents among alternative configurations with multiple
+    equilibria. Other examples include traders pairing off in markets,
+    laborers finding jobs, firms choosing production sites or product
+    attributes, and individuals forming organizations. Under
+    decentralized sorting mechanisms, these systems may get trapped in
+    suboptimal configurations. If, however, there are means by which
+    these poor configurations can be annealed in an appropriate
+    manner, then the global system can escape these traps and achieve
+    superior outcomes.
+  </P>
+    
+</DIV>    
+    
+
+
+  
+<div class="footer">
+<p>Last modified: Wed Jul 29 2020 at 22:36:52 EDT</p>
+</div>
+</body>
+</html>

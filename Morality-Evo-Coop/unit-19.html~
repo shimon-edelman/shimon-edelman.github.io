@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computing Societies — Unit 19</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2020 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 19 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computing Societies</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 19: case study: morality (cont.)</h2>
+  </div>
+<!--  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%> -->
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+<div  CLASS="slide">
+  <h1>the emergence of conscience</h1>
+
+  <P>
+    <ul>
+      <li>
+	<I>How selfish genes beget selfless beings: the evolution of
+	  conscience</I> [Smirnova and Odouard, 2020].
+      </li>
+    </ul>
+  </P>
+  <P>
+    The Python/Mesa code for this project is available
+    <a href="Evolution-Of-Conscience-master.zip" target=zip>HERE</a>
+    (courtesy of Diana Smirnova and Victor Odouard).
+  </P>
+  <P>
+    Because our consciences urge cooperation even towards those who
+    are not our kin (inclusivity), and even when no one is watching
+    (sincerity), it eludes many of the previously given explanations
+    for the evolution of cooperation, such as reciprocity, kin
+    selection, and even punishment (which can only occur when
+    behaviors are observed). While group-level selection is a
+    candidate cause, in previous studies of agent-based models has
+    demonstrated a limited capacity to evolve cooperation in large
+    groups. In our model, conscience is, for the first time,
+    represented by more than a simple “always cooperate” strategy, as
+    it is affected by the behaviors of other individuals in
+    society. We believe this is what allows conscience to grow and
+    thrive, even in large societies. Thus, we propose the group-level
+    evolution of conscience as a major catalyst for cooperation in
+    large (>1000 people) human societies.
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the problem of truly selfless morals</h1>
+
+  <P>
+    Ever since Darwin himself pointed it out, it has been known that
+    a trait that predisposes its carrier to altriusm is not
+    evolutionarily stable.
+  </P>
+  <P>
+    The persistence of predisposition to truly selfless behavior (as
+    opposed to mere tit-for-tat) is particularly difficult to explain.
+    Conscience, and its constituent moral emotions such as guilt and
+    shame, is a powerful force that promotes moral behavior. However,
+    there are two characteristics of conscience that make it difficult
+    to explain evolutionarily:
+    <ul>
+      <li>
+	<I>Sincerity</I>. Conscience remains in force even when no one
+	is looking.
+      </li>
+      <li>
+	<I>Inclusivity</I>. Conscience prods us into altruism towards
+	all members of our community–not just our kin.
+      </li>
+    </ul>
+  </P>
+  <P>
+    Note that sincerity precludes a purely reciprocal explanation for
+    conscience, since reciprocity only works when others are aware of
+    your actions. Inclusivity, on the other hand, clearly precludes a
+    kin-based explanation for conscience.
+  </P>
+  <P>
+    How could sincere and inclusive conscience have evolved? Here, we
+    explore whether multi-level selection could have done it, using an
+    agent-based model to simulate both the intra- and inter-group
+    evolutionary dynamics of societies. Specifically, we explore the
+    hypothesis that conscience can act as an internal enforcer of
+    cooperation. This in turn makes some societies as an aggregate
+    more fit, allowing them to outcompete other societies (as Darwin
+    originally proposed).
+  </P>
+   
+</DIV>    
+    
+
+
+<div  CLASS="slide">
+  <h1>the main characteristics of our model</h1>
+
+  <P>
+    <ol>
+      <li>
+	<I>Cooperation/Defection choice</I>: at each time step, each
+	agent has a choice of whether to cooperate or defect. These
+	choices are abstract, but they can be thought of as
+	corresponding to concrete behaviors, such as helping on a
+	group hunt, or stealing from the group.
+      </li>
+      <li>
+	<I>Reward scheme</I>: agents who cooperate must pay an
+	individual cost to cooperate, but they also produce a public
+	benefit greater than the cost they incur. Defectors simply
+	free-ride off the public benefit.
+      </li>
+      <li>
+	<I>Individual selection</I>: low-fitness individuals die off,
+	while high-fitness individuals survive and pass on their
+	strategy to offspring.
+      </li>
+      <li>
+	<I>Inter-group selection</I>: groups compete with each other,
+	either through direct conflict or indirect competition for
+	resources.
+      </li>
+    </ol>
+  </P>
+  <P>
+    Notice that individual selection and inter-group selection are in
+    conflict. Conscience-equipped individuals under-perform, but
+    conscience equipped groups over-perform. Thus, the only way for
+    conscience to win out is for the group advantage afforded by
+    conscience to outweigh the individual costs.
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>clarification of terms</h1>
+
+  <P>
+    There are differences between altruistic, cooperative, and
+    moral behaviors.  We suggest that they form nested sets:
+    $$ \text{altruistic behaviors} \subset \text{cooperative behaviors}
+    \subseteq \text{moral behaviors} $$
+  </P>
+  <P>
+    The inclusion of (and perhaps the identity between) the set of
+    cooperative behaviors and the set of moral behaviors is supported
+    by the study of morality in 60 societies by Curry et al. (2019).
+    As for altruism, only a subset of cooperative acts are considered
+    altruistic – cooperative acts made voluntarily, in the absence of
+    any quid pro quo external rewards. Thus, every altruistic act is
+    cooperative, but not every cooperative act is altruistic (for
+    instance, reciprocity is cooperative, but altruistic).
+  </P>
+  <img src="Smirnova20-tab4.png" class="figure-right" height=300>
+  <P>
+    We define conscience as a combination of
+    <ol>
+      <li>
+	the capacity to absorb moral norms, and
+      </li>
+      <li>
+	internal enforcement of those norms.
+      </li>
+    </ol>
+  </P>
+  <P>
+    Enforcement is mediated by emotions such as guilt and
+    shame. Because it is internal, the acquisition of conscience can
+    be thought of as the internalization of community standards.
+  </P>
+
+</DIV>
+
+    
+
+<div  CLASS="slide">
+  <h1>to cooperate or not?</h1>
+
+  <P>
+    Because we use cooperation as a proxy for morality, we can build
+    on past research into the evolutionary stability of cooperation in
+    groups.
+  </P>
+  <table>
+    <tr>
+      <th>
+	mutualistic cooperation
+      </th>
+      <th>
+	Prisoner’s Dilemma 
+      </th>
+    </tr>
+    <tr>
+      <td style="text-align:center">
+	<img src="Smirnova20-tab1.png" height=200>
+      </td>
+      <td style="text-align:center">
+	<img src="Smirnova20-tab2.png" height=200>
+      </td>
+    </tr>
+    <tr>
+      <td>
+	In the simple situation described by this payoff matrix,
+	cooperation is the dominant strategy: it benefits both
+	parties, and there is no opportunity for a free-rider to
+	refrain from cooperating and still gain benefit. Example:
+	ox-peckers eat pests of rhinoceroses and zebras, providing the
+	ox-pecker with food and the zebra with pest control.
+      </td>
+      <td>
+	In a
+	<a href="https://en.wikipedia.org/wiki/Prisoner%27s_dilemma"
+	target=new>Prisoner’s Dilemma</a> situation, a cooperating
+	agent produces a benefit of 2 for the other player, but must
+	pay an individual cost of 1. While the aggregate benefit is
+	highest if both agents choose to cooperate, the dominant
+	strategy for both agents is to defect, and “free-ride” off the
+	good that the other agent produced.
+      </td>
+    </tr>
+  </table>
+
+      <P>
+	In our model, agents face a choice between cooperation and
+	defection similar to the iterated version of the
+	<a href="https://en.wikipedia.org/wiki/Prisoner%27s_dilemma"
+	target=new>Prisoner’s Dilemma</a>. 
+      </P>
+   
+</DIV>    
+    
+
+
+    
+<div  CLASS="slide">
+  <h1>the model</h1>
+
+  <img src="Smirnova20-tab3.png" class="figure-right" height=250>
+  <P>
+    In a series of rounds, agents choose whether to cooperate or
+    defect. In any given round, each agent has a certain probability
+    of having its actions observed. Each agent is aware of its
+    probability of being caught and can make decisions based on
+    this.
+  </P>
+  <P>
+    This allows us to distinguish between sincere and insincere
+    strategies. Agents who cooperate even when they have a low
+    probability of being observed can be said to have conscience — an
+    internal enforcer.
+  </P>
+  <P>
+    Agent strategies are driven by the payoff matrix. In each round,
+    every agent gets a base increase \(f\) in fitness. The agents can
+    also choose to cooperate, in which case they incur a cost \(c\),
+    but produce a benefit \(b > c\), since cooperation should produce
+    a benefit greater in sum than the costs incurred by the individual
+    agents (why else would cooperation be beneficial?). Agents who are
+    observed to have defected do not receive any of the collective
+    benefit, while everyone else gets an equal share, represented by
+    \(\bar{b}\). Therefore, this model contains an element of
+    punishment, but only for observed defectors. This leaves room for
+    conniving agents to cooperate only when they are likely to be
+    observed (the antithesis of conscience).
+  </P>
+   
+</DIV>    
+    
+  
+
+  
+<div  CLASS="slide">
+  <h1>the four types of agents</h1>
+
+  <P>
+    Each agent is characterized by one of four strategies, which guide
+    their decision on whether to cooperate or defect. Their strategy
+    corresponds to the “default choice,” which they will follow with
+    probability \(1−\epsilon\); with probability probability
+    \(\epsilon\) they deviate from their default choice.
+    <ol>
+      <li>
+	<I>Miscreants</I> defect by default.
+      </li>
+      <li>
+	<I>Deceivers</I> essentially act as reward-maximizers, by
+	predicting cooperation and defection payoffs. These are
+	estimated from the benefits of cooperation from the previous
+	round and their probability of being observed in the current
+	round. Expected payoff from cooperating is calculated as \(f_c
+	= f − c + \bar{b}_{t−1}\) and the expected payoff from
+	defecting as \(f_d = f + (1 − p_{obs}) \bar{b}_{t−1}\). When
+	\(f_c \geq f_d\), they cooperate by default; otherwise, they
+	defect by default.
+      </li>
+      <li>
+	<I>Citizens</I> act based on how many agents cooperated in the
+	previous round. When the proportion of other agents that
+	cooperated reached a threshold \(T\), they cooperate by
+	default; otherwise, they act as reward-maximizers.
+      </li>
+      <li>
+	<I>Saints</I> cooperate by default.
+      </li>
+    </ol>
+  </P>
+  <P>
+    Note that deceivers may act cooperatively at times, but never
+    altruistically: their cooperation is always
+    self-interested. Citizens, on the other hand, can be said to have
+    a conscience, because their morality (the choice to cooperate)
+    does not depend on whether or not they are being watched.  That
+    said, citizens only feel pressure from their conscience <I>if
+    other agents are cooperating</I>. Thus, conscience is often
+    conditioned on the feeling that those around you are doing their
+    part, but importantly, not on the likelihood of getting caught.
+  </P>
+  
+</DIV>    
+    
+
+
+<div  CLASS="slide">
+  <h1>multilevel selection</h1>
+
+  <P>
+    The agents of various types compete with each other through a
+    mechanism of survival and reproduction: agents with lower fitness
+    are more likely to die, and agents with higher fitness are more
+    likely to reproduce (and pass their strategy on to their
+    offspring). This occurs in such a way as to keep group sizes
+    constant.
+  </P>
+  <P>
+    This individual selection process will clearly favor the
+    reward-maximizers. To incorporate multi-level selection, we also
+    include a mechanism by which groups are randomly paired, and, with
+    some probability, engage in conflict. The likelihood of victory
+    for group \(i\) in a conflict with group \(j\) is
+
+    $$
+    \frac{1}{2} \left(1 + \frac{F_i − F_j}{F_i + F_j}\right)
+    $$
+    
+    where \(F_i\) is the aggregate fitness of group \(i\). The higher
+    group \(i\)’s aggregate fitness is in comparison to group \(j\),
+    the more likely group \(i\) is to be victorious.
+  </P>
+  <P>
+    The level of cooperation within a group is directly proportional
+    to aggregate fitness of its members, so groups with higher levels
+    of cooperation have a higher average fitness than groups with
+    lower levels of cooperation or no cooperation at all. Thus,
+    cooperative groups have an advantage in conflicts against other
+    groups.
+  </P>
+  <P>
+    Now, if the citizens manage to outcompete the deceivers, it would
+    be a momentous achievement.  After all, deceivers are
+    reward-maximizers. The dominance of citizens, then, would signify
+    (at least the start of) a transfer of evolutionary focus from the
+    individual to the group.
+  </P>
+  
+</DIV>
+
+
+ 
+  
+<div  CLASS="slide">
+  <h1>effects of benefit-to-cost ratio and base fitness</h1>
+
+  <img src="Smirnova20-fig1.png" class="figure-right" height=400>
+  <P>
+    We found that group-level selection was sufficient to bring about
+    the evolution of conscience, when the ratio of the public benefit
+    to individual cost was high enough. This result persisted even as
+    group sizes became large, of over one thousand members.
+  </P>
+  <P>
+    Almost all simulations we ran ended with either complete dominance
+    of the miscreant-deceiver population, or complete dominance of the
+    citizen-saint population. <small> Once these equilibria were
+    reached, the two surviving agent types would either always defect
+    (in the former case) or always cooperate (in the latter case) so
+    they became essentially evolutionarily indistinguishable and one
+    type did not go on to dominate the other. However,
+    pre-stabilization, citizens tended to outperform saints, since
+    they are harder to take advantage of, and thus usually saints were
+    less numerous in final equilibria.  An analogous observation holds
+    for deceivers and miscreants: pre-stabilization, deceivers tended
+    to perform better than miscreants, since they could cooperate if
+    it would likely be personally advantageous (for instance, if they
+    were very likely to get caught in defection). However, once
+    matters stabilized to an all-defection scenario, getting caught
+    was immaterial since the punishment in our model was deprivation
+    from the group benefit–but when everyone is defecting, there is no
+    group benefit to be deprived of.</small>
+  </P>
+  <P>
+    By far the most important factor in determining whether conscience
+    could evolve was the ratio of group benefit to individual
+    cost. Almost all simulations we ran with the 3.25 ratio converged
+    to all-defection scenarios, while the simulations with the 3.75
+    almost always converged to all-cooperation scenarios. Thus there
+    is a clear tipping point here–only a small change in this ratio
+    leads us from one extreme to another. Base fitness was also a very
+    influential factor, especially at the frontier.
+  </P>
+
+  
+</DIV>    
+    
+
+
+  
+<div  CLASS="slide">
+  <h1>effect of migration rate</h1>
+
+  <img src="Smirnova20-fig2.png" class="figure-right" height=250>
+  <P>
+    We had expected that migration would have a negative effect on the
+    evolution of conscience. This is because conscience, under our
+    hypothesis, requires us to treat the group, rather than the
+    individual, as the ultimate unit of selection. But if there is a
+    high level of migration between groups, the unit cohesion of the
+    group is compromised.
+  </P>
+  <P>
+    The findings, however, were not so simple.  First, the migration
+    rate was certainly a secondary factor to the benefit-to-cost
+    ratio. We experimented with the migration rate at the
+    frontier–that is, with a benefit-to-cost ratio equal to 3.5, and
+    we observed a U-shaped pattern in its impact.
+    <small>
+    <ol>
+      <li>
+	With a migration rate of 0, all runs stabilized to
+	citizen-saint dominance.
+      </li>
+      <li>
+	With a migration rate of 0.1, deceiver-miscreant dominance
+	occurred in a minority of runs: 13 runs ended with virtual
+	citizen saint dominance (fewer than 3% defectors, usually 0),
+	6 runs ended with absolute deceiver-miscreant dominance, and 1
+	was somewhat ambiguous with mostly citizen-saint dominance,
+	but 1000 straggling deceivers.
+      </li>
+      <li>
+	With a migration rate of 0.2, the results were similar to 0.1:
+	13 runs ended with citizen-saint dominance, and 7 with
+	deceiver-miscreant dominance. Interestingly, here all
+	dominance was absolute: each run ended with 100%
+	miscreant-deceiver, or 100% saint-citizen.
+      </li>
+      <li>
+	With a migration rate of 0.3, 18 runs ended with citizen-saint
+	dominance and 2 with deceivermiscreant dominance. Again,
+	dominance of either type of agent was absolute.
+      </li>
+      <li>
+	With a migration rate of 0.4, or 0.5, all runs ended with
+	citizen-saint dominance.
+      </li>
+    </ol>
+    </small>
+  </P>
+   
+</DIV>    
+    
+
+
+  
+<div  CLASS="slide">
+  <h1>effect of conflict rate</h1>
+
+  <img src="Smirnova20-fig3.png" class="figure-right" height=250>
+  <P>
+    Group conflict, on the other hand, had more predictable
+    results. For a rate of 0 (no conflict), citizensaints only
+    dominated in 4 out of 20 runs. Then with a rate of 0.1, they
+    dominated in 12 runs, peaking at a rate of 0.3 with citizen-saint
+    dominance in 19 out of 20 runs. This, of course, is what we
+    expect: in this model, conflict is the driver of group-level
+    selection.
+  </P>
+   
+</DIV>    
+    
+
+
+  
+<div  CLASS="slide">
+  <h1>starting at a disadvantage</h1>
+
+  <P>
+    Most of our runs started out with equal numbers of miscreants,
+    deceivers, saints, and citizens. To find out whether or not a
+    small population of citizens or saints can “take over” if they
+    start off as a minority (which they are likely to be when they
+    first evolve), we tried starting with an initial distribution
+    dominated by deceivers and miscreants.
+  </P>
+  <P>
+    In these runs, only 2% of the agent population started off as
+    citizens or saints.  At our frontier, with a benefit-to-cost equal
+    to 3.5, conscience was never able to make it out–all runs ended
+    with a deceiver-miscreant dominance. In fact, a benefit to cost
+    ratio of 7, double that of our usual frontier, was required for
+    conscience to come up from behind. With this value, 17 out of 20
+    runs in citizen-saint dominance.
+  </P>
+  <P>
+    We also tried another scenario, in which there was a single group
+    completely dominated by citizens and saints. Could this group, due
+    to its greater efficiency, outcompete the others and thus multiply
+    across the map? Perhaps surprisingly, the answer was no, at least
+    with the migration rate we had been using. We had to reduce
+    migration to 1/10 of the initial parameter value (from 0.1 to
+    0.01) before certain runs ended with citizen-saint-dominance. With
+    a migration rate of 0.01, 12 of 20 runs ended in citizen-saint
+    dominance, whereas with a rate of 0.1, all runs ended with
+    deceiver-miscreant dominance.
+  </P>
+   
+</DIV>    
+    
+
+
+  
+<div  CLASS="slide">
+  <h1>discussion: level transitions</h1>
+
+  <P>
+    One way to think about this research is that it studies the
+    question, at what point does the dominance of one level of natural
+    selection (the social group) surpass the level below it?
+  </P>
+  <P>
+    Our major finding is that the primary quantity of interest is the
+    ratio of group benefit to individual cost. Specifically, the
+    benefit-to-cost ratio seems to have some threshold, which might
+    depend on certain parameters such as migration, after which the
+    individual loses priority to the group.
+  </P>
+  <P>
+    Interestingly, this threshold seems to be robust to changes in
+    group size. In our case, this threshold was about
+    3.5. Furthermore, reaching this threshold leads to a sudden tip
+    from one extreme to the other. There is no stability in the middle
+    ground.
+  </P>
+   
+</DIV>    
+    
+
+
+  
+<div  CLASS="slide">
+  <h1>the initial bump</h1>
+
+  <P>
+    The "threshold" benefit-to-cost ratio of 3.5 is quite high. A
+    species that knows how to cooperate this well must have gradually
+    worked up to this high efficiency-of-cooperation. How could this
+    have happened?
+  </P>
+  <P>
+    It is something like a chicken-and-egg situation. Conscience
+    encourages cooperation. But in order for conscience to evolve, the
+    benefits of cooperation must be extremely high. Thus, there needs
+    to be an initial, non-conscience, catalyst of cooperation, that
+    allows the species to “practice” cooperating.  Through this
+    practice, a species can gradually increase the benefit-to-cost
+    ratio of cooperation.
+  </P>
+  <P>
+    This seems to be the role that self-interested cooperation
+    mechanisms, such as mutualistic cooperation, reciprocity, and kin
+    altruism, played in the beginning. These, after all, were the
+    first types of cooperation to evolve–they exist widely throughout
+    the animal kingdom, contrary to conscience. It is plausible that
+    they provided that initial bump, in a sense, that allowed
+    cooperation to pull itself up by its bootstraps in the human
+    population. Then, once the conscience threshold was met, the
+    conditions for conscience to mushroom throughout the population
+    became ripe. Thus, initial cooperation sets off a positive
+    feedback loop, by allowing conscience to evolve, which
+    subsequently sparks even greater cooperation.
+  </P>
+   
+</DIV>    
+    
+
+
+  
+<div  CLASS="slide">
+  <h1>emergence and stability</h1>
+
+  <img src="" class="figure-right" height=250>
+  <P>
+    Is a conscience-dominated equilibrium, in which all groups exhibit
+    dominance of citizens and saints, stable?
+  </P>
+  <P>
+    From our experimental results, the answer seems to be a tentative
+    yes. Whenever, in our simulations, the number of
+    miscreant-deceivers dipped below a certain level, they would
+    invariably go all the way down to zero.
+  </P>
+  <P>The dynamics of this are probably quite interesting an deserve to
+    be explored, because one might expect that an intelligent
+    free-rider might be able to do quite well in a society where
+    everyone is dutifully producing a public good. Here we hypothesize
+    that any group that succumbs to an invasion of deceivers would
+    quickly get quashed by another group that has achieved full
+    cooperation.
+  </P>
+  <P>
+    We found that a minority of groups that have come to be dominated
+    by conscience-possessing individuals can go on to outcompete
+    groups of more selfish individuals, eventually replacing
+    them. However, this only occurs when migration rates are very
+    low. When migration rates are too high, deceiver-miscreant
+    populations begin to infiltrate the small number of conscience
+    groups and “destroy them from within” by free-riding off of the
+    altruistic individuals in those groups. Thus, the conditions for
+    the initial emergence of conscience and the initial spread of
+    conscience are both relatively delicate.
+  </P>
+   
+</DIV>    
+    
+
+
+  
+<div  CLASS="slide">
+  <h1>summary</h1>
+
+  <P>
+    We examined a simple group selection mechanism for the evolution
+    of conscience and found that even with large group sizes (> 1000)
+    conscience – and thus cooperation — was able to flourish.
+  </P>
+  <P>
+    Earlir work on the evolution of conscience found that group
+    selection failed to produce cooperation in large societies [Boyd
+    et al., 2003]. How was our simulation different?
+    <ol>
+      <li>
+	 It contained more sophisticated cooperation strategies, which
+	 as it turns out, more accurately mirror how our conscience
+	 actually works. Many simulations in the past consisted simply
+	 of a mix of unsophisticated cooperators and defectors. In our
+	 model, we included the <I>citizen</I> strategy: “cooperate as
+	 long as others are cooperating”. Its inclusion was essential
+	 to the survival of conscience-possessing individuals — saints
+	 alone would not have made it.
+      </li>
+      <li>
+	Our model included punishment: defectors who were caught were
+	punished for the transgression by being deprived of the group
+	benefit.
+      </li>
+    </ol>
+  </P>
+  <P>
+    Of course, conscience did not evolve under all circumstances. By
+    far the most important factor was the benefit-to-cost ratio of
+    cooperation. In fact, factors that we might have believed would
+    play extremely important roles either had much less pronounced
+    effects, or produced effects in unexpected ways. Migration had a
+    U-shaped impact on the evolution of conscience, and group size
+    barely played a role at all.
+  </P>
+
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>some open questions</h1>
+
+  <P>
+    <ul>
+      <li>
+	Why does group size play such a small role in level-changes?
+	Answering this would probably requiring knowing the particular
+	dynamics of a high benefit-to-cost ratio system that make it
+	so conducive to a level-switch, even when group sizes are
+	big.
+      </li>
+      <li>
+	What if observation probability decreased as society size
+	increased?
+      </li>
+      <li>
+	Could conscience have evolved even in the absence of the
+	punishment mechanism that we had in place?
+      </li>
+    </ul>
+  </P>
+   
+</DIV>    
+    
+
+
+  
+<div class="footer">
+<p>Last modified: Sat Jun 27 2020 at 09:51:28 EDT</p>
+</div>
+</body>
+</html>

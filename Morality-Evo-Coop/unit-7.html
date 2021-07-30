@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computing Societies — Unit 7</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2020 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 7 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computing Societies</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 7: using ABM to seek patterns</h2>
+  </div>
+<!--  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%> -->
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+<div  CLASS="slide">
+  <h1>ABM and "pattern-oriented modeling"</h1>
+
+  <P>
+    <BR>
+      <ul>
+	<li>
+	  <I>Pattern-oriented modeling of agent-based complex systems:
+	    lessons from ecology</I> [Grimm et al., 2005].
+	</li>
+      </ul>
+    </P>
+	
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1><I>Pattern-Oriented Modeling of Agent-Based Complex Systems: Lessons from Ecology</I> [Grimm et al. 2005]</h1>
+
+  <P>
+  <BR>
+    "What makes <a href="https://en.wikipedia.org/wiki/James_Bond"
+    target=new>James Bond</a> an agent?  He has a clear goal, he is
+    autonomous in his decisions about achieving the goal, and he
+    adapts these decisions to his rapidly changing situation. We are
+    surrounded by such autonomous, adaptive agents: cells of the
+    immune system, plants, citizens, stock market investors,
+    businesses, etc.
+  </P>
+  <P>
+    The agent-based complex systems (ACSs) around us are made up of
+    myriad interacting agents. One of the most important challenges
+    confronting modern science is to understand and predict such
+    systems. Bottom-up simulation modeling is one tool for doing so:
+    We compile relevant information about entities at a lower level of
+    the system (in agent-based models, these are individual agents),
+    formulate theories about their behavior, implement these theories
+    in a computer simulation, and observe the emergence of
+    system-level properties related to particular questions."
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>Pattern-Oriented Modeling</h1>
+
+  <P>
+  <BR>
+    The identification of general principles underlying the
+    organization of ACSs has been hampered by the lack of an explicit
+    strategy for coping with the two main challenges of bottom-up
+    modeling: COMPLEXITY and UNCERTAINTY.  Consequently, model
+    structure often is
+    chosen <a href="https://en.wikipedia.org/wiki/Ad_hoc"
+    target=new><I>ad hoc</I></a>, and the focus is often on how to
+    represent agents without sufficient emphasis on analyzing and
+    validating the applicability of models to real problems.
+  </P>
+  <P>
+    A strategy called pattern-oriented modeling (POM) attempts to make
+    bottom-up modeling more rigorous and comprehensive. In POM, we
+    explicitly follow the basic research program of science: the
+    explanation of observed
+    <a href="https://en.wikipedia.org/wiki/Pattern"
+    target=new>patterns</a>.<sup><font color=red>*</font></sup>
+    Patterns are defining characteristics of a system and often,
+    therefore, indicators of essential underlying processes and
+    structures. Patterns contain information on the internal
+    organization of a system, but in a "coded" form. The purpose of
+    POM is to "decode" this information.
+  </P>
+  <HR width=35% align=left>
+    <P>
+      <sup><font color=red>*</font></sup> Discuss the difference
+      between prediction and explanation in science.
+    </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>choosing the right level for the model</h1>
+
+  <img src="GrimmEtAl05-fig1.png" class="figure-right" height=450>
+  <P>
+    Payoff of bottom-up models versus their complexity.
+  </P>
+  <P>
+    A model’s payoff is determined not only by how useful it is for
+    the problem it was developed for, but also by its structural
+    realism; i.e., its ability to produce independent predictions that
+    match observations. If model design is guided only by the problem
+    to be addressed (which often is the explanation of a single
+    pattern), the model will be too simple. If model design is driven
+    by all the data available, the model will be too
+    complex.
+  </P>
+  <P>
+    <I>
+      [NO, this in itself is not the problem. The
+      problem is that such a model
+      will <a href="https://en.wikipedia.org/wiki/Overfitting"
+	      target=new>overfit</a>.]
+    </I>
+  </P>
+  <P>
+    But there is a zone of intermediate
+    complexity where the payoff is high. We call this the
+    ‘‘<a href="https://en.wikipedia.org/wiki/Peter_Medawar"
+    target=new>Medawar</a> zone’’.
+  </P>
+  <P>
+    <I>
+      [This is merely a somewhat confused biology version of an
+      extremely general concept in science; it is addressed explicitly
+      in
+      <a href="https://en.wikipedia.org/wiki/Model_selection"
+	 target=new>model selection</a>
+      in <a href="https://en.wikipedia.org/wiki/Statistical_learning_theory"
+	    target=new>machine learning</a>.]
+    </I>
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>pattern-oriented model design: old-growth beech forests example</h1>
+
+  <img src="GrimmEtAl05-fig2.png" class="figure-right" height=350>
+    <P>
+      <ol type=A>
+	<li>
+	  An old-growth
+	  <a href="https://en.wikipedia.org/wiki/Beech" target=new>beech</a>
+	  forest.
+	</li>
+	<li>
+	  a horizontal mosaic of developmental stages (x scale: 400
+	  m);
+	</li>
+	<li>
+	  the vertical patterns of tree size that define the
+	  developmental stages (x scale: 60 m);
+	</li>
+	<li>
+	  the distributions of fallen large trees (a map of fallen
+	  wood; ellipses indicate crown projections of standing trees;
+	  x scale: 60 m).
+	</li>
+	To allow these patterns to emerge from it, the model includes:
+	<P>
+	<li>
+	  a grid-based horizontal structure (showing grid cells in
+	  three developmental stages; x scale: 570 m);
+	</li>
+	<li>
+	  a grid-based vertical structure (showing each grid cell’s
+	  percentage cover for four height classes; total area shown:
+	  1 ha);
+	</li>
+	<li>
+	  individual representation of large trees (showing one cell’s
+	  trees in the largest two height classes; 
+	  cell area: 204 m<sup>2</sup>).
+	</li>
+      </ul>
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>contrasting alternative theories</h1>
+
+  <img src="GrimmEtAl05-fig3.png" class="figure-right" height=375>
+  <P>
+    Strong inference by contrasting alternative theories of the agents’
+    behavior.
+    <ol type=A>
+      <li>
+	Schools or flocks can emerge from simple rules for behavior, as
+	in this version of boids.
+      </li>
+      <li>
+	In a similar model of fish schools, 11 alternative theories of
+	fish behavior were contrasted by looking at two school-level
+	patterns: polarization (\(p\)) and nearest neighbor distance
+	(\(NND\)); p is \(0^{\circ}\) if all fish swim in the same
+	direction and p approaches \(90^{\circ}\) if all fish swim in
+	random directions. Values of \(p\) observed in real fish
+	schools are \(10^{\circ}\) to \(20^{\circ}\); observed \(NND\)
+	is often \(<\) fish body length. In model versions 1 to 9, the
+	influence of neighbor fish is averaged; in model version 10
+	and 11 (shaded), fish select a single neighbor fish and orient
+        their swimming to this neighbor only.
+		       </li>
+    </ol>
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the Anasazi example</h1>
+
+  <img src="GrimmEtAl05-fig4.png" class="figure-right" height=400>
+  <P>
+    Parameterization and independent predictions of an agent-based
+    model of the
+    <a href="https://en.wikipedia.org/wiki/Ancestral_Puebloans"
+       target=new>Anasazi</a> in the Long House Valley.
+  </P>
+  <P>
+    The simulation environment consists of an 80 by 120 grid of 1-ha
+    squares. Dark gray represents a higher water table; light gray and
+    blue represent a lower water table. White is nonfarmable land. The
+    red dots represent settlements.
+  </P>
+  <P>
+    (Left) The historical settlement in 1125 A.D.; (right) prediction
+    of the simulation model for the same year.  The match between data
+    and simulation is imperfect, but the clustering of settlements
+    along the valley boundaries is captured by the model. The model
+    was calibrated not to the settlement patterns but to the
+    population size time series for 400 to 1450 A.D.
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>pattern-oriented model design: summary</h1>
+
+  <P>
+  <BR>
+  Multiple patterns keep us from building models that are too simple
+  in structure and mechanism, or too complex and uncertain. Using
+  patterns to test and contrast alternative theories for agent
+  behavior or other low-level processes is a way for the science of
+  ACS to get beyond clever demonstration models and on to rigorous
+  explanations of how real systems are organized and how they respond
+  to internal and external forces.
+  <P>
+    Bottom-up models are virtual laboratories where controlled
+  experiments distinguish noise from signal in the system’s
+  organization.  In particular, experiments contrasting hypotheses for
+  the behavior of interacting agents will lead to an accumulation of
+  theory for how the dynamics of systems from molecules to ecosystems
+  and economies emerge from bottom-level processes.
+  <P>
+    This approach may change our whole notion of scientific theory,
+  which until now has been based on the theories of physics. Theories
+  of complex systems may never be reducible to simple analytical
+  equations, but are more likely to be sets of conceptually simple
+  mechanisms (e.g., Darwinian natural selection) that produce
+  different dynamics and outcomes in different contexts. POM thus may
+  lead us to an algorithmic, rather than analytical, approach to
+  theory.
+  
+</DIV>
+
+
+  
+<div class="footer">
+<p>Last modified: Thu Jul 23 2020 at 19:32:17 EDT</p>
+</div>
+</body>
+</html>

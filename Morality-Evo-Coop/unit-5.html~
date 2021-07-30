@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computing Societies — Unit 5</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2020 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 5 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computing Societies</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 5: Introduction to ABM ideas and methods</h2>
+  </div>
+<!--  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%> -->
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+<div  CLASS="slide">
+  <h1>mastering ABM</h1>
+
+  <P>
+  <BR>
+    <ul>
+      <li>
+	<I>A guide for newcomers to agent-based modeling in the social
+	  sciences</I> [Axelrod and Tesfatsion, 2006].
+	<P>
+	See also:
+	<ul>
+	  <li>
+	    <a href="http://www2.econ.iastate.edu/tesfatsi/abmread.htm"
+	    target=new><I>On-Line Guide for Newcomers to Agent-Based
+	    Modeling in the Social Sciences</I></a> by Axelrod and
+	    Tesfatsion (with links to the suggested readings, as well
+	    as demonstration software).
+	  </li>
+	</ul>
+      </li>
+    </ul>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>ABM in social sciences [Axelrod & Tesfatsion]</h1>
+
+  <P>
+  <BR>
+  The social sciences seek to understand not only how individuals
+  behave but also how the interaction of many individuals leads to
+  large-scale outcomes. Understanding a political or economic system
+  requires more than an understanding of the individuals that comprise
+  the system. It also requires understanding how the individuals
+  interact with each other, and how the results can be <I>more than the
+  sum of the parts</I>.
+  <P>
+    ABM is well suited for this social science objective. It is a
+    method for studying systems exhibiting the following two
+    properties:
+    <ol>
+      <li>
+	the system is composed of interacting agents; and
+      </li>
+      <li>
+	the system exhibits emergent properties, that is, properties
+    arising from the interactions of the agents that cannot be deduced
+	simply by aggregating the properties of the agents.
+      </li>
+    </ol>
+    <P>
+      When the interaction of the agents is contingent on past
+      experience (recall the concept of
+      <a href="https://en.wikipedia.org/wiki/Path_dependence"
+      target=new>path / history dependence</a>), and especially when
+      the agents continually adapt to that experience, mathematical
+      analysis is typically very limited in its ability to derive the
+      dynamic consequences. <I>In this case, ABM might be the only
+      practical method of analysis</I>.
+    </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the place of simulation in science</h1>
+
+  <P>
+  <BR>
+  ABM begins with assumptions about agents and their interactions and
+  then uses computer simulation to generate “histories” that can
+  reveal the dynamic consequences of these assumptions. Thus, ABM
+  researchers can investigate how large-scale effects arise from the
+  micro-processes of interactions among many agents. These agents can
+  represent people (say consumers, sellers, or voters), but they can
+  also represent social groupings such as families, firms,
+  communities, government agencies and nations.
+  <P>
+    Simulation in general, and ABM in particular, is a third way of
+    doing science in addition to
+    <a href="https://en.wikipedia.org/wiki/Deductive_reasoning"
+    target=new>deduction</a> and
+    <a href="https://en.wikipedia.org/wiki/Inductive_reasoning"
+    target=new>induction</a>. Scientists use deduction to derive
+    theorems from assumptions, and induction to find patterns in
+    empirical data. Simulation, like deduction, starts with a set of
+    explicit assumptions. But unlike deduction, simulation does not
+    prove theorems with generality. Instead, simulation generates data
+    suitable for analysis by induction. Nevertheless, unlike typical
+    induction, the simulated data come from a rigorously specified set
+    of assumptions regarding an actual or proposed system of interest
+    rather than direct measurements of the real world. Consequently,
+    simulation differs from standard deduction and induction in both
+    its implementation and its goals. Simulation permits increased
+    understanding of systems through controlled computational
+    experiments.
+  </P>
+  <P>
+    [The authors of this paper left out
+    <a href="https://en.wikipedia.org/wiki/Abductive_reasoning"
+       target=new>abduction</a>, or "reasoning to the best explanation".]
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the four goals of ABM</h1>
+
+      <ol>
+	<li>
+	  <I>Empirical understanding.</I> Why have particular
+	  large-scale regularities evolved and persisted, even when
+	  there is little top-down control? (Examples: standing
+	  ovations, trade networks, socially accepted monies, mutual
+	  cooperation based on reciprocity, and social norms.) ABM
+	  researchers
+	  seek <a href="https://en.wikipedia.org/wiki/Causality"
+	  target=new>CAUSAL EXPLANATIONS</a> grounded in the repeated
+	  interactions of agents operating in specified
+	  environments. In particular, they ask whether particular
+	  types of observed global regularities can be reliably
+	  generated from particular types of agent-based models.
+	</li>
+	<li>
+	  <I>Normative understanding.</I> How can agent-based models
+	  be used as laboratories for the discovery of good designs?
+	  Will designs proposed for social policies, institutions, or
+	  processes result in socially desirable system performance
+	  over time? (Examples: design of auction systems, voting
+	  rules, and law enforcement.) The general approach is like
+	  filling a bucket with water to determine if it leaks. An
+	  agent-based world is constructed that captures the salient
+	  aspects of a social system operating under the design. The
+	  world is then populated with privately motivated agents with
+	  learning capabilities and allowed to develop over time. The
+	  key issue is the extent to which the resulting world
+	  outcomes are efficient, fair, and orderly, despite attempts
+	  by these privately motivated agents to gain individual
+	  advantage through strategic behavior.
+	</li>
+      </ol>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the four goals of ABM (cont.)</h1>
+
+  <ol start=3>
+    <li>
+      <I>Heuristic.</I> How can greater insight be attained about the
+      fundamental causal mechanisms in social systems? Even if the
+      assumptions used to model a social system are simple, the
+      consequences can be far from obvious if the system is composed
+      of many interacting agents. The large-scale effects of
+      interacting agents are often surprising because it can be hard
+      to anticipate the full consequences of even simple forms of
+      interaction. For example, one of the earliest and most elegant
+      agent-based models — the city segregation (or “tipping”) model
+      developed by
+      <a href="https://en.wikipedia.org/wiki/Thomas_Schelling"
+      target=new>Thomas Schelling</a> — demonstrates how residential
+      segregation can emerge from individual choices even when
+      everyone is fairly tolerant.
+    </li>
+    <li>
+      <I>Methodological advancement.</I> How best to provide ABM
+      researchers with the methods and tools they need to undertake
+      the rigorous study of social systems through controlled
+      computational experiments? ABM researchers are exploring a
+      variety of ways to address this objective ranging from careful
+      consideration of methodological principles to the practical
+      development of programming and visualization tools.
+      <BR>
+	ABMs make possible:
+      <ol>
+	<li>
+	  the rigorous testing, refinement, and extension of existing
+	  theories that have proved to be difficult to formulate and
+	  evaluate using standard statistical and mathematical tools;
+	  and
+	</li>
+	<li>
+	  a deeper understanding of fundamental causal mechanisms in
+	  multi-agent systems whose study is currently separated by
+	  artificial disciplinary boundaries.
+	</li>
+      </ol>
+    </li>
+  </ol>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>further readings recommended by A & T (my selection)</h1>
+
+  <P>
+  <BR>
+    <ul>
+      <li>
+	Vicsek, Tamas (2002),
+	<a href="http://www2.econ.iastate.edu/classes/econ308/tesfatsion/complexity.Vicsek.pdf"
+	target=new><I>Complexity: The Bigger Picture</I></a>, Nature,
+	Vol. 418, p. 131.  A short essay that describes how computer
+	simulation fits into the scientific enterprise.  The goal is
+	to “capture the principal laws behind the exciting variety of
+	new phenomena that become apparent when the many units of a
+	complex system interact.”
+      </li>
+      <P>
+      <li>
+	Epstein, Joshua
+	M. (2002), <a href="http://www2.econ.iastate.edu/tesfatsi/Epstein.CivilViolence.pdf"
+	target=new><I>Modeling Civil Violence: An Agent-Based
+	Computational Approach</I></a>, Proceedings of the National
+	Academy of Sciences, USA, Vol. 99, pp. 7243–7250.  Epstein
+	uses a spatial agent-based model to explore civil violence. A
+	central authority uses “cops” to arrest (remove) actively
+	rebelling citizens from the society for a specified jail
+	term. In each time step, each agent (cop or citizen) randomly
+	moves to a new unoccupied site within its limited vision. A
+	rebelling citizen’s estimated arrest probability is assumed to
+	fall as the ratio of actively rebelling citizens to cops that
+	the citizen perceives in its vicinity increases.  Each citizen
+	in each time step decides whether to actively rebel or not
+	depending on this perceived ratio. Epstein shows how the
+	complex dynamics resulting from these simple assumptions can
+	generate empirically interesting macroscopic regularities that
+	are difficult to analyze using more standard modeling
+	approaches.
+      </li>
+    </ul>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>further readings recommended by A & T (my selection, cont.)</h1>
+
+  <ul>
+    <li>
+      Epstein, Joshua M. (2001),
+      <a href="http://www2.econ.iastate.edu/tesfatsi/LearningToBeThoughtless.JEpstein2001.pdf"
+      target=new><I>Learning to be Thoughtless: Social Norms and
+      Individual Competition</I></a>, Computational Economics,
+      Vol. 18, pp. 9–24.  An ABM to study an important observed aspect
+      of social norm evolution: namely, that the amount of time an
+      individual devotes to thinking about a behavior tends to be
+      inversely related to the strength of the social norms that
+      relate to this behavior. In the limit, once a behavioral norm is
+      firmly entrenched in a society, individuals tend to conform to
+      the norm without explicit thought. Epstein’s model permits
+      agents to learn how to behave (what behavioral norm to adopt),
+      but it also permits agents to learn how much to think about how
+      to behave.
+    </li>
+    <li>
+      Kollman, Ken, John H. Miller, and Scott E. Page (1997),
+      <I>Political Institutions and Sorting in a Tiebout Model</I>,
+      American Economic Review, Vol. 87, pp. 977–992. An ABM that
+      explores how social outcomes are affected by the political
+      institutions used to aggregate individual choices on local
+      public goods issues, such as whether or not to finance a
+      community swimming pool. (Examples of institutions: referenda,
+      two-party competition, and proportional representation.)  For
+      each tested political institution, citizens “vote with their
+      feet” in each time period regarding which jurisdiction they wish
+      to inhabit. The policy positions resulting in any given
+      jurisdiction depend on the preferences of the citizens located
+      within it, as determined by the political institution in
+      force. Citizens can continue to relocate in response to changing
+      local policy positions, and local policy positions can continue
+      to change in response to citizen relocations. The authors find
+      that social efficiency is highest under political institutions
+      such as two-party competition or proportional representation
+      that initially induce citizens to undertake a suitable degree of
+      experimentation among alternative jurisdictions.
+      </li>
+  </ul>
+  
+</DIV>
+
+
+
+
+
+<div class="footer">
+<p>Last modified: Wed Jul 8 2020 at 13:30:17 EDT</p>
+</div>
+</body>
+</html>

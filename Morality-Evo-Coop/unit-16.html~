@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computing Societies — Unit 16</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2020 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 16 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computing Societies</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 16: case study: morality</h2>
+  </div>
+<!--  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%> -->
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+<div  CLASS="slide">
+  <h1>morality</h1>
+
+  <P>
+    <ul>
+      <li>
+	<I>Testing the theory of morality-as-cooperation in 60
+	  societies</I> [Curry, Mullins, and Whitehouse, 2019].
+      </li>
+      <li>	
+	[OPTIONAL] <I>The evolution of political systems</I> [Gintis,
+	van Schaik, and Boehm, 2015]. 
+      </li>
+    </ul>
+  </P>
+  <P>
+    What is
+    <a href="https://plato.stanford.edu/entries/morality-definition/"
+    target=new>morality</a>? And to what extent does it vary around
+    the world? The theory of “morality-as-cooperation” argues that
+    morality consists of a collection of biological and cultural
+    solutions to the problems of cooperation that arise in human
+    social life. It draws on the theory of
+    non-<a href="https://en.wikipedia.org/wiki/Zero-sum_game"
+    target=new>zero-sum</a> games and predicts that specific forms of
+    cooperative behavior —
+  </P>
+  <P>
+    <ol>
+      <li>
+	helping kin
+      </li>
+      <li>
+	helping your
+	group
+      </li>
+      <li>
+	reciprocating
+      </li>
+      <li>
+	being brave
+      </li>
+      <li>
+	deferring to superiors
+      </li>
+      <li>
+	dividing disputed resources
+      </li>
+      <li>
+	respecting prior possession
+      </li>
+    </ol>
+  </P>
+  <P>
+    — will be considered morally good wherever they arise, in all
+    cultures. To test these predictions, we investigate the moral
+    valence of these seven cooperative behaviors in the
+    <a href="https://en.wikipedia.org/wiki/Ethnography"
+    target=new>ethnographic</a> records of 60 societies.
+  </P>
+    
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>types of cooperation: 1</h1>
+
+  <P>
+    <B>Allocation of Resources to Kin (Family Values)</B>.  Genes that
+    benefit replicas of themselves in other individuals — that is,
+    genetic relatives — will be favored by natural selection if the
+    cost of helping is outweighed by the benefit to the recipient
+    gene(s). So, under some conditions organisms will possess
+    adaptations for detecting and delivering benefits (or avoiding
+    doing harm) to kin.
+  </P>
+  <P>
+    This theory of kin selection explains many instances of altruism,
+    in many species, including humans.  Morality-as-cooperation leads
+    us to expect that this type of cooperative behavior — caring for
+    offspring, helping family members, and avoiding inbreeding — will
+    be regarded as morally good.
+  </P>
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>types of cooperation: 2</h1>
+
+  <P>
+    <B>Coordination to Mutual Advantage (Group Loyalty).</B>  Game
+    theory models situations in which individuals are uncertain about
+    how to behave to bring about a mutual benefit as coordination
+    problems. Humans and other animals use a variety of strategies —
+    such as focal points, traditions, leadership, signaling, badges of
+    membership, and “theory of mind” — to solve these problems and
+    form stable coalitions and alliances.
+  </P>
+  <P>
+    Morality-as-cooperation leads us to expect that this type of
+    cooperative behavior — forming friendships, participating in
+    collaborative endeavors, favoring your own group, and adopting
+    local conventions — will be regarded as morally good.
+  </P>
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>types of cooperation: 3</h1>
+  
+  <P>
+    <B>Social Exchange (Reciprocity)</B>.  In game theory, social
+    dilemmas — prisoners’ dilemmas, public goods games, tragedies of
+    the commons — arise when the fruits of cooperation are vulnerable
+    to exploitation by “free riders,” who accept the benefit of
+    cooperation without paying the cost. This problem can be overcome
+    by a strategy of “conditional cooperation” or “reciprocal
+    altruism,” such as
+    <a href="https://en.wikipedia.org/wiki/Tit_for_tat"
+       target=new>tit-for-tat</a>.
+  </P>
+  <P>
+    Morality-as-cooperation leads us to expect that this type of
+    cooperative behavior — trusting others, reciprocating favors,
+    seeking revenge, expressing gratitude, andmaking amends — will be
+    regarded as morally good.
+  </P>
+   
+</DIV>    
+    
+
+
+<div  CLASS="slide">
+  <h1>types of cooperation: 4, 5</h1>
+
+  <P>
+    <B>Contests between Hawks (Bravery) and Doves (Respect)</B>.
+    Conflict over resources — food, territory, and mates — presents
+    organisms with an opportunity to cooperate by competing in less
+    mutually destructive ways. There are three ways of achieving this:
+    <I>contests</I> (featuring the display of hawkish and dovish traits),
+    <I>division</I>, and <I>possession</I>.  Game theory has shown
+    that conflicts can be settled through “contests,” in which
+    individuals display reliable indicators of their “fighting
+    ability,” and defer to the stronger party.
+  </P>
+  <P>
+    Morality-as-cooperation leads us to expect that these types of
+    cooperative behavior — hawkish displays of dominance (the “heroic
+    virtues” of bravery, fortitude, skill, and wit) and dovish
+    displays of submission (the “monkish virtues” of humility,
+    deference, obedience, and respect) — will be regarded as morally
+    good.
+  </P>
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>types of cooperation: 6</h1>
+
+  <P>
+    <B>Division (Fairness).</B>  When the contested resource is
+    divisible, game theory models the situation as a “bargaining
+    problem”. Here, one solution is to divide the resource in
+    proportion to the relative (bargaining) power of the
+    protagonists. Rules such as “I cut, you choose,” “meet in the
+    middle,” “split the difference,” and “take turns” are ancient and
+    widespread means of resolving disputes.  And “equal shares” is a
+    spontaneous and cross-culturally prevalent decision rule in
+    economic games and similar situations.
+  </P>
+  <P>
+    Morality-as-cooperation leads us to expect that this type of
+    cooperative behavior — dividing disputed resources, reaching a
+    compromise, being fair — will be regarded as morally good.
+  </P>
+
+</div>
+
+
+<div  CLASS="slide">
+  <h1>types of cooperation: 7</h1>
+  
+  <P>
+    <B>Possession (Property Rights).</B>  Finally, game theory shows
+    that conflicts over resources can be resolved by recognition of
+    prior possession.  Humans defer to prior possession in vignette
+    studies, experimental games, the law, and international
+    relations. Private property, in some form or other, appears to be
+    a cross-cultural universal.
+  </P>
+  <P>
+    Morality-as-cooperation leads us to expect that this type of
+    cooperative behavior — deferring to prior possession — will be
+    regarded as morally good.
+  </P>
+   
+</DIV>    
+    
+
+
+<div  CLASS="slide">
+  <h1>the present study: motivation</h1>
+
+  <P>
+    Although much evidence for the universality of cooperation had
+    been gathered before, the previous studies were not designed to,
+    and indeed do not, test fully morality-as-cooperation’s specific
+    predictions.  Comparative anthropology has not systematically
+    assessed the moral valence of all seven forms of cooperative
+    behavior: moral values relating to hawkish and dovish traits in
+    the adult population, and dividing disputed resources, are
+    conspicuously absent from the literature.
+  </P>
+  <P>
+    And no previous questionnaire research has evaluated all seven
+    types of cooperative behavior posited by the theory: existing
+    scales typically measure something other than moral valence (e.g.,
+    they ask whether a person or a society possesses a particular
+    trait, rather than whether the trait is moral); and the disparate
+    samples are typically university students, or people in Western,
+    educated, industrialized, rich, democratic
+    (<a href="https://en.wikipedia.org/wiki/Psychology#WEIRD_bias"
+    target=new>WEIRD</a>) societies, or people with access to the
+    internet, which limits their external validity and
+    generalizability to “humanity” at large.
+  </P>
+
+</div>
+
+
+<div  CLASS="slide">
+  <h1>the present study: outline</h1>
+  
+  <P>
+    And so, to test our predictions, to overcome the limitations of
+    previous research, and to resolve lingering uncertainty over
+    cross-cultural variation in moral values, we surveyed the moral
+    valence of <I>the seven cooperative behaviors</I> in a single,
+    homogenous, coherent source of high-quality ethnographic data,
+    collected from a sample of 60 societies specifically chosen to
+    provide as representative a sample of humanity as possible.
+  </P>
+  <P>
+    In addition to reporting the moral valence of these cooperative
+    behaviors, we also report their cross-societal frequency and
+    distribution. After all, it is possible that even if
+    morality-as-cooperation’s predictions regarding the moral valence
+    of cooperative behaviors are supported, these behaviors and their
+    corresponding moral values may still turn out to be rare, present
+    in relatively few societies, or in only some regions but not
+    others.
+  </P>
+   
+</DIV>    
+    
+
+
+<div  CLASS="slide">
+  <h1>where the ethnographic data came from</h1>
+
+  <img src="Curry19-fig1.png" class="figure-right" height=400>
+  <P>
+    Locations of 60 Probability Sample Files Societies.
+  </P>
+  <P>
+    First, we extracted paragraph-level ethnographic materials indexed
+    by professional anthropologists for the
+    <a href="https://en.wikipedia.org/wiki/Human_Relations_Area_Files"
+    target=new>eHRAF</a> as Ethics or Norms. The extraction extraction
+    of materials indexed as Ethics resulted in 2,519 paragraphs from
+    400 documents across the 60 societies sampled. The extraction of
+    materials indexed as Norms resulted in 1,605 paragraphs from 263
+    discrete documents across 58 of the societies sampled.
+  </P>
+  <P>
+    Second, the entire archive was searched using a combination of
+    relevant indexical headings (e.g., “Mutual Aid”) and keyword
+    combinations. This phase identified 1,737 paragraphs from 355
+    discrete documents across the 60 societies. When duplicate
+    paragraphs were removed (i.e., 2,401 paragraphs identified inmore
+    than one phase), we were left with a total of 3,460 paragraphs,
+    containing 606,556 words, from 603 unique sources, published over
+    a period spanning 300 years.
+  </P>
+   
+</DIV>    
+    
+
+
+<div  CLASS="slide">
+  <h1>coding the ethnographic data</h1>
+
+  <P>
+    The coding procedure involved making 24,220 (3,460 \(\times\) 7)
+    coding decisions — that is, deciding whether or not each of the
+    3,460 paragraphs indicated that any of the seven cooperative
+    behaviors had a positive or negative moral valence.  Raters 1 and
+    2 (two of the authors) independently coded the full set of 3,460
+    paragraphs and then conferred to resolve ambiguities and
+    discrepancies. This resulted in a total of 1,426 paragraphs that
+    contained material germane to one or more moral domain.
+  </P>
+  <P>
+    A hypothesis-blind independent coder (rater 3) then coded each of
+    these 1,426 paragraphs before discussing coding discrepancieswith
+    raters 1 and 2. Of the 1,426 \(\times\) 7 = 9,982 initial coding
+    decisions compared between the two sets of codes, there were 8,704
+    decisions in agreement and 1,278 decisions on which the raters
+    disagreed—thus there was “moderate”
+    <a href="https://en.wikipedia.org/wiki/Cohen%27s_kappa"
+    target=new>agreement</a> between the two initial sets of ratings
+    overall (\(\kappa = .58, P < .005\)).
+  </P>
+  <P>
+    Raters 1, 2, and 3 then met to discuss and analyze discrepancies
+    using the resolution method. On closer inspection it was
+    discovered that the poor level of agreement with regard to
+    “dividing disputed resources” was the result of rater 3 including
+    cases of generic “sharing.” These and other rating discrepancies
+    were reviewed and resolved until complete agreement was reached
+    (\(\kappa = 1\)).  In the final analysis, of the 3,460 paragraphs
+    reviewed, 761 contained information about the moral valence of one
+    or more of the seven cooperative behaviors. This gave rise to 962
+    observations of moral valence in total.
+  </P>
+
+</DIV>
+
+
+  
+
+<div  CLASS="slide">
+  <h1>coding the ethnographic data: the "codebook"</h1>
+
+  <img src="Curry19-tab1.png" class="figure-right" height=615>
+  <P>
+    <I>The instructions to coders:</I> “Please read through the
+    following paragraphs. Your task is to decide, for each paragraph,
+    whether it contains evidence that any of seven behaviors explained
+    in table 1 is considered morally good or bad. <small> ‘Moral goodness’ may
+    be indicated by comments to the effect that the particular
+    behavior is good, right,moral, ethical, or virtuous, or that it is
+    an obligation, duty, or moral norm, and so on. It may also be
+    indicated by morally-valenced words. For example, the mere mention
+    of ‘family loyalty,’ or ‘property rights’ would suffice. Moral
+    goodness can also be indicated by evidence that not performing the
+    particular behavior is bad, wrong, immoral or unethical,
+    etc. Similarly, moral badness maybe indicated by comments to the
+    effect that the particular behavior is bad, wrong, immoral,
+    unethical, or sinful, or that it is taboo, shameful, prohibited,
+    and so on.  If there is evidence that the particular behavior is
+    considered morally good, then type ‘1’ in the adjacent box. If the
+    behavior is considered morally wrong, then type ‘—1.’ Please bear
+    in mind that any given paragraph may contain evidence that several
+    different behaviors are considered moral (or immoral).” </small>
+  </P>
+   
+</DIV>    
+    
+
+
+<div  CLASS="slide">
+  <h1>results</h1>
+
+  <img src="Curry19-tab2.png" class="figure-right" height=350>
+  <P>
+    Number of paragraphs in ethnographic records attesting to the
+    moral valence of cooperation.
+  </P>
+  <P>
+    In 961 out of 962 observations (99.9%), cooperative behavior had a
+    positive moral valence. The one exception to the rule — among the
+    Chuuk, “to steal openly from others is admirable in that it shows
+    a person’s dominance and demonstrates that he is not intimidated
+    by the aggressive powers of others” — appears to be a case in
+    which one form of cooperation (respect for property) has been
+    trumped by another (respect for a hawkish trait, although not
+    explicitly bravery).
+  </P>
+  <P>
+    <small>
+      There were 18 other examples of these seven moral values coming
+      into conflict: nine examples of conflict between helping family
+      and helping group; two of conflict between helping family and
+      being brave; two of conflict between helping family and
+      deferring to authority; and one example each of conflict between
+      helping family and reciprocating, helping group and being brave,
+      reciprocating and being brave, being brave and being
+      deferential, and being deferential and respecting possession.
+      However, in these cases, the moral values were portrayed as
+      being in conflict, rather than one being good and the other bad.
+    </small>
+  </P>
+   
+</DIV>    
+    
+
+
+<div  CLASS="slide">
+  <h1>results</h1>
+
+  <img src="Curry19-fig2.png" class="figure-right" height=400>
+  <P>
+    Percentage of societies in which positively morally valenced
+    cooperative behavior was observed.
+  </P>
+  <P>
+    There were significantly more societies in which “property” was
+    observed than “bravery,” “respect,” and “fairness”; and there were
+    significantly fewer societies in which “fairness” was observed
+    than all other types of moral behavior. All other differences were
+    nonsignificant. There were no societies in which any of the seven
+    cooperative behaviors had a negative moral valence. (The
+    “exception” reported above was itself an exception—seven other
+    paragraphs attested to the positive moral valence of property
+    among the Chuuk).
+  </P>
+  <P>
+    When aggregated by cultural region, all seven positively morally
+    valenced cooperative behaviors were observed in all six regions —
+    with the sole exception of “dividing disputed resources” in
+    Central America (for which there were no data). Crucially, the
+    positively morally valenced cooperative behaviors were observed
+    with equal frequency in all regions.
+  </P>
+   
+</DIV>    
+    
+
+
+<div  CLASS="slide">
+  <h1>conclusions</h1>
+
+  <P>
+    A survey of 60 diverse societies found that the moral valence of
+    seven cooperative behaviors was uniformly positive. In every
+    society for which there were data, these seven cooperative
+    behaviors behaviors were considered morally good. There were no
+    counterexamples, that is, societies in which these behaviors were
+    considered morally bad. The survey also found that these
+    cooperative morals were widespread — with most appearing in most
+    societies — and that they were observed with equal frequency
+    across all cultural regions.
+  </P>
+  <P>
+    As such, these results provide strong support for the theory of
+    morality-as-cooperation, and no support for the more extreme
+    versions of moral relativism. In short,
+    <a href="https://en.wikipedia.org/wiki/David_Hume"
+    target=new>Hume</a> was right, and
+    <a href="https://en.wikipedia.org/wiki/John_Locke"
+    target=new>Locke</a> was wrong. When you “look abroad into the
+    several tribes of men” there are some widely held morals that are
+    not elsewhere “slighted or condemned,” and they include precisely
+    those morals predicted by morality-as-cooperation.  As
+    <a href="https://www.gutenberg.org/files/9662/9662-h/9662-h.htm"
+    target=new>Hume (1748)</a> put it: “history informs us of nothing
+    new or strange in this particular.”
+  </P>
+   
+</DIV> 
+
+  
+<div class="footer">
+<p>Last modified: Tue Aug 11 2020 at 15:04:01 EDT</p>
+</div>
+</body>
+</html>

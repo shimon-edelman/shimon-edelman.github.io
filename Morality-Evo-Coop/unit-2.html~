@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computing Societies — Unit 2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2020 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 2 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computing Societies</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 2: Extended Evolutionary Synthesis</h2>
+  </div>
+<!--  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%> -->
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+<div  CLASS="slide">
+  <h1>SLIDE TITLE</h1>
+
+  <P>
+  <BR>
+    <ul>
+      <li>
+	[Main reading]
+	<I>The extended evolutionary synthesis: its structure,
+	  assumptions and predictions</I> [Laland et al. 2015]:
+	<P>
+	<DIR><DIR> "Extended Evolutionary Synthesis (EES), retains the
+	    fundaments of evolutionary theory, but differs in its
+	    emphasis on the role of constructive processes in
+	    development and evolution, and reciprocal portrayals of
+	    causation. In the EES, developmental processes, operating
+	    through developmental bias, inclusive inheritance and
+	    niche construction, share responsibility for the direction
+	    and rate of evolution, the origin of character variation
+	    and organism-environment complementarity.  We spell out
+	    the structure, core assumptions and novel predictions of
+	    the EES, and show how it can be deployed to stimulate and
+	    advance research in those fields that study or use
+	    evolutionary biology."
+      </li>
+      <P>
+	<li>
+	  [Optional reading] <I>Tinbergen's four questions: an
+	    appreciation and an update</I> [Bateson and Laland, 2013].
+	</li>
+      </ul>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>Modern Synthesis vs. Extended Evolutionary Synthesis</h1>
+
+  <img src="LalandEtAl15-tab1.png" width=100%>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>alternative interpretations of developmental bias, developmental plasticity, inclusive inheritance and niche construction</h1>
+
+  <img src="LalandEtAl15-tab2.png" width=100%>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>contrasting views of development</h1>
+
+  <img src="LalandEtAl15-fig1.png" class="figure-right" width=50%>
+  <P>
+  <BR>
+    <I>(a) Programed development.</I> Traditionally, development has
+    been conceptualized as programed, unfolding according to rules and
+    instructions specified within the genome. DNA is ascribed a
+    special causal significance, and all other parts of the developing
+    organism serve as ‘substrate’, or ‘interpretative machinery’ for
+    the expression of genetic information.
+    <P>
+    <I>(b) Constructive development.</I> By contrast, in the EES,
+    genes and genomes represent one of many resources that contribute
+    to the developing phenotype. Causation flows both upwards from
+    lower levels of biological organization, such as DNA, and from
+    higher levels downwards, such as through tissue- and
+    environment-specific gene regulation. Exploratory and selective
+    processes are important sources of novel and evolutionarily
+    significant phenotypic variation. Rather than containing a
+    ‘program’, the genome represents a component of the developmental
+    system, shaped by evolution to sense and respond to relevant
+    signals and to provide materials upon which cells can draw.
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the structure of the EES</h1>
+
+  <img src="LalandEtAl15-fig2.png" class="figure-right" width=65%>
+  <P>
+  <BR>
+    &#182; Mutation pressure refers to the population-level consequences of
+    repeated mutation, here depicted as dashed because mutation is
+    also represented in ‘processes that generate novel variation’.
+    <P>
+      ‡ In the EES, this category of processes will often need to be
+      broadened to encompass processes that modify the frequencies of
+      other heritable resources.
+    <P>
+      § Developmental bias and niche construction can also affect
+      other evolutionary processes, such as mutation, drift and gene
+      flow.
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>predictions made by a traditional interpretation vs. the EES</h1>
+
+  <img src="LalandEtAl15-tab3.png" width=100%>
+  <P>
+  <BR>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>some conclusions</h1>
+
+  <P>
+  <BR>
+  "A further benefit potentially comes through strengthening ties to
+  adjacent disciplines, such as ecology [76,143,144], or the human
+  sciences, including archaeology, biological anthropology,
+  developmental psychology, epidemiology and economics [145–150],
+  where some of these ideas are already starting to have an impact.
+  <P>
+  Moreover, other advances in biology potentially take on new
+  significance within the EES. For instance, the emphasis on inclusive
+  inheritance potentially gives
+  <a href"https://en.wikipedia.org/wiki/Group_selection#Multilevel_selection_theory"
+  target=new><I><B>multi-level selection</B></I></a> even greater
+  significance, as selection can operate on all forms of heritable
+  variation.
+  <P>
+  Another case is
+  <a href="https://en.wikipedia.org/wiki/Genome_evolution"
+  target=new><I>genome evolution</I></a>, where horizontal gene
+  transfer in <a href="https://en.wikipedia.org/wiki/Prokaryote"
+  target=new>prokaryotes</a>, and genetic transfer from
+  <a href="https://en.wikipedia.org/wiki/Endosymbiont"
+  target=new>endosymbionts</a>
+  in <a href="https://en.wikipedia.org/wiki/Eukaryote"
+  target=new>eukaryotes</a> [151], can be understood as part of a
+  broader suite of phenomena with the propensity to propagate
+  horizontally (e.g. social transmission, ecological inheritance).
+  The recognition that genome change is an active cell-mediated
+  physiological process that responds to challenging life-history
+  events [152] fits neatly with the EES’s treatment of
+  <a href="https://en.wikipedia.org/wiki/Phenotypic_plasticity"
+  target=new>plasticity</a>. 
+  <P>
+  The EES perspective may also facilitate implementation of approaches
+  from computer science that enable mathematical representation of
+  complex dynamic systems, such as connectionist models of memory and
+  learning applied to model
+  <a href="https://en.wikipedia.org/wiki/Genotype"
+  target=new>genotype</a>
+  to <a href="https://en.wikipedia.org/wiki/Phenotype"
+  target=new>phenotype</a> relations [153]."
+  
+</DIV>
+
+
+
+<div class="footer">
+<p>Last modified: Wed Jun 3 2020 at 17:47:13 EDT</p>
+</div>
+</body>
+</html>

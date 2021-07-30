@@ -65,15 +65,842 @@
 <div  CLASS="slide">
   <h1>Week 8 — evolution of power; social conflict and civil violence</h1>
 
-  CONTENTS
+  <P>
+    <ul>
+      <li>
+	<I>Modeling civil violence: an agent-based computational
+	  approach</I> [Epstein, 2002]. 
+      </li>
+    </ul>
+  </P>
+
+  <HR>
+    <P>
+      <a href="https://www.nytimes.com/2009/05/27/world/europe/27germany.html"
+	 target=new><img src="Ohnesorg-NYT.png"></a>
+      </P>
+	
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>an agent-based computational model of civil violence</h1>
+
+  <P>
+    Two variants of the civil violence model are presented:
+    <ol>
+      <li>
+	A central authority seeks to suppress decentralized
+	rebellion.
+	<P>
+	  "Where I use the term “revolution,” I do so advisedly,
+	  recognizing that no political or social order is represented
+	  in the model. Perforce, neither is the overthrow of an
+	  existing order, the latter being widely seen as definitive
+	  of revolutions properly speaking. The dynamics of
+	  decentralized upheaval, rather than its political substance,
+	  is the focus here.
+	</P>
+      </li>
+      <li>
+	A central authority seeks to suppress communal violence
+	between two warring ethnic groups.
+	<P>
+	  The focus is on "generating certain characteristic phenomena
+	  and core dynamics; I do not purport to reconstruct any
+	  particular case in detail, although [...] that is an obvious
+	  long-term objective."
+	</P>
+      </li>
+    </ul>
+  </P>
   
 </DIV>
 
 
 
+
+<div  CLASS="slide">
+  <h1>model I: generalized rebellion against central authority</h1>
+
+  <P>
+    This model involves two categories of actors. ‘‘Agents’’ are
+    members of the general population and may be actively rebellious
+    or not. ‘‘Cops’’ are the forces of the central authority, who seek
+    out and arrest actively rebellious agents.
+  </P>
+  <P>
+    <B>The Agent Specification.</B> In any model of rebellion there
+    must be some representation of political
+    <a href="https://en.wikipedia.org/wiki/Grievance"
+    target=new>grievance</a>. Here, grievance involves only two highly
+    idealized components:
+    <ul>
+      <li>Hardship, \(H \in [0,1]\), drawn from the
+	<a href="https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)"
+	target=new>uniform probability distribution</a>; this differs
+	across agents.
+	<P>
+	  "Of course, perceived hardship alone does not a revolution
+	  make. As noted in the [19th century] Russian revolutionary
+	  journal,
+	  <a href="https://en.wikipedia.org/wiki/Narodnaya_Volya"
+	  target=new><I>Narodnaya Volya</I></a>, ‘‘No village ever
+	  revolted merely because it was hungry’’."
+	</P>
+      </li>
+      <li>
+	The perceived legitimacy of the regime, \(L \in [0,1]\); this
+	is exogenous and is equal across agents.
+      </li>
+    </ul>
+    <P>
+      The level of grievance any agent feels toward the regime is
+      defined as \(G = H ( 1 - L ) \).
+    </P>
+  <P>
+    If legitimacy is high, then hardship does not induce political
+    grievance. For example, the British government enjoyed
+    unchallenged legitimacy \((L = 1)\) during World War II. Hence,
+    the extreme hardship produced by
+    <a href="https://en.wikipedia.org/wiki/The_Blitz" target=new>the
+    blitz of London</a> did not produce grievance toward the
+    government. [<I>BUT remember the
+    <a href="https://en.wikipedia.org/wiki/Bengal_famine_of_1943"
+    target=new>Bengal famine of 1943</a>, for which
+    <a href="https://en.wikipedia.org/wiki/Winston_Churchill"
+    target=new>Churchill</a>'s government's colonial policy
+    was <a href="https://www.theguardian.com/world/2019/mar/29/winston-churchill-policies-contributed-to-1943-bengal-famine-study"
+    target=new>responsible</a>.</I>] Likewise, if people are suffering
+    (high \(H\)), then the revelation of government corruption (low
+    \(L\)) may be expected to produce increased levels of grievance.
+  </P>
+    
+</DIV>
+
+
+
+
+<div  CLASS="slide">
+  <h1>model 1 (cont.)</h1>
+
+  <P>
+    An agent's decision to rebel depends not only on grievance but
+    also on <a href="https://en.wikipedia.org/wiki/Risk_aversion"
+    target=new>risk aversion</a> \(R\), drawn from the
+    <a href="https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)"
+    target=new>uniform distribution</a> \(U(0,1)\) and fixed for the agent’s lifetime. An
+    agent estimates the likelihood of arrest before joining a
+    rebellion. The estimate increases with the ratio of cops to
+    already rebellious agents within the prospective rebel’s field of
+    vision \(v\), the number of lattice positions (north, south, east,
+    and west of the agent’s current position) that the agent is able
+    to inspect (exogenous and equal across agents). As in most
+    agent-based models, vision is limited; information is local.
+  </P>
+  <P>
+    Let \((C/A)_v\) be the cop-to-active ratio within \(v\).  The
+    agent’s estimated arrest probability \(P = 1 - e^\left(-
+    k\left(C/A\right)^v\right)\). Note that \(A\) is always at least
+    1, because the agent always counts himself as active when
+    computing \(P\). He is asking, ‘‘How likely am I to be arrested if
+    I go active?’’ Intuition: Imagine being a deeply aggrieved agent
+    considering throwing a rock through a bank window. If there are 10
+    cops at the bank window, you are much more likely to be arrested
+    if you are the first to throw a rock \((C/A = 10)\) than if you
+    show up when there are already 29 rock-throwing agents \((C/A =
+    1/3)\).
+  </P>
+  <P>
+    The agent’s net risk is the product of its risk aversion and
+    estimated arrest probability: \(N = RP\).  If for an agent in the
+    quiet state \(Q\) the difference \(G - N\) exceeds some threshold
+    \(T\), then it goes active; otherwise, it stays quiescent. If for
+    an agent in the active state \(A\) the difference exceeds \(T\),
+    then it stays active; otherwise, it goes quiescent: 
+    <DIR><DIR>
+      <I>Agent rule A</I>: If \(G - N > T\) be active; otherwise, be quiet.
+    </DIR></DIR>
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>bounded rationality</h1>
+
+  <P>
+    The agent rule can be interpreted as maximizing expected
+    <a href="https://en.wikipedia.org/wiki/Utility"
+    target=new>utility</a>, such that \(G - N\) is the utility of
+    publicly expressing one’s private grievance, and \(T\) is the
+    utility of not expressing it.
+  </P>
+  <P>
+    \(T\) is typically set at some small positive value.  Note,
+    however, that if it takes negative values, like \(-G\) (i.e., the
+    frustration level equals the grievance level itself), agents may
+    find it rational to rebel knowing that they will suffer negative
+    utility.  It’s simply worse to ‘‘sit and take it anymore.’’
+  </P>
+  <P>
+    Agents weigh expected costs and benefits, but their
+    <a href="https://en.wikipedia.org/wiki/Bounded_rationality"
+    target=new>rationality is bounded</a>. One might say that
+    individual rationality is ‘‘local’’ also, in the sense that the
+    agent’s expected utility calculation excludes any estimate of how
+    his isolated act of rebellion may affect the social order. Very
+    importantly, deterrence is local in this model and depends on the
+    local (individually visible) — not the global — ratio of cops to
+    actives, which is highly dynamic in this spatial model with
+    movement.
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the cop specification</h1>
+
+  <P>
+    The cops are much simpler than prospective rebels. Their
+    attributes are as follows: \(v^*\), the cop vision, is the number
+    of lattice positions (north, south, east, and west of the cop’s
+    current position) that the cop is able to inspect. It is exogenous
+    and equal across cops. It need not equal the agents’ \(v\), but is
+    typically small relative to the lattice size, so it is local too.
+  </P>
+  <P>
+    The cops, like the other agents, have one simple rule of behavior:
+    <DIR><DIR>
+	<P>
+	  <I>Cop rule C</I>: Inspect all sites within \(v^*\) and arrest
+	  a random active agent.
+	</P>
+	<P>
+	  An arrested active is assigned a jail
+	  term drawn randomly from \(U(0,J_{max})\).
+	</P>
+    </DIR></DIR>
+  <P>
+    Cops never defect to the revolution in this model.
+  </P>
+  <P>
+    The movement is the same for agents and cops:
+    <DIR><DIR>
+	<I>Movement rule M</I>: Move to a random site within your vision.
+    </DIR></DIR>
+  </P>    
+
+</DIV>
+
+  
+    
+<div  CLASS="slide">
+  <h1>graphics</h1>
+
+  <img src="Epstein02-fig1.png" class="figure-right" height=350>
+    <P>
+      Agents and cops move around the grid space and interact. I am
+      interested in the dynamics of grievance and—quite separately—in
+      the dynamics of revolutionary action. The point of separating
+      these private and public spheres is to permit illustration of a
+      core point in all research on this topic: public order may
+      prevail despite tremendous private opposition to (feelings of
+      grievance toward) a regime.
+    </P>
+    <P>
+      Given this important distinction between private grievance and
+      public action, two screens are shown.
+    </P>
+    <P>
+      <I>On the left</I>, agents are colored by their public
+      action: <font color=blue>blue</font> if
+      quiescent; <font color=red>red</font> if active.
+    </P>
+    <P>
+      <I>On the right</I>,
+      agents are colored by their private level of grievance. The
+      darker the
+      <font color=red>red</font>, the higher the level of
+      grievance.
+    </P>
+    <P>
+      Cops are colored black on both screens. Simply to reduce visual
+      clutter, all agents and cops are represented as circles on the
+      left screen and squares on the right. Unoccupied sites are
+      sand-colored on both screens.
+    </P>
+  
+</DIV>
+
+
+
+
+<div  CLASS="slide">
+  <h1>setting the parameters and running the model</h1>
+
+  <img src="Epstein02-tab1.png" height=300>
+    <P>
+      To begin each run of the model, the user sets \(L, J, v, v^*\),
+      and the initial cop and agent densities. To ensure replicability
+      of the results, input assumptions for all runs are provided in
+      the Table. Agents are assigned random values for \(H\) and
+      \(R\), and cops and (initially) quiescent agents are situated in
+      random positions on the lattice. The model then simply proceeds
+      under the rule set: \(\{A, C, M\}\). An agent or cop is selected
+      at random (asynchronous activation) and, under rule \(M\), moves
+      to a random site within his vision, where he acts in accord with
+      rule \(C\) (if a cop) or \(A\) (if an agent). The model iterates
+      this procedure until the user quits or some stipulated state is
+      attained.
+    </P>
+    <P>
+      What can one generate in this extremely simple model?
+    </P>
+  
+</DIV>
+
+
+
+
+<div  CLASS="slide">
+  <h1>individual deceptive behavior</h1>
+
+  <a href="https://commons.wikimedia.org/wiki/File:1937_Mao_Zhou_Qin_in_Yan%27an.jpg" target=new><img src="1937_Mao_Zhou_Qin_in_Yan'an.jpg" class="figure-right"></a>
+    <P>
+      Despite their simplicity, the agents exhibit unexpected
+      deceptive behavior: privately aggrieved agents turn blue (as if
+      they were nonrebellious) when cops are near, but then turn red
+      (actively rebellious) when cops move away. They are reminiscent
+      of <a href="https://en.wikipedia.org/wiki/Mao_Zedong"
+      target=new>Mao</a>’s directive that revolutionaries should
+      ‘‘swim like fish in the sea,’’ making themselves
+      indistinguishable from the surrounding population ["指挥员在战争
+      的大海中游泳",
+      <a href="https://www.marxists.org/chinese/maozedong/marxist.org-chinese-mao-193805b.htm"
+      target=new><I>論游擊戰</I></a>, 1938]
+    </P>
+    <P>
+      Ex post facto, the behavior is easily understood: the cop’s
+      departure reduces the \(C/A\) ratio within the agent’s vision,
+      reducing its estimated arrest probability, and with it its net
+      risk, \(N\), all of which pushes \(G-N\) over the agent’s
+      activation threshold, and it turns red. Moreover, it would
+      probably not have been detected without a spatial visualization;
+      individual deception would not be evident in a time series of
+      total rebels, for example.
+    </P>
+  
+</DIV>
+
+
+
+
+<div  CLASS="slide">
+  <h1>free assembly catalyzes rebellious outbursts</h1>
+
+  <img src="Epstein02-fig2.png" class="figure-right" height=350>
+    <P>
+      With both agents and cops in random motion, it may happen that
+      high concentrations of actives arise endogenously in zones of
+      low cop density. This can depress local \(C/A\) ratios to such
+      low levels that even the mildly aggrieved find it rational to
+      join (see figure on the right).
+    </P>
+    <P>
+      Random spatial correlations of activists
+      <a href="https://en.wikipedia.org/wiki/Catalysis"
+      target=new>catalyze</a> local outbursts.  This is why freedom of
+      assembly is the first casualty of repressive regimes. The
+      mechanism is that local activist concentrations reduce local
+      \(C/A\) (cop-to-active) ratios, reducing the risk of joining the
+      rebellion. To be the first rioter, one must be either very angry
+      or very risk-neutral, or both. But to be the 4,000th — if the
+      mob is already big, relative to the cops — the level of
+      grievance and risk-taking required to join the riot is far
+      lower.
+    </P>
+    <P>
+      This is how, as Mao liked to say,
+      <a href="https://www.marxists.org/reference/archive/mao/selected-works/volume-1/mswv1_6.htm"
+      target=new>‘‘a single spark can cause a prairie fire’’</a> (星火
+      燎原; 1930). Coincidentally, the Bolshevik newspaper founded by
+      Lenin was called <a href="https://en.wikipedia.org/wiki/Iskra"
+      target=new><I>Iskra</I></a>, or "spark."
+    </P>
+    <P>
+      The <a href="https://en.wikipedia.org/wiki/February_Revolution"
+      target=new>[February] Russian revolution</a> itself provides a
+      beautiful example of the chance spatial correlation of aggrieved
+      agents. On February 23, 1917, the day before the uprising, many
+      residents of
+      <a href="https://en.wikipedia.org/wiki/Saint_Petersburg"
+      target=new>Petrograd</A> were standing in food queues, because
+      of rumors that food was in short supply.  Twenty thousand
+      workers were in the streets after being locked out of a large
+      industrial complex. Hundreds of off-duty soldiers were outdoors
+      looking for distraction. And, as the day went on, multitudes of
+      women workers left their factories early to march in celebration
+      of Women’s Day. The combined crowd quickly turned into a
+      self-reinforcing mob. It managed to topple the
+      <a href="https://en.wikipedia.org/wiki/House_of_Romanov"
+      target=new>Romanov dynasty</a> within 4 days.
+    </P>
+  
+</DIV>
+
+
+
+
+<div  CLASS="slide">
+  <h1>a time series analysis</h1>
+
+  <img src="Epstein02-fig3.png" class="figure-right" height=300>
+    <P>
+      A time series of the total number of rebels is also
+      revealing. It displays one of the hallmarks of complex systems:
+      <a href="https://en.wikipedia.org/wiki/Punctuated_equilibrium_in_social_theory"
+      target=new>punctuated equilibrium</a>. Long periods of relative
+      stability are punctuated by outbursts of rebellious
+      activity. And indeed, many major revolutions (e.g.,
+      <a href="https://en.wikipedia.org/wiki/Peaceful_Revolution"
+      target=new>East German</a>) are episodic in fact.
+    </P>
+    <P>
+      <img src="Epstein02-fig4.png" class="figure-right" height=300>
+      The same qualitative pattern of behavior — punctuated
+      equilibrium — persists indefinitely, as shown in the plot of data
+      from 20,000 iterations of the model.
+    </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>waiting time distribution</h1>
+
+  <img src="Epstein02-fig5.png" class="figure-right" height=350>
+  <P>
+    Is there any underlying regularity to these complex dynamics? For
+    many complex systems, it turns out to be of considerable interest
+    to study the distribution of waiting times between outbursts above
+    some threshold. In this analysis, we set the threshold at 50
+    actives. An outburst begins when the number of actives exceeds 50
+    and ends when it falls below 50. The distribution of the time
+    between the end of one outburst and the start of the next is shown
+    here for 100,000 iterations of the model.
+  </P>
+  <P>
+    In the complexity literature, one often encounters the notion of
+    an <a href="https://en.wikipedia.org/wiki/Emergence"
+    target=new>‘‘emergent phenomenon’’</a>. This waiting time
+    distribution surely qualifies as one. It was entirely unexpected
+    and would have been quite hard to predict from the underlying
+    rules of agent behavior. These data are clearly not uniformly
+    distributed; but all distributions used in defining the agent
+    population — the distribution of hardship and risk aversion — are
+    uniform.
+  </P>
+    
+</DIV>
+
+  
+
+
+<div  CLASS="slide">
+  <h1>a ripeness index</h1>
+
+  <img src="Epstein02-fig8.png" class="figure-right" height=350>
+    <P>
+      We often speak of a society as being ‘‘ripe for revolution.’’
+      Society can be bright red on the right screen (indicating a high
+      level of grievance) while being entirely blue on the left
+      (indicating that no one is expressing, or ‘‘venting,’’ their
+      grievance). So, if this combination of high average grievance
+      \(\bar{G}\) on the right and high frequency of blues \(\bar{B}\)
+      on the left were the best indicator of high tension, a
+      reasonable ‘‘ripeness’’ index would be simply their product:
+      \(\bar{G} \bar{B}\).
+    </P>
+    <P>
+      This, however, ignores the crucial question, why are agents
+      blue? If they are inactive simply because they are risk averse
+      and have no inclination to go active, then they are not truly
+      frustrated in the inactive blue state. So, for fixed \(\bar{G}\)
+      and \(\bar{B}\) a good tension index should increase as average
+      risk aversion falls (more agents want to act out, but are
+      nonetheless staying blue).  Hence, a better simple measure is:
+      \(\bar{G}\bar{B}/\bar{R}\) , where \(\bar{R}\) is average risk
+      aversion. In the figure here, this measure is plotted against a
+      curve of actives designed to exhibit high volatility. It is
+      clear that a buildup of tension precedes each outburst and might
+      be the basis of a warning indicator.
+    </P>
+  
+</DIV>
+
+
+
+
+<div  CLASS="slide">
+  <h1>legitimacy reduction</h1>
+
+  <img src="Epstein02-fig9.png" class="figure-right" height=300>
+    <P>
+      First, the effect of legitimacy being reduced in small
+      increments. It displays three curves. The downward sloping upper
+      curve plots the steady incremental decline in legitimacy over
+      time. The horizontal <font color=red>red curve</font> just above
+      the time axis shows the number of actives in each time
+      period. Even though legitimacy declines to zero, there is no red
+      spike, no explosion, because—as discussed earlier—each new
+      active is being picked off in isolation, before he can catalyze
+      a wider rebellion. And this is why the middle curve—representing
+      the total jailed population—rises smoothly over time.
+    </P>
+      <img src="Epstein02-fig10.png" class="figure-right" height=300>
+	<P>
+	  Next, legitimacy is held at its initially high level (of
+	  0.90) for 77 periods. Then, in one jump, it is reduced to
+	  0.70, where it stays. The upper legitimacy curve is a step
+	  function. Even though the absolute legitimacy reduction (of
+	  0.30) is far smaller than before, there is an explosion of
+	  actives, shown by the <font color=red>red spike</font>. And, in
+	  turn, there is a sharp rise in the jailed population, whose
+	  absolute size exceeds that of the previous run.
+	</P>
+	
+</DIV>
+
+
+
+
+<div  CLASS="slide">
+  <h1>legitimacy reduction (cont.)</h1>
+
+  <P>
+    Now, why the difference?  In the incremental legitimacy reduction
+    scenario, the potentially catalytic agents at the tail of the
+    grievance distribution are being picked off in isolation, before
+    they can stimulate a local contagion. The sparks, as it were, are
+    doused before the fire can take off. In the second— one-shot
+    reduction—case, even though the absolute legitimacy decline is far
+    smaller, multiple highly aggrieved agents go active at once. And
+    by the same mechanism as discussed earlier, this depresses local
+    \(C/A\) ratios enough that less aggrieved agents jump in. Hence,
+    the rebellious episode is greater, even though the absolute
+    legitimacy reduction is smaller.
+  </P>
+  <P>
+    The rate of change — the
+    <a href="https://en.wikipedia.org/wiki/Derivative"
+    target=new>derivative</a> — of legitimacy emerges as salient.
+    This result would appear to have important implications for the
+    tactics of revolutionary leadership. Rather than chip away at the
+    regime’s legitimacy over a long period with daily exposés of petty
+    corruption, it is far more effective to be silent for long periods
+    and accumulate one punchy exposé. Indeed, the single punch need
+    not be as ‘‘weighty’’ as the ‘‘sum’’ of the daily particulars.
+    (The one-shot legitimacy reduction need not be as great as the sum
+    of all of the incremental deltas.)
+  </P>
+  <P>
+    Perhaps this is why Mao would regularly seclude himself in the
+    mountains in preparation for a dramatic reappearance, and why the
+    return of exiled revolutionary leaders — like
+    <a href="https://en.wikipedia.org/wiki/Vladimir_Lenin"
+    target=new>Lenin</a> and
+    <a href="https://en.wikipedia.org/wiki/Ruhollah_Khomeini"
+    target=new>Khomeini</a> — are attended with such trepidation by
+    authorities. Perhaps this is also why dramatic ‘‘triggering
+    events’’ (e.g., assassinations) loom so large in the literature on
+    this topic; often, they are instances in which the legitimacy of
+    the regime suddenly takes a dive. By the same token, the earlier
+    run (incremental legitimacy reductions) explains the
+    counterrevolutionary value of
+    <a href="https://en.wikipedia.org/wiki/Agent_provocateur"
+    target=new>agent provocateurs</a>: they incite the most aggrieved
+    agents to go active prematurely, allowing them to be arrested
+    before they can catalyze the wider rebellion. While often
+    sufficient, sharp legitimacy reductions are not the only
+    inflammatory mechanism.
+  </P>
+  
+</DIV>
+
+
+
+
+<div  CLASS="slide">
+  <h1>cop reductions</h1>
+
+  <img src="Epstein02-fig11.png" class="figure-right" height=350>
+    <P>
+      According to
+      <a href="https://en.wikipedia.org/wiki/Alexis_de_Tocqueville"
+      target=new>de Tocqueville</a>, "it oftener happens that when a
+      people that has put up with an oppressive rule over a long
+      period without protest suddenly finds the government relaxing
+      its pressure, it takes up arms against it." In the cases of the
+      French, Russian, and Iranian revolutions, substantial numbers of
+      people were privately opposed to the regime. At the same time,
+      the regime appeared strong, which ensured that public opposition
+      was, in fact, unalarming. What, then, happened to break the
+      appearance of the invincibility of the regime and to start a
+      revolutionary bandwagon rolling? In the cases of France and
+      Iran, the answer seems to lie, in large measure, in a lessening
+      of government oppression. Indeed, de Tocqueville wrote that
+      ‘‘liberalization is the most difficult of political arts.’’
+    </P>
+    <P>
+      Here, liberalization is modeled as cop reductions. The figure
+      shows the typical result.  Unlike the case of incremental
+      legitimacy reductions above (salami tactics), there comes a
+      point at which a marginal reduction in central authority does
+      ‘‘tip’’ society into rebellion. The dynamics under reductions in
+      repressive potential (cops) are fundamentally different from the
+      dynamics under legitimacy reduction in this model—and perhaps in
+      societies. Because both types of reduction are emboldening to
+      revolutionaries, one might have imagined that reductions in the
+      regime’s repressive power—the cop level—would produce dynamics
+      equivalent to those under legitimacy reduction.  As we see,
+      however, the dynamics are fundamentally different.
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>main insights from Model 1</h1>
+
+  <P>
+    <ul>
+      <li>
+	Unexpected emergence of individually deceptive behavior, in
+	which privately aggrieved agents hide their feelings when cops
+	are near, but engage in openly rebellious activity when the
+	cops move away.
+      </li>
+      <li>
+	Political ‘‘tipping points’’—revolutionary situations in which
+	the screen is blue on the left (all agents quiescent) but red
+	on the right.  Surface stability prevails despite deep and
+	widespread hostility to the regime. When pushed beyond these
+	tipping points, the model produces outbursts of violence and
+	punctuated equilibria.
+      </li>
+      <li>
+	The model explains standard repressive tactics like
+	restrictions on freedom of assembly and the imposition of
+	curfews.  Such policies function to prevent the random spatial
+	clustering of highly aggrieved risk-takers, whose activation
+	reduces the local cop-to-active ratio, permitting other less
+	aggrieved and more timid agents to join in.
+      </li>
+      <li>
+	Legitimacy can fall much farther incrementally than it can in
+	one jump, without stimulating large-scale rebellion. However
+	(quite unlike legitimacy reductions), incremental reductions
+	in repressive potential (cops) can produce large-scale tipping
+	events.
+      </li>
+    </ul>
+  </P>
+  <P>
+    The model seems most promising for cases of decentralized
+    upheaval. Although one could argue that certain effects of
+    revolutionary leadership—reductions in perceived legitimacy
+    through rousing speeches or writings that expose regime
+    corruption—are captured, explicit leadership as such is really not
+    modeled. That could be a weakness in cases—for example, the
+    communist Chinese revolution—where central leadership was
+    important, although some would argue that, even there, the main
+    issue was not the individual leader, but society’s ‘‘ripeness for
+    revolution.’’ As
+    <a href="https://en.wikipedia.org/wiki/Friedrich_Engels"
+    target=new>Engels</a> wrote, ‘‘in default of
+    <a href="https://en.wikipedia.org/wiki/Napoleon"
+    target=new>Napoleon</a>, another would have been found’’.
+    </P>
+
+</DIV>
+    
+    
+
+<div  CLASS="slide">
+  <h1>Model II: inter-group violence</h1>
+
+  <img src="Epstein02-fig12.png" class="figure-right" height=350>
+    <P>
+      Two "ethnic groups": blue and green. As in Model 1, agents turn
+      red when active, which now means killing an agent of the other
+      ethnic group.  Legitimacy is modeled as each group’s assessment
+      of the other’s right to exist; \(L\) is exogenous and the same
+      for each group.
+    </P>
+    <P>
+      There is also some simple population dynamics: agents clone
+      offspring onto unoccupied neighboring sites with probability
+      \(p\) each period. Offspring inherit the parent’s ethnic
+      identity and grievance. Because there is birth, there must be
+      death to prevent saturation. Accordingly, agents are assigned a
+      random death age from \(U(0, max_{age})\). Cops are as before,
+      and arrest—evenhandedly—red agents within their vision. (This
+      assumption of even-handedness can, of course, be relaxed.)
+    </P>
+    <P>
+      In this run, legitimacy is set to a high number, just to check
+      whether peaceful coexistence prevails with no cops. The left
+      screen clearly shows spatial heterogeneity and peaceful mixing
+      of groups with no red agents. On the right, only the palest of
+      pink shades, indicating low levels of grievance, are seen.
+      Harmonious diversity prevails.
+    </P>
+  
+</DIV>
+
+
+
+
+<div  CLASS="slide">
+  <h1>ethnic cleansing</h1>
+
+  <img src="Epstein02-fig13.png" class="figure-right" height=600>
+    <P>
+      With no cops to regulate the competition, if \(L\) falls, even
+      to \(0.8\),
+      <a href="https://en.wikipedia.org/wiki/Ethnic_cleansing"
+      target=new>ethnic cleansing</a> results.  The sequence of five
+      panels in this figure clearly shows local episodes of ethnic
+      cleansing, leading ultimately to the annihilation of one group
+      by the other: <a href="https://en.wikipedia.org/wiki/Genocide"
+      target=new>genocide</a>.
+    </P>
+    <P>
+      Over a large number of runs \((n = 30)\), genocide is always
+      observed. The victor is random. The phenomenon is strongly
+      reminiscent of ‘‘competitive exclusion’’ in population
+      biology. When two closely related species compete in a confined
+      space for the same resource, one will gain an edge and wipe the
+      other out. If, however, the inter-species competition is
+      regulated by a predator that feeds evenhandedly on the
+      competitors, then both can
+      survive. <a href="https://en.wikipedia.org/wiki/Peacekeeping"
+      target=new>Peacekeepers</a> are analogous to such predators.
+    </P>
+  
+</DIV>
+
+
+
+
+<div  CLASS="slide">
+  <h1>peacekeeping and safe havens</h1>
+
+  <img src="Epstein02-fig14.png" class="figure-right" height=350>
+    <P>
+      This run beging exactly as in the previous genocide case. But,
+      at \(t=50\), a force of peacekeepers is deployed. They go to
+      random unoccupied sites on the lattice. This typically produces
+      safe havens.
+    </P>
+    <P>
+      Rather than begin with no cops initially, as in the previous
+      run, a case with high initial cop density was also
+      examined. Once a stable pattern had emerged, the cops were
+      withdrawn. Here, with heavy authority from the start (a high cop
+      density of 0.04), a stable, but nasty, regime emerges. The
+      presence of cops prevents either side from wiping the other out,
+      but their coexistence is not peaceful: ethnic hostility is
+      widespread at all times.  When
+      (<a href="https://en.wikipedia.org/wiki/Ceteris_paribus"
+      target=new><I>ceteris paribus</I></a>) all cops are
+      withdrawn—the peacekeepers suddenly go home—there is reversion
+      to competitive exclusion and, eventually, one side wipes out the
+      other.
+    </P>
+  
+</DIV>
+
+
+<!--
+
+<div  CLASS="slide">
+  <h1>TITLE</h1>
+
+  <img src="Epstein02-fig15.png" class="figure-right" height=350>
+  <P>
+  
+</DIV>
+
+
+
+
+<div  CLASS="slide">
+  <h1>TITLE</h1>
+
+  <img src="Epstein02-fig16.png" class="figure-right" height=350>
+  <P>
+  
+</DIV>
+
+
+
+
+<div  CLASS="slide">
+  <h1>TITLE</h1>
+
+  <img src="Epstein02-fig17.png" class="figure-right" height=350>
+  <P>
+  
+</DIV>
+
+-->
+
+
+<div  CLASS="slide">
+  <h1>main insights from Model 2</h1>
+
+  <P>
+    <ul>
+      <li>
+	With high legitimacy (mutual perception by each ethnic group
+	of the other’s right to exist), peaceful coexistence between
+	ethnic groups is observed; no peacekeepers are needed.
+      </li>
+      <li>
+	However, if the force density is held at zero, and legitimacy
+	is reduced (to 0.8), local episodes of ethnic cleansing are
+	seen, leading to surrounded enclaves of victims, and
+	ultimately to the annihilation of one group by the other.
+      </li>
+      <li>
+	With early intervention on a sufficient scale, this process
+	can be stopped. Safe havens emerge. With high cop density from
+	the outset, the same level of legitimacy (0.8) produces a
+	stable society plagued by endemic ethnic violence.
+      </li>
+      <li>
+	If cops are suddenly removed, there is reversion to
+	competitive exclusion and genocide.
+      </li>
+    </ul>
+  </P>
+  
+</DIV>
+
+
+
+
+
     
 <div class="footer">
-<p>Last modified: Mon Feb 8 2021 at 09:48:40 EST</p>
+<p>Last modified: Fri Mar 26 2021 at 08:30:22 EDT</p>
 </div>
 </body>
 </html>

@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computing Societies — Unit 13</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2020 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 13 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computing Societies</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 13: inequality (cont.)</h2>
+  </div>
+<!--  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%> -->
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+<div  CLASS="slide">
+  <h1>inequality</h1>
+
+  <P>
+  <BR>
+    <ul>
+      <li>
+	<li>
+	  <I>Computational justice: simulating structural bias and
+	    interventions</I> [Momennejad, Sinclair, and Cikara, 2019]. 
+	</li>
+      </ul>
+    </P>
+  
+</DIV>
+
+
+
+  <div  CLASS="slide">
+  <h1>a case study in inequality: gender discrimination</h1>
+
+  <P>
+    Women and minorities remain underrepresented in the highest ranks
+    of
+    <a href="https://en.wikipedia.org/wiki/Science,_technology,_engineering,_and_mathematics"
+    target=new>STEM</a> fields, politics, business, and other
+    high-prestige professions. This underrepresentation at higher
+    ranks exists despite more representative demographic distributions
+    in early-career stages. Losing the talents of a wide swath of the
+    work force incurs tremendous <B>costs</B> both to individual
+    workers’ earning potential and to institutions’ earnings,
+    innovation, and decision-making.
+  </P>
+  <P class="incremental">
+    <font color=red><B>Also: there are costs to persisting in fields in which one represents a
+    minority.</B></font>
+  </P>
+
+  <P>
+    Most <a href="https://en.wikipedia.org/wiki/Intervention_theory"
+    target=new>interventions</a> designed to remedy
+    underrepresentation focus on changing individual factors, such as
+    personal attitudes or
+    <a href="https://en.wikipedia.org/wiki/Stereotype"
+    target=new>stereotypes</a>, or individuals’ interpersonal
+    behaviors, such as reducing
+    <a href="https://en.wikipedia.org/wiki/Bias" target=new><B>bias</B></a>
+    in hiring decisions. However, evidence indicates that ‘diversity’
+    trainings directed at these factors yield mixed results at
+    best. Moreover, they tend to focus on recruitment rather than
+    retention.
+  </P>
+
+  <P>
+    Here we propose that a key contributor to underrepresentation is
+    the increased costs associated with being underrepresented in the
+    first place. In other
+    words, <a href="https://en.wikipedia.org/wiki/Structural_discrimination"
+    target=new><B>structural</B></a> disparities (e.g., a historically
+    male-skewed gender ratio) generate conditions under which bias
+    will accumulate in greater proportion toward minorities (e.g.,
+    women) who are present to receive it. Thus, systemic or structural
+    <a href="https://en.wikipedia.org/wiki/Intervention_theory"
+    target=new>interventions</a>, though less explored in professional
+    settings, hold promise as key to institutional change, e.g.,
+    <a href="https://en.wikipedia.org/wiki/Women_in_government#Quotas"
+    target=new>quotas</a> in politics.
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the present work</h1>
+
+  <P>
+    Despite the efficacy of structural
+    <a href="https://en.wikipedia.org/wiki/Intervention_theory"
+    target=new>interventions</a>, there are prohibitive factors that
+    leave them less explored; for example, structural interventions:
+    <ul>
+      <li>
+	are logistically challenging,
+      </li>
+      <li>
+	 are expected to show effects only over long time scales, and
+      </li>
+      <li>
+	carry potential risk of “over-correction” or failure.
+      </li>
+    </ul>
+  <P>
+    As such, many organizations and
+    institutions may consider it too risky to test the effects of
+    large-scale structural change. Even for institutions willing to
+    implement structural change policies, empirical parameters are
+    lacking to estimate over which time horizons different strategies
+    for structural change would yield parity (e.g., 1 year, 10 years,
+    50 years?).
+  </P>
+
+  <P>
+    The present work attempts to overcome challenges associated with
+    testing the effects of structural disparity, and the long-term
+    efficacy of structural and interpersonal change policies. To do
+    so, we conduct multi-agent simulations, parameterized by
+    empirical evidence from gender and racial bias research, and
+    compare the accumulated costs of disparity under different gender
+    ratios and
+    <a href="https://en.wikipedia.org/wiki/Intervention_theory"
+    target=new>intervention</a> strategies.
+  </P>
+
+  <P class="incremental">
+    Specifically, we compare the long-term efficacy of objection to
+    bias (interpersonal) and an equality policy (structural) for
+    reducing the costs of gender disparity to individuals and
+    institutions.
+  </P>
+
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the present work</h1>
+  
+  <P>
+    Agents interact in simulated meetings. In each meeting, one or
+    more agents can make sexist comments with varying probabilities
+    and, when they do, other agents can object to the occurrence of
+    sexism with empirically derived probabilities. Furthermore, in
+    each meeting, agents learn from the observation of sexist comments
+    and corresponding objections: the probability of sexism either
+    increases, when sexism occurs with no objection, or decreases when
+    objections follow.  These learning parameters are set based on
+    empirical results.
+  </P>
+
+  <P>
+    Our simulations quantify:
+    <ol type=i>
+      <li>
+	the impact of unequal gender ratios on the count of sexist
+	encounters;
+      </li>
+      <li>
+	the associated costs of gender bias to individuals and
+	institutions, and
+      </li>
+      <li>
+	the long-term impact of equality policy and bias
+	confrontation.
+      </li>
+    </ol>
+  </P>
+  <P>
+    We based the multi-agent simulation on the
+    <a href="https://en.wikipedia.org/wiki/Petrie_multiplier"
+    target=new>Petrie multiplier</a> (a thought experiment proposed by
+    <a href="https://en.wikipedia.org/wiki/Karen_Petrie"
+    target=new>Karen Petrie</a>) and added multi-agent learning from
+    observation, objection probabilities, and costs—of receiving
+    sexist comments, objecting to sexism, and receiving objections.
+  </P>
+  <P>
+    To maximize the relevance of our simulation results to real world
+    solutions, all parameters were estimated following our literature
+    review of human behavioral data.
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>agent-based simulation</h1>
+
+  <img src="Momennejad19-fig1.png" class="figure-right" height=550>
+  <small>
+  <ol type=A>
+    <li>
+      We simulated each institution with 100 agents with different
+      gender ratios. For instance, in a 0.2 female institution 80% of
+      agents were male and 20% female. The agents were drawn from
+      populations with equal probability distributions for
+      sexism. That is, if the institution’s ratio was 0.5, the mean
+      and standard deviation of their sexism probabilities were equal.
+    </li>
+    <li>
+      In each institution we simulated 1000 meetings (M) with 2-8
+      agents randomly drawn from the pool of 100. Each simulation with
+      gender ratio and confrontation probabilities was repeated 1000
+      times.
+    </li>
+    <li>
+      During each meeting agents interacted. With some probability
+      (set based on empirical findings) agents made biased comments,
+      leading to a cost of 1 to the target. Agents from the target
+      group (e.g., female agents) or allies (e.g., male agents) could
+      object. If an objection was made, the perpetrator received a
+      cost of 1. Making an objection also incurred a cost of 1 when
+      made by a target and a cost of 0.8 when made by an ally.
+    </li>
+    <li>
+      When bias occurred without objection, agents from perpetrator
+      group increased their sexism probabilities by 0.1. When bias was
+      followed by an objection, the perpetrator group decreased their
+      sexism probabilities: by 0.1 if an in-group made the objection,
+      and by 0.05 if an agent from the other group (i.e., an ally)
+      objected.
+    </li>
+  </ol>
+  </small>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>mean number of sexist comments per meeting</h1>
+
+  <img src="Momennejad19-fig2.png" class="figure-right" height=550>
+  <P>
+    Sexism probabilities were initialized as equal in all simulations
+    with equal distributions of gender bias and bias confrontation for
+    male and female agents. As such, in an institution with a 50/50
+    gender ratio the count of anti-female and anti-male comments were
+    equal
+    (<a href="https://en.wikipedia.org/wiki/Resampling_(statistics)#Permutation_tests"
+    target=new>permutation test</a> \(p=.9221\)), while in an
+    environment with gender ratios of 0.1, 0.2, 0.3, and 0.4 there
+    were much higher anti-female than anti-male comment counts (\(p <
+    10^{-5}\)).
+  </P>
+  <HR>
+    <small>
+      <P>
+	(Top) Sexist remarks received by female agents
+	(<font color=blue>blue</font>) and male agents
+	(<font color=orange>orange</font>) per meeting plotted over
+	1000 meetings in simulated institutions initialized with
+	different gender ratios (0.1 female, 0.2 female, 0.3 female,
+	0.4 female, 0.5 female) and equal sexism probability
+	distributions for agents of both genders. The Y axis of
+	distribution plots, for each institution with a given ratio,
+	indicate the number of agents receiving the corresponding
+	number of comments on the X axis.
+      </P>
+      <P>
+	(Bottom) Swarm plots of distributions from the plot above for
+	0.2 female ratio and 0.5 female ratio for comparison. The Y
+	axis indicates mean comments per meeting in an institution and
+	each dot represents the comments received by women
+	(<font color=blue>blue</font>) or men
+	(<font color=orange>orange</font>) in one of the 1000
+	simulations of a given institution.
+      </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>probabilities of interpersonal bias before and after 1000 meetings</h1>
+
+  <img src="Momennejad19-fig3.png" class="figure-right" height=450>
+  <P>
+    Initial bias probabilities were equal for male and female
+    populations in the initialization of an environment. We allowed
+    observational learning in accordance with empirical findings:
+    sexism probabilities could increase due to observing sexism that
+    received no objection, or decrease due to observing objection.
+  </P>
+  <P>
+    Gender ratio disparity affected the increase in sexism
+    probabilities. Probabilities of expressing bias grew more in the
+    majority agents (e.g., male) in institutions with low ratios of
+    female agents, whereas these probabilities and their growth were
+    equal in 50/50 institutions.
+  </P>
+  <HR>
+    <small>
+      <P>
+	(Left) Mean interpersonal bias probabilities before 1000
+	meetings in institutions initialized with different gender
+	ratios (.1, .2, .3, .4, .5 female).
+      </P>
+      <P>
+	(Right) Mean interpersonal bias probabilities after 1000
+	meetings in institutions initialized with different gender
+	ratio. (Male: <font color=orange>orange</font>,
+	Female: <font color=blue>blue</font>).
+      </P>
+    </small>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>cumulative costs of bias to individuals</h1>
+
+  <img src="Momennejad19-fig4.png" class="figure-right" height=550>
+  <P>
+    There are three kinds of costs in the present model, inspired by
+    empirical findings:
+    <ol>
+      <li>
+	the cost of being the target of bias (target
+	agents receive cost of 1),
+      </li>
+      <li>
+	the cost of confronting bias (target
+	objector receives cost of 1, ally objector receives cost of
+	.8),
+      </li>
+      <li>
+	the cost of being confronted (perpetrator receives cost of
+	1).
+      </li>
+    </ol>
+  </P>
+  <P>
+    For each simulated institution with a given gender ratio
+    (e.g., .2 or .5 female) we ran 1000 simulations using these
+    parameters and estimated the total cumulative costs of bias and
+    confrontation for female and male agents.
+  </P>
+  <P>
+    The more skewed the gender ratio, the higher the costs to women
+    and to institutions as a whole. More balanced gender ratios
+    yielded a large decrease in costs to women and institutions, while
+    moderately increasing the costs for men.
+  </P>
+  <HR>
+    <small>
+      <P>
+	Total costs for female agents (<font color=blue>blue</font>)
+	and male agents (<font color=orange>orange</font>) arrived at
+	after 1000 simulations of 1000 meetings initialized with
+	different gender ratios (.1 female, .2 female, .3 female, .4
+	female, .5 female). The Y axis of the distribution plots, for
+	each institution with a given ratio, indicates the number of
+	agents receiving the corresponding costs on the X axis.
+      </P>
+    </small>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>cumulative costs of bias to institution</h1>
+
+  <img src="Momennejad19-fig5.png" class="figure-right" height=550>
+  <P>
+    To compare the total cost of bias to institutions with different
+    gender ratios, we summed the costs of bias to female and male
+    agents for each environment.
+  </P>
+  <P>
+    The more skewed the gender ratio, the higher the costs to
+    institutions as a whole.
+  </P>
+  <HR>
+    <small>
+    <P>
+      Cumulative costs of bias for institution arrived at after
+      1000 simulations of 1000 meetings initialized with
+      different gender ratios (.1 female, .2 female, .3 female,
+      .4 female, .5 female).
+    </P>
+    </small>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>simulating the introduction of an equality policy</h1>
+
+  <img src="Momennejad19-fig6.png" class="figure-right" height=550>
+  <P>
+    Here we tested whether enforcing gender parity in an institution
+    with a previously skewed gender ratio would eliminate sexism.
+    Specifically, after 1000 meetings with a 20/80 ratio we simulated
+    enforcing a 50/50 equality policy.  We restarted the environment
+    with a .5 ratio but carried over the probability of sexism arrived
+    at after the 1000 meetings in the .2 environment.
+  </P>
+  <P>
+    The number of sexist comments per meeting was far from equal, and
+    the gap widened with further meetings.
+  </P>
+  <HR>
+    <small>
+    <P>
+      We computed sexism probabilities for male and female agents
+      after 1000 meetings in a .2 environment, and initialized a new
+      environment with .5 ratio carrying over the previous
+      environment’s updated probabilities. We simulated 1000, 2000,
+      3000, 4000, and 5000 meetings in the new 50/50 environment to
+      compare the long-term effects of this equality policy. In spite
+      of the 50/50 gender ratio in the new environment, we observed a
+      large gender gap between sexism comments received by male and
+      female agents per meeting which increased over time.
+    </P>
+    </small>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>combined effect of equality policy and (increased) objection</h1>
+
+  <img src="Momennejad19-fig7.png" class="figure-right" height=550>
+  <P>
+    Here we tested whether instituting an equality policy plus
+    (increased) objection would eliminate gender differences in the
+    receipt of sexist comments. Only when we increased the objection
+    probabilities such that 20% more agents from the population — 10%
+    targets and 10% more allies — would object with probability = 1
+    did the simulated institutions overcome the gender gap in receipt
+    of sexist comments.
+  </P>
+  <HR>
+    <small>
+      <P>
+	We compared sexist comments per meeting over 1000 simulated
+	meetings in four institutions. The <B>first institution</B>
+	was initiated with a 50:50 gender ratio and equal
+	probabilities of sexism for men and women. Objections were
+	allowed. Here the number of sexist comments were equal. The
+	<B>second institution</B> was initiated with a .5 ratio but
+	carrying over sexism probabilities derived after 1000 meetings
+	with a .2 ratio. We refer to this as enforcing an equality
+	policy to a previously .2 environment. The <B>third
+	institution</B> was the same as the second, but without
+	allowing objections by either targets or
+	allies. Unsurprisingly, we observed that removing objections
+	increased the gender gap in the number of sexist comments, but
+	this allowed us to isolate the relative efficacy of
+	objections. Critically, the <B>fourth institution</B> was
+	initiated the same as the second and third, but we increased
+	the objection probabilities such that 20% more agents from
+	population would object to sexist comments with probability =
+	1. In this environment, the gender gap in the number of
+	comments disappeared. In all simulations, objections to sexism
+	were required to avoid conditions worsening over time.
+      </P>
+    </small>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>conclusions</h1>
+
+  <P>
+    <BR>
+      <ul>
+	<li>
+	  Simulating institutions with unequal gender ratios (i.e.,
+	  female minority environments) led to increased bias towards
+	  and costs for the minority group.
+	</li>
+	<li>
+	  Confronting interpersonal gender bias by the target group
+	  and allies attenuated, but did not eliminate, the growth of
+	  bias and the costs associated with structural bias (i.e.,
+	  skewed gender ratios). Notably, institutions with higher
+	  gaps in gender ratios suffered more costs.
+	</li>
+	<li>
+	  We also tested the effects of an equality policy, enforcing
+	  a 50/50 gender ratio in a previously gender-skewed
+	  institution (20/80). After 1000 meetings, we found that the
+	  costs to male and female agents were far from equal and this
+	  gap widened with more meetings. Thus, enforcing an equal
+	  gender ratio alone will not eliminate bias from institutions
+	  with a history of structural disparity.  However, increasing
+	  the participation of allies in objecting to sexism could.
+	</li>
+      </ul>
+      <P>
+	Thus a combination of both structural and interpersonal
+	policies for social change appears to be necessary for
+	promoting equal treatment of men and women in professional
+	settings.
+      <P>
+	There are many ways in which our simulations represent a ‘best
+	case scenario.’ For example, we assumed men and women have
+	equal probabilities of displaying bias, and are equally likely
+	to confront when they detect bias. Our simulations focused on
+	binary groups for simplicity, and did not take into account
+	the mediating effects of race and status, or
+	<a href="https://en.wikipedia.org/wiki/Intersectionality"
+	target=new>intersectionality</a>.
+      <P>
+	Furthermore, in the present model an agent’s parameters only
+	change during inter-group interactions. However, in the real
+	world unjust gender norms can be learned during single-gender
+	interactions (e.g., “locker room” talk where men enforce
+	sexist norms, minority “gate keepers” who may impede other
+	minorities to remain the exception, women showing gender bias
+	against other women, etc.).
+
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>limitations and future directions</h1>
+
+  <P>
+    <BR>
+      In order to simplify this first attempt at modeling bias
+      interventions, we restricted our simulations to binary gender
+      identities. However, future simulations should implement
+      <a href="https://en.wikipedia.org/wiki/Intersectionality"
+      target=new>intersectionality</a> — assigning multiple social
+      group memberships to each agent — in a similar model.
+      <P>
+	 We also did not allow agents to leave the institutions. In
+      the real world, however, individuals drop out of institutions or
+      professions due to the accumulating costs of being a
+      minority. Findings from twenty corporations in 2008
+      <a href="https://pubmed.ncbi.nlm.nih.gov/18211132/"
+      target=new>indicated</a> that women and minorities were more
+      likely to quit jobs than their majority counterparts. Future
+      simulations should incorporate this dropout threshold to account
+      for the ”leaky pipeline”, where gender inequality increases at
+      the top. In this case, due to increasing accumulated costs the
+      longer minorities remain in unbalanced institutions.
+  
+</DIV>
+
+  
+<div class="footer">
+<p>Last modified: Tue Aug 4 2020 at 22:01:20 EDT</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computing Societies — Unit 6</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2020 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 6 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computing Societies</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 6: ABM and complexity</h2>
+  </div>
+<!--  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%> -->
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+<div  CLASS="slide">
+  <h1>ABM and complexity</h1>
+
+  <P>
+    <BR>
+    <ul>
+      <li>
+	<I>Complexity: the bigger picture</I> [Vicsek, 2002].
+      </li>
+    </ul>
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>complexity</h1>
+
+  <img src="Vicsek02-ill.png" class="figure-right" height=350>
+    <BR>
+    <P>
+      "If a concept is not well defined, it can be abused. This is
+      particularly true of
+      <a href="https://en.wikipedia.org/wiki/Complexity"
+      target=new>complexity</a>, an inherently interdisciplinary
+      concept that has penetrated a range of intellectual fields from
+      physics to linguistics, but with no underlying, unified theory.
+      Complexity has become a popular buzzword that is used in the
+      hope of gaining attention or funding — institutes and research
+      networks associated with complex systems grow like mushrooms."
+    </P>
+  
+</DIV>
+
+
+<div  CLASS="slide">
+  <h1>complexity</h1>
+
+  <P>
+    "The world is indeed made of many highly interconnected parts on
+    many scales, the interactions of which result in a complex
+    behaviour that requires separate interpretations of each
+    level. This realization forces us to appreciate the fact that new
+    features emerge as one moves from one scale to another, so it
+    follows that the science of complexity is about revealing the
+    principles that govern the ways in which these new properties
+    appear."
+  </P>
+  <P>
+    "In the past, mankind has learned to understand reality through
+    simplification and analysis. Some important simple systems are
+    successful idealizations or primitive models of particular real
+    situations — for example, a perfect sphere rolling down an
+    absolutely smooth slope in a vacuum. This is the world of
+    newtonian mechanics, and it ignores a huge number of other,
+    simultaneously acting factors. Although it might sometimes not
+    matter that details such as the motions of the billions of atoms
+    dancing inside the sphere’s material are ignored, in other cases
+    reductionism may lead to incorrect conclusions."
+  </P>
+  <P>
+    "In complex systems, we accept that processes that occur
+    simultaneously on different scales or levels are important, and
+    the intricate behaviour of the whole system depends on its units
+    in a nontrivial way. Here, the description of the entire system’s
+    behaviour requires a qualitatively new theory, because the laws
+    that describe its behaviour are qualitatively different from those
+    that govern its individual units."
+  </P>
+  
+</DIV>
+
+    
+<div  CLASS="slide">
+  <h1>two examples of complexity: fluid dynamics and neural dynamics</h1>
+
+  <P>
+    Two examples: "<a href="https://en.wikipedia.org/wiki/Turbulence"
+    target=new>turbulent flows</a> and the brain. Clearly, these are
+    very different systems, but they share a few remarkable features,
+    including the impossibility of predicting the rich behaviour of
+    the whole by merely extrapolating from the behaviour of its units.
+    Who can tell, from studying a tiny drop or a single neuron, what
+    laws describe the intricate flow patterns in turbulence or the
+    patterns of electrical activity produced by the brain?"
+  </P>
+  <P>
+    "Moreover, in both of these systems (and in many others),
+    randomness and determinism are both relevant to the system’s
+    overall behaviour. Such systems exist on the edge of
+    <a href="https://en.wikipedia.org/wiki/Chaos_theory"
+    target=new>chaos</a> — they may exhibit almost regular behaviour,
+    but also can change dramatically and stochastically in time and/or
+    space as a result of small changes in conditions. This seems to be
+    a general property of systems that are capable of producing
+    interesting (complex) behaviour."
+  </P>
+  
+</DIV>
+
+
+<div  CLASS="slide">
+  <h1>complexity</h1>
+
+  <img src="scales.jpg" class="figure-right" height=500>
+  <P>
+    "Knowledge of the physics of elementary particles is therefore
+    useless for interpreting behaviour on larger scales. Each new
+    level or scale is characterized by new, emergent laws that govern
+    it. [To understand life, one must consider multiple levels of
+    organization:] molecules, macromolecules, cells, organisms,
+    species and societies."
+  </P>
+  <P>
+    "The BIG QUESTION is whether there is a unified theory for the
+    ways in which elements of a system organize themselves to produce
+    a behaviour that is typical of large classes of systems."
+  </P>
+  
+</DIV>
+
+    
+<div  CLASS="slide">
+  <h1>complexity</h1>
+
+  <P>
+    "Interesting principles have been proposed in an attempt to
+    provide such a unified theory.  These include
+    <a href="https://en.wikipedia.org/wiki/Self-organization"
+    target=new>self-organization</a>, simultaneous existence of many
+    <a href="https://en.wikipedia.org/wiki/Degrees_of_freedom"
+    target=new>degrees of freedom</a>, self-adaptation, rugged
+    <a href="https://en.wikipedia.org/wiki/Energy_landscape"
+    target=new>energy landscapes</a>, and scaling (for
+    example, <a href="https://en.wikipedia.org/wiki/Power_law"
+    target=new>power-law dependence</a>) of the parameters and the
+    underlying network of connections. Physicists are learning how to
+    build relatively simple models that can produce complicated
+    behaviour, whereas those who work on inherently very complex
+    systems (such as biologists and economists) are uncovering ways to
+    interpret their subjects in terms of interacting, well-defined
+    units (such as proteins [or people])."
+  </P>
+  <P>
+    "What we are witnessing in this context is a change of
+    <a href="https://en.wikipedia.org/wiki/Paradigm"
+    target=new>paradigm</a> in attempts to understand our world as we
+    realize that the laws of the whole cannot be deduced by digging
+    deeper into the details. In a way, this change has been caused by
+    the development of instruments. Traditionally, improved
+    microscopes or bigger telescopes are built to gain a better
+    understanding of particular problems. But computers have allowed
+    new ways of learning. By directly modelling a system made of many
+    units, one can observe, manipulate and understand the behaviour of
+    the whole system much better than before, as in the cases of
+    networks of model neurons and virtual auctions by intelligent
+    agents, for example. In this sense, a computer is a tool that
+    improves not our sight (as does the microscope or telescope), but
+    rather our insight into mechanisms within complex systems."
+  </P>
+  
+</DIV>
+
+    
+<div  CLASS="slide">
+  <h1>complex adaptive systems</h1>
+
+  <P>
+    Some of the most important characteristics of complex systems are
+    [from the
+    <a href="https://en.wikipedia.org/wiki/Complex_adaptive_system"
+    target=new>Wikipedia page</a>]: 
+    <ul>
+      <li>
+	The number of elements is sufficiently large that conventional
+	descriptions (e.g. a system of
+	<a href="https://en.wikipedia.org/wiki/Differential_equation"
+	target=new>differential equations</a>) are not only
+	impractical. Moreover, the elements interact dynamically, and
+	the interactions can be physical or involve the exchange of
+	information.
+      </li>
+      <li>
+	Such interactions are rich, i.e. any element or sub-system in
+	the system is affected by and affects several other elements
+	or sub-systems.
+      </li>
+      <li>
+	The interactions are non-linear: small changes in inputs,
+	physical interactions or stimuli can cause large effects or
+	very significant changes in outputs.
+      </li>
+      <li>
+	Interactions are primarily but not exclusively with immediate
+	neighbours and the nature of the influence is modulated.
+      </li>
+      <li>
+	Any interaction can feed back onto itself directly or after a
+	number of intervening stages. Such feedback can vary in
+	quality. This is known as recurrency.
+      </li>
+      <li>
+	The overall behavior of the system of elements is not
+	predicted by the behavior of the individual elements.
+      </li>
+      <li>
+	Such systems may be open and it may be difficult or impossible
+	to define system boundaries.
+      </li>
+      <li>
+	Complex systems operate under far from equilibrium
+	conditions. There has to be a constant flow of energy to maintain
+	the organization of the system.
+      </li>
+      <li>
+	Complex systems have a history. They evolve and their past is
+	co-responsible for their present behaviour.
+      </li>
+      <li>
+	Elements in the system may be ignorant of the behaviour of the
+	system as a whole, responding only to the information or
+	physical stimuli available to them locally.
+      </li>
+    </ul>
+  </P>
+  
+</DIV>
+
+    
+<div  CLASS="slide">
+  <h1>complex adaptive systems and modeling</h1>
+
+  <P>
+    Key concepts from a modeling perspective (according to Axelrod):
+    <ul>
+      <li>
+	<B>Strategy</B>, a conditional action pattern that indicates
+	what to do in which circumstances.
+      </li>
+      <li>
+	<B>Artifact</B>, a material resource that has definite
+	location and can respond to the action of agents.
+      </li>
+      <li>
+	<B>Agent</B>, a collection of properties, strategies &
+	capabilities for interacting with artifacts & other agents.
+      </li>
+      <li>
+	<B>Population</B>, a collection of agents, or, in some
+	situations, collections of strategies.
+      </li>
+      <li>
+	<B>System</B>, a larger collection, including one or more
+	populations of agents and possibly also artifacts.
+      </li>
+      <li>
+	<B>Type</B>, all the agents (or strategies) in a population
+	that have some characteristic in common.
+      </li>
+      <li>
+	<B>Variety</B>, the diversity of types within a population or
+	system.
+      </li>
+      <li>
+	<B>Interaction pattern</B>, the recurring regularities of
+	contact among types within a system.
+      </li>
+      <li>
+	<B>Space (physical)</B>, location in geographical space & time
+	of agents and artifacts.
+      </li>
+      <li>
+	<B>Space (conceptual)</B>, "location" in a set of categories
+	structured so that "nearby" agents will tend to interact.
+      </li>
+      <li>
+	<B>Selection</B>, processes that lead to an increase or
+	decrease in the frequency of various types of agent or
+	strategies.
+      </li>
+      <li>
+	<B>Success criteria</B> or performance measures, a "score"
+	used by an agent or designer in attributing credit in the
+	selection of relatively successful (or unsuccessful)
+	strategies or agents.
+      </li>
+    </ul>
+  </P>
+  
+</DIV>
+
+    
+<div  CLASS="slide">
+  <h1>complexity</h1>
+
+  <P>
+    Complexity in the  context of creativity and innovation:
+    <ul>
+      <li>
+	<B>Path dependence</B>: Systems tend to be sensitive to their
+	initial conditions. The same force might affect systems
+	differently.
+      </li>
+      <li>
+	<B>History</B>: The future behavior of a system depends on its
+	initial starting point and subsequently visited states.
+      </li>
+      <li>
+	<B>Non-linearity</B>: Systems may react disproportionately to
+	environmental perturbations. 
+      </li>
+      <li>
+	<B>Emergence</B>: The behavior of a system exhibits patterns
+	that are absent from, and cannot be reduced to, the behaviors
+	of its elements.
+      </li>
+      <li>
+	<B>Irreversibility</B>: Information about earlier states is
+	irretrievably lost.
+      </li>
+      <li>
+	<B>Adaptability</B>: Systems change in response to
+	circumstances and experience.
+      </li>
+      <li>
+	<B>Chaos</B>: The system's behavior may be exponentially
+	affected by the initial conditions. 
+      </li>
+      <li>
+	<B>Self-organization</B>: Systems develop order and patterns
+	that are not imposed from the outside.
+      </li>
+    </ul>
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>complexity</h1>
+
+  <BR>
+  <P>
+    "Many scientists implicitly assume that we understand a particular
+    phenomenon if we have a (computer) model that provides results
+    that are consistent with observations and that makes correct
+    predictions. Yet such models make it possible to simulate systems
+    that are far more complex than the simplest Newtonian ones that
+    allow deterministic, accurate predictions of future events."
+  </P>
+  <P>
+    "In contrast, models of complex systems frequently result in a new
+    conceptual interpretation of the behaviour. The aim is to capture
+    the principal laws behind the exciting variety of new phenomena
+    that become apparent when the many units of a complex system
+    interact."
+  </P>
+
+</DIV>
+
+
+    
+<div class="footer">
+<p>Last modified: Fri Jul 10 2020 at 12:48:55 EDT</p>
+</div>
+</body>
+</html>

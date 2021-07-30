@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computing Societies — Unit 17</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2020 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 17 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computing Societies</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 17: case study: morality</h2>
+  </div>
+<!--  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%> -->
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+<div  CLASS="slide">
+  <h1>morality</h1>
+
+  <P>
+  <BR>
+    <ul>
+      <li>
+	<I>The evolution of altruistic punishment</I> [Boyd,  Gintis,
+	Bowles, and Richerson, 2003].
+      </li>
+      <li>
+	<I>Coordinated Punishment of Defectors Sustains Cooperation
+	  and Can Proliferate When Rare</I> [Boyd, Gintis, and Bowles,
+	2010].
+      </li>
+    </ul>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>altruistic punishment [Boyd et al. 2003]</h1>
+
+  <P>
+    Unlike any other species, humans cooperate with non-kin in large
+    groups. This behavior is puzzling from an evolutionary perspective
+    because cooperating individuals incur individual costs to confer
+    benefits on unrelated group members.
+  </P>
+  <P>
+    Altruistic punishment provides one solution to this puzzle. In
+    laboratory experiments, people punish noncooperators at a cost to
+    themselves even in one-shot interactions and ethnographic data
+    suggest that such altruistic punishment helps to sustain
+    cooperation in human societies.
+  </P>
+  <P>
+    But: why do people incur costs to punish others and provide
+    benefits to nonrelatives? Here we show that group selection can
+    lead to the evolution of altruistic punishment in larger groups
+    because the problem of deterring
+    <a href="https://en.wikipedia.org/wiki/Free-rider_problem"
+    target=new>free riders</a> in the case of <B>altruistic
+    cooperation</B> is fundamentally different from the problem of
+    deterring free riders in the case of <B>altruistic punishment</B>.
+  </P>
+  <P>
+    The difference arises because the payoff disadvantage of
+    altruistic cooperators relative to defectors is independent of the
+    frequency of defectors in the population; in comparison, the cost
+    disadvantage for those engaged in altruistic punishment declines
+    as defectors become rare because acts of punishment become very
+    infrequent. Thus, when altruistic punishers are common,
+    individual-level selection operating against them is weak.
+  </P>
+  <P>
+    In other words, in larger groups, altruistic cooperation may be
+    still too costly, whereas <B>altruistic punishment is less and
+    less costly, the more it succeeds</B>.
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the key ideas</h1>
+
+  <P>
+    Consider a model in which a large population is divided into
+    groups of size \(n\). There are two behavioral types, contributors
+    and defectors. <B>Contributors</B> incur a cost \(c\) to produce a
+    total benefit \(b\) that is shared equally among group members.
+    <B>Defectors</B> incur no costs and produce no benefits. If the
+    fraction of contributors in the group is \(x\), the expected
+    payoff for contributors is \(bx - c\) and the expected payoff for
+    defectors is \(bx\), so the payoff disadvantage of the
+    contributors is a constant \(c\) independent of the distribution
+    of types in the population.
+  </P>
+  <P>
+    Now add a third type, ‘‘<B>punishers</B>’’ who cooperate and then
+    punish each defector in their group, reducing each defector’s
+    payoff by \(p/n\) at a cost \(k/n\) to the punisher. If the
+    frequency of punishers is \(y\), the expected payoffs become \(b(x
+    + y) - c\) to contributors, \(b(x + y) - py\) to defectors, and
+    \(b(x + y) - c - k(1 - x - y)\) to punishers. Contributors have
+    higher fitness than defectors if punishers are sufficiently common
+    that the cost of being punished exceeds the cost of cooperating
+    \((py > c)\).  Punishers suffer a fitness disadvantage of \(k(1 -
+    x - y)\) compared with nonpunishing contributors. Thus, punishment
+    is altruistic and mere contributors are ‘‘second-order
+    <a href="https://en.wikipedia.org/wiki/Free-rider_problem"
+    target=new>free riders</a>.’’ Note, however, that the payoff
+    disadvantage of punishers relative to contributors approaches zero
+    as defectors become rare because there is no need for punishment.
+  </P>
+  <P>
+    The fact that punishers experience only a small disadvantage when
+    defectors are rare means that weak within-group evolutionary
+    forces, such as mutation or a conformist tendency, can stabilize
+    punishment and allow cooperation to persist. But neither produces
+    a systematic tendency to evolve toward a cooperative outcome. Here
+    we explore the possibility that <I>selection among groups</I>
+    leads to the evolution of altruistic punishment when it could not
+    maintain altruistic cooperation.
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the model</h1>
+
+  <P>
+    Suppose that more cooperative groups are less prone to
+    extinction. [Humans always live in social groups in which
+    cooperative activities play a crucial role.] Because groups with
+    more punishers will tend to exhibit a greater frequency of
+    cooperative behaviors (by both contributors and punishers), the
+    frequency of punishers and cooperative behaviors will be
+    positively correlated across groups. As a result, punishment will
+    increase as a ‘‘correlated response’’ to group selection that
+    favors more cooperative groups. Because selection within groups
+    against punishment is weak when punishment is common, this process
+    might support the evolution of substantial levels of punishment
+    and maintain punishment once it is common.
+  </P>
+  <P>
+    There are \(N\) groups. Local density-dependent competition
+    maintains each group at a constant population size
+    \(n\). Individuals interact in a two-stage ‘‘game.’’ During the
+    first stage, contributors and punishers cooperate with probability
+    \(1 - e\) and defect with probability \(e\).  Cooperation reduces
+    the payoff of cooperators by an amount \(c\), and increases the
+    ability of the group to compete with other groups.
+  </P>
+  <P>
+    For simplicity, we begin by assuming that cooperation has no
+    effect on the individual payoffs of others, but does reduce the
+    probability of group extinction. Defectors always defect.  During
+    the second stage, punishers punish each individual who defected
+    during the first stage. After the second stage, individuals
+    encounter another individual from their own group with probability
+    \(1 - m\) and an individual from another randomly chosen group
+    with probability \(m\). An individual \(i\) who encounters an
+    individual \(j\) imitates \(j\) with probability \(W_j/(W_j +
+    W_i)\), where \(W_x\) is the payoff of individual \(x\) in the
+    game, including the costs of any punishment received or
+    delivered.
+  </P>
+
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the model (cont.)</h1>
+  
+  <P>
+    Thus, imitation has two distinct effects: first, it creates a
+    selection-like process that causes higher payoff behaviors to
+    spread within groups. Second, it creates a migration-like process
+    that causes behaviors to diffuse from one group to another at a
+    rate proportional to \(m\).
+  </P>
+  <P>
+    Because cooperation has no individual level benefits, defector
+    behavior spreads between groups more rapidly than do contributor
+    or punisher behaviors.  Group selection occurs through intergroup
+    conflict. In each time period, groups are paired at random, and
+    with probability \(\epsilon\), intergroup conflict results in one
+    group defeating and replacing the other group. The probability
+    that group \(i\) defeats group \(j\) is \(\frac{1}{2}(1 + (d_j -
+    d_i))\), where \(d_q\) is the frequency of defectors in group
+    \(q\). This means that the group with more defectors is more
+    likely to lose a conflict. Note that cooperation is the sole
+    target of the resulting group selection process; punishment
+    increases only to the extent that the frequency of punishers is
+    correlated with that of cooperation across groups.
+  </P>
+  <P>
+    Finally, with probability \(\mu\) individuals of each type
+    spontaneously switch into one of the two other types. The presence
+    of mutation and erroneous defection ensure that punishers will
+    incur some punishment costs, even when they are common, thus
+    placing them at a disadvantage with respect to the contributors.
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the model: methods</h1>
+
+  <P>
+    In all simulations there were 128 groups. Initially one group
+    consisted of all altruistic punishers and the other 127 groups
+    were all defectors. Simulations were run for \(2,000\) time
+    periods. The long run average results plotted in the following
+    figures represent the average of frequencies over the last
+    \(1,000\) time periods of \(10\) simulations.
+  </P>
+  <P>
+    Base case parameters were chosen to represent cultural evolution
+    in small-scale societies. We set the time period to be 1
+    year. Because individually beneficial cultural traits, such as
+    technical innovations, diffuse through populations in \(10-100\)
+    years, we set the cost of cooperation, \(c\), and punishing,
+    \(k\), so that traits with this cost advantage would spread in
+    \(50\) time periods \((c = k = 0.2)\).
+  </P>
+  <P>
+    To capture the intuition that in human societies punishment is
+    more costly to the punishee than to the punisher we set the cost
+    of being punished to four times the cost of punishing \((p =
+    0.8)\). We assume that erroneous defection is relatively rare \((e
+    = 0.02)\). The migration rate, \(m\), was set so that in the
+    absence of any other evolutionary forces, passive diffusion will
+    cause two neighboring groups that are initially as different as
+    possible to achieve the same trait frequencies in \(\approx 50\)
+    time periods \((m = 0.01)\), a value that approximates the
+    migration rates in a number of small-scale societies.
+  </P>
+  <P>
+    We set the value of the mutation rate so that the long run average
+    frequency of an ordinary adaptive trait with payoff advantage
+    \(c\) is \(\approx 0.9\) \((\mu = 0.01)\). This means that
+    mutation maintains considerable variation, but not so much as to
+    overwhelm adaptive forces. We assume that the average group
+    extinction rate is consistent with a recent estimate of cultural
+    extinction rates in small-scale societies, \(\approx
+    0.0075\). Because only one of the two groups entering into a
+    conflict becomes extinct this implies that \(\mu = 0.015\).
+    </P>  
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the effect of punishment on the evolution of cooperation</h1>
+
+  <img src="Boyd03-fig1.png" class="figure-right" height=600>
+  <P>
+    <B>The evolution of cooperation is strongly affected by the presence of
+    punishment.</B>
+    <ol type=a>
+      <li>
+	<I>[no punishment]</I>
+	The long run average frequency of cooperation (i.e., the sum
+	of the frequencies of contributors and punishers) as a
+	function of group size when there is no punishment \((p = k =
+	0)\) for three different conflict rates, 0.075, 0.015, and
+	0.003. Group selection is ineffective unless groups are quite
+	small.
+      </li>
+      <li>
+	<I>[punishment]</I>
+	When there is punishment \((p = 0.8, k = 0.2)\), group
+	selection can maintain cooperation in substantially larger
+	groups.
+      </li>
+    </ol>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the effect of mixing rate between groups</h1>
+
+  <img src="Boyd03-fig2.png" class="figure-right" height=600>
+  <P>
+    <B>The evolution of cooperation is strongly affected by rate of
+    mixing between groups.</B>
+    <ol type=a>
+      <li>
+	<I>[no punishment]</I>
+	The long run average frequency of cooperation (i.e., the sum
+	of the frequencies of contributors and punishers) as a
+	function of group size when there is no punishment \((p=k=0)\)
+	for three mixing rates, 0.002, 0.01, and 0.05. Group selection
+	is ineffective unless groups are quite small.
+      </li>
+      <li>
+	<I>[punishment]</I>
+	When there is punishment \((p = 0.8, k = 0.2)\), group
+	selection can maintain cooperation in larger groups for all
+	rates of mixing. However, at higher rates of mixing,
+	cooperation does not persist in the largest groups.
+      </li>
+    </ol>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the effect of the cost of being punished</h1>
+
+  <img src="Boyd03-fig3.png" class="figure-right" height=500>
+  <P>
+    <B>The evolution of cooperation is sensitive to the cost of being
+    punished (\(p\)).</B>
+  </P>
+  <P>
+    Here, we plot the long run average frequency of cooperation with
+    the base case cost of being punished \((p=0.8\)) and with a lower
+    value of \(p\). Lower values of \(p\) result in much lower levels
+    of cooperation.
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the effect of the cost of punishing</h1>
+
+  <img src="Boyd03-fig4.png" class="figure-right" height=500>
+  <P>
+    <B>Punishment does not aid in the evolution of cooperation when the
+    costs born by punishers are fixed, independent of the number of
+    defectors in the group.</B>
+  </P>
+  <P>
+    Here we plot the long run average frequency of cooperation when
+    the costs of punishing are proportional to the frequency of
+    defectors (variable cost), fixed at a constant cost equal to the
+    cost of cooperating (\(c\)), and when there is no punishment.
+  </P>
+    
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>summary and conclusions [Boyd et al. 2003]</h1>
+
+  <P>
+    We have shown that although the logic underlying altruistic
+    cooperation and altruistic punishment is similar, their
+    evolutionary dynamics are not. In the absence of punishment,
+    within-group adaptation acts to decrease the frequency of
+    altruistic cooperation, and as a consequence weak drift-like
+    forces are insufficient to maintain substantial variation between
+    groups. In groups in which altruistic punishers are common,
+    defectors are excluded, and this maintains variation in the amount
+    of cooperation between groups.  Moreover, in such groups punishers
+    bear few costs, and punishers decrease only very slowly in
+    competition with contributors. <B>As a result, group selection is
+    more effective at maintaining altruistic punishment than
+    altruistic cooperation.</B>
+  </P>
+  <P>
+    These results suggest that group selection can play an important
+    role in the cultural evolution of cooperative behavior and
+    moralistic punishment in humans. The importance of group selection
+    is always a quantitative issue. There is no doubt that selection
+    among groups acts to favor individually costly, group beneficial
+    behaviors. The question is always, is group selection important
+    under plausible conditions?
+  </P>
+  <P>
+    With parameter values chosen to represent cultural evolution in
+    small-scale societies, cooperation is sustained in groups on the
+    order of 100 individuals.  If the ‘‘individuals’’ in the model
+    represent family groups (on grounds that they migrate together and
+    adopt common practices), altruistic punishment could be sustained
+    in groups of 600 people, a size much larger than typical foraging
+    bands and about the size of many ethno-linguistic units in
+    nonagricultural societies.
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>altruistic punishment [Boyd et al. 2010]</h1>
+
+  <P>
+    Because mutually beneficial cooperation may unravel unless most
+    members of a group contribute, people often gang up on
+    free-riders, punishing them when this is cost-effective in
+    sustaining cooperation. In contrast, current models of the
+    evolution of cooperation assume that punishment is uncoordinated
+    and unconditional.
+  </P>
+  <P>
+    These models have difficulty explaining the evolutionary emergence
+    of punishment because rare unconditional punishers bear
+    substantial costs and hence are eliminated. Moreover, in human
+    behavioral experiments in which punishment is uncoordinated, the
+    sum of costs to punishers and their targets often exceeds the
+    benefits of the increased cooperation that results from the
+    punishment of free-riders. As a result, cooperation sustained by
+    punishment may actually reduce the average payoffs of group
+    members in comparison with groups in which punishment of
+    free-riders is not an option.
+  </P>
+  <P>
+    Here, we present a model of coordinated punishment that is
+    calibrated for ancestral human conditions and captures a further
+    aspect of reality missing from both models and experiments: <B>The
+    total cost of punishing a free-rider declines as the number of
+    punishers increases. We show that punishment can proliferate when
+    rare, and when it does, it enhances group-average payoffs.</B>
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>the new model</h1>
+
+  <P>
+    We analyzed a model of the evolution of punishment that
+    incorporates two empirically based features absent from previous
+    work:
+    <ol>
+      <li>
+	Punishment is coordinated among group members so that it is
+	contingent on the number of others predisposed to participate
+	in the punishment.  When individuals willing to punish are
+	rare, they demur and so bear only the cost of signaling their
+	willingness to punish.  They thus avoid the cost of punishing
+	when it does not pay.
+      </li>
+      <li>
+	Consistent with the “strength in numbers” and “divide and
+	rule” maxims punishment is characterized by increasing returns
+	to scale, so the total cost of punishing a single free-rider
+	declines as the number of punishers increases.
+      </li>
+    </ol>
+  </P>
+  <P>
+    Adding these two features resolves the problems with previous
+    models. Our model shows that for levels of relatedness consistent
+    with recent genetic data from hunter-gather populations,
+    punishment can proliferate when rare, and when it is common it
+    increases group-average fitness.
+  </P>    
+      
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>equilibrium frequencies of punishers</h1>
+
+  <img src="Boyd10-fig1.png" class="figure-right" height=275>
+  <P>
+    Equilibrium frequencies of punishers with a threshold frequency of
+    \(\tau\) when group members are unrelated for two values of \(b\)
+    [the benefit to cost parameter]. For each value of \(\tau\), the
+    solid circles give locally stable equilibrium frequencies of the
+    punishing type, and the open circles give interior unstable
+    equilibrium frequencies.
+    <ol type=A>
+      <li>
+	<small>
+	\(b = 2c\). For \(\tau < 3\), the only stable equilibrium is a
+        population without punishers. For larger thresholds, there are
+        two stable equilibrium frequencies, zero and a stable interior
+        equilibriumat which punishers and nonpunishers coexist. The
+        arrows indicate the effect of natural selection at points
+        above and below the solid and open circles. In these cases,
+        the unstable equilibria mark the frequency that punishers must
+        achieve before they are favored by selection.
+        </small>
+      </li>
+      <li>
+	\(b = 4c\). Now, there are two equilibria for all values
+	\(\tau > 0\).
+      </li>
+      </ol>
+    </P>
+    <HR>
+      <P>
+	<small>
+	  Individuals have one of two heritable strategies: “punisher”
+	  and “nonpunisher.” During the first interaction, punishers
+	  signal that they are willing to punish. Next, if at least
+	  \(\tau\) \((0 \le \tau \le n – 1)\) other group members
+	  signal, punishers cooperate with probability \(1 - e\) and
+	  defect with probability \(e\) and then punish any individual
+	  who did not cooperate. We refer to punishers with a
+	  threshold of \(\tau\) as “\(\tau\)-punishers.”  If fewer
+	  than \(\tau\) other individuals signaled during the first
+	  stage, punishers defect and do not punish.  Nonpunishers do
+	  not signal, defect, and do not punish, and as a result are
+	  punished if there are at least \(\tau + 1\) punishers in the
+	  group.
+	</small>
+      </P>
+	
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>[EXTRA] the effect of the frequency of punishers</h1>
+
+  <img src="Boyd10-fig2.png" class="figure-right" height=400>
+  <P>
+    The difference in fitness of punishers \(W_p\) and nonpunishers
+    \(W_n\) as a function of the frequency of punishers. When this
+    difference is positive, punishers increase in frequency, and when
+    it is negative punishers decrease in frequency. Equilibria occur
+    when this difference is zero (evolutionarily stable when the
+    function intersects the horizontal axis from above and unstable
+    otherwise).
+  </P>
+  <P>
+    When \(\tau = 1\), punishment at the threshold does not pay for
+    any frequency of punishers, and thus increasing the frequency of
+    punishers from zero decreases their relative fitness. For larger
+    values of \(\tau\), punishment at the threshold does pay, and thus
+    increasing the frequency of punishers increases their
+    fitness. This leads to a stable polymorphic equilibrium at which
+    punishers and nonpunishers coexist. Here, \(b = 2c\).
+  </P>
+  
+</DIV>
+
+
+<!--
+
+<div  CLASS="slide">
+  <h1>SLIDE TITLE</h1>
+
+  <img src="Boyd10-fig3.png" class="figure-right" height=400>
+  <P>
+    The difference in average fitness between the polymorphic
+    equilibrium at which punishers are present and the monomorphic
+    nonpunishing equilibrium.
+  </P>
+  <P>
+    Whenever the polymorphic equilibrium exists, it has higher average
+    fitness, but near-maximum benefit differences occur for relatively
+    low thresholds.
+  </P>
+  
+</DIV>
+
+  -->
+  
+
+<div  CLASS="slide">
+  <h1>introducing ASSORTMENT</h1>
+
+  <P>
+    Although punishment is evolutionarily stable in this model, so is
+    nonpunishment. A complete account of the evolution of cooperation
+    must explain how punishing strategies can increase when rare.
+  </P>
+  <P>
+    In their classic work on pairwise reciprocity, Axelrod and
+    Hamilton showed that a small amount of
+    nonrandom <I>assortment</I>, such as interaction between weakly
+    related group members, destabilizes noncooperative equilibria but
+    not cooperative equilibria. This principle holds in a wide range
+    of pairwise cooperative interactions, but not in larger groups.
+  </P>
+
+</DIV>
+  
+
+
+
+<div  CLASS="slide">
+  <h1>equilibrium frequencies of punishers, WITH ASSORTMENT</h1>
+
+  <img src="Boyd10-fig4.png" class="figure-right" height=300>
+    <P>
+    Equilibrium frequencies of punishers with a threshold frequency of
+    \(\tau\) <I>with modest assortment</I> [\(r=0.07\), which is a
+    rough estimate of the average relatedness within human foraging
+    groups] and two values of \(b\). As before, for each value of
+    \(\tau\) the solid circles give locally stable equilibrium
+    frequencies of the punishing type, and the open circles give
+    unstable equilibrium frequencies.
+    <ol type=A>
+      <li>
+	\(b = 2c\). As in the case with no assortment, for large
+	enough values of \(\tau\) there are two equilibria, but
+	punishers cannot invade and increase when rare.
+      </li>
+      <li>
+	\(b = 4c\). Now for \(0 < \tau \le 3\), rare punishers invade
+	a population of nonpunishers, and the only stable equilibrium
+	is a mixture of punishers and nonpunishers in which
+	cooperation is sustained in most groups. For larger
+	thresholds, there are two stable equilibrium frequencies, zero
+	and a mixed strategy at which punishers and nonpunishers
+	coexist. In these cases, the unstable equilibria (open
+	circles) mark the frequency that punishers must achieve before
+				  they are favored by selection.
+				  </li>
+    </ol>
+  </P>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>summary</h1>
+
+  <P>
+    Unlike many models of the evolution of punishment, this one does
+    not suffer from a “second-order
+    <a href="https://en.wikipedia.org/wiki/Free-rider_problem"
+    target=new>free-rider</a>” problem in which individuals who
+    cooperate but do not punish out-compete the punishers.
+  </P>
+  <P>
+    To see why, consider a new strategy: “contingent cooperators,” who
+    cooperate during the first period if there are \(\tau + 1\)
+    signaling individuals but do not punish. Contingent cooperators
+    avoid punishment during the first period and otherwise behave like
+    nonpunishers, and thus have higher fitness than nonpunishers. As a
+    result, they invade the polymorphic punisher-nonpunisher
+    equilibrium, replacing the nonpunishers.  However, because they
+    still respond to punishment, and punishment still benefits
+    punishers, the population evolves to a stable equilibrium at which
+    punishers and contingent cooperators coexist and that cannot be
+    invaded by other second-order free-riding types. The frequency of
+    punishers at this new equilibrium is approximately the same as in
+    the original punisher-nonpunisher equilibrium.
+  </P>
+  
+</DIV>
+
+
+
+<div class="footer">
+<p>Last modified: Sun Aug 16 2020 at 13:32:49 EDT</p>
+</div>
+</body>
+</html>

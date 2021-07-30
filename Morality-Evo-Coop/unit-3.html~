@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computing Societies — Unit 3</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2020 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Unit 3 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Computing Societies</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Unit 3: A view from cognitive and social psychology</h2>
+  </div>
+<!--  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%> -->
+
+</div>
+<!-- END COVER PAGE -->
+
+
+
+<div  CLASS="slide">
+  <h1><I>COMPUTATIONAL models of collective behavior</I> [Goldstone & Janssen, 2005]</h1>
+
+  <P>
+    <BR>
+      <ul>
+	<li>
+	  Computational models of human collective behavior offer
+	  promise in providing quantitative and empirically verifiable
+	  accounts of how individual decisions lead to the emergence
+	  of group-level organizations.
+	</li>
+	<P>
+	  <li>
+	    <a href="https://en.wikipedia.org/wiki/Agent-based_model"
+	    target=new>Agent-based models</a> (ABMs) track
+	    interactions among individual agents and their
+	    environment, and provide a process-oriented alternative to
+	    descriptive MATHEMATICAL models.
+	  </li>
+	<P>
+	  <li>
+	    Recent ABMs provide compelling accounts of group pattern
+	    formation, contagion and cooperation, and can be used to
+	    predict, manipulate and improve upon collective behavior.
+	  </li>
+	<P>
+	  <li>
+	    ABMs overcome an assumption that underlies much of
+	    cognitive science – that the individual is the crucial
+	    unit of cognition. The alternative advocated here is that
+	    individuals participate in collective organizations that
+	    they might not understand or even perceive, and that these
+	    organizations affect and are affected by individual
+	    behavior.
+	  </li>
+	</ul>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>why ABMs</h1>
+
+      <table>
+	<tr>
+	  <td>
+	    "People create group-level behaviors that are beyond the
+	    ken of any single person. The
+	    <a href="https://www.quantamagazine.org/emergence-how-complex-wholes-emerge-from-simple-parts-20181220/"
+	    target=new>emergence</a> of higher-level
+	    organizations from the interactions of lower-level units
+	    is surprising in the case of group behavior because we are
+	    the lower-level units, and the higher-level organizations
+	    typically emerge spontaneously, without our knowledge.
+	    Social phenomena such as rumors, the emergence of a
+	    standard currency, transport systems, the World Wide Web,
+	    resource harvesting, crowds,
+	    [<a href="https://en.wikipedia.org/wiki/John_Horton_Conway"
+	    target=new>Conway</a>'s <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"
+	    target=new>Game of Life</a> patterns, like
+	    the one on the right], and scientific establishments
+	    arise because of individuals’ beliefs and goals, but the
+	    eventual form that these phenomena take is rarely dictated
+	    by any individual."
+	  </td>
+	  <td>
+	    <video src="Conway-RIP.mp4" height=500 controls="controls">>
+	    </video>
+	  </td>
+	</tr>
+      </table>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>why ABMs</h1>
+
+  <P>
+  <BR>
+    Agent-Based Models (ABMs) ... build social structures from the
+    ‘bottom-up’, by simulating individuals by virtual agents, and
+    creating <a href="https://www.quantamagazine.org/emergence-how-complex-wholes-emerge-from-simple-parts-20181220/"
+    target=new>emergent</a> organizations out of the operation of
+    rules that govern interactions among agents.
+    <P>
+      ABMs have several attractive features that supplement
+      traditional methods for exploring group behavior.
+      <ol>
+	<li>
+	  They are expressed with unambiguous mathematical and
+	  computational formalisms so that once they have been fully
+	  described, their predictions are clear, quantitative and
+	  objective.
+	</li>
+	<P>
+	  <li>
+	    They provide true bridging explanations that link two
+	    distinct levels of analysis: the properties of individual
+	    agents (e.g. their attributes and interactions), and the
+	    emergent group-level behavior.  When successful,
+	    agent-based models are particularly satisfying models
+	    because they show how coherent, group-level structures can
+	    spontaneously emerge without leaders ordering the
+	    organization, and sometimes despite leaders’
+	    effort.
+	  </li>
+	<P>
+	  <li>
+	    Because the models are typically either simple or informed
+	    by real-world data, they are appropriately constrained and
+	    cannot fit any conceivable pattern of data. The
+	    <a href="https://en.wikipedia.org/wiki/Self-organization"
+	    target=new>self-organization</a> process itself exerts
+	    strong constraints on the kinds of patterns likely to be
+	    observed.
+	  </li>
+	</ol>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>typical characteristics of ABMs</h1>
+
+  <ul>
+    <li>
+      <I>Computational description at the level of agents.</I>
+      <BR>
+	ABMs consists of a large number of interacting agents,
+	operating within an environment. Each agent’s behavior is
+	governed by rules triggered by their local condition rather
+	than global information. High-level summary descriptions
+	emerge from the unfolding agent interactions but they are not
+	explicitly programmed.
+      </li>
+      <P>
+	<li>
+	  <I>Stigmergic interactions.</I>
+	  <BR>
+	    Agents act on and are influenced by their local
+	    environment.
+	    <a href="https://en.wikipedia.org/wiki/Stigmergy"
+	    target=new>Stigmergy</a> is a form of indirect
+	    communication between agents that is achieved by agents
+	    modifying their environment and also responding to these
+	    modifications, for example, ants following
+	    <a href="https://en.wikipedia.org/wiki/Pheromone"
+	    target=new>pheromone</a> trails left by other ants.
+	  </li>
+	  <P>
+	    <li>
+	      <I>Autonomy of agents.</I>
+	      <BR>
+		Each agent is capable of autonomous behavior, and
+		possesses individual, albeit frequently simplified,
+		representations of beliefs, goals and strategies.
+		Agents typically do not calculate optimal or rational
+		courses of action, but rather use
+		<a href="https://en.wikipedia.org/wiki/Heuristic"
+		target=new>heuristics</a>,
+		<a href="https://en.wikipedia.org/wiki/Reinforcement_learning"
+		target=new>reinforcement learning</a>,
+		opportunistic adaptation, or cross-generational
+		evolution to change their strategies.
+	      </li>
+	      <P>
+		<li>
+		  <I>Spatially distributed populations of agents.</I>
+		  <BR>
+		    ABMs often consist only of agents and a 2D or 3D
+		    landscape of environmental ‘patches,’ both of
+		    which may have several attributes.
+		  </li>
+		</ul>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>idealized vs. detailed models</h1>
+
+  <P>
+  <BR>
+    The most fundamental decision an ABM researcher makes is how
+    detailed their model will be. Many researchers purposefully choose
+    to create highly idealized models that boil down a collective
+    phenomenon to its functional essence. Researchers pursuing
+    idealized models are typically motivated to describe
+    domain-general mechanisms with a wide sphere of application.
+    <P>
+      A good example of this strategy is
+    <a href="https://en.wikipedia.org/wiki/Robert_Axelrod"
+    target=new>Robert Axelrod</a>’s Culture Model. The goal of this
+    model is to explain how beliefs or attitudes converge or diverge
+    in a population over time. Agents are placed at fixed locations
+    within a 2D grid, and initially have random trait values on each
+    of several features. The likelihood of neighboring agents
+    interacting with one another is proportional to their similarity
+    across all features. When two agents interact, one of the trait
+    values of one of the agents is copied to the other agent, in a
+    process that simulates cultural imitation or social influence.
+    <P>
+      Over time, spatial clusters of like-minded agents develop,
+    although some diversity of opinion is often maintained as
+    dissimilar agents are unlikely to interact even if they are
+    neighbors (see next slide). This simple model can explain (i) the
+    spatial clustering of opinions, (ii)
+    <a href="https://en.wikipedia.org/wiki/Bandwagon_effect"
+    target=new>bandwagon effects</a>, and (iii) the spontaneous
+    division of a culture into sub-cultures.
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>example of an idealized model: culture clustering</h1>
+
+  <img src="Goldstone05-fig1.png" class="figure-right" height=500>
+  <P>
+    Four simulations of Axelrod’s Culture Model. Each agent is
+    represented by a color that represents their entire set of
+    features (e.g. hobby) and trait values (e.g. chess, badminton,
+    violin). Agents with identical colors have identical traits. 
+    <ol type=a>
+      <li>
+	An initial, randomly generated population of agents, each
+	possessing two traits (TZ2) on each of two features (FZ2). 
+      </li>
+      <li>
+	The same population after 4000 generations of interactions in
+	which neighboring agents copy each others’ traits, with the
+	probability of interaction proportional to the agents’
+	similarity. The population is frozen because the red and green
+	agents have no traits in common and hence will never interact.
+      </li>
+      <li>
+	After 4000 generations, a simulation starting with agents
+	characterized by two trait values (TZ2) along 15 features
+	(FZ15). Increasing the number of features increases the
+	probability of a homogeneous, like-minded population
+	emerging. 
+      </li>
+      <li>
+	When FZ3 and TZ15, the population quickly becomes frozen into
+	small cliques that have no crossgroup interactions. Increasing
+	the number of traits per feature decreases the size of
+	cliques. 
+      </li>
+    </ol>
+  
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>example of a detailed model: the Anasazi settlement</h1>
+
+  <img src="Goldstone05-fig2.png" class="figure-right" height=500>
+  <P>
+    Other ABMs are intimately tied to a specific domain because they
+    include a considerable amount of detail derived from real world
+    datasets and their goal is answering a specific real-world
+    question. One such question is, ‘Why did the
+    <a href="https://en.wikipedia.org/wiki/Ancestral_Puebloans"
+    target=new>Anasazi</a> people of southwestern United States
+    abandon their homeland around 1350 AD?’
+  </P>
+  <P>
+    The ABM here incorporates features grounded in historical records:
+     maize production levels, ground water reserves, the 3D geography
+     of the Anasazi’s Long House Valley homeland, populations
+     established from archeological digs, and social trends regarding
+     childbirth age, the average age of children leaving home, and
+     food consumption needs, all based upon recent maize-growing
+     societies of <a href="https://en.wikipedia.org/wiki/Puebloans"
+		     target=new>Pueblo Indians</a> descended from the Anasazi.
+  </P>
+  <P>
+    Simulated (a) and historical (b) patterns of settlement for the
+    Anasazi in the Long House Valley around AD 1125. Red circles
+    indicate settlements, and the shade of blue depicts the annual
+    groundwater level for a location.
+  </P>
+  
+</DIV>
+
+
+<div  CLASS="slide">
+  <h1>idealized vs. detailed models</h1>
+
+  <table>
+    <tr>
+      <th align=center>
+	idealized
+      </th>
+      <th align=center>
+	detailed
+      </th>
+    </tr>
+    <tr>
+      <td>
+	Revealing idealized models have been formulated for the
+	diffusion of innovations, collective action, the transmission
+	of cultural elements over generations, the development of
+	social conventions, and language change.
+      </td>
+      <td>
+	By contrast, detailed models hold the promise of making
+	faithful predictions by being grounded in a case’s particular
+	data. There are ABMs that effectively incorporate considerable
+	detail about
+	<a href="https://en.wikipedia.org/wiki/Academic_tenure"
+	target=new>university tenure systems</a>, electricity markets in
+	<a href="https://en.wikipedia.org/wiki/England"
+	target=new>England</a>, and hunting behavior in eastern
+	<a href="https://en.wikipedia.org/wiki/Cameroon"
+	target=new>Cameroon</a>.
+      </td>
+    </tr>
+    <tr>
+      <td>
+	The downsides of these idealized models are that without
+	extensive tailoring, they might not map onto any actual case
+	study, and they can oversimplify to the point of leaving out
+	crucial details.
+      </td>
+      <td>
+	The downside of detailed models is that they may be able to
+	predict too many possible outcomes if they have many
+	parameters that are insufficiently constrained. If the models
+	become too detailed, they may become as complex as the modeled
+	phenomenon itself, and hence serve as poor explanatory aids.
+      </td>
+    </tr>
+  </table>
+
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>ABMs (computational) vs. descriptive (mathematical) models</h1>
+
+  <P>
+    <BR>
+      To create tractable descriptive equations it is often necessary
+      to make misleading assumptions that fail to capture essential
+      aspects of natural phenomena. One example is the
+      <a href="https://en.wikipedia.org/wiki/Mean_field_theory"
+      target=new>Mean Field Approximation</a>, according to which all
+      individuals in a group are assumed to be in the same location
+      and experience the same local environment.
+      <P>
+	ABMs that incorporate space and local variability frequently
+      produce much more realistic models. For example, giving agents
+      unique rather than aggregate positions has proven invaluable in
+      modeling the continued stability of host-pathogen populations,
+      the genetic diversity in a population, and preserved pockets of
+      cooperation surrounded by defectors. 
+      <P>
+	More generally, ABMs often provide more satisfying accounts
+      than purely descriptive approaches because they posit mechanisms
+      by which aggregate qualities emerge.
+
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>three core themes for agent-based models</h1>
+
+  <P>
+    <BR>
+      Three prevalent themes for computational models of
+      collective behavior:
+      <P>
+	<I>Patterns and organization.</I>  Human trails, traffic jams,
+	<a href="https://en.wikipedia.org/wiki/Wave_(audience)"
+	target=new>Mexican waves</a>, and panic behavior of
+	pedestrians. In these models humans are represented as
+	particles with variation in speeds or position, and without
+	any requirement of cognition for the agents. These simple
+	reactive agent-based simulation models have often provided
+	surprisingly apt accounts of empirically observed behavior.
+      <P>
+	<I>Contagion.</I>  Social contagion is the spread of an entity
+	or influence between individuals in a population via
+	interactions between agents. Examples are the spreading of
+	fads, rumors and riots. Computational approaches to simulate
+	social contagion are based on thresholds models. Each agent
+	has a threshold that, when exceeded, leads the agent to adopt
+	an activity.
+      <P>
+	<I>Cooperation.</I>  A social dilemma is a situation where
+	sub-optimal group outcomes are achieved if all agents do the
+	action that is optimal for themselves. If self-centered
+	rational agents do not cooperate in social dilemmas why do we
+	often find cooperation in actual case studies? The work of
+	Axelrod on the
+	<a href="https://en.wikipedia.org/wiki/Prisoner%27s_dilemma"
+	target=new>Prisoner&rquo;s Dilemma</a> led to a large literature on
+	extensions of the original models to include the addition of
+	space, indirect reciprocity, and more complex strategies. Most
+	of this work uses simple reactive agents. Some recent studies
+	focus on more cognitively sophisticated agents with designs
+	informed by psychological theories, such as
+	<a href="https://en.wikipedia.org/wiki/Social_comparison_theory"
+	target=new>social comparison</a> and
+	<a href="https://en.wikipedia.org/wiki/Bounded_rationality"
+	target=new>bounded rationality</a>.
+
+</DIV>
+
+
+
+<div  CLASS="slide">
+  <h1>opportunities for future ABM work</h1>
+
+  <P>
+    <I>Modeling large-scale collectives.</I>
+    <a href="https://en.wikipedia.org/wiki/Big_data" target=new>"Big
+      Data"</a> available from on-line news groups, blogs, social
+      network services, chat groups and topical communities can
+      effectively be used to explore naturally occurring coalition
+    formation, idea spread and group evolution.
+  </P>
+  <P>
+    <I>Computational models as test-beds.</I>  Computational models of
+    collective behavior can explore in advance the possible
+    consequences of public policy changes. ABMs can be used to address
+    ‘what if ’ scenarios like ‘What is the consequence of the spread
+    of <a href="https://en.wikipedia.org/wiki/Coronavirus_disease_2019"
+    target=new>Covid-19</a> if policies are implemented to affect
+    social contacts of potential carriers?’ and ‘What would be the
+    impact on world demographics if parents can choose the sex of
+    their child?’ As computational simulations become increasingly
+    realistic, they will serve as increasingly useful test-beds for
+    exploring potential consequences of public policies that have
+    complex,
+	<a href="https://en.wikipedia.org/wiki/Nonlinear_system"
+	   target=new>non-linear</a> dynamics.
+  </P>
+  <P>
+    <I>Group control through indirect manipulation rather than
+      explicit rules.</I> Perhaps the most common method of crowd
+      control is through direct orders or laws. If we wish to direct
+      pedestrian traffic, for example, we may institute rules or
+      physical barriers that prohibit certain movements. The cost of
+      such prohibitions is decreased pedestrian morale and the
+      perception of excluded possibilities. ABMs suggest an
+      alternative method of crowd control by changing the structure of
+      the environment such that certain behaviors are facilitated and
+      others are indirectly hindered without instituting physical or
+      abstract barriers.
+    </P>
+
+</DIV>
+
+<div class="footer">
+<p>Last modified: Tue Jul 7 2020 at 14:43:23 EDT</p>
+</div>
+</body>
+</html>
