@@ -5,7 +5,7 @@
 <head>
 <title>Psych 3140/6140 wk-5-2</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- <meta name="copyright" content="Copyright &169; 2014-2021 Shimon Edelman"/> -->
+<!-- <meta name="copyright" content="Copyright &169; 2008-2022 Shimon Edelman"/> -->
 <meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
 <link rel="stylesheet" href="../Slidy/w3c-blue3.css"
  type="text/css" media="screen, projection, print" />
@@ -53,9 +53,10 @@
 
   <div class="footer">
   <!-- modify the following text as appropriate -->
-    Week 5.2 &#151; 
+  Week 5.2 &#151;
   </div>
 </div>
+
 
 <!-- COVER PAGE SLIDE -->
 <div class="slide cover">
@@ -65,8 +66,8 @@
     &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
   </div>
   <div style="float:left">
-    <h2>Week 5: universal tools, IV</h2>
-    <h3>&nbsp;Lecture 5.2: the representation of similarities; veridicality</h3>  
+    <h2>Week 5: Memory I</h2>
+    <h3>&nbsp;Lecture 5.2: overview of memory</h3>  
   </div>
   <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
   class="figure-right"  height=70%>
@@ -77,157 +78,583 @@
 
 
 
+
 <div  CLASS="slide">
-  <h1>Lecture 5.2: perceptual veridicality and its computational basis</h1>
+  <h1>memory</h1>
+  
+  <a href="http://www.thesecretbooks.com/eleven.html" target=new>
+  <img src="eleven_book.jpg" class="figure-right"></a>
+  <P>
+  <BR>
+  A man sets himself the task of portraying the world. 
+  <P>
+  Over the years he fills a given surface with images of provinces and 
+  kingdoms, mountains, bays, ships, islands, fish, rooms, instruments,
+  heavenly bodies, horses and people.
+  <P>
+  Shortly before he dies he discovers that this patient labyrinth of lines
+  is a drawing of his own face.
 
-  <img src="Magritte-human-condition.jpg" title="The Human Condition (Rene Magritte)"
-  class="figure-right" height=550>
-  <ul>
-    <li>How neurons can be truthful</li>
-    <li>Veridical representation: a computational definition</li>
-    <li>Visualizing representational spaces with MDS (a refresher)</li>
-    <li>Behavioral evidence for veridical perception of shape similarities</li>
-    <li>Electrophysiological evidence for veridical representation of shape similarities</li>
-    <li>Using fMRI to map the brain's shape representation space</li>
-  </ul>
+  <DIR>  <DIR>  <DIR>
+    <a href="http://www.themodernword.com/borges/" target=new>Jorge Luis Borges</a>
+    <BR>
+    The afterword to <I>The Maker (El hacedor)</I>, 1960
+  </DIR>  </DIR>  </DIR>
+    
+
+</div>
+
+
+
+
+<div  CLASS="slide">
+  <h1>memory: some highlights</h1>
+  
+  <img src="memory-mosaic-lores.jpg" class="figure-right" height=550>
+
+  <P>
+    Today:
+    <ul>
+      <li>What memory is and what it is for</li>
+      <li>Simple memory</li>
+      <li>Navigation</li>
+      <li>Cognitive maps</li>
+      <li>Episodic memory</li>
+    </ul>
+  </P>
+  <P>
+    On Thursday:
+    <ul>
+      <li>Associative memory</li>
+    </ul>
+  </P>
+  <P>
+    On 4/20:
+    <ul>
+      <li>Memory for places and events in the brain</li> 
+    </ul>
+  </P>
 
 </div>
 
 
 
 <DIV CLASS="slide">
-  <h1>on truth in perception</h1>
+  <h1>what is memory and what is it for?</h1>
 
-  <img src="Joshua_Reynolds_Self_Portrait.jpg" title="Joshua Reynolds (self-portrait)"
-  class="figure-right">
+  <P class="incremental">
+  <img src="tablet-PC+stylus.jpg" class="figure-right" >
+  </P>
+  <img src="memory-vase.jpg">
   <P>
-  <BR>
-  The natural appetite or taste of the human mind is for
-  <SC>truth</SC>; whether that truth results from the real agreement
-  or equality of original ideas among themselves; from <B>the agreement
-  of the representation of any object with the thing represented</B>; or
-  from the correspondence of the several parts of any arrangement with
-  each other.
-  <P>
-  <DIR><DIR>
-    <a href="http://en.wikipedia.org/wiki/Joshua_Reynolds" target=new>Joshua Reynolds</a><BR>
-    <a href="http://www.authorama.com/seven-discourses-on-art-9.html"
- target=new><I>Seven discourses on art</I></a><BR>
-    1776
-  </DIR></DIR>
+    The classical view: memory is for storing bits and pieces of
+    information.
+  <HR>
+  <P class="incremental">
+    What memory really is for: assisting behavior by using STRUCTURED
+    knowledge of the PAST to anticipate the FUTURE.
+  </P>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>taxonomy of memory</h1>
+
+  <img src="Miyashita04-fig2.png" class="figure-right" height=450>
+    <P>
+      A textbook taxonomy of memory (from Miyashita, 2004).
+    </P>
+    <P>
+      Long-term memory is divided into explicit (declarative) memory
+      and implicit (nondeclarative) memory.
+    </P>
+    <P>
+      Implicit memory affects behavior without awareness. Explicit
+      memory is further divided into semantic memory, representing
+      general knowledge about the world, and episodic memory,
+      representing personal knowledge of one’s past.
+    </P>
+    <HR>
+      <P class="incremental">
+	NOTE: these "logical" distinctions are not to be taken too
+	seriously. As with the rest of cognition, the truth of the
+	matter can only be found by pursuing an integrative study of
+	evolutionary, behavioral, computational, algorithmic, and
+	neurobiological aspects of memory.
+      </P>
 
 </div>
 
 
 
 <DIV CLASS="slide">
-  <h1>on truth in perception</h1>
+  <h1>"simple memory" and the principle of intrinsically meaningful representation</h1>
 
-  <img src="Joshua_Reynolds_Self_Portrait.jpg" title="Joshua Reynolds (self-portrait)"
-  class="figure-right">
+  <img src="nikon-d60.jpg" class="figure-right" >
+  <P>
+    A camera creates and stores records of the sensor array of pixels.
+    What do the numbers in a camera memory mean
+    <ul>
+      <li>to the camera?</li>
+      <li>to you?</li>
+    </ul>
+  </P>
+  <P class="incremental">
+    Real meaning must come from within. 
+  </P>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>multiple realizability of memory</h1>
+
+  <img src="locking-pliers.jpg" class="figure-right" height=300 >
+  <img src="mousetrap.jpg" height=300>
   <P>
   <BR>
-  The natural appetite or taste of the human mind is for
-  <SC>truth</SC>; whether that truth results from the real agreement
-  or equality of original ideas among themselves; from <B> the agreement
-  of the representation of any object with the thing represented</B>; or
-  from the correspondence of the several parts of any arrangement with
-  each other.
   <P>
-  <DIR><DIR>
-    <a href="http://en.wikipedia.org/wiki/Joshua_Reynolds" target=new>Joshua Reynolds</a><BR>
-    <a href="http://www.authorama.com/seven-discourses-on-art-9.html"
- target=new><I>Seven discourses on art</I></a><BR>
-    1776
-  </DIR></DIR>
+    These are two different implementations of the same computational
+    functionality: a <B>1-<a href="http://en.wikipedia.org/wiki/Bit"
+			     target=new>bit</a> memory cell</B>.
+  </P>
+
+</div>
+
+
+  
+<DIV CLASS="slide">
+  <h1>multiple realizability of memory</h1>
+  
+  <img src="kinds-of-memory.gif" class="figure-right" >
+  <P>
+  Top row: the <a
+ href="http://www.philosophyprofessor.com/philosophers/richard-von-mises.php"
+ target=new>von Mises</a> <a
+  href="http://roymech.co.uk/Useful_Tables/Mechanics/Struts.html"
+  target=new>strut</a> and its <a
+ href="http://books.google.com/books?id=GJQh-2p6TvgC&pg=PA383&lpg=PA383&dq=attractor+dynamics+%22energy+surface%22&source=web&ots=3IoXAwtDbh&sig=T_g36--h2Sm4D9bE5IFovXFVPlA&hl=en&sa=X&oi=book_result&resnum=9&ct=result"
+ target=new>"potential energy" states</a> in compressed and uncompressed
+  configurations. 
+  <P>
+  Bottom row: an electronic <a href="http://en.wikipedia.org/wiki/Latch_(electronic)"
+  target=new>S-R latch</a>, its <a
+ href="http://en.wikipedia.org/wiki/Truth_table" target=new>truth table</a>,
+  and its possible "neural" realization.
+  <P>
+  The computational functionality is the same:
+  a <B>1-<a href="http://en.wikipedia.org/wiki/Bit" target=new>bit</a>
+  memory cell</B>.
+
+</div>
+
+
+
+
+<DIV  CLASS="slide">
+  <h1>a 1-bit (single-pixel) memory cell made of two "formal neurons"</h1>
+
+  <img src="neural-memory-2.gif" class="figure-right" >
+  <P>
+  A signal arriving on the <SC>Start</SC> line stores one bit of information in the
+  storage neuron (lower left) by turning it <I>ON</I>.
+  </P>
+  <P>
+  The neuron subsequently remains <I>ON</I> due to the <SC>Feedback</SC>
+  connection, until a <SC>Stop</SC> signal is received.
+  </P>
+  <P>
+  The state of the memory cell (<I>ON</I> or <I>OFF</I>) is queried by
+  sending a signal down the <SC>Input</SC> line to the "readout" neuron:
+  <BR>
+  &#151; if the <SC>Output</SC> is <I>ON</I>, the state is <I>ON</I>;
+  <BR>
+  &#151; if the <SC>Output</SC> is <I>OFF</I>, the state is <I>OFF</I>.
+  <HR>
+  <P>
+    <small>The number inside the "neuron" signifies the
+      threshold. The small circle on an input line denotes inhibition (the
+      unmarked input are excitatory).</small>
+  </P>
+
+</div>
+
+  
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>two kinds of memory in the Aplysia</h1>
+  
+  <table cellspacing=5>
+    <tr>
+      <td align=center><img src="aplysia-pair.jpg" height=200></td>
+      <td align=center>
+	<img src="Aplysia-motor-control.jpg" title="Part of the mouth control circuit of Aplysia">
+      </td>
+    </tr>
+  </table>
+
+  <P>
+  The jaw control system of <a href="http://en.wikipedia.org/wiki/Aplysia"
+  target=new><I>Aplysia californica</I></a> is controlled
+  by a neural circuit with two stable states.
   <P>
   <HR>
   <P>
-  How can a <B>neural representation</B> be truthful??
+  The gill withdrawal system in <a href="http://en.wikipedia.org/wiki/Aplysia"
+  target=new><I>Aplysia</I></a> (<a href="week-2-2.html" target=old>Lecture
+  2.2</a>, slide 21) exhibits another kind of memory.
+  <P class="incremental">
+  Contrast and compare the two!
+  </P>
+
+</div>
+
+-->
+
+
+<DIV CLASS="slide">
+  <h1>dynamical systems with attractor states</h1>
+
+  <img src="energy-surface-four.jpg" height=500 class="figure-right"
+  title="the energy surface of a system with four attractor states">
+  <P>
+  A conceptual tool for thinking about memory maintenance: <a
+  href="http://en.wikipedia.org/wiki/Dynamical_system"
+  target=new><SC>dynamical systems</SC></a> 
+  with <a href="http://en.wikipedia.org/wiki/Attractor"
+	  target=new><SC>attractor</SC></a> states &#151;
+  </P>
+  <P>
+  The figure on the right illustrates the
+  <a href="http://www.cs.nyu.edu/~yann/research/ebm"
+  target=new><SC>energy surface</SC></a> over a two-dimensional state
+  space.
+  </P>
+  <P>
+  <small>
+  [For an analysis of a magneto-mechanical system with this particular energy landscape, see Li, G. X.,
+  Ph.D. Dissertation, Cornell University, August 1987.]
+  </small>
+  </P>
 
 </div>
 
 
 
-<DIV CLASS="slide">
-  <h1>how neurons can be truthful</h1>
 
-  <img src="Locke-covariance.gif" height=350>
-    <P>
-      A group of neurons [remember, neurons don't work well alone] can be
-      truthful in representing some aspect of the world by
-  <ol>
-    <li><SC>selectively</SC> responding to world ("distal")
-      stimuli,</li>
-    AND
 <!--
-    <li>By being <SC>causally effective</SC>, as appropriate, towards
-      other neurons; and</li>
+
+<DIV CLASS="slide">
+  <h1>associative memory in the mammalian brain is formed in...</h1>
+
+  <img src="human_hippo.jpg" class="figure-right" >
+  <img src="hippocampus_insitu.jpg" height=450>
+  <P>
+  ... the <SC><a href="http://en.wikipedia.org/wiki/Hippocampus"
+  target=new>hippocampus</a></SC>.
+  
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>an attractor network in the hippocampus</h1>
+
+  <a href="http://en.wikipedia.org/wiki/Santiago_Ramón_y_Cajal"
+  target=new><img src="CajalHippocampus.jpg" class="figure-right"
+  height=550></a>
+
+  <img src="2D-dynamical-system.gif">
+  <P>
+  [Note the <a href="http://en.wikipedia.org/wiki/Feedback"
+  target=new>feedback</a> connections: neurons have to "tickle" one another
+  to keep the dynamics going.]
+
+</div>
+
+
+
+
+
+<DIV CLASS="slide">
+  <h1>a crossbar switch</h1>
+
+  <P>
+  <BR>
+  <img src="xbar_7a.jpg" title="a mechanical crossbar switch" class="figure-right">
+  A mechanical <a href="http://people.seas.harvard.edu/~jones/cscie129/nu_lectures/lecture11/switching/xbar/xbar.html" target=new>crossbar switch</a> from the early days
+  of telephony.
+  <P>
+  To be compared with:
+  <ul class="incremental">
+    <li>
+    The <a
+ href="http://en.wikipedia.org/wiki/Hippocampus_anatomy#Hippocampus_proper"
+    target=new>CA1-CA3</a> circuit in the hippocampus;
+    </li>
+    <P>
+    <li>
+    The <a href="http://en.wikipedia.org/wiki/Parallel_fiber"
+ target=new>parallel fiber</a> / <a
+ href="http://en.wikipedia.org/wiki/Purkinje_cell" target=new>Purkinje cell</a> circuit in the cerebellum.
+    </li>
+  </ul>
+
+</div>
+
 -->
-    <li><SC>veridically</SC> representing distal <B>relationships</B>
-      (for instance, similarities among stimuli).</li>
-  </ol>
+  
+
+<DIV CLASS="slide">
+  <h1>controlling memory dynamics</h1>
+
+  <P>
+  <BR>
+  A two-dimensional dynamical system with a <B>controlled</B>
+  <SC>energy landscape</SC> &#151;
+
+  <table cellpadding=10>
+    <tr>
+      <td><img src="energy-surface-1.jpg" height=230></td>
+      <td><img src="energy-surface-2.jpg" height=230></td>
+      <td><img src="energy-surface-3.jpg" height=230></td>
+    </tr>
+    <tr>
+      <td align=center>a single, stable<BR> <a
+	href="http://en.wikipedia.org/wiki/Attractor"
+	target=new><SC>attractor</SC></a> state</td> 
+      <td align=center>a transition to<BR> a <a
+	href="http://en.wikipedia.org/wiki/Metastability_in_the_brain"
+	target=new>metastable</a> attractor</td> 
+      <td align=center>stability gone</td>
+    </tr>
+  </table>
+
+</div>
+
+
+<!--
+      
+<DIV CLASS="slide">
+  <h1>a two-dimensional dynamical system with a controlled energy landscape</h1>
+
+  <embed src="2D-energy-surface.mov" height=350 width=634 controller=true
+  align=left scale=aspect vspace=20autoplay=false loop=false>
+  <img src="2D-dynamical-system.gif">
+
+</div>
+
+  -->
+  
+
+<DIV CLASS="slide">
+  <h1>controlling memory dynamics</h1>
+
+  <img src="locking-pliers.jpg" class="figure-right" height=300 >
+  <P>
+  <BR>
+  The <a href="http://en.wikipedia.org/wiki/Vise_grip" target=new>Vise
+  Grip</a> is a dynamical system that can be set to have
+  <ul>
+    <li>
+    two stable states (a 1-bit memory),
+    </li>
+    <P>
+    or
+    <P>
+    <li>
+    one stable state (useless as a memory device).
+    </li>
+  </ul>
+
+</div>
+
+
+
+
+
+<div  CLASS="slide">
+  <h1>memory in space and time: from objects, via navigation, to episodes</h1>
+  
+  <img src="five-maples-goats.JPG" width=500 class="figure-right"
+  title="Five Maples Goats">
+  <P>
+  <BR>
+  Consider the cognitive demands generated by the life style of a <a
+  href="http://en.wikipedia.org/wiki/Goat" target=new><SC>goat</SC></a>:
+  <P class="incremental">
+  <a
+ href="http://volunteer.blogs.com/winewaves/2007/04/goats_do_roam_r.html" target=new><img src="goats-do-roam.jpg" width=400></a>
+  </P>
+
+</div>
+
+
+
+ 
+
+
+<div  CLASS="slide">
+  <h1>from items/objects, via navigation, to events/episodes</h1>
+  
+  <img src="goats1.jpg" class="figure-right">
+  <P>
+  <BR>
+  Consider the cognitive demands generated by the life style of a <a
+  href="http://en.wikipedia.org/wiki/Goat" target=new><SC>goat</SC></a>:
+  <P>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <B>goats do roam!</B>
+  <P>
+  This is why goats need:
+  <ul>
+    <li>memory-based navigation</li>
+    <P>
+    <li>episodic / prospective memory</li>
+  </ul>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>re navigation: Charles H. Turner on a hunting snake taking a detour (Science, 1909)</h1>
+
+  <table align=right>
+    <tr>
+      <td><img src="Eastern-rat-snake-on-a-live-oak-in-Myakka-River-SP-Florida-1.jpg"
+	       title="an Eastern rat snake on a live oak" height=275></td>
+      </tr>
+    <tr>
+      <td><img src="Eastern-rat-snake-on-a-live-oak-in-Myakka-River-SP-Florida-2.jpg"
+	       title="an Eastern rat snake on a live oak" height=275></td>
+      </tr>
+    </table>
+      <P>
+	"SEVERAL years ago, while Mr. Lester and I
+	[<a href="https://en.wikipedia.org/wiki/Charles_Henry_Turner_(zoologist)"
+	target=new>Charles Henry Turner</a>] were sauntering
+	along a country road near Newnan, Ga., a commotion was heard
+	in the dry leaves along the side of the road. On quietly
+	entering the underbush, it was noticed that the noise was
+	caused by a struggle between a coach-whip snake and a lizard
+	that was unknown to me."
+      </P>
+      <P class="incremental">
+	[The lizard climbs a tree; the snake tries to follow.]
+      </P>
+      <P class="incremental">
+	"Then, all of a sudden, the snake dropped to the ground. The
+	lizard continued to gaze downward. About a foot from the tree
+	upon which the lizard was resting, head downward, there stood
+	<B>another tree</B>. Spirally up this trunk the snake quietly and
+	slowly climbed, until it was a few inches above the level of
+	the lizard. The unsuspecting lizard was scrutinizingly gazing
+	downward. Quietly and quickly the snake extended the front
+	portion of its body, and, with a sudden dart of the head,
+	knocked the lizard to the ground.  Before the latter had time
+	to recover from the effect of the unexpected blow, the snake
+	had dropped to the ground and recaptured it."
+      </P>
+    
+</div>
+
+
+    
+<DIV CLASS="slide">
+  <h1>the amazing eight-legged lion</h1>
+
+  <video src="Portia-hunting.mov" controls
+	 title="hunting Portia spider plans and executes a detour" class="figure-right">
+      </video>
+  <P>
+    A jumping spider of the
+    <a href="https://en.wikipedia.org/wiki/Portia_(spider)"
+    target=new>Portia</a> genus plans and executes a detour to sneak
+    up on the much larger
+    <a href="https://en.wikipedia.org/wiki/Argiope_(spider)"
+    target=new>St Andrews Cross spider</a> in its web.
   </P>
   
-</div>
+</div>    
 
 
 
 <DIV CLASS="slide">
-  <h1>veridical representation of relationships: representation OF similarity</h1>
+  <h1>Tolman's rats and the opposite of a detour</h1>
 
-  <img src="2nd-order-isomorphism.gif" class="figure-right" height=550>
+  <table>
+    <tr>
+      <td><img src="Tolman46-1.gif"></td>
+      <td><img src="Tolman46-2.gif"></td>
+      <td><img src="Tolman46-3.gif"></td>
+    </tr>
+  </table>
   <P>
-    The perception of distal objects or events is
-    <I><SC>veridical,</SC> or truthful, with respect to
-    categorization</I> if their <B><SC>similarity</SC></B>
-    relationships are captured by the distances among their
-    representations in the internal representation space.
+  Behavioral evidence for cognitive maps, from <a
+  href="http://psychclassics.yorku.ca/Tolman/Maps/maps.htm"
+  target=new><I>Cognitive maps in rats and men</I></a>,  
+  Edward C. Tolman, Psychological Review 55:189-208 (1948).
+  <BR>
+<!--
+    <P class="incremental">
+  <small>[This material is relevant to TRUTH MAINTENANCE in REASONING; we'll
+  revisit it in week 12.]</small>
   </P>
-  <P>
-    This is what I call <SC>representation OF similarity</SC> (as
-    compared to representation BY similarity).
-  </P>
+-->
 
 </div>
 
 
-
-
 <DIV CLASS="slide">
-  <h1>mapping the brain similarity space from behavioral data</h1>
+  <h1>[Tolman's concluding remarks from that paper]</h1>
 
-  <img src="DMTS+MDS.gif" height=450>
-  <P>
-  Cutzu, F., and S. Edelman (1996). <a
-  href="../Archive/CutzuEdelman-PNAS96.pdf"><I>Faithful representation of 
-  similarities among three-dimensional shapes in human vision</I></a>,
-  Proc. Natl. Acad. Sci. (USA) 93:12046-12050.
-
-</div>
-
-
-
-
-<DIV CLASS="slide">
-  <h1>mapping the brain similarity space from behavioral data: the results</h1>
-
-  <img src="CutzuEdelman.jpg" class="figure-right" height=550>
-
+  "Narrow strip maps rather than broad comprehensive maps seem to be
+  induced: (1) by a damaged brain, (2) by an inadequate array of
+  environmentally presented cues, (3) by an overdose of repetitions on the
+  original trained-on path and (4) by the presence of too strongly
+  motivational or of too strongly frustrating conditions.<BR>
   <small>
-  <ul>
-    <li><I>Top left:</I> seven computer-generated humanoid shapes used as
-    stimuli, arranged so as to make explicit their parametric similarity
-    relationships (think morphing).</li>
-    <li><I>Top right:</I> the star-shaped layout of the true
-    similarity space is revealed in this MDS map of one of the subjects'
-    <B>response</B> data.  The fit between the true and
-    actual configurations is highly significant.</li>
-    <li><I>Bottom left:</I> the same analysis, applied to data from a study in
-    which subjects judged similarities among <B>memorized</B> shapes.</li>
-    <li><I>Bottom right:</I> a <B>computer model</B> replicates perfectly the pattern of 
-    human performance.</li>
-  </ul>
+  Over and over again men are blinded by too violent motivations and too
+  intense frustrations into blind and unintelligent and in the end
+  desperately dangerous hates of outsiders. And the expression of these their
+  displaced hates ranges all the way from discrimination against minorities
+  to world conflagrations.
+  <BR>
+  What is the name of Heaven and Psychology can we do about it? My only
+  answer is to preach again the virtues of reason — of, that is, broad
+  cognitive maps. And to suggest that the child-trainers and the
+  world-planners of the future can only, if at all, bring about the presence
+  of the required rationality (i.e., comprehensive maps) if they see to it
+  that nobody's children are too over-motivated or too frustrated. Only then
+  can these children learn to look before and after, learn to see that there
+  are often round-about and safer paths to their quite proper goals — learn,
+  that is, to realize that the well-beings of White and of Negro, of Catholic
+  and of Protestant, of Christian and of Jew, of American and of Russian (and
+  even of males and females) are mutually interdependent. 
+  <BR>
+  We dare not let ourselves or others become so over-emotional, so hungry,
+  so ill-clad, so over-motivated that only narrow strip-maps will be
+  developed. All of us in Europe as well as in America, in the Orient as well
+  as in the Occident, must be made calm enough and well-fed enough to be able
+  to develop truly comprehensive maps [...].
+  <!-- or, as Freud would have put it, to be
+  able to learn to live according to the Reality Principle rather than
+  according to the too narrow and too immediate Pleasure Principle. -->
+  <BR>
+  We must, in short, subject our children and ourselves (as the kindly
+  experimenter would his rats) to the optimal conditions of moderate
+  motivation and of an absence of unnecessary frustrations, whenever we put
+  them and ourselves before that great God-given maze which is our human
+  world. I cannot predict whether or not we will be able, or be allowed, to
+  do this; but I <I>can</I> say that, only insofar as we <I>are</I> able and are allowed,
+  have we cause for hope."
   </small>
 
 </div>
@@ -236,1143 +663,620 @@
 <!--
 
 <DIV CLASS="slide">
-  <h1>veridicality in the brain</h1>
+  <h1>navigation by dead reckoning</h1>
 
-  <P>
-  <BR>
-  [For the material described on slides 10 through 20, see the book and the
-  assigned papers, as listed on the readings page]
-
-</DIV>
-
--->
-  
-
-<DIV CLASS="slide">
-  <h1>veridicality of neural representation space in the monkey (Op de Beeck et al., 2001): the stimuli</h1>
-
-  <img src="OpDeBeeck-01-fig1abc.png" class="figure-right">
-    <P>
-      <I>Right:</I> three configurations of shapes in a 2D <SC>shape
-      space</SC>, generated by morphing the shapes along two
-      independent dimensions.
-    </P>
-    <HR>
-    <P>
-      H. Op de Beeck, J. Wagemans, and R. Vogels, <I>Inferotemporal
-	neurons represent low-dimensional configurations of
-	parameterized shapes</I>, Nature Neuroscience 4:1244-1252
-	(2001).
-    </P>
-
-</div>
-
-
-
-<DIV CLASS="slide">
-  <h1>first, behavioral veridicality: stimuli configuration vs. human #1's behavioral data</h1>
-
-  <P>  
-    <img src="OpDeBeeck-01-fig2a.png">
-    </P>
-  <P>
-    <img src="OpDeBeeck-01-fig2b.png">
-    </P>
-
-</div>
-
-
-
-
-<DIV CLASS="slide">
-  <h1>first, behavioral veridicality: stimuli configuration vs. human #2's behavioral data</h1>
-
-  <P>
-    <img src="OpDeBeeck-01-fig2a.png">
-    </P>
-  <P>
-    <img src="OpDeBeeck-01-fig2c.png">
-    </P>
-
-</div>
-
-
-
-
-<DIV CLASS="slide">
-  <h1>first, behavioral veridicality: stimuli configuration vs. MONKEY Y's behavioral data</h1>
-
-  <P>
-    <img src="OpDeBeeck-01-fig2a.png">
-    </P>
-  <P>
-    <img src="OpDeBeeck-01-fig2d.png">
-    </P>
-
-</div>
-
-
-
-
-<DIV CLASS="slide">
-  <h1>first, behavioral veridicality: stimuli configuration vs. monkey E's behavioral data</h1>
-
-  <P>
-    <img src="OpDeBeeck-01-fig2a.png">
-    </P>
-  <P>
-    <img src="OpDeBeeck-01-fig2e.png">
-    </P>
-
-</div>
-
-
-
-<!--
-
-<DIV CLASS="slide">
-  <h1>veridicality: stimuli configuration vs. combined neurons' response data</h1>
-
-  <img src="OpDeBeeck-01-fig2a.png">
-  <img src="OpDeBeeck-01-fig2f.png">
-
-</div>
-
-  
-<DIV CLASS="slide">
-  <h1>veridicality: correlation between real and MDS-recovered configurations</h1>
-
-  <img src="OpDeBeeck-01-tab1.png">
-
-</div>
-
-
-<DIV CLASS="slide">
-  <h1>veridicality: some details regarding neurons' responses</h1>
-
-  <table cellspacing=15>
+  <table>
     <tr>
-      <td align=center><img src="OpDeBeeck-01-fig5a.png"></td>
-      <td align=center><img src="OpDeBeeck-01-fig3a.png"></td>
-    </tr>
-    <tr>
-      <td align=center>correlation <I>C</I> between the configuration
-	recovered by MDS from neurons' responses and the real configuration,
-	vs. the # of neurons <font color=gray>(dashed line: threshold of significant
-	difference from baseline)</font></td>
-      <td align=center>the responses of one of the neurons to the 8
-	stimuli</td> 
-    </tr>
-  </table>
-
-</div>
-
--->
-
-
-
-<DIV CLASS="slide">
-  <h1>finally, the veridicality of NEURAL REPRESENTATION SPACE, in the monkey</h1>
-
-  <img src="OpdeBeeck.jpg" class="figure-right" height=500>
-    <P>
-      <I>Right:</I> The square arrangement of eight stimuli in a
-      parameter space is reflected in the layout of the eight
-      corresponding points recovered by MDS from inter-stimulus
-      distances, as measured in the image space (squares) and in a
-      124-neuron ensemble response space (diamonds).
-    </P>
-    <P>
-	<I>Below:</I> a typical neuron's response. Note the broad,
-	graded tuning, with stimulus #6 being the most effective
-	(recall the concept of hyperacuity from Lecture 4.1; and the
-	stress on tuning from slide #5 in the present lecture).
-    </P>
-    <img src="OpDeBeeck-01-fig3a.png">
-
-</div>
-
-
-
-
-<DIV CLASS="slide">
-  <h1>visualizing the shape space in the human brain from fMRI data</h1>
-
-  <video src="kalanit-morph&#32;(Converted).mov" 
-	 title="fMRI sequence" controls class="figure-right">
-  </video>
-  <P>
-  <BR>
-  A sequence of fMRI snapshots of the brain activity of a
-  subject watching a series of visual stimuli &#151;
-  <P>
-  [Courtesy of <a href="http://www-psych.stanford.edu/~kalanit/"
- target=new>Kalanit Grill-Spector</a>]
-  <P>
-  <HR>
-  <P>
-  The result on the next slide is from <a
-  href="../Archive/EdelmanEtAl-fMRI-brain-space-Psychbio98.pdf"
-  target=new><i>Towards direct visualization of the internal shape
-  representation space by fMRI</i></a>, S. Edelman, K. Grill-Spector, T. Kushnir, and R. Malach, 
-  Psychobiology 26:309-321 (1998).
-  </P>
-
-</div>
-
-
-
-<DIV CLASS="slide">
-  <h1>visualizing the shape space in the human brain from fMRI data</h1>
-  <img src="Kalanit-PsychBio.gif" align=right height=500>
-  
-</div>
-
-
-
-
-
-<DIV CLASS="slide">
-  <h1>representation and reality</h1>
-
-  <img src="Magritte-Arnheim-32.jpg" title="The Domain of Arnheim (Rene Magritte)" class="figure-right" height=550>
-
-  <P>
-    The perceptual representation of certain aspects of the world in the
-    brain is <B>veridical</B>.
-  </P>
-  <P>
-    Veridicality is ill-defined for a single stimulus. When the brain
-    representation of a <I>set</I> of related stimuli is examined,
-    their similarity relationships are seen to be reflected in both
-    behavioral and neural activity data.
-  </P>
-  <P>
-    Computationally, this is made possible by <B>broad, graded tuning
-    of neurons to select stimuli</B> — as explained in the remaining
-    [mostly "EXTRA"] slides here.
-  </P>
-  <HR>
-    <P>
-      <small>
-	To find out more about veridicality and what characteristics of
-	neural computation make it possible,
-	see <i><a href="http://cognet.mit.edu/library/books/book.tcl?isbn=0262050579"
-		  target=new>Representation and Recognition in Vision</a></i>,
-	S. Edelman, MIT Press, 1999.
-      </small>
-  </P>
-  
-</div>
-
-
-
-  
-
-<!-- ---------------------------------------------------------------------------------- -->
-<!-- LIGHTNESS -->
-
-<!--
-
-<div  CLASS="slide">
-  <h1>a universal tool for recognition and representation</h1>
-
-  <img src="rbf.png" class="figure-right" height=250>
-  <P>
-  <BR>
-  Ensembles of TUNED UNITS are great building blocks for:
-  <ul>
-    <li>
-    FUNCTION APPROXIMATION, as used in object recognition and more
-    generally in classification and regression tasks
-    </li>
-    <li>
-    DIMENSIONALITY REDUCTION, as used in embedding 
-    representations into spaces that have manageably few dimensions
-    </li>
-  </ul>
-  
-</div>
-
-
-
-<DIV CLASS="slide">
-  <h1>constancy and the nature of perception</h1>
-
-  <img src="vision-flowchart.gif" class="figure-right" height=450>
-  <P>
-  <BR>
-  <font size=+3>
-  All perceptual problems share the same computational structure,
-  </font>
-  illustrated on the right.
-  <P>
-  <HR>
-  <P>
-  What is "intrinsic" and what is "extrinsic" depends on the task.
-  
-</div>
-
-
-
-<DIV CLASS="slide">
-  <h1 >the problem of dimensionality</h1>
-
-  <table cellspacing=25>
-    <tr>
-      <td><img src="Chicken.jpg" height=250></td>
-      <td><img src="some-spectra.gif" height=250></td>
-    </tr>
-    <tr>
-      <td align=center>a multidimensional chicken</td>
-      <td align=center><font color=gray>a multidimensional illumination space</font></td>
+      <td><img src="LoomisKlatzky-paths.jpg" height=400></td>
+      <td><img src="LoomisKlatzky-triangle-completion.jpg" height=400></td>
     </tr>
   </table>
   <P>
-
-</div>
-
-
-<DIV CLASS="slide">
-  <h1 >the problem of dimensionality</h1>
-
-  <table cellspacing=25>
-    <tr>
-      <td><img src="Chicken.jpg" height=250></td>
-      <td><img src="some-spectra.gif" height=250></td>
-    </tr>
-    <tr>
-      <td align=center>a multidimensional chicken</td>
-      <td align=center><font color=gray>a multidimensional illumination space</font></td>
-    </tr>
-  </table>
-  Solution: <SC><B>assume</B></SC> that the world is statistically well-behaved
-  &#151;
-  <ul>
-    <li>a few dimensions suffice to distinguish between chickens and
-    ducks, or between horses and donkeys;</li>
-    <li><font color=gray>a few dimensions <a
- href="http://books.google.com/books?id=g4T-gP7JCXIC&pg=PA60&lpg=PA60&dq=judd+illumination+pca&source=web&ots=2ots-LswDz&sig=I0inTDLwAsJ-H8dSn6Eq2HbTmeI&hl=en&sa=X&oi=book_result&resnum=2&ct=result"
- target=new>suffice</a> to characterize illumination.</font></li>
- </ul>
-
-</div>
-
--->
-
-<DIV CLASS="slide">
-  <h1>in a nutshell: a computational basis for representation <strike>&nbsp;by&nbsp;</strike> OF similarity</h1>
-
-  <img src="world-to-brain-mapping.png" height=200 class="figure-right">
-  <P>
-  <BR>
-  If the world-to-brain mapping is <a href="http://en.wikipedia.org/wiki/Smooth_function"
-				      target=new>smooth</a>,
-				      shape constancy and veridical
-  perception are possible:
-  <ul>
-    <li>SHAPE CONSTANCY because view and shape spaces can then be
-    interpolated from examples (using function approximation).
-    </li>
-    <li>VERIDICAL PERCEPTION because a smooth world-to-representation
-      space mapping preserves local similarities.
-    </li>
-  </ul>
-  <HR>
-  <P>
-  <font color=red>EXTRA:</font> 
-  <font color=gray>"A generic smooth and regular mapping \(F\) will
-	       [...] support veridical 
-  representation, if the aim is <B>approximate and local preservation of
-  similarity ranks</B>. [...] Intuitively, a
-	       <a href="https://en.wikipedia.org/wiki/Conformal_map"
-  target=new>conformal</a> mapping is locally 
-  an <a href="https://en.wikipedia.org/wiki/Isometry"
-  target=new>isometry</a>; a
-  <a href="https://en.wikipedia.org/wiki/Quasiconformal_mapping"
-  target=new>quasiconformal</a> mapping is locally 
-  <a href="https://en.wikipedia.org/wiki/Affine_transformation"
-  target=new>affine</a>. Under such  
-  a mapping, the ranks of distances between points are preserved 
-  approximately, and on a small scale. Because any
-  <a href="https://en.wikipedia.org/wiki/Diffeomorphism" target=new>diffeomorphism</a>
-  restricted to a
-  <a href="https://en.wikipedia.org/wiki/Compact_space" target=new>compact</a> subset of its domain is quasiconformal, any
-  smooth and regular mapping \(F\) will result in a representation that is
-  locally approximately veridical. In other words, similarities among
-  shapes that are close to each other in the distal shape space will be
-  represented faithfully." (Edelman, 1999, p.108)</font>
+  Behavioral evidence for cognitive maps: navigation by <a
+  href="http://en.wikipedia.org/wiki/Dead_reckoning" 
+  target=new>dead reckoning</a> in blindfolded subjects. 
   
 </div>
 
-
-
-<DIV CLASS="slide">
-  <h1>view spaces of objects are continuous and (mostly) smooth</h1>
-
-  <img src="calf-shape-view-space.png" height=450 class="figure-right">
-  <img src="Raetz-1-head.jpg" title="a set of drawings by M. Raetz">
-    <P>
-      <BR>
-    
-</div>
-
-
-<DIV CLASS="slide">
-  <h1>view spaces AND shape spaces are continuous and (mostly) smooth</h1>
-
-  <img src="Edelman-Godzilla-view-and-shape-space.png" height=500 class="figure-right">
-    <P>
-      Illustrated here are three samples each from the view spaces of
-      a human (left) and Godzilla, as well as seven samples from the
-      human-Godzilla morph curve passing through their joint shape
-      space.
-    </P>
-    <P class="incremental">
-      An implication of smoothness: if objects are represented by
-      examples (sample views), recognition reduces to FUNCTION
-      APPROXIMATION (interpolating view / shape spaces from examples).
-    </P>
-    
-</div>
-
-
-
-<!--
-  
-<DIV CLASS="slide">
-  <h1>a generic mechanism for interpolation from examples, applied to
-  object recognition</h1>
-
-  <img src="generic-interpolation-mechanism.png" height=500
-       class="figure-left">
-  <img src="PoggioEdelman90-fig1a.png" class="figure-right" >
-  <img src="RBF-module.png" height=200 class="figure-right" >
-  <P>
-  <BR>
-    <I>Above</I>: the building blocks of a shape-tuned mechanism —
-    view-tuned units and a weighted summation unit. <P>
-      <I>Right</I>: an implementation by a function approximation
-      "neural" network.
-    <P>
-      As noted earlier, regression by function approximation from examples will
-      only work if the view and shape spaces are SMOOTH.
-    
-</div>
-
-
-
-
-<DIV CLASS="slide">
-  <h1>visual object recognition as function approximation (Poggio & Edelman, 1990)</h1>
-
-  <img src="PoggioEdelman90-fig2a.png" class="figure-right" >
-  <P>
-  <BR>
-  A general-purpose tool for (multivariate) function approximation<sup><font color=red>*</font></sup> can be
-  applied to the problem of recognizing a 3D object from any of its
-  views (projections) — a kind of <SC>shape constancy</SC>. 
-  <P>
-  Here, the "black box" capable of function approximation is trained to
-  produce the standard view of the wireframe object, given a sample of \(M\)
-  views of the same object. 
-  <P>
-  Each view is represented — not very realistically — as a vector \(\left(x_1, y_1, x_2, y_2, \dots, x_n,
-  y_n\right)\) of the coordinates of the (projections) of the object's \(n\)
-  vertices, which is the same as a point in a \(2n\)-dimensional space.
-  <P>
-  <hr width=30% align=left>
-  <sup><font color=red>*</font></sup>In the illustration, RBF stands for the <a
- href="http://en.wikipedia.org/wiki/Radial_basis_function" target=new>Radial Basis Function</a>
-  approximation method, which we already encountered (recall <a
- href="http://kybele.psych.cornell.edu/~edelman/Psych-3140/w-6-2.html#(7)"
- target=new>Lecture 6.2, slide #7</a>).
-
-</div>
-
-
-
-<DIV CLASS="slide">
-  <h1>one way of using a function approximation "black box"</h1>
-
-  <img src="PoggioEdelman90-fig2b.png" class="figure-right" >
-  <P>
-  <BR>
-  When given a new test view of the same object, the system recognizes it
-  by producing the standard view.
-  <P>
-  Other objects are rejected by thresholding the dissimilarity (output-space
-  distance) between the actual output of the model and the standard view. 
-  
-</div>
-
-
-
-
-<DIV CLASS="slide">
-  <h1>function approximation by radial basis functions (RBFs) (Poggio & Edelman, 1990)</h1>
-
-  <img src="PoggioEdelman90-fig1a.png" class="figure-right" >
-  <P>
-  <BR>
-  A network that implements the RBF (<a
- href="http://en.wikipedia.org/wiki/Radial_basis_function" target=new>radial basis function</a>) approximation method. The
-  centers of the basis functions, \(\textbf{t}_i\), can be (a subset
-  of) the training views of the object. 
-  <P>
-  Each basis function unit \(i\) computes the distance of the actual input
-  \(\textbf{x}\) from its center \(\textbf{t}_i\):
-  \(d = \|\textbf{x}-\textbf{t}_{i}\|\). It then applies to it the
-  radial<SUP><font color=red>*</font></SUP> function, such as the Gaussian: \(G\left(d\right) =
- e^{-d^2/\sigma^2}\) (as in the six red "bumps" in the illustration on <a
- href="http://kybele.psych.cornell.edu/~edelman/Psych-3140/wk-4-2.html#(7)"
- target=new>slide #7 of Lecture 4.2</a>).
-  The resulting value can be thought of as the activity of the unit.
-  <P>
-  The output of the entire network is a vector of the same size as the
-  input, in which the \(j\)'th element is a weighted sum of the activities of
-  the basis units: \(\sum_{i=1}^{k} w_{ij}
-  G\left(\|\textbf{x}-\textbf{t}_i\|\right)\), as in the pink transparent
-  surface formed by the weighted sum of the six red "bumps" in <a
- href="http://kybele.psych.cornell.edu/~edelman/Psych-3140/wk-4-2.html#(7)"
- target=new>slide #7 of Lecture 4.2</a>.
-  <P>
-  Note that each basis function unit exhibits TUNING to a specific view of
-  the target object, whereas the entire network is TUNED to the
-  object's shape irrespective of the view.
-  </P>
-  <HR width=30% align=left>
-  <P>
-  <SUP><font color=red>*</font></SUP>"radial" because it depends on the <I>distance</I> from the
-  center to the test point — but not on the <I>direction</I> to it.
-
-</div>
-
-
-
-
-<DIV CLASS="slide">
-  <h1>[EXTRA: a more realistic way to represent a view, using Gaussian RBFs]</h1>
-
-  <img src="PoggioEdelman90-fig1b.png" class="figure-right" >
-  <P>
-  <BR>
-  <font color=gray>
-  If the (multidimensional) basis function, TUNED to a view of
-  an object, is Gaussian, it can be thought of as a product of
-  (two-dimensional) <SC>receptive fields</SC>. 
-  <P>
-  A multidimensional Gaussian radial basis function can be decomposed into a
-  product of Gaussians of lower dimensions. The solid circles represent the
-  image-plane receptive fields feeding into the first radial basis function,
-  which codes the first view of the object. The dotted circles represent the
-  receptive fields feeding into the basis function that codes another view.
-  <P>
-  The center of a basis unit corresponds to a sample view; the unit
-  itself is synthesized as the product of feature detectors with two-dimensional
-  Gaussian receptive fields (i.e., the activity of a detector depends on the
-  distance \(d\) between the stimulus and the center of the receptive field
-  as \(e^{-d^2/\sigma^2}\).
-  </font>
-
-</div>
-
-  
-
-<DIV CLASS="slide">
-  <h1>object recognition with RBFs: examples</h1>
-
-  <img src="PoggioEdelman90-fig3.png" class="figure-right" >
-  <P>
-  <BR>
-  Some examples of this model's operation.
-  <P>
-  <I>Top row:</I> a "standard" view of a wireframe object, superimposed on
-  its estimate by the RBF network (large dots), which had been given as
-  input a random view of the same object (<I>second from top row</I>). 
-  <P>
-  <I>Bottom two rows:</I> the fit is not so good if the input view
-  belongs to a different object.
-  <P>
-  <font color=gray>In these experiments, the number of training views was
-  \(M = 40\), the number of RBFs \(k = 20\) and the range of viewpoint
-  angles \(\theta,\phi\) is \(0^{\circ}\) to \(90^{\circ}\). Gradient
-  descent was used to obtain the optimal positions of the RBF
-  centers. Within a smaller range of \(\theta,\phi \in 
-  [0^{\circ}, 45^{\circ}]\), the performance was acceptable with just two
-  radial basis units \((M = 40, k = 2)\).</font>
-
-</div>
-
-
-<DIV CLASS="slide">
-  <h1>object recognition with RBFs: performance</h1>
-
-  <img src="PoggioEdelman90-fig4ac.png" class="figure-right" >
-  <P>
-  <BR>
-
-  <B>(a)</B> Performance of an RBF module trained to recognize a specific object
-  over the full range of \(\theta,\phi\) (the entire viewing sphere). Views
-  were encoded as vectors of \(2N\) vertex coordinates (solid curve; error
-  bars show the standard deviations of the performance indices, computed
-  over a set of ten objects, each of which served in turn as the target) or
-  as vectors of \(N-2\) angles formed by pairs of segments (dashed
-  curve).
-  <small>The number of training views \(M\) was set equal to the number of
-  radial basis functions, \(K\). The performance index, \(MIN/MAX\), is 
-  defined as the ratio of the smallest euclidean distance \(E\) obtained for
-  views of different objects to the largest \(E\) obtained over a set of novel
-  random views of the object on which the module has been trained. \(MIN/MAX
-  > 1\) is required for a perfect separation between the target and other
-  objects using a simple threshold decision. 80-100 views suffice for a
-  nearly perfect recognition.</small>
-  <P>
-  <B>(c)</B> Performance degrades slowly with increasing range of the
-  viewpoint coordinates \(\theta,\phi\) (the objects are a cube and an
-  octahedron, \(M = K = 40\); error bars are standard deviations over 10
-  sets of random training and testing views).  
-
-</div>
-  
   -->
-  
-<DIV CLASS="slide">
-  <h1>[EXTRA] view and shape spaces: smooth manifolds embedded in the
-  measurement space</h1>
 
-  \(\require{color}\)
-  <img src="viewspace+shapespace.png" class="figure-right">
+
+  
+<!--
+
+<DIV CLASS="slide">
+  <h1>the <SC>spatial</SC> receptive field of a CA1 place cell</h1>
+
+  <img src="Minai-fig1.jpg" class="figure-right" >
   <P>
-    A shape space \({\color{red} s}\) for four-legged animal shapes, with two view
-    spaces \({\color{red} v}\) (for <font face="courier">cow</font>
-    and <font face="courier">pig</font>) perpendicular to it.
-  </P>
+  <BR>
+  The rat's path has been recorded as
+  the rat explored the enclosure it was in.
+  <P>
+  The path is shown in gray; the black dots
+  mark the locations where the <a
+ href="http://en.wikipedia.org/wiki/Place_cell"
+ target=new><SC>place cell</SC></a> fired.
+  <img src="rat-helmet.jpg" title="a rat with electrodes implanted in its brain"
+  class="figure-left" height=270>
+  
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>spatial RFs of place cells</h1>
+
+  <img src="Wilson93-fig1.jpg" class="figure-right" >
+  <P>
+  <BR>
+  Spatial firing distribution of 80 simultaneously recorded cells in rat
+  hippocampus, during unrestrained exploration of the familiar half of the
+  enclosure.
+  <P>
+  <small>
+  <I>Dynamics of the hippocampal ensemble code for space</I>,
+  M. A. Wilson and B. L. McNaughton, Science 261:1055-1058 (1993).
+  </small>
+
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>using place cells</h1>
+
+  <img src="Wilson93-fig2.jpg" class="figure-right" >
+  <P>
+  <BR>
+  <ol type=A>
+    <li>A typical place field in the familiar region.</li>
+    <P>
+    <li>A place field that developed following exploration of the initially
+    unfamiliar region.</li> 
+    <P>
+    <li>Examples of rat trajectory, reconstructed from cell population
+    activity data (<font color=red>red</font>: reconstructed; black: actual).</li>
+    <P>
+    <li>Spatial distribution of reconstruction error.</li>
+  </ol>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+<h1>reconstructing the rat's path from place cell activities</h1>
+
+  <img src="Wilson93-reconstructed-paths.jpg" height=400>
+
+  <P> Rat paths reconstructed from hippocampus place-cell population activity
+ (<font color=red>red</font>), shown alongside the actual paths (black).
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>reconstruction fidelity</h1>
+
+  <img src="Wilson93-fig3.jpg" class="figure-right" >
+  <P>
+  <BR>
+  <ol type=A>
+    <li>Mean error of trajectory reconstruction, plotted against the number
+    of cells included in the population vector (familiar enclosure).</li>
+    <P>
+    <li>The number of cells required for a resolution of 1 <I>cm</I>, for
+    different integration times.</li>
+  </ol>
+  <P>
   <HR>
-  If the mapping from the world to the measurement space
-  \({\color{red} {\cal M}}\) is <a
- href="http://en.wikipedia.org/wiki/Smooth_function" target=new>smooth</a>,
- then:
-  <DIR>
-    — one could use regression (function approximation) to learn it from
-    examples;
-  </DIR>
-  <DIR>
-    — the representations in \({\color{red} {\cal M}}\) will be veridical
-    (truth-preserving) for similarity-based categorization
-    (Edelman, 1999).
-  </DIR>
-
-</div>
-
-
-
-
-<DIV CLASS="slide">
-  <h1>[EXTRA] interpolation from examples for object recognition: a possible implementation</h1>
-
-  <img src="generic-interpolation-mechanism.png" height=500 class="figure-left">
-    <P>
-      A natural approach to representing an example is a mechanism
-      that is TUNED to the example (for instance, to all views
-      of a particular object) — that is, responds selectively to that
-      example.
-    </P>
-    <P>
-      Illustration: the desired response of a mechanism that is tuned
-      to a cow shape to a series of cow views, as well as to views of
-      shapes that progressively differ from that of a cow.
-    </P>
-    
-</div>
-
-
-
-
-<DIV CLASS="slide">
-  <h1>[EXTRA] why view and shape spaces are SMOOTH?</h1>
-
-  <img src="components-of-M.png" height=420 class="figure-right">
   <P>
-    IF (<B>a</B>) changes in object shape and viewing parameters "out there" in
-    the world, which need to be represented, are smooth, AND IF (<B>b</B>) the
-    world-to-representation mapping is smooth, THEN the represented view
-    and shape spaces will be smooth too (and learnable from examples by
-    function approximation).
-  </P>
-  <P>
-    Here are the components of the world-to-representation mapping:
-    <BR>
-  \(f_1\) — image formation;<BR>
-  \(f_2\) — measurement;<BR>
-  \(f_3\) — <B>dimensionality reduction</B>.
-  </P>	
-  <P>
-    It is easy to see that \(f_1\) is generically smooth; and it is
-    easy to ensure that \(f_2\) is, too (hint: use graded tuned
-    units). What about \(f_3\)?
-  </P>
-    
-</div>
-
-
-<DIV CLASS="slide">
-  <h1>[EXTRA] dimensionality reduction is critically important</h1>
-
-  <a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality" target=new><img src="curse-of-dimensionality.png" height=450 class="figure-right"></a>
-  <P>
-    A reminder why \(f_3\) — dimensionality reduction — is needed: to
-    avoid
-    the <a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality"
-    target=new>curse of dimensionality</a>...
-  </P>
-    <blockquote>
-      Learning directly in a high-dimensional representation space is
-      intractable, because it requires a number of examples that grows
-      exponentially with the number of dimensions.
-    </blockquote>
-
-</div>
-  
-
-<DIV CLASS="slide">
-  <h1>[EXTRA] implementing a smooth \(f_3\) with a Chorus of Prototypes</h1>
-
-  <img src="Chorus-principle.png" height=350 class="figure-right">
-  <P>
-  <BR>
-  A potential solution to the need for smooth dimensionality reduction: the Chorus Transform.
-  <P>The Chorus Transform of a point \(\textbf{x}\) (here, <font
-  face="courier">giraffe</font>) is related to what the middle layer of an
-  <a
- href="http://en.wikipedia.org/wiki/Radial_basis_function" target=new>RBF</a> network computes. It is defined as the vector of
-  distances between \(\textbf{x}\) and the <a
- href="http://en.wikipedia.org/wiki/Radial_basis_function" target=new>RBF</a> 
- "centers" or <SC>landmarks</SC> \(\textbf{p}_i\) (here, <font
-  face="courier">pig, camel, goat</font>):
-  $$
-  CT({\bf x}) = \left( \begin{array}{c} 
-  \| {\bf x} - {\bf p}_1 \| \\ \vdots \\ \| {\bf x} - {\bf p}_{n} \| 
-  \end{array} \right)
-  $$
-  The application of the norm function \(\|\cdot\|\) to each difference vector \({\bf
-  x} - {\bf p}_i\) yields its length and therefore the distance between \({\bf x}\) and \({\bf
-  p}_i\).
-
-</div>
-
-
-  
-<DIV CLASS="slide">
-  <h1>[EXTRA] Chorus of Prototypes: an implemented computer vision system (Duvdevani-Bar & Edelman, 1999)</h1>
-
-  <img src="DuvdevanEdelman-similarity-table.png" height=500 class="figure-right">
-  <P>
-  <BR>
-  The response of a system trained on images of 10 objects to 8 new
-  test objects —
   <P class="incremental">
-  Note that the representation space spanned by this system's
-  responses is 10-dimensional.
+  Remember the Astonishing Hypothesis!
   </P>
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>how should we interpret the existence of place cells?</h1>
+
+  <img src="hippo-Eichenbaum-global.jpeg" height=450>
+  <P>
+  <BR>
+  The hippocampus is a cognitive map... or is it?
+
+</div>
+
+
+
+
+<div class="slide">
+  <h1>properties of hippocampal neural activity</h1>
+
+  <P>
+  <BR>
+  <ul class="incremental">
+    <li>
+    The environment is <b>not</b> encoded in a continuous and systematic 
+    representation within the hippocampus.
+    <P>
+    Instead, the codings of <font color=red><SC>spatial and nonspatial</SC></font> features are organized in
+    "clusters" of neurons that overrepresent some features of the
+    environment at the expense of others.
+    </li>
+    <P>
+    <li>
+    Hippocampal spatial firing patterns do <b>not</b> reflect the global
+    topology of all the attended environmental cues.
+    <P>
+    Instead, individual cells encode the relevant <font color=red><SC>spatial relations</SC></font> among
+    particular subsets of the cues.
+    </li>
+  </ul>
+
+</div>
+
+
+
+
+<div class="slide">
+  <h1>properties of hippocampal neural activity (cont.)</h1>
+
+  <P>
+  <BR>
+  <ul class="incremental">
+    <li>
+    Hippocampal spatial firing patterns do <b>not</b> consistently
+    represent the animal's position among cues that compose an environment. 
+    <P>
+    Instead, there are distinct spatial representations that depend on the
+    animal's <font color=red><SC>experiential context</SC></font> in each location.
+    </li>
+    <P>
+    <li>
+    Hippocampal neurons encode <SC>regularities</SC> between spatial and
+    non-spatial stimuli, behavioral responses, and reinforcers.
+    These are organized around <SC>distinctive events</SC> or
+    <font color=red><SC>episodes</SC></font>, as well as <SC>sequences</SC> of events.
+    </li>
+  </ul>
+
+</div>
+
+
+
+<div class="slide">
+  <h1>event/episode cells</h1>
   
-</div>
-
-
-<DIV CLASS="slide">
-  <h1>[EXTRA] smooth dimensionality reduction with a Chorus of Prototypes</h1>
-
-  <img src="chorus.jpg" height=350 class="figure-right">
-  <P>
-  <BR>
-  The Chorus Transform of a point in a \(D\)-dimensional space \(\textbf{x}\in R^{D}\) — the vector of distances 
-  between it and the landmarks \(\textbf{p}_i\) — performs dimensionality
-  reduction from \(dim(\textbf{x}) = D\) to a potentially much smaller \(n \ll D\):
-  $$
-  CT({\bf x}) = \left( \begin{array}{c} 
-  \| {\bf x} - {\bf p}_1 \| \\ \vdots \\ \| {\bf x} - {\bf p}_{n} \| 
-  \end{array} \right)
-  $$
-  In other words, it maps points in a \(D\)-dimensional input space to
-  points in a space whose dimensionality \(n\) is the same as the number of
-  landmarks.
+  <table cellspacing="5">
+    <tbody>
+      <tr>
+	<td align=center><img src="hippo-NEURO-spatial-working-memory.jpg" height=300></td>
+	<td align=center><img src="hippo-NEURO-odor-working-memory.jpg" height=300></td>
+      </tr>
+      <tr>
+	<td>
+	  Firing patterns of cells in a spatial working
+	  memory task (arrows denote direction specificity of cells).
+	</td>
+	<td>
+	  Nonspatial firing patterns of cells in an
+	  olfactory discrimination task.
+	</td>
+      </tr>
+    </tbody>
+  </table>
   <HR>
-  <P>
-    Note that \(CT\) is smooth in the requisite sense, and
-    therefore the reduced-dimensionality representations it forms
-    will be veridical (true) to those in the original space.
+  True <SC>place cells</SC> link <B><font color=red>episodes</font></B> that occurred in the same location.
+  <BR>
+  In comparison, <SC>"odor cells"</SC> link  <B><font color=red>episodes</font></B> in which the same odor was perceived.
+
+</div>
+
+
+
+<div class="slide">
+  <h1>transitive inference</h1>
+
+  <img src="hippo-NEURO.jfif" height=500 class="figure-right" >
+  <p>
+  <BR>
+  Representation of an odor series by pairwise (relational) plus nodal
+  ("landmark") codings.
+  <HR>
+  <P class="incremental">
+  Remember
+  <BR>
+  the scrub jays!
   </P>
-  <P>
-  <font color=gray>There is a deep and interesting link here to <a
-  href="http://en.wikipedia.org/wiki/Kernel_method" 
-  target=new>kernel methods</a> in machine learning, which are beyond the
-  scope of this course.</font>
 
 </div>
 
 
 
+<div class="slide">
+  <h1>relational coding of space by ensembles of "episode cells"</h1>
 
-
-<DIV CLASS="slide">
-  <h1>[EXTRA] dimensionality reduction with a Chorus of Prototypes: the mathematical principles</h1>
-
-  <img src="projection.png" height=300 class="figure-right">
-  <P>
-  <BR>
-  According to the <a
-  href="http://en.wikipedia.org/wiki/Johnson%E2%80%93Lindenstrauss_lemma"
-  target=new>Johnson-Lindenstrauss Lemma</a> (1984), a cloud of points in a
-  high-dimensional space can be projected onto a space of a VERY much lower
-  (logarithmically lower) dimensionality, while largely preserving the
-  relative distances among points.<sup><font color=red>*</font></sup> 
-  <P>
-  Relying on a related idea, Edelman (1999, App.B) showed that the Chorus Transform can
-  support a logarithmic dimensionality reduction, while approximately
-  preserving the relative distances among points (based on a
-  theorem due to <a
- href="http://www.mathunion.org/o/General/Prizes/Fields/1994/" target=new>Bourgain</a>, 1985). 
-  <P>
-  In other words, even with a very small number of landmarks — on the order
- of \(\log
-  D\), where \(D\) is the dimensionality of the original problem — the layout
-  of the data points in the new, low-dimensional space
-  approximates their original layout, implying that the <B>original similarity</B>
-  relations, and with them category boundaries, etc., are <B>largely
-  preserved</B>.
-  <P>
-  <HR width=30% align=left>
-  <sup><font color=red>*</font></sup><font color=gray>Specifically, any \(n\)-point subset of Euclidean space can be
-  embedded in \(O(\epsilon^{−2} \log n)\) dimensions with at most \((1 +
-  \epsilon)\) distortion of the inter-point distances.</font>
+  <img src="hippo-NEURO_007.jfif" height=450 class="figure-right" >
+  <p>
+  Pairwise-relational plus "nodal" codings
 
 </div>
 
 
-
-<DIV CLASS="slide">
-  <h1>[EXTRA] dimensionality reduction by CT: a numerical assessment</h1>
-
-  <img src="sh1.png" height=450 class="figure-right">
-  <P>
-  <BR>
-  Preservation of distance ranks by the dimensionality-reducing Chorus
-  Transform, \(CT\). 
-  <P>
-  The plot
-  shows <a
- href="https://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient"
- target=new>Pearson product-moment correlation</a> (dashed line) and <a
- href="https://en.wikipedia.org/wiki/Spearman's_rank_correlation_coefficient"
- target=new>Spearman rank
-  correlation</a> (solid line) between the original and the \(CT\)-transformed
-  distances among 25 points in a space of dimensionality 1000, plotted
-  against the number of landmarks ("prototypes") employed by \(CT\). Error bars represent
-  the mean standard error of the mean, calculated over 10 runs. 
-
-</div>
-
+-->
 
   
+<div class="slide">
+  <h1>a common navigational aid: landmarks</h1>
 
-<DIV CLASS="slide">
-  <h1>[EXTRA] dimensionality reduction by CT (cont.)</h1>
-
-  <img src="sh2.png" height=450 class="figure-right">
-  <P>
-  <BR>
-  A comparison between the dimensionality-reducing property 
-  of \(CT\) and the prediction of the Johnson-Lindenstrauss (1984)
-  embedding theorem. The quality of the embedding was examined for
-  varying values of the distance distortion index \(0 <
-  \epsilon \le 1\).
-  <P>
-  The high <a
- href="https://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient"
- target=new>Pearson</a> and <a
- href="https://en.wikipedia.org/wiki/Spearman's_rank_correlation_coefficient"
- target=new>Spearman</a> correlation between the
-  original and \(CT\)-transformed pairwise distances among 100 points
-  (picked at random from the unit hypercube in \(R^{10000}\)) indicates
-  how well the distances are preserved.  For example, a distortion
-  of \(\epsilon = 1\), which allows an embedding into 5 dimensions,
-  results in Pearson and Spearman correlations of 0.9316
-  and 0.9460, respectively.
+  <table cellspacing=10>
+    <tr>
+      <td><img src="two-landmarks-1.png" height=450 ></td>
+      <td><img src="two-landmarks-2.jpg" height=450 ></td>
+    </tr>
+    <tr>
+      <td colspan=2>Does the photo on the left show a sunset or a sunrise?</td>
+    </tr>
+  </table>
 
 </div>
 
 
 
 
+<div class="slide">
+  <h1>relational vs. positional cues: sex differences</h1>
 
-<DIV CLASS="slide">
-  <h1>[EXTRA] dimensionality reduction by CT (cont.)</h1>
-
-  <img src="sh3.png" height=450 class="figure-right">
+  <img src="Chai-fig3cd.png" class="figure-right">
   <P>
+  <SC><B>Directional</B> cues:</SC> sun, sky, river, and slope.
   <BR>
-  The dimensionality reduction for a set of \(n=100\) points, afforded by the
-  various values of \(\epsilon\).
+  <SC><B>Positional</B> cues:</SC> trees, a rock, a cabin, and a shrub.
+  <BR>
+  <SC>Target:</SC> a blue crystal hidden in the grass.
   <P>
-  The theoretical prediction is
-  \(O\left(\frac{\log n}{\epsilon^2}\right)\).   
+  The <SC>probe</SC> environments were modified from the <SC>training</SC>
+  environment by removing either positional or directional cues. 
+  <P>
+  <small><I>Effects of cue types on sex differences in human spatial memory</I>,
+  X. J. Chai, L. F. Jacobs, Behavioural Brain Research 208:336-342 (2010).</small>
 
 </div>
 
 
 
-<DIV CLASS="slide">
-  <h1>a computational model of visual shape representation</h1>
 
-  <img src="Chorus-human+model.jpg" height=500 class="figure-right">
+<div class="slide">
+  <h1>relational vs. positional cues</h1>
+
+  <img src="Chai-fig5.png">
   <P>
-  <I>Top:</I> the layout of nine parametrically controlled stimulus shapes in a shape
-  space.
+  "When the slant directional cue was removed in a hidden-target location
+  task, male performance was impaired but female performance was
+  unaffected. The removal of positional cues, on the other hand, impaired
+  female performance but not male performance." 
+
+</div>
+
+
+
+<div class="slide">
+  <h1>navigation and foraging</h1>
+
+  <img src="foraging-for-mushrooms.jpg" class="figure-right">
   <P>
-  <I>Bottom left:</I> the layout of the stimuli recovered by MDS from human
-  response data.
-  <P>
-  <I>Bottom right:</I> the layout of the stimuli recovered by MDS from the
-  responses of a model, based on "neurons" tuned to four landmark
-  (prototype) shapes. 
-  <P>
-  <font color=red>
-  NOTE: this model explains VERIDICAL, LOW-DIMENSIONAL REPRESENTATION;
-  it can be used in a variety of tasks, of which recognition is just one.
-  </font>
+    Sex differences in mushroom gathering: men expend more energy to obtain
+    equivalent benefits.
   </P>
-  <HR>
   <P>
     <small>
-      F. Cutzu and S. Edelman. Faithful representation of similarities
-      among three-dimensional shapes in human vision. Proceedings of
-      the National Academy of Science, 93:12046–12050, 1996.
+      L. Pacheco-Cobos, M. Rosetti, C. Cuatianquiz,
+      R. Hudson, Evolution and Human Behavior 31:289–297 (2010).
     </small>
   </P>
-  
+
 </div>
 
 
+
+<div class="slide">
+  <h1>Whittington et al. (2020): the Tolman-Eichenbaum relational memory machine</h1>
+
+  <img src="Whittington20-fig1ABC.png" height=250 class="figure-right">
+    <P>
+      STRUCTURED relationships exist in many situations and can often
+      be formalized on a connected graph, e.g.,
+      <ol type=A>
+	<li>social hierarchies,</li>
+	<li>transitive inference, and</li>
+	<li>spatial reasoning.</li>
+      </ol>
+    </P>
+    <P>
+      Often the same relationships generalize across
+      different sets of sensory objects (e.g., left/right in A). This
+      transferable structure allows quick inference, e.g., seeing only
+      the blue relationships allows you to infer the green ones.
+    </P>
+  
+</div>
+
+  
+<div class="slide">
+  <h1>Whittington et al. (2020)</h1>
+
+  <img src="Whittington20-fig1DEF.png" height=250 class="figure-right">
+    <P>
+      (D) [The model's] task is predicting the next sensory
+      observation in sequences derived from probabilistic transitions
+      on a graph. Each node has an arbitrary sensory experience, e.g.,
+      a banana. An agent transitions on the graph observing only the
+      immediate sensory stimuli and associated action taken, e.g.,
+      having seen motorbike/book/table/chair, it should predict the
+      motorbike next if it understands the rules of the graph.
+    </P>
+    <P>
+      (E) If you know the underlying structure of social hierarchies,
+      observing a new node (in red) via a single relationship, e.g.,
+      Emily is Bob’s daughter, allows immediate inference about the
+      new node’s (Emily’s) relationship to all other nodes (shown in
+      black/gray).
+    </P>
+    <P>
+      (F) Similarly for spatial graphs observing a new node on the
+      left (solid red line) also tells us whether it is above or below
+      (dashed red lines) other surrounding nodes.
+    </P>
+  
+</div>
+
+  
+<div class="slide">
+  <h1>Whittington et al. (2020)</h1>
+
+  <img src="Whittington20-fig1GHI.png" height=250 class="figure-right">
+    <P>
+      (G) Our agent [model] performs this next step prediction task in many
+      worlds sharing the same underlying structure (e.g., 6- or
+      4-connected graphs), but differing in size and arrangement of
+      sensory stimuli. The aim is to learn the common structure in
+      order to generalize and perform quick inferences.
+    </P>
+    <P>
+      (H) Knowing the structure allows full graph understanding after
+      only visiting all nodes, not all edges. Here, only 18 steps (red
+      line) are required to infer all 42 links.
+    </P>
+    <P>
+      (I) An agent that knows structure (node agent) will reach peak
+      predictive performance after it has visited all nodes, quicker
+      than one that has to see all transitions (edge agent).
+    </P>
+  
+</div>
+
+  
+<div class="slide">
+  <h1>memory as a space-TIME machine</h1>
+
+  <img src="Roberts09-fig1.png" title="mental time travel"
+       class="figure-right" height=400>
+    <P>
+      "The bi-cone shows a mental time traveler in the present moment
+      who can both remember past episodic memories and plan future
+      events. The circular balloons show memories or planned events at
+      varying temporal distances into the past or future. The size of
+      these balloons represents the number and clarity of these
+      memories or plans. Although individuals show bulges in the cone
+      for particularly memorable periods in their past, the bi-cone
+      represents the pattern of human mental time travel."<BR>
+      <small>
+      [William A. Roberts and Miranda C. Feeney (2009). The
+      comparative study of mental time travel. <I>Trends in Cognitive
+      Sciences</I> 13(6):271-277.]
+    </small>
+
+    </P>
+    <P>
+      Mental time travel has been demonstrated in other species,
+      including scrub jays, rats, and non-human primates.
+    </P>
+  
+</div>
+
+  
 <!--
 
-<DIV CLASS="slide">
-  <h1>a reminder: vision DOES NOT reduce to "object recognition"</h1>
+<div class="slide">
+  <h1>support for the episodic/prospective memory view: an 8-maze study</h1>
 
-  <img src="object-recognition.png">
-  <img src="what-does-it-mean-to-see.png" height=400 class="figure-right">
-  <P>
-    <BR>
-      <HR>
-	<P>
-  What does it mean to see?
-  <P>
-    <I>Left:</I> tired. <BR><I>Center:</I> wired.<BR> <I>Right:</I> woke.
-
-</div>
-
-
-<DIV CLASS="slide">
-  <h1>EXTRA (1/3): veridicality and correspondence between vision and language spaces</h1>
-
-  <img src="Amatuni18-fig1.png" height=500 class="figure-right">
+  <img src="hippo-NEURO_005.jfif" height=300>
   <P>
   <BR>
-  <a href="https://arxiv.org/abs/1802.00840" target=new>Andrei
-  Amatuni, Estelle He, and Elika Bergelson (2018)</a> used a set of 27
-  items (e.g. ‘dog’) that are 
-  highly common in infants’ input, and used both image- and word-based
-  algorithms to independently compute similarity among them. Here's
-  what they found:
-  <P>
-    First, the pairwise item similarities derived
-    within image-space and word-space are correlated, suggesting
-    preserved structure among these extremely different representational
-    formats.
-  <P>
-    <hr>
-      <P>
-      Relative cosine distance between points in word
-      embedding space (x-axis) and image embedding space (y-axis),
-      for every item pair. Fitted line reflects linear fit with
-      SE (\(R = 0.30, p < 1.5\cdot 10^{-8}\)).
-    
+  <ol type=A class="incremental">
+    <li>A maze in which rats are trained to alternate between turning <font
+    color=blue>left</font> and turning <font color=red>right</font> on
+    successive trials.</li> 
+    <li>The central arm is divided into sectors and the activity of
+    hippocampal "place cells" is binned by sector (1, 2, 3, 4) and trial
+    (<font color=blue>left</font>, <font color=red>right</font>).
+    </li>
+  </ol>
+
 </div>
 
 
 
-<DIV CLASS="slide">
-  <h1>EXTRA (2/3): veridicality and correspondence between vision and language spaces</h1>
 
-  <img src="Amatuni18-tab1.png" height=550 class="figure-right">
+<div class="slide">
+  <h1>examples of cells that are active when the rat is traversing the central arm</h1>
+
+  <img src="hippo-NEURO_002.jfif" height=500 class="figure-right" >
   <P>
   <BR>
-    <a href="https://arxiv.org/abs/1802.00840" target=new>Andrei
-  Amatuni, Estelle He, and Elika Bergelson (2018)</a> used a set of 27
-  items (e.g. ‘dog’) that are 
-  highly common in infants’ input, and used both image- and word-based
-  algorithms to independently compute similarity among them. Here's
-  what they found:
-  <P>
-    Second, the closest ‘neighbors’ for each
-    item, within each space, showed significant overlap (e.g. both
-    found ‘egg’ as a neighbor of ‘apple’).
-  <P>
-    <HR>
-      <P>
-    Neighbors in image- and word-space. Neighbors in
-<font color=red><B>bold and red</B></font> are shared between spaces; <I>italicised</I> words are
-image-neighbors only, <U>underlined</U> words are word-neighbors
-only. Overlap ratio reflects shared neighbors over total neighbors. 
+  Histograms of firing rates, by turn (<font color=red><B>right</B></font>,
+  <font color=blue><B>left</B></font>).
+  <ol type=A class="incremental">
+    <li>This cell fired almost exclusively on left-turn trials as the rat
+    traversed later sectors of the stem.</li>
+    <li>This cell fired almost exclusively on right-turn trials as the rat
+    traversed early sectors of the stem.</li>
+    <li>This cell fired almost exclusively on right-turn trials as the rat
+    traversed later sectors of the stem.</li>
+  </ol>
 
 </div>
 
 
 
-<DIV CLASS="slide">
-  <h1>EXTRA (3/3): veridicality and correspondence between vision and language spaces</h1>
 
-  <img src="Amatuni18-fig2.png" height=500 class="figure-right">
+<div class="slide">
+  <h1>cells that show different patterns of activity on left-turn and right-turn trials</h1>
+
+  <img src="hippo-NEURO_004.jfif" height=500 class="figure-right" >
+  <ol type=A class="incremental">
+    <li>This cell fired at a higher rate in early
+    sectors of the stem on right-turn trials but also fired substantially at
+    the same locations on left-turn trials.</li> 
+    <li>This cell fired at a higher rate in the first
+    sector on right-turn trials and in the
+    later sectors of the stem on left-turn trials.</li>
+    <li>This cell fired substantially as the rat initiated its traversal
+    of the stem on both trial types but fired at a significantly higher rate on
+    left-turn trials.</li>
+  </ol>
+
+</div>
+
+
+
+
+<div class="slide">
+  <h1>such "episode cells" are quite common</h1>
+
+  <img src="hippo-NEURO_010.jfif" class="figure-right" >
   <P>
   <BR>
-  <a href="https://arxiv.org/abs/1802.00840" target=new>Andrei
-  Amatuni, Estelle He, and Elika Bergelson (2018)</a> used a set of 27 items (e.g. ‘dog’) that are
-  highly common in infants’ input, and used both image- and word-based
-  algorithms to independently compute similarity among them. Here's
-  what they found:
+  Numbers of <font color=red><B>right-turn trial</B></font> and
+  <font color=blue><B>left-turn trial</B></font> cells.
   <P>
-    Third, items with the
-    most overlapping neighbors are later-learned by infants and
-    toddlers.
+  <HR>
   <P>
-    <HR>
-      <P>
-    Proportion of children in WordBank reported to understand
-    (left, averaged over 8-18 months) or produce (right,
-    averaged over 16-30 months) the 27 items, as a function of
-    how many overlapping neighbors they have (i.e. in both
-    image- and word-space). Lines indicate linear fit with SE
-    confidence bands (both \(R>-.45, p<.05\)).
-    
+  <small>
+  <I>Hippocampal neurons encode information about different types of memory
+  episodes occurring in the same location</I>,
+  <BR>
+  E. R. Wood, P. A. Dudchenko,
+  R. J. Robitsek, and H. Eichenbaum, Neuron 27:623–633 (2000).
+  </small>
+
 </div>
 
 
-<DIV CLASS="slide">
-  <h1>does the Chorus framework [or Deep Networks; more on this in week 14] "solve" vision?</h1>
 
+<div class="slide">
+  <h1>episodic memory and foresight</h1>
+
+  <embed src="Prospective_Encoding_in_the_Hippocampus.mp4" height=376
+  width=480 controller=true vspace=20 align=right autoplay=false loop=false>
   <P>
   <BR>
-  Only if vision reduces to "object recognition", which it doesn't. 
+  The firing of hippocampal <a
+ href="http://en.wikipedia.org/wiki/Hippocampus_anatomy#Hippocampus_proper"
+ target=new>CA3</a> neurons while the rat is
+  running an 8-maze. The white circle shows the rat's position. Colored
+  squares in the maze indicate the firing rates of neurons with 
+  place fields in the corresponding location.
   <P>
-    What <I>does</I> it mean, then, "to see"?
-  </P>
-
-  </div>
-
-
-<DIV CLASS="slide">
-  <h1>how IS vision involved in behavior?</h1>
-
-  <a href="https://www.researchgate.net/figure/Cognitive-map-of-the-perception-action-cycle-in-the-PFC-We-present-a-diagram-of-the_fig1_291385023" target=new><img src="perception-action-cycle-2016.png"
-  height=500 class="figure-right"></a> 
-    <P>
-      The infamous "perception-action cycle" (recall Dewey's critique
-      of the "reflex arc" concept, from
-      <a href="http://kybele.psych.cornell.edu/~edelman/Psych-3140/w-1-2.html#(22)"
-      target=s>week 1</a>).
-    
-</div>
-
-  
-
-
-<DIV CLASS="slide">
-  <h1>how vision is involved in behavior (after Sherman and Guillery, 2006)</h1>
-
-  <img src="Sherman06-fig10.1.png" height=550 class="figure-right">
-    <P>
-      "Schematic, and simplified, representation of
-      <a href="https://en.wikipedia.org/wiki/Thalamus"
-	 target=new>thalamic</a> and 
-      <a href="https://en.wikipedia.org/wiki/Cerebral_cortex" target=new>cortical</a> connections 
-      with motor centers. Only some of the corticocortical links are shown. 
-    <BR><B>A</B>. A widely
-      used representation of
-      <a href="https://en.wikipedia.org/wiki/Afferent_nerve_fiber"
-      target=new>afferent</a> pathways entering through thalamus being 
-      processed through a parallel and hierarchical series of cortical connections, and
-      then passed on to motor centers or memory
-      storage. <font color="gray">[Consider <a href="thalamus-and-cortex.jpg"
-      target=pic>this
-      example</a> from some online course or other.]</font>
-    <BR><B>B</B>. A representation of the connections described in
-      earlier chapters and in this chapter, showing first order (FO)
-      and higher order (HO) thalamic relays receiving from ascending
-      and corticothalamic afferents, respectively, with each of these
-      afferents sending axonal branches to motor or premotor centers. 
-    <BR><B>C</B>. A schema to stress that essentially all
-      cortical areas have connections to motor or premotor centers. The extent to
-      which they have branches going to the thalamus remains largely
-      unexplored."
-    <P>
-      <HR>
-	<P>
-	  "Not only CAN `motor assembly begin before sensory signals reach
-	  the highest levels' but that it MUST begin before the
-	  sensory signals even reach the thalamus, and that it must
-	  accompany corticocortical processing at essentially every
-	  stage."
-	  <BR>
-	  (p.362, S. M. Sherman and R. W. Guillery (2006). <a href="https://mitpress.mit.edu/books/exploring-thalamus-and-its-role-cortical-function" target=new><I>Exploring the
-	    Thalamus and Its Role in Cortical Function</I></a>, MIT Press).
+  At the decision point, activity sweeps down both arms away from the rat
+  before the rat chooses a particular arm.
+  <P>
+  <HR>
+  <P>
+  <small>
+  <I>Neural ensembles in CA3 transiently encode paths forward of the animal at a
+  decision point</I>,
+  <BR>
+  A. Johnson and A. D. Redish,  J. Neurosci 27:12176
+  (2007).
+  </small>
 
 </div>
 
 
-<DIV CLASS="slide">
-  <h1>how vision is involved in behavior (after Sherman and Guillery, 2006)</h1>
 
-  <img src="Sherman06-fig10.4.png" height=450 class="figure-right">
-    <P>
-      <B>A</B>. Schematic representation of the direct
-      <a href="https://en.wikipedia.org/wiki/Lemniscus_(anatomy)"
-      target=new>lemniscal</a> (continuous lines) and
-      <a href="https://en.wikipedia.org/wiki/Anterior_spinothalamic_tract"
-      target=new>anterolateral</a> 
-      (interrupted lines) pathways to the thalamus.
-      <BR>
-	<B>B</B>. Additional connections
-	established by branches of the direct pathways.
-	<P>
-	  <HR>
-    <P>
-      "Each axon reaching the thalamus
-      will carry messages about the condition of one or several receptors and
-      in addition will carry information about the instructions that are already
-      on their way to one or more motor pathways. One should not expect
-      that the cortical analysis will reject or annul this “additional” information
-      simply because it is not a part of what classical physiology has seen
-      as the information carried in sensory pathways. It is reasonable to expect
-      this copy of motor instructions to be an integral part of the perceptual
-      process. It is not surprising that some who have thought seriously about
-      the nature of perceptual processing have been led to a view of sensory
-      processes as “interactive” finding that there is no “pure sensation”
-      [...] and that there are
-      complex and often extremely elusive “sensorimotor contingencies”
-      <a href="http://nivea.psycho.univ-paris5.fr/Manuscripts/ORegan;Noe.BBS.pdf"
-      target=new>(O’Regan & Noë, 2001)</a>."
-	  <BR>
-	  (p.367, S. M. Sherman and R. W. Guillery
-	    (2006). <a href="https://mitpress.mit.edu/books/exploring-thalamus-and-its-role-cortical-function" target=new><I>Exploring
-	    the
-	    Thalamus and Its Role in Cortical Function</I></a>, MIT Press).
+<div class="slide">
+  <h1>episodic memory and foresight</h1>
+
+  <img src="Johnson-Redish-07-fig7a.png">
+  <P>
+  A specific example from this study. Three regions of interest were
+  defined: to the left, to the right, and behind the animal. Proportions of
+  reconstructed probability p(x|S) of CA3 cells firing for each region were
+  measured. Red line indicates 0, and the black arrow indicates the
+  median. The median was significantly > 0 in all measured data sets,
+  suggesting that the firing of the cells was <SC>prospective</SC>.
+  <HR>
+  <small>
+  <I>Neural ensembles in CA3 transiently encode paths forward of the animal at a
+  decision point</I>,
+  <BR>
+  A. Johnson and A. D. Redish,  J. Neurosci 27:12176
+  (2007).
+  </small>
 
 </div>
 
--->  
 
-	  
+
+
+<DIV CLASS="slide">
+  <h1>conclusion: hippocampus is an episodic/prospective memory</h1>
+
+  <img src="gpicsync3.jpg" height=450>
+  <P>
+  [Episodic memory is somewhat, but not quite, like <a
+ href="http://en.wikipedia.org/wiki/Geotagging" target=new>geotagging</a>.]
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>hippocampus and experience in the maze: the London cabbies study</h1>
+
+  <table cellspacing=5>
+    <tr>
+      <td align=center><img src="Maguire00-fig2.jpg" height=425></td>
+      <td align=center><img src="Maguire00-fig3.jpg" height=425></td>
+    </tr>
+    <tr>
+      <td align=center>volume differences</td>
+      <td align=center>correlation with time on the job</td>
+    </tr>
+  </table>
+  <BR>
+  <small>Maguire, EA; Gadian DG, Johnsrude IS, Good CD, Ashburner J,
+  Frackowiak RS, Frith CD. <I>Navigation-related structural change in
+  the hippocampi of taxi drivers</I>, PNAS 97:4398–403 (2000).</small> 
+      
+</div>
+
+-->
+
+
 <div class="footer">
-<p>Last modified: Thu Mar 11 2021 at 09:01:33 EST</p>
+<p>Last modified: Sat Jan 1 2022 at 12:38:03 EST</p>
 </div>
 </body>
 </html>
