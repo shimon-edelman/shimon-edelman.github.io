@@ -2,12 +2,13 @@
 <html> <head>
 <title>Computational Psychology</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="ul.js"></script>
 </head>
 
 <body text="#000000" bgcolor="#FFFFFF" link="#0000EE" vlink="#551A8B" alink="#FF0000">
 
 <!--
-<base href="http://shimon-edelman.github.io/Psych-3140/">
+<base href="https://shimon-edelman.github.io/Psych-3140/">
 -->
 
 <!-- <h3>the lectures</h3> -->
@@ -21,6 +22,34 @@
   </small>
 </P>
 <HR>
+
+
+<!-- just add "col_ul" class with the <ul> you want to be collapsible
+		 now all the multi level <ul> will be hidden
+	  -->
+<ul class="col_ul">
+  <li><span>coffee</span>
+    <ul>
+      <li><span>paki</span>  <!-- Add <span> tag arround every multi level <li>
+	    so it can behave like a toggle button -->
+	    <ul>
+	      <li>karachi    <!-- It will not work because it has no span tag arround it :(
+		-->
+		<ul>
+		  <li>North</li>
+		  <li>West</li>
+		</ul>
+	      </li>
+	      <li>lahore</li>
+	    </ul>
+	  </li>
+	  <li>indian</li>
+	  <li>arbian</li>
+    </ul>
+  </li>
+  <li>milk</li>
+  <li>honey</li>
+</ul>
 
 <script language="JavaScript" SRC="collapsible_lists.js">
 </script>
@@ -134,7 +163,7 @@ dbAdd( false, "Grad essay (6140 only)", "6140-essay.html", 1, "contentframe", 0)
 //----------------------------------------------------------------------------
 dbAdd( true, "<font size=+1>the team</font>" , "" , 0, "" , 0)// main
 
-dbAdd( false, "Shimon Edelman", "http://shimon-edelman.github.io", 1, "contentframe", 0) 
+dbAdd( false, "Shimon Edelman", "https://shimon-edelman.github.io", 1, "contentframe", 0) 
 dbAdd( false, "TA: Vivian Zhang", "", 1, "contentframe", 0)
 
 
@@ -142,8 +171,8 @@ dbAdd( false, "TA: Vivian Zhang", "", 1, "contentframe", 0)
 //----------------------------------------------------------------------------
 dbAdd( true, "<font size=+1>the textbook</font>" , "" , 0, "" , 0)// main
 
-dbAdd( false, "<I>Computing the Mind</I> (Oxford University Press, 2008)", "http://www.amazon.com/Computing-Mind-How-Really-Works/dp/0195320670/ref=pd_bbs_sr_1?ie=UTF8&s=books&qid=1218922291&sr=8-1", 1, "contentframe", 0) 
-dbAdd( false, "the author: Shimon Edelman", "http://shimon-edelman.github.io", 1, "contentframe", 0)
+dbAdd( false, "<I>Computing the Mind</I> (Oxford University Press, 2008)", "https://www.amazon.com/Computing-Mind-How-Really-Works/dp/0195320670/ref=pd_bbs_sr_1?ie=UTF8&s=books&qid=1218922291&sr=8-1", 1, "contentframe", 0) 
+dbAdd( false, "the author: Shimon Edelman", "https://shimon-edelman.github.io", 1, "contentframe", 0)
 
 //----------------------------------------------------------------------------
 // Add an entry to the database
@@ -205,6 +234,6 @@ pageTracker._trackPageview();
 
 -->
 
-<p>Last modified: Sat Jan 1 2022 at 13:34:09 EST</p>   
+<p>Last modified: Sat Jan 1 2022 at 13:51:51 EST</p>   
 </body>
 </html>
