@@ -1663,7 +1663,7 @@ function findCopyright()
          return content;
    }
     // NOTE the location of sa.png
-    return "made public under <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/3.0/\" target=new>Creative Commons Share Alike license 3.0</a> <img rel=\"cc:requires\" href=\"http://creativecommons.org/ns#ShareAlike\" class=\"license sa\" src=\"../Slidy/sa.png\" height=10> 2004-2021 Shimon Edelman";
+    return "made public under <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-nc/4.0/\" target=new>Creative Commons Attribution-NonCommercial license 4.0</a> <img rel=\"cc:requires\" href=\"http://creativecommons.org/ns\" class=\"license sa\" src=\"../Slidy/sa.png\" height=10> 2004-2022 Shimon Edelman";
 }
 
 function findSizeAdjust()
