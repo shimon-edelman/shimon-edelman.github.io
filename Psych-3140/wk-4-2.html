@@ -246,9 +246,9 @@
   
 
 <DIV CLASS="slide">
-  <h1 >categories and generalization</h1>
+  <h1 >categories, generalization, and similarity</h1>
 
-  <img src="Cornell-apples.jpg" class="figure-right" height=500>
+  <img src="Cornell-apples.jpg" class="figure-right" height=450>
   <P>
     Categories would be of little use if it were not possible to extend
     classification to <B>new stimuli</B>.
@@ -258,6 +258,19 @@
 	   to <a href="https://news.cornell.edu/stories/2013/08/snapdragon-and-rubyfrost-are-new-apple-varieties"
 	   target=new>Snapdragon and Ruby Frost</a> by Cornell]
   </P>
+  <P>
+    "In reality, all <B>arguments from experience</B> are founded on the
+    <SC><B>similarity</B></SC> which we discover among natural
+    objects, and by which we are induced to expect effects similar to
+    those which we have found to follow from such
+    objects. [...] <B>From causes which appear similar we expect
+    similar effects.</B>"
+    <DIR><DIR>
+	<a href="http://en.wikipedia.org/wiki/David_Hume" target=new>David Hume</a><BR>
+	  <a href="http://www.gutenberg.org/etext/9662"
+	     target=new><I>An Enquiry Concerning Human Understanding</I></a> (1748) 
+      </DIR></DIR>
+    </P>
 
 </div>
   
@@ -294,38 +307,17 @@
   
 -->
 
-  
-<DIV CLASS="slide">
-  <h1>generalization, similarity, and forethought</h1>
-
-  <img src="Shepard-consequential-regions.gif" class="figure-right" >
-  <P>
-    Categories would be of little use if it were not possible to extend
-    classification to <B>new stimuli</B>.
-  </P>
-  <P>
-    "In reality, all <B>arguments from experience</B> are founded on the
-    <SC><B>similarity</B></SC> which we discover among natural
-    objects, and by which we are induced to expect effects similar to
-    those which we have found to follow from such
-    objects. [...] <B>From causes which appear similar we expect
-    similar effects.</B>"
-    <DIR><DIR>
-	<a href="http://en.wikipedia.org/wiki/David_Hume" target=new>David Hume</a><BR>
-	  <a href="http://www.gutenberg.org/etext/9662"
-	     target=new><I>An Enquiry Concerning Human Understanding</I></a> (1748) 
-      </DIR></DIR>
-    </P>
-  
-</div>
-
-
-
 
 <DIV CLASS="slide">
   <h1>for generalization, (dis)similarity = distance in a representation space</h1>
 
-  <P>
+  
+  <img src="Shepard-consequential-regions.gif" class="figure-right" >
+    <P>
+      On the right: two possible <SC>consequential regions</SC>
+      associated with a "good fruit".
+    </P>
+    <P>
     <a href="http://en.wikipedia.org/wiki/Roger_Shepard" target=new>Roger
       Shepard</a>'s <SC><a
 			  href="https://www.science.org/doi/10.1126/science.3629243"
@@ -483,8 +475,8 @@
   target=new><I>connected subsets</I></a> of psychological space. 
   <P>
   Applying the connectedness constraint to the domains of
-  (say) worm hue or length, where the relevant
-  stimulus spaces are ONE-DIMENSIONAL CONTINUA, the
+  (say) WORM LENGTH, where the relevant
+  stimulus space is a ONE-DIMENSIONAL CONTINUUM, the
   hypothesis spaces would consist of INTERVALS, or ranges of
   stimuli between some minimum and maximum consequential
   levels.
@@ -539,7 +531,7 @@
   weighted by the posterior probability of that hypothesis.
   </P>
   <P>
-   Observe how this combines the two stages of Bayesian treatment:
+   Note how this combines both stages of Bayesian treatment:
    posterior estimation and the application of a loss function.
   </P>
     <!--
@@ -580,9 +572,9 @@
   <P>
   The curve at the top illustrates the gradient 
   of generalization obtained by integrating over (summing) just these consequential
-  regions. The profile of generalization is always <I>concave</I> regardless of
+  regions. <font color=gray>The profile of generalization is always <I>concave</I> regardless of
   what values \(p(h\mid x)\) takes on, as long as all hypotheses of the same
-  size (in one bracket) take on the same probability. 
+  size (in one bracket) take on the same probability.</font>
 
 </div>
 
@@ -740,7 +732,7 @@
       </li>
       or
       <li>
-	be a good Bayesian by approximating relevant probability
+	be a good Bayesian by first approximating relevant probability
 	distributions from examples and then generalizing as needed.
       </li>
     </ol>
@@ -1057,7 +1049,6 @@
   this too can lead to poor generalization if the model is insufficiently
   flexible to capture the underlying behavior of the data set.</font>
   </P>
-  -->
   <P class="incremental">
   <font color=gray>As the Bishop & Tipping paper explains,
   overfitting is a pathological property of <a
@@ -1066,6 +1057,7 @@
   complex models to small data sets without encountering problems of
   overfitting. </font>
   </P>
+  -->
 
 </div>
 
@@ -1342,7 +1334,7 @@
 
   
 <div class="footer">
-<p>Last modified: Wed Feb 16 2022 at 17:53:05 EST</p>
+<p>Last modified: Thu Feb 17 2022 at 08:23:17 EST</p>
 </div>
 </body>
 </html>
