@@ -725,15 +725,19 @@
   </P>
   <P>
     If you know how to approximate an unknown function from some
-    sample points, you can also:
+    sample points, you also:
     <ol>
       <li>
-	learn from examples and generalize to new cases;
+	[empirical approach] generalize from given input-output pairs
+	directly to new cases;
       </li>
       or
       <li>
-	be a good Bayesian by first approximating relevant probability
-	distributions from examples and then generalizing as needed.
+	[generative approach] first approximate the relevant joint
+	probability distribution to form
+	a <a href="http://shimon-edelman.github.io/Psych-3140/w-4-1.html#(22)"
+	target=s>generative model</a>, then use Bayes to generalize to
+	new cases.
       </li>
     </ol>
   </P>
@@ -783,32 +787,20 @@
 
   <img src="classification-and-regression-feasible.gif" class="figure-right" >
   <P>
-  Suppose there is an unknown function \(y
-  = f(x)\) for which you have some input/output examples — pairs of
-  the form \(\left\{\left(x_1,y_1\right), 
-  \left(x_2,y_2\right), \dots, \left(x_N,y_N\right)\right\}\).
-  If you can approximate \(f(x)\) from such data, then you can:
-  <ol>
-    <li>learn to directly solve a behavioral problem described by \(y
-  = f(x)\) using empirical risk minimization.</li>
-    or
-    <li>first learn a generative model for a behavioral problem, by 
-    approximating the relevant joint probability distribution.
-    </li>
-  </ol>
-  (re: <a href="http://shimon-edelman.github.io/Psych-3140/w-4-1.html#(22)"
-    target=s>generative models</a>.) 
-  <HR>
-    <P>
-      <B>
-	The fundamental computational nature of function approximation:<BR>
-      <DIR><DIR>
-	  Function approximation
-	  is an <a href="http://en.wikipedia.org/wiki/Ill-posed" 
-		target=new>ill-posed problem</a>. Specifically, it is
-	  UNDERDETERMINED by the data. 
-      </DIR></DIR>
-	</B>
+    Suppose there is an unknown function \(y
+    = f(x)\) for which you have some input/output examples — pairs of
+    the form \(\left\{\left(x_1,y_1\right), 
+    \left(x_2,y_2\right), \dots, \left(x_N,y_N\right)\right\}\).
+  </P>
+  <P>
+    The fundamental computational nature of function approximation:
+    <DIR><DIR>
+	<B>Function approximation
+	is an <a href="http://en.wikipedia.org/wiki/Ill-posed" 
+		 target=new>ill-posed problem</a>. Specifically, it is
+	UNDERDETERMINED by the data.</B>
+    </DIR></DIR>
+  </P>
       
 </div>
 
@@ -820,17 +812,18 @@
 
   <img src="overfitting-1.png" height=200 class="figure-right">
   <P>
-  <BR>
-  <a href="http://en.wikipedia.org/wiki/Function_approximation"
-  target=new>Function approximation</a> from data (input/output examples) is
-  <a href="http://en.wikipedia.org/wiki/Ill-posed"
-  target=new>ill-posed</a>. Specifically, it is UNDERDETERMINED by the data.
+    <a href="http://en.wikipedia.org/wiki/Function_approximation"
+       target=new>Function approximation</a> from data (input/output examples) is
+    <a href="http://en.wikipedia.org/wiki/Ill-posed"
+       target=new>ill-posed</a>. Specifically, it is UNDERDETERMINED by the
+    data.
+  </P>
   <P>
-  This means that it must
-      be <a href="http://en.wikipedia.org/wiki/Regularization_(mathematics)"  
-      target=new>regularized</a> by making ASSUMPTIONS about its
-      solutions (in other words, imposing CONSTRAINTS on the solutions).
-  <P>
+    This means that it must
+    be <a href="http://en.wikipedia.org/wiki/Regularization_(mathematics)"  
+	  target=new>regularized</a> by making ASSUMPTIONS about its
+    solutions (in other words, imposing CONSTRAINTS on the solutions).
+  </P>
   <HR>
   <P>
   <I>Top:</I> 10 data points interpolated exactly with a 9th-degree <a
@@ -1203,7 +1196,7 @@
   <HR>
   <P class="incremental">
   <font color=gray>
-    [EXTRA] Specifically, if we are given a new value of \(x=x^*\)
+    [EXTRA [EXTRA]] Specifically, if we are given a new value of \(x=x^*\)
     then the predictive distribution for \(t^* = y(x^*;
     {\color{red}\textbf{w}})\) is obtained from the sum and product
     rules of probability by marginalizing over
@@ -1299,11 +1292,12 @@
 
   \(\require{color}\)
   <P>
-  <BR>
   One technique from classical statistics for estimating \({\color{red}\textbf{w}}\) is
   called <a href="http://en.wikipedia.org/wiki/Maximum_likelihood"
   target=new><I>Maximum Likelihood</I></a>. It calls for setting \({\color{red}\textbf{w}}\) to 
-  the value that maximizes the likelihood function \(L({\color{red}\textbf{w}})\).
+  the value that maximizes the likelihood function
+  \(L({\color{red}\textbf{w}})\).
+  </P>
   <P>
   For convenience we can instead minimize the negative <a
  href="https://en.wikipedia.org/wiki/Natural_logarithm"
@@ -1334,7 +1328,7 @@
 
   
 <div class="footer">
-<p>Last modified: Thu Feb 17 2022 at 08:36:57 EST</p>
+<p>Last modified: Tue Feb 22 2022 at 08:06:06 EST</p>
 </div>
 </body>
 </html>
