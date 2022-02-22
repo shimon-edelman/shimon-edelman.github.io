@@ -61,7 +61,7 @@
 <div class="slide cover">
   <div class="header">
     <h1>Psych 3140/6140</h1>
-    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    <p><a href="http://shimon-edelman.github.io">Shimon Edelman</a>,
     &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
   </div>
   <div style="float:left">
@@ -83,7 +83,7 @@
   <img src="Magritte-human-condition.jpg" title="The Human Condition (Rene Magritte)"
   class="figure-right" height=550>
   <ul>
-    <li>How neurons can be truthful</li>
+    <li>How representational processes (such as neural activities) can be truthful</li>
     <li>Veridical representation: a computational definition</li>
     <li>Visualizing representational spaces with MDS (a refresher)</li>
     <li>Behavioral evidence for veridical perception of shape similarities</li>
@@ -225,7 +225,7 @@
     actual configurations is highly significant.</li>
     <li><I>Bottom left:</I> the same analysis, applied to data from a study in
     which subjects judged similarities among <B>memorized</B> shapes.</li>
-    <li><I>Bottom right:</I> a <B>computer model</B> replicates perfectly the pattern of 
+    <li><I>Bottom right:</I> a <B>computer model</B> replicates the pattern of 
     human performance.</li>
   </ul>
   </small>
@@ -406,8 +406,8 @@
   A sequence of fMRI snapshots of the brain activity of a
   subject watching a series of visual stimuli &#151;
   <P>
-  [Courtesy of <a href="http://www-psych.stanford.edu/~kalanit/"
- target=new>Kalanit Grill-Spector</a>]
+  [Courtesy of <a href="https://psychology.stanford.edu/people/kalanit-grill-spector"
+ target=new>Prof. Kalanit Grill-Spector</a>]
   <P>
   <HR>
   <P>
@@ -561,11 +561,10 @@
 -->
 
 <DIV CLASS="slide">
-  <h1>in a nutshell: a computational basis for representation <strike>&nbsp;by&nbsp;</strike> OF similarity</h1>
+  <h1>a computational basis for representation <strike>&nbsp;by&nbsp;</strike> OF similarity</h1>
 
   <img src="world-to-brain-mapping.png" height=200 class="figure-right">
   <P>
-  <BR>
   If the world-to-brain mapping is <a href="http://en.wikipedia.org/wiki/Smooth_function"
 				      target=new>smooth</a>,
 				      shape constancy and veridical
@@ -630,8 +629,9 @@
     </P>
     <P class="incremental">
       An implication of smoothness: if objects are represented by
-      examples (sample views), recognition reduces to FUNCTION
-      APPROXIMATION (interpolating view / shape spaces from examples).
+      sample views, FUNCTION APPROXIMATION — interpolating view /
+      shape spaces from examples — will work well (that is, will
+      generalize reliably).
     </P>
     
 </div>
@@ -918,15 +918,23 @@
 
   <img src="Chorus-principle.png" height=350 class="figure-right">
   <P>
-  <BR>
   A potential solution to the need for smooth dimensionality reduction: the Chorus Transform.
   <P>The Chorus Transform of a point \(\textbf{x}\) (here, <font
-  face="courier">giraffe</font>) is related to what the middle layer of an
+							     face="courier">giraffe</font>)
+    <!--
+is related to what the middle layer of an
   <a
- href="http://en.wikipedia.org/wiki/Radial_basis_function" target=new>RBF</a> network computes. It is defined as the vector of
-  distances between \(\textbf{x}\) and the <a
+ href="http://en.wikipedia.org/wiki/Radial_basis_function"
+ target=new>RBF</a> network computes. 
+  -->
+   is defined as the vector of
+  distances between \(\textbf{x}\) and
+  <!--
+the <a
  href="http://en.wikipedia.org/wiki/Radial_basis_function" target=new>RBF</a> 
- "centers" or <SC>landmarks</SC> \(\textbf{p}_i\) (here, <font
+ "centers"
+  -->
+  a number of <SC>landmarks</SC> \(\textbf{p}_i\) (here, <font
   face="courier">pig, camel, goat</font>):
   $$
   CT({\bf x}) = \left( \begin{array}{c} 
@@ -942,19 +950,21 @@
   
 
 <DIV CLASS="slide">
-  <h1>[EXTRA] a possible implementation of a shape-tuned mechanism</h1>
+  <h1>[EXTRA] a possible implementation of a shape-tuned mechanism, or LANDMARK</h1>
 
   <img src="generic-interpolation-mechanism.png" height=500 class="figure-left">
     <P>
-      A natural approach to representing an example is a mechanism
-      that is TUNED to the example (for instance, to all views
-      of a particular object) — that is, responds selectively to that
-      example.
+      A natural approach to representing a shape-space landmark is a
+      mechanism that is TUNED to some optimal (for it) shape — that
+      is, responds selectively to that shape, such that its response
+      to other stimuli decreases with their shape-space distance
+      (dissimilarity) to the optimal shape.
     </P>
     <P>
       Illustration: the desired response of a mechanism that is tuned
-      to a cow shape to a series of cow views, as well as to views of
-      shapes that progressively differ from that of a cow.
+      to a cow shape to (1, top) a series of cow views, and (2,
+      bottom) to views of shapes that progressively differ from that
+      of a cow.
     </P>
     
 </div>
@@ -985,7 +995,6 @@
 
   <img src="chorus.jpg" height=350 class="figure-right">
   <P>
-  <BR>
   The Chorus Transform of a point in a \(D\)-dimensional space \(\textbf{x}\in R^{D}\) — the vector of distances 
   between it and the landmarks \(\textbf{p}_i\) — performs dimensionality
   reduction from \(dim(\textbf{x}) = D\) to a potentially much smaller \(n \ll D\):
@@ -1016,11 +1025,10 @@
 
 
 <DIV CLASS="slide">
-  <h1>[EXTRA] dimensionality reduction with a Chorus of Prototypes: the mathematical principles</h1>
+  <h1>[EXTRA] why drastic, yet similarity-preserving dimensionality reduction is possible</h1>
 
   <img src="projection.png" height=300 class="figure-right">
   <P>
-  <BR>
   According to the <a
   href="http://en.wikipedia.org/wiki/Johnson%E2%80%93Lindenstrauss_lemma"
   target=new>Johnson-Lindenstrauss Lemma</a> (1984), a cloud of points in a
@@ -1373,7 +1381,7 @@ only. Overlap ratio reflects shared neighbors over total neighbors.
 
 	  
 <div class="footer">
-<p>Last modified: Mon Feb 21 2022 at 17:37:29 EST</p>
+<p>Last modified: Tue Feb 22 2022 at 08:27:14 EST</p>
 </div>
 </body>
 </html>
