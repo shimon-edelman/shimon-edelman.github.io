@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Psych 3140/6140 wk-13-2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="copyright" content="Copyright &169; 2014-2021 Shimon Edelman"/> -->
+<meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
+<link rel="stylesheet" href="../Slidy/w3c-blue3.css"
+ type="text/css" media="screen, projection, print" />
+ <link rel="stylesheet" href="extras.css"
+ type="text/css" media="screen, projection, print" />
+<script src="../Slidy/slidy.js" type="text/javascript">
+</script>
+<script type="text/javascript"
+  src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+
+<!-- 
+<rdf:RDF xmlns="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+<permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+<requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+<permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+<requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+</License>
+</rdf:RDF>
+-->
+
+<!-- this defines the slide background -->
+
+<div class="background">
+  <div class="header">
+  <!-- sized and colored via CSS -->
+  </div>
+  <!-- hidden style graphics to ensure they are saved with other content -->
+  <img class="hidden" src="../Slidy/bullet.png" alt="" />
+  <img class="hidden" src="../Slidy/fold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold.bmp" alt="" />
+  <img class="hidden" src="../Slidy/fold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/nofold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/unfold-dim.bmp" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-fold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-nofold-dim.gif" alt="" />
+  <img class="hidden" src="../Slidy/bullet-unfold-dim.gif" alt="" />
+
+  <div class="footer">
+  <!-- modify the following text as appropriate -->
+  Week 13.2 &#151;
+  </div>
+</div>
+
+<!-- COVER PAGE SLIDE -->
+<div class="slide cover">
+  <div class="header">
+    <h1>Psych 3140/6140</h1>
+    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
+  </div>
+  <div style="float:left">
+    <h2>Week 13: neural comp, III</h2>
+    <h3>&nbsp;Lecture 13.2: prediction</h3>
+  </div>
+  <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
+  class="figure-right"  height=70%>
+
+</div>
+<!-- END COVER PAGE -->
+
+
+<!-------------------------------------------------------------->
+<DIV CLASS="slide">
+  <h1>Lecture 13.2: what brains do, and how — prediction; networks</h1> 
+
+  <P>
+  <ul>
+    <li>Perception as optimal estimation</li>
+    <P>
+    <li><B>The brain as a surprise minimization machine</B> (cf. the central
+    role of FORESIGHT/FORETHOUGHT, as per the textbook)</li>
+    <P>
+    <li><A href="https://en.wikipedia.org/wiki/Karl_J._Friston" target=new>Friston</a>'s Free Energy principle</li>
+  </ul>
+  <P>
+  <HR>
+    <P>
+      <small>
+  Sources:
+  <ol>
+    <li>
+    <I>An optimal estimation approach to visual perception and learning</I>, 
+    R. P. N. Rao, Vision Research 39:1963-1989 (1999).
+    </li>
+    <li>
+    <I>Canonical Microcircuits for Predictive Coding</I>, Bastos,
+    Friston, et al., Neuron 76:695-711 (2012).
+    </li>
+    <li>
+    <I>Structural and Functional Brain Networks: From Connections to Cognition</I>,
+    Park & Friston, Science 342:1238411 (2013).
+    </li>
+    <li>
+    <I>The free-energy principle: a unified brain theory?</I>, K. Friston,
+    Nature Reviews Neuroscience 11:127-138 (2010).
+    </ol>
+  </small>
+  </P>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>the world and the brain (Rao, 1999)</h1> 
+
+  <img src="Rao99-fig1a.png" height=350 class="figure-right">
+  <P>
+  Internal world models and the problem of optimal estimation of hidden
+  state.
+  </P>
+  <P>
+    This illustration conveys the essence of the general problem faced
+    by an organism relying on an internal model of its environment
+    (from O’Reilly, 1996). The underlying goal is to optimally
+    estimate, at each time instant, the hidden internal state of the
+    environment given only the sensory measurements \(\textbf{I}\)
+    (here, the image data).
+  </P>
+  <P class="incremental">
+  Note that a dynamic internal model of the world can be used for
+  PREDICTION.
+  </P>
+
+</div>
+
+
+<DIV CLASS="slide">
+  <h1>the world and the brain (Rao, 1999)</h1> 
+
+  <img src="Rao99-fig1b.png" height=325 class="figure-right">
+  <P>
+    The internal model consists of the state transition matrix
+    \(\bar{V}\) and the generative matrix \(\bar{U}\); the
+    <a href="https://en.wikipedia.org/wiki/Kalman_filter"
+    target=new>Kalman filter</a> uses this internal model to compute
+    optimal estimates \(\hat{\textbf{r}}\) of the current internal
+    state \(\textbf{r}\) of the environment, given the observations
+    \(\textbf{I}\).
+  </P>
+  <P>
+    According to Bayes theorem, the posterior probability of the state
+    given the input data is:
+    $$
+    P(\textbf{r} \mid \textbf{I}) = \frac{P(\textbf{I} \mid \textbf{r}) P(\textbf{r})}{P(\textbf{I})}
+    $$
+    By taking the negative log of both sides (and ignoring
+    the denominator, which is a fixed quantity), we can
+    conclude that maximizing the posterior probability of the state
+    \(\textbf{r}\) given the input data \(\textbf{I}\) is equivalent
+    to minimizing the following cost function:
+    $$
+    J = - \log P(\textbf{I}\mid \textbf{r}) - \log P(\textbf{r})
+    $$
+    </P>
+
+</div>
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>the brain at rest (Raichle, 2010)</h1> 
+
+  <img src="Raichle10-fig1.png" height=350 class="figure-right">
+  <P>
+  <BR>
+  <B>The brain is not primarily about responding to stimuli</B>
+  <P>
+  <blockquote>
+  Whilst part of what we perceive comes through our
+  senses from the object before us, another part (and it
+  may be the larger part) always comes out of our own
+  head.
+  <DIR><DIR><DIR>
+    William James (1890)
+  </DIR></DIR></DIR>
+  </blockquote>
+  <HR>
+  <P>
+  <small>
+  "In the resting state, brain blood flow accounts for 11% of the
+  cardiac output and brain metabolism accounts for 20% of the energy
+  consumption of the body, overshadowing the metabolism of other organs such
+  as the heart, liver and skeletal muscle as shown on the left (above) in
+  this classic image of whole body glucose consumption. The changes in
+  regional blood flow associated with task performance are 
+  often no more than 5% of the resting  blood flow of the brain from which
+  they were derived (center) and, hence, only discernable in difference
+  images averaged across subjects as shown above on the left. These modest
+  modulations in ongoing circulatory and metabolic activity rarely affect the
+  overall rate of brain blood flow and metabolism during even the most
+  arousing perceptual and vigorous motor activity."
+  </small>
+
+</div>
+
+-->
+
+
+<DIV CLASS="slide">
+  <h1>[EXTRA: why predict? using memory to maximize energy efficiency]</h1> 
+
+  <img src="Sivak-thermodynamics-of-prediction-abstract.png" height=500>
+
+</div>
+  
+  
+
+<DIV CLASS="slide">
+  <h1>why predict? resisting a tendency to disorder [after Karl Friston]</h1> 
+
+  <img src="fish-out-of-water.jpg" class="figure-right">
+  <P>
+  The defining characteristic of biological systems is that they
+  maintain their states and form in the face of a constantly changing
+  environment. [...] The physiology of biological systems can be reduced
+  almost entirely to their <a
+ href="http://en.wikipedia.org/wiki/Homeostasis"
+			     target=new><B>homeostasis</B></a>.
+  </P>
+  <P>
+  More precisely, the repertoire of physiological and sensory states in
+  which an organism can be is limited. Mathematically, this means that the probability
+  distribution over the space of (interoceptive and exteroceptive) sensory states must have <B>low
+  <a href="http://en.wikipedia.org/wiki/Entropy_%28information_theory%29"
+  target=new>entropy</a></B>. In other words, there is a high probability that a
+  system will be in any of a small number of states, and a low probability that it will be
+  in the remaining states.
+  </P>
+  <P>
+  Note that entropy is the same as average <B>'surprise'</B> (more
+  formally, it is the negative log-probability of an outcome).
+  </P>
+  <P>
+  Example: in a roomful of air at \(300^{\circ}\)K, encountering an O\(_2\)
+  molecule traveling at \(0.1c\) would be surprising.
+  </P>
+  <P class="incremental">
+  Example: a fish out of water would be in a surprising state.
+  </P>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>resisting a tendency to disorder \(\Rightarrow\) avoiding surprise</h1>
+
+  <img src="chaotic-itinerancy.png" height=450 class="figure-right" title="chaotic itinerancy (Tsuda)">
+  <P>
+  The long-term imperative — of maintaining states within physiological
+  bounds — translates into a short-term avoidance of surprise.
+  </P>
+  <P>
+  Surprise here relates not just to the current state, which cannot be
+  changed, but also to movement from one state to another, which can
+  change. This movement can be complicated and itinerant (wandering)
+  provided that it revisits a small set of states —
+  an <a href="http://en.wikipedia.org/wiki/Attractor"
+  target=new>attractor</a><sup>*</sup> — that are compatible with
+  survival.
+  </P>
+  <P>
+    <font color=gray>[Typically, the "being alive" attractor is in turn composed of
+    attractors connected by heteroclinic channels. Think of walking
+    every workday from home to the workplace and back.]</font>
+  </P>
+  <P>
+  It is this movement that the
+ <a href="http://en.wikipedia.org/wiki/Free_energy_principle"
+  target=new><B>free-energy</B> principle</a> (introduced on the next
+  slide) proposes to optimize.
+  <hr width=30% align=left>
+  <sup>*</sup>
+  <small>
+  More precisely, a <a
+ href="http://www.math.northwestern.edu/~clark/publications/chaos.pdf" target=new><I>quasi-attractor</I></a> (see <I>Chaotic itinerancy
+  and its roles in cognitive neurodynamics</I>, I. Tsuda, Current Opinion in
+  Neurobiology 2015, 31:67–71).
+  </small>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>the relationship between free energy and surprise</h1>
+
+  <P>
+  Free energy (a <a href="https://en.wikipedia.org/wiki/Free_energy"
+  target=new>classical concept from physics</a>, adopted and promoted by
+  <a href="http://www.fil.ion.ucl.ac.uk/~karl/" target=new>Karl Friston</a>) is an
+  upper bound on <B>surprise</B>, which means that if agents 
+  minimize free energy, they implicitly minimize surprise.
+  </P>
+  <P>
+  Crucially, free
+  energy can be evaluated because it is a function of two things to which
+  the agent has access:
+  <ul>
+    <li>
+    its sensory states [measurements made at the interface with the world];
+    </li>
+    <li>
+    a "recognition <a
+    href="http://en.wikipedia.org/wiki/Probability_density_function"
+    target=new>[probability] density</a>" that is encoded by its internal states
+    (for 
+    example, neuronal activity and synaptic connection strengths).
+    </li>
+  </ul>
+  <P>
+  The recognition density is a probabilistic model of what caused a
+  particular sensation [compare this to slides 3 and 4 in this sequence].
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>Implications: action and perception</h1>
+
+  <P>
+    <font color=gray>[EXTRA] In this setting, surprise is called the
+      (negative) model evidence [recall this concept from
+      <a href="wk-7-2.html#(22)"
+	 target=new>Lecture 7.2</a>].  This means that minimizing
+	 surprise is the same as maximizing the sensory evidence for
+	 an agent's existence [the validity of its model of the
+	 world], if we regard the agent as a model of its world.
+    </font>
+  </P>
+  <P>
+  In the present context, free energy provides <strike>&nbsp; the &nbsp;</strike> an answer to 
+  a fundamental question:
+  <DIR><DIR><DIR>
+    <P>
+    <B>How do self-organizing adaptive systems avoid surprising states?</B>
+    <P>
+    They can do this by minimizing their free energy.
+  </DIR></DIR></DIR>
+  <P>
+  So what does this involve?
+  <P>
+  Agents can suppress free energy by changing the two things it depends
+  on:
+  <UL>
+    <li>
+      they can change their recognition density by changing
+      their internal states.
+    </li>
+    <li>
+      they can change sensory input by acting on the world
+    </li>
+  </UL>
+  <P>
+    These two options correspond, respectively, to perception and to
+    action.
+  </P>
+
+</div>
+
+  
+
+<DIV CLASS="slide">
+  <h1>the free energy principle for action and perception</h1>
+
+  <img src="Friston-fun-on-Twitter.png" class="figure-right" height=600>
+  <P>
+  Agents can suppress free energy [to avoid nasty surprises] by
+  changing the two things it depends on:
+  <UL>
+    <li>
+      They can change their recognition density by changing
+      their internal states.
+      <P>
+	This is INFERENCE from observed data to ACTUAL world states.
+      </P>
+    </li>
+    <li>
+      They can change sensory input by acting on the world.
+      <P>
+	This is ACTIVE INFERENCE from data to DESIRED world states.
+      </P>
+    </li>
+  </UL>
+  <P>
+    These two options correspond, respectively, to perception and to
+    action.
+  </P>
+    
+
+</div>  
+
+  
+
+<DIV CLASS="slide">
+  <h1>for INFERENCE, build a generative model, which describes how (sensory) data are caused</h1> 
+
+  <img src="BastosFriston12-fig3.png" class="figure-right" height=370>
+  <P>
+  <B>Left:</B> a probabilistic graphical model, in which variables
+  (hidden or known states) are represented by the nodes of a directed
+  graph; conditional dependencies (hidden or known causes) are shown by
+  arrows. Known or visible states are data. Note that all states can have dynamics. <font 
+  color=gray>Because of this, dependencies are typically modeled as <a
+  href="https://en.wikipedia.org/wiki/Differential_equation"
+  target=new>(differential) equations</a>.</font>
+  </P>
+  <P>
+  <B>Right:</B> an intuitive view of the model. A singing bird is the cause
+  of sensations, which — through a cascade of dynamical hidden states —
+  produces modality-specific consequences (e.g., the auditory object of a
+  bird song and the visual object of a song bird). These intermediate causes
+  are themselves (hierarchically) unpacked to generate sensory signals. The
+  <I><B>generative model</B></I> maps from causes (e.g., concepts) to
+  consequences (e.g., sensations), while its <I><B>inverse</B></I> corresponds to mapping
+  from sensations to concepts. This inversion corresponds
+  to perceptual synthesis, in which the generative model is used to generate
+  <B>predictions</B>.<!-- <font color=gray>Note that this inversion implicitly resolves
+  the binding problem by explaining multisensory cues with a single
+    cause.</font>-->
+  </P>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>hierarchical inference and predictive coding</h1> 
+
+  <img src="BastosFriston12-fig4.png" class="figure-right" height=370>
+  <P>
+  <I>Left:</I> A simple hierarchical model of (some aspect of) the world, in
+  which each node has a single parent. The hidden causes \(\omega\) are shown in pink.
+  <P>
+  <I>Right:</I> An inversion or generalized predictive coding scheme
+  derived from this model. The key quantities in this scheme are
+  (conditional) expectations of the hidden states and causes (\(\mu\), open circles) and their
+  associated prediction errors (\(\xi\), pink circles). 
+  <P>
+  The basic architecture, implied by the inversion of the 
+  (hierarchical) graphical model, suggests that prediction errors (caused by
+  unpredicted fluctuations in hidden variables) are passed up the hierarchy
+  to update conditional expectations. These new conditional expectations now
+  provide predictions that are passed down the hierarchy to form prediction
+  errors. 
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>hierarchical predictive coding in the cortex</h1> 
+
+  <img src="ParkFriston13-fig4b.png" class="figure-right" height=300>
+  <P>
+  <I>A theory of predictive coding in the hierarchical brain network may
+  explain what information is broadcast within the network and how edge
+    strengths (arrows) between nodes (ellipses) are adjusted.</I>
+  </P>
+  <P>
+    According to this theory, the brain implements a HIERARCHICAL
+    GENERATIVE MODEL that is used to predict sensory and motor
+    "data". The predictions of the generative model are adjusted at
+    each hierarchical level until the prediction errors between
+    sensory inputs and predictions are minimized. This prediction
+    error minimization process is mediated by forward driving
+    connections, delivering prediction errors (light arrows) from an
+    earlier area to a higher area, and (modulatory) backward
+    connections (dark arrows) that build context-sensitive
+    predictions.
+  </P>
+  <P>
+    <font color=gray>Prediction errors for hidden causes and hidden
+      states, at the \(i\)th level, \([\xi_v^{(i)},\xi_x^{(i)}]\), are
+      the weighted — by precisions \([\Pi_v^{(i)},\Pi_x^{(i)}]\) —
+      difference between conditional expectations about hidden causes
+      and states \([\tilde{\mu}_v^{(i)}, \tilde{\mu}_x^{(i)}]\) and
+      their predicted values.</font>
+  </P>
+
+</div>
+
+
+
+<!--
+
+<DIV CLASS="slide">
+  <h1>the predictive coding hypothesis and the functional architecture of the brain</h1> 
+
+  <img src="ParkFriston13-fig1ab.png" class="figure-right" height=400>
+  <P>
+  <BR>
+  <B>(A)</B> The multiscale hierarchical organization of brain networks:
+  from neurons and macrocolumns to macroscopic brain areas. A network is
+  composed of nodes and their links, called edges. A node, defined as an
+  interacting unit of a network, is itself a network composed of smaller
+  nodes interacting at a lower hierarchical level.
+  <P>
+  <B>(B)</B> "Edges" in a brain network, as defined by three types of
+  connectivity: structural, functional, and effective. <I>Structural
+  connectivity</I> (anatomical connections; broken lines in the
+  bottom images) can be estimated by fiber tractography from <a
+ href="http://en.wikipedia.org/wiki/Diffusion_MRI#Diffusion_tensor_imaging" target=new>diffusion
+  tensor MRI (DTI)</a> data. <I>Functional connectivity</I> (undirected
+  statistical dependencies; lines without arrows) and <I>effective connectivity</I> (directed
+  causal dependencies; arrows) are estimated from
+  <a href="http://en.wikipedia.org/wiki/Blood-oxygen-level_dependent"
+ target=new>BOLD</a>-fMRI or <a
+ href="http://en.wikipedia.org/wiki/Electroencephalography"
+ target=new>EEG</a> / <a
+ href="http://en.wikipedia.org/wiki/Magnetoencephalography"
+  target=new>MEG</a> data. To infer effective connectivity, one needs to
+  fit a causal model to the data.
+  <a
+  href="http://en.wikipedia.org/wiki/Adjacency_matrix" target=new>Adjacency
+  (or connectivity) matrices</a>, which
+  subserve <a href="http://en.wikipedia.org/wiki/Graph_theory"
+ target=new>graph-theoretical</a> analyses of brain systems, encode
+  structural and functional connectivity between pairs of nodes. 
+
+</div>
+
+
+
+
+<DIV CLASS="slide">
+  <h1>a "rich club" model of the hierarchical (modular) brain</h1> 
+
+  <img src="ParkFriston13-fig1c.png" class="figure-right" height=300>
+  <P>
+  <BR>
+  <B>(C)</B> The brain is highly modular, with nodes integrated locally
+  through strong short-range edges (thin gray lines). <a
+ href="http://en.wikipedia.org/wiki/Rich-club_coefficient" target=new>Rich-club</a> hubs are
+  densely interconnected among themselves (mainly through long-range edges
+  in thick black lines). These hubs facilitate intermodular communication or
+  global integration that may be contextualized via weaker long-range
+  connections (dotted lines).
+  <P class="incremental">
+  Brain functions can be characterized by local
+  integration within segregated modules for specialized functions and global
+  integration of modules for perception, cognition, and action.
+  Context-dependent global integration recruits a subset of modules with
+  different configurations that nuances the collaboration between different
+  modules.
+  </P>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>convergence: structural and functional brain network organization</h1> 
+
+  <img src="ParkFriston13-fig2abc.png" class="figure-right" height=300>
+  <P>
+  <BR>
+  <B>(A)</B> Whole-brain fiber bundles reconstructed from diffusion tensor
+  MRI are colored according to their connection similarity. A structural brain
+  network can be constructed by parcellating fibers according to the cortical or
+  subcortical regions they interconnect.
+  <BR>
+  <B>(B)</B> The structural network constructed from diffusion tensor MRI
+  has rich-club hubs in the precuneus, superior frontal and superior
+  parietal cortex, the subcortical hippocampus, putamen, and thalamus. Dark
+  (thick) blue and light (thin) blue lines represent connections between
+  rich clubs and connections from rich clubs to others, respectively. The
+  sizes of the nodes reflect the number of their connections.
+  <BR>
+  <B>(C)</B> Repertoires of spatial modules have emerged from 
+  the analysis of spontaneous BOLD fluctuations in the brain at rest. These 
+  <I>intrinsic connectivity networks</I> (ICNs) comprise clusters of nodes
+  fluctuating synchronously. This figure 
+  shows two examples of <I>temporal functional modes</I> (TFMs, more detailed
+  ICNs) derived from temporal independent component analysis of fast resting-state
+  fMRI. TFMs often correspond to task-related neurocognitive modules.
+  As an example, TFMs 11 and 13 are similar to the task-activated semantic
+  network and the lateralized language network, respectively.
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>hierarchical (modular) resting-state functional network</h1> 
+
+  <img src="ParkFriston13-fig2d.png" class="figure-right" height=350>
+  <P>
+  <BR>
+  <B>(D)</B> Changes in dynamic global coupling occur <I><B>between</B></I> the four ICNs
+  (intrinsic connectivity networks or modules) associated with the default mode network. However, relatively
+  stable coupling exists among the submodules (red lines within the second
+  circle) within a given ICN, and highly stable local coupling is maintained
+  among nodes <I><B>within</B></I> individual submodules (black solid lines within
+  submodules in the second circle). The stability of connectivity estimated
+  over a relatively long time period suggests that, at the level of the
+  submodule, <B>functional connectivity is closely related to the underlying
+  structural connectivity</B>, especially intracortical connectivity (which
+  diffusion MRI cannot resolve).
+  <P>
+  Note that ICNs show a <B>hierarchical modularity</B>: submodules within ICNs are
+  composed of hierarchically clustered voxels. 
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>task-dependent dynamic reorganization of the networks</h1> 
+
+  <img src="ParkFriston13-fig3a.png" class="figure-right" height=350>
+  <P>
+  <BR>
+  <B>(A)</B> <I>Task-dependent reconfiguration of functional connectivity,
+  found predominantly in long-range intrahemispheric connections.</I>
+  <small>
+  All
+  structural connections (top row), especially long-range 
+  intrahemispheric connections (bottom row), are colored according to the
+  functional connectivity during rest (rsFC, left column) and task-dependent
+  deviations in functional connectivity from rest during attention (DasFC, middle
+  column) and memory (DmsFC, right column). In the maps of intrahemispheric
+  connections (bottom row), thicker lines in the resting state indicate stronger
+  rsFC; thicker lines during attention indicate larger decreases in FC, and thicker
+  lines during memory indicate larger increases in FC relative to rest, averaged
+  across participants.
+  </small>
+  <P>
+  <I>An overall <B>decrease</B> in functional connectivity was observed
+  during the <B>attentional task</B>; in contrast, an overall <B>increase</B>
+  in functional connectivity was observed in the <B>memory
+  task</B></I>. Furthermore, the functional connectivity of long-range  
+  intrahemispheric pathways decreased to a greater degree during attentional
+  demands and increased during the memory task, compared with the other
+  subgroups of connections during task performance. This suggests that global
+  integration by modulating long-range connectivity is crucial for task-dependent
+  functions.
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>brain dynamics in a visual discrimination task</h1> 
+
+  <img src="ParkFriston-fig3b.png" class="figure-right" height=450>
+  <P>
+  <BR>
+  <B>(B)</B> Functional MRI activations during the preparatory phase of a
+  visual discrimination task for color and motion were used as nodes for
+  graph analysis (top left). FDR, false discovery rate. These nodes were decomposed
+  into either core nodes (red in top middle) or peripheral nodes (blue in top
+  right) according to their connection densities. Visual areas V4 (color processing)
+  and V5/hMT (motion processing) were categorized as peripheral nodes. Functional
+  networks during the preparatory period before either correct or incorrect
+  responses for color and motion stimuli are shown in the bottom left (black dots
+  in circle maps indicate nodes and colored lines for task-dependent functional
+  connectivity).
+  <P>
+  <I>During both color and motion discrimination tasks, erroneous
+  preparation trials had significantly lower core <a
+ href="http://en.wikipedia.org/wiki/Network_science#Node_centrality"
+  target=new>centrality</a></I>, a global measure of the 
+  core's ability to integrate and control information flow (bottom right). This
+  finding indicates that aberrant core-periphery interactions may be responsible
+  for the incorrect responses in this study.
+  
+</div>
+
+-->
+
+
+
+<DIV CLASS="slide">
+  <h1>understanding the cortical circuitry within the free
+ energy / prediction framework</h1> 
+
+  <img src="ParkFriston13-fig4a.png" class="figure-right" height=400>
+  <P>
+  A simplified computational model of the canonical microcircuit includes
+  intrinsic connectivity (inhibitory and excitatory) and extrinsic forward
+  and backward connectivity. Inhibitory connections are shown in red, and
+  excitatory connections are in black.
+  </P>
+  <P class="incremental">
+  Unlike the unstructured nodes and edges in most current network
+  analyses, in this type of modeling, nodes are equipped with intrinsic
+  connections and state dynamics.
+  </P>
+  <HR>
+  <P class="incremental">
+    Surprise! This model has never been implemented yet.
+  </P>
+    
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>(a glimpse of) the real cortical microcolumn</h1> 
+
+  <img src="cortex-column-Szentagothai.gif" class="figure-right" height=550>
+  <P>
+  The free energy principle — suggesting that brains are prediction
+  machines (cf. the claim of the key role of forethought or foresight in the
+  explanatory framework of <I>Computing the Mind</I>) — is a very
+  high-level/abstract approach to understanding the brain.
+  It needs to be connected to the lower (algorithmic and implementational)
+  ideas, in particular
+  <ul>
+    <li>the old-style neuroscience, exemplified by this schematic depiction
+    of the main connections within, to, and from a cortical microcolumn
+    (from J. Szentagothai, 1978),</li> 
+    and
+    <li>the new understanding of the brain in terms of multiscale network
+    dynamics.</li>
+  </ul>
+  </P>
+
+</div>
+
+
+
+
+
+<DIV CLASS="slide">
+  <h1>some evidence for predictive coding: a violated prediction leads to stronger activity</h1> 
+
+  <img src="BastosFriston12-table1.png" height=500>
+  <P>
+  <BR>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>the free-energy principle (K. Friston) and other theories</h1> 
+
+  <img src="Friston10-fig4.png" class="figure-right" height=450>
+  <P>
+  "A free-energy principle has been proposed recently that accounts for
+  action, perception and learning. Various key brain theories in the
+  biological (for example, neural Darwinism) and physical (for example,
+  information theory and optimal control theory) sciences can be considered
+  from the free-energy perspective.
+  </P>
+  <P>
+  Crucially, one key theme runs 
+  through each of these theories — <B>optimization</B>. Furthermore, if we look
+  closely at what is optimized, the same quantity keeps emerging, namely
+  <B>value</B> (expected reward, expected utility) or its complement, <B>surprise</B>
+  (prediction error, expected cost). This is the quantity that is optimized
+  under the free-energy principle, which suggests that several global brain
+  theories might be unified within a free-energy framework."
+  <P>
+  <HR>
+  <P class="incremental">
+    — What about language and other open-ended social behaviors?
+    <BR>
+    — What about prediction when "the world" is construed as including
+    the self (as it must)?
+    <BR>
+    — What about exploration (as opposed to exploitation), in which
+    learning necessitates being surprised?
+  </P>
+  
+</div>
+
+
+
+<div class="footer">
+<p>Last modified: Wed May 5 2021 at 16:20:35 EDT</p>
+</div>
+</body>
+</html>

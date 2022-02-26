@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?> 
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <title>Psych 3140/6140 wk-13-2</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- <meta name="copyright" content="Copyright &169; 2014-2021 Shimon Edelman"/> -->
+<!-- <meta name="copyright" content="Copyright &169; 2008-2022 Shimon Edelman"/> -->
 <meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
 <link rel="stylesheet" href="../Slidy/w3c-blue3.css"
  type="text/css" media="screen, projection, print" />
@@ -65,8 +65,8 @@
     &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
   </div>
   <div style="float:left">
-    <h2>Week 13: neural comp, III</h2>
-    <h3>&nbsp;Lecture 13.2: prediction</h3>
+    <h2>Week 13: advanced topics I</h2>
+    <h3>&nbsp;Lecture 13.2: real-world Bayes</h3>
   </div>
   <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
   class="figure-right"  height=70%>
@@ -75,721 +75,409 @@
 <!-- END COVER PAGE -->
 
 
-<!-------------------------------------------------------------->
-<DIV CLASS="slide">
-  <h1>Lecture 13.2: what brains do, and how — prediction; networks</h1> 
 
+<div  CLASS="slide">
+  <h1>real-world Bayes</h1>
+
+  <img src="magic-realism.jpg" class="figure-right"
+       title="Come on, honey, enough with the magic realism"
+       height=400>
   <P>
-  <ul>
-    <li>Perception as optimal estimation</li>
-    <P>
-    <li><B>The brain as a surprise minimization machine</B> (cf. the central
-    role of FORESIGHT/FORETHOUGHT, as per the textbook)</li>
-    <P>
-    <li><A href="https://en.wikipedia.org/wiki/Karl_J._Friston" target=new>Friston</a>'s Free Energy principle</li>
-  </ul>
-  <P>
-  <HR>
-    <P>
-      <small>
-  Sources:
-  <ol>
-    <li>
-    <I>An optimal estimation approach to visual perception and learning</I>, 
-    R. P. N. Rao, Vision Research 39:1963-1989 (1999).
-    </li>
-    <li>
-    <I>Canonical Microcircuits for Predictive Coding</I>, Bastos,
-    Friston, et al., Neuron 76:695-711 (2012).
-    </li>
-    <li>
-    <I>Structural and Functional Brain Networks: From Connections to Cognition</I>,
-    Park & Friston, Science 342:1238411 (2013).
-    </li>
-    <li>
-    <I>The free-energy principle: a unified brain theory?</I>, K. Friston,
-    Nature Reviews Neuroscience 11:127-138 (2010).
-    </ol>
-  </small>
+    <B>Getting real about being Bayesian</B> (an algorithmic take):
   </P>
-
+  <P>
+    <I>Bayesian brains without probabilities</I>, A. N. Sanborn and
+    N. Chater, Trends in Cognitive Sciences 20:883-893  (December 2016).
+  </P>
+  
 </div>
 
 
-<DIV CLASS="slide">
-  <h1>the world and the brain (Rao, 1999)</h1> 
 
-  <img src="Rao99-fig1a.png" height=350 class="figure-right">
+<div  CLASS="slide">
+  <h1>Bayesian Sampler vs. ideal Bayesian reasoning</h1>
+
+  <img src="flounder-checkerboard.jpg" class="figure-right">
   <P>
-  Internal world models and the problem of optimal estimation of hidden
-  state.
-  </P>
-  <P>
-    This illustration conveys the essence of the general problem faced
-    by an organism relying on an internal model of its environment
-    (from O’Reilly, 1996). The underlying goal is to optimally
-    estimate, at each time instant, the hidden internal state of the
-    environment given only the sensory measurements \(\textbf{I}\)
-    (here, the image data).
+    "Bayesian explanations have swept through cognitive science over the past
+    two decades, from intuitive physics and causal learning, to perception,
+    motor control and language. Yet people flounder with even the simplest
+    probability questions. What explains this apparent paradox?"
   </P>
   <P class="incremental">
-  Note that a dynamic internal model of the world can be used for
-  PREDICTION.
+    "Bayesian brains need not represent or calculate probabilities at all and
+    are, indeed, poorly adapted to do so. Instead, the brain is a
+    <a href="https://twiecki.github.io/blog/2015/11/10/mcmc-sampling/" target=new>Bayesian
+      sampler</a>."
   </P>
-
-</div>
-
-
-<DIV CLASS="slide">
-  <h1>the world and the brain (Rao, 1999)</h1> 
-
-  <img src="Rao99-fig1b.png" height=325 class="figure-right">
-  <P>
-    The internal model consists of the state transition matrix
-    \(\bar{V}\) and the generative matrix \(\bar{U}\); the
-    <a href="https://en.wikipedia.org/wiki/Kalman_filter"
-    target=new>Kalman filter</a> uses this internal model to compute
-    optimal estimates \(\hat{\textbf{r}}\) of the current internal
-    state \(\textbf{r}\) of the environment, given the observations
-    \(\textbf{I}\).
-  </P>
-  <P>
-    According to Bayes theorem, the posterior probability of the state
-    given the input data is:
-    $$
-    P(\textbf{r} \mid \textbf{I}) = \frac{P(\textbf{I} \mid \textbf{r}) P(\textbf{r})}{P(\textbf{I})}
-    $$
-    By taking the negative log of both sides (and ignoring
-    the denominator, which is a fixed quantity), we can
-    conclude that maximizing the posterior probability of the state
-    \(\textbf{r}\) given the input data \(\textbf{I}\) is equivalent
-    to minimizing the following cost function:
-    $$
-    J = - \log P(\textbf{I}\mid \textbf{r}) - \log P(\textbf{r})
-    $$
+  <P class="incremental">
+    "The key insight:
+    <BR>
+      although explicitly representing a probability distribution is
+      hard, drawing samples from it is relatively easy. Sampling does
+      not require knowledge of the entire distribution. It can work
+      merely with a LOCAL sense of RELATIVE
+      PROBABILITIES. Intuitively, we have this local sense: once we
+      ‘see’ a solution, it is often easy to see that it is better than
+      another one, even if we cannot exactly say what either
+      probability is. By continually sampling, we slowly build up a
+      picture of <strike>all</strike> <I><B>most</B></I> of the
+      possibilities. Using a number of samples much smaller than the
+      number of hypotheses makes the computations feasible."
     </P>
 
 </div>
 
 
-<!--
 
-<DIV CLASS="slide">
-  <h1>the brain at rest (Raichle, 2010)</h1> 
+<div  CLASS="slide">
+  <h1>the android metaphor</h1>
 
-  <img src="Raichle10-fig1.png" height=350 class="figure-right">
+  <img src="SanbornChater16-fig1A.png" class="figure-right" height=250>
   <P>
-  <BR>
-  <B>The brain is not primarily about responding to stimuli</B>
+    "Sampling algorithms have difficulties with isolated modes and produce
+    <a href="https://en.wikipedia.org/wiki/Autocorrelation"
+    target=new>autocorrelations</a>.
+  </P>
   <P>
-  <blockquote>
-  Whilst part of what we perceive comes through our
-  senses from the object before us, another part (and it
-  may be the larger part) always comes out of our own
-  head.
-  <DIR><DIR><DIR>
-    William James (1890)
-  </DIR></DIR></DIR>
-  </blockquote>
+    In this illustration, the android climbs the landscape of the (log)
+    posterior probability distribution. The android uses the difference in
+    height of its two feet to decide where to step, and its location is tracked
+    over time (red <font color=red>x</font>). A histogram of its locations
+    after many steps matches the mode of the probability distribution it
+    explored."
+  </P>
+  
+</div>
+
+
+<div  CLASS="slide">
+  <h1>comparing sampling methods on 2D distributions</h1>
+
+  <img src="SanbornChater16-fig1B.png" class="figure-right" height=500>
+  <P>
+    "Each row is a different example probability distribution (two
+    unimodal and two bimodal ones). The first column shows a
+    topographic map of the posterior density. The second and third
+    columns illustrate samples drawn using
+    the <a href="https://en.wikipedia.org/wiki/Metropolis%E2%80%93Hastings_algorithm"
+    target=new>Metropolis-Hastings</a> algorithm
+    and <a href="https://en.wikipedia.org/wiki/Just_another_Gibbs_sampler"
+	   target=new>JAGS</a> ("Just Another
+    <a href="https://en.wikipedia.org/wiki/Gibbs_sampling"
+       target=new>Gibbs Sampler</a>") program 
+    respectively. Within each column are trace plots that show how the
+    location of the sampler changes along each variable during each iteration
+    of the sampling process.
+  </P>
+  <P>
+    Autocorrelations are present when a sample depends on the value of
+    the previous sample in the trace plots (e.g., Metropolis-Hastings
+    in the second row). Also shown are bivariate scatterplots that can
+    be used to compare the samples obtained against the true
+    distributions in the first column. These show that not all of the
+    modes are always sampled, even when thousands of samples are drawn
+    (i.e., in the bottom row)."
+  </P>
+  
+</div>
+
+
+
+
+<div  CLASS="slide">
+  <h1>Bayesian Sampler vs. ideal Bayesian reasoning</h1>
+
+  <img src="SanbornChater16-tab1.png" class="figure-right" height=450>
+  <P>
+    "Bayesian cognitive models [using sampling instead of full-blown
+    probability estimation] that operate well in complex domains
+    actually predict probabilistic reasoning errors in simple
+    domains."
+  </P>
   <HR>
   <P>
-  <small>
-  "In the resting state, brain blood flow accounts for 11% of the
-  cardiac output and brain metabolism accounts for 20% of the energy
-  consumption of the body, overshadowing the metabolism of other organs such
-  as the heart, liver and skeletal muscle as shown on the left (above) in
-  this classic image of whole body glucose consumption. The changes in
-  regional blood flow associated with task performance are 
-  often no more than 5% of the resting  blood flow of the brain from which
-  they were derived (center) and, hence, only discernable in difference
-  images averaged across subjects as shown above on the left. These modest
-  modulations in ongoing circulatory and metabolic activity rarely affect the
-  overall rate of brain blood flow and metabolism during even the most
-  arousing perceptual and vigorous motor activity."
-  </small>
-
+    This is good news for the research program that attempts to
+    explain reasoning and
+    <a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2021.584689/full"
+    target=new><B>cognitive illusions</B></a> in terms of a Bayesian
+    model.
+  </P>
+  
 </div>
 
--->
 
 
-<DIV CLASS="slide">
-  <h1>[EXTRA: why predict? using memory to maximize energy efficiency]</h1> 
+<div  CLASS="slide">
+  <h1>why the CONJUNCTION FALLACY arises from a Bayesian sampler</h1>
 
-  <img src="Sivak-thermodynamics-of-prediction-abstract.png" height=500>
-
-</div>
-  
-  
-
-<DIV CLASS="slide">
-  <h1>why predict? resisting a tendency to disorder [after Karl Friston]</h1> 
-
-  <img src="fish-out-of-water.jpg" class="figure-right">
+  <img src="SanbornChater16-fig2A.png" class="figure-right" height=500>
   <P>
-  The defining characteristic of biological systems is that they
-  maintain their states and form in the face of a constantly changing
-  environment. [...] The physiology of biological systems can be reduced
-  almost entirely to their <a
- href="http://en.wikipedia.org/wiki/Homeostasis"
-			     target=new><B>homeostasis</B></a>.
+    "The top row illustrates a query about one piece of the puzzle.
+    The bottom row illustrates that evaluating the probability of a
+    conjunction is easier.
   </P>
   <P>
-  More precisely, the repertoire of physiological and sensory states in
-  which an organism can be is limited. Mathematically, this means that the probability
-  distribution over the space of (interoceptive and exteroceptive) sensory states must have <B>low
-  <a href="http://en.wikipedia.org/wiki/Entropy_%28information_theory%29"
-  target=new>entropy</a></B>. In other words, there is a high probability that a
-  system will be in any of a small number of states, and a low probability that it will be
-  in the remaining states.
+    <I>Top:</I> constituent question —<BR> What is the probability that
+    the piece outlined in <font color=red>red</font> is in the correct
+    position in the frame?
   </P>
   <P>
-  Note that entropy is the same as average <B>'surprise'</B> (more
-  formally, it is the negative log-probability of an outcome).
-  </P>
-  <P>
-  Example: in a roomful of air at \(300^{\circ}\)K, encountering an O\(_2\)
-  molecule traveling at \(0.1c\) would be surprising.
+    <I>Bottom:</I> CONJUNCTION question —<BR> What is the probability that
+    all of the pieces are in the correct positions in the frame?
   </P>
   <P class="incremental">
-  Example: a fish out of water would be in a surprising state.
+    <small>
+      The correct locations of all the puzzle pieces cannot, of
+      course, be more probable that the correct location of a single
+      piece. Yet when considered in isolation, the evidence that an
+      isolated piece is correct is weak (from a SAMPLING standpoint,
+      it is not clear whether, e.g., swapping pieces leads to a higher
+      or lower probability). But in the fully assembled puzzle (i.e.,
+      the ‘peak’ in probability space), local comparisons are easy –
+      switching any of the pieces would make the fit worse – so you
+      can be nearly certain that all the pieces are in the correct
+      position. So the whole puzzle will be judged more probable than
+      a single piece, exhibiting the
+      <a href="https://en.wikipedia.org/wiki/Conjunction_fallacy"
+      target=new><B>conjunction fallacy</B></a>."
+    </small>
   </P>
-
-</div>
-
-
-
-<DIV CLASS="slide">
-  <h1>resisting a tendency to disorder \(\Rightarrow\) avoiding surprise</h1>
-
-  <img src="chaotic-itinerancy.png" height=450 class="figure-right" title="chaotic itinerancy (Tsuda)">
-  <P>
-  The long-term imperative — of maintaining states within physiological
-  bounds — translates into a short-term avoidance of surprise.
-  </P>
-  <P>
-  Surprise here relates not just to the current state, which cannot be
-  changed, but also to movement from one state to another, which can
-  change. This movement can be complicated and itinerant (wandering)
-  provided that it revisits a small set of states —
-  an <a href="http://en.wikipedia.org/wiki/Attractor"
-  target=new>attractor</a><sup>*</sup> — that are compatible with
-  survival.
-  </P>
-  <P>
-    <font color=gray>[Typically, the "being alive" attractor is in turn composed of
-    attractors connected by heteroclinic channels. Think of walking
-    every workday from home to the workplace and back.]</font>
-  </P>
-  <P>
-  It is this movement that the
- <a href="http://en.wikipedia.org/wiki/Free_energy_principle"
-  target=new><B>free-energy</B> principle</a> (introduced on the next
-  slide) proposes to optimize.
-  <hr width=30% align=left>
-  <sup>*</sup>
-  <small>
-  More precisely, a <a
- href="http://www.math.northwestern.edu/~clark/publications/chaos.pdf" target=new><I>quasi-attractor</I></a> (see <I>Chaotic itinerancy
-  and its roles in cognitive neurodynamics</I>, I. Tsuda, Current Opinion in
-  Neurobiology 2015, 31:67–71).
-  </small>
-
-</div>
-
-
-
-<DIV CLASS="slide">
-  <h1>the relationship between free energy and surprise</h1>
-
-  <P>
-  Free energy (a <a href="https://en.wikipedia.org/wiki/Free_energy"
-  target=new>classical concept from physics</a>, adopted and promoted by
-  <a href="http://www.fil.ion.ucl.ac.uk/~karl/" target=new>Karl Friston</a>) is an
-  upper bound on <B>surprise</B>, which means that if agents 
-  minimize free energy, they implicitly minimize surprise.
-  </P>
-  <P>
-  Crucially, free
-  energy can be evaluated because it is a function of two things to which
-  the agent has access:
-  <ul>
-    <li>
-    its sensory states [measurements made at the interface with the world];
-    </li>
-    <li>
-    a "recognition <a
-    href="http://en.wikipedia.org/wiki/Probability_density_function"
-    target=new>[probability] density</a>" that is encoded by its internal states
-    (for 
-    example, neuronal activity and synaptic connection strengths).
-    </li>
-  </ul>
-  <P>
-  The recognition density is a probabilistic model of what caused a
-  particular sensation [compare this to slides 3 and 4 in this sequence].
   
 </div>
 
 
+<div  CLASS="slide">
+  <h1>why BASE-RATE NEGLECT arises from a Bayesian sampler</h1>
 
-<DIV CLASS="slide">
-  <h1>Implications: action and perception</h1>
-
+  <img src="SanbornChater16-fig2B.png" class="figure-right" height=400>
   <P>
-    <font color=gray>[EXTRA] In this setting, surprise is called the
-      (negative) model evidence [recall this concept from
-      <a href="wk-7-2.html#(22)"
-	 target=new>Lecture 7.2</a>].  This means that minimizing
-	 surprise is the same as maximizing the sensory evidence for
-	 an agent's existence [the validity of its model of the
-	 world], if we regard the agent as a model of its world.
-    </font>
+    "Local assessments of relative probability are easy. Comparing the
+    probability of seeing the two astronomical events in a year, or
+    the probability of the two quotations appearing on a random
+    website, are both relatively easy."
   </P>
   <P>
-  In the present context, free energy provides <strike>&nbsp; the &nbsp;</strike> an answer to 
-  a fundamental question:
-  <DIR><DIR><DIR>
-    <P>
-    <B>How do self-organizing adaptive systems avoid surprising states?</B>
-    <P>
-    They can do this by minimizing their free energy.
-  </DIR></DIR></DIR>
-  <P>
-  So what does this involve?
-  <P>
-  Agents can suppress free energy by changing the two things it depends
-  on:
-  <UL>
-    <li>
-      they can change their recognition density by changing
-      their internal states.
-    </li>
-    <li>
-      they can change sensory input by acting on the world
-    </li>
-  </UL>
-  <P>
-    These two options correspond, respectively, to perception and to
-    action.
+    "Comparing the probability of seeing one of the astronomical
+    events in a year to the probability of seeing one of the
+    quotations on a random website is more difficult. In particular,
+    when
+    comparing <a href="https://www.poetryfoundation.org/poems-and-poets/poems/detail/43290"
+    target=new>"Things fall apart; the centre cannot hold"</a> to the
+    eclipse, the quote may seem more likely as it is a common among
+    quotes, yet this
+    <a href="https://en.wikipedia.org/wiki/Base_rate_fallacy"
+    target=new><B>neglects the base rates</B></a>: most websites do
+    not have literary quotations, and there are many chances for an
+    eclipse each year."
   </P>
-
-</div>
-
-  
-
-<DIV CLASS="slide">
-  <h1>the free energy principle for action and perception</h1>
-
-  <img src="Friston-fun-on-Twitter.png" class="figure-right" height=600>
-  <P>
-  Agents can suppress free energy [to avoid nasty surprises] by
-  changing the two things it depends on:
-  <UL>
-    <li>
-      They can change their recognition density by changing
-      their internal states.
-      <P>
-	This is INFERENCE from observed data to ACTUAL world states.
-      </P>
-    </li>
-    <li>
-      They can change sensory input by acting on the world.
-      <P>
-	This is ACTIVE INFERENCE from data to DESIRED world states.
-      </P>
-    </li>
-  </UL>
-  <P>
-    These two options correspond, respectively, to perception and to
-    action.
-  </P>
-    
-
-</div>  
-
-  
-
-<DIV CLASS="slide">
-  <h1>for INFERENCE, build a generative model, which describes how (sensory) data are caused</h1> 
-
-  <img src="BastosFriston12-fig3.png" class="figure-right" height=370>
-  <P>
-  <B>Left:</B> a probabilistic graphical model, in which variables
-  (hidden or known states) are represented by the nodes of a directed
-  graph; conditional dependencies (hidden or known causes) are shown by
-  arrows. Known or visible states are data. Note that all states can have dynamics. <font 
-  color=gray>Because of this, dependencies are typically modeled as <a
-  href="https://en.wikipedia.org/wiki/Differential_equation"
-  target=new>(differential) equations</a>.</font>
-  </P>
-  <P>
-  <B>Right:</B> an intuitive view of the model. A singing bird is the cause
-  of sensations, which — through a cascade of dynamical hidden states —
-  produces modality-specific consequences (e.g., the auditory object of a
-  bird song and the visual object of a song bird). These intermediate causes
-  are themselves (hierarchically) unpacked to generate sensory signals. The
-  <I><B>generative model</B></I> maps from causes (e.g., concepts) to
-  consequences (e.g., sensations), while its <I><B>inverse</B></I> corresponds to mapping
-  from sensations to concepts. This inversion corresponds
-  to perceptual synthesis, in which the generative model is used to generate
-  <B>predictions</B>.<!-- <font color=gray>Note that this inversion implicitly resolves
-  the binding problem by explaining multisensory cues with a single
-    cause.</font>-->
-  </P>
-
-</div>
-
-
-
-<DIV CLASS="slide">
-  <h1>hierarchical inference and predictive coding</h1> 
-
-  <img src="BastosFriston12-fig4.png" class="figure-right" height=370>
-  <P>
-  <I>Left:</I> A simple hierarchical model of (some aspect of) the world, in
-  which each node has a single parent. The hidden causes \(\omega\) are shown in pink.
-  <P>
-  <I>Right:</I> An inversion or generalized predictive coding scheme
-  derived from this model. The key quantities in this scheme are
-  (conditional) expectations of the hidden states and causes (\(\mu\), open circles) and their
-  associated prediction errors (\(\xi\), pink circles). 
-  <P>
-  The basic architecture, implied by the inversion of the 
-  (hierarchical) graphical model, suggests that prediction errors (caused by
-  unpredicted fluctuations in hidden variables) are passed up the hierarchy
-  to update conditional expectations. These new conditional expectations now
-  provide predictions that are passed down the hierarchy to form prediction
-  errors. 
-
-</div>
-
-
-
-
-<DIV CLASS="slide">
-  <h1>hierarchical predictive coding in the cortex</h1> 
-
-  <img src="ParkFriston13-fig4b.png" class="figure-right" height=300>
-  <P>
-  <I>A theory of predictive coding in the hierarchical brain network may
-  explain what information is broadcast within the network and how edge
-    strengths (arrows) between nodes (ellipses) are adjusted.</I>
-  </P>
-  <P>
-    According to this theory, the brain implements a HIERARCHICAL
-    GENERATIVE MODEL that is used to predict sensory and motor
-    "data". The predictions of the generative model are adjusted at
-    each hierarchical level until the prediction errors between
-    sensory inputs and predictions are minimized. This prediction
-    error minimization process is mediated by forward driving
-    connections, delivering prediction errors (light arrows) from an
-    earlier area to a higher area, and (modulatory) backward
-    connections (dark arrows) that build context-sensitive
-    predictions.
-  </P>
-  <P>
-    <font color=gray>Prediction errors for hidden causes and hidden
-      states, at the \(i\)th level, \([\xi_v^{(i)},\xi_x^{(i)}]\), are
-      the weighted — by precisions \([\Pi_v^{(i)},\Pi_x^{(i)}]\) —
-      difference between conditional expectations about hidden causes
-      and states \([\tilde{\mu}_v^{(i)}, \tilde{\mu}_x^{(i)}]\) and
-      their predicted values.</font>
-  </P>
-
-</div>
-
-
-
-<!--
-
-<DIV CLASS="slide">
-  <h1>the predictive coding hypothesis and the functional architecture of the brain</h1> 
-
-  <img src="ParkFriston13-fig1ab.png" class="figure-right" height=400>
-  <P>
-  <BR>
-  <B>(A)</B> The multiscale hierarchical organization of brain networks:
-  from neurons and macrocolumns to macroscopic brain areas. A network is
-  composed of nodes and their links, called edges. A node, defined as an
-  interacting unit of a network, is itself a network composed of smaller
-  nodes interacting at a lower hierarchical level.
-  <P>
-  <B>(B)</B> "Edges" in a brain network, as defined by three types of
-  connectivity: structural, functional, and effective. <I>Structural
-  connectivity</I> (anatomical connections; broken lines in the
-  bottom images) can be estimated by fiber tractography from <a
- href="http://en.wikipedia.org/wiki/Diffusion_MRI#Diffusion_tensor_imaging" target=new>diffusion
-  tensor MRI (DTI)</a> data. <I>Functional connectivity</I> (undirected
-  statistical dependencies; lines without arrows) and <I>effective connectivity</I> (directed
-  causal dependencies; arrows) are estimated from
-  <a href="http://en.wikipedia.org/wiki/Blood-oxygen-level_dependent"
- target=new>BOLD</a>-fMRI or <a
- href="http://en.wikipedia.org/wiki/Electroencephalography"
- target=new>EEG</a> / <a
- href="http://en.wikipedia.org/wiki/Magnetoencephalography"
-  target=new>MEG</a> data. To infer effective connectivity, one needs to
-  fit a causal model to the data.
-  <a
-  href="http://en.wikipedia.org/wiki/Adjacency_matrix" target=new>Adjacency
-  (or connectivity) matrices</a>, which
-  subserve <a href="http://en.wikipedia.org/wiki/Graph_theory"
- target=new>graph-theoretical</a> analyses of brain systems, encode
-  structural and functional connectivity between pairs of nodes. 
-
-</div>
-
-
-
-
-<DIV CLASS="slide">
-  <h1>a "rich club" model of the hierarchical (modular) brain</h1> 
-
-  <img src="ParkFriston13-fig1c.png" class="figure-right" height=300>
-  <P>
-  <BR>
-  <B>(C)</B> The brain is highly modular, with nodes integrated locally
-  through strong short-range edges (thin gray lines). <a
- href="http://en.wikipedia.org/wiki/Rich-club_coefficient" target=new>Rich-club</a> hubs are
-  densely interconnected among themselves (mainly through long-range edges
-  in thick black lines). These hubs facilitate intermodular communication or
-  global integration that may be contextualized via weaker long-range
-  connections (dotted lines).
-  <P class="incremental">
-  Brain functions can be characterized by local
-  integration within segregated modules for specialized functions and global
-  integration of modules for perception, cognition, and action.
-  Context-dependent global integration recruits a subset of modules with
-  different configurations that nuances the collaboration between different
-  modules.
-  </P>
-
-</div>
-
-
-
-<DIV CLASS="slide">
-  <h1>convergence: structural and functional brain network organization</h1> 
-
-  <img src="ParkFriston13-fig2abc.png" class="figure-right" height=300>
-  <P>
-  <BR>
-  <B>(A)</B> Whole-brain fiber bundles reconstructed from diffusion tensor
-  MRI are colored according to their connection similarity. A structural brain
-  network can be constructed by parcellating fibers according to the cortical or
-  subcortical regions they interconnect.
-  <BR>
-  <B>(B)</B> The structural network constructed from diffusion tensor MRI
-  has rich-club hubs in the precuneus, superior frontal and superior
-  parietal cortex, the subcortical hippocampus, putamen, and thalamus. Dark
-  (thick) blue and light (thin) blue lines represent connections between
-  rich clubs and connections from rich clubs to others, respectively. The
-  sizes of the nodes reflect the number of their connections.
-  <BR>
-  <B>(C)</B> Repertoires of spatial modules have emerged from 
-  the analysis of spontaneous BOLD fluctuations in the brain at rest. These 
-  <I>intrinsic connectivity networks</I> (ICNs) comprise clusters of nodes
-  fluctuating synchronously. This figure 
-  shows two examples of <I>temporal functional modes</I> (TFMs, more detailed
-  ICNs) derived from temporal independent component analysis of fast resting-state
-  fMRI. TFMs often correspond to task-related neurocognitive modules.
-  As an example, TFMs 11 and 13 are similar to the task-activated semantic
-  network and the lateralized language network, respectively.
-
-</div>
-
-
-
-<DIV CLASS="slide">
-  <h1>hierarchical (modular) resting-state functional network</h1> 
-
-  <img src="ParkFriston13-fig2d.png" class="figure-right" height=350>
-  <P>
-  <BR>
-  <B>(D)</B> Changes in dynamic global coupling occur <I><B>between</B></I> the four ICNs
-  (intrinsic connectivity networks or modules) associated with the default mode network. However, relatively
-  stable coupling exists among the submodules (red lines within the second
-  circle) within a given ICN, and highly stable local coupling is maintained
-  among nodes <I><B>within</B></I> individual submodules (black solid lines within
-  submodules in the second circle). The stability of connectivity estimated
-  over a relatively long time period suggests that, at the level of the
-  submodule, <B>functional connectivity is closely related to the underlying
-  structural connectivity</B>, especially intracortical connectivity (which
-  diffusion MRI cannot resolve).
-  <P>
-  Note that ICNs show a <B>hierarchical modularity</B>: submodules within ICNs are
-  composed of hierarchically clustered voxels. 
-
-</div>
-
-
-
-<DIV CLASS="slide">
-  <h1>task-dependent dynamic reorganization of the networks</h1> 
-
-  <img src="ParkFriston13-fig3a.png" class="figure-right" height=350>
-  <P>
-  <BR>
-  <B>(A)</B> <I>Task-dependent reconfiguration of functional connectivity,
-  found predominantly in long-range intrahemispheric connections.</I>
-  <small>
-  All
-  structural connections (top row), especially long-range 
-  intrahemispheric connections (bottom row), are colored according to the
-  functional connectivity during rest (rsFC, left column) and task-dependent
-  deviations in functional connectivity from rest during attention (DasFC, middle
-  column) and memory (DmsFC, right column). In the maps of intrahemispheric
-  connections (bottom row), thicker lines in the resting state indicate stronger
-  rsFC; thicker lines during attention indicate larger decreases in FC, and thicker
-  lines during memory indicate larger increases in FC relative to rest, averaged
-  across participants.
-  </small>
-  <P>
-  <I>An overall <B>decrease</B> in functional connectivity was observed
-  during the <B>attentional task</B>; in contrast, an overall <B>increase</B>
-  in functional connectivity was observed in the <B>memory
-  task</B></I>. Furthermore, the functional connectivity of long-range  
-  intrahemispheric pathways decreased to a greater degree during attentional
-  demands and increased during the memory task, compared with the other
-  subgroups of connections during task performance. This suggests that global
-  integration by modulating long-range connectivity is crucial for task-dependent
-  functions.
-
-</div>
-
-
-
-<DIV CLASS="slide">
-  <h1>brain dynamics in a visual discrimination task</h1> 
-
-  <img src="ParkFriston-fig3b.png" class="figure-right" height=450>
-  <P>
-  <BR>
-  <B>(B)</B> Functional MRI activations during the preparatory phase of a
-  visual discrimination task for color and motion were used as nodes for
-  graph analysis (top left). FDR, false discovery rate. These nodes were decomposed
-  into either core nodes (red in top middle) or peripheral nodes (blue in top
-  right) according to their connection densities. Visual areas V4 (color processing)
-  and V5/hMT (motion processing) were categorized as peripheral nodes. Functional
-  networks during the preparatory period before either correct or incorrect
-  responses for color and motion stimuli are shown in the bottom left (black dots
-  in circle maps indicate nodes and colored lines for task-dependent functional
-  connectivity).
-  <P>
-  <I>During both color and motion discrimination tasks, erroneous
-  preparation trials had significantly lower core <a
- href="http://en.wikipedia.org/wiki/Network_science#Node_centrality"
-  target=new>centrality</a></I>, a global measure of the 
-  core's ability to integrate and control information flow (bottom right). This
-  finding indicates that aberrant core-periphery interactions may be responsible
-  for the incorrect responses in this study.
   
 </div>
 
--->
 
+<div  CLASS="slide">
+  <h1>sampling and task richness</h1>
 
-
-<DIV CLASS="slide">
-  <h1>understanding the cortical circuitry within the free
- energy / prediction framework</h1> 
-
-  <img src="ParkFriston13-fig4a.png" class="figure-right" height=400>
+  <img src="all-white-puzzle.jpg" class="figure-right" height=400>
   <P>
-  A simplified computational model of the canonical microcircuit includes
-  intrinsic connectivity (inhibitory and excitatory) and extrinsic forward
-  and backward connectivity. Inhibitory connections are shown in red, and
-  excitatory connections are in black.
+    "If our brains do not respect the laws of probability for simple
+    tasks, surely the Bayesian approach to the mind must fail in rich
+    domains such as vision, language and motor control with huge data
+    and hypothesis spaces.
+  </P>
+  <P>
+    Viewing brains as sampling from complex probability distributions
+    upends this argument. Rich, realistic tasks, in which there is a
+    lot of contextual information available to guide sampling, are
+    just those where the Bayesian sampler is most effective. <I>Rich
+    tasks focus the sampler on the areas of the probability landscape
+    that matter – those that arise through experience</I>. By limiting
+    the region in which the sampler must search, rich problems can
+    often be far easier for the sampler than apparently simpler, but
+    more abstract, problems."
+  </P>
+
+</div>
+
+
+<div  CLASS="slide">
+  <h1>a "good enough" approach</h1>
+
+  <img src="satisficing-1.png" class="figure-right" height=400>
+  <P>
+    "Moreover, the problem of learning the structure of the world, or
+    interpreting an image or a sentence, involves
+    finding <a href="https://en.wikipedia.org/wiki/Satisficing"
+    target=new>‘good-enough’</a> hypotheses to usefully guide our
+    actions, which can be achieved by local sampling in the
+    probability landscape. Such hypotheses are no less valuable if an
+    isolated peak, corresponding to an even better hypothesis,
+    remained undiscovered."
   </P>
   <P class="incremental">
-  Unlike the unstructured nodes and edges in most current network
-  analyses, in this type of modeling, nodes are equipped with intrinsic
-  connections and state dynamics.
+    ["Лучшее — враг хорошего"]
   </P>
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>is local sampling good enough?</h1>
+
+  <img src="wk-14-1.html" class="figure-right" height=400>
+  <P>
+    "We suggest too that, for many real-world problems, multiple but
+    distant peaks, corresponding to very different hypotheses about
+    the world, may be rare, particularly when context and background
+    knowledge are taken into account. Language is locally ambiguous,
+    but it is very unlikely that the acoustic signal of a whole
+    sentence in English happens to have an equally good interpretation
+    in Latin [...]"
+  </P>
+
+</div>
+
+
+<div  CLASS="slide">
+  <h1>is local sampling good enough?</h1>
+
+  <img src="wk-14-1.html" class="figure-right" height=400>
+  <P>
+    "We suggest too that, for many real-world problems, multiple but
+    distant peaks, corresponding to very different hypotheses about
+    the world, may be rare, particularly when context and background
+    knowledge are taken into account. Language is locally ambiguous,
+    but it is very unlikely that the acoustic signal of a whole
+    sentence in English happens to have an equally good interpretation
+    in Latin [...]"
+  </P>
+  <P>
+  Italian/Latin: I VITELLI DEI ROMANI SONO BELLI
+  </P>
+  <P>
+  Latin meaning (Italian paraphrase): và, o Vitellio, al suono di guerra del dio Romano
+  </P>
+  <P>
+  Latin meaning (English translation): go, Vitellus, to the sound of the Roman god of war
+  </P>
+  <P>
+  Italian meaning (Latin paraphrase): ROMANORUM VITULI PULCHRI SUNT
+  </P>
+  <P>
+  Italian meaning (English translation): the calves of the Romans are beautiful
+  </P>
+  <P class="incremental">
+    <I>[This also illustrates how written words fails to capture the
+  richness of natural language.]</I>
+  </P>
+  
+</div>
+
+
+<div  CLASS="slide">
+  <h1>is local sampling good enough?</h1>
+
+  <a href="http://www.ada.auckland.ac.nz/" target=new><img src="Ada.jpg" class="figure-right"></a>
+  <P>
+    "We suggest too that, for many real-world problems, multiple but
+    distant peaks, corresponding to very different hypotheses about
+    the world, may be rare, particularly when context and background
+    knowledge are taken into account. Language is locally ambiguous,
+    but it is very unlikely that the acoustic signal of a whole
+    sentence in English happens to have an equally good interpretation
+    in Latin [...]"
+  <DIR><DIR>
+    <I>
+    Ce beau jardin fleurit en mai,<BR>
+    Mais en hiver<BR>
+    Jamais, jamais, jamais, jamais, jamais<BR>
+	    N’est vert, n’est vert, n’est vert, n’est vert,
+	    <a href="http://shakespeare.mit.edu/lear/lear.5.3.html"
+	    target=new>n’est vert</a><BR> 
+    </I>
+  </DIR></DIR>
+  <P>
   <HR>
-  <P class="incremental">
-    Surprise! This model has never been implemented yet.
+  <P>
+    [See <a
+	   href="https://lans-tts.ua.ac.be/index.php/LANS-TTS/article/viewFile/141/83"
+	   target=new>here</a> for a discussion of multilingual word-play in
+    <a href="https://en.wikipedia.org/wiki/Vladimir_Nabokov" target=new>Nabokov</a>'s novel
+    <a href="http://www.ada.auckland.ac.nz/" target=new><I>Ada, or
+	Ardor</I></a>.]
   </P>
     
 </div>
 
 
+<div  CLASS="slide">
+  <h1>is local sampling good enough?</h1>
 
-<DIV CLASS="slide">
-  <h1>(a glimpse of) the real cortical microcolumn</h1> 
-
-  <img src="cortex-column-Szentagothai.gif" class="figure-right" height=550>
+  <a href="http://archive.thedali.org/mwebcgi/mweb.exe?request=record;id=123;type=101" target=new><img src="Dali-slave-market.gif"
+  class="figure-right" title="a painting by S. Dalí" height=450></a>
   <P>
-  The free energy principle — suggesting that brains are prediction
-  machines (cf. the claim of the key role of forethought or foresight in the
-  explanatory framework of <I>Computing the Mind</I>) — is a very
-  high-level/abstract approach to understanding the brain.
-  It needs to be connected to the lower (algorithmic and implementational)
-  ideas, in particular
-  <ul>
-    <li>the old-style neuroscience, exemplified by this schematic depiction
-    of the main connections within, to, and from a cortical microcolumn
-    (from J. Szentagothai, 1978),</li> 
-    and
-    <li>the new understanding of the brain in terms of multiscale network
-    dynamics.</li>
-  </ul>
-  </P>
-
-</div>
-
-
-
-
-
-<DIV CLASS="slide">
-  <h1>some evidence for predictive coding: a violated prediction leads to stronger activity</h1> 
-
-  <img src="BastosFriston12-table1.png" height=500>
-  <P>
-  <BR>
-
-</div>
-
-
-
-<DIV CLASS="slide">
-  <h1>the free-energy principle (K. Friston) and other theories</h1> 
-
-  <img src="Friston10-fig4.png" class="figure-right" height=450>
-  <P>
-  "A free-energy principle has been proposed recently that accounts for
-  action, perception and learning. Various key brain theories in the
-  biological (for example, neural Darwinism) and physical (for example,
-  information theory and optimal control theory) sciences can be considered
-  from the free-energy perspective.
-  </P>
-  <P>
-  Crucially, one key theme runs 
-  through each of these theories — <B>optimization</B>. Furthermore, if we look
-  closely at what is optimized, the same quantity keeps emerging, namely
-  <B>value</B> (expected reward, expected utility) or its complement, <B>surprise</B>
-  (prediction error, expected cost). This is the quantity that is optimized
-  under the free-energy principle, which suggests that several global brain
-  theories might be unified within a free-energy framework."
-  <P>
-  <HR>
-  <P class="incremental">
-    — What about language and other open-ended social behaviors?
-    <BR>
-    — What about prediction when "the world" is construed as including
-    the self (as it must)?
-    <BR>
-    — What about exploration (as opposed to exploitation), in which
-    learning necessitates being surprised?
+    <font color=gray>
+      "We suggest too that, for many real-world problems, multiple but
+      distant peaks, corresponding to very different hypotheses about
+      the world, may be rare, particularly when context and background
+      knowledge are taken into account. Language is locally ambiguous,
+      but it is very unlikely that the acoustic signal of a whole
+      sentence in English happens to have an equally good
+      interpretation in Latin;</font> vision, too, is locally
+      ambiguous but the probability that a portrait photograph could
+    equally be reinterpreted as a rural scene is infinitesimal."
   </P>
   
 </div>
 
+
+
+<div  CLASS="slide">
+  <h1>is local sampling good enough?</h1>
+
+  <P>
+    <font color=gray>
+      "We suggest too that, for many real-world problems, multiple but
+      distant peaks, corresponding to very different hypotheses about
+      the world, may be rare, particularly when context and background
+      knowledge are taken into account. Language is locally ambiguous,
+      but it is very unlikely that the acoustic signal of a whole
+      sentence in English happens to have an equally good
+      interpretation in Latin; vision, too, is locally ambiguous but
+      the probability that a portrait photograph could equally be
+      reinterpreted as a rural scene is infinitesimal.</font>  In
+      complex real-world problems, then, climbing a rugged probability
+      landscape to find ‘good-enough’ hypothesis is crucial; linking
+      to numerical probabilities, even approximately, is not. Thus,
+      the view of cognition
+      as <a href="https://en.wikipedia.org/wiki/Satisficing"
+      target=new>satisficing</a> need not be viewed as opposed to the
+      Bayesian approach. Rather, Bayesian sampling provides a
+    mechanism for satisficing in real-world environments."
+  </P>
+
+</div>
+
+
+
+<div  CLASS="slide">
+  <h1>summing up: the Stones weigh in</h1>
+
+  <img src="satisficing-2.jpg" class="figure-right" height=400>
+  <P>
+    <a href="https://www.youtube.com/watch?v=jv9sDn_2XkI" target=new>You can't</a> always get what you want<BR>
+      You can't always get what you want<BR>
+	You can't always get what you want<BR>
+	  But if you try sometimes well you might find<BR>
+	    You get what you need
+	  </P>
+
+</div>
 
 
 <div class="footer">
-<p>Last modified: Wed May 5 2021 at 16:20:35 EDT</p>
+<p>Last modified: Sat Feb 26 2022 at 14:32:54 EST</p>
 </div>
 </body>
 </html>
