@@ -61,7 +61,7 @@
 <div class="slide cover">
   <div class="header">
     <h1>Psych 3140/6140</h1>
-    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    <p><a href="http://shimon-edelman.github.io">Shimon Edelman</a>,
     &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
   </div>
   <div style="float:left">
@@ -208,10 +208,229 @@
 
 </div>
 
+
+
+      
+<div  CLASS="slide">
+  <h1>robustness of persistent activity architectures (Chaudhuri & Fiete, 2016)</h1>
+
+  <img src="Chaudhuri16-fig4.png" class="figure-right" height="450">
+    <ol class=a>
+      <li>
+	In discrete attractor networks, states in the neighborhoods of
+	 attractors decay to their attractors and are thus
+	 automatically corrected (memory retrieval from partial cues).
+      </li>
+      <li>
+	Top, limits on noise correction. Bottom, sensitivity to
+	structural noise.
+      </li>
+      <li>
+	Noise correction decays over time.
+      </li>
+      <li>
+	Complex trajectories in balanced networks can be surrounded by
+	a small region that pulls states back onto the
+	trajectory. However these regions seem to be vanishingly small
+	with system size.
+      </li>
+    </ol>
+    <HR>
+      <P>
+	<small>
+	  Rishidev Chaudhuri and Ila Fiete
+	  (2016). <a href="https://www.nature.com/articles/nn.4237"
+		     target=new><I>Computational principles of memory</I></a>, Nature
+	  Neuroscience 19(3):394.
+	</small>
+      </P>
+  
+</div>
+
+
+
+    
+<div  CLASS="slide">
+  <h1>[AN EXAMPLE] a topic model of film episode (Heusser et al., 2021)</h1>
+
+  <img src="Heusser21-fig1.png" class="figure-right" width="95%">
+  
+    <HR>
+      <P>
+	<small>
+	  Andrew Heusser et
+		     al. (2021). <a href="https://doi.org/10.1038/s41562-021-01051-6"
+		     target=new><I>Geometric models reveal behavioural
+		     and neural signatures of transforming experiences
+		     into memories</I></a>, Nature Human Behavior
+		     5:909.
+	</small>
+      </P>
+  
+</div>
+  
+
+  
+<div  CLASS="slide">
+  <h1>trajectories through topic space: dynamics of the episode and recalls (Heusser et al., 2021)</h1>
+
+  <img src="Heusser21-fig6ab.png" class="figure-right" width="95%">
+  
+    <HR>
+      <P>
+	<small>
+	  Andrew Heusser et
+		     al. (2021). <a href="https://doi.org/10.1038/s41562-021-01051-6"
+		     target=new><I>Geometric models reveal behavioural
+		     and neural signatures of transforming experiences
+		     into memories</I></a>, Nature Human Behavior
+		     5:909.
+	</small>
+      </P>
+  
+</div>
+  
+
+  
+<div  CLASS="slide">
+  <h1>trajectories through topic space: dynamics of the episode and recalls (Heusser et al., 2021)</h1>
+
+  <img src="Heusser21-fig6ab.png" class="figure-right" width="60%">
+    <ol type=a>
+      <li>
+	The two-dimensional topic trajectory taken by the episode
+	of <I>Sherlock</I>. Each dot indicates an event identified
+	using the
+	<a href="https://en.wikipedia.org/wiki/Hidden_Markov_model"
+	target=new>HMM</a>. Dot colours denote the order of the events
+	(early events are in red, later events are in blue), and the
+	connecting lines indicate the transitions between successive
+	events.
+      </li>
+      <li>
+	The average two-dimensional trajectory captured by
+	participants’ recall sequences, with the same format and
+	colouring.
+      </li>
+    </ol>  
+    <HR>
+      <P>
+	<small>
+	  Andrew Heusser et
+		     al. (2021). <a href="https://doi.org/10.1038/s41562-021-01051-6"
+		     target=new><I>Geometric models reveal behavioural
+		     and neural signatures of transforming experiences
+		     into memories</I></a>, Nature Human Behavior
+		     5:909.
+	</small>
+      </P>
+  
+</div>
+  
+
+  
+<div  CLASS="slide">
+  <h1>language used in most and least precisely remembered events (Heusser et al., 2021)</h1>
+
+  <img src="Heusser21-fig7.png" class="figure-right" height=500>
+    <P>
+      The set of all episode and recall events is projected onto the
+      two-dimensional space derived in the previous figure. The dots
+      outlined in black denote episode events (dot size is
+      proportional to each event’s average precision). The dots
+      without black outlines denote individual recall events from each
+      participant.
+    </P>
+    
+    <HR>
+      <P>
+	<small>
+	  Andrew Heusser et
+		     al. (2021). <a href="https://doi.org/10.1038/s41562-021-01051-6"
+		     target=new><I>Geometric models reveal behavioural
+		     and neural signatures of transforming experiences
+		     into memories</I></a>, Nature Human Behavior
+		     5:909.
+	</small>
+      </P>
+  
+</div>
+  
+
+  
+      
+<div  CLASS="slide">
+  <h1>[CONT.] trade-off between capacity and robustness (Chaudhuri & Fiete, 2016)</h1>
+
+  <img src="Chaudhuri16-fig5.png" class="figure-right" height="450">
+    <ol class=a>
+      <li>
+	If memory states, whether discrete or continuous (dark blue in
+	left, right, respectively), are well-separated, a decoder can
+	robustly recover the state from a relatively large amount of
+	noise because the neighborhoods of each memory state are large
+	(shaded light blue regions).
+      </li>
+      <li>
+	Packing more memory states into the fixed state space volume
+	of a given number of neurons necessarily means that the
+	neighborhoods of each memory state will shrink. A small amount
+	of noise drops the state into the neighborhood of a different
+	memory state. Thus, higher capacity means less noise
+	tolerance.
+      </li>
+    </ol>
+    <HR>
+      <P>
+	<small>
+	  Rishidev Chaudhuri and Ila Fiete
+	  (2016). <a href="https://www.nature.com/articles/nn.4237"
+		     target=new><I>Computational principles of memory</I></a>, Nature
+	  Neuroscience 19(3):394.
+	</small>
+      </P>
+  
+</div>
+
+
+      
+<div  CLASS="slide">
+  <h1>storing a continuous variable with discrete attractors (Chaudhuri & Fiete, 2016)</h1>
+
+  <img src="Chaudhuri16-fig6.png" class="figure-right" height="450">
+    <ol class=a>
+      <li>
+	Values of a continuous variable (such as head orientation) can
+	be naturally mapped onto a (quasi)continuous attractor of the
+	same dimension and topology, preserving metric relationships
+	between different values of the variable.
+      </li>
+      <li>
+	To encode a continuous variable in a set of well-separated
+	discrete stable states in some other coding dimension involves
+	two steps: a discretization, followed by the harder step of
+	choosing how to map the discrete values into the
+	attractors. In general, there is no metric-preserving mapping
+	and the complexity of this encoding problem is high.
+      </li>
+    </ol>
+    <HR>
+      <P>
+	<small>
+	  Rishidev Chaudhuri and Ila Fiete
+	  (2016). <a href="https://www.nature.com/articles/nn.4237"
+		     target=new><I>Computational principles of memory</I></a>, Nature
+	  Neuroscience 19(3):394.
+	</small>
+      </P>
+  
+</div>
+
+
       
 
 <div  CLASS="slide">
-  <h1>the problem: managing MASSIVE storage and retrieval</h1>
+  <h1>NEXT PROBLEM: managing MASSIVE storage and retrieval</h1>
 
   <a href="https://en.wikipedia.org/wiki/Columbarium"
      target=new><img src="columbarium.jpg"
@@ -663,7 +882,7 @@
 
 
 <div class="footer">
-<p>Last modified: Mon Feb 28 2022 at 14:59:58 EST</p>
+<p>Last modified: Tue Mar 1 2022 at 13:46:21 EST</p>
 </div>
 </body>
 </html>
