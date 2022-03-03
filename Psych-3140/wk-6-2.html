@@ -240,7 +240,9 @@
 	Noise correction decays over time.
       </li>
       <li>
-	Complex trajectories in balanced networks can be surrounded by
+	Complex trajectories in
+	<a href="https://en.wikipedia.org/wiki/Hopfield_network"
+	target=new>balanced networks</a> can be surrounded by 
 	a small region that pulls states back onto the
 	trajectory. However these regions seem to be vanishingly small
 	with system size.
@@ -266,17 +268,16 @@
 
   <img src="Heusser21-fig1.png" class="figure-right" height=600>
   
-    <HR>
-      <P>
-	<small>
-	  Andrew Heusser et
-		     al. (2021). <a href="https://doi.org/10.1038/s41562-021-01051-6"
-		     target=new><I>Geometric models reveal behavioural
-		     and neural signatures of transforming experiences
-		     into memories</I></a>, Nature Human Behavior
-		     5:909.
-	</small>
-      </P>
+    <P>
+      <small>
+	Andrew Heusser et
+	al. (2021). <a href="https://doi.org/10.1038/s41562-021-01051-6"
+		       target=new><I>Geometric models reveal behavioural
+	    and neural signatures of transforming experiences
+	    into memories</I></a>, Nature Human Behavior
+	5:909.
+      </small>
+    </P>
   
 </div>
   
@@ -289,7 +290,9 @@
   <img src="Heusser21-fig6ab.png" class="figure-right" width="60%">
     <ol type=a>
       <li>
-	The two-dimensional topic trajectory taken by the episode
+	The two-dimensional
+	<a href="https://en.wikipedia.org/wiki/Topic_model"
+	target=new>topic [space]</a> trajectory taken by the episode
 	of <I>Sherlock</I>. Each dot indicates an event identified
 	using the
 	<a href="https://en.wikipedia.org/wiki/Hidden_Markov_model"
@@ -421,7 +424,7 @@
       
 
 <div  CLASS="slide">
-  <h1>NEXT PROBLEM: managing MASSIVE storage and retrieval</h1>
+  <h1>[back to] ASSOCIATIVE MEMORY: balancing task requirements</h1>
 
   <a href="https://en.wikipedia.org/wiki/Columbarium"
      target=new><img src="columbarium.jpg"
@@ -433,12 +436,12 @@
       And what to do if more than one item is retrieved?
   </P>
   <P>
-    Answers to those questions will not be found on the implementation
+    Answers to those questions will NOT be found on the implementation
     level (attractors dynamics) — we must consider the more abstract
     levels (behavioral / computational / algorithmic).
   </P>
   <P>
-    Let's start with the task: storage/retrieval. What we need is:
+    Let's start with the TASK: storage/retrieval. What we need is:
       <ul>
 	<li>high capacity (room for many items)</li>
 	<li>convenient addressing (easy to figure out at what address a given
@@ -544,7 +547,7 @@
   <P>
     <I><B>Use</B> (bottom left):</I> To obtain the approximate near-neighbors for a query
     \(Q\), one need only hash it and then evaluate its similarity to the
-    set of examples with which it collides (not to the contents of the entire
+    set of examples with which it "collides" (not to the contents of the entire
     database).
   </P>
   <P>
@@ -654,7 +657,8 @@
       <P>
 	This is precisely what happens when the location of the data
 	point relative to several LANDMARKS is computed, as
-	illustrated here. A point projected onto the gray plane
+	illustrated here (see also the next slide for a reminder from
+	<a href="wk-5-1.html">Lecture 5.1</a>). A point projected onto the gray plane
 	activates four units TUNED to landmark locations; the relative
 	activation of each unit is depicted by the size of the
 	corresponding blue circle. The resulting list of four numbers
@@ -666,7 +670,7 @@
 
 
 <DIV CLASS="slide">
-  <h1>the Chorus [of Prototypes or Landmarks] Transform</h1>
+  <h1>recall from Lecture 5.1: the Chorus [of Prototypes or Landmarks] Transform</h1>
 
   <img src="Chorus-principle.png" height=350 class="figure-right">
     <P>
@@ -743,7 +747,7 @@
 
 
 <DIV CLASS="slide">
-  <h1>how can CT be good both at dimensionality reduction and at preserving veridicality?</h1>
+  <h1>reminder: why projection (as in LSH and in CT) can preserve veridicality</h1>
 
   <img src="projection.png" height=300 class="figure-right">
   <P>
@@ -784,7 +788,7 @@
 
 
 <DIV CLASS="slide">
-  <h1>back to locality-sensitive hashing (LSH) and the CT (Edelman & Shahbazi, 2012)</h1>
+  <h1>compare locality-sensitive hashing (LSH) and the CT (Edelman & Shahbazi, 2012)</h1>
 
   <font color=gray>
     <P>
@@ -873,7 +877,7 @@
 
 
 <div class="footer">
-<p>Last modified: Wed Mar 2 2022 at 19:32:43 EST</p>
+<p>Last modified: Thu Mar 3 2022 at 08:46:41 EST</p>
 </div>
 </body>
 </html>
