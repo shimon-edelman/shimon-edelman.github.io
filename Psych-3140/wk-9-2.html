@@ -363,6 +363,47 @@
 
 
 
+<DIV CLASS="slide">
+  <h1>causal induction — hierarchically STRUCTURED statistics</h1>
+
+  <img src="Tenenbaum-Science11-fig3ab.png" class="figure-right">
+    <P>
+      Hierarchical Bayesian Models defined over graph schemas can
+      explain how intuitive theories are acquired and used to learn
+      about specific causal relations from limited data.
+    </P>
+    <P>
+      (<B>A</B>) A medical reasoning domain described by relations
+      among 16 variables: “diseases” (top row), with causal links to
+      “symptoms” (bottom row). This network can also be visualized as
+      a matrix (top right, links shown in black). The causal learning
+      task is to reconstruct this network based on observing data on
+      the states of these 16 variables in a set of patients.
+    </P>
+    <P>
+      A two-level HBM formalizes bottom-up causal learning or learning
+      with an uninformative prior on networks. <small>The bottom level
+      is the data matrix D. The second level (structure) encodes
+      hypothesized causal networks: a grayscale matrix visualizes the
+      posterior probability that each pairwise causal link exists,
+      conditioned on observing n patients; compare this with the
+      ground truth in (A). The true causal network can be recovered
+      perfectly only from observing very many patients (n = 1000; not
+      shown). With n = 80, spurious links (gray squares) are inferred,
+      and with n = 20 almost none of the true structure is
+      detected.</small>
+    </P>    
+    <HR>
+      <P>
+	<small>
+	  <I>How to Grow a Mind: Statistics, Structure, and Abstraction</I>,
+	  J. B. Tenenbaum et al., Science 331:1279 (2011).
+	</small>
+      </P>
+    
+</div>
+
+    
 
 <DIV CLASS="slide">
   <h1>causal induction — hierarchically STRUCTURED statistics</h1>
@@ -504,7 +545,7 @@
   
 
 <div class="footer">
-<p>Last modified: Tue Mar 22 2022 at 12:01:51 EDT</p>
+<p>Last modified: Wed Mar 23 2022 at 19:32:00 EDT</p>
 </div>
 </body>
 </html>
