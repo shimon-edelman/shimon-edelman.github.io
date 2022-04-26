@@ -95,6 +95,152 @@
 
 
 <div  CLASS="slide">
+  <h1>Bayesian intractability</h1>
+
+  <P>
+    Notwithstanding the empirical success of the Bayesian framework,
+    models formulated within this framework are known to often face
+    the theoretical obstacle of computational intractability.
+    Formally, this means that computations that are postulated by many
+    Bayesian models of cognition fall into the general class of
+    so-called NP-hard problems. Informally, this means that the
+    computations postulated by such models are too resource demanding
+    to be plausibly performed by our resource-bounded minds/brains in
+    a realistic amount of time for all but small inputs.
+  <P>
+    <small>
+      <I>Bayesian intractability is not an ailment that approximation
+	can cure</I>, Johan Kwisthout, Todd Wareham, Iris van Rooij
+      (2011). Cognitive Science 35(5):779-84.
+    </small>
+  </P>
+  </P>
+
+</div>
+
+  
+
+<div  CLASS="slide">
+  <h1>Bayesian intractability</h1>
+
+  <P>
+    Notwithstanding the empirical success of the Bayesian framework,
+    models formulated within this framework are known to often face
+    the theoretical obstacle of computational intractability.
+    Formally, this means that computations that are postulated by many
+    Bayesian models of cognition fall into the general class of
+    so-called NP-hard problems. Informally, this means that the
+    computations postulated by such models are too resource demanding
+    to be plausibly performed by our resource-bounded minds/brains in
+    a realistic amount of time for all but small inputs.
+  </P>
+  <P>
+    NP-hard problems are problems with the property that they can be
+    solved only by superpolynomial time algorithms. Such algorithms
+    require an amount of time which cannot be upper bounded by any
+    polynomial function \(n^c\) (where \(n\) is a measure of the input
+    size and \(c\) is some constant). Examples are exponential-time
+    algorithms, which require a time that can, at best, be upper
+    bounded by some exponential function cn. To see that such
+    algorithms consume an excessive amount of time, even for medium
+    input size, consider that \(2^{25}\) is more than the number of
+    seconds in a year and \(2^{35}\) is more than the seconds in a
+    millennium. To the extent that the cognitive abilities that
+    Bayesian models aim to describe operate on a time scale of seconds
+    or minutes, computations requiring on the order of years or
+    centuries for their completion are inevitably explanatorily
+    unsatisfactory, no matter how well the models may fit human
+    performance data obtained in the laboratory.
+  </P>
+  <P>
+    <small>
+      <I>Bayesian intractability is not an ailment that approximation
+	can cure</I>, Johan Kwisthout, Todd Wareham, Iris van Rooij
+      (2011). Cognitive Science 35(5):779-84.
+    </small>
+  </P>
+
+</div>
+
+  
+
+<div  CLASS="slide">
+  <h1>Bayesian intractability</h1>
+
+  <P>
+    To make our points, we will use a widely adopted—see, for example, Baker et al.,
+    (2009), Chater and Manning (2006), Yuille and Kersten (2006)—subcomputation of cognitive
+    Bayesian models as an illustrative example: probabilistic abduction, a.k.a. most probable
+    explanation (MPE). In brief, this computation is defined by the following input–output
+    mapping:
+    <DIR>
+      <P>
+	<SC>Most Probable Explanation (MPE)</SC>
+      </P>
+      <P>
+	<I>Input:</I> A set of hypotheses \(H\), a set of observations
+	\(E\), and a knowledge structure \(K\) encoding the
+	probabilistic dependencies between observations, hypotheses,
+	and possibly intermediate variables (e.g., \(K\) could be a
+	Bayesian network).
+      </P>
+      <P>
+	<I>Output:</I> A truth assignment for each hypothesis in \(H\)
+	with the largest possible conditional probability over all
+	such assignments (more formally,
+	\(\textrm{argmax}_{T(H)}Pr_K\left(T\left(H\right)\mid
+	E\right)\) where \(T\) is a function \(T : H \rightarrow
+	\{true, false\}\)).
+      </P>
+    </DIR>
+  </P>
+  <P>
+    <small>
+      <I>Bayesian intractability is not an ailment that approximation
+	can cure</I>, Johan Kwisthout, Todd Wareham, Iris van Rooij
+      (2011). Cognitive Science 35(5):779-84.
+    </small>
+  </P>
+
+</div>
+
+  
+
+<div  CLASS="slide">
+  <h1>Bayesian intractability</h1>
+
+  <P>
+    The computational complexity of MPE has been extensively studied
+    in the computer science literature. Not only is it known that
+    computing MPE is NP-hard (Shimony, 1994), but it is also known
+    that "approximating" MPE — in the sense of computing a truth
+    assignment that has close to maximal probability — is NP-hard.  An
+    even more sobering result is that it has been proven NP-hard to
+    compute a truth assignment with a conditional probability of at
+    least \(q\) for any value \(0 \less q \less 1\).  Importantly,
+    such inapproximability results hold not only for MPE but also for
+    many other computations postulated in Bayesian models.
+  </P>
+  <P class="incremental">
+    A general methodology for identifying restricted domains of inputs
+    for which otherwise intractable computations are tractable is
+    available and builds on the mathematical theory of parameterized
+    complexity.
+  </P>
+  <P>
+    <small>
+      <I>Bayesian intractability is not an ailment that approximation
+	can cure</I>, Johan Kwisthout, Todd Wareham, Iris van Rooij
+      (2011). Cognitive Science 35(5):779-84.
+    </small>
+  </P>
+
+</div>
+
+
+  
+
+<div  CLASS="slide">
   <h1>Bayesian Sampler vs. ideal Bayesian reasoning</h1>
 
   <img src="flounder-checkerboard.jpg" class="figure-right">
@@ -477,7 +623,7 @@
 
 
 <div class="footer">
-<p>Last modified: Mon Apr 25 2022 at 16:21:58 EDT</p>
+<p>Last modified: Tue Apr 26 2022 at 13:40:48 EDT</p>
 </div>
 </body>
 </html>
