@@ -5,7 +5,7 @@
 <head>
 <title>Psych 3140/6140 w-13-1</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- <meta name="copyright" content="Copyright &169; 2014-2021 Shimon Edelman"/> -->
+<!-- <meta name="copyright" content="Copyright &169; 2014-2022 Shimon Edelman"/> -->
 <meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
 <link rel="stylesheet" href="../Slidy/w3c-blue3.css"
  type="text/css" media="screen, projection, print" />
@@ -61,7 +61,7 @@
 <div class="slide cover">
   <div class="header">
     <h1>Psych/Cogst/Info 3140/6140</h1>
-    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    <p><a href="http://shimon-edelman.github.io">Shimon Edelman</a>,
     &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
   </div>
   <div style="float:left">
@@ -447,7 +447,45 @@
       On the left — pattern recognition in a bucket.
     </P>
   
-</DIV>
+  </DIV>
+
+
+<DIV  CLASS="slide">
+  <h1>programming a reservoir computer (Kim and Bassett, 2022)</h1>
+
+  <img src="KimBassett22-FIG1.png" class="figure-right" width=65%>
+    <P>
+      Unfurling neural states as a weighted sum of input
+      variables.
+      <ol type=a>
+	<li>
+	  Inputs to our RNN, which do not represent
+	  specific numerical values, but rather symbolic variables.
+	</li>
+	<li>
+	  We expand the activity of the RNN neurons as a weighted sum
+	  of polynomials in the input variables and their time
+	  derivatives.
+	</li>
+	<li>
+	  We can then program an output matrix W that maps the RNN’s
+	  symbolic representation of its inputs to any analytical
+	  function of the inputs, such as a rotation. (d) When we
+	  drive the programmed RNN with a complex input such as the
+	  chaotic Thomas attractor, the output indistinguishably
+	  rotates the input (typical relative error is less than 1%).
+	</li>
+      </ol>
+    </P>
+    <P>
+      <small>
+	<I>A Neural Programming Language for the Reservoir
+	  Computer</I>, Jason Z. Kim & Dani S. Bassett (2022). 
+	arXiv:2203.05032v1 [cond-mat.dis-nn].
+      </small>
+    </P>
+    
+</div>
 
 
 
@@ -836,7 +874,7 @@
 
 
 <div class="footer">
-<p>Last modified: Tue Apr 26 2022 at 08:26:45 EDT</p>
+<p>Last modified: Tue Apr 26 2022 at 13:20:14 EDT</p>
 </div>
 </body>
 </html>
