@@ -205,7 +205,7 @@
 
 
 <DIV  CLASS="slide">
-  <h1>a neural state-space trajectory</h1>
+  <h1>a neural state-space trajectory (Buonomano and Maass, 2009)</h1>
 
   <img src="BuonomanoMaass09-fig1a.png" class="figure-right">
   <P>
@@ -231,12 +231,13 @@
 
 
 <DIV  CLASS="slide">
-  <h1>a neural trajectory in the locust olfactory system</h1>
+  <h1>a neural trajectory in the locust olfactory system (Buonomano and Maass, 2009)</h1>
 
   <img src="BuonomanoMaass09-fig1b.png" class="figure-right">
   <P>
   <B>(b)</B> An example of the active trajectory of a population of neurons
-  from the locust antennal lobe [recall
+  from the locust <a href="https://en.wikipedia.org/wiki/Antennal_lobe"
+    target=new>antennal lobe</a> [recall
   <a href="wk-11-2.html#(11)"
      target=pp>Lecture 11.2</a>].
   </P>
@@ -262,14 +263,16 @@
 
 
 <DIV  CLASS="slide">
-  <h1>a neural trajectory in the locust olfactory system: the readout</h1>
+  <h1>a neural trajectory in the locust olfactory system: the readout (Broome et al. 2006)</h1>
 
   <img src="Broome06-fig8A.png" class="figure-right" width=60%>
   <P>
     Spread of KC2 [<a href="https://en.wikipedia.org/wiki/Kenyon_cell"
     target=new>Kenyon cell</a> #2] spike times in response to geraniol
     (raster at top) overlaid (magenta) on PN ensemble responses as
-    represented by LLE [locally linear embedding]. PN
+    represented by LLE
+    [<a href="https://en.wikipedia.org/wiki/Nonlinear_dimensionality_reduction#Locally-linear_embedding"
+    target=new>locally linear embedding</a>]. PN
     [<a href="https://en.wikipedia.org/wiki/Antennal_lobe"
     target=new>antennal lobe</a> projection neuron] ensemble responses
     are shown for the pure conditions (green, cyan) as well as two
@@ -277,7 +280,7 @@
     (Aii) ger-100ms-cit, during which the response of KC2 is partly
     masked; (Aiii) cit-100ms-ger, during which the response to
     geraniol is completely masked. The firing times and strengths of
-    KC5 are well matched to the instantaneous state of the PN
+    KC2 are well matched to the instantaneous state of the PN
     trajectory.
   </P>
   <P>
@@ -292,7 +295,7 @@
 
 
 <DIV  CLASS="slide">
-  <h1>short-term synaptic plasticity</h1>
+  <h1>short-term synaptic plasticity (Buonomano and Maass, 2009)</h1>
 
   <img src="BuonomanoMaass09-fig2a.png" class="figure-right">
   <P>
@@ -322,7 +325,7 @@
 
 
 <DIV  CLASS="slide">
-  <h1>hidden and active states in a network</h1>
+  <h1>hidden and active states in a network (Buonomano and Maass, 2009)</h1>
 
   <img src="BuonomanoMaass09-fig2b.png" class="figure-right" height=450>
   <P>
@@ -358,7 +361,7 @@
 
 
 <DIV  CLASS="slide">
-  <h1>discrimination of complex spatiotemporal patterns</h1>
+  <h1>discrimination of complex spatiotemporal patterns (Buonomano and Maass, 2009)</h1>
 
   <img src="BuonomanoMaass09-fig3ab.png" class="figure-right">
   <P>
@@ -388,11 +391,11 @@
 
 
 <DIV  CLASS="slide">
-  <h1>discrimination performance: active states in a cortical microcircuit model</h1>
+  <h1>discrimination performance: active states in a cortical microcircuit model (Buonomano and Maass, 2009)</h1>
 
   <img src="BuonomanoMaass09-fig3cd.png" class="figure-right" height=500>
   <P>
-  <B>(c)</B>The raster of an 80-neuron subset of a 280-neuron 
+  <B>(c)</B> The raster of an 80-neuron subset of a 280-neuron 
   <a href="https://en.wikipedia.org/wiki/Recurrent_neural_network"
   target=new><B>recurrent network</B></a> in response to forward
   (<font color=blue>blue</font>) and reverse
@@ -426,7 +429,7 @@
 
 
 <DIV  CLASS="slide">
-  <h1>read-out</h1>
+  <h1>read-out (Buonomano and Maass, 2009)</h1>
 
   <img src="BuonomanoMaass09-fig3e.png" class="figure-right" height=550>
   <P>
@@ -449,16 +452,17 @@
 
 
 <DIV  CLASS="slide">
-  <h1>read-out from high-dimensional representations</h1>
+  <h1>read-out from high-dimensional representations (Buonomano and Maass, 2009)</h1>
 
   <img src="BuonomanoMaass09-box2.png" class="figure-right">
   <P>
-  <B>(a)</B> Read-out can be computed as a weighted sum \(w_1 x_1 + w_2 x_2 + \ldots
-  w_d x_d\) of the inputs \(x\). Geometrically, the locus of points at which
-  the weighted sum is exactly equal to a threshold is a hyperplane in the
+  <B>(a)</B> Read-out can be computed as a linear combination (that
+  is, weighted sum) \(w_1 x_1 + w_2 x_2 + \ldots w_d x_d\) of the
+  inputs \(\textbf{x}\). Geometrically, the locus of points at which the
+  weighted sum is exactly equal to a threshold is a hyperplane in the
   \(d\)-dimensional input space, illustrated here for \(d = 3\),
-  together with two trajectories. Such perfect separation, however, cannot
-  be expected in general.
+  together with two trajectories. Such perfect separation, however,
+  cannot be expected in general.
   </P>
   <P>
   <B>(b)</B> Mathematical results imply that
@@ -466,23 +470,28 @@
   target=new>linear separation</a> becomes much easier when the
   dimension of the state space exceeds the "complexity" of the
   trajectories. <B>Black:</B> the probability that 2 trajectories that
-  each linearly connect 100 randomly chosen points can be separated by
-  a hyperplane [the scale is on the left vertical
-  axis]. <B><font color=green>Green:</font></B> the average of the
-  minimal Euclidean distance between pairs of trajectories [right
-  vertical axis]. In higher dimensions, not only is it more likely
-  that any two such trajectories can be separated, but also they can
-  be separated by a hyperplane with a larger
+  each <strike>linearly</strike> sequentially connect 100 randomly
+  chosen points can be separated by a hyperplane [the scale is on the
+  left vertical axis]. <B><font color=green>Green:</font></B> the
+  average of the minimal Euclidean distance between pairs of
+  trajectories [right vertical axis]. In higher dimensions, not only
+  is it more likely that any two such trajectories can be separated,
+  but also they can be separated by a hyperplane with a larger
  <a href="https://en.wikipedia.org/wiki/Support_vector_machine"
     target=new>"safety margin"</a>.
  </P>
   <P>
   <small>Projections of external inputs into higher dimensions are
   quite common in the brain. For example, ~1 million axons from each optic
-  nerve send visual information to the lateral geniculate nucleus, where it
- is combined with information from the pulvinar (another thalamic nucleus)
-  and sent on to the primary visual cortex, in which there are ~500 million
-    neurons.</small>
+  nerve send visual information to the
+  <a href="https://en.wikipedia.org/wiki/Lateral_geniculate_nucleus"
+ target=new>lateral geniculate nucleus</a>, where it is combined with
+ information from the
+ <a href="https://en.wikipedia.org/wiki/Pulvinar_nuclei"
+ target=new>pulvinar</a> (another
+ <a href="https://en.wikipedia.org/wiki/Thalamus"
+ target=new>thalamic</a> nucleus) and sent on to the primary visual
+ cortex, in which there are ~500 million neurons.</small>
   </P>
   
 </DIV>
@@ -490,7 +499,7 @@
 
 
 <DIV  CLASS="slide">
-  <h1>population activity in the cat brain</h1>
+  <h1>population activity in the cat brain (Buonomano and Maass, 2009)</h1>
 
   <img src="BuonomanoMaass09-fig4ab.png" class="figure-right">
   <P>
@@ -523,28 +532,31 @@
 
 
 <DIV  CLASS="slide">
-  <h1>population activity in the cat brain</h1>
+  <h1>population activity in the cat brain (Buonomano and Maass, 2009)</h1>
 
   <img src="BuonomanoMaass09-fig4c.png" class="figure-right">
   <P>
-  <B>(c)</B> The spike response of 64 neurons during trial number 38
-  for the letter sequence A, B, C (left), and the read-out mechanism
-  that was used to decode information from these 64 spike trains
-  (upper right). Each spike train
-  was <a href="https://en.wikipedia.org/wiki/Low-pass_filter"
-  target=new>low-pass filtered</a> and sent to a
-  <a href="https://en.wikipedia.org/wiki/Linear_discriminant_analysis"
-  target=new>linear discriminator</a>. Traces of the resulting
-  weighted sum are shown in the lower right-hand plot both for the
-  trajectory of active states resulting from stimulus sequence A, B, C
-  (<B>black</B> trace) and for stimulus sequence D, B, C
-  (<font color=orange>orange</font> trace). For the purpose of
-  classifying these active states, a subsequent threshold was
-  applied. The weights and threshold of the linear discriminator were
-  chosen to discriminate active states resulting from letter sequence
-  A, B, C and those resulting from the letter sequence D, B,
-  C. The <font color=blue>blue</font> trace in part <B>c</B> shows the
-  behavior of neuron 10 [from the previous slide].
+    <B>(c)</B> The spike response of 64 neurons during trial number 38
+    for the letter sequence A, B, C (left;
+    the <font color=blue>blue</font> trace shows the behavior of
+    neuron 10 [from the previous slide]), and the read-out mechanism
+    that was used to decode information from these 64 spike trains
+    (upper right). Each spike train
+    was <a href="https://en.wikipedia.org/wiki/Low-pass_filter"
+    target=new>low-pass filtered</a> and sent to a
+    <a href="https://en.wikipedia.org/wiki/Linear_discriminant_analysis"
+       target=new>linear discriminator</a>.
+  </P>
+  <P>
+    <sc>Traces of the resulting weighted sum</sc> are shown in the lower
+    right-hand plot both for the trajectory of active states resulting
+    from stimulus sequence A, B, C (<B>black</B> trace) and for
+    stimulus sequence D, B, C (<font color=orange>orange</font>
+    trace). For the purpose of classifying these active states, a
+    subsequent threshold was applied. The weights and threshold of the
+    linear discriminator were chosen to discriminate active states
+    resulting from letter sequence A, B, C and those resulting from
+    the letter sequence D, B, C. 
   </P>
   
 </DIV>
@@ -552,7 +564,7 @@
 
 
 <DIV  CLASS="slide">
-  <h1>decoding population activity in the cat brain</h1>
+  <h1>decoding population activity in the cat brain (Buonomano and Maass, 2009)</h1>
 
   <img src="BuonomanoMaass09-fig4d.png" class="figure-right">
   <P>
@@ -638,9 +650,11 @@
   <ul>
     <li>time</li>
     <P>
-    <li>collective action</li>
+      <li>collective action</li>
     <P>
-    <li>specific and nonlinear interaction</li>
+      <li>specific and nonlinear interaction</li>
+    <P>
+      <li>[the elephant in the room]</li>
     </ul>
     </P>
   <P>
@@ -822,7 +836,7 @@
 
 
 <div class="footer">
-<p>Last modified: Mon Apr 25 2022 at 18:25:35 EDT</p>
+<p>Last modified: Tue Apr 26 2022 at 08:26:45 EDT</p>
 </div>
 </body>
 </html>
