@@ -5,7 +5,7 @@
 <head>
 <title>Psych 3140/6140 wk-14-2</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- <meta name="copyright" content="Copyright &169; 2014-2021 Shimon Edelman"/> -->
+<!-- <meta name="copyright" content="Copyright &169; 2014-2022 Shimon Edelman"/> -->
 <meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
 <link rel="stylesheet" href="../Slidy/w3c-blue3.css"
  type="text/css" media="screen, projection, print" />
@@ -61,12 +61,12 @@
 <div class="slide cover">
   <div class="header">
     <h1>Psych 3140/6140</h1>
-    <p><a href="http://kybele.psych.cornell.edu/~edelman">Shimon Edelman</a>,
+    <p><a href="http://shimon-edelman.github.io">Shimon Edelman</a>,
     &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
   </div>
   <div style="float:left">
     <h2>Week 14: advanced topics</h2>
-    <h3>&nbsp;Lecture 14.2: emotions; wrap-up</h3>
+    <h3>&nbsp;Lecture 14.2: emotions</h3>
   </div>
   <img src="../Lake-Michigan-horizon.jpg" title="Computing the Mind"
   class="figure-right"  height=70%>
@@ -76,7 +76,7 @@
 
 
 <div  CLASS="slide">
-  <h1>Lecture 14.2: emotions; also wrap-up</h1>
+  <h1>Lecture 14.2: emotions</h1>
 
   <img src="Minsky-emotion-machine-cover.jpg" height=500
   class="figure-right">
@@ -379,9 +379,8 @@
 
 
 <div CLASS="slide">
-  <h1>finally, back to feelings</h1>
+  <h1>but what <I>are</I> feelings?</h1>
 
-  <img src="blurry-happiness.jpg" class="figure-right" height=300>
   <P>
     Two central questions: what are
     feelings? And what is their adaptive function?
@@ -415,11 +414,178 @@
 
 </div>  
 
-  
- 
 
+
+<div CLASS="slide">
+  <h1>what valence is</h1>
+
+  <img src="Hesp21-cover.png" class="figure-right" height=450>
+  <P>
+    The positive-negative axis of emotional valence has long been
+    recognized as fundamental to adaptive behavior, but its origin and
+    underlying function have largely eluded formal theorizing and
+    computational modeling.  Using deep active inference, a
+    hierarchical inference scheme that rests on inverting a model of
+    how sensory data are generated, we develop a principled <B>Bayesian
+    model of emotional valence</B>. This formulation asserts that agents
+    infer their valence state based on the expected precision of their
+    action model — an internal estimate of overall model fitness
+    (“subjective fitness”).
+  </P>
+  <P>
+    This index of subjective fitness can be estimated within any
+    environment and exploits the domain generality of second-order
+    beliefs (beliefs about beliefs). We show how maintaining internal
+    valence representations allows the ensuing affective agent to
+    optimize confidence in action selection preemptively. Valence
+    representations can in turn be optimized by leveraging the
+    (Bayes-optimal) updating term for subjective fitness, which we
+    label affective charge (AC). AC tracks changes in fitness
+    estimates and lends a sign to otherwise unsigned divergences
+    between predictions and outcomes.
+  </P>
+
+</div>
+
+
+
+<div CLASS="slide">
+  <h1>a reminder: active inference</h1>
+
+  <img src="Hesp21-cover.png" class="figure-right" height=450>
+    <P>
+      Every living thing from bachelors to bacteria seeks glucose
+      proactively— and does so long before internal stocks run out. As
+      adaptive creatures, we seek outcomes that tend to promote our
+      long-term functional and structural integrity (i.e., the
+      well-bounded set of states that characterize our phenotypes).
+      That adaptive and anticipatory nature of biological life is the
+      focus of the formal Bayesian framework called active
+      inference. This framework revolves around the notion that all
+      living systems embody statistical models of their worlds
+      (Friston, 2010; Gallagher & Allen, 2018). In this way, beliefs
+      about the consequences of different possible actions can be
+      evaluated against preferred (typically phenotype-congruent)
+      consequences to inform action selection. In active inference,
+      every organism enacts an implicit phenotype-congruent model of
+      its embodied existence (Ramstead, Kirchhoff, Constant, &
+      Friston, 2019; Hesp et al., 2019), which has been referred to as
+      self-evidencing (Hohwy, 2016).
+    </P>
+    <P> Active inference formalizes our survival and procreation in
+      terms of a single imperative: to minimize the divergence between
+      observed outcomes and phenotypically expected (i.e., preferred)
+      outcomes under a (generative) model that is fine-tuned over
+      phylogeny and ontogeny (Badcock, 2012; Badcock, Davey,Whittle,
+      Allen, & Friston, 2017; Badcock, Friston, & Ramstead,
+      2019). This discrepancy can be quantified using an
+      information-theoretic quantity called variational free energy
+      (denoted F; see appendix A1; Friston, 2010). Tominimize free
+      energy ismathematically equivalent to maximizing (a lower bound
+      on) Bayesian model evidence, which quantifies model fit or
+      subjective fitness; this contrasts with biological fitness,
+      which is defined as actual reproductive success (Constant,
+      Ramstead, Veissière, Campbell, & Friston, 2018).
+    </P>
+
+</div>    
+
+  
+
+<div CLASS="slide">
+  <h1>generative model of perception and anticipation</h1>
+
+  <img src="Hesp21-fig1.png" class="figure-right" height=450>
+  <P>
+    The first (\(M_1\), top panel) and second steps (\(M_2\), bottom
+    panel) of a generative model of increasing complexity. \(M_1\): A
+    minimal generative model of perception can infer hidden states
+    \(s\) from an observation \(o\), based on prior beliefs
+    (\(\textbf{D})) and a likelihood mapping
+    (\(\textbf{A}\)). \(M_2\): A generative model of anticipation
+    extends perception forward into the future (and backward into the
+    past) using a transition matrix (\(\textbf{B}_{\tau}\)) for hidden
+    states.
+  </P>
+
+</div>    
+
+  
+  
+
+<div CLASS="slide">
+  <h1>generative model of action</h1>
+
+  <img src="Hesp21-fig2.png" class="figure-right" height=450>
+    <P>
+      In a generative model of action, state transitions are
+      conditioned on policies \(\pi\). Prior policy beliefs \(\pi\)
+      are informed by the baseline prior over policies (“model free,”
+      denoted \(\textbf{E}_{\pi}\)) and the expected free energy
+      (\(\textbf{G}_{\pi}\)), which evaluates each policy-specific
+      perception model (as in \(M_2\)) in terms of the expected risk
+      and ambiguity.  Risk biases the action model toward
+      phenotype-congruent preferences (\(\textbf{C}\)). Posterior
+      policy beliefs are informed by the fit between anticipated
+      (policy-specific) and preferred outcomes, while at the same time
+      minimizing their ambiguity.
+    </P>
+
+</div>    
+
+  
+  
+
+<div CLASS="slide">
+  <h1>generative model of implicit metacognition</h1>
+
+  <img src="Hesp21-fig3.png" class="figure-right" height=450>
+  <P>
+    This generative model infers confidence in its own action model in
+    terms of the expected precision (\(\gamma\)), which modulates
+    reliance on \(\textbf{G}_{\pi}\) for policy selection (as in
+    \(M_3\)), based on perceptual inferences (as in \(M_2\)). Expected
+    precision (\(\gamma\)) changes when inferred policies differ from
+    expected policies. This term increases when posterior
+    (policy-averaged) expected free energy is lower than when averaged
+    under the policy prior (\(AC = (\pi − \bar{\pi}) \cdot
+    \textbf{G}_{\pi} < 0\)), and decreases when it is higher (\(AC >
+    0\)).
+  </P>
+  <P>
+    \(AC\) — affective charge — can only be nonzero when inferred
+    policies differ from expected policies \(\pi \neq \bar{\pi}\). It
+    is positive when perceptual evidence favors an agent’s action
+    model and negative otherwise. In other words, <B>positive and
+    negative AC corresponds, respectively, to increased and decreased
+    confidence in one’s action model</B>. Accordingly, because
+    \(\textbf{G}_{\pi}\) is a function of achieving preferred
+    outcomes, \(AC\) can be construed as a reward prediction error,
+    where reward is inversely proportional to \(\textbf{G}_{\pi}\)
+    (Friston et al., 2014). For example, a predator may be confidently
+    pleased with itself after spotting a prey (positive \(AC\)) and
+    frustrated when it escapes (negative \(AC\)).
+  </P>
+
+</div>    
+
+  
+  
+
+<div CLASS="slide">
+  <h1>happiness is...</h1>
+
+  <img src="blurry-happiness.jpg" class="figure-right" height=400>
+  <P>
+    
+  </P>
+
+</div>    
+
+
+  
 <div class="footer">
-<p>Last modified: Sat Jan 1 2022 at 12:41:52 EST</p>
+<p>Last modified: Tue May 3 2022 at 11:43:28 EDT</p>
 </div>
 </body>
 </html>
