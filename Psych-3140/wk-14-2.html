@@ -440,7 +440,7 @@
     optimize confidence in action selection preemptively. Valence
     representations can in turn be optimized by leveraging the
     (Bayes-optimal) updating term for subjective fitness, which we
-    label affective charge (AC). AC tracks changes in fitness
+    label <B>affective charge</B> (AC). AC tracks changes in fitness
     estimates and lends a sign to otherwise unsigned divergences
     between predictions and outcomes.
   </P>
@@ -459,10 +459,10 @@
       adaptive creatures, we seek outcomes that tend to promote our
       long-term functional and structural integrity (i.e., the
       well-bounded set of states that characterize our phenotypes).
-      That adaptive and anticipatory nature of biological life is the
-      focus of the formal Bayesian framework called active
-      inference. This framework revolves around the notion that all
-      living systems embody statistical models of their worlds
+      <B>That adaptive and anticipatory nature of biological life is
+      the focus of the formal Bayesian framework called active
+      inference.</B> This framework revolves around the notion that
+      all living systems embody statistical models of their worlds
       (Friston, 2010; Gallagher & Allen, 2018). In this way, beliefs
       about the consequences of different possible actions can be
       evaluated against preferred (typically phenotype-congruent)
@@ -472,17 +472,18 @@
       Friston, 2019; Hesp et al., 2019), which has been referred to as
       self-evidencing (Hohwy, 2016).
     </P>
-    <P> Active inference formalizes our survival and procreation in
-      terms of a single imperative: to minimize the divergence between
-      observed outcomes and phenotypically expected (i.e., preferred)
-      outcomes under a (generative) model that is fine-tuned over
-      phylogeny and ontogeny (Badcock, 2012; Badcock, Davey,Whittle,
-      Allen, & Friston, 2017; Badcock, Friston, & Ramstead,
-      2019). This discrepancy can be quantified using an
-      information-theoretic quantity called variational free energy
-      (denoted F; see appendix A1; Friston, 2010). Tominimize free
-      energy ismathematically equivalent to maximizing (a lower bound
-      on) Bayesian model evidence, which quantifies model fit or
+    <P>
+      Active inference formalizes our survival and procreation in
+      terms of <B>a single imperative: to minimize the divergence
+      between observed outcomes and phenotypically expected (i.e.,
+      preferred) outcomes under a (generative) model that is
+      fine-tuned over phylogeny and ontogeny</B> (Badcock, 2012;
+      Badcock, Davey,Whittle, Allen, & Friston, 2017; Badcock,
+      Friston, & Ramstead, 2019). This discrepancy can be quantified
+      using an information-theoretic quantity called variational free
+      energy (denoted F; see appendix A1; Friston, 2010). Tominimize
+      free energy ismathematically equivalent to maximizing (a lower
+      bound on) Bayesian model evidence, which quantifies model fit or
       subjective fitness; this contrasts with biological fitness,
       which is defined as actual reproductive success (Constant,
       Ramstead, Veissière, Campbell, & Friston, 2018).
@@ -498,14 +499,17 @@
   <img src="Hesp21-fig1.png" class="figure-right" height=450>
   <P>
     The first (\(M_1\), top panel) and second steps (\(M_2\), bottom
-    panel) of a generative model of increasing complexity. \(M_1\): A
-    minimal generative model of perception can infer hidden states
-    \(s\) from an observation \(o\), based on prior beliefs
-    (\(\textbf{D}\)) and a likelihood mapping
-    (\(\textbf{A}\)). \(M_2\): A generative model of anticipation
-    extends perception forward into the future (and backward into the
-    past) using a transition matrix (\(\textbf{B}_{\tau}\)) for hidden
-    states.
+    panel) of a generative model of increasing complexity.
+  </P>
+  <P>
+    \(M_1\): A minimal generative model of perception can infer hidden
+    states \(s\) from an observation \(o\), based on prior beliefs
+    (\(\textbf{D}\)) and a likelihood mapping (\(\textbf{A}\)).
+  </P>
+  <P>
+    \(M_2\): A generative model of anticipation extends perception
+    forward into the future (and backward into the past) using a
+    transition matrix (\(\textbf{B}_{\tau}\)) for hidden states.
   </P>
 
 </div>    
@@ -519,16 +523,21 @@
   <img src="Hesp21-fig2.png" class="figure-right" height=450>
     <P>
       In a generative model of action, state transitions are
-      conditioned on policies \(\pi\). Prior policy beliefs \(\pi\)
-      are informed by the baseline prior over policies (“model free,”
-      denoted \(\textbf{E}_{\pi}\)) and the expected free energy
-      (\(\textbf{G}_{\pi}\)), which evaluates each policy-specific
-      perception model (as in \(M_2\)) in terms of the expected risk
-      and ambiguity.  Risk biases the action model toward
-      phenotype-congruent preferences (\(\textbf{C}\)). Posterior
-      policy beliefs are informed by the fit between anticipated
-      (policy-specific) and preferred outcomes, while at the same time
-      minimizing their ambiguity.
+      conditioned on policies \(\pi\).
+    </P>
+    <P>
+      Prior policy beliefs \(\pi\) are informed by the baseline prior
+      over policies (“model free,” denoted \(\textbf{E}_{\pi}\)) and
+      the expected free energy (\(\textbf{G}_{\pi}\)), which evaluates
+      each policy-specific perception model (as in \(M_2\)) in terms
+      of the expected risk and ambiguity.  Risk biases the action
+      model toward phenotype-congruent preferences
+      (\(\textbf{C}\)).
+    </P>
+    <P>
+      Posterior policy beliefs are informed by the fit between
+      anticipated (policy-specific) and preferred outcomes, while at
+      the same time minimizing their ambiguity.
     </P>
 
 </div>    
@@ -541,16 +550,16 @@
 
   <img src="Hesp21-fig3.png" class="figure-right" height=450>
   <P>
-    This generative model infers confidence in its own action model in
-    terms of the expected precision (\(\gamma\)), which modulates
-    reliance on \(\textbf{G}_{\pi}\) for policy selection (as in
-    \(M_3\)), based on perceptual inferences (as in \(M_2\)). Expected
-    precision (\(\gamma\)) changes when inferred policies differ from
-    expected policies. This term increases when posterior
-    (policy-averaged) expected free energy is lower than when averaged
-    under the policy prior (\(AC = (\pi − \bar{\pi}) \cdot
-    \textbf{G}_{\pi} < 0\)), and decreases when it is higher (\(AC >
-    0\)).
+    <B>This generative model infers confidence in its own action model
+    in terms of the expected precision</B> (\(\gamma\)), which
+    modulates reliance on \(\textbf{G}_{\pi}\) for policy selection
+    (as in \(M_3\)), based on perceptual inferences (as in
+    \(M_2\)). Expected precision (\(\gamma\)) changes when inferred
+    policies differ from expected policies. This term increases when
+    posterior (policy-averaged) expected free energy is lower than
+    when averaged under the policy prior (\(AC = (\pi − \bar{\pi})
+    \cdot \textbf{G}_{\pi} < 0\)), and decreases when it is higher
+    (\(AC > 0\)).
   </P>
   <P>
     \(AC\) — affective charge — can only be nonzero when inferred
@@ -585,7 +594,7 @@
 
   
 <div class="footer">
-<p>Last modified: Tue May 3 2022 at 11:51:57 EDT</p>
+<p>Last modified: Wed May 4 2022 at 09:32:40 EDT</p>
 </div>
 </body>
 </html>
