@@ -139,9 +139,9 @@
 
   <P>
     "We seek to circumvent the quandaries that are associated with the
-    definitions of emotion.  Instead, acknowledging that we eschew
+    definitions of emotion.  Instead, acknowledging that we <B>eschew
     <a href="https://plato.stanford.edu/entries/qualia/"
-       target=new>qualia</a> (the joyfulness of joy, the fearfulness
+       target=new>qualia</a></B> (the joyfulness of joy, the fearfulness
        of fear, and so on), we use decision theory to describe three
        facets of the determinants of behaviour in specific situations
        that lead to phenomena that are often classed as being
@@ -183,8 +183,8 @@
     assessment of the expected worth of those choices.
   </P>
   <P>
-    The brain seems to have adopted two major simplifications to
-    approximate optimal choice. Both simplifications are germane to
+    The brain seems to have adopted two <B>major simplifications</B>
+    to approximate optimal choice. Both simplifications are germane to
     emotions.
   </P>
   <P>
@@ -220,10 +220,10 @@
   </P>
   <P>
     Evolutionary precepts suggest that the goal for an individual’s
-    preferences should be to prioritize reproductive fitness,
+    preferences should be to prioritize <B>reproductive fitness</B>,
     including one’s own and relatives’ survival. However, practically,
-    this metric is unusably long-term. Simpler, more immediate ones
-    must be used.
+    this metric <B>is unusably long-term</B>. Simpler, more immediate
+    ones must be used.
   </P>
 
 </div>
@@ -244,10 +244,10 @@
     uncertainty.
   </P>
   <P>
-    One apparent solution to this conundrum is pre-programming: we
-    argue that there are restrictive prior distributions that specify
-    what to expect in the environment and constrained policies that
-    map observations to actions. The pre-specification and the
+    One apparent solution to this conundrum is <B>pre-programming</B>:
+    we argue that there are restrictive prior distributions that
+    specify what to expect in the environment and constrained policies
+    that map observations to actions. The pre-specification and the
     constraints obviate the costs of learning and computation.
   </P>
 
@@ -266,9 +266,9 @@
     partly not known.
   </P>
   <P>
-    To solve this problem, the agent could compute with a limited
-    action menu that is pre-programmed and/or is transferrable from
-    previous learning.
+    To solve this problem, the agent could compute with a <B>limited
+    action menu</B> that is pre-programmed and/or is transferrable
+    from previous learning.
   </P>
 
 </div>
@@ -394,6 +394,7 @@
 <div CLASS="slide">
   <h1>but what <I>are</I> feelings?</h1>
 
+  <img src="blurry-happiness.jpg" class="figure-right" height=400>
   <P>
     Two central questions: what are
     feelings? And what is their adaptive function?
@@ -409,20 +410,20 @@
     as well as immediate actions.
   </P>
   <P>
-    FIRST, there is a suggestion that moods can be understood as
-    long-run averages of short-lasting feelings and that these moods
-    could themselves have an enduring impact on future decisions,
-    acting as forms of generic environmental priors
-    [<a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0153193"
-	target=new>example</a>].
+    MOODS: these can be understood as long-run averages of
+    short-lasting feelings.  Moods could themselves have an enduring
+    impact on future decisions, acting as forms of generic
+    environmental priors [for
+    example: <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0153193"
+    target=new>happiness</a>].
   </P>
   <P>
-    SECOND, although decisions are shaped by currently experienced
-    feelings, they are also influenced by the feelings that are
-    anticipated to occur after relevant outcomes. Hence, feelings
-    experienced in the past may provide sparse and efficient signals
-    for future deliberation of decision outcomes and thus simplify
-    model-based search and/or memory lookup.
+    AFFECTIVE FORECASTING: although decisions are shaped by currently
+    experienced feelings, they are also influenced by the feelings
+    that are anticipated to occur after relevant outcomes. Hence,
+    feelings experienced in the past may provide sparse and efficient
+    signals for future deliberation of decision outcomes and thus
+    simplify model-based search and/or memory lookup.
   </P>
 
 </div>  
@@ -430,7 +431,7 @@
 
 
 <div CLASS="slide">
-  <h1>what valence is</h1>
+  <h1>what valence IS</h1>
 
   <img src="Hesp21-cover.png" class="figure-right" height=450>
   <P>
@@ -439,23 +440,23 @@
     underlying function have largely eluded formal theorizing and
     computational modeling.  Using deep active inference, a
     hierarchical inference scheme that rests on inverting a model of
-    how sensory data are generated, we develop a principled <B>Bayesian
-    model of emotional valence</B>. This formulation asserts that agents
-    infer their valence state based on the expected precision of their
+    how sensory data are generated, we develop a
+    principled <B>Bayesian model of emotional valence: agents infer
+    their valence state based on the expected precision of their
     action model — an internal estimate of overall model fitness
-    (“subjective fitness”).
+    (“subjective fitness”).</B>
   </P>
   <P>
     This index of subjective fitness can be estimated within any
-    environment and exploits the domain generality of second-order
-    beliefs (beliefs about beliefs). We show how maintaining internal
-    valence representations allows the ensuing affective agent to
-    optimize confidence in action selection preemptively. Valence
-    representations can in turn be optimized by leveraging the
-    (Bayes-optimal) updating term for subjective fitness, which we
-    label <B>affective charge</B> (AC). AC tracks changes in fitness
-    estimates and lends a sign to otherwise unsigned divergences
-    between predictions and outcomes.
+    environment and exploits the <B>domain generality</B> of
+    SECOND-ORDER BELIEFS (beliefs about beliefs). We show how
+    maintaining internal valence representations allows the ensuing
+    affective agent to optimize confidence in action selection
+    preemptively. Valence representations can in turn be optimized by
+    leveraging the (Bayes-optimal) updating term for subjective
+    fitness, which we label <B>affective charge</B> (AC). AC tracks
+    changes in fitness estimates and lends a sign to otherwise
+    unsigned divergences between predictions and outcomes.
   </P>
 
 </div>
@@ -463,7 +464,7 @@
 
 
 <div CLASS="slide">
-  <h1>a reminder: active inference</h1>
+  <h1>a reminder: active inference (Hesp et al., 2021)</h1>
 
   <img src="Hesp21-cover.png" class="figure-right" height=450>
     <P>
@@ -475,31 +476,26 @@
       <B>That adaptive and anticipatory nature of biological life is
       the focus of the formal Bayesian framework called active
       inference.</B> This framework revolves around the notion that
-      all living systems embody statistical models of their worlds
-      (Friston, 2010; Gallagher & Allen, 2018). In this way, beliefs
-      about the consequences of different possible actions can be
-      evaluated against preferred (typically phenotype-congruent)
-      consequences to inform action selection. In active inference,
-      every organism enacts an implicit phenotype-congruent model of
-      its embodied existence (Ramstead, Kirchhoff, Constant, &
-      Friston, 2019; Hesp et al., 2019), which has been referred to as
-      self-evidencing (Hohwy, 2016).
+      all living systems embody statistical models of their worlds. In
+      this way, beliefs about the consequences of different possible
+      actions can be evaluated against preferred (typically
+      phenotype-congruent) consequences to inform action selection. In
+      active inference, every organism enacts an implicit
+      phenotype-congruent model of its embodied existence, which has
+      been referred to as self-evidencing.
     </P>
     <P>
       Active inference formalizes our survival and procreation in
       terms of <B>a single imperative: to minimize the divergence
       between observed outcomes and phenotypically expected (i.e.,
       preferred) outcomes under a (generative) model that is
-      fine-tuned over phylogeny and ontogeny</B> (Badcock, 2012;
-      Badcock, Davey,Whittle, Allen, & Friston, 2017; Badcock,
-      Friston, & Ramstead, 2019). This discrepancy can be quantified
-      using an information-theoretic quantity called variational free
-      energy (denoted F; see appendix A1; Friston, 2010). Tominimize
-      free energy ismathematically equivalent to maximizing (a lower
-      bound on) Bayesian model evidence, which quantifies model fit or
+      fine-tuned over phylogeny and ontogeny</B>. This discrepancy can
+      be quantified using an information-theoretic quantity called
+      variational free energy. To minimize free energy is
+      mathematically equivalent to maximizing (a lower bound on)
+      Bayesian model evidence, which quantifies model fit or
       subjective fitness; this contrasts with biological fitness,
-      which is defined as actual reproductive success (Constant,
-      Ramstead, Veissière, Campbell, & Friston, 2018).
+      which is defined as actual reproductive success.
     </P>
 
 </div>    
@@ -535,8 +531,10 @@
 
   <img src="Hesp21-fig2.png" class="figure-right" height=450>
     <P>
-      In a generative model of action, state transitions are
-      conditioned on policies \(\pi\).
+      <B>In a generative model of action, phenotype-congruent policies
+      are inferred from perceived hidden states.</B> To that end,
+      state transitions \(\textbf{B}\) are conditioned on policies
+      \(\pi\).
     </P>
     <P>
       Prior policy beliefs \(\pi\) are informed by the baseline prior
@@ -548,9 +546,9 @@
       (\(\textbf{C}\)).
     </P>
     <P>
-      Posterior policy beliefs are informed by the fit between
+      <B>Posterior policy beliefs are informed by the fit between
       anticipated (policy-specific) and preferred outcomes, while at
-      the same time minimizing their ambiguity.
+      the same time minimizing their ambiguity.</B>
     </P>
 
 </div>    
@@ -567,8 +565,8 @@
     in terms of the expected precision</B> (\(\gamma\)), which
     modulates reliance on \(\textbf{G}_{\pi}\) for policy selection
     (as in \(M_3\)), based on perceptual inferences (as in
-    \(M_2\)). Expected precision (\(\gamma\)) changes when inferred
-    policies differ from expected policies. This term increases when
+    \(M_2\)). <B>Expected precision (\(\gamma\)) changes when inferred
+    policies differ from expected policies.</B> This term increases when
     posterior (policy-averaged) expected free energy is lower than
     when averaged under the policy prior (\(AC = (\pi − \bar{\pi})
     \cdot \textbf{G}_{\pi} < 0\)), and decreases when it is higher
@@ -595,17 +593,47 @@
   
 
 <div CLASS="slide">
-  <h1>happiness is...</h1>
+  <h1>srsly, what <I>are</I> feelings and why have them?</h1>
 
-  <img src="blurry-happiness.jpg" class="figure-right" height=400>
-  <img src="../TCR-draft-cover.png" height=400 class="figure-left">
+  <img src="../TCR-draft-cover.png" height=600 class="figure-right">
+    <ul class="incremental">
+      <li>
+	Informational aspects of phenomenal experience, a.k.a. feelings:
+	<P>
+	  VALENCE (approach/withdrawal)
+	</P>
+	<P>
+	  AROUSAL (invigoration/inhibition)
+	</P>
+	<P>
+	  CONTENT (qualia or "what-it-is-like-ness")
+      </li>
+      <li>
+	The
+	<a href="https://en.wikipedia.org/wiki/Philosophical_zombie"
+	target=new>"philosophical zombie"</a> problem: 
+	<P>
+	  Why feel things when one can simply act on the information?
+	</P>
+      </li>
+      <li>
+	Because feelings — which all have the quality of CARING —
+	confer evolutionary advantage.
+      </li>
+      <li>
+	<B>To care means to be compelled [that is, not to have a
+	choice] to expend energy in acting on one's
+	state</B>. Creatures that have a choice in this matter are
+	liable to slack off and lose.
+      </li>
+    </ul>
 
 </div>    
 
 
   
 <div class="footer">
-<p>Last modified: Wed May 4 2022 at 19:17:41 EDT</p>
+<p>Last modified: Thu May 5 2022 at 08:26:38 EDT</p>
 </div>
 </body>
 </html>
