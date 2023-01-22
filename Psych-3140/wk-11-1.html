@@ -5,7 +5,7 @@
 <head>
 <title>Psych 3140/6140 w-11-1</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- <meta name="copyright" content="Copyright &169; 2008-2022 Shimon Edelman"/> -->
+<!-- <meta name="copyright" content="Copyright &169; 2008-2023 Shimon Edelman"/> -->
 <meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
 <link rel="stylesheet" href="../Slidy/w3c-blue3.css"
  type="text/css" media="screen, projection, print" />
@@ -945,7 +945,84 @@
 </div>
 
 
- 
+  
+
+<DIV CLASS="slide">
+  <h1>replay and compositional computation: two types of composability (Kurth-Nelson et al., 2023)</h1>
+
+  <img src="Behrens23-fig1.png" width=99%>
+    <ul type=A>
+      <li>
+	A structured compound, such as the concept "I am driving home
+	from the airport," can be described as a set of entities and
+	the role each entity plays in the compound. Each entity, such
+	as "driving," is bound to a role, like "action." The compound
+	has a meaning that derives from the interaction of its parts
+	but is not contained in any of the parts.
+      </li>
+      <li>
+	In our hypothesis, a replay sequence constitutes a set of
+	entities, each tagged with the role of that entity, and is
+	able to describe complex concepts.
+      </li>
+      <li>
+	One type of composability is that roles are independent of
+	entities and are free to attach to new entities.
+      </li>
+      <li>
+	Another type of composability is that role-bound entities can
+	be combined in many different ways to form new compounds.
+      </li>
+    </ul>
+
+</div>
+    
+
+
+<DIV CLASS="slide">
+  <h1>replay and compositional computation (Kurth-Nelson et al., 2023)</h1>
+
+  <img src="Behrens23-fig6.png" width=99%>
+    <small>
+    <ul type=A>
+      <li>
+	Current goals bias replay sequences. In Wikenheiser and
+	Redish, rats ran in a circle, sometimes electing to pause at
+	one of three equally spaced feeders (upper-left, upper-right,
+	and bottom). Replay sequences (colored dots) traversed paths
+	ahead of the animal. In trials when the rat would subsequently
+	stop at a particular feeder, the prospective sequences also
+	terminated at that feeder (left panel). When the rat did not
+	plan to stop, sequences skipped the feeder (right
+	panel). X is the animal’s location.
+      </li>
+      <li>
+	Blocking replay impairs learning. Replay sequences are nested
+	within sharp wave ripples, the high frequency oscillation
+	shown in blue trace and inset of red trace. Girardeau et
+	al. performed online detection of ripples during a rest period
+	after each day’s learning session and injected current to
+	disrupt replay events at their initiation (upper left
+	panel). In the control condition (blue), current was injected
+	100 ms after the detected ripple (lower left
+	panel). Disrupting replay during rest impaired acquisition of
+	the task (right panel; red disrupted learning curve below blue
+	control and black no current injection).
+      </li>
+      <li>
+	<a href="https://www.deepmind.com/research/highlighted-research/alphago"
+	target=new>AlphaGo</a> has a neural network component (red)
+	and a discrete search component (black). The network predicts
+	which moves are good in each board position. This constrains
+	the search mechanism, reducing the combinatorial explosion of
+	the game. The results of searches are ultimately used to train
+	the neural network, creating a feedback loop.
+      </li>
+    </ul>
+    </small>
+
+</div>
+    
 
 
 <DIV CLASS="slide">
@@ -994,7 +1071,7 @@
 
 
 <div class="footer">
-<p>Last modified: Tue Apr 12 2022 at 08:48:25 EDT</p>
+<p>Last modified: Sun Jan 22 2023 at 11:05:02 EST</p>
 </div>
 </body>
 </html>
