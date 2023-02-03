@@ -380,11 +380,10 @@
 
 
 <DIV CLASS="slide">
-  <h1>conditional probability and the view of generalization as statistical inference</h1>
+  <h1>probability estimation / generalization as statistical inference & decision-making</h1>
 
   <img src="classification-and-regression.gif" class="figure-right" >
   <P>
-  <BR>
   The computational essence of categorization and regression:
   <P>
   &#151; Both classification and regression are <SC>underdetermined</SC> and
@@ -392,7 +391,7 @@
     href="http://en.wikipedia.org/wiki/Regularization_%28mathematics%29"
     target=new>regularization</a>; more about this next week).
   <P>
-  &#151; Both reduce to <SC>probability estimation</SC>.
+  &#151; Both require <SC>probability estimation</SC>.
 
 </div>
 
@@ -1015,16 +1014,17 @@
   <h1>the big picture: the probabilistic approach to cognition (Chater et al., 2006)</h1>
 
   <P>
-  <BR>
   "The brain is an information processor; and information processing
   typically involves inferring new information from information that has
   been derived from the senses, from linguistic input, or from memory. This
   process of <B>inference from old to new is</B>, outside pure mathematics,
   typically <B>uncertain</B>."
+  </P>
   <P>
   "Probability theory is, in essence, a calculus for uncertain inference,
   according to the <a href="http://en.wikipedia.org/wiki/Subjective_probability"
-  target=new>SUBJECTIVE INTERPRETATION OF PROBABILITY</a>.
+		      target=new>SUBJECTIVE INTERPRETATION OF PROBABILITY</a>.
+  </P>
   <P>
   Thus probabilistic methods have potentially broad application 
   to uncertain inferences:
@@ -1046,23 +1046,26 @@
   <h1>subjective probability (Chater et al., 2006)</h1>
   
   <P>
-  <BR>
   "Crucially, the frequency interpretation of probability is not in play
   here — in cognitive science applications, probabilities refer to 'DEGREES
   OF BELIEF'.
+  </P>
   <P>
   Thus, a person's degree of belief that a coin that has rolled
   under the table has come up heads might be around 1/2; this degree of
   belief might well increase rapidly to 1 as she moves her head, bringing
   the coin into view.  Her friend, observing the <B>same event</B>, might have
   <B>different prior assumptions</B> and obtain a <B>different stream of sensory
-  evidence</B>.
+    evidence</B>.
+  </P>
   <P>
   Thus the two people are viewing the same event, but their belief
   states and hence their subjective probabilities might differ. Moreover,
   the relevant information is defined by the specific details of the
   situation. This particular pattern of prior information and evidence will
-  <B>never be repeated</B>, and hence cannot define a limiting frequency."  
+  <B>never be repeated</B>, and hence cannot define a limiting
+  frequency."
+  </P>
   
 </div>
 
@@ -1072,7 +1075,6 @@
   <h1>working with subjective probabilities (Chater et al., 2006)</h1>
   
   <P>
-  <BR>
   "The subjective interpretation of probability generally aims to
   evaluate CONDITIONAL PROBABILITIES, \(Pr(h_j\mid d)\), that is,
   probabilities of alternative hypotheses, \(h_j\) (about the state of
@@ -1081,7 +1083,8 @@
   \(B\), the probability that both are true, \(Pr(A, B)\), is by definition
   the probability that \(A\) is true, \(Pr(A)\) , multiplied by the
   probability that \(B\) is true, given that \(A\) is true, \(Pr(B\mid
-  A)\) .
+  A)\).
+  </P>
   <P>
   Applying this identity, simple algebra [see slide 12] gives Bayes' Theorem:
   $$
@@ -1091,7 +1094,9 @@
   probability has led to the approach commonly being known as the
   Bayesian approach. But <B>the real content of the approach is the
   subjective interpretation of probability</B>; Bayes' Theorem itself is just an
-  elementary, if spectacularly productive, identity in probability theory."
+  elementary, if spectacularly productive, identity in probability
+  theory."
+  </P>
 
 </div>
 
@@ -1101,7 +1106,6 @@
   <h1>probability models are useful on many levels (Chater et al., 2006)</h1>
   
   <P>
-  <BR>
   "Sophisticated probabilistic models can be related to cognitive processes
   in a variety of ways. This variety can usefully be understood in terms of
   Marr's celebrated distinction between three levels of computational
@@ -1110,7 +1114,8 @@
   and the logic by which it can be solved; the <B>algorithmic level</B>, which
   specifies the representations and processes by which solutions to the
   problem are computed; and the <B>implementational level</B>, which specifies how
-  these representations and processes are realized in neural terms. 
+  these representations and processes are realized in neural terms.
+  </P>
   <P>
   Finally, turning to the implementational level, one may
   ask whether THE BRAIN ITSELF SHOULD BE VIEWED IN PROBABILISTIC
@@ -1119,6 +1124,7 @@
   highly distributed, autonomous, and parallel computational architectures,
   which seem to capture the qualitative features of neural
   architecture."
+  </P>
 
 </div>
 
@@ -1128,7 +1134,6 @@
   <h1>basic Bayes: how to use the estimated posterior? (Griffiths & Yuille, 2006)</h1>
   
   <P>
-  <BR>
   Assume that we have an agent who is attempting to infer the process that
   was responsible for generating some data, \(d\). Let \(h\) be a hypothesis about
   this process, and \(P(h)\) — the <I>prior</I> probability that the agent would have 
@@ -1139,6 +1144,7 @@
   $$
   P(h \mid d) = \frac{P(d \mid h) P(h)}{P(d)}
   $$
+  </P>
   <P>
     <B>How can the posterior be used to guide action?</B>
   </P>
@@ -1152,6 +1158,7 @@
   $$
   where \(H\) is the set of all hypotheses considered by the agent.
   </font>
+  </P>
 
 
 </div>
@@ -1527,7 +1534,7 @@
 
 
 <div class="footer">
-<p>Last modified: Fri Feb 3 2023 at 09:53:25 EST</p>
+<p>Last modified: Fri Feb 3 2023 at 10:23:20 EST</p>
 </div>
 </body>
 </html>
