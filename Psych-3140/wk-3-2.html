@@ -86,26 +86,27 @@
 
   <img src="Chicken.jpg" class="figure-right" >
   <P>
-  <BR>
-  Computational problems / challenges:
-  <ul>
-    <li>high dimensionality of the data</li>
-    <li>underdetermination of the solution by the data</li>
-    <li>the ever-present uncertainty in measurement (due to noise and
-      incomplete or lost information)</li>
-  </ul>
+    Computational problems / challenges:
+    <ul>
+      <li>high dimensionality of the data</li>
+      <li>underdetermination of the solution by the data</li>
+      <li>the ever-present uncertainty in measurement (due to noise and
+	incomplete or lost information)</li>
+    </ul>
+  </P>
   <P>
-  A common resolution of these issues: 
-  <ul>
-    <li><B>assume</B> the world to be well-behaved —
-      that is, characterized by <SC>statistical regularities</SC>
-      <P>
-      <font color=gray>[The technique known as <a
-      href="http://en.wikipedia.org/wiki/Regularization_(mathematics)" 
-      target=new>regularization</a> is a mathematical expression of this
-    trust]</font>
-    </li>
-  </ul>
+    A common resolution of these issues: 
+    <ul>
+      <li><B>assume</B> the world to be well-behaved —
+	that is, characterized by <SC>statistical regularities</SC>
+	<P>
+	  <font color=gray>[The technique known as <a
+						     href="http://en.wikipedia.org/wiki/Regularization_(mathematics)" 
+						     target=new>regularization</a> is a mathematical expression of this
+	    trust]</font>
+	</li>
+      </ul>
+    </P>
   
 </div>
 
@@ -773,7 +774,9 @@
     of as the <I>rendering</I> equation expressed as a probability distribution
     \(p(\textbf{r}_j \mid \textbf{e},\textbf{s}_j)\); compare this
     with the process of rendering a wireframe object, illustrated on
-    slide 13 of Lecture 3.1, on the right.
+    slide 20
+    of <a href="https://shimon-edelman.github.io/Psych-3140/wk-3-1.html#(20)"
+    target=l>Lecture 3.1</a>, on the right. 
     </P>
     </li>
   </ul>
@@ -810,7 +813,7 @@
 
 
 <div  CLASS="slide">
-  <h1>[nothing new here, just invoking the loss function</h1>
+  <h1>[nothing new here, just invoking the loss function]</h1>
 
   <P>
   To use the posterior distribution to estimate a unique value \(\tilde{\textbf{x}}\) for the
@@ -825,7 +828,7 @@
   p\left(\textbf{x}\mid \textbf{y}\right) d\textbf{x}
   $$
 <!--  <img src="Brainard97-eq3-expected-loss.png">  -->
-  <font color=gray>[Remember the advice from <a href="wk-1-1.html#(51)" target=w>week 1</a>
+  <font color=gray>[Remember the advice from <a href="wk-1-1.html#(42)" target=w>week 1</a>
 regarding the \(\int\) notation.]</font>
   <P>
   The value of \(\tilde{\textbf{x}}\) is chosen to minimize the expected loss.
@@ -856,30 +859,31 @@ regarding the \(\int\) notation.]</font>
   <h1>Bayesian approach to lightness: a summary</h1>
 
   <P>
-  <BR>
-  The Bayesian approach has three explicit components:
-  <ul>
-    <li>
-    To calculate the likelihood, we must model image formation (which is
-    what the rendering equation does).
-    </li>
-    <li>
-    To specify the prior, we must quantify our assumptions
-    about images.
-    </li>
-    <li>
-    And to minimize the expected loss, we must state the cost of estimation
-    errors.
-    </li>
-  </ul>
-  Within the Bayesian framework, each of these components may be
-  considered separately: We need not confound our assumptions
-  about the world (the prior) with how we will
-  use our estimate (the loss function).
+    The Bayesian approach has three explicit components:
+    <ul>
+      <li>
+	To calculate the likelihood, we must model image formation (which is
+	what the rendering equation does).
+      </li>
+      <li>
+	To specify the prior, we must quantify our assumptions
+	about images.
+      </li>
+      <li>
+	And to minimize the expected loss, we must state the cost of estimation
+	errors.
+      </li>
+    </ul>
+    Within the Bayesian framework, each of these components may be
+    considered separately: We need not confound our assumptions
+    about the world (the prior) with how we will
+    use our estimate (the loss function).
+  </P>
   <P>
-  <font color=gray>(For the actual algorithm and a description of its
-  performance, see the optional sections 3 and 4 of the Brainard &
-  Wandell paper.)</font> 
+    <font color=gray>(For the actual algorithm and a description of its
+      performance, see the optional sections 3 and 4 of the Brainard &
+      Wandell paper.)</font>
+  </P>
 
 </div>
 
@@ -1526,7 +1530,7 @@ regarding the \(\int\) notation.]</font>
 
 
 <div class="footer">
-<p>Last modified: Thu Feb 10 2022 at 08:51:22 EST</p>
+<p>Last modified: Mon Feb 6 2023 at 16:26:54 EST</p>
 </div>
 </body>
 </html>
