@@ -114,10 +114,15 @@
 
 
 <DIV CLASS="slide">
-  <h1>what if the world is NOT very well-behaved? uncertainty, anxiety, control</h1>
+  <h1>what if the world is NOT well-behaved? OR: it is, but you don't know how certain things work?</h1>
 
-  <img src="circle-of-control.png" height=550>
-    
+  <img src="circle-of-control.png" height=550 class="figure-right">
+    <P>
+      uncertainty, lack of control \(\rightarrow\) anxiety
+    </P>
+    <P class="incremental">
+      "THE CIRCUMSTANCES I AM DEALT"
+    </P>
 
 </div>
     
@@ -817,9 +822,11 @@
   <h1>Bayesian lightness (cont.)</h1>
 
   <P>
-  The Bayesian framework provides a prescription for how
-  to use ALL OF THE INFORMATION about the illuminant and the surface, contained
-  in the sensor responses \(\textbf{r}_j\).
+    The Bayesian framework prescribes how to "flip around" the
+    rendering equation, while using ALL OF THE INFORMATION about the
+    illuminant and the surface, contained in the posterior
+    distribution. 
+  </P>
   <P>
   Three probability distributions play key roles:
   <ul>
@@ -829,7 +836,8 @@
     prior is the probability density \(p(\textbf{x})\).
     </li>
     <li>
-    The posterior probability — what is known after observing the data.
+    The posterior probability — what is known after observing the data
+    (the sensor responses \(\textbf{r}_j\)).
     </li>
     <li>
     The likelihood \(p(\textbf{y}\mid\textbf{x})\) — the relation between
@@ -847,12 +855,19 @@
     </P>
     </li>
   </ul>
+  </P>
+  <P class="incremental">
+    <font color=gray>
+      [For details, see the corresponding section in the Brainard &
+      Wandell (1997) paper.]
+    </font>
+  </P>
 
 </div>
 
 
 
-
+<!--
 
 <div  CLASS="slide">
   <h1>[nothing new here, just a restatement of the Bayes formula]</h1>
@@ -870,7 +885,7 @@
   p(\textbf{x}\mid\textbf{y}) = \frac{p(\textbf{y}\mid\textbf{x})
   p(\textbf{x})}{p(\textbf{y})} = C\cdot p(\textbf{y}\mid\textbf{x})p(\textbf{x})
   $$
-<!--  <img src="Brainard97-eq2-Bayes.png"> -->
+  <img src="Brainard97-eq2-Bayes.png">
   where \(C = \frac{1}{p(\textbf{y})}\) is a normalizing constant that depends on the data \(\textbf{y}\) but
   not on the as yet unknown parameters \(\textbf{x}\).
 
@@ -894,7 +909,7 @@
   \int_{\textbf{x}} L\left(\tilde{\textbf{x}},\textbf{x}\right)
   p\left(\textbf{x}\mid \textbf{y}\right) d\textbf{x}
   $$
-<!--  <img src="Brainard97-eq3-expected-loss.png">  -->
+  <img src="Brainard97-eq3-expected-loss.png"> 
   <font color=gray>[Remember the advice from <a href="wk-1-1.html#(42)" target=w>week 1</a>
 regarding the \(\int\) notation.]</font>
   <P>
@@ -907,11 +922,11 @@ regarding the \(\int\) notation.]</font>
   Example: a "zero-tolerance" loss function: zero penalty for
  \(\tilde{\textbf{x}} - \textbf{x} = 0\) and infinite penalty for
  \(\tilde{\textbf{x}} - \textbf{x} \neq 0\)
-  <!--
+
   In this case the
   expected loss is simply the posterior convolved by the loss function with
   its argument negated.
-  -->
+
   </font>
   <P>
   Bayesian estimation provides a principled way to choose an optimal
@@ -920,6 +935,7 @@ regarding the \(\int\) notation.]</font>
 </div>
 
 
+-->
   
 
 <div  CLASS="slide">
@@ -1602,7 +1618,7 @@ regarding the \(\int\) notation.]</font>
 
 
 <div class="footer">
-<p>Last modified: Wed Feb 8 2023 at 14:23:23 EST</p>
+<p>Last modified: Thu Feb 9 2023 at 08:53:43 EST</p>
 </div>
 </body>
 </html>
