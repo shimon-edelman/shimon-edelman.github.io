@@ -5,7 +5,7 @@
 <head>
 <title>Psych 3140/6140 wk-4-2</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- <meta name="copyright" content="Copyright &169; 2014-2022 Shimon Edelman"/> -->
+<!-- <meta name="copyright" content="Copyright &169; 2014-2023 Shimon Edelman"/> -->
 <meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
 <link rel="stylesheet" href="../Slidy/w3c-blue3.css"
  type="text/css" media="screen, projection, print" />
@@ -81,14 +81,13 @@
   <h1>Lecture 4.2: learning, similarity, and generalization</h1>
 
   <P>
-  <BR>
   <ul>
     <li>Categories and perceptual learning from examples</li>
-    <P>
     <li>Learning and generalization</li>
-    <P>
     <li>The universal law of generalization</li>
+    <li>Function approximation as a tool for learning and generalization</li>
   </ul>
+  </P>
   
 </div>
 
@@ -415,10 +414,10 @@
 
   <img src="Shepard-law.gif" class="figure-right" height=500>
   <P>
-  <BR>
     The functional form (exponential) of this dependence of generalization on
-  distance in the ("psychological") representation space
-  is <SC>invariant</SC> across domains, tasks, and subjects. 
+    distance in the ("psychological") representation space
+    is <SC>invariant</SC> across domains, tasks, and subjects.
+  </P>
   
 </div>
 
@@ -430,21 +429,21 @@
 
   <img src="Shepard-consequential-regions.gif" class="figure-right">
   <P>
-  <BR>
-  <ol>
-    <li>
-    What constitutes the learner's knowledge about the
-    consequential region?
-    </li>
-    <li>
-    How can the learner acquire knowledge from the
-    example(s) encountered?
-    </li>
-    <li>
-    How does the learner use that knowledge to decide
-    how to generalize?
-    </li>
-  </ol>
+    <ol>
+      <li>
+	What constitutes the learner's knowledge about the
+	consequential region?
+      </li>
+      <li>
+	How can the learner acquire knowledge from the
+	example(s) encountered?
+      </li>
+      <li>
+	How does the learner use that knowledge to decide
+	how to generalize?
+      </li>
+    </ol>
+  </P>
   
 </div>
 
@@ -454,36 +453,38 @@
   <h1>1. what constitutes the learner's knowledge? (Tenenbaum and Griffiths, 2001)</h1>
 
   <P>
-  <BR>
-  The learner's knowledge about the consequential region is represented as a
-  probability distribution \(p\left(h\mid x\right)\) over a <I>hypothesis space</I>
-  \({\cal H}\) of possible consequential 
-  regions \(h \in {\cal H}\). This space is a set of EXHAUSTIVE and MUTUALLY
-  EXCLUSIVE possibilities:
-  <DIR><DIR>
-      One and only one element of \({\cal H}\) is
-      assumed to be the true consequential region, although different
-      candidate regions may overlap in the stimuli that they include.
-  </DIR></DIR>    
-  <img src="robin+worm.jpg" height=200 class="figure-right">
+    The learner's knowledge about the consequential region is represented as a
+    probability distribution \(p\left(h\mid x\right)\) over a <I>hypothesis space</I>
+    \({\cal H}\) of possible consequential 
+    regions \(h \in {\cal H}\). This space is a set of EXHAUSTIVE and MUTUALLY
+    EXCLUSIVE possibilities:
+    <DIR><DIR>
+	One and only one element of \({\cal H}\) is
+	assumed to be the true consequential region, although different
+	candidate regions may overlap in the stimuli that they include.
+    </DIR></DIR>    
+    <img src="robin+worm.jpg" height=200 class="figure-right">
+  </P>
   <P>
-  The learner's background knowledge is a source of constraints on which subsets of objects belong
-  to \({\cal H}\). Shepard (1994) suggests a general constraint:
-  that consequential regions for basic
-  <A href="https://en.wikipedia.org/wiki/Natural_kind" target=new>NATURAL KINDS</a> 
-  correspond to <a href="http://en.wikipedia.org/wiki/Topology"
-  target=new><I>connected subsets</I></a> of psychological space. 
+    The learner's background knowledge is a source of constraints on which subsets of objects belong
+    to \({\cal H}\). Shepard (1994) suggests a general constraint:
+    that consequential regions for basic
+    <A href="https://en.wikipedia.org/wiki/Natural_kind" target=new>NATURAL KINDS</a> 
+    correspond to <a href="http://en.wikipedia.org/wiki/Topology"
+		     target=new><I>connected subsets</I></a> of
+    psychological space.
+  </P>
   <P>
-  Applying the connectedness constraint to the domains of
-  (say) WORM LENGTH, where the relevant
-  stimulus space is a ONE-DIMENSIONAL CONTINUUM, the
-  hypothesis spaces would consist of INTERVALS, or ranges of
-  stimuli between some minimum and maximum consequential
-  levels.
+    Applying the connectedness constraint to the domains of (say) WORM
+    LENGTH, where the relevant stimulus space is a ONE-DIMENSIONAL
+    CONTINUUM, the hypothesis spaces would consist of INTERVALS, or
+    ranges of stimuli between some minimum and maximum consequential
+    levels.
+  </P>
   <P>
-  [Slide 13 shows several such intervals
-  that are consistent with the single example of 60 in a number
-  game.]
+    [Slide 12 shows several such intervals that are consistent with
+    the single example of 60 in a number game.]
+  </P>
 
 </div>
 
@@ -494,22 +495,23 @@
   <h1>2. how can the learner acquire the knowledge from the encountered example(s)? (Tenenbaum and Griffiths, 2001)</h1>
 
   <P>
-  After observing \(x\) as an example of the consequence \(C\), the
-  learner updates its beliefs about the consequential region
-  from the prior \(p(h)\) to the posterior \(p\left(h\mid x\right)\) through
-  the use of Bayes' rule:
-  $$
-  \begin{array}
-  &nbsp; p\left(h\mid x\right) &=& \frac{p\left(x\mid h\right)
- p\left(h\right)}{p\left(x\right)} \\
-  &=& \frac{p\left(x\mid h\right) p\left(h\right)}{\sum_{h^{\prime}\in {\cal
-  H}} p\left(x\mid h^{\prime}\right) p\left(h^{\prime}\right)}
-  \end{array}
-  $$
+    After observing \(x\) as an example of the consequence \(C\), the
+    learner updates its beliefs about the consequential region
+    from the prior \(p(h)\) to the posterior \(p\left(h\mid x\right)\) through
+    the use of Bayes' rule:
+    $$
+    \begin{array}
+    &nbsp; p\left(h\mid x\right) &=& \frac{p\left(x\mid h\right)
+    p\left(h\right)}{p\left(x\right)} \\
+    &=& \frac{p\left(x\mid h\right) p\left(h\right)}{\sum_{h^{\prime}\in {\cal
+    H}} p\left(x\mid h^{\prime}\right) p\left(h^{\prime}\right)}
+    \end{array}
+    $$
   </P>
   <P>
-  <font color=gray>Note that the summation in the denominator is valid
-  because the various hypotheses \(h^{\prime}\) are MUTUALLY EXCLUSIVE.
+    <font color=gray>Note that the summation in the denominator is
+      valid because the various hypotheses \(h^{\prime}\) are MUTUALLY
+      EXCLUSIVE.
   </font>
   </P>
 
@@ -520,19 +522,19 @@
   <h1>3. how does the learner use the knowledge? (Tenenbaum and Griffiths, 2001)</h1>
 
   <P>
-  The generalization function \(p\left(y\in C \mid x\right)\) is computed by
-  summing the probabilities \(p\left(h\mid x\right)\) of all hypothesized
-  consequential regions \(h\) such that \(h\) contains \(y\):
-  $$
-  p\left(y\in C \mid x\right) = \sum_{h:y\in h} p\left(h\mid x\right)
-  $$
-  This amounts to <B>hypothesis averaging</B>, because it can be thought of as
-  averaging the predictions that each hypothesis makes about \(y\)'s membership in \(C\),
-  weighted by the posterior probability of that hypothesis.
+    The generalization function \(p\left(y\in C \mid x\right)\) is computed by
+    summing the probabilities \(p\left(h\mid x\right)\) of all hypothesized
+    consequential regions \(h\) such that \(h\) contains \(y\):
+    $$
+    p\left(y\in C \mid x\right) = \sum_{h:y\in h} p\left(h\mid x\right)
+    $$
+    This amounts to <B>hypothesis averaging</B>, because it can be thought of as
+    averaging the predictions that each hypothesis makes about \(y\)'s membership in \(C\),
+    weighted by the posterior probability of that hypothesis.
   </P>
   <P>
-   Note how this combines both stages of Bayesian treatment:
-   posterior estimation and the application of a loss function.
+    Note how this combines both stages of Bayesian treatment:
+    posterior estimation and the application of a loss function.
   </P>
     <!--
     <font color=gray>In the case of a continuum of hypotheses, such as the space of all
@@ -542,14 +544,14 @@
 -->
     <HR>
       <P>
-  <small>Notation:
-  <BR>\(x\) is the example — a data point for which the consequence is
-  known: \(x\in C\);
-  <BR>
-  \(y\) is the test point, for which generalization is sought: "is it true
-  that \(y\in C\)?"
-  </small>
-  </P>
+	<small>Notation:
+	  <BR>\(x\) is the example — a data point for which the consequence is
+	    known: \(x\in C\);
+	    <BR>
+	      \(y\) is the test point, for which generalization is sought: "is it true
+	      that \(y\in C\)?"
+	    </small>
+	  </P>
 
 </div>
 
@@ -560,21 +562,24 @@
 
   <img src="TenenbaumGriffiths01-fig1.png" height=400 class="figure-right">
   <P>
-  An illustration of the Bayesian approach to generalization from \(x=60\) in
-  a 1D psychological space in the "number game". 
+    An illustration of the Bayesian approach to generalization from \(x=60\) in
+    a 1D psychological space in the "number game".
+  </P>
   <P>
-  For the sake of simplicity, only intervals with
-  integer-valued endpoints are shown. All hypotheses of a given size are
-  grouped together in one bracket. The <B>thickness</B> (height) of the bar
-  illustrating each hypothesis \(h\) represents \(p(h\mid x)\), the
-  learner's degree  of belief that \(h\) is the true consequential region
-  given the observation of \(x\).
+    For the sake of simplicity, only intervals with
+    integer-valued endpoints are shown. All hypotheses of a given size are
+    grouped together in one bracket. The <B>thickness</B> (height) of the bar
+    illustrating each hypothesis \(h\) represents \(p(h\mid x)\), the
+    learner's degree  of belief that \(h\) is the true consequential region
+    given the observation of \(x\).
+  </P>
   <P>
-  The curve at the top illustrates the gradient 
-  of generalization obtained by integrating over (summing) just these consequential
-  regions. <font color=gray>The profile of generalization is always <I>concave</I> regardless of
-  what values \(p(h\mid x)\) takes on, as long as all hypotheses of the same
-  size (in one bracket) take on the same probability.</font>
+    The curve at the top illustrates the gradient 
+    of generalization obtained by integrating over (summing) just these consequential
+    regions. <font color=gray>The profile of generalization is always <I>concave</I> regardless of
+      what values \(p(h\mid x)\) takes on, as long as all hypotheses of the same
+      size (in one bracket) take on the same probability.</font>
+  </P>
 
 </div>
 
@@ -586,15 +591,17 @@
 
   <img src="TenenbaumGriffiths01-fig2.png" height=400 class="figure-right">
   <P>
-  The effect of EXAMPLE VARIABILITY (SPACING) on Bayesian generalization <font color=gray>(under the
-  assumptions of <a href="Tenenbaum99-sampling.html" target=new>strong sampling</a> and an <a
-  href="http://en.wikipedia.org/wiki/Erlang_distribution"
-											     target=new>Erlang</a> prior, \(\mu = 10\))</font>.
+    The effect of EXAMPLE VARIABILITY (SPACING) on Bayesian generalization <font color=gray>(under the
+      assumptions of <a href="Tenenbaum99-sampling.html"
+			target=new>strong sampling</a> and
+      an <a href="http://en.wikipedia.org/wiki/Erlang_distribution"
+	    target=new>Erlang</a> prior, \(\mu = 10\))</font>.
   </P>
   <P>
-  The first curve is the gradient of generalization with three examples
-  bunched up at the same point. The remaining graphs show that the range of
-  generalization increases as a function of the range of examples.
+    The first curve is the gradient of generalization with three
+    examples bunched up at the same point. The remaining graphs show
+    that the range of generalization increases as a function of the
+    range of examples.
   </P>
 
 </div>
@@ -606,16 +613,17 @@
 
   <img src="TenenbaumGriffiths01-fig3.png" height=400 class="figure-right">
   <P>
-  The effect of the NUMBER OF EXAMPLES on Bayesian generalization <font
-  color=gray>(under the assumptions of <a
-  href="Tenenbaum99-sampling.html">strong sampling</a> and an <a 
-  href="http://en.wikipedia.org/wiki/Erlang_distribution"
-								target=new>Erlang</a> prior, \(\mu = 10\))</font>.
+    The effect of the NUMBER OF EXAMPLES on Bayesian generalization
+    <font color=gray>(under the assumptions of
+      <a href="Tenenbaum99-sampling.html">strong sampling</a> and an
+      <a href="http://en.wikipedia.org/wiki/Erlang_distribution"
+	 target=new>Erlang</a> prior, \(\mu = 10\))</font>.
   </P>
   <P>
-  The first curve is the gradient of generalization with a single example. The
-  remaining graphs show that the range of generalization decreases as a
-  function of the number of examples within the same range (interval).
+    The first curve is the gradient of generalization with a single
+    example. The remaining graphs show that the range of
+    generalization decreases as a function of the number of examples
+    within the same range (interval).
   </P>
 
 </div>
@@ -631,19 +639,21 @@
     Class I trials &#151; the exemplar set consists of one number from
     each concept.
   </P>
-  </P>
   <P>
     Class II trials  &#151; four numbers, consistent with a simple rule.
   </P>
   <P>
     Class III trials  &#151; four random numbers of similar magnitude.
   </P>
-  <!--
-  Two groups of hypotheses used: (1) salient mathematical properties: odd,
-  even, square, cube, and prime numbers, multiples and powers of small
-  numbers, and sets of numbers ending in the same digit; (2) all intervals
-  of consecutive numbers with endpoints between 1 and 100.
-  -->
+  <P>
+    <small><font color=gray>
+	Two groups of hypotheses used: (1) salient mathematical properties: odd,
+	even, square, cube, and prime numbers, multiples and powers of small
+	numbers, and sets of numbers ending in the same digit; (2) all intervals
+	of consecutive numbers with endpoints between 1 and 100.
+      </font>
+    </small>
+  </P>
   
 </div>
 
@@ -915,35 +925,34 @@
 <DIV CLASS="slide">
   <h1>least squares regression</h1>
 
-<!--  <img src="weights.jpg" class="figure-right" height=150> -->
   \(\require{color}\)
   <P>
-  Consider a data set of examples of input vectors
-  \(\left(\textbf{x}_1, \textbf{x}_2, \dots, \textbf{x}_N\right)\) along
-  with a corresponding vector of target values \(\textbf{t} = \left(t_1, t_2,
-  \dots, t_N\right)\).
+    Consider a data set of examples of input vectors
+    \(\left(\textbf{x}_1, \textbf{x}_2, \dots, \textbf{x}_N\right)\)
+    along with a corresponding vector of target values \(\textbf{t} =
+    \left(t_1, t_2, \dots, t_N\right)\).
   </P>
   <P>
-  <a href="http://shimon-edelman.github.io/Psych-3140/w-3-1.html#%2815%29" target=bla><img src="Churchland-10-7-cropped.jpg" class="figure-right" height=250></a>
-  For regression, we assume that the target values are a noisy version of some
-  underlying functional relationship \(y(\textbf{x})\) that we need to
-  estimate, so that each target value is
-  $$
-  t_n = y(\textbf{x}_n; {\color{red}\textbf{w}}) + \epsilon_n
-  $$
-  where \(\epsilon\) is additive noise and \({\color{red}\textbf{w}} =
- \left({\color{red} w_1}, {\color{red} w_2}, \dots, {\color{red} w_M}\right)^T\) is a vector of
-    adjustable parameters or "weights".
-    <P>
-      <HR>
-	<P>
-	  <small>In the "circuit" on the right, the weight vector
+    <img src="Churchland-10-7-cropped.jpg" class="figure-right" height=250>
+      For regression, we assume that the target values are a noisy version of some
+      underlying functional relationship \(y(\textbf{x})\) that we need to
+      estimate, so that each target value is
+      $$
+      t_n = y(\textbf{x}_n; {\color{red}\textbf{w}}) + \epsilon_n
+      $$
+      where \(\epsilon\) is additive noise and \({\color{red}\textbf{w}} =
+      \left({\color{red} w_1}, {\color{red} w_2}, \dots, {\color{red} w_M}\right)^T\) is a vector of
+      adjustable parameters or "weights".
+    </P>
+    <HR>
+      <P>
+	<small>In the "circuit" on the right, the weight vector
 	  \({\color{red}\textbf{w}}\) corresponds to \(\left(r_1, r_2,
-	    r_3, r_4\right)^{T}\);<BR> each of the input vectors
-	  \(\textbf{x}_i\) (not marked in the figure) has the form \(\left(x_{i1}, x_{i2},
+	  r_3, r_4\right)^{T}\);<BR> each of the input vectors
+	    \(\textbf{x}_i\) (not marked in the figure) has the form \(\left(x_{i1}, x_{i2},
 	    x_{i3}, x_{i4}\right)^{T}\). </small>
 	</P>
-
+	
 </div>
 
 
@@ -953,29 +962,29 @@
 
   <img src="rbf.png" class="figure-right">
   <P>
-  One <a href="http://www.it.uu.se/research/project/rbf"
-  target=new>interesting</a> class of candidate functions for \(y(\textbf{x}; 
-  {\color{red}\textbf{w}})\)  is
-  $$
-  y(\textbf{x}; {\color{red}\textbf{w}}) = 
-  {\color{red}\textbf{w}}^{T} \phi(\textbf{x}) = \sum^{M}_{i=1} w_i \phi_i(\textbf{x})
-  $$
-  which represents a linearly weighted sum of \(M\) nonlinear fixed <a
- href="http://en.wikipedia.org/wiki/Basis_function" target=new>basis
-  functions</a>, denoted by \(\phi(\textbf{x}) = (\phi_1(\textbf{x}),
-  \phi_2(\textbf{x}), \ldots, \phi_M(\textbf{x}))^{T}\).
+    One <a href="http://www.it.uu.se/research/project/rbf"
+	   target=new>interesting</a> class of candidate functions for \(y(\textbf{x}; 
+    {\color{red}\textbf{w}})\)  is
+    $$
+    y(\textbf{x}; {\color{red}\textbf{w}}) = 
+    {\color{red}\textbf{w}}^{T} \phi(\textbf{x}) = \sum^{M}_{i=1} w_i \phi_i(\textbf{x})
+    $$
+    which represents a linearly weighted sum of \(M\) nonlinear fixed
+    <a href="http://en.wikipedia.org/wiki/Basis_function" target=new>basis
+      functions</a>, denoted by \(\phi(\textbf{x}) = (\phi_1(\textbf{x}),
+    \phi_2(\textbf{x}), \ldots, \phi_M(\textbf{x}))^{T}\).
   </P>
   <P>
-  Models of this type are known as linear models, because the function
-  \(y(\textbf{x}; {\color{red}\textbf{w}})\) is a linear function (=
-  weighted sum) of the parameters 
-  \({\color{red}\textbf{w}} = \left({\color{red} w_1}, {\color{red} w_2},
-  \dots, {\color{red} w_M}\right)^T\).
+    Models of this type are known as linear models, because the function
+    \(y(\textbf{x}; {\color{red}\textbf{w}})\) is a linear function (=
+    weighted sum) of the parameters 
+    \({\color{red}\textbf{w}} = \left({\color{red} w_1}, {\color{red} w_2},
+    \dots, {\color{red} w_M}\right)^T\).
   </P>
   <P>
-  Interestingly, however, when considered as a function of \(\textbf{x}\),
-  \(y=y(\textbf{x})\) is generally nonlinear, and indeed 
-  can be very flexible if \(M\) is relatively large.
+    Interestingly, however, when considered as a function of \(\textbf{x}\),
+    \(y=y(\textbf{x})\) is generally nonlinear, and indeed 
+    can be very flexible if \(M\) is relatively large.
   </P>
 
 </div>
@@ -986,25 +995,25 @@
   <h1>least squares regression (cont.)</h1>
 
   <P>
-  Classical (non-Bayesian) techniques use some form of "estimator" to
-  determine a specific value for the parameter vector \({\color{red}\textbf{w}}\).
-  For instance, one can seek \({\color{red}\textbf{w}}\) that minimizes the
-  sum-of-squares error: 
-  $$
-  E({\color{red}\textbf{w}}) = \frac{1}{2} \sum^{N}_{n=1} \left\vert y\left(\textbf{x}_n;
-  {\color{red}\textbf{w}}\right) - t_n \right\vert^2
-  $$
-  The estimate \({\color{red}\tilde{\textbf{w}}}\) obtained by
-  minimizing this error with respect to \({\color{red}\textbf{w}}\)
-  can be used to make predictions for new values of \(\textbf{x}\) by
-  computing \(y(\textbf{x}; {\color{red}\tilde{\textbf{w}}})\).
+    Classical (non-Bayesian) techniques use some form of "estimator" to
+    determine a specific value for the parameter vector \({\color{red}\textbf{w}}\).
+    For instance, one can seek \({\color{red}\textbf{w}}\) that minimizes the
+    sum-of-squares error: 
+    $$
+    E({\color{red}\textbf{w}}) = \frac{1}{2} \sum^{N}_{n=1} \left\vert y\left(\textbf{x}_n;
+    {\color{red}\textbf{w}}\right) - t_n \right\vert^2
+    $$
+    The estimate \({\color{red}\tilde{\textbf{w}}}\) obtained by
+    minimizing this error with respect to \({\color{red}\textbf{w}}\)
+    can be used to make predictions for new values of \(\textbf{x}\) by
+    computing \(y(\textbf{x}; {\color{red}\tilde{\textbf{w}}})\).
   </P>
   <P>
-  <font color=gray>
-  In the case of classification problems, the function \(y(\textbf{x};
-  {\color{red}\textbf{w}})\) is transformed using an appropriate nonlinearity, such as a
-  logistic sigmoid for 2-class problems.
-  </font>
+    <font color=gray>
+      In the case of classification problems, the function \(y(\textbf{x};
+      {\color{red}\textbf{w}})\) is transformed using an appropriate nonlinearity, such as a
+      logistic sigmoid for 2-class problems.
+    </font>
   </P>
 
   <!--
@@ -1023,31 +1032,35 @@
 
   <img src="overfitting-1.png" height=200 class="figure-right">
   <P>
-  A well-known problem with error function minimization is that complex and flexible
-  models can <a href="http://en.wikipedia.org/wiki/Overfitting" target=new>"OVERFIT"</a> the training data, leading to poor
-  generalization.
+    A well-known problem with error function minimization is that
+    complex and flexible models
+    can <a href="http://en.wikipedia.org/wiki/Overfitting"
+    target=new>"OVERFIT"</a> the training data, leading to poor
+    generalization.
   </P>
   <P>
-  Indeed, when the number of parameters equals the number of
-  data points, the least squares solution can achieve a perfect fit to the
-  training data while having very poor generalization to new data points.
+    Indeed, when the number of parameters equals the number of data
+    points, the least squares solution can achieve a perfect fit to
+    the training data while having very poor generalization to new
+    data points.
   <P class="incremental">
-  What could be a behavioral consequence of overfitting?
+    What could be a behavioral consequence of overfitting?
   </P>
   <P class="incremental">
-  <font color=gray>Overfiting can be avoided by limiting the complexity of the model
-  (intuitively, its number of parameters, or degrees of freedom; for a
-  polynomial model, this corresponds to the degree of the polynomial). However,
-  this too can lead to poor generalization if the model is insufficiently
-  flexible to capture the underlying behavior of the data set.</font>
+    <font color=gray>Overfiting can be avoided by limiting the
+      complexity of the model (intuitively, its number of parameters,
+      or degrees of freedom; for a polynomial model, this corresponds
+      to the degree of the polynomial). However, this too can lead to
+      poor generalization if the model is insufficiently flexible to
+      capture the underlying behavior of the data set.</font>
   </P>
   <P class="incremental">
-  <font color=gray>As the Bishop & Tipping paper explains,
-  overfitting is a pathological property of <a
-  href="http://en.wikipedia.org/wiki/Point_estimation" target=new>point
-  estimation</a>; by adopting a Bayesian viewpoint we can apply
-  complex models to small data sets without encountering problems of
-  overfitting. </font>
+    <font color=gray>As the Bishop & Tipping paper explains,
+      overfitting is a pathological property of
+      <a href="http://en.wikipedia.org/wiki/Point_estimation" target=new>point
+	estimation</a>; by adopting a Bayesian viewpoint we can apply
+      complex models to small data sets without encountering problems of
+      overfitting. </font>
   </P>
 
 </div>
@@ -1327,7 +1340,7 @@
 
   
 <div class="footer">
-<p>Last modified: Tue Feb 22 2022 at 08:30:48 EST</p>
+<p>Last modified: Tue Feb 14 2023 at 13:15:00 EST</p>
 </div>
 </body>
 </html>
