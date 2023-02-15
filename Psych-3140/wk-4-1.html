@@ -1109,44 +1109,8 @@
 
 <!--- MDS --->
 
-
-
 <DIV CLASS="slide">
-  <h1>mapping representation spaces from behavioral data and measurements of neural activity</h1>
-
-  <img src="Haxby14-fig1.png" class="figure-right" width=60%>
-  How can we visualize the face space as it is represented by the subject, from
-  <ul>
-    <li>
-    behavioral data, such as subjective similarity judgments?
-    </li>
-    <li>
-    neural activity data recorded from populations of neurons? 
-    </li>
-  </ul>  
-  <P>
-    PROBLEM: Unlike brain scans, behavioral data concerning internal
-    representations do not include the coordinates for
-    each point — only <B>relational</B> information.
-  </P>
-  <P>
-    PROBLEM: Brain data typically reside in a <B>high-dimensional</B>
-    space, which cannot be easily visualized (In this example, there
-    are 10 dimensions).
-  </P>
-  <P class="incremental">
-  A particularly useful and theoretically interesting computational 
-      technique that can do that is multidimensional scaling (<B>MDS</B>).
-  For both behavioral and neural cases, MDS can embed the data (1)
-      faithfully and (2) in a space of much lower dimensionality. 
-  </P>
-  
-</div>
-
-
-
-<DIV CLASS="slide">
-  <h1>multidimensional scaling (MDS)</h1>
+  <h1>introducing multidimensional scaling (MDS)</h1>
 
   <img src="mds1.gif" class="figure-right" height=200>
   <P>
@@ -1180,6 +1144,65 @@
 -->
 
 </div>
+
+
+
+<DIV CLASS="slide">
+  <h1>mapping representation spaces from behavioral data</h1>
+
+  <P>
+    PROBLEM: how to visualize a subject's internal representation space
+    (for instance, the face space) from behavioral data.
+  </P>
+  <P>
+    SOLUTION:
+    <ol>
+      <li>
+	Have the subject perform pairwise similarity judgments for a
+	set of stimuli.
+      </li>
+      <li>
+	Use the similarity values to fill a distance table, in which
+	cell \((i,j)\) holds the inverse of the similarity between
+	stimulus \(i\) and stimulus \(j\).
+      </li>
+      <li>
+	Use MDS to create a map that approximates the subject's
+	representation space, as reflected in this table.
+      </li>
+    </ol>
+  </P>
+  
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>mapping representation spaces from measurements of brain activity</h1>
+
+  <img src="Haxby14-fig1.png" class="figure-right" width=60%>
+  <P>
+    PROBLEM: how to visualize a subject's internal representation
+     space from the typically high-dimensional neural activity data,
+     obtained by imaging (or other means).
+  </P>
+  <P>
+    SOLUTION:
+    <ol>
+      <li>
+	Use the data to fill a distance table, in which cell \((i,j)\)
+	holds the distance <B>in neural activity space</B> between
+	stimulus \(i\) and stimulus \(j\).
+      </li>
+      <li>
+	Use MDS to create a map that approximates the subject's
+	representation space, as reflected in this table.
+      </li>
+    </ol>
+  </P>
+  
+</div>
+
 
 
 <!--
@@ -1361,12 +1384,12 @@
   <P>
   <table cellpadding=20 rules=rows>
     <TR>
-      <td></td>
-      <td align=center>neuroscience</td>
-      <td align=center>cognition</td>
+      <th>computational challenge</th>
+      <th align=center>neuroscience</th>
+      <th align=center>cognition</th>
     </tr>
     <TR>
-      <td>obtaining relational ("2nd-order") insight into a
+      <td>obtaining RELATIONAL insight into a "black box"
 	system</td>
       <td>
 	The <B>scientist</B> needs to know how brain representations
@@ -1425,7 +1448,7 @@
 
 
 <div class="footer">
-<p>Last modified: Tue Feb 14 2023 at 08:17:52 EST</p>
+<p>Last modified: Wed Feb 15 2023 at 12:53:39 EST</p>
 </div>
 </body>
 </html>
