@@ -5,7 +5,7 @@
 <head>
 <title>Psych 3140/6140 wk-5-1</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- <meta name="copyright" content="Copyright &169; 2014-2022 Shimon Edelman"/> -->
+<!-- <meta name="copyright" content="Copyright &169; 2014-2023 Shimon Edelman"/> -->
 <meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
 <link rel="stylesheet" href="../Slidy/w3c-blue3.css"
  type="text/css" media="screen, projection, print" />
@@ -101,50 +101,25 @@
   <img src="Joshua_Reynolds_Self_Portrait.jpg" title="Joshua Reynolds (self-portrait)"
   class="figure-right">
   <P>
-  <BR>
-  The natural appetite or taste of the human mind is for
-  <SC>truth</SC>; whether that truth results from the real agreement
-  or equality of original ideas among themselves; from <B>the agreement
-  of the representation of any object with the thing represented</B>; or
-  from the correspondence of the several parts of any arrangement with
-  each other.
+    The natural appetite or taste of the human mind is for
+    <SC>truth</SC>; whether that truth results from the real agreement
+    or equality of original ideas among themselves; from <B>the
+    agreement of the representation of any object with the thing
+    represented</B>; or from the correspondence of the several parts
+    of any arrangement with each other.
   <P>
-  <DIR><DIR>
-    <a href="http://en.wikipedia.org/wiki/Joshua_Reynolds" target=new>Joshua Reynolds</a><BR>
-    <a href="http://www.authorama.com/seven-discourses-on-art-9.html"
- target=new><I>Seven discourses on art</I></a><BR>
-    1776
-  </DIR></DIR>
-
-</div>
-
-
-
-<DIV CLASS="slide">
-  <h1>on truth in perception</h1>
-
-  <img src="Joshua_Reynolds_Self_Portrait.jpg" title="Joshua Reynolds (self-portrait)"
-  class="figure-right">
   <P>
-  <BR>
-  The natural appetite or taste of the human mind is for
-  <SC>truth</SC>; whether that truth results from the real agreement
-  or equality of original ideas among themselves; from <B> the agreement
-  of the representation of any object with the thing represented</B>; or
-  from the correspondence of the several parts of any arrangement with
-  each other.
-  <P>
-  <DIR><DIR>
-    <a href="http://en.wikipedia.org/wiki/Joshua_Reynolds" target=new>Joshua Reynolds</a><BR>
-    <a href="http://www.authorama.com/seven-discourses-on-art-9.html"
- target=new><I>Seven discourses on art</I></a><BR>
-    1776
-  </DIR></DIR>
-  <P>
-  <HR>
-  <P>
-  How can a <B>neural representation</B> be truthful??
-
+    <DIR><DIR>
+	<a href="http://en.wikipedia.org/wiki/Joshua_Reynolds" target=new>Joshua Reynolds</a><BR>
+	  <a href="http://www.authorama.com/seven-discourses-on-art-9.html"
+	     target=new><I>Seven discourses on art</I></a><BR>
+	    1776
+	</DIR></DIR>
+      </P>
+  <P class="incremental">
+    How can a <B>neural representation</B> be truthful??
+  </P>
+  
 </div>
 
 
@@ -152,20 +127,22 @@
 <DIV CLASS="slide">
   <h1>how neurons can be truthful</h1>
 
-  <img src="Locke-covariance.gif" height=350>
+  <img src="Locke-covariance.gif" height=350 class="figure-right">
     <P>
       A group of neurons [remember, neurons don't work well alone] can be
       truthful in representing some aspect of the world by
   <ol>
-    <li><SC>selectively</SC> responding to world ("distal")
-      stimuli,</li>
-    AND
-<!--
-    <li>By being <SC>causally effective</SC>, as appropriate, towards
-      other neurons; and</li>
--->
-    <li><SC>veridically</SC> representing distal <B>relationships</B>
-      (for instance, similarities among stimuli).</li>
+    <li>
+      <SC>selectively</SC> responding to world ("distal")
+      stimuli, AND
+    </li>
+    <li>
+      <SC>veridically</SC> representing distal <B>relationships</B> 
+      (for instance, similarities among stimuli),
+    </li>
+    <li>
+      [for the sake of the rest of the system.]
+    </li>    
   </ol>
   </P>
   
@@ -193,7 +170,6 @@
 
 
 
-
 <DIV CLASS="slide">
   <h1>mapping the brain similarity space from behavioral data</h1>
 
@@ -205,7 +181,6 @@
   Proc. Natl. Acad. Sci. (USA) 93:12046-12050.
 
 </div>
-
 
 
 
@@ -637,6 +612,38 @@
 </div>
 
 
+<DIV CLASS="slide">
+  <h1>the performance of a computational model of visual shape representation</h1>
+
+  <img src="Chorus-human+model.jpg" height=500 class="figure-right">
+  <P>
+  <I>Top:</I> the layout of nine parametrically controlled stimulus shapes in a shape
+  space.
+  <P>
+  <I>Bottom left:</I> the layout of the stimuli recovered by MDS from human
+  response data.
+  <P>
+  <I>Bottom right:</I> the layout of the stimuli recovered by MDS from the
+  responses of a model, based on "neurons" tuned to four landmark
+  (prototype) shapes. 
+  <P>
+  <font color=red>
+  NOTE: this model explains VERIDICAL, LOW-DIMENSIONAL REPRESENTATION;
+  it can be used in a variety of tasks, of which recognition is just one.
+  </font>
+  </P>
+  <HR>
+  <P>
+    <small>
+      F. Cutzu and S. Edelman. Faithful representation of similarities
+      among three-dimensional shapes in human vision. Proceedings of
+      the National Academy of Science, 93:12046–12050, 1996.
+    </small>
+  </P>
+  
+</div>
+
+ 
 
 <!--
   
@@ -1064,20 +1071,23 @@ the <a
 
   <img src="sh1.png" height=450 class="figure-right">
   <P>
-  <BR>
-  Preservation of distance ranks by the dimensionality-reducing Chorus
-  Transform, \(CT\). 
+    Preservation of distance ranks by the dimensionality-reducing Chorus
+    Transform, \(CT\).
+  </P>
   <P>
-  The plot
-  shows <a
- href="https://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient"
- target=new>Pearson product-moment correlation</a> (dashed line) and <a
- href="https://en.wikipedia.org/wiki/Spearman's_rank_correlation_coefficient"
- target=new>Spearman rank
-  correlation</a> (solid line) between the original and the \(CT\)-transformed
-  distances among 25 points in a space of dimensionality 1000, plotted
-  against the number of landmarks ("prototypes") employed by \(CT\). Error bars represent
-  the mean standard error of the mean, calculated over 10 runs. 
+    The plot
+    shows <a
+	    href="https://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient"
+	    target=new>Pearson product-moment correlation</a> (dashed
+    line) and
+    <a href="https://en.wikipedia.org/wiki/Spearman's_rank_correlation_coefficient"
+       target=new>Spearman rank correlation</a> (solid line) between
+       the original and the \(CT\)-transformed distances among 25
+       points in a space of dimensionality 1000, plotted against the
+       number of landmarks ("prototypes") employed by \(CT\). Error
+       bars represent the mean standard error of the mean, calculated
+       over 10 runs.
+  </P>
 
 </div>
 
@@ -1089,24 +1099,25 @@ the <a
 
   <img src="sh2.png" height=450 class="figure-right">
   <P>
-  <BR>
-  A comparison between the dimensionality-reducing property 
-  of \(CT\) and the prediction of the Johnson-Lindenstrauss (1984)
-  embedding theorem. The quality of the embedding was examined for
-  varying values of the distance distortion index \(0 <
-  \epsilon \le 1\).
+    A comparison between the dimensionality-reducing property of
+    \(CT\) and the prediction of the Johnson-Lindenstrauss (1984)
+    embedding theorem. The quality of the embedding was examined for
+    varying values of the distance distortion index \(0 < \epsilon \le
+    1\).
+  </P>
   <P>
-  The high <a
- href="https://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient"
- target=new>Pearson</a> and <a
- href="https://en.wikipedia.org/wiki/Spearman's_rank_correlation_coefficient"
- target=new>Spearman</a> correlation between the
-  original and \(CT\)-transformed pairwise distances among 100 points
-  (picked at random from the unit hypercube in \(R^{10000}\)) indicates
-  how well the distances are preserved.  For example, a distortion
-  of \(\epsilon = 1\), which allows an embedding into 5 dimensions,
-  results in Pearson and Spearman correlations of 0.9316
-  and 0.9460, respectively.
+    The high
+    <a href="https://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient"
+       target=new>Pearson</a>
+       and <a href="https://en.wikipedia.org/wiki/Spearman's_rank_correlation_coefficient"
+       target=new>Spearman</a> correlation between the original and
+       \(CT\)-transformed pairwise distances among 100 points (picked
+       at random from the unit hypercube in \(R^{10000}\)) indicates
+       how well the distances are preserved.  For example, a
+       distortion of \(\epsilon = 1\), which allows an embedding into
+       5 dimensions, results in Pearson and Spearman correlations of
+       0.9316 and 0.9460, respectively.
+  </P>
 
 </div>
 
@@ -1119,47 +1130,17 @@ the <a
 
   <img src="sh3.png" height=450 class="figure-right">
   <P>
-  <BR>
-  The dimensionality reduction for a set of \(n=100\) points, afforded by the
-  various values of \(\epsilon\).
+    The dimensionality reduction for a set of \(n=100\) points,
+    afforded by the various values of \(\epsilon\).
+  </P>
   <P>
-  The theoretical prediction is
-  \(O\left(\frac{\log n}{\epsilon^2}\right)\).   
+    The theoretical prediction is
+    \(O\left(\frac{\log n}{\epsilon^2}\right)\).
+  </P>
 
 </div>
 
 
-
-<DIV CLASS="slide">
-  <h1>a computational model of visual shape representation</h1>
-
-  <img src="Chorus-human+model.jpg" height=500 class="figure-right">
-  <P>
-  <I>Top:</I> the layout of nine parametrically controlled stimulus shapes in a shape
-  space.
-  <P>
-  <I>Bottom left:</I> the layout of the stimuli recovered by MDS from human
-  response data.
-  <P>
-  <I>Bottom right:</I> the layout of the stimuli recovered by MDS from the
-  responses of a model, based on "neurons" tuned to four landmark
-  (prototype) shapes. 
-  <P>
-  <font color=red>
-  NOTE: this model explains VERIDICAL, LOW-DIMENSIONAL REPRESENTATION;
-  it can be used in a variety of tasks, of which recognition is just one.
-  </font>
-  </P>
-  <HR>
-  <P>
-    <small>
-      F. Cutzu and S. Edelman. Faithful representation of similarities
-      among three-dimensional shapes in human vision. Proceedings of
-      the National Academy of Science, 93:12046–12050, 1996.
-    </small>
-  </P>
-  
-</div>
 
 
 <!--
@@ -1381,7 +1362,7 @@ only. Overlap ratio reflects shared neighbors over total neighbors.
 
 	  
 <div class="footer">
-<p>Last modified: Tue Feb 22 2022 at 08:27:14 EST</p>
+<p>Last modified: Mon Feb 20 2023 at 15:52:52 EST</p>
 </div>
 </body>
 </html>
