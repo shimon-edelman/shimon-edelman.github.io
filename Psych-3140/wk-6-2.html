@@ -223,7 +223,7 @@
 
       
 <div  CLASS="slide">
-  <h1>robustness of persistent activity architectures (Chaudhuri & Fiete, 2016)</h1>
+  <h1>[implementation-level theory] principles of memory (Chaudhuri & Fiete, 2016)</h1>
 
   <img src="Chaudhuri16-fig4.png" class="figure-right" height="450">
     <ol type=a>
@@ -267,7 +267,7 @@
 
     
 <div  CLASS="slide">
-  <h1>[AN EXAMPLE] a topic model of film episode (Heusser et al., 2021)</h1>
+  <h1>[AN EXAMPLE: behavioral analysis] a topic model of film episodic memory</h1>
 
   <img src="Heusser21-fig1.png" class="figure-right" height=600>
   
@@ -296,13 +296,13 @@
 	The two-dimensional
 	<a href="https://en.wikipedia.org/wiki/Topic_model"
 	target=new>topic [space]</a> trajectory taken by the episode
-	of <I>Sherlock</I>. Each dot indicates an event identified
+	of <I>Sherlock</I>. Each dot indicates an event <font color=gray>[identified
 	using the
 	<a href="https://en.wikipedia.org/wiki/Hidden_Markov_model"
-	target=new>HMM</a>. Dot colours denote the order of the events
-	(early events are in red, later events are in blue), and the
-	connecting lines indicate the transitions between successive
-	events.
+	target=new>HMM</a>]</font>. Dot colours denote the order of
+	the events (early events are in red, later events are in
+	blue), and the connecting lines indicate the transitions
+	between successive events.
       </li>
       <li>
 	The average two-dimensional trajectory captured by
@@ -360,7 +360,7 @@
   
       
 <div  CLASS="slide">
-  <h1>[back to theory] capacity / robustness trade-off (Chaudhuri & Fiete, 2016)</h1>
+  <h1>[back to implementation-level theory] capacity / robustness trade-off (Chaudhuri & Fiete, 2016)</h1>
 
   <img src="Chaudhuri16-fig5.png" class="figure-right" height="450">
     <ol type=a>
@@ -408,7 +408,7 @@
       <li>
 	To encode a continuous variable in a set of well-separated
 	discrete stable states in some other coding dimension involves
-	two steps: a discretization, followed by the harder step of
+	two steps: a discretization, followed by <B>THE HARDER STEP</B> of
 	choosing how to map the discrete values into the
 	attractors. In general, there is no metric-preserving mapping
 	and the complexity of this encoding problem is high.
@@ -430,13 +430,16 @@
       
 
 <div  CLASS="slide">
-  <h1>[back to] ASSOCIATIVE MEMORY: balancing task requirements</h1>
+  <h1>[computation and algorithm levels] ASSOCIATIVE MEMORY: balancing task requirements</h1>
 
   <a href="https://en.wikipedia.org/wiki/Columbarium"
      target=new><img src="columbarium.jpg"
 		     class="figure-right"
 		     title="a columbarium"
 		     width=560></a>
+  <P>
+    [THE HARDER STEP from the previous slide]
+  </P>
   <P>
     How to get to the right neighborhood in the first place? <BR>
       And what to do if more than one item is retrieved?
@@ -447,7 +450,8 @@
     levels (behavioral / computational / algorithmic).
   </P>
   <P>
-    Let's start with the TASK: storage/retrieval. What we need is:
+    Let's start with the TASK. For any task that involves
+    storage/retrieval, the needs are:
       <ul>
 	<li>high capacity (room for many items)</li>
 	<li>convenient addressing (easy to figure out at what address a given
@@ -463,7 +467,7 @@
   
 <div  CLASS="slide">
   <img src="pandemonium.jpg" class="figure-right" >
-  <h1>welcome to Pandemonium</h1>
+  <h1>a historical example: Pandemonium</h1>
 
   <P>
     The requirements: a storage/retrieval mechanism with
@@ -501,7 +505,7 @@
   <P>
     Hashing is a family of storage/retrieval algorithms that use
        a <a href="http://en.wikipedia.org/wiki/Hash_function"
-	    target=new>hash function</a> to map content to an address.
+	    target=new>hash function</a> to MAP CONTENT TO AN ADDRESS.
   </P>
   <P>
     Hashing supports one-step (constant-time) access. But there are
@@ -553,8 +557,8 @@
   <P>
     <I><B>Use</B> (bottom left):</I> To obtain the approximate near-neighbors for a query
     \(Q\), one need only hash it and then evaluate its similarity to the
-    set of examples with which it "collides" (not to the contents of the entire
-    database).
+    set of examples with which it "collides" (as opposed to the contents of the entire
+    database, as in the Pandemonium).
   </P>
   <P>
     <I><B>Outcome</B> (bottom right):</I> The 3 out of 4 items in bin 110111 whose
@@ -883,7 +887,7 @@
 
 
 <div class="footer">
-<p>Last modified: Wed Mar 1 2023 at 14:15:38 EST</p>
+<p>Last modified: Thu Mar 2 2023 at 08:35:34 EST</p>
 </div>
 </body>
 </html>
