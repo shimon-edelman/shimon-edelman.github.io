@@ -191,7 +191,7 @@
     A projection circuit can carry out "information-preserving"
     reduction of dimensionality (recall the "curse of dimensionality"
     from
-    <a href="https://shimon-edelman.github.io/Psych-3140/wk-5-1.html#(23)"
+    <a href="https://shimon-edelman.github.io/Psych-3140/wk-5-1.html#(22)"
        target=n>Lecture 5.1</a>):
   </P>
 
@@ -207,7 +207,7 @@
       <td align=center>the same data, mapped into 1D by Principal Component
 	Analysis (<a href="http://ordination.okstate.edu/PCA.htm"
  target=new>PCA</a>) = <a
- href="http://www.cs.mcgill.ca/~sqrt/dimr/dimreduction.html" target=new><B>projection</B></a> onto the first principal direction</td> 
+ href="https://en.wikipedia.org/wiki/Projection_(linear_algebra)" target=new><B>projection</B></a> onto the first principal direction</td> 
  <!--
  <td align=center>a more sophisticated way of <a
 	href="http://en.wikipedia.org/wiki/Dimensionality_reduction" target=new>reducing the
@@ -315,7 +315,7 @@
     <a href="https://en.wikipedia.org/wiki/Simple_cell"
     target=new>"simple cells"</a> in the
     <a href="http://www.scholarpedia.org/article/Area_V1"
-    target=new>primary visual cortex</a>, V1 — 
+    target=new>primary visual cortex</a>, area V1 — 
   <P>
     <I>Top:</I> the orientation selectivity of a simple cell. The
     response of a cell to a bar of light is shown for different
@@ -381,7 +381,7 @@
   <P>
     Excitatory response profiles of monkey
     <a href="http://en.wikipedia.org/wiki/A1_%28primary_auditory_cortex%29"
-       target=new>A1</a> neurons in response to the onset and offset
+       target=new>area A1</a> neurons in response to the onset and offset
        of a band-pass noise (BPN) burst with varying
        frequency. <font color=green>Green:</font> ON
        responses. <font color=red>Red:</font> OFF responses.
@@ -404,7 +404,8 @@
   </P>
   <HR>
     <P class="incremental">
-      Consider also the analogy between retinotopy and tonotopy in sensory
+      Consider also the analogy between retinotopy and tonotopy in
+      sensory 
       <a href="http://en.wikipedia.org/wiki/Topographic_map_%28neuroanatomy%29"
 	 target=new>world-to-brain mapping</a> (illustrated and
 	 discussed at length in the textbook).  
@@ -904,8 +905,8 @@
       cells (red dots, n = 371 cells × directions), and social
       place-cells (blue dots, n = 76 cells × directions); cells that
       had significant tuning in both directions were depicted
-      twice. [...] Dots were randomly jittered by up to ±5 cm (half
-      bin) for display purposes."  
+      twice. [...] <font color=gray>Dots were randomly jittered by up to ±5 cm (half
+      bin) for display purposes.</font>"  
       <DIR><DIR><DIR>
 	    — Omer et al. (2018). <I>Social place-cells in the
 	      bat hippocampus</I>. Science 359:218-224.
@@ -948,7 +949,7 @@
   
 
 <DIV CLASS="slide">
-  <h1>replay and compositional computation: two types of composability (Kurth-Nelson et al., 2023)</h1>
+  <h1>[EXTRA] replay and compositional computation: (Kurth-Nelson et al., 2023)</h1>
 
   <img src="Behrens23-fig1.png" width=99%>
     <small>
@@ -962,9 +963,11 @@
 	but is not contained in any of the parts.
       </li>
       <li>
-	In our hypothesis, a replay sequence constitutes a set of
-	entities, each tagged with the role of that entity, and is
-	able to describe complex concepts.
+	<B>
+	  In our hypothesis, a replay sequence constitutes a set of
+	  entities, each tagged with the role of that entity, and is
+	  able to describe complex concepts.
+	</B>
       </li>
       <li>
 	One type of composability is that roles are independent of
@@ -982,31 +985,31 @@
 
 
 <DIV CLASS="slide">
-  <h1>replay and compositional computation: hybrid systems (Kurth-Nelson et al., 2023)</h1>
+  <h1>[EXTRA] replay and compositional computation: hybrid systems (Kurth-Nelson et al., 2023)</h1>
 
   <img src="Behrens23-fig6.png" width=99%>
     <small>
     <ul type=A>
       <li>
-	Current goals bias replay sequences. In Wikenheiser and
+	<B>Current goals bias replay sequences.</B> In Wikenheiser and
 	Redish, rats ran in a circle, sometimes electing to pause at
 	one of three equally spaced feeders (upper-left, upper-right,
 	and bottom). Replay sequences (colored dots) traversed paths
 	ahead of the animal. In trials when the rat would subsequently
 	stop at a particular feeder, the prospective sequences also
 	terminated at that feeder (left panel). When the rat did not
-	plan to stop, sequences skipped the feeder (right
-	panel). X is the animal’s location.
+	plan to stop, sequences skipped the feeder (right panel). X is
+	the animal’s location.
       </li>
       <li>
-	Blocking replay impairs learning. Replay sequences are nested
-	within sharp wave ripples, the high frequency oscillation
-	shown in blue trace and inset of red trace. Girardeau et
-	al. performed online detection of ripples during a rest period
-	after each day’s learning session and injected current to
-	disrupt replay events at their initiation (upper left
-	panel). In the control condition (blue), current was injected
-	100 ms after the detected ripple (lower left
+	<B>Blocking replay impairs learning.</B> Replay sequences are
+	nested within sharp wave ripples, the high frequency
+	oscillation shown in blue trace and inset of red
+	trace. Girardeau et al. performed online detection of ripples
+	during a rest period after each day’s learning session and
+	injected current to disrupt replay events at their initiation
+	(upper left panel). In the control condition (blue), current
+	was injected 100 ms after the detected ripple (lower left
 	panel). Disrupting replay during rest impaired acquisition of
 	the task (right panel; red disrupted learning curve below blue
 	control and black no current injection).
@@ -1028,7 +1031,7 @@
 
 
 <DIV CLASS="slide">
-  <h1>"cognition is environment-disengaged action" (Buzsaki & Tingley, 2023)</h1> 
+  <h1>[EXTRA] "cognition is environment-disengaged action" (Buzsaki & Tingley, 2023)</h1> 
 
   <img src="Buzsaki23-fig1.png" class="figure-right" width=50%>
     <P>
@@ -1075,12 +1078,19 @@
     <P>
       Neurons are controlled by neurotransmitters, neuromodulators,
       hormones, immune factors, and other body-produced substances. In
-      addition to receptors for GABA, glutamate, and canonical
-      neuromodulators (Ach, DA, 5-HT), the average mouse cortical
-      neuron expresses RNA transcripts for more than 60 receptors for
+      addition to receptors for
+      <a href="https://en.wikipedia.org/wiki/%CE%93-Aminobutyric_acid"
+      target=new>GABA</a>,
+      <a href="https://en.wikipedia.org/wiki/Glutamate_(neurotransmitter)"
+      target=new>glutamate</a>, and canonical neuromodulators
+      (<a href="https://en.wikipedia.org/wiki/Acetylcholine"
+      target=new>Ach</a>,
+      <a href="https://en.wikipedia.org/wiki/Dopamine"
+      target=new>DA</a>, <a href="https://en.wikipedia.org/wiki/Serotonin"
+      target=new>5-HT</a>), the average mouse cortical neuron
+      expresses RNA transcripts for more than 60 receptors for
       metabolites, hormones, peptides, and immune-related
-      molecules. Abbreviations: 5-HT, serotonin; Ach, acetylcholine;
-      DA, dopamine; GPCR, G protein–coupled receptor.
+      molecules. 
     </P>
   
 </div>
@@ -1092,7 +1102,6 @@
 
 <!--   <img src="" class="figure-right" >  -->
   <P>
-  <BR>
   So, what is it that neurons compute natively?
   <ul class="incremental">
     <li>
@@ -1125,6 +1134,9 @@
     presumably to facilitate similarity-based readout. 
     </li>
     <P>
+    <li>
+      Form composable sequence representations.
+    </li>
   </ul>
   
 </div>
@@ -1133,7 +1145,7 @@
 
 
 <div class="footer">
-<p>Last modified: Thu Mar 30 2023 at 18:18:30 EDT</p>
+<p>Last modified: Mon Apr 10 2023 at 15:20:45 EDT</p>
 </div>
 </body>
 </html>
