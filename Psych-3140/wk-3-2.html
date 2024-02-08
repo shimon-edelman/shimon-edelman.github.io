@@ -114,11 +114,15 @@
 
 
 <DIV CLASS="slide">
-  <h1>what if the world is NOT well-behaved? OR: it is, but you don't know how certain things work?</h1>
+  <h1>what if the world is NOT well-behaved?</h1>
 
   <img src="circle-of-control.png" height=90% class="figure-right">
     <P>
-      uncertainty, lack of control \(\rightarrow\) anxiety
+      Uncertainty, lack of control \(\rightarrow\) anxiety
+    </P>
+    <P class="incremental">
+      What if the world IS well-behaved enough, but you simply don't
+      know how certain things work? 
     </P>
     <P class="incremental">
       "THE CIRCUMSTANCES I AM DEALT"
@@ -199,7 +203,7 @@
 <DIV CLASS="slide">
   <h1>the need for constancy in the face of DIMENSIONALITY</h1>
 
-  <table cellspacing=5>
+  <table cellspacing=25>
     <tr>
       <td><img src="Chicken.jpg" height=45%></td>
       <td><img src="some-spectra.gif" height=45%></td>
@@ -233,7 +237,9 @@
   &#151;
   <ul>
     <li>a few dimensions suffice to distinguish between like shapes
-    (e.g., chickens and ducks, or horses and donkeys);</li>
+    (e.g., chickens and ducks, or horses and donkeys) [think
+    <a href="https://en.wikipedia.org/wiki/Morphing"
+    target=new>morphing</a> between two shapes];</li> 
     <li>a few dimensions <a
  href="http://books.google.com/books?id=g4T-gP7JCXIC&pg=PA60&lpg=PA60&dq=judd+illumination+pca&source=web&ots=2ots-LswDz&sig=I0inTDLwAsJ-H8dSn6Eq2HbTmeI&hl=en&sa=X&oi=book_result&resnum=2&ct=result"
  target=new>suffice</a> to characterize illumination provided by
@@ -249,17 +255,27 @@
 
   <table>
     <tr>
-      <td>A challenge for any lightness algorithm: <B>two identical color
-	charts, on a half-sunlit deck</B><P> [to understand why the two
-	squares look different <I>to us</I>, see
-	this <a href="https://www.colorduels.com/what-is-simultaneous-contrast/"
-	target=demo>demo of simultaneous lightness contrast</a>]</td>
-	<td><img src="Mondrian-McCann-fig6a.gif"></td>
+      <td>
+	<P>
+	  A challenge for any lightness algorithm: <B>two identical
+	    color charts, on a half-sunlit deck</B>
+	</P>
+	<P>
+	  For a detailed explanation why the two indicated squares
+	  look different to us despite having the same brightness
+	  (pixel value), see
+	  this <a href="https://www.colorduels.com/what-is-simultaneous-contrast/"
+		  target=demo>demo of simultaneous lightness contrast</a>.
+	</P>
+      </td>
+      <td><img src="Mondrian-McCann-fig6a.gif"></td>
       </tr>
       <tr>
-	<td>A modern version of <a href="https://en.wikipedia.org/wiki/Edwin_Land"
-	  target=new>Edwin H. Land</a>'s <a 
-	  href="https://en.wikipedia.org/wiki/Retinex"
+	<td>
+	  A modern version
+	  of <a href="https://en.wikipedia.org/wiki/Edwin_Land"
+	  target=new>Edwin
+	  H. Land</a>'s <a href="https://en.wikipedia.org/wiki/Retinex"
 	  target=new>Retinex</a> algorithm (1971) meets the challenge
 	</td>
 	<td><img src="Mondrian-McCann-fig6b.gif"></td>
@@ -530,7 +546,7 @@
   <HR align=left width=30%>
   <P>
     <small>
-      The rendering equation is \(I = E * R\). 
+      The rendering equation specifies how the image \(I\) is rendered: \(I = E * R\). 
     </small>
   </P>
 
@@ -561,8 +577,9 @@
       \(ab=1\).
   </P>
   <P>
-    NOTE: while the ridge has equal height everywhere, it is <B>wider</B> near
-    \((1, 1)\) than at other points.
+    <B>NOTE:</B> as shown on the right, while the ridge has equal
+    height everywhere, it is <B><I>wider</I></B> near \((1, 1)\) than at
+    other points.
   </P>
 
 </div>
@@ -724,25 +741,29 @@
   <P>
   Given: a surface consisting of \(j\) patches, each with a different
   lightness (reflectance) function.
+  </P>
   <P>
-  \(\textbf{s}_j\) — how much the surface reflects
-  <BR><font color=gray>(a column vector representing the
-  reflectance function of the \(j\)-th surface patch; the entries specify
-  the fraction of incident light reflected in \(N_l\) evenly
-  spaced wavelength bands throughout the visible spectrum).</font>
+    \(\textbf{e}\) — how much light falls onto the surface
+    <BR><font color=gray>(a
+	column vector representing the illuminant spectral power 
+	distribution; its entries specify the radiant power in each of the \(N_l\)
+	wavelength bands).</font>
+  </P>
   <P>
-  \(\textbf{e}\) — how much light falls onto the surface
-  <BR><font color=gray>(a
-  column vector representing the illuminant spectral power 
-  distribution; its entries specify the radiant power in each of the \(N_l\)
-  wavelength bands).</font>
+    \(\textbf{s}_j\) — how much the surface reflects
+    <BR><font color=gray>(a column vector representing the
+	reflectance function of the \(j\)-th surface patch; the entries specify
+	the fraction of incident light reflected in \(N_l\) evenly
+	spaced wavelength bands throughout the visible spectrum).</font>
+  </P>
   <P>
-  How much light gets to the eye/camera —
-  <BR><font color=gray>(the \(N_l\) samples of the spectral power distribution of
-  the light reaching the imaging device from the \(j\)-th surface patch)</font>:
-  $$
-  \textbf{c}_j = \textbf{e} .\!* \textbf{s}_j
-  $$
+    Multiplying the two yields how much light gets to the eye/camera —
+    <BR><font color=gray>(the \(N_l\) samples of the spectral power distribution of
+	the light reaching the imaging device from the \(j\)-th surface patch)</font>:
+      $$
+      \textbf{c}_j = \textbf{e} .\!* \textbf{s}_j
+      $$
+    </P>
   <P>
     [The \(.\!*\) notation means "multiply the two vectors elementwise."]      
   </P>
@@ -778,7 +799,8 @@
   \textbf{r}_j = \textbf{R}\textbf{c}_j = \textbf{R}\left(\textbf{e} .\!*
  \textbf{s}_j\right)
   $$
-  These are the measurements that the eye/camera makes available.
+  These are the measurements that the eye/camera makes available (to
+  the brain/computer).
   <BR>
   COLOR CONSTANCY is the problem of estimating \(\textbf{e}\) and the
   \(\textbf{s}_j\) from the ensemble of sensor responses
@@ -1590,7 +1612,7 @@ regarding the \(\int\) notation.]</font>
 
 
 <div class="footer">
-<p>Last modified: Wed Feb 7 2024 at 09:07:29 EST</p>
+<p>Last modified: Wed Feb 7 2024 at 19:56:54 EST</p>
 </div>
 </body>
 </html>
