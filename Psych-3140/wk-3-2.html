@@ -793,8 +793,8 @@
   Let the \(N_r\)-dimensional column vector
   \(\textbf{r}_j\) represent the responses of all
   \(N_r\) sensor classes to the spectrum sample
-  \(\textbf{c}_j\). This is obtained via the
-  <I>rendering equation</I>, which, for the \(j\)'th  surface patch, is:
+  \(\textbf{c}_j\). Applying the sensor matrix to the output of the
+  <I>rendering equation</I> for the \(j\)'th surface patch, we obtain:
   $$
   \textbf{r}_j = \textbf{R}\textbf{c}_j = \textbf{R}\left(\textbf{e} .\!*
  \textbf{s}_j\right)
@@ -814,7 +814,8 @@
   <h1>Bayesian lightness (cont.)</h1>
 
   <P>
-  [From the previous slide] The measurements that the eye/camera makes available: 
+  [From the previous slide] The measurements that the eye/camera makes
+  available (to the brain/computer): 
   $$
   \textbf{r}_j = \textbf{R}\textbf{c}_j = \textbf{R}\left(\textbf{e} .\!*
  \textbf{s}_j\right)
@@ -824,8 +825,8 @@
   the ensemble of sensor responses \(\textbf{r}_j\). 
   <P>
   The above equation describes the "forward" process of image
-  formation (a.k.a. <I>rendering</I>) and
-  measurement. The <a href="https://en.wikipedia.org/wiki/Inverse_problem" 
+  formation (a.k.a. <I>rendering</I>) and its
+  measurement by the sensors. The <a href="https://en.wikipedia.org/wiki/Inverse_problem" 
   target=new>"inverse" problem</a> associated with it is difficult for two
   reasons: 
   <ul>
@@ -865,18 +866,14 @@
   Three probability distributions play key roles:
   <ul>
     <li>
-    The prior probability — what is known about the parameters before
-    observing the data. If we need to estimate \(\textbf{x}\), then the
-    prior is the probability density \(p(\textbf{x})\).
+    The prior probability — what is known about the variables in
+    question (here, the illumination and
+    the reflectance \(\textbf{e},\textbf{s}_j\)) before
+    observing the data (the sensor responses \(\textbf{r}_j\)).
     </li>
     <li>
-    The posterior probability — what is known after observing the data
-    (the sensor responses \(\textbf{r}_j\)).
-    </li>
-    <li>
-    The likelihood \(p(\textbf{y}\mid\textbf{x})\) — the relation between
-    the data \(\textbf{y}\) (here, the sensor responses \(\textbf{r}_j\))
-    and the unknown parameters \(\textbf{x}\) (here, the illumination and
+    The likelihood — how the data (the sensor responses
+    \(\textbf{r}_j\)) depend on the variables in question (the illumination and
     the reflectance \(\textbf{e},\textbf{s}_j\)).
     <P class="incremental">
     NOTE: The likelihood may be thought
@@ -888,9 +885,13 @@
     target=l>Lecture 3.1</a>, on the right.
     </P>
     </li>
+    <li>
+    The posterior probability — what is known after observing the data
+    and taking them into account using the Bayes formula.
+    </li>
   </ul>
   </P>
-  <P class="incremental">
+  <P>
     <font color=gray>
       [For details, see the corresponding section in the Brainard &
       Wandell (1997) paper.]
@@ -1612,7 +1613,7 @@ regarding the \(\int\) notation.]</font>
 
 
 <div class="footer">
-<p>Last modified: Wed Feb 7 2024 at 20:09:01 EST</p>
+<p>Last modified: Thu Feb 8 2024 at 08:35:44 EST</p>
 </div>
 </body>
 </html>
