@@ -707,7 +707,7 @@
   <table cellspacing=20>
     <tr>
       <td align=center><a href="http://en.wikipedia.org/wiki/Isaac_newton"
- target=new><img src="isaac-newton.jpg" height=45% title="Isaac Newton"></a></td>
+ target=new><img src="isaac-newton.jpg" height=30% title="Isaac Newton"></a></td>
       <td align=center><a href="http://en.wikipedia.org/wiki/Roger_Shepard"
  target=new><img src="roger-shepard.jpg" height=45% title="Roger N. Shepard"></a></td>
     </tr>
@@ -742,7 +742,7 @@
   </P>
   <P>
     If you know how to approximate an unknown function from some
-    sample points, you also:
+    sample points, you can:
     <ol>
       <li>
 	[empirical approach] generalize from given input-output pairs
@@ -804,7 +804,7 @@
 
   <img src="classification-and-regression-feasible.gif" height=50% class="figure-right" >
   <P>
-    Suppose there is an unknown function \(y
+    <I>[Right panel]</I> Suppose there is an unknown function \(y
     = f(x)\) for which you have some input/output examples — pairs of
     the form \(\left\{\left(x_1,y_1\right), 
     \left(x_2,y_2\right), \dots, \left(x_N,y_N\right)\right\}\).
@@ -869,11 +869,39 @@
 
 </div>
 
+  
 
+<DIV  CLASS="slide">
+  <h1>[ASIDE] extrapolation of climate variables</h1>
+
+  <img src="climate-some-dimensions.jpg" height=80% class="figure-right" >
+  <P>
+    Standardized annual indices of climate change from ERA-20C
+    reanalysis and CMIP3/5 multimodel ensembles based on regional
+    averaging and grid box differences. [8 dimensions]
+  </P>
+  <P class="incremental">
+    Here, PREDICTION is based on running a DYNAMICAL MODEL trained
+    on past data and extrapolated into the future (not just fitting
+    a curve to past data). 
+  </P>
+  <P>
+    <font size=-1 color=gray>(From <a
+					href="https://journals.ametsoc.org/view/journals/clim/30/19/jcli-d-16-0850.1.xml" 
+					target=new><I>Detection and
+	    attribution of multivariate climate change signals using discriminant
+	    analysis and Bayesian theorem</I></a>, H. Paeth et al., Journal of
+	Climate 30:7757-7776 (2017).</font>
+    </P>
+
+</div>
+
+
+  
 
 
 <DIV CLASS="slide">
-  <h1>Bayes for regression (and classification)</h1>
+  <h1>Bayes for regression (and classification) from input-output data</h1>
 
   <P>
   <ol>
@@ -935,9 +963,9 @@
   \(\require{color}\)
   <P>
     Consider a data set of examples of input vectors
-    \(\left(\textbf{x}_1, \textbf{x}_2, \dots, \textbf{x}_N\right)\)
-    along with a corresponding vector of target values \(\textbf{t} =
-    \left(t_1, t_2, \dots, t_N\right)\).
+    \(\left{\textbf{x}_1, \textbf{x}_2, \dots, \textbf{x}_N\right}\)
+    along with a set of corresponding target values \(\textbf{t} =
+    \left{t_1, t_2, \dots, t_N\right}\).
   </P>
   <P>
     <img src="Churchland-10-7-cropped.jpg" class="figure-right" height=45%>
@@ -948,14 +976,15 @@
       t_n = y(\textbf{x}_n; {\color{red}\textbf{w}}) + \epsilon_n
       $$
       where \(\epsilon\) is additive noise and \({\color{red}\textbf{w}} =
-      \left({\color{red} w_1}, {\color{red} w_2}, \dots, {\color{red} w_M}\right)^T\) is a vector of
+      \left({\color{red} w_1}, {\color{red} w_2}, \dots, {\color{red}
+      w_M}\right)\) is a (row) vector of
       adjustable parameters or "weights".
     </P>
     <HR>
       <P>
 	<small>In the "circuit" on the right, the weight vector
 	  \({\color{red}\textbf{w}}\) corresponds to \(\left(r_1, r_2,
-	  r_3, r_4\right)^{T}\);<BR> each of the input vectors
+	  r_3, r_4\right)\);<BR> each of the input vectors
 	    \(\textbf{x}_i\) (not marked in the figure) has the form \(\left(x_{i1}, x_{i2},
 	    x_{i3}, x_{i4}\right)^{T}\). </small>
 	</P>
@@ -974,7 +1003,7 @@
     {\color{red}\textbf{w}})\)  is
     $$
     y(\textbf{x}; {\color{red}\textbf{w}}) = 
-    {\color{red}\textbf{w}}^{T} \phi(\textbf{x}) = \sum^{M}_{i=1} w_i \phi_i(\textbf{x})
+    {\color{red}\textbf{w}} \phi(\textbf{x}) = \sum^{M}_{i=1} w_i \phi_i(\textbf{x})
     $$
     which represents a linearly weighted sum of \(M\) nonlinear fixed
     <a href="http://en.wikipedia.org/wiki/Basis_function" target=new>basis
@@ -986,7 +1015,7 @@
     \(y(\textbf{x}; {\color{red}\textbf{w}})\) is a linear function (=
     weighted sum) of the parameters 
     \({\color{red}\textbf{w}} = \left({\color{red} w_1}, {\color{red} w_2},
-    \dots, {\color{red} w_M}\right)^T\).
+    \dots, {\color{red} w_M}\right)\).
   </P>
   <P>
     Interestingly, however, when considered as a function of \(\textbf{x}\),
@@ -1019,7 +1048,9 @@
     <font color=gray>
       In the case of classification problems, the function \(y(\textbf{x};
       {\color{red}\textbf{w}})\) is transformed using an appropriate nonlinearity, such as a
-      logistic sigmoid for 2-class problems.
+      logistic sigmoid for 2-class problems
+      (see <a href="https://shimon-edelman.github.io/Psych-3140/wk-3-1.html#(32)" 
+      target=new>the extra slides for lecture 3.1).
     </font>
   </P>
 
@@ -1349,7 +1380,7 @@
 
   
 <div class="footer">
-<p>Last modified: Tue Feb 13 2024 at 16:51:49 EST</p>
+<p>Last modified: Wed Feb 14 2024 at 15:42:01 EST</p>
 </div>
 </body>
 </html>
