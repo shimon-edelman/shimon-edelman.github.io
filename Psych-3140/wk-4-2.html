@@ -81,12 +81,12 @@
   <h1>Lecture 4.2: learning, similarity, and generalization</h1>
 
   <P>
-  <ul>
-    <li>Categories and perceptual learning from examples</li>
-    <li>Learning and generalization</li>
-    <li>The universal law of generalization</li>
-    <li>Function approximation as a tool for learning and generalization</li>
-  </ul>
+    The topics for today:
+    <ul>
+      <li>Learning and generalization</li>
+      <li>The universal law of generalization</li>
+      <li>Function approximation as a tool for learning and generalization</li>
+    </ul>
   </P>
   
 </div>
@@ -245,12 +245,12 @@
   
 
 <DIV CLASS="slide">
-  <h1 >categories, generalization, and similarity</h1>
+  <h1 >learning, generalization, and similarity</h1>
 
   <img src="Cornell-apples.jpg" class="figure-right" height=75%>
   <P>
-    Categories would be of little use if it were not possible to extend
-    classification to <B>new stimuli</B>.
+    Learning would be of little use if it were not possible to extend
+    learned responses to <B>new stimuli</B>.
   </P>
   <P>
   [Example: from Gala or Honeycrisp
@@ -308,9 +308,8 @@
 
 
 <DIV CLASS="slide">
-  <h1>for generalization, (dis)similarity = distance in a representation space</h1>
+  <h1>generalization from a single example, based on (dis)similarity</h1>
 
-  
   <img src="Shepard-consequential-regions.gif" class="figure-right" >
     <P>
       On the right: two possible <SC>consequential regions</SC>
@@ -320,7 +319,7 @@
     <a href="http://en.wikipedia.org/wiki/Roger_Shepard" target=new>Roger
       Shepard</a>'s <SC><a
 			  href="https://www.science.org/doi/10.1126/science.3629243"
-      target=new>universal law of generalization</a>:</SC> 
+      target=new>universal law of generalization</a>: (1987)</SC> 
     <ul>
     <li>The <SC>goal</SC>: explaining subjects' generalization behavior towards a set of stimuli.
     </li>
@@ -374,7 +373,7 @@
 
 
 <DIV CLASS="slide">
-  <h1>a typical generalization pattern</h1>
+  <h1>the pattern of generalization is invariant</h1>
 
   <img src="Shepard01-color.jpg" class="figure-right" >
   <P>
@@ -469,7 +468,7 @@
     The learner's background knowledge is a source of constraints on which subsets of objects belong
     to \({\cal H}\). Shepard (1994) suggests a general constraint:
     that consequential regions for basic
-    <A href="https://en.wikipedia.org/wiki/Natural_kind" target=new>NATURAL KINDS</a> 
+    <A href="https://en.wikipedia.org/wiki/Natural_kind" target=new>natural kinds</a> 
     correspond to <a href="http://en.wikipedia.org/wiki/Topology"
 		     target=new><I>connected subsets</I></a> of
     psychological space.
@@ -565,12 +564,19 @@
     a 1D psychological space in the "number game".
   </P>
   <P>
-    For the sake of simplicity, only intervals with
-    integer-valued endpoints are shown. All hypotheses of a given size are
-    grouped together in one bracket. The <B>thickness</B> (height) of the bar
-    illustrating each hypothesis \(h\) represents \(p(h\mid x)\), the
-    learner's degree  of belief that \(h\) is the true consequential region
-    given the observation of \(x\).
+    Here, it is assumed that each hypothesis interval must be
+    contiguous (that
+    is, <a href="https://en.wikipedia.org/wiki/Connected_space"
+    target=new>topologically connected</a>). Also, for the sake of
+    simplicity, only intervals with integer-valued endpoints are
+    shown.
+  </P>
+  <P>
+    All hypotheses of a given size are grouped together in one
+    bracket. The <B>thickness</B> (height) of the bar illustrating
+    each hypothesis \(h\) represents \(p(h\mid x)\), the learner's
+    degree of belief that \(h\) is the true consequential region given
+    the observation of \(x\).
   </P>
   <P>
     The curve at the top illustrates the gradient 
@@ -645,21 +651,30 @@
     Class III trials  &#151; four random numbers of similar magnitude.
   </P>
   <P class="incremental">
-    Two groups of hypotheses used: (1) salient mathematical
-    properties: odd, even, square, cube, and prime numbers, multiples
-    and powers of small numbers, and sets of numbers ending in the
-    same digit; (2) all intervals of consecutive numbers with
-    endpoints between 1 and 100.
+    Two types of hypotheses used: (1) salient mathematical properties:
+    odd, even, square, cube, and prime numbers, multiples and powers
+    of small numbers, and sets of numbers ending in the same digit;
+    (2) all intervals of consecutive numbers with endpoints between 1
+    and 100.
   </P>
   
 </div>
 
 
 <DIV  CLASS="slide">
-  <h1>[AN ASIDE] individual differences in conceptual / perceptual representations of the world</h1>
+  <h1>[AN ASIDE] individual differences in representing the world</h1>
 
-  <video src="Monty-Python-Life-of-Brian-individuals.mp4" controls>
+  <video src="Monty-Python-Life-of-Brian-individuals.mp4" controls class="figure-right">
   </video>
+  <P>
+    People's generalization patterns (and, indeed, the way they
+    experience the world) depend on their priors, which in turn are
+    shaped by their genes, upbringing, and life experience.
+  </P>
+  <P>
+    Individual differences are NOT, however, so profound as to make
+    communication and social life impossible.
+  </P>
 
 </div>
 
@@ -810,6 +825,11 @@
     \left(x_2,y_2\right), \dots, \left(x_N,y_N\right)\right\}\).
   </P>
   <P>
+    The <a href="http://en.wikipedia.org/wiki/Function_approximation"
+       target=new>function approximation</a> task: compute \(y\) for
+       new values of \(x\).
+  </P>
+  <P>
     The fundamental computational nature of function approximation:
     <DIR><DIR>
 	<B>Function approximation
@@ -912,7 +932,8 @@
     <li>
     A Bayesian <a
     href="http://en.wikipedia.org/wiki/Regularization_%28mathematics%29"
-    target=new>regularized</a> solution that avoids overfitting
+    target=new>regularized</a> solution that avoids
+    <a href="https://en.wikipedia.org/wiki/Overfitting" target=new><B>OVERFITTING</B></a>
     </li>
     <!--
     <P>
@@ -982,11 +1003,11 @@
     </P>
     <HR>
       <P>
-	<small>In the "circuit" on the right, the weight vector
+	In the "neural" circuit on the right, the weight vector
 	  \({\color{red}\textbf{w}}\) corresponds to \(\left(r_1, r_2,
 	  r_3, r_4\right)\);<BR> each of the input vectors
-	    \(\textbf{x}_i\) (not marked in the figure) has the form \(\left(x_{i1}, x_{i2},
-	    x_{i3}, x_{i4}\right)^{T}\). </small>
+	  \(\textbf{x}_i\) (not marked in the figure) has the form
+	  \(\left(x_{i1}, x_{i2}, x_{i3}, x_{i4}\right)^{T}\).
 	</P>
 	
 </div>
@@ -1011,15 +1032,15 @@
     \phi_2(\textbf{x}), \ldots, \phi_M(\textbf{x}))^{T}\).
   </P>
   <P>
-    Models of this type are known as linear models, because the function
-    \(y(\textbf{x}; {\color{red}\textbf{w}})\) is a linear function (=
-    weighted sum) of the parameters 
-    \({\color{red}\textbf{w}} = \left({\color{red} w_1}, {\color{red} w_2},
-    \dots, {\color{red} w_M}\right)\).
+    Models of this type are known as linear models, because the
+    function \(y(\textbf{x}; {\color{red}\textbf{w}})\) is a linear
+    function (= weighted sum) of the adjustable parameters
+    \({\color{red}\textbf{w}} = \left({\color{red} w_1}, {\color{red}
+    w_2}, \dots, {\color{red} w_M}\right)\).
   </P>
   <P>
-    Interestingly, however, when considered as a function of \(\textbf{x}\),
-    \(y=y(\textbf{x})\) is generally nonlinear, and indeed 
+    When considered as a function of \(\textbf{x}\),
+    \(y=y(\textbf{x})\) is, however, generally nonlinear, and indeed
     can be very flexible if \(M\) is relatively large.
   </P>
 
@@ -1127,7 +1148,7 @@
   \(y(\textbf{x}; {\color{red}\textbf{w}})\) by constraining \({\color{red}\textbf{w}}\).
   <P>
   NOTE that constraining the solution to be smooth helps resolve the
-  under-determinacy that stems from the ill-posed nature of the function
+  UNDER-DETERMINACY that stems from the ill-posed nature of the function
   approximation problem.
   </P>
   <P>
@@ -1147,13 +1168,13 @@
   <h1>[time permitting] Bayesian regression</h1>
 
   <P>
-    The Bayesian approach characterizes the pre-observation
-    uncertainty in \({\color{red}\textbf{w}}\) by a <B>prior</B>
-    probability distribution \(p({\color{red}\textbf{w}})\) [this
-    corresponds to the <B>smoothing</B> term from the previous
-    slide]. Observations enter the picture through
-    the <B>likelihood</B> function [this is the <B>data-fitting</B>
-    term].
+    In contrast, the Bayesian approach characterizes the
+    pre-observation uncertainty in \({\color{red}\textbf{w}}\) by
+    a <B>prior</B> probability distribution
+    \(p({\color{red}\textbf{w}})\), intended to play the same role as
+    the <B>smoothing</B> term from the previous slide. Observations
+    enter the picture through the <B>likelihood</B> function [this is
+    the <B>data-fitting</B> term].
   </P>
   <P>
   Let's choose a <B>prior</B> distribution \(p({\color{red}\textbf{w}})\) that expresses our
@@ -1212,7 +1233,7 @@
   \alpha \Omega({\color{red}\textbf{w}})
   $$
  But this happens to be precisely the regularized error function
-  \(E^{*}({\color{red}\textbf{w}})~\) from slide 24, which includes (i) a
+  \(E^{*}({\color{red}\textbf{w}})~\) from slide 25, which includes (i) a
   sum-of-squares error component and (ii) an overfitting-control component
   that penalizes larger weights [note <a
  href="https://www.ncbi.nlm.nih.gov/pubmed/8868566"
@@ -1380,7 +1401,7 @@
 
   
 <div class="footer">
-<p>Last modified: Wed Feb 14 2024 at 16:23:58 EST</p>
+<p>Last modified: Thu Feb 15 2024 at 08:52:02 EST</p>
 </div>
 </body>
 </html>
