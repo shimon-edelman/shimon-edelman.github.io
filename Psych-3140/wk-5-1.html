@@ -61,7 +61,7 @@
 <div class="slide cover">
   <div class="header">
     <h1>Psych 3140/6140</h1>
-    <p><a href="http://shimon-edelman.github.io">Shimon Edelman</a>,
+    <p><a href="https://shimon-edelman.github.io">Shimon Edelman</a>,
     &lt;<a href="mailto:se37@cornell.edu">se37@cornell.edu</a>&gt;</p>
   </div>
   <div style="float:left">
@@ -112,8 +112,8 @@
   <P>
   <P>
     <DIR><DIR>
-	<a href="http://en.wikipedia.org/wiki/Joshua_Reynolds" target=new>Joshua Reynolds</a><BR>
-	  <a href="http://www.authorama.com/seven-discourses-on-art-9.html"
+	<a href="https://en.wikipedia.org/wiki/Joshua_Reynolds" target=new>Joshua Reynolds</a><BR>
+	  <a href="https://www.authorama.com/seven-discourses-on-art-9.html"
 	     target=new><I>Seven discourses on art</I></a><BR>
 	    1776
 	</DIR></DIR>
@@ -444,7 +444,9 @@
   <P>
     Computationally, this is made possible by <B>broad, graded tuning
     of neurons to select stimuli</B> — as explained in the remaining
-    [mostly "EXTRA"] slides here.
+    slides here (recall the importance of graded tuning in the
+    <a href="https://shimon-edelman.github.io/Psych-3140/wk-4-1.html#(15)"
+    target=new>account of hyperacuity</a> in Lecture 4.1).
   </P>
   <HR>
     <P>
@@ -559,7 +561,7 @@
 
   <img src="world-to-brain-mapping.png" height=35% class="figure-right">
   <P>
-  If the world-to-brain mapping is <a href="http://en.wikipedia.org/wiki/Smooth_function"
+  If the world-to-brain mapping is <a href="https://en.wikipedia.org/wiki/Smooth_function"
 				      target=new>smooth</a>,
 				      shape constancy and veridical
   perception are possible:
@@ -832,8 +834,7 @@
   -->
   
 <DIV CLASS="slide">
-  <h1>[EXTRA] view and shape spaces: smooth manifolds embedded in the
-  measurement space</h1>
+  <h1>view and shape spaces: smooth manifolds embedded in the measurement space</h1>
 
   \(\require{color}\)
   <img src="viewspace+shapespace.png" height=65% class="figure-right">
@@ -844,8 +845,8 @@
   </P>
   <HR>
   If the mapping from the world to the measurement space
-  \({\color{red} {\cal M}}\) is <a
- href="http://en.wikipedia.org/wiki/Smooth_function" target=new>smooth</a>,
+  \({\color{red} {\cal M}}\) is
+  <a href="https://en.wikipedia.org/wiki/Smooth_function" target=new>smooth</a>,
  then:
   <DIR>
     — one could use regression (function approximation) to learn it from
@@ -862,7 +863,7 @@
 
 
 <DIV CLASS="slide">
-  <h1>[EXTRA] why view and shape spaces are SMOOTH?</h1>
+  <h1>why view and shape spaces are SMOOTH</h1>
 
   <img src="components-of-M.png" height=70% class="figure-right">
   <P>
@@ -890,7 +891,7 @@
   
 
 <DIV CLASS="slide">
-  <h1>[EXTRA] implementing a smooth \(f_3\) with a Chorus of Prototypes</h1>
+  <h1>implementing a smooth \(f_3\) with a Chorus of Prototypes</h1>
 
   <img src="Chorus-principle.png" height=65% class="figure-right">
   <P>
@@ -926,21 +927,21 @@ the <a
   
 
 <DIV CLASS="slide">
-  <h1>[EXTRA] a possible implementation of a shape-tuned mechanism, or LANDMARK</h1>
+  <h1>a possible implementation of a graded, shape-tuned mechanism, or LANDMARK</h1>
 
   <img src="generic-interpolation-mechanism.png" height=80% class="figure-left">
     <P>
       A natural approach to representing a shape-space landmark is a
-      mechanism that is TUNED to some optimal (for it) shape — that
-      is, responds selectively to that shape, such that its response
-      to other stimuli decreases with their shape-space distance
-      (dissimilarity) to the optimal shape.
+      GRADED-response mechanism that is TUNED to some optimal (for it)
+      shape — that is, responds selectively to that shape, such that
+      its response to other stimuli decreases smoothly with their
+      shape-space distance (dissimilarity) to the optimal shape.
     </P>
     <P>
-      Illustration: the desired response of a mechanism that is tuned
-      to a cow shape to (1, top) a series of cow views, and (2,
-      bottom) to views of shapes that progressively differ from that
-      of a cow.
+      Illustration: the desired response of a graded-response
+      mechanism that is tuned to a cow shape to (1, top) a series of
+      cow views, and (2, bottom) to views of shapes that progressively
+      differ from that of a cow.
     </P>
     
 </div>
@@ -968,9 +969,9 @@ the <a
   
 
 <DIV CLASS="slide">
-  <h1>[EXTRA] smooth tuning (and dimensionality reduction) with a Chorus of Prototypes</h1>
+  <h1>GRADED TUNING (and dimensionality reduction) with a Chorus of Prototypes</h1>
 
-  <img src="chorus.jpg" height=65% class="figure-right">
+  <img src="chorus.jpg" height=55% class="figure-right">
   <P>
   The Chorus Transform of a point in a \(D\)-dimensional space \(\textbf{x}\in R^{D}\) — the vector of distances 
   between it and the landmarks \(\textbf{p}_i\) — performs dimensionality
@@ -983,17 +984,34 @@ the <a
   In other words, it maps points in a \(D\)-dimensional input space to
   points in a space whose dimensionality \(n\) is the same as the number of
   landmarks.
+  </P>
   <HR>
   <P>
-    Note that \(CT\) is smooth in the requisite sense, and
-    therefore the reduced-dimensionality representations it forms
-    will be veridical (true) to those in the original space.
+    Notes:
+    <ul>
+      <li>
+	\(CT\) is smooth in the requisite sense, therefore the
+	reduced-dimensionality representations it forms will be
+	veridical (true) to those in the original space.
+      </li>
+      <li>
+	RBF stands for
+	<a href="https://en.wikipedia.org/wiki/Radial_basis_function"
+	target=new>Radial Basis Functions</a> (illustrated on
+	<a href="https://shimon-edelman.github.io/Psych-3140/wk-4-2.html#(23)"
+	   target=new>slide 23 of Lecture 4.1</a>).
+      </li>
+      <li>
+	<small>
+	  <font color=gray>There is a deep and interesting link here
+	    to <a	href="https://en.wikipedia.org/wiki/Kernel_method" 
+			target=new>kernel methods</a> in machine learning,
+	    which are considerably beyond the scope of this
+	    course.</font>
+	</small>
+      </li>
+    </ul>
   </P>
-  <P>
-  <font color=gray>There is a deep and interesting link here to <a
-  href="http://en.wikipedia.org/wiki/Kernel_method" 
-  target=new>kernel methods</a> in machine learning, which are beyond the
-  scope of this course.</font>
 
 </div>
 
@@ -1061,7 +1079,7 @@ the <a
   <img src="projection.png" height=60% class="figure-right">
   <P>
   According to the <a
-  href="http://en.wikipedia.org/wiki/Johnson%E2%80%93Lindenstrauss_lemma"
+  href="https://en.wikipedia.org/wiki/Johnson%E2%80%93Lindenstrauss_lemma"
   target=new>Johnson-Lindenstrauss Lemma</a> (1984), a cloud of points in a
   high-dimensional space can be projected onto a space of a VERY much lower
   (logarithmically lower) dimensionality, while largely preserving the
@@ -1386,7 +1404,7 @@ only. Overlap ratio reflects shared neighbors over total neighbors.
 
 	  
 <div class="footer">
-<p>Last modified: Sun Feb 18 2024 at 12:36:31 EST</p>
+<p>Last modified: Mon Feb 19 2024 at 16:17:36 EST</p>
 </div>
 </body>
 </html>
