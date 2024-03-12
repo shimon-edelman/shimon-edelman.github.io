@@ -13,6 +13,10 @@
  type="text/css" media="screen, projection, print" />
 <script src="../Slidy/slidy.js" type="text/javascript">
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ TeX: { extensions: ["AMSmath.js"] }});
+  MathJax.Hub.Config({ TeX: { extensions: ["AMSsymb.js"] }});
+</script>
 <script type="text/javascript"
   src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
@@ -1084,9 +1088,6 @@
 <DIV CLASS="slide">
   <h1>a reality check: AI-by-learning (from sampled behaviors)</h1>
 
-  \(\require{amsmath}\)
-  \(\require{amssymb}\)
-
   <img src="vanRooij23-fig2.png" class="figure-right" height=65%>
   <P>
     A visual illustration of the hypothetical learning scenario and
@@ -1133,7 +1134,7 @@
     that are human-<I>like</I> (i.e., approximately like \(\cal{D}\)
     for some meaning of ‘approximate’).
   </P>
-  <P>
+  <P class="incremental">
     <B>Theorem 2</B> (Ingenia Theorem). <SC>AI-by-Learning</SC> is intractable.
   </P>
   <P>
@@ -1150,7 +1151,7 @@
   
 
 <div class="footer">
-<p>Last modified: Tue Mar 12 2024 at 16:16:40 EDT</p>
+<p>Last modified: Tue Mar 12 2024 at 17:03:15 EDT</p>
 </div>
 </body>
 </html>
