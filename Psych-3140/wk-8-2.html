@@ -1082,7 +1082,10 @@
   
   
 <DIV CLASS="slide">
-  <h1>a reality check: the (in)tractability of learning AI from sampled behaviors</h1>
+  <h1>a reality check: AI-by-learning (from sampled behaviors)</h1>
+
+  \(\require{amsmath}\)
+  \(\require{amssymb}\)
 
   <img src="vanRooij23-fig2.png" class="figure-right" height=65%>
   <P>
@@ -1096,7 +1099,7 @@
     situations \(s\).  The goal is to generate with non-negligible
     probability \(\delta(n)\) an algorithm \(A\) that behaves
     (approximately) human-like, in the sense that \(A\) is
-    non-negligibly (\(\epsilon\left(n)\)) better than chance at
+    non-negligibly (\(\epsilon(n)\)) better than chance at
     picking behaviours that are possible for \(s\) in
     \(\cal{D}\). Here, \(n\) is a measure of the situation complexity,
     i.e., the maximum length of strings (\(\vert s\vert\)) needed to
@@ -1115,10 +1118,39 @@
 
 
 
+<DIV CLASS="slide">
+  <h1>a reality check: AI-by-learning</h1>
+
+  <P>
+    <SC>AI-by-Learning</SC> (informal)
+  </P>
+  <P>
+    <I>Given:</I> A way of sampling from a distribution \(\cal{D}\).
+  </P>
+  <P>
+    <I>Task:</I> Find an algorithm \(A\) (i.e., ‘an AI’) that, when
+    run for different possible situations as input, outputs behaviours
+    that are human-<I>like</I> (i.e., approximately like \(\cal{D}\)
+    for some meaning of ‘approximate’).
+  </P>
+  <P>
+    <B>Theorem 2</B> (Ingenia Theorem). <SC>AI-by-Learning</SC> is intractable.
+  </P>
+  <P>
+    <small>
+      Iris van Rooij, Olivia Guest, et
+      al. (2023). <a href="https://osf.io/preprints/psyarxiv/4cbuv"
+      target=new><I>Reclaiming AI as a theoretical tool for cognitive
+      science</I></a>. Preprint.
+    </small>
+  </P>
+
+</div>
+
   
 
 <div class="footer">
-<p>Last modified: Tue Mar 12 2024 at 16:00:20 EDT</p>
+<p>Last modified: Tue Mar 12 2024 at 16:16:40 EDT</p>
 </div>
 </body>
 </html>
