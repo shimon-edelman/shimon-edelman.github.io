@@ -427,7 +427,7 @@
       rich information present in child-directed speech and in live
       social interactions that characterize child development. This is
       one of the reasons why LLMs require enormously more training
-      data than babies are ever exposed to.
+      data than babies are ever exposed to — and still fall short.
     </P>
 
   
@@ -954,8 +954,8 @@
       dependencies (such as the one illustrated on the next slide). 
     </P>
     <P>
-      Informally, long-distance dependencies (LDDs) arise when some
-      part of the sentence is brought into
+      Informally, <B>long-distance dependencies</B> (LDDs) arise when
+      some part of the sentence is brought into
       <a href="https://en.wikipedia.org/wiki/Focus_(linguistics)"
       target=new>FOCUS</a>.
     </P>
@@ -986,8 +986,8 @@
       ??).
     </P>
     <P>
-      Explanation: it follows from a clash of the functions of LDD
-      constructions and
+      Explanation: it follows from a <B>clash of the functions</B> of
+      LDD constructions and
       <a href="https://en.wikipedia.org/wiki/Wh-movement#Extraction_islands"
       target=new>island constructions</a>. A referent cannot
       felicitously be both discourse-prominent (in the LDD
@@ -1048,11 +1048,12 @@
 	Information, and Computation (PACLIC-23), Hong Kong, December
 	2009.</small>
     </P>
+    <HR>
     <P class="incremental">
-      To replicate the dynamics of dialogic language use, the same
+      <font color=gray>To replicate the dynamics of dialogic language use, the same
       approach can be combined with
       <a href="https://pdfs.semanticscholar.org/0036/cd484a3a9517653aecf13a1d14201b32c18f.pdf"
-	 target=new>competitive queuing</a>.
+	 target=new>competitive queuing</a>.</font>
       <img src="Bohland10-competitive-queuing.jpg" height=200>
       </P>
 
@@ -1067,9 +1068,9 @@
   <P>
     "Large language models rewrite the philosophy of approaches to
     language.  It’s worth ending with a reminder of how impressive
-    these models are:
+    these models are:"
   </P>
-  <img src="Piantadosi23-1.png" height=90%>
+  <img src="Piantadosi23-1.png" class="figure-right"> height=80%>
 
 </div>
 
@@ -1097,14 +1098,21 @@
     distribution \(\cal{D}\) they can use whatever \(\mathbb{M}\)
     they like to create a program \(L_{A}\) that when implemented and
     run generates behaviours \(b = A(s)\) when prompted by different
-    situations \(s\).  The goal is to generate with non-negligible
-    probability \(\delta(n)\) an algorithm \(A\) that behaves
-    (approximately) human-like, in the sense that \(A\) is
-    non-negligibly (\(\epsilon(n)\)) better than chance at
-    picking behaviours that are possible for \(s\) in
-    \(\cal{D}\). Here, \(n\) is a measure of the situation complexity,
-    i.e., the maximum length of strings (\(\vert s\vert\)) needed to
-    encode the relevant information in the situations \(s\).
+    situations \(s\).
+  </P>
+  <P>
+    The goal is to generate with non-negligible probability
+    \(\delta(n)\) an algorithm \(A\) that behaves (approximately)
+    human-like, in the sense that \(A\) is non-negligibly
+    (\(\epsilon(n)\)) better than chance at picking behaviours that
+    are possible for \(s\) in \(\cal{D}\).
+  </P>
+  <P>
+    Here, \(n\) is a measure of the situation complexity, i.e., the
+    maximum length of strings (\(\vert s\vert\)) needed to encode the
+    relevant information in the situations \(s\). The problem is
+    INTRACTABLE if the best possible algorithm for solving it requires
+    a number of steps that is EXPONENTIAL in \(n\).
   </P>
   <P>
     <small>
@@ -1152,7 +1160,7 @@
   
 
 <div class="footer">
-<p>Last modified: Tue Mar 12 2024 at 17:23:50 EDT</p>
+<p>Last modified: Thu Mar 14 2024 at 08:10:09 EDT</p>
 </div>
 </body>
 </html>
