@@ -133,21 +133,27 @@
     
 
 
-
 <DIV CLASS="slide">
   <h1>when reason fails</h1>
 
   <img src="medicare.jpg" class="figure-right"
   title="A slogan seen at a Tea Party rally">
   <P>
-  <BR>
-  <I>Right:</I> a slogan seen at a Tea Party rally.
-  <P>
+    "<a href="https://www.theguardian.com/news/series/cambridge-analytica-files"
+	target=new>Those</a> who can make you believe absurdities can make you commit
+    atrocities."
+    <DIR><DIR>
+	— <a href="http://en.wikipedia.org/wiki/Voltaire"
+	     target=new>Voltaire</a> (1694-1778)
+    </DIR></DIR>
+  </P>
   <HR>
   <P>
-  "Those who can make you believe absurdities can make you commit
-  atrocities" (<a href="http://en.wikipedia.org/wiki/Voltaire"
-  target=new>Voltaire</a>, 1694 – 1778) 
+    <I>Right:</I> a slogan seen at a Tea Party rally.
+  </P>
+  <P class="incremental">
+    [Examples of reasoning fallacies in the context of climate change
+    coming up later.]
   </P>
 
 </div>
@@ -155,10 +161,8 @@
 
 
 
-
-
 <div  CLASS="slide">
-  <h1>to reason well, must understand how the world works</h1>
+  <h1>to reason well, one must understand how the world works</h1>
   
   <a
     href="https://en.wikipedia.org/wiki/Felix,_qui_potuit_rerum_cognoscere_causas"
@@ -218,10 +222,10 @@
     </P>
     <P>
       Graphical models may contain "hidden" variables that cannot be
-      observed directly, only inferred from measurements [and
-      interventions, as in
+      observed directly, only inferred from measurements (<I>M</I>)
+      carried out on the observables [and from interventions, as in
       <a href="https://www.urbandictionary.com/define.php?term=FAFO"
-      target=new>FAFO</a>] (<I>M</I>) carried out on the observables.
+      target=new>FAFO</a>].
     </P>
 
 </div>
@@ -231,13 +235,13 @@
 
 
 <DIV CLASS="slide">
-  <h1>[EXTRA] a glimpse of an advanced topic: the Markov blanket</h1>
+  <h1>[EXTRA] re hidden vs. observable variables: the Markov blanket</h1>
 
   <img src="Friston13-fig1-markov-blanket.png" class="figure-right"
        height=80%>
     <P>
-      The partition of system states into internal states and hidden
-      or external states that are separated by a Markov blanket —
+      <I>Right:</I> system states partitioned into internal states and
+      hidden or external states, separated by a Markov blanket —
       comprising sensory and active states. The <I>upper panel</I>
       shows this partition as it would be applied to action and
       perception in the brain; where — in accord with the
@@ -251,19 +255,23 @@
       back to external states.
     </P>
     <P>
-      The <I>lower panel</I> shows exactly the same dependencies but
-      rearranged so that the internal states can the associated with
-      the intracellular states of a cell, while the sensory states
-      become the surface states or cell membrane overlying active
-      states (e.g. the <a href="https://en.wikipedia.org/wiki/Actin"
+      <font color=gray>
+      The <I>lower panel:</I> exactly the same dependencies hold for a
+      living cell, where the internal states are intracellular, the
+      sensory states are those of cell membrane receptors, and the
+      active states correspond to
+      the <a href="https://en.wikipedia.org/wiki/Actin"
       target=new>actin</a> <a href="https://en.wikipedia.org/wiki/Microfilament"
       target=new>filaments</a> of
       the <a href="https://en.wikipedia.org/wiki/Cytoskeleton"
-      target=new>cytoskeleton</a>). [from
+      target=new>cytoskeleton</a>.
+      </font>
+    </P>
+    <P>
+      [From
       <a href="http://dx.doi.org/10.1098/rsif.2013.0475"
       target=new><I>Life as we know it</I></a> (Friston, 2013)</a>]
     </P>
-
 
 </div>
 
@@ -349,10 +357,19 @@
   <P>
     Why working with multivariate probability distributions is hard:
     <ul>
-      <li>It is hard to write down a sensible joint distribution over a large set of
-	variables.</li>
-      <li>The computational complexity of working with probability
-	distributions is exponential in the number of variables involved.</li>
+      <li>
+	It is hard to write down a sensible joint distribution over a
+	large set of variables.
+      </li>
+      <li>
+	The computational complexity of working with probability
+	distributions is exponential in the number of variables
+	involved. [This is
+	the <a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality"
+	target=new>curse of dimensionality</a>, mentioned
+	in <a href="https://shimon-edelman.github.io/Psych-3140/wk-5-1.html#(26)"
+	target=new>Lecture 5.1</a>.] 
+      </li>
     </ul>
   </P>
   <P>
@@ -368,7 +385,7 @@
 <DIV CLASS="slide">
   <h1>working with structured probability distributions (Griffiths & Yuille, 2006)</h1>
 
-  <img src="DAG.png" class="figure-right" height=30%>
+  <img src="DAG.png" class="figure-right" height=60%>
   <P>
     To keep the computational complexity in check, we can use <B>directed
       graphical models</B>, also known as Bayesian networks or Bayes
@@ -380,17 +397,12 @@
     express the statistical dependencies between the variables in a fashion
     consistent with the
     <a href="https://en.wikipedia.org/wiki/Causal_Markov_condition" target=new><I>Markov condition</I></a>:
-    <DIR>  <DIR>  <DIR>
-	  Conditioned on its parents, each variable is independent of all other
-	  variables except its descendants.
+    <DIR> <DIR> <DIR> Conditioned on its parents, each variable is
+	  independent of all other variables except its
+	  descendants. [In other words, a node is then conditionally
+	  independent of the entire network, given its Markov
+	  blanket.]
     </DIR>  </DIR>  </DIR>
-  <P>
-    This CONDITIONAL INDEPENDENCE has an important implication: it
-    makes it possible to FACTORIZE the joint probability distribution
-    into the product of the conditional distribution for each variable
-    conditioned on its parents: $$ P(X_1, X_2, \dots, X_m) = \prod_i
-    P\left(X_i \mid \textrm{par}\left(X_i\right)\right) $$ where
-    \(\textrm{par}(X_i)\) is the set of parents of \(X_i\).
   </P>
   <HR>
     <P>
@@ -410,7 +422,15 @@
 
   <img src="GriffithsYuille06-fig2.png" height=40% class="figure-right">
   <P>
-    A Bayes net for the "psychic friend" example.
+    This CONDITIONAL INDEPENDENCE has an important implication: it
+    makes it possible to FACTORIZE the joint probability distribution
+    into the product of the conditional distribution for each variable
+    conditioned on its parents: $$ P(X_1, X_2, \dots, X_m) = \prod_i
+    P\left(X_i \mid \textrm{par}\left(X_i\right)\right) $$ where
+    \(\textrm{par}(X_i)\) is the set of parents of \(X_i\).
+  </P>
+  <P>
+    <I>Right:</I> A Bayes net for the "psychic friend" example.
     <BR>This graph identifies
       several <B>assumptions</B> about the relationship between the variables
       involved. For example, \(X_1\) and \(X_2\) are assumed to be independent
@@ -499,7 +519,9 @@
 
   <img src="Car_Key_in_ignition.jpg" class="figure-right" height=80%>
   <P>
-    A less mediaeval example... why wouldn't my car start?
+    An example from the
+    <a href="https://www.eea.europa.eu/publications/exiting-the-anthropocene"
+    target=new>Anthropocene</a>: why wouldn't my car start?
   </P>
 
 
@@ -873,7 +895,7 @@
 -->
 
 <DIV CLASS="slide">
-  <h1>the Wason selection task</h1>
+  <h1>on failures of reasoning: the Wason selection task</h1>
 
   <img src="Wason-selection-task-characters.gif" class="figure-right" height=20%>
   <P>
@@ -899,7 +921,7 @@
 
 
 <DIV CLASS="slide">
-  <h1>an ecologically relevant version (ENCODING) of Wason's task</h1>
+  <h1>an ECOLOGICALLY relevant version (re-phrasing) of Wason's task</h1>
 
   <img src="Wason-selection-task-drinks.gif" class="figure-right" height=20%>
   <P>
@@ -1071,7 +1093,7 @@
 
 
 <div class="footer">
-<p>Last modified: Sun Mar 17 2024 at 12:40:42 EDT</p>
+<p>Last modified: Mon Mar 18 2024 at 15:36:57 EDT</p>
 </div>
 </body>
 </html>
