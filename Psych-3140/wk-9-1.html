@@ -235,36 +235,39 @@
 
 
 <DIV CLASS="slide">
-  <h1>[EXTRA] re hidden vs. observable variables: the Markov blanket</h1>
+  <h1>[EXTRA] re hidden vs. observable variables: the Markov blanket,
+  and surprise minimization</h1>
 
   <img src="Friston13-fig1-markov-blanket.png" class="figure-right"
        height=80%>
     <P>
-      <I>Right:</I> system states partitioned into internal states and
-      hidden or external states, separated by a Markov blanket —
-      comprising sensory and active states. The <I>upper panel</I>
-      shows this partition as it would be applied to action and
-      perception in the brain; where — in accord with the
-      <a href="https://en.wikipedia.org/wiki/Free_energy_principle"
-      target=new>free energy principle</a> — active and internal
-      states minimize a free energy functional of sensory states.
+      System states can be partitioned into internal states and hidden
+      or external states, separated by
+      a <a href="https://en.wikipedia.org/wiki/Markov_blanket"
+      target=new>Markov blanket</a> — comprising sensory and active
+      states.
     </P>
     <P>
-      The ensuing self-organization of internal states then
-      corresponds to PERCEPTION, while ACTION couples brain states
-      back to external states.
+      The <I>upper panel</I> shows this partition as applied to
+      PERCEPTION - THINKING - ACTION cycle in the brain. The
+      <a href="https://en.wikipedia.org/wiki/Free_energy_principle"
+      target=new>free energy principle</a> dictates that internal and
+      active states minimize a free energy functional of sensory
+      states. In other words, <B>brain processes lead to actions that
+      minimize sensory surprise</B>.
     </P>
     <P>
       <font color=gray>
       The <I>lower panel:</I> exactly the same dependencies hold for a
-      living cell, where the internal states are intracellular, the
-      sensory states are those of cell membrane receptors, and the
-      active states correspond to
+      living cell, where the internal states pertaining to
+      intracellular variables, the sensory states are those of cell
+      membrane receptors, and the active states may correspond to
       the <a href="https://en.wikipedia.org/wiki/Actin"
       target=new>actin</a> <a href="https://en.wikipedia.org/wiki/Microfilament"
       target=new>filaments</a> of
       the <a href="https://en.wikipedia.org/wiki/Cytoskeleton"
-      target=new>cytoskeleton</a>.
+      target=new>cytoskeleton</a> (or, in the case of neurons, to
+      variables that control spiking or other output activity).
       </font>
     </P>
     <P>
@@ -284,8 +287,10 @@
   <P>
     [Recall <a href="wk-3-1.html#(12)" target=lec>Lecture 3.1</a>]
     Probabilistic models go beyond 'hypotheses' and 'data'. More
-    generally, a probabilistic model defines the joint distribution
-    for a set of random variables.
+    generally, a probabilistic model characterizes a situation by
+    defining the joint distribution for a set of random variables
+    (which can then be used to seek data in support of various
+    hypotheses).
   </P>
   <P>
     For example, imagine that a friend of yours claims to possess the power of
@@ -397,11 +402,10 @@
     express the statistical dependencies between the variables in a fashion
     consistent with the
     <a href="https://en.wikipedia.org/wiki/Causal_Markov_condition" target=new><I>Markov condition</I></a>:
-    <DIR> <DIR> <DIR> Conditioned on its parents, each variable is
-	  independent of all other variables except its
-	  descendants. [In other words, a node is then conditionally
-	  independent of the entire network, given its Markov
-	  blanket.]
+    <DIR> <DIR> <DIR> a node is conditionally independent of the rest
+	  of the network, given its Markov blanket. [This is to say,
+	  when conditioned on its parents, each variable is
+	  independent of all other variables except its descendants.]
     </DIR>  </DIR>  </DIR>
   </P>
   <HR>
@@ -426,8 +430,7 @@
     makes it possible to FACTORIZE the joint probability distribution
     into the product of the conditional distribution for each variable
     conditioned on its parents: $$ P(X_1, X_2, \dots, X_m) = \prod_i
-    P\left(X_i \mid \textrm{par}\left(X_i\right)\right) $$ where
-    \(\textrm{par}(X_i)\) is the set of parents of \(X_i\).
+    P\left(X_i \mid \textrm{parents}\left(X_i\right)\right) $$.
   </P>
   <P>
     <I>Right:</I> A Bayes net for the "psychic friend" example.
@@ -557,27 +560,30 @@
     <I>LEFT:</I>
   </P>
   <P>
-    <SC><a href="http://en.wikipedia.org/wiki/Causality"
+    <SC><a href="https://en.wikipedia.org/wiki/Causality"
 	   target=new>causal</a> reasoning</SC> or
-    <a href="http://en.wikipedia.org/wiki/Deductive_reasoning"
+    <a href="https://en.wikipedia.org/wiki/Deductive_reasoning"
        target=new>deduction</a>:
     <DIR><DIR>
-	[<a href="http://en.wikipedia.org/wiki/Modus_ponens" target=new>modus ponens</a>]<BR>
-	  <B>if</B> the battery is dead, <B>then</B> the car won't start
+	[<a href="https://en.wikipedia.org/wiki/Modus_ponens" target=new>modus ponens</a>]<BR>
+	  <B>if</B> the battery is dead, <B>then</B> the car won't
+	  start; the battery is dead; <B>therefore</B> the car won't start.
       </DIR></DIR>
       <DIR><DIR>
-	  [<a href="http://en.wikipedia.org/wiki/Modus_tollens" target=new>modus tollens</a>]<BR>
-	    <B>if</B> the car starts, <B>then</B> the battery isn't dead
+	  [<a href="https://en.wikipedia.org/wiki/Modus_tollens" target=new>modus tollens</a>]<BR>
+	    <B>if</B> the car starts, <B>then</B> the battery isn't
+	    dead; the car starts; <B>therefore</B> the battery isn't
+	    dead.  
 	</DIR></DIR>
       </P>
   <HR>
   <P>
   Compare this with:
   <SC><a
-  href="http://en.wikipedia.org/wiki/Evidential_reasoning"
+  href="https://en.wikipedia.org/wiki/Evidential_reasoning"
   target=new>evidential reasoning</a></SC> or <a
-  href="http://en.wikipedia.org/wiki/Abductive_reasoning"
-  target=new>abduction</a>:
+  href="https://en.wikipedia.org/wiki/Abductive_reasoning"
+  target=new>abduction</a> rule:
   <DIR><DIR>
     <B>if</B> the car won't start, <B>then</B> the battery is dead
   </DIR></DIR>
@@ -605,10 +611,10 @@
   </P>
   <P>
     <SC><a
-	  href="http://en.wikipedia.org/wiki/Evidential_reasoning"
+	  href="https://en.wikipedia.org/wiki/Evidential_reasoning"
 	  target=new>evidential reasoning</a></SC> or
-    <ahref="http://en.wikipedia.org/wiki/Abductive_reasoning"
-      target=new>abduction</a>: 
+    <a href="https://en.wikipedia.org/wiki/Abductive_reasoning"
+      target=new>abduction</a> rule: 
     <DIR><DIR>
 	<B>if</B> the car won't start AND the radio won't play, <B>then</B> the battery is dead
     </DIR></DIR>
@@ -637,12 +643,14 @@
 	<BR>
 	  BUT
 	  <BR>
-	    <B>if</B> also the car isn't in "park" or "neutral", <B>then</B> the battery probably ain't dead
+	    <B>if</B> also the transmission is in "drive", <B>then</B>
+	    the battery is probably not dead
 	</DIR></DIR>
       </P>
       <HR>
 	<P class="incremental">
-	  The "BUT" clause exemplifies INTERVENTION.
+	  The "BUT" clause exemplifies INTERVENTION (testing the state
+	  of the transmission).
 	</P>
 
 </div>
@@ -719,7 +727,7 @@
 
 
 <DIV CLASS="slide">
-  <h1>[SEE ALSO THE TEXTBOOK] causal evidential reasoning in rats</h1>
+  <h1>[described in detail in the TEXTBOOK] causal evidential reasoning in rats</h1>
 
   <img src="Blaisdell06-fig1-left-top.jpg" class="figure-right" height=35%>
   <P>
@@ -791,7 +799,7 @@
 
   <img src="Blaisdell06-fig1-left.jpg" class="figure-right" height=70%>
   <P>
-    If found, "a dissociation between <B>'seeing'</B> [<SC>observing</SC> the tone <B>T</B>] and
+    Finding "a dissociation between <B>'seeing'</B> [<SC>observing</SC> the tone <B>T</B>] and
     <B>'doing'</B> [<SC>intervening</SC> to make <B>T</B> happen by pressing the
     lever] would be remarkable, because in the observational learning phase
     <B>T</B> is positively correlated with the light <B>L</B>."
@@ -821,16 +829,18 @@
   <h1>causal evidential reasoning in rats: "the mind's arrows"</h1>
 
   <img src="Blaisdell06-fig1.jpg" class="figure-right" height=70%>
-  <P>
-    (A), <i>top:</I> in separate trials, the rat learns associatively that (i) light
-    <B>L</B> causes tone <B>T</B>; (ii) that light <B>L</B> causes food
-    <B>F</B>; and (iii) that noise <B>N</B> causes food <B>F</B>.
-  </P>
-  <P>
-    (A), <i>bottom:</I> if in the next phase the rat learns that by pressing a 
-    lever it can activate <B>T</B> (an <SC>intervention</SC>), it should
-    be less eager to expect <B>F</B> in conjunction with <B>T</B>.
-  </P>
+    <font color=gray>
+      <P>
+	(A), <i>top:</I> in separate trials, the rat learns associatively that (i) light
+	<B>L</B> causes tone <B>T</B>; (ii) that light <B>L</B> causes food
+	<B>F</B>; and (iii) that noise <B>N</B> causes food <B>F</B>.
+      </P>
+      <P>
+	(A), <i>bottom:</I> if in the next phase the rat learns that by pressing a 
+	lever it can activate <B>T</B> (an <SC>intervention</SC>), it should
+	be less eager to expect <B>F</B> in conjunction with <B>T</B>.
+      </P>
+  </font>
   <P>
     (B): indeed, in the test phase, the rats poked for food in response to
     <B>T</B> ("Common-Cause"; left) less often in the <SC>Intervene</SC>
@@ -1093,7 +1103,7 @@
 
 
 <div class="footer">
-<p>Last modified: Mon Mar 18 2024 at 15:36:57 EDT</p>
+<p>Last modified: Tue Mar 19 2024 at 09:10:26 EDT</p>
 </div>
 </body>
 </html>
