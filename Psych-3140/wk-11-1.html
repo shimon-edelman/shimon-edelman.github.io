@@ -84,13 +84,15 @@
   <ul>
     <li><font color=gray>[how and what everything computes]</font></li>
     <P>
-    <li>HOW a neuron computes
-    <ul>
+    <li>HOW neurons compute [a gross approximation]
+<!--
+      <ul>
       <li>signal transduction: interfacing to the world</li>
       <li>the <a
 		href="https://www.maths.ed.ac.uk/~v1ranick/papers/wigner.pdf"
 		target=new>mathematics</a> of working with representations</li>
     </ul>
+-->
     </li>
     <P>
     <li>WHAT neurons compute <B>natively</B> (as opposed to <a
@@ -115,8 +117,8 @@
   <a href="https://en.wikipedia.org/wiki/Artificial_neuron"
   target=new><img src="formal-neuron.png" class="figure-right" height=60%></a> 
   <P>
-    A generally useful (but actually quite sketchy) summary of the
-    basic <SC>computation</SC> performed by a
+    A generally assumed (but in fact very sketchy, in many different
+    regards) view of the basic <SC>computation</SC> performed by a
     <a href="https://en.wikipedia.org/wiki/Neuron"
     target=new>neuron</a>:
   </P>
@@ -256,8 +258,8 @@
   <P class="incremental">
     However, even in such places there is much extra complexity that
     is difficult to grasp intuitively. In the brain, mind-boggling
-    circuit complexity is the rule (evolution does not provide for
-    easy reverse engineering).
+    circuit complexity is the rule (evolution does not necessarily
+    provide for easy reverse engineering).
   </P>
 
 </div>
@@ -281,9 +283,10 @@
       <li>simultaneity (remember
 	<a href="https://en.wikipedia.org/wiki/Special_relativity"
 	   target=new>special relativity</a>)</li>
-      <li><a href="https://en.wikipedia.org/wiki/Neural_oscillation"
-      target=new>neural oscillations</a> (to be discussed in the next
-      lecture)</li> 
+      <li><a href="https://en.wikipedia.org/wiki/Local_field_potential"
+      target=new>local field potentials</a>
+      and <a href="https://en.wikipedia.org/wiki/Neural_oscillation"
+      target=new>neural oscillations</a> (more about those later)</li>
     </ul>
   </P>
   <P class="incremental">
@@ -306,6 +309,11 @@
   <h1>neuronal TUNING as a functional building block</h1>
 
   <img src="simple-cells.png" class="figure-right" height=85%>
+    <P><SC>Tuning</sc>, or selective responsiveness, mentioned earlier
+    in the course as a general property of neurons, takes many curious
+      and intricate forms.
+    </P>
+    <HR>
   <P>
     Hubel and Wiesel (1962):
     <a href="https://en.wikipedia.org/wiki/Simple_cell"
@@ -322,10 +330,6 @@
     <I>Bottom:</I> Hubel and Wiesel's proposal of how the simple
     cell's RF could be formed by combining
     several <I>center-surround</I> RFs arranged along a line.
-  <P class="incremental">
-    <B>Think about the possible use(s) of having spatially distinct
-    ON and OFF regions.</B>
-  </P>
   
 </div>
 
@@ -334,6 +338,12 @@
   <h1>more visual tuning: complex cells in V1</h1>
 
   <img src="complex-cells.png" class="figure-right" height=85%>
+  <img src="simple-cells.png" class="figure-right" height=85%>
+    <P><SC>Tuning</sc>, or selective responsiveness, mentioned earlier
+    in the course as a general property of neurons, takes many curious
+      and intricate forms.
+    </P>
+    <HR>
   <P>
     Hubel and Wiesel (1962):
     <a href="https://en.wikipedia.org/wiki/Complex_cell"
@@ -573,12 +583,15 @@
     </P>
   <HR>
   <P>
-    These cells clearly carry the information needed for locating the animal
-    (which the animal can use to locate itself). However, this information (i)
-    depends on the inputs and support from the rest of the brain and (ii) is in
-    turn used by the rest of the brain. The place cells is merely where it is
+    These cells clearly carry the information needed for locating the
+    animal (which the animal can use to locate itself). However, this
+    information (i) depends on the inputs and support from the rest of
+    the brain and (ii) is in turn used — not "looked at" (no
+    homunculus!) — by the rest of the brain. The place cells is merely
+    where it is
     <B>made explicit</B> (a concept due to David Marr, 1982).
   </P>
+  <!--
   <P>
     Consider also:
     <ul>
@@ -588,12 +601,11 @@
 		       target=new>exploitation and
 	  exploration</a>;</li>
       <li>representing sequences of events or actions (think language)</li>
-      <!--
       <li><font color=gray><a href="https://en.wikipedia.org/wiki/Reason_maintenance"
 	    target=new>truth maintenance</a> in
 	    reasoning</font>.</li>
-      -->
     </ul>
+    -->
   </P>
 
 </div>
@@ -837,11 +849,11 @@
       Information reflecting the spatial location of both the self and the other was jointly and
       discretely encoded by
       <a href="https://en.wikipedia.org/wiki/Hippocampus_anatomy#Hippocampus_proper"
-      target=new>CA1</a> pyramidal cells in the observer rat. A subset of CA1 pyramidal
-      cells exhibited spatial receptive fields that were identical for
-      the self and the other. These findings demonstrate that
-      hippocampal spatial representations include dimensions for both
-      self and nonself."
+      target=new>CA1</a> pyramidal cells in the observer rat. <B>A
+      subset of CA1 pyramidal cells exhibited spatial receptive fields
+      that were identical for the self and the other.</B> These
+      findings demonstrate that hippocampal spatial representations
+      include dimensions for both self and nonself."
       <DIR><DIR><DIR>
 	    — Danjo et al. (2018). <I>Spatial representations of self and
 	      other in the hippocampus</I>. Science 359:213-218.
@@ -873,7 +885,7 @@
     bat, in
       <a href="https://en.wikipedia.org/wiki/Allothetic"
       target=new>allocentric coordinates</a>. About half of these
-      “social place cells” represented also the observer’s own
+      <B>“social place cells”</B> represented also the observer’s own
       position — that is, were place cells. The representation of the
       demonstrator bat did not reflect self-movement or trajectory
       planning by the observer. Some neurons represented also the
@@ -899,11 +911,11 @@
   <img src="Omer18-fig1F.png" class="figure-right" height=60%>
   <P>
       "Locations of peak firing for all the significant maps for place
-      cells (red dots, n = 371 cells × directions), and social
-      place-cells (blue dots, n = 76 cells × directions); cells that
-      had significant tuning in both directions were depicted
-      twice. [...] <font color=gray>Dots were randomly jittered by up to ±5 cm (half
-      bin) for display purposes.</font>"  
+      cells (red dots, n = 371 cells × directions), and <B>social
+      place-cells (blue dots</B>, n = 76 cells × directions); cells
+      that had significant tuning in both directions were depicted
+      twice. [...] <font color=gray>Dots were randomly jittered by up
+      to ±5 cm (half bin) for display purposes.</font>"
       <DIR><DIR><DIR>
 	    — Omer et al. (2018). <I>Social place-cells in the
 	      bat hippocampus</I>. Science 359:218-224.
@@ -919,10 +931,10 @@
   <img src="Ambrose16-fig3CF.png" height=60% class="figure-right" >
   <P>
     <ul>
-      <li>Reverse, but not
+      <li><B>Reverse, but not
 	      forward, <a href="https://en.wikipedia.org/wiki/Hippocampal_replay"
 	      target=new>replays</a> are sensitive to reward
-	      context</li>
+	      context</B></li>
       <li><a href="https://en.wikipedia.org/wiki/Sharp_waves_and_ripples"
 	      target=new>Sharp Wave Ripples</a> (SWRs) and replay
 	      rates adaptively code the given range of reward
@@ -1166,7 +1178,7 @@
 
 
 <div class="footer">
-<p>Last modified: Tue Apr 2 2024 at 09:49:53 EDT</p>
+<p>Last modified: Tue Apr 9 2024 at 08:27:29 EDT</p>
 </div>
 </body>
 </html>
