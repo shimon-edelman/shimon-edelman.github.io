@@ -372,7 +372,7 @@
   <P>
     An <a href="http://setosa.io/conditional/" target=demo>interactive
       visual
-      demo</a>
+      demo</a> illustrating conditional probability.
   </P>
 
 </DIV>
@@ -489,7 +489,7 @@
 
 
 <DIV CLASS="slide">
-  <h1>the kind of probability estimation required for learning and generalization</h1>
+  <h1>the computational problem of learning from examples</h1>
 
   <img src="classification-only.gif" class="figure-right" >
   <P>
@@ -524,14 +524,11 @@
 
 
 <DIV CLASS="slide">
-  <h1>the kind of probability estimation required for learning</h1>
+  <h1>how to use examples (data) to form a prediction about a new case (hypothesis)</h1>
 
   <font size=+10>
   <P>
-  <BR>
-  HELP!!!
-  <P class="incremental">
-  <B>is on the way: the Bayes Theorem.</B>
+    The Bayes Theorem shows the way.
   </P>
   </font>
     
@@ -547,14 +544,14 @@
   href="http://en.wikipedia.org/wiki/Conditional_probability"
   target=new><SC>conditional probability</SC></a> of <I>B</I> given <I>A</I>
   <font color=gray>(think <a href="http://en.wikipedia.org/wiki/Darts"
- target=new>darts</a>)</font> is defined as the ratio of two areas:
+ target=new>darts</a>)</font> is defined as the ratio of two <I>areas</I>:
   $$
-    p(B \mid A) = \left\vert A \& B\right\vert / \left\vert A\right\vert
+    p(B \mid A) = \left\vert B \& A\right\vert / \left\vert A\right\vert
   $$
   On the right, divide numerator and denominator by the area of the
   "universe" \(\left\vert U\right\vert\) to obtain a ratio of probabilities: 
   $$
-    p(B \mid A) = p(A \& B) / p(A)
+    p(B \mid A) = p(B \& A) / p(A) \implies p(B \& A) = p(B \mid A) p(A)
   $$
   Now, by the definition of <a
   href="http://en.wikipedia.org/wiki/Conditional_probability"
@@ -563,8 +560,8 @@
  and \(B\), can be expressed in two equivalent ways:
   $$
   \begin{align}
-  p(A \& B) &= p(A) p(B \mid A) =  \\
-  &= p(B) p(A \mid B) = p(B \& A)
+  p(B \& A) &= p(A) p(B \mid A) =  \\
+  &= p(B) p(A \mid B) = p(A \& B)
   \end{align}
   $$
   Suppose <B><font color=gray>\(B\) is a hypothesis</font></B> ("apple is
@@ -1692,7 +1689,7 @@
 
 
 <div class="footer">
-<p>Last modified: Mon Feb 3 2025 at 16:46:14 EST</p>
+<p>Last modified: Tue Feb 4 2025 at 08:25:17 EST</p>
 </div>
 </body>
 </html>
