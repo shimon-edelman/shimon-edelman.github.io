@@ -88,12 +88,12 @@
   <P>
     Computational problems / challenges:
     <ul>
-      <li>high dimensionality of the data</li>
       <li>underdetermination of the solution by the data [as in the
       <a href="https://shimon-edelman.github.io/Psych-3140/wk-3-1.html#(15)"
       target=new>classification example in Lecture 3.1</a>]</li> 
       <li>the ever-present uncertainty in measurement (due to noise and
 	incomplete or lost information)</li>
+      <li>high dimensionality of the data</li>
     </ul>
   </P>
   <P>
@@ -102,10 +102,12 @@
       <li><B>ASSUME the world to be well-behaved</B> —
 	that is, characterized by <SC>statistical regularities</SC>
 	<P>
-	  <font color=gray>[The technique known as <a
-						     href="http://en.wikipedia.org/wiki/Regularization_(mathematics)" 
-						     target=new>regularization</a> is a mathematical expression of this
-	    trust]</font>
+	  <font color=gray>
+	    [In applied math, the technique known
+	    as <a href="http://en.wikipedia.org/wiki/Regularization_(mathematics)" 
+		  target=new>regularization</a> is based on similar
+	    reasoning]
+	  </font>
 	</li>
       </ul>
     </P>
@@ -115,7 +117,7 @@
 
 
 <DIV CLASS="slide">
-  <h1>problem of attaining perceptual CONSTANCY</h1>
+  <h1>the general structure of perceptual problems</h1>
 
   <img src="vision-flowchart.gif" class="figure-right" height=85%>
   <P>
@@ -127,14 +129,16 @@
     depends on the task.
   </P>
   <P>
-  CONSTANCY requires that irrelevant variation be ignored/suppressed.
+    <a href="https://en.wikipedia.org/wiki/Subjective_constancy"
+    target=new>CONSTANCY</a> requires that irrelevant variation be
+    ignored/suppressed. 
   </P>
   
 </div>
 
 
 <DIV CLASS="slide">
-  <h1>the need for constancy in the face of DIMENSIONALITY</h1>
+  <h1>problems posed by high DIMENSIONALITY of data</h1>
 
   <table cellspacing=25>
     <tr>
@@ -154,7 +158,7 @@
 
 
 <DIV CLASS="slide">
-  <h1>constancy in the face of dimensionality: a solution</h1>
+  <h1>high dimensionality of data: a general approach to a solution</h1>
 
   <table cellspacing=25>
     <tr>
@@ -190,8 +194,8 @@
     <tr>
       <td>
 	<P>
-	  A challenge for any lightness algorithm: <B>two identical
-	    color charts, on a half-sunlit deck</B>
+	  <I>Top right:</I> A challenge for any lightness algorithm
+	  — <B>two identical color charts, on a half-sunlit deck</B>.
 	</P>
 	<P>
 	  For a detailed explanation why the two indicated squares
@@ -205,15 +209,18 @@
       </tr>
       <tr>
 	<td>
-	  A modern version
-	  of <a href="https://en.wikipedia.org/wiki/Edwin_Land"
-	  target=new>Edwin
-	  H. Land</a>'s <a href="https://en.wikipedia.org/wiki/Retinex"
-	  target=new>Retinex</a> algorithm (1971) meets the challenge
+	  <P>
+	    <I>Bottom right:</I> A modern version
+	    of <a href="https://en.wikipedia.org/wiki/Edwin_Land"
+		  target=new>Edwin
+	      H. Land</a>'s <a href="https://en.wikipedia.org/wiki/Retinex"
+			       target=new>Retinex</a> algorithm (1971)
+	    meets the challenge.
+	  </P>
 	</td>
 	<td><img src="Mondrian-McCann-fig6b.gif"></td>
-      </tr>
-    </table>
+	</tr>
+      </table>
 
 </div>
 
@@ -445,20 +452,23 @@
 
   <img src="Brainard97-fig2a.png" class="figure-right">
   <P>
-    Let's find the posterior \(p(\textbf{x}\mid\textbf{y})\) of 
-    \(\textbf{x} = (a,b)\) given the observation \(\textbf{y}=y\). With the
-    rendering equation<sup>*</sup> \(\textbf{y}=ab\) and <a
-							   href="http://en.wikipedia.org/wiki/Normal_distribution" target=new>normally</a>
+    Let's find the posterior \(p(\textbf{x}\mid y)\) of 
+    \(\textbf{x} = (a,b)\) given the observation \(y\). With the
+    rendering equation<sup>*</sup> \(y=ab\)
+    and <a
+	  href="http://en.wikipedia.org/wiki/Normal_distribution"
+    target=new>normally</a> 
     distributed observation noise with mean \(0\) 
     and variance \(\sigma^2\), the likelihood is
     $$
-    p(\textbf{y}\mid\textbf{x}) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-
-    \frac{\left\vert\textbf{y} - ab\right\vert^2}{2\sigma^2}}
+    p(y \mid\textbf{x}) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-
+    \frac{\left\vert y - ab\right\vert^2}{2\sigma^2}}
     $$
     [The above merely states that the noise, which is the difference between
-    the true value of the product \(ab\) and the measured value \(y\), is <a
-									    href="http://en.wikipedia.org/wiki/Normal_distribution"
-									    target=new>normally</a>
+    the true value of the product \(ab\) and the measured value \(y\),
+    is <a
+	 href="http://en.wikipedia.org/wiki/Normal_distribution"
+	 target=new>normally</a>
     distributed.]
   </P>
   <P>
@@ -468,7 +478,7 @@
       (iii) that \(\sigma^2=0.18\), the Bayes rule
       yields this posterior (plotted on the right):
       $$
-      p(\textbf{x}\mid\textbf{y}) =
+      p(\textbf{x}\mid\ y) =
       \begin{cases}
       Ce^{-\frac{\left\vert 1-ab\right\vert^2}{2\cdot 0.18}}, & \mbox{if}\ 0 \le a,b \le 4 \\
       0, & \mbox{otherwise}
@@ -493,10 +503,10 @@
 
   <img src="Brainard97-fig2b.png" class="figure-right">
   <P>
-    From the previous slide, the posterior \(p(\textbf{x}\mid\textbf{y})\) of 
-    \(\textbf{x} = (a,b)\) given the observation \(\textbf{y}=1\) is:
+    From the previous slide, the posterior \(p(\textbf{x}\mid y)\) of 
+    \(\textbf{x} = (a,b)\) given the observation \(y=1\) is:
     $$
-    p(\textbf{x}\mid\textbf{y}) =
+    p(\textbf{x}\mid y) =
     \begin{cases}
     Ce^{-\frac{\left\vert 1-ab\right\vert^2}{2\cdot 0.18}}, & \mbox{if}\ 0 \le a,b \le 4 \\
     0, & \mbox{otherwise}
@@ -504,7 +514,9 @@
     $$
     <!--  <img src="Brainard97-eq8.png">  -->
       This posterior distribution is plotted in the figure on the previous
-      slide. The set of points with highest probability forms a ridge along the <a
+      slide. The set of points with highest probability forms a ridge
+      along
+      the <a
 										  href="http://en.wikipedia.org/wiki/Hyperbola" target=new>hyperbola</a>
       whose equation is
       \(ab=1\).
@@ -1596,7 +1608,7 @@ regarding the \(\int\) notation.]</font>
 
 
 <div class="footer">
-<p>Last modified: Wed Feb 5 2025 at 21:42:01 EST</p>
+<p>Last modified: Thu Feb 6 2025 at 08:22:12 EST</p>
 </div>
 </body>
 </html>
