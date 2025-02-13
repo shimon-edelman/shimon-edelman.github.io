@@ -308,7 +308,7 @@
 
 
 <DIV CLASS="slide">
-  <h1>generalization from a single example, based on (dis)similarity</h1>
+  <h1>generalization from a SINGLE EXAMPLE, based on (dis)similarity</h1>
 
   <img src="Shepard-consequential-regions.gif" class="figure-right" >
     <P>
@@ -526,13 +526,17 @@
     $$
     p\left(y\in C \mid x\right) = \sum_{h:y\in h} p\left(h\mid x\right)
     $$
-    This amounts to <B>hypothesis averaging</B>, because it can be thought of as
-    averaging the predictions that each hypothesis makes about \(y\)'s membership in \(C\),
-    weighted by the posterior probability of that hypothesis.
+    This is
+    <a href="https://en.wikipedia.org/wiki/Ensemble_learning"
+    target=new><B>hypothesis averaging</B></a>: combining the
+    predictions that each hypothesis makes about \(y\)'s membership in
+    \(C\), weighted by the posterior probability of that hypothesis.
   </P>
   <P>
-    Note how this combines both stages of Bayesian treatment:
-    posterior estimation and the application of a loss function.
+    Note how this step corresponds to the second stage of Bayesian
+     treatment: processing the posterior distribution to obtain a
+     unique optimal outcome (as in applying a loss function to the
+     posterior).
   </P>
     <!--
     <font color=gray>In the case of a continuum of hypotheses, such as the space of all
@@ -556,12 +560,13 @@
 
 
 <DIV CLASS="slide">
-  <h1>Shepard's consequential regions defined by posterior probabilities (Tenenbaum and Griffiths, 2001)</h1>
+  <h1>consequential region from posterior probabilities (with intervals as hypotheses)</h1>
 
   <img src="TenenbaumGriffiths01-fig1.png" height=70% class="figure-right">
   <P>
-    An illustration of the Bayesian approach to generalization from \(x=60\) in
-    a 1D psychological space in the "number game".
+    An illustration of the Bayesian approach to generalization from
+    \(x=60\) in a 1D psychological space in a "NUMBER GAME" (Tenenbaum
+    and Griffiths, 2001). 
   </P>
   <P>
     Here, it is assumed that each hypothesis interval must be
@@ -722,7 +727,7 @@
   <table cellspacing=20>
     <tr>
       <td align=center><a href="http://en.wikipedia.org/wiki/Isaac_newton"
- target=new><img src="isaac-newton.jpg" height=30% title="Isaac Newton"></a></td>
+ target=new><img src="isaac-newton.jpg" height=20% title="Isaac Newton"></a></td>
       <td align=center><a href="http://en.wikipedia.org/wiki/Roger_Shepard"
  target=new><img src="roger-shepard.jpg" height=45% title="Roger N. Shepard"></a></td>
     </tr>
@@ -747,7 +752,7 @@
 
 
 <div  CLASS="slide">
-  <h1>next: function approximation for learning and generalization; regularization</h1>
+  <h1>NEXT: function approximation for learning and generalization; regularization</h1>
 
   <img src="function-approximation.png" class="figure-right" height=65%>
   <P>
@@ -1021,7 +1026,7 @@
   <img src="rbf.png" height=50% class="figure-right">
   <P>
     One <a href="http://www.it.uu.se/research/project/rbf"
-	   target=new>interesting</a> class of candidate functions for \(y(\textbf{x}; 
+	   target=new>very useful</a> class of candidate functions for \(y(\textbf{x}; 
     {\color{red}\textbf{w}})\)  is
     $$
     y(\textbf{x}; {\color{red}\textbf{w}}) = 
@@ -1043,6 +1048,13 @@
     When considered as a function of \(\textbf{x}\),
     \(y=y(\textbf{x})\) is, however, generally nonlinear, and indeed
     can be very flexible if \(M\) is relatively large.
+  </P>
+  <P class="incremental">
+    <font color=gray>
+      In supervised perceptual learning, combining the outputs of
+      RECEPTIVE FIELDS is formally equivalent to using BASIS FUNCTIONS
+      to approximate a desired output.
+    </font>
   </P>
 
 </div>
@@ -1148,9 +1160,9 @@
   <B>smoothing</B> the solution 
   \(y(\textbf{x}; {\color{red}\textbf{w}})\) by constraining \({\color{red}\textbf{w}}\).
   <P>
-  NOTE that constraining the solution to be smooth helps resolve the
-  UNDER-DETERMINACY that stems from the ill-posed nature of the function
-  approximation problem.
+  NOTE that ASSUMING (and therefore constraining) the solution to be
+  smooth helps resolve the UNDER-DETERMINACY that stems from the
+  ill-posed nature of the function approximation problem.
   </P>
   <P>
   A <a href="https://en.wikipedia.org/wiki/Tikhonov_regularization"
@@ -1169,13 +1181,13 @@
   <h1>[time permitting] Bayesian regression</h1>
 
   <P>
-    In contrast, the Bayesian approach characterizes the
-    pre-observation uncertainty in \({\color{red}\textbf{w}}\) by
-    a <B>prior</B> probability distribution
-    \(p({\color{red}\textbf{w}})\), intended to play the same role as
-    the <B>smoothing</B> term from the previous slide. Observations
-    enter the picture through the <B>likelihood</B> function [this is
-    the <B>data-fitting</B> term].
+    The Bayesian approach characterizes the pre-observation
+    uncertainty in \({\color{red}\textbf{w}}\) by a <B>prior</B>
+    probability distribution \(p({\color{red}\textbf{w}})\), intended
+    to play the same role as the <B>smoothing</B> term from the
+    previous slide. Observations enter the picture through
+    the <B>likelihood</B> function [this is the <B>data-fitting</B>
+    term].
   </P>
   <P>
   Let's choose a <B>prior</B> distribution \(p({\color{red}\textbf{w}})\) that expresses our
@@ -1402,7 +1414,7 @@
 
   
 <div class="footer">
-<p>Last modified: Mon Feb 10 2025 at 16:03:24 EST</p>
+<p>Last modified: Thu Feb 13 2025 at 08:37:30 EST</p>
 </div>
 </body>
 </html>
