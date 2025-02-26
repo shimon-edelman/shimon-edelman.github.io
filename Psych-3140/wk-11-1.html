@@ -5,7 +5,7 @@
 <head>
 <title>Psych 3140/6140 w-11-1</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- <meta name="copyright" content="Copyright &169; 2008-2024 Shimon Edelman"/> -->
+<!-- <meta name="copyright" content="Copyright &169; 2008-2025 Shimon Edelman"/> -->
 <meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
 <link rel="stylesheet" href="../Slidy/w3c-blue3.css"
  type="text/css" media="screen, projection, print" />
@@ -299,11 +299,102 @@
 </div>
 
 
+<DIV CLASS="slide">
+  <h1>neuronal TUNING as a functional building block</h1>
+
+  <P>
+    <ul>
+      <li>
+	photoreceptors and their spatially and spectrally tuned
+	receptive fields (RFs)
+      </li>
+      <li>
+	sound-tuned cells in the bat brain
+      </li>
+      <li>
+	place-tuned cells in the hippocampus
+      </li>
+      <li>
+	grid-tuned cells in the entorhinal cortex
+      </li>
+    </ul>
+  </P>
+  <P>
+    Tuning is never sharp and discrete: RFs are always GRADED and
+    overlapping (recall the discussion of hyperacuity and channel
+    coding in
+    <a href="https://shimon-edelman.github.io/Psych-3140/wk-4-1.html#(15)"
+       target=new>Lecture 4.1</a>).
+  </P>
+
+</div>
+
+
+
+<DIV CLASS="slide">
+  <h1>retinal photoreceptors: spectral tuning</h1>
+
+  <img src="photoreceptor-spectral-tuning.png" class="figure-right"
+       height=85%> 
+
+
+</div>
+  
+
+
+<DIV CLASS="slide">
+  <h1>retinal ganglion cells: spatial tuning (RF)</h1>
+
+  <img src="ganglion-cell-RF-tuning.png" class="figure-right"
+       height=85%> 
+
+
+</div>
+  
+
+
+<DIV CLASS="slide">
+  <h1>TUNING and MAPS of sound dimensions in bats</h1>
+
+  <img src="Kossl14-fig3.png" class="figure-right" height=85%>
+  <P>
+  Target range maps in different bat species (Kössl, 2014).
+  <P>
+  <I>Left:</I> representative spectrograms of echolocation calls.
+  <P>
+  <I>Middle:</I> brain overview with the position of auditory cortex.
+  <P>
+  <I>Right:</I> detailed view of chronotopic maps within auditory
+  cortex.
+  <P>
+  <small>
+  <font color=turquoise><B>Blue</B>:</font> target range computing areas;
+  <BR>
+  White arrows: the direction of of decreasing echo delay.
+  <BR>
+  Black arrows: increasing characteristic frequency in tonotopic
+  areas.
+  <BR>
+    [FM = frequency modulation; CF = characteristic frequency]
+  </small>
+  <HR>
+  <P class="incremental">
+  What are orderly sensory maps good for?
+  </P>
+  <P class="incremental">
+  [Think about how similarity-sensitive
+  use/<a href="w-11-2.html#(6)"
+  target=a>read-out</a> of a representation is facilitated by a
+  spatially ordered map.]
+  </P>  
+  
+</div>
+
 
 
 <!-- visual and auditory simple cells -->
 
-
+<!--
 
 <DIV CLASS="slide">
   <h1>neuronal TUNING as a functional building block</h1>
@@ -420,8 +511,6 @@
   
 </div>
 
-  
-<!--
 
 <DIV CLASS="slide">
   <h1>Tian (2013): classification of A1 neurons into type-S and type-C classes</h1>
@@ -715,7 +804,130 @@
   
 </div>
 
+
   
+<DIV CLASS="slide">
+  <h1>from place to GRID CELLS: <strike>localized</strike> periodic spatial tuning</h1>
+
+  <img src="Grid_cell_image_V2.png" class="figure-right"
+       height=85%> 
+    <P>
+      A grid cell is a type of neuron within the entorhinal cortex
+      that fires at regular intervals as an animal navigates an open
+      area, allowing it to understand its position in space by storing
+      and integrating information about location, distance, and
+      direction. Grid cells have been found in many animals,
+      including rats, mice, bats, monkeys, and humans. [from the
+      <a href="https://en.wikipedia.org/wiki/Grid_cell"
+      target=new>Wikipedia article</a>] 
+    </P>
+
+</div>
+  
+
+
+<DIV CLASS="slide">
+  <h1>an integrated model of the hippocampal complex (Chandra et al., 2025)</h1>
+
+  <P>
+    We present a neocortical–entorhinal–hippocampal network model that
+    implements a high-capacity general associative memory, spatial
+    memory and episodic memory. By factoring content storage from the
+    dynamics of generating error-correcting stable states, the circuit
+    (which we call vector hippocampal scaffolded heteroassociative
+    memory (Vector-HaSH)) avoids the memory cliff of prior memory
+    models1, and instead exhibits a graceful trade-off between number
+    of stored items and recall detail. A pre-structured internal
+    scaffold based on grid cell states is essential for constructing
+    even non-spatial episodic memory: it enables high-capacity
+    sequence memorization by abstracting the chaining problem into one
+    of learning low-dimensional transitions. Vector-HaSH reproduces
+    several hippocampal experiments on spatial mapping and
+    context-based representations, and provides a circuit model of the
+    ‘memory palaces’ used by memory athletes. Thus, this work provides
+    <B>a unified understanding of the spatial mapping and associative
+    and episodic memory roles of the hippocampus</B>.
+  </P>
+  <P>
+    <small>
+      Sarthak Chandra, Sugandha Sharma, Rishidev Chaudhuri, & Ila
+      Fiete
+      (2025). <a href="https://doi.org/10.1038/s41586-024-08392-y"
+      target=new><I>Episodic and associative memory from spatial
+      scaffolds in the hippocampus</I></a>, Nature 638:739.
+    </small>
+  </P>
+
+</div>    
+  
+
+<DIV CLASS="slide">
+  <h1>an integrated model of the hippocampal complex (Chandra et al., 2025)</h1>
+
+  <img src="Chandra-Fiete-2025-fig1a.png" width=60%
+       class="figure-right">
+    <P>
+      LEFT, <B>memory cliff</B>. Mutual information (MI) between
+      stored and retrieved patterns in a Hopfield network of \(N\)
+      neurons drops sharply to zero after a critical number
+      (approximately \(N\)) of stored patterns. MIDDLE and RIGHT, MI
+      in variants of Hopfield networks (sparse synapses; input
+      patterns with sparseness \(p\), \(f = p\ln(p)\); modern Hopfield
+      networks) all exhibit a cliff. Dashed black line indicates
+      theoretical limit for neural networks with \(N^2\) plastic
+      synapses. We explore whether it is possible for
+      content-addressable memory to hug the bound, regardless of the
+      number of stored patterns.
+    </P>
+    <P>
+      <small>
+	Sarthak Chandra, Sugandha Sharma, Rishidev Chaudhuri, & Ila
+	Fiete
+	(2025). <a href="https://doi.org/10.1038/s41586-024-08392-y"
+	target=new><I>Episodic and associative memory from spatial
+	scaffolds in the hippocampus</I></a>, Nature 638:739.
+      </small>
+    </P>
+
+</div>  
+
+  
+<DIV CLASS="slide">
+  <h1>an integrated model of the hippocampal complex (Chandra et al., 2025)</h1>
+
+  <img src="Chandra-Fiete-2025-fig1b.png" width=60%
+       class="figure-right">
+    <P>
+      <B>Vector-HaSH architecture</B>. Grid cell modules (orange) with
+      fixed recurrent connectivity and states, hippocampal cells
+      (pink) and non-grid entorhinal/neocortical (EC) processed
+      sensory inputs (green). Solid and dashed black arrows indicate
+      fixed connections and weights; grey arrows indicate plastic
+      weights. \(N_g\) is the number of grid cells, \(N_h\) is the
+      number of hippocampal neurons and \(N_s\) is the number of
+      sensory input neurons. The light blue box represents a
+      low-dimensional velocity `shift mechanism' that changes the grid
+      phases.
+    </P>
+
+</div>  
+
+  
+<DIV CLASS="slide">
+  <h1>an integrated model of the hippocampal complex (Chandra et al., 2025)</h1>
+
+  <img src="Chandra-Fiete-2025-fig1cdef.png" height=85%
+       class="figure-right">
+    <P>
+      Vector-HaSH variants that model <B>item memory</B> (c),
+      <B>spatial memory</B> (d), <B>episodic memory</B> (e) and the
+      <B>memory palace</B> technique (f).
+    </P>
+
+</div>  
+
+  
+<!--  
 
 <DIV CLASS="slide">
   <h1>3D space representation by place cells</h1>
@@ -792,45 +1004,6 @@
   </P>
 
 </div>
-
-  
-<DIV CLASS="slide">
-  <h1>tuning and MAPS of abstract (non-spatial) feature dimensions</h1>
-
-  <img src="Kossl14-fig3.png" class="figure-right" height=85%>
-  <P>
-  Target range maps in different bat species (Kössl, 2014).
-  <P>
-  <I>Left:</I> representative spectrograms of echolocation calls.
-  <P>
-  <I>Middle:</I> brain overview with the position of auditory cortex.
-  <P>
-  <I>Right:</I> detailed view of chronotopic maps within auditory
-  cortex.
-  <P>
-  <small>
-  <font color=turquoise><B>Blue</B>:</font> target range computing areas;
-  <BR>
-  White arrows: the direction of of decreasing echo delay.
-  <BR>
-  Black arrows: increasing characteristic frequency in tonotopic
-  areas.
-  <BR>
-    [FM = frequency modulation; CF = characteristic frequency]
-  </small>
-  <HR>
-  <P class="incremental">
-  What are orderly sensory maps good for?
-  </P>
-  <P class="incremental">
-  [Think about how similarity-sensitive
-  use/<a href="w-11-2.html#(6)"
-  target=a>read-out</a> of a representation is facilitated by a
-  spatially ordered map.]
-  </P>  
-  
-</div>
-
 
   
 
@@ -1078,7 +1251,7 @@
     
 </div>    
 
-      
+-->      
 
 <DIV CLASS="slide">
   <h1>lessons?</h1>
@@ -1128,7 +1301,7 @@
 
 
 <div class="footer">
-<p>Last modified: Wed Apr 10 2024 at 09:58:10 EDT</p>
+<p>Last modified: Wed Feb 26 2025 at 10:01:05 EST</p>
 </div>
 </body>
 </html>
