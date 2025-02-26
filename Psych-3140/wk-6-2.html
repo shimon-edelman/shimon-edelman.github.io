@@ -231,8 +231,8 @@
 	 automatically corrected (memory retrieval from partial cues).
       </li>
       <li>
-	Top, limits on noise correction. Bottom, sensitivity to
-	structural noise.
+	<I>Top</I>, limits on noise correction. <I>Bottom</I>,
+	sensitivity to structural noise.
       </li>
       <li>
 	When coding with long transients in a non-persistent system,
@@ -252,10 +252,12 @@
     <HR>
       <P>
 	<small>
-	  Rishidev Chaudhuri and Ila Fiete
+	  Rishidev Chaudhuri and
+	  <a href="https://mcgovern.mit.edu/profile/ila-fiete/"
+	  target=new><B>Ila Fiete</B></a>
 	  (2016). <a href="https://www.nature.com/articles/nn.4237"
-		     target=new><I>Computational principles of memory</I></a>, Nature
-	  Neuroscience 19(3):394.
+	  target=new><I>Computational principles of memory</I></a>,
+	  Nature Neuroscience 19(3):394.
 	</small>
       </P>
   
@@ -291,11 +293,11 @@
   <img src="Heusser21-fig6ab.png" class="figure-right" height="50%">
     <ol type=a>
       <li>
-	The two-dimensional
+	[<B>Ground truth</B>] The two-dimensional
 	<a href="https://en.wikipedia.org/wiki/Topic_model"
-	target=new>topic [space]</a> trajectory taken by the episode
-	of <I>Sherlock</I>. Each dot indicates an event <font color=gray>[identified
-	using a
+	target=new>topic-space</a> trajectory taken by the episode
+	of <I>Sherlock</I>. Each dot indicates an
+	event <font color=gray>[identified using a
 	<a href="https://en.wikipedia.org/wiki/Hidden_Markov_model"
 	target=new>HMM</a>]</font>. Dot colours denote the order of
 	the events (early events are in red, later events are in
@@ -303,12 +305,12 @@
 	between successive events.
       </li>
       <li>
-	The average two-dimensional trajectory captured by
-	participants’ recall sequences, with the same format and
-	colouring. Arrows reflect the average transition direction
-	through topic space taken by any participants whose
-	trajectories crossed that part of topic space; blue denotes
-	reliable agreement across participants.
+	[<B>Recovered from behavior</B>] The average two-dimensional
+	trajectory captured by participants’ recall sequences, with
+	the same format and colouring. Arrows reflect the average
+	transition direction through topic space taken by any
+	participants whose trajectories crossed that part of topic
+	space; blue denotes reliable agreement across participants.
       </li>
     </ol>  
     <HR>
@@ -333,11 +335,13 @@
   <img src="Heusser21-fig7c.png" class="figure-right" height=85%>
     <P>
       The set of all episode and recall events is projected onto the
-      two-dimensional space derived in the previous figure. The dots
-      outlined in black denote episode events (dot size is
-      proportional to each event’s average precision). The dots
-      without black outlines denote individual recall events from each
-      participant.
+      two-dimensional space derived in the previous figure.
+    </P>
+    <P>
+      [Notation: the dots outlined in black denote episode events (dot
+      size is proportional to each event’s average precision); the
+      dots without black outlines denote individual recall events from
+      each participant.]
     </P>
     
     <HR>
@@ -381,10 +385,12 @@
     <HR>
       <P>
 	<small>
-	  Rishidev Chaudhuri and Ila Fiete
+	  Rishidev Chaudhuri
+	  and <a href="https://mcgovern.mit.edu/profile/ila-fiete/"
+	  target=new><B>Ila Fiete</B></a>
 	  (2016). <a href="https://www.nature.com/articles/nn.4237"
-		     target=new><I>Computational principles of memory</I></a>, Nature
-	  Neuroscience 19(3):394.
+	  target=new><I>Computational principles of memory</I></a>,
+	  Nature Neuroscience 19(3):394.
 	</small>
       </P>
   
@@ -406,19 +412,22 @@
       <li>
 	To encode a continuous variable in a set of well-separated
 	discrete stable states in some other coding dimension involves
-	two steps: a discretization, followed by <B>THE HARDER STEP</B> of
-	choosing how to map the discrete values into the
-	attractors. In general, there is no metric-preserving mapping
-	and the complexity of this encoding problem is high.
+	two steps: (I) a discretization, followed by (II)
+	the <B>harder</B> step of choosing how to map the discrete
+	values into the attractors. In general, there is no
+	metric-preserving mapping and the complexity of this encoding
+	problem is high.
       </li>
     </ol>
     <HR>
       <P>
 	<small>
-	  Rishidev Chaudhuri and Ila Fiete
+	  Rishidev Chaudhuri
+	  and <a href="https://mcgovern.mit.edu/profile/ila-fiete/"
+	  target=new><B>Ila Fiete</B></a>
 	  (2016). <a href="https://www.nature.com/articles/nn.4237"
-		     target=new><I>Computational principles of memory</I></a>, Nature
-	  Neuroscience 19(3):394.
+	  target=new><I>Computational principles of memory</I></a>,
+	  Nature Neuroscience 19(3):394.
 	</small>
       </P>
   
@@ -436,7 +445,7 @@
 		     title="a columbarium"
 		     height=70%></a>
   <P>
-    [THE HARDER STEP from the previous slide]
+    [The <B>harder</B> step from the previous slide]
   </P>
   <P>
     How to get to the right neighborhood in the first place? <BR>
@@ -448,7 +457,7 @@
     levels (behavioral / computational / algorithmic).
   </P>
   <P>
-    Let's start with the TASK. For any task that involves
+    Let's start with the behavioral TASK. For any task that involves
     storage/retrieval, the needs are:
       <ul>
 	<li>high capacity (room for many items)</li>
@@ -587,8 +596,10 @@
 	  </td>
 	<td rowspan=2 align="left">
 	  Post-processing (further filtering) will typically be
-	  required, but its complexity [number of elementary
-	  operations needed to complete] is low, because most irrelevant
+	  required, but its
+	  <a href="https://en.wikipedia.org/wiki/Computational_complexity_theory"
+	  target=new>complexity</a> [number of elementary operations
+	  needed to complete the task] is low, because most irrelevant
 	  items have already been filtered out when the hash table was
 	  populated with data.
 	</td>
@@ -762,7 +773,7 @@
 
 
 <DIV CLASS="slide">
-  <h1>reminder: why projection (as in LSH and in CT) can preserve veridicality</h1>
+  <h1>reminder: why projection (as in LSH and in CT) <I>generically</I> preserves veridicality</h1>
 
   <img src="projection.png" height=50% class="figure-right">
   <P>
@@ -835,11 +846,14 @@
       <li>Project \(\bf{p}\) onto the space
 	(<a href="https://en.wikipedia.org/wiki/Manifold" target=new>manifold</a>)
 	defined implicitly by the choice of landmarks/prototypes;</li>
-      <li>Use the <a href="https://en.wikipedia.org/wiki/Receptive_field"
-		     target=new>receptive field</a> of each tuned prototype unit 
-	as a "feature detector" to compute part of the address 
-	of the <a href="https://en.wikipedia.org/wiki/Columbarium"
-		  target=new>"pigeonhole"</a> where the item will be stored. 
+      <li>Use
+		     the <a href="https://en.wikipedia.org/wiki/Receptive_field"
+		     target=new>receptive field</a> of each tuned
+		     prototype unit as a "feature detector" to compute
+		     the corresponding part of the address of
+		     the <a href="https://en.wikipedia.org/wiki/Columbarium"
+		     target=new>"pigeonhole"</a> where the item will
+		     be stored.
       </li>
     </ol>
   </P>
@@ -1039,7 +1053,7 @@
   
 
 <div class="footer">
-<p>Last modified: Thu Feb 20 2025 at 13:54:52 EST</p>
+<p>Last modified: Wed Feb 26 2025 at 15:58:17 EST</p>
 </div>
 </body>
 </html>
