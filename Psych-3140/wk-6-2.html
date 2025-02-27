@@ -92,21 +92,21 @@
     </li>
     <li>
       A real-world behavioral task that illustrates this challenge:
-      associative lookup (as in "this reminds me of...").
+      associative recall (as in "this reminds me of...").
     </li>
     <li>
       An interlude:
       <ul>
 	<li>
-	  Computational principles of memory.
+	  Some general computational principles of memory.
 	</li>
 	<li>
-	  A geometric model of memory for sequences of events.
+	  A geometric model of memory for <B>sequences of events</B>.
 	</li>
       </ul>
     </li>
     <li>
-      An algorithm-level approach to associative lookup: hashing.
+      An algorithm-level approach to associative recall of <B>objects/events</B>: hashing.
       <ul>
 	<li>locality-sensitive hashing (LSH)</li>
       </ul>
@@ -129,16 +129,20 @@
 
 
 <DIV CLASS="slide">
-  <h1>memory lookup as falling into an attractor</h1>
+  <h1>memory recall / lookup as falling into an attractor</h1>
 
     <table cellspacing=5>
     <tr>
       <td>
-	Memory storage: creating <a href="http://en.wikipedia.org/wiki/Attractor"
-				    target=new>attractors</a>.
+	Memory storage:
+	creating <a href="http://en.wikipedia.org/wiki/Attractor"
+		    target=new>attractors</a> in a
+	representation space endowed with
+	the proper dynamics.
       </td>
       <td>
-	Memory recall: falling into an attractor.
+	Memory recall: falling into <strike>an</strike> the correct
+	attractor. 
       </td>
     </tr>
     <tr>
@@ -156,14 +160,15 @@
 
 
 <DIV CLASS="slide">
-  <h1>associative lookup as falling into an attractor</h1>
+  <h1>associative recall as falling into an attractor</h1>
 
   <table cellspacing=5>
     <tr>
       <td>
 	<P>
-	  ASSOCIATIVE recall: falling into an attractor <B>from a nearby
-	    location</B>.
+	  <a href="https://en.wikipedia.org/wiki/Autoassociative_memory"
+	  target=new>ASSOCIATIVE</a> recall: starting with a KEY or
+	  PARTIAL ITEM INFORMATION, fall into the correct attractor.
 	</P>
 	<P>
 	  But how to get to the right neighborhood in the first place?
@@ -187,20 +192,19 @@
 
 
 <DIV CLASS="slide">
-  <h1>vagaries of autoassociative recall</h1>
+  <h1>autoassociative recall</h1>
 
   <P>
-    ASSOCIATIVE recall: falling into an attractor <B>from a nearby
-      location</B>.
+    <a href="https://en.wikipedia.org/wiki/Autoassociative_memory"
+       target=new>ASSOCIATIVE</a> recall: starting with a KEY or
+       PARTIAL ITEM INFORMATION, fall into the correct attractor.
   </P>
-  <P>
-    But how to get to the right neighborhood in the first place? And
-    what to do if more than one item is retrieved?
-  </P>
-
   <table cellspacing=15 class="figure-right">
     <tr>
       <td rowspan=2 align=center>
+	<P>
+	  In some situations, further processing may be needed,
+	</P>
 	<img src="pig-around-barn-droodle.jpg">
       </td>
       <td>
@@ -221,14 +225,15 @@
 
       
 <div  CLASS="slide">
-  <h1>some computational principles of memory (Chaudhuri & Fiete, 2016)</h1>
+  <h1>some general computational principles of memory (Chaudhuri & Fiete, 2016)</h1>
 
   <img src="Chaudhuri16-fig4.png" class="figure-right" height=70%>
     <ol type=a>
       <li>
-	In discrete attractor networks, states in the neighborhoods of
+	 <I>Memory retrieval from partial cues in noise:</I> In
+	 discrete attractor networks, states in the neighborhoods of
 	 attractors decay to their attractors and are thus
-	 automatically corrected (memory retrieval from partial cues).
+	 automatically corrected.
       </li>
       <li>
 	<I>Top</I>, limits on noise correction. <I>Bottom</I>,
@@ -237,16 +242,15 @@
       <li>
 	When coding with long transients in a non-persistent system,
 	the initial separation between states decays over time
-	(converging blue traces). Thus, the ability of a given noise
-	strength to confuse two states grows with time. 
+	(converging blue traces). Thus, the ability to overcome noise
+	diminishes with time.
       </li>
       <li>
 	Complex trajectories in
 	<a href="https://en.wikipedia.org/wiki/Hopfield_network"
-	target=new>balanced networks</a> can be surrounded by 
-	a small region that pulls states back onto the
-	trajectory. However these regions seem to be vanishingly small
-	with system size.
+	target=new>balanced networks</a> can be surrounded by a small
+	region that pulls states back onto the trajectory. However
+	these regions become vanishingly small as system size grows.
       </li>
     </ol>
     <HR>
@@ -270,7 +274,16 @@
   <h1>[AN EXAMPLE: behavioral analysis] a topic model of film episodic memory</h1>
 
   <img src="Heusser21-fig1.png" class="figure-right" height=80%>
-  
+
+    <P>
+      The data used to construct
+	a <a href="https://en.wikipedia.org/wiki/Topic_model"
+	target=new>topic model</a> of a series of sociolinguistic
+      episodes.
+    </P>
+    <P class="incremental">
+      Used by whom and for what purpose?
+    </P>
     <P>
       <small>
 	Andrew Heusser et
@@ -293,16 +306,16 @@
   <img src="Heusser21-fig6ab.png" class="figure-right" height="50%">
     <ol type=a>
       <li>
-	[<B>Ground truth</B>] The two-dimensional
+	[<B>Ground truth</B>] A two-dimensional rendering of a
 	<a href="https://en.wikipedia.org/wiki/Topic_model"
 	target=new>topic-space</a> trajectory taken by the episode
 	of <I>Sherlock</I>. Each dot indicates an
 	event <font color=gray>[identified using a
 	<a href="https://en.wikipedia.org/wiki/Hidden_Markov_model"
-	target=new>HMM</a>]</font>. Dot colours denote the order of
-	the events (early events are in red, later events are in
-	blue), and the connecting lines indicate the transitions
-	between successive events.
+	target=new>Hidden Markov Model</a> or HMM]</font>. Dot colours
+	denote the order of the events (early events are in red, later
+	events are in blue), and the connecting lines indicate the
+	transitions between successive events.
       </li>
       <li>
 	[<B>Recovered from behavior</B>] The average two-dimensional
@@ -341,7 +354,11 @@
       [Notation: the dots outlined in black denote episode events (dot
       size is proportional to each event’s average precision); the
       dots without black outlines denote individual recall events from
-      each participant.]
+      each participant. In each circular Wordle, the <I>left side</I>
+      displays words associated with the topic vector for the episode
+      event, and the <I>right side</I> displays words associated with
+      the (average) recall-event topic vector, across all recall
+      events matched to the given episode event.]
     </P>
     
     <HR>
@@ -362,16 +379,16 @@
   
       
 <div  CLASS="slide">
-  <h1>[back to implementation-level theory] capacity / robustness trade-off (Chaudhuri & Fiete, 2016)</h1>
+  <h1>[back to computational theory] capacity / robustness trade-off (Chaudhuri & Fiete, 2016)</h1>
 
   <img src="Chaudhuri16-fig5.png" class="figure-right" height=70%>
     <ol type=a>
       <li>
 	If memory states, whether discrete or continuous (dark blue in
-	left, right, respectively), are well-separated, a decoder can
-	robustly recover the state from a relatively large amount of
-	noise because the neighborhoods of each memory state are large
-	(shaded light blue regions).
+	<I>left</I>, <I>right</I>, respectively), are well-separated,
+	a decoder can robustly recover the state from a relatively
+	large amount of noise because the neighborhoods of each memory
+	state are large (shaded light blue regions).
       </li>
       <li>
 	Packing more memory states into the fixed state space volume
@@ -411,12 +428,12 @@
       </li>
       <li>
 	To encode a continuous variable in a set of well-separated
-	discrete stable states in some other coding dimension involves
-	two steps: (I) a discretization, followed by (II)
-	the <B>harder</B> step of choosing how to map the discrete
-	values into the attractors. In general, there is no
-	metric-preserving mapping and the complexity of this encoding
-	problem is high.
+	discrete stable states in some other coding dimension [WHY
+	even try that??] involves two steps: (I) a discretization,
+	followed by (II) the <B>harder</B> step of choosing how to map
+	the discrete values into the attractors. In general, there is
+	no metric-preserving mapping and the complexity of this
+	encoding problem is high.
       </li>
     </ol>
     <HR>
@@ -437,7 +454,7 @@
       
 
 <div  CLASS="slide">
-  <h1>[computation and algorithm levels] ASSOCIATIVE MEMORY: balancing task requirements</h1>
+  <h1>ASSOCIATIVE MEMORY: balancing task requirements</h1>
 
   <a href="https://en.wikipedia.org/wiki/Columbarium"
      target=new><img src="columbarium.jpg"
@@ -445,20 +462,13 @@
 		     title="a columbarium"
 		     height=70%></a>
   <P>
-    [The <B>harder</B> step from the previous slide]
+    Attractor dynamics resides on the IMPLEMENTATION level. To fully
+    understand associative memory, we must start at the more abstract
+    levels: BEHAVIORAL / PROBLEM and ALGORITHM & REPRESENTATION.
   </P>
   <P>
-    How to get to the right neighborhood in the first place? <BR>
-      And what to do if more than one item is retrieved?
-  </P>
-  <P>
-    Answers to those questions will NOT be found on the implementation
-    level (attractors dynamics) — we must consider the more abstract
-    levels (behavioral / computational / algorithmic).
-  </P>
-  <P>
-    Let's start with the behavioral TASK. For any task that involves
-    storage/retrieval, the needs are:
+    Let's consider the behavioral problem level. For any task that
+    involves storage/retrieval, the needs are:
       <ul>
 	<li>high capacity (room for many items)</li>
 	<li>convenient addressing (easy to figure out at what address a given
@@ -479,11 +489,17 @@
   <P>
     The requirements: a storage/retrieval mechanism with
     <ul>
-      <li>high capacity (room for many items)</li>
-      <li>convenient addressing (easy to figure out at what address a given
-	item is stored)</li>
-      <li>quick access (not having to sift through too many items to find the
-	needed one)</li>
+      <li>
+	<font color=gray>high capacity (room for many items)</font>
+      </li>
+      <li>
+	convenient addressing (easy to figure out at what address a
+	given item is stored)
+      </li>
+      <li>
+	quick access (not having to sift through too many items to find the
+	needed one)
+      </li>
     </ul>
   </P>
   <P>
@@ -512,13 +528,10 @@
   <P>
     Hashing is a family of storage/retrieval algorithms that use
        a <a href="http://en.wikipedia.org/wiki/Hash_function"
-	    target=new>hash function</a> to MAP CONTENT TO AN ADDRESS.
-  </P>
-  <P>
-    [See
-    this <a href="https://www.quantamagazine.org/scientists-find-optimal-balance-of-data-storage-and-time-20240208/"
-    target=new>recent article</a> on hashing in the <I>Quanta</I> 
-    magazine.]
+       target=new>hash function</a> to MAP CONTENT TO AN ADDRESS. [See
+       this <a href="https://www.quantamagazine.org/scientists-find-optimal-balance-of-data-storage-and-time-20240208/"
+       target=new>recent article</a> on hashing in the <I>Quanta</I>
+       magazine.]
   </P>
   <P>
     Hashing supports one-step (constant-time) access. But there are
@@ -600,8 +613,8 @@
 	  <a href="https://en.wikipedia.org/wiki/Computational_complexity_theory"
 	  target=new>complexity</a> [number of elementary operations
 	  needed to complete the task] is low, because most irrelevant
-	  items have already been filtered out when the hash table was
-	  populated with data.
+	  items will have already been filtered out when the hash
+	  table was populated with data.
 	</td>
 	</tr>
 	  <tr>
@@ -623,7 +636,7 @@
   <img src="approximate-nearest-neighbor.jpg" height=50% class="figure-right">
   <P>
   ANY hashing function \(h\) that maps the data space to the memory
-  address space is suitable for LSH, provided that the LSH condition is
+  address space is suitable for LSH, provided that the LSH CONDITION is
   satisfied (Indyk & Motwani, 1998): 
   <DIR><DIR>
     <ul>
@@ -963,8 +976,18 @@
     </P>
     <P>
       <I>Bottom:</I> Memory consists of a set of fully interconnected
-      units forming a content-addressable memory that projects to a
-      single valuation calculation. 
+      units forming a
+      <a href="https://en.wikipedia.org/wiki/Content-addressable_memory"
+      target=new>content-addressable memory</a> CAM that projects to a
+      single valuation calculation.
+    </P>
+    <P class="incremental">
+      <a href="https://en.wikipedia.org/wiki/Hopfield_network"
+      target=new>Hopfield network</a> and related types of CAM are
+      susceptible to
+      <a href="https://en.wikipedia.org/wiki/Catastrophic_interference"
+      target=new>catastrophic interference</a>. (More about this in
+      week 11.)
     </P>
     <P>
       <small>
@@ -1053,7 +1076,7 @@
   
 
 <div class="footer">
-<p>Last modified: Wed Feb 26 2025 at 15:58:17 EST</p>
+<p>Last modified: Thu Feb 27 2025 at 09:02:35 EST</p>
 </div>
 </body>
 </html>
