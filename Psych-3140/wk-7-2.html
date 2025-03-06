@@ -5,7 +5,7 @@
 <head>
 <title>Psych 3140/6140 wk-7-2</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- <meta name="copyright" content="Copyright &169; 2008-2024 Shimon Edelman"/> -->
+<!-- <meta name="copyright" content="Copyright &169; 2008-2025 Shimon Edelman"/> -->
 <meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
 <link rel="stylesheet" href="../Slidy/w3c-blue3.css"
  type="text/css" media="screen, projection, print" />
@@ -314,10 +314,10 @@
     index finger force. The variability in this space can be
     partitioned into a <I>task-relevant component</I> that modulates
     force in the target direction and a <I>task-irrelevant
-    component</I> that does not. During this task, task-irrelevant
-    variability is consistently larger than task-relevant variability,
-    suggesting that at the muscle level there is a preferential
-    control of task-relevant dimensions.
+    component</I> that does not. During this task, <B>task-irrelevant
+    variability is consistently larger</B> than task-relevant
+    variability, suggesting that at the muscle level there is a
+    preferential control of task-relevant dimensions.
   <P class="incremental">
     <font color=gray>[As <a href="https://en.wikipedia.org/wiki/Laozi"
 			    target=new>Laozi</a>'s (rather extreme)
@@ -458,8 +458,8 @@
     <li>a GENERATIVE MODEL of the situation, which specifies how different
     factors, such as tools or levels of fatigue, influence performance;
     </li>
-    <li>a prior distribution, which states how these factors vary over
-    space and time.
+    <li>a PRIOR probability distribution of these factors, which
+    states how they vary over space and time.
     </li>
   </ol>
 
@@ -486,8 +486,8 @@
   multiple, overlapping internal representations that can be selectively
   engaged by each movement <B>context</B>.
   <P>
-  A general underlying principle of what
-  can or cannot serve as a contextual switch is still <B>elusive</B>.
+  A general underlying principle of what can or cannot serve as a
+  contextual switch is still <B>elusive</B> [recall AD HOC CONCEPTS].
   <P>
   <font color=gray>[Compare the <a
   href="https://en.wikipedia.org/wiki/Frame_problem" target=new>Frame
@@ -589,7 +589,7 @@
     <table cellspacing=10>
       <tr>
 	<td><img src="Graziano02-fig4a.jpg"></td>
-	<td><img src="Graziano02-fig4b.jpg"></td>
+	<td><img src="Graziano02-fig4b.jpg" title="Earliest known example of police violence"></td>
       </tr>
     </table>
   </P>
@@ -598,8 +598,7 @@
     is a detail from
     <a href="https://en.wikipedia.org/wiki/Michelangelo"
        target=new>Michelangelo</a>&rsquo;s
-    <a href="https://www.wga.hu/frames-e.html?/html/m/michelan/3sistina/1genesis/4sin/04_3ce4.html"
-       title="Earliest known example of police violence"
+    <a href="https://www.wga.hu/frames-e.html?/html/m/michelan/3sistina/1genesis/4sin/04_3ce4.html"       
        target=new><I>Fall and Expulsion from Eden</I></a>).
   </P>
   
@@ -764,8 +763,8 @@
   <h1>model-free compared to model-based RL (Dayan & Niv, 2008)</h1>
 
   <img src="DayanNiv08-fig1.png" class="figure-right" height=65%>
-  <I>Right:</I> an illustration of the difference between model-free
-  and model-based approaches to decision-making.
+  <I>Right:</I> an illustration of the difference between MODEL-FREE
+  and MODEL-BASED approaches to decision-making in NAVIGATION.
   <P>
   <HR>
     <P>
@@ -816,11 +815,11 @@
       entropy (black squares in b) varied from zero to high.
     </P>
     <P>
-      <B>(b)</B> Mid-entropy environments had the highest survival
-      rates at the maximal degree of planning simulated. Low- and
+      <B>(b)</B> MID-ENTROPY ENVIRONMENTS had the highest survival
+      rates at the MAXIMAL degree of PLANNING simulated. Low- and
       high-entropy environments performed no better under plan-based
-      action selection than habit-based. On the right, occupancy
-      frequency heat maps show that successful paths were stereotyped
+      action selection than habit-based. <I>Right:</I> occupancy
+      frequency heat maps show that SUCCESSFUL PATHS were stereotyped
       for low entropy and high entropy. In mid entropy, there was a
       high diversity of successful paths.
     </P>
@@ -841,8 +840,8 @@
   <B>(a)</B> From the experimentalist's point of view (scientist
   caricature), the world is characterized by a single state (\(S_0\)) and two
   actions: left (blue, L) or right (red, R) button press. However, from the  
-  participant's point of view there is an infinite repertoire of possible
-  world models characterized by different sets of states and actions.
+  participant's point of view there is an INFINITE REPERTOIRE OF POSSIBLE
+  WORLD MODELS characterized by different sets of states and actions.
   <BR>
   <B>(b)</B> With respect to the <B>action</B> sets, she may assume that there is
   only a single available action, pressing any button, regardless of its
@@ -902,23 +901,30 @@
 
   <img src="Markov-Decision-Process.gif" height=35% class="figure-right">
   <P>
-  The best studied case is when RL can be formulated as a class of Markov Decision Problems
-  (<a href="https://en.wikipedia.org/wiki/Markov_decision_process" target=new>MDP</a>).
+    The best studied case is when RL can be formulated as a class of
+    Markov Decision Process
+    (<a href="https://en.wikipedia.org/wiki/Markov_decision_process"
+    target=new>MDP</a>).
+  </P>
   <P>
-  The agent can visit a finite number of states \(S_i\). In visiting a
-  state, it collects a numerical reward \(R_i\), where negative numbers may
-  represent punishments. Each state has a changeable value \(V_i\) attached
-  to it. From every state there are subsequent states that can 
-  be reached by means of actions \(A_{ij}\). The value \(V_i\) of a state
-  \(S_i\) is defined by the averaged future reward \(\tilde{R}\) which can
-  be accumulated by selecting actions from this particular state. Actions
-  are selected according to a <I>policy</I> which can also change. The goal of an RL 
-  algorithm is to select actions that maximize the <B>expected cumulative
-  reward</B> (the return) of the agent.
+    The agent can visit a finite number of states \(S_i\). In visiting
+    a state, it collects a numerical reward \(R_i\), where negative
+    numbers may represent punishments. Each state has a changeable
+    value \(V_i\) attached to it. From every state there are
+    subsequent states that can be reached by means of actions
+    \(A_{ij}\). The value \(V_i\) of a state \(S_i\) is defined by the
+    averaged future reward \(\tilde{R}\) which can be accumulated by
+    selecting actions from this particular state. Actions are selected
+    according to a <I>policy</I> which can also change. The goal of an
+    RL algorithm is to select actions that maximize the <B>expected
+      cumulative reward</B> (the return) of the agent.
+  </P>
   <P>
-  [<font color=gray>For a useful introduction to RL, MDP, and the basic algorithms, see the <a
-  href="https://www.scholarpedia.org/article/Reinforcement_learning"
-  target=new>Scholarpedia article</a>.]</font>
+    [<font color=gray>For a useful introduction to MDP and the basic
+      algorithms see
+      the <a href="https://en.wikipedia.org/wiki/Markov_decision_process"
+	     target=new>Wikipedia article</a>.]</font>
+  </P>
 
 </div>
 
@@ -929,17 +935,17 @@
 
   <img src="Barto13-fig1.png" class="figure-right" height=35%>
   <P>
-    The old/standard view of agent-environment interaction in
-    RL. Primary reward signals are supplied to the agent from a
-    "critic" in its environment.
+    <I>Right:</I> The old and still common view of agent-environment
+    interaction in RL. Primary reward signals are supplied to the
+    agent from a "critic" in its environment.
   </P>
   <HR>
   <img src="Barto13-fig2.png" class="figure-left" height=50%>
   <P>
-    A refined view, in which the environment is divided into an
-    internal and external environment, with all reward signals coming
-    from the former.  The shaded box corresponds to what we would
-    think of as the "organism."
+    <I>Left:</I> A refined view, in which the environment is divided
+    into an internal and external environment, with all reward signals
+    coming from the former.  The shaded box corresponds to what we
+    would think of as the "organism."
   </P>
   <HR>
   <P class="incremental">
@@ -1262,8 +1268,9 @@
     </DIR>
     <HR>
     (<B>A</B>). Rooms domain. Vertices represent states
-    (<font color=green>green</font> = start, <font color=red>red</font> = 
-    goal), and edges feasible transitions.
+    (<font color=green>green</font> =
+    start, <font color=red>red</font> = goal); edges represent
+    feasible transitions.
 
 </div>
   
@@ -1274,66 +1281,73 @@
 
   <img src="SolwayEtAl14-fig1B.png" height=65% class="figure-right">
     <P>
-	(<B>B</B>). Mean performance of three hierarchical reinforcement
-	learning agents in the rooms task.
-	<P>
-	  Inset: Results based on four
-  graph decompositions. <font color=blue>Blue</font>: decomposition
-  from panel C [previous slide]. <font color=purple>Purple</font>: 
-  decomposition from panel D. Black: entire graph treated as one
-  region. <font color=orange>Orange</font>: decomposition with orange
-  vertices in panel A segregated out as singleton regions.
-	<P>
-	  <small>
-<font color=gray>  Model evidence is on a log
-  scale (data range \( -7.00 \times 10^4\) to \( -1.19 \times
-  10^5\)). Search time 
-  denotes the expected number of trial-and-error attempts to discover
-  the solution to a randomly drawn task or subtask (geometric mean;
-  range 685 to 65947; tick mark indicates the
-  origin). <a href="https://en.wikipedia.org/wiki/Minimum_description_length"
-  target=new>Codelength</a>
-  signifies the number of bits required to encode the entire data-set
-  under a <a href="https://en.wikipedia.org/wiki/Shannon_coding"
-  target=new>Shannon code</a> (range \(1.01\times 10^5\) to
-  \(1.72\times 10^5\)). Note that the abscissa refers both to model
-  evidence and codelength. Model evidence increases left to right, and
-  codelength increases right to left.
-  </font>
-  </small>
+      (<B>B</B>). Mean performance of three hierarchical reinforcement
+      learning agents in the rooms task.
+    </P>
+    <P>
+      Inset: Results based on four graph
+      decompositions. <font color=blue>Blue</font>: decomposition from
+      panel C [previous slide]. <font color=purple>Purple</font>:
+      decomposition from panel D [arbitrary decomposition, not
+      shown]. Black: entire graph treated as one
+      region. <font color=orange>Orange</font>: decomposition with
+      orange vertices in panel A segregated out as singleton regions.
+    </P>
+    <P>
+      <small>
+	<font color=gray> MODEL EVIDENCE [next slide] is on a log
+	  scale (data range \( -7.00 \times 10^4\) to \( -1.19 \times
+	  10^5\)). Search time denotes the expected number of
+	  trial-and-error attempts to discover the solution to a
+	  randomly drawn task or subtask (geometric mean; range 685 to
+	  65947; tick mark indicates the
+	  origin). <a href="https://en.wikipedia.org/wiki/Minimum_description_length"
+	  target=new>Codelength</a> signifies the number of bits
+	  required to encode the entire data-set under
+	  a <a href="https://en.wikipedia.org/wiki/Shannon_coding"
+	  target=new>Shannon code</a> (range \(1.01\times 10^5\) to
+	  \(1.72\times 10^5\)). Note that the abscissa refers both to
+	  model evidence and codelength. Model evidence increases left
+	  to right, and codelength increases right to left.
+	</font>
+      </small>
+    </P>
 
 </div>
   
 
 <div  CLASS="slide">
-  <h1>[EXTRA] using model evidence to find optimal hierarchy (Solway et al. 2014)</h1>
+  <h1>[EXTRA] using MODEL EVIDENCE to find optimal hierarchy (Solway et al. 2014)</h1>
 
   <P>
-  "The optimal hierarchy is one that best facilitates
-  adaptive behavior in the face of new problems. [...] This
-  notion can be made precise using the framework of
-  <a href="https://en.wikipedia.org/wiki/Bayes_factor" target=new>Bayesian model
-  selection</a>. [...] The agent is assumed to occupy a world in which it
-  will be faced with a specific <I>set</I> of tasks in an unpredictable
-  order, and the objective is to find a hierarchical representation
-  that will beget the best performance on average across this set of
-  tasks. An important aspect of this scenario is that the agent may
-  <I>reuse</I> subtask policies across tasks (as well as task policies if
-  tasks recur)."
+    "The optimal hierarchy is one that best facilitates adaptive
+    behavior in the face of new problems. [...] This notion can be
+    made precise using the framework of
+    <a href="https://en.wikipedia.org/wiki/Bayes_factor"
+       target=new>Bayesian model selection</a>. [...] The agent is
+       assumed to occupy a world in which it will be faced with a
+       specific <I>set</I> of tasks in an unpredictable order, and the
+       objective is to find a hierarchical representation that will
+       beget the best performance on average across this set of
+       tasks. An important aspect of this scenario is that the agent
+       may <I>reuse</I> subtask policies across tasks (as well as task
+       policies if tasks recur)." 
+  </P>
   <P>
-  In <a href="https://en.wikipedia.org/wiki/Bayes_factor"
-  target=new>Bayesian model selection</a>, each candidate model is assumed
-  to be associated with a set of parameters \(\theta\), and the fit
-  between the model and the target data is quantified by the marginal
-  likelihood or <I><B>model evidence</B></I>:
-  $$
-  P\left(data\mid model\right)=\sum_{\theta\in\Theta} P\left(data\mid model,\theta\right)
-  P\left(\theta\mid model\right)
-  $$
-  where \(\Theta\) is the set of feasible model parameterizations
-  <font color=gray>(in the above formula, the likelihood is called
-  "marginal" because it is marginalized over all possible choices of
-  \(\theta\))</font>. 
+    In <a href="https://en.wikipedia.org/wiki/Bayes_factor"
+	  target=new>Bayesian model selection</a>, each candidate model is assumed
+    to be associated with a set of parameters \(\theta\), and the fit
+    between the model and the target data is quantified by the marginal
+    likelihood or <I><B>model evidence</B></I>:
+    $$
+    P\left(data\mid model\right)=\sum_{\theta\in\Theta} P\left(data\mid model,\theta\right)
+    P\left(\theta\mid model\right)
+    $$
+    where \(\Theta\) is the set of feasible model parameterizations
+    <font color=gray>(in the above formula, the likelihood is called
+      "marginal" because it is marginalized over all possible choices of
+      \(\theta\))</font>.
+  </P>
 
 </div>
   
@@ -1373,16 +1387,16 @@
     participants prepared to make a set of ‘‘deliveries’’ by learning
     the layout of a small town.  The town comprised a set of ten
     locations, each associated with a distinctive visual
-    icon. Participants were never given a bird’s eye view of the
+    icon. Participants were never given a BIRD’S EYE VIEW of the
     town. Instead, during an initial training period, participants
-    were drilled on the adjacency relations among individual
+    were drilled on the ADJACENCY RELATIONS among individual
     locations. <small> Following this training period, participants
     were informed that they would next be asked to navigate through
     the town in order to make a series of deliveries between randomly
     selected locations, receiving a payment for each delivery that
     rewarded use of the fewest possible steps. Before making any
     deliveries, however, participants were asked to choose the
-    position for a ‘‘bus stop’’ within the town. Instructions
+    position for a ‘‘BUS STOP’’ within the town. Instructions
     indicated that, during the subsequent deliveries, participants
     would be able to ‘‘take a ride’’ to the bus stop’s location from
     anywhere in the town, potentially saving steps and thereby
@@ -1716,12 +1730,12 @@
     decision-making, from processing high-dimensional data on earth
     systems to monitoring compliance with environmental
     regulations. Of the ML techniques available to address pressing
-    environmental problems (e.g., climate change, biodiversity loss),
-    Reinforcement Learning (RL) may both hold the greatest promise and
-    present the most pressing perils.
+    environmental problems (e.g., <B>climate change</B>, biodiversity
+    loss), Reinforcement Learning (RL) may both hold the greatest
+    promise and present the most pressing perils.
   </P>
   <P>
-    This paper explores how RL-driven POLICY refracts existing POWER
+    This paper explores how RL-driven POLICY reflects existing POWER
     RELATIONS in the environmental domain while also creating unique
     challenges to ensuring equitable and accountable environmental
     decision processes. We leverage examples from RL applications to
@@ -1776,7 +1790,7 @@
   
 
 <div class="footer">
-<p>Last modified: Tue Mar 4 2025 at 14:09:20 EST</p>
+<p>Last modified: Thu Mar 6 2025 at 08:31:03 EST</p>
 </div>
 </body>
 </html>
