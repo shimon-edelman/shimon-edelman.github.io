@@ -401,11 +401,15 @@
     variable in the associated probability distribution. The directed edges
     express the statistical dependencies between the variables in a fashion
     consistent with the
-    <a href="https://en.wikipedia.org/wiki/Causal_Markov_condition" target=new><I>Markov condition</I></a>:
-    <DIR> <DIR> <DIR> a node is conditionally independent of the rest
-	  of the network, given its Markov blanket. [This is to say,
-	  when conditioned on its parents, each variable is
-	  independent of all other variables except its descendants.]
+    <a href="https://en.wikipedia.org/wiki/Causal_Markov_condition"
+    target=new><I>Markov condition</I></a>: 
+    <DIR> <DIR> <DIR>
+	  A node is conditionally independent of the rest
+	  of the network, given
+	  its <a href="https://en.wikipedia.org/wiki/Markov_blanket"
+	  target=new>Markov blanket</a>. [This is to say, when
+	  conditioned on its parents, each variable is independent of
+	  all other variables except its descendants.]
     </DIR>  </DIR>  </DIR>
   </P>
   <HR>
@@ -413,8 +417,9 @@
       A reminder: by definition, \(A\) and \(B\) are independent, if
 	\(P\left(A,B\right) = P\left(A\right) P\left(B\right)\).
       <BR>
-      Therefore, \(A\) and \(B\) are CONDITIONALLY independent given \(C\), if \(P\left(A,B\mid
-      C\right) = P\left(A\mid C\right) P\left(B\mid C\right)\)
+      Furthermore, \(A\) and \(B\) are CONDITIONALLY independent given
+      \(C\), if \(P\left(A,B\mid C\right) = P\left(A\mid C\right)
+      P\left(B\mid C\right)\)
     </P>
 
 </div>
@@ -428,9 +433,9 @@
   <P>
     This CONDITIONAL INDEPENDENCE has an important implication: it
     makes it possible to FACTORIZE the joint probability distribution
-    into the product of the conditional distribution for each variable
-    conditioned on its parents: $$ P(X_1, X_2, \dots, X_m) = \prod_i
-    P\left(X_i \mid \textrm{parents}\left(X_i\right)\right) $$
+    into the product of the individual distributions of the variables,
+    each conditioned on its parents: $$ P(X_1, X_2, \dots, X_m) =
+    \prod_i P\left(X_i \mid \textrm{parents}\left(X_i\right)\right) $$
   </P>
   <P>
     <I>Right:</I> A Bayes net for the "psychic friend" example.
@@ -441,8 +446,7 @@
       friend is psychic, the outcomes of the coin flip and the levitation
       experiments are completely unrelated
       (= <a href="https://en.wikipedia.org/wiki/Independence_(probability_theory)" 
-	    target=new><B>statistically independent</B></a>). By the Markov
-      condition, we can write: 
+	    target=new><B>statistically independent</B></a>). Therefore, we can write: 
       $$
       P(X_1, X_2, X_3, X_4) = P(X_1 \mid X_3, X_4) \cdot P(X_2 \mid X_3) \cdot P(X_3) \cdot P(X_4)
       $$
@@ -798,29 +802,31 @@
   <h1>do rats know the difference between observation and intervention?</h1>
 
   <img src="Blaisdell06-fig1-left.jpg" class="figure-right" height=70%>
-  <P>
-    Finding "a dissociation between <B>'seeing'</B> [<SC>observing</SC> the tone <B>T</B>] and
-    <B>'doing'</B> [<SC>intervening</SC> to make <B>T</B> happen by pressing the
-    lever] would be remarkable, because in the observational learning phase
-    <B>T</B> is positively correlated with the light <B>L</B>."
-  </P>
-  <P>
-    <small>
-          <a
-	    href="http://www.sciencemag.org/cgi/content/abstract/311/5763/1020?etoc"
-	    target=new><I>Causal reasoning in rats</I></a>, A. P. Blaisdell <I>et al.</I>, Science
-	  311:1020-1022 (2006).
-    </small>
-  </P>
-  <HR>
-    <P class="incremental">
-      In other words, once the rats get a chance to cause T by pressing
-      a lever, they should reduce their association between T and F —
-      because causality requires more than just correlation! 
+    <P>
+      Once the rats get a chance to cause T by pressing a lever, they
+      should reduce their association between T and F — because
+      causality requires more than just correlation!
       <BR>
 	Do rats realize that?
       </P>
-  
+    <P>
+      <small>
+        <a
+	  href="http://www.sciencemag.org/cgi/content/abstract/311/5763/1020?etoc"
+	  target=new><I>Causal reasoning in rats</I></a>, A. P. Blaisdell <I>et al.</I>, Science
+	311:1020-1022 (2006).
+      </small>
+    </P>
+    <HR>
+      <P>
+	<font color=gray>
+	  Finding "a dissociation between <B>'seeing'</B> [<SC>observing</SC> the tone <B>T</B>] and
+	  <B>'doing'</B> [<SC>intervening</SC> to make <B>T</B> happen by pressing the
+	  lever] would be remarkable, because in the observational learning phase
+	  <B>T</B> is positively correlated with the light <B>L</B>."
+	</font>
+      </P>
+
 </div>
 
 
@@ -968,7 +974,7 @@
   <video src="climate-change-denial-reasoning-fallacies.mp4"
 	 class="figure-right"
 	 controls
-	 width=70%>
+	 width=60%>
   </video>
   <P>
     Did someone say ECOLOGY?
@@ -984,6 +990,9 @@
 	2/6/2018)]
       </small>
     </P>
+    <a href="https://convergencemag.com/articles/we-cant-talk-to-people-that-way/"
+    target=new><img src="what-is-authoritarian.png" 
+    class="figure-left" width=30%></a>
   
 </div>
 
@@ -1103,7 +1112,7 @@
 
 
 <div class="footer">
-<p>Last modified: Fri Mar 14 2025 at 11:49:44 EDT</p>
+<p>Last modified: Tue Mar 18 2025 at 08:41:30 EDT</p>
 </div>
 </body>
 </html>
