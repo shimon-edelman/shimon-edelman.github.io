@@ -151,8 +151,13 @@
 
   <img src="Churchland-10-7.jpg" class="figure-right" height=60%>
   <P>
-    A pattern of connections between two bundles of wires can directly
-    implement vector PROJECTION.
+    Neurons do <a href="https://en.wikipedia.org/wiki/Linear_algebra"
+    target=new>linear algebra</a>. In particular, they can implement
+    operations on
+    <a href="https://en.wikipedia.org/wiki/Vector_space"
+    target=new>vector spaces</a>. For instance, a pattern of
+    connections between two bundles of wires can directly implement
+    VECTOR PROJECTION.
   </P>
   <P>
     Mathematically, projecting one <I>N</I>-dimensional
@@ -183,7 +188,7 @@
 
   
 <DIV  CLASS="slide">
-  <h1>WHAT is projection good for? Dimensionality reduction</h1>
+  <h1>what is PROJECTION good for? Dimensionality reduction</h1>
 
   <P>
     A projection circuit can carry out "information-preserving"
@@ -320,11 +325,8 @@
     </ul>
   </P>
   <P>
-    Tuning is never sharp and discrete: RFs are always GRADED and
-    overlapping (recall the discussion of hyperacuity and channel
-    coding in
-    <a href="https://shimon-edelman.github.io/Psych-3140/wk-4-1.html#(15)"
-       target=new>Lecture 4.1</a>).
+    A general principle: tuning is never sharp and discrete; rather,
+    the RFs are always GRADED and overlapping.
   </P>
 
 </div>
@@ -336,7 +338,21 @@
 
   <img src="photoreceptor-spectral-tuning.png" class="figure-right"
        height=60%> 
-
+    <P>
+      The broad, graded, and overlapping spectral "receptive fields"
+      of <a href="https://en.wikipedia.org/wiki/Photoreceptor_cell"
+      target=new>retinal photoreceptors</a> ensure that even a small
+      change in the
+      <a href="https://en.wikipedia.org/wiki/Spectrum#Physical_sciences"
+      target=new>spectrum</a> of incident light is registered by the
+      visual system.
+    </P>
+    <P>
+      (The same mechanism is at work in the case of spatial acuity,
+      discussed in
+      <a href="https://shimon-edelman.github.io/Psych-3140/wk-4-1.html#(15)"
+	 target=new>Lecture 4.1</a>.)
+    </P>
 
 </div>
   
@@ -347,7 +363,20 @@
 
   <img src="ganglion-cell-RF-tuning.png" class="figure-right"
        height=85%> 
-
+    <P>
+      The <a href="https://en.wikipedia.org/wiki/Retinal_ganglion_cell"
+      target=new>ganglion cells</a> are the output stage of the
+      retina. Their axons form the optic nerve, that connects the eye
+      to the rest of the brain.
+    </P>
+    <P>
+      In addition to being graded and overlapping, the receptive
+      fields of the retinal ganglion cells are shaped so as to
+      implement a specific computation: to facilitate the
+      <a href="https://en.wikipedia.org/wiki/Edge_detection"
+      target=new>detection of edges</a> (spatial changes of
+      brightness) in the retinal image.
+    </P>
 
 </div>
   
@@ -382,10 +411,9 @@
   What are orderly sensory maps good for?
   </P>
   <P class="incremental">
-  [Think about how similarity-sensitive
-  use/<a href="w-11-2.html#(6)"
-  target=a>read-out</a> of a representation is facilitated by a
-  spatially ordered map.]
+  [Think about how similarity-sensitive use/<a href="w-11-2.html#(6)"
+  target=a>read-out</a> of a representation is made possible by it
+  forming a spatially ordered map.]
   </P>  
   
 </div>
@@ -570,10 +598,10 @@
     the rat explored the enclosure it was in.
   </P>
   <P>
-    The path is shown in gray; the black dots
-    mark the locations where the <a
-				   href="http://en.wikipedia.org/wiki/Place_cell"
-				   target=new><SC>place cell</SC></a> fired.
+    The path is shown in gray; the black dots mark the locations where
+    the <a href="https://en.wikipedia.org/wiki/Hippocampus"
+    target=new>hippocampal</a> <a href="http://en.wikipedia.org/wiki/Place_cell"
+    target=new><SC>place cell</SC></a> fired.
     <img src="rat-helmet.jpg" title="a rat with electrodes implanted in its brain"
 	 class="figure-left" height=300>
     </P>
@@ -827,24 +855,39 @@
 
 
 <DIV CLASS="slide">
-  <h1>an integrated model of the hippocampal complex (Chandra et al., 2025)</h1>
+  <h1>[EXTRA] an integrated model of the hippocampal complex (Chandra et al., 2025)</h1>
 
   <P>
-    We present a neocortical–entorhinal–hippocampal network model that
+    We present a
+    <a href="https://en.wikipedia.org/wiki/Neocortex"
+    target=new>neocortical</a>–<a href="https://en.wikipedia.org/wiki/Entorhinal_cortex"
+    target=new>entorhinal</a>–hippocampal network model that
     implements a high-capacity general associative memory, spatial
     memory and episodic memory. By factoring content storage from the
     dynamics of generating error-correcting stable states, the circuit
     (which we call vector hippocampal scaffolded heteroassociative
-    memory (Vector-HaSH)) avoids the memory cliff of prior memory
-    models1, and instead exhibits a graceful trade-off between number
-    of stored items and recall detail. A pre-structured internal
-    scaffold based on grid cell states is essential for constructing
-    even non-spatial episodic memory: it enables high-capacity
-    sequence memorization by abstracting the chaining problem into one
-    of learning low-dimensional transitions. Vector-HaSH reproduces
-    several hippocampal experiments on spatial mapping and
-    context-based representations, and provides a circuit model of the
-    ‘memory palaces’ used by memory athletes. Thus, this work provides
+    memory (Vector-HaSH)) [recall our discussion of
+    <a href="https://en.wikipedia.org/wiki/Hash_function"
+    target=new>hashing</a> in
+    <a href="https://shimon-edelman.github.io/Psych-3140/wk-6-2.html#(14)"
+    target=new>Lecture 6.2</a>] avoids the memory cliff of prior
+    memory models, and instead exhibits a graceful trade-off between
+    number of stored items and recall detail.
+  </P>
+  <P>
+    A pre-structured internal scaffold based on GRID CELL states is
+    essential for constructing even non-spatial episodic memory: it
+    enables high-capacity sequence memorization by abstracting the
+    chaining problem into one of learning low-dimensional
+    transitions.
+  </P>
+  <P>
+    Vector-HaSH reproduces several hippocampal experiments on spatial
+    mapping and context-based representations, and provides a circuit
+    model of the
+    <a href="https://en.wikipedia.org/wiki/Method_of_loci"
+    target=new>‘memory palaces’</a> used by memory athletes. Thus,
+    this work provides
     <B>a unified understanding of the spatial mapping and associative
     and episodic memory roles of the hippocampus</B>.
   </P>
@@ -862,20 +905,24 @@
   
 
 <DIV CLASS="slide">
-  <h1>an integrated model of the hippocampal complex (Chandra et al., 2025)</h1>
+  <h1>[EXTRA] an integrated model of the hippocampal complex (Chandra et al., 2025)</h1>
 
   <img src="Chandra-Fiete-2025-fig1a.png" width=60%
        class="figure-right">
     <P>
-      LEFT, <B>memory cliff</B>. Mutual information (MI) between
-      stored and retrieved patterns in a Hopfield network of \(N\)
-      neurons drops sharply to zero after a critical number
-      (approximately \(N\)) of stored patterns. MIDDLE and RIGHT, MI
-      in variants of Hopfield networks (sparse synapses; input
-      patterns with sparseness \(p\), \(f = p\ln(p)\); modern Hopfield
-      networks) all exhibit a cliff. Dashed black line indicates
-      theoretical limit for neural networks with \(N^2\) plastic
-      synapses. We explore whether it is possible for
+      <I>Left</I>, <B>memory cliff</B>. Mutual information (MI)
+      between stored and retrieved patterns in a
+      <a href="https://en.wikipedia.org/wiki/Hopfield_network"
+      target=new>Hopfield network</a> of \(N\) neurons drops sharply
+      to zero after a critical number (approximately \(N\)) of stored
+      patterns.
+    </P>
+    <P>
+      <I>Middle and Right</I>, MI in variants of Hopfield networks
+      (sparse synapses; input patterns with sparseness \(p\), \(f =
+      p\ln(p)\); modern Hopfield networks) all exhibit a cliff. Dashed
+      black line indicates theoretical limit for neural networks with
+      \(N^2\) plastic synapses. We explore whether it is possible for
       content-addressable memory to hug the bound, regardless of the
       number of stored patterns.
     </P>
@@ -893,7 +940,7 @@
 
   
 <DIV CLASS="slide">
-  <h1>an integrated model of the hippocampal complex (Chandra et al., 2025)</h1>
+  <h1>[EXTRA] an integrated model of the hippocampal complex (Chandra et al., 2025)</h1>
 
   <img src="Chandra-Fiete-2025-fig1b.png" width=60%
        class="figure-right">
@@ -901,27 +948,41 @@
       <B>Vector-HaSH architecture</B>. Grid cell modules (orange) with
       fixed recurrent connectivity and states, hippocampal cells
       (pink) and non-grid entorhinal/neocortical (EC) processed
-      sensory inputs (green). Solid and dashed black arrows indicate
-      fixed connections and weights; grey arrows indicate plastic
-      weights. \(N_g\) is the number of grid cells, \(N_h\) is the
-      number of hippocampal neurons and \(N_s\) is the number of
-      sensory input neurons. The light blue box represents a
-      low-dimensional velocity `shift mechanism' that changes the grid
-      phases.
+      sensory inputs (green).
+    </P>
+    <P>
+      Solid and dashed black arrows indicate fixed connections and
+      weights; grey arrows indicate plastic weights. \(N_g\) is the
+      number of grid cells, \(N_h\) is the number of hippocampal
+      neurons and \(N_s\) is the number of sensory input neurons. The
+      light blue box represents a low-dimensional velocity `shift
+      mechanism' that changes the grid phases.
     </P>
 
 </div>  
 
   
 <DIV CLASS="slide">
-  <h1>an integrated model of the hippocampal complex (Chandra et al., 2025)</h1>
+  <h1>[EXTRA] an integrated model of the hippocampal complex (Chandra et al., 2025)</h1>
 
   <img src="Chandra-Fiete-2025-fig1cdef.png" height=80%
        class="figure-right">
     <P>
-      Vector-HaSH variants that model <B>item memory</B> (c),
-      <B>spatial memory</B> (d), <B>episodic memory</B> (e) and the
-      <B>memory palace</B> technique (f).
+      Vector-HaSH variants that model
+      <UL>
+	<li>
+	  <B>item memory</B> (c)
+	</li>
+	<li>
+	  <B>spatial memory</B> (d)
+	</li>
+	<li>
+	  <B>episodic memory</B> (e) 
+	</li>
+	<li>
+	  <B>memory palace</B> technique (f)
+	</li>
+      </UL>	
     </P>
 
 </div>  
@@ -1267,12 +1328,17 @@
     <li>
     Implement dimensionality reduction (from many dimensions to one),
     including similarity-preserving DR by random projections (recall
-    <a href="wk-5-1.html#(27)"
+    <a href="https://shimon-edelman.github.io/Psych-3140/wk-5-2.html#(27)"
     target=lec>Lecture 5.2</a>).
     </li>
     <P>
     <li>
-    <font color=gray>Perform function approximation (when arranged in multilayer networks).</font>
+    <font color=gray>Perform
+    <a href="https://en.wikipedia.org/wiki/Function_approximation"
+    target=new>function approximation</a> (when arranged in networks
+    such as the
+    <a href="https://en.wikipedia.org/wiki/Multilayer_perceptron"
+    target=new>multilayer perceptron</a>).</font> 
     </li>
     <P>
     <li>
@@ -1291,7 +1357,7 @@
     </li>
     <P>
     <li>
-      Form composable sequence representations.
+     <font color=gray>Form composable sequence representations.</font>
     </li>
   </ul>
   
@@ -1301,7 +1367,7 @@
 
 
 <div class="footer">
-<p>Last modified: Wed Feb 26 2025 at 10:14:55 EST</p>
+<p>Last modified: Thu Apr 3 2025 at 10:38:52 EDT</p>
 </div>
 </body>
 </html>
