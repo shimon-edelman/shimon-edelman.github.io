@@ -128,7 +128,8 @@
       <a href="https://en.wikipedia.org/wiki/Synaptic_weight"
       target=new><SC>weight</SC></a> \(w_i\) (in the illustration,
       \(k\) is an index over the neurons);</li>
-      <li><SC>sum</SC> all the resulting products;</li>
+      <li><SC>sum</SC> all the resulting products:
+      \(v=\sum_{i=1}^{m} w_i x_i\);  </li>
       <li>pass the sum through a <SC>nonlinearity</SC>
 	\(\varphi(\cdot)\), such as
 	the <a href="http://en.wikipedia.org/wiki/Logistic_sigmoid"
@@ -266,6 +267,14 @@
     circuit complexity is the rule (evolution does not necessarily
     provide for easy reverse engineering).
   </P>
+  <P class="incremental">
+    This is one of the reasongs
+    why <a href="https://en.wikipedia.org/wiki/Neuroanatomy"
+    target=bew>neuroanatomy</a>
+    and <a href="https://en.wikipedia.org/wiki/Neurophysiology"
+    target=new>neurophysiology</a> that are not backed up by
+    computational analysis can never fully succeed.
+  </P>
 
 </div>
 
@@ -282,7 +291,7 @@
        target=new>vector space</a>.
   </P>
   <P>
-    However, this view has some serious limitations/flaws:
+    However, this view has some serious limitations:
     <ul class="incremental">
       <li>rate vs. spike time coding</li>
       <li>simultaneity (remember
@@ -325,8 +334,8 @@
     </ul>
   </P>
   <P>
-    A general principle: tuning is never sharp and discrete; rather,
-    the RFs are always GRADED and overlapping.
+    <B>A general principle</B>: tuning is never sharp and discrete;
+    rather, the RFs are always GRADED and overlapping.
   </P>
 
 </div>
@@ -365,7 +374,7 @@
        height=85%> 
     <P>
       The <a href="https://en.wikipedia.org/wiki/Retinal_ganglion_cell"
-      target=new>ganglion cells</a> are the output stage of the
+      target=new>ganglion cells</a> (G) are the output stage of the
       retina. Their axons form the optic nerve, that connects the eye
       to the rest of the brain.
     </P>
@@ -376,6 +385,17 @@
       <a href="https://en.wikipedia.org/wiki/Edge_detection"
       target=new>detection of edges</a> (spatial changes of
       brightness) in the retinal image.
+    </P>
+    <P>
+      <B>Spatial tuning</B>: the outputs of ganglion cells form an
+      orderly <B>map</B> along the surface of the primary
+      <a href="https://en.wikipedia.org/wiki/Visual_cortex"
+      target=new>visual cortex</a> to which they project (via the
+      <a href="https://en.wikipedia.org/wiki/Lateral_geniculate_nucleus"
+      target=new>lateral geniculate nucleus</a>, LGN), such that
+      NEIGHBORING CORTICAL CELLS respond to the stimulation of
+      NEIGHBORING POINTS ON THE RETINA, which in turn correspond to
+      HEIGHBORING DIRECTIONS in the outside world.
     </P>
 
 </div>
@@ -578,11 +598,11 @@
     </tr>
   </table>
   <P>
-    Behavioral evidence for cognitive maps,
+    Recall from Lecture 6.1: behavioral evidence for cognitive maps,
 		from <a href="http://psychclassics.yorku.ca/Tolman/Maps/maps.htm"
-			target=new><I>Cognitive maps in rats and men</I></a>,
-    Edward C. Tolman, Psychological Review 55:189-208
-    (1948).
+		target=new><I>Cognitive maps in rats and men</I></a>,
+		Edward C. Tolman, Psychological Review 55:189-208
+		(1948).
   </P>
 
 </div>
@@ -1367,7 +1387,7 @@
 
 
 <div class="footer">
-<p>Last modified: Thu Apr 3 2025 at 10:48:47 EDT</p>
+<p>Last modified: Tue Apr 8 2025 at 09:13:42 EDT</p>
 </div>
 </body>
 </html>
