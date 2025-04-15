@@ -5,7 +5,7 @@
 <head>
 <title>Psych 3140/6140 w-12-1</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- <meta name="copyright" content="Copyright &169; 2014-2024 Shimon Edelman"/> -->
+<!-- <meta name="copyright" content="Copyright &169; 2014-2025 Shimon Edelman"/> -->
 <meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
 <link rel="stylesheet" href="../Slidy/w3c-blue3.css"
  type="text/css" media="screen, projection, print" />
@@ -172,22 +172,24 @@
       neuron activities.</font>
   </P>
   <P>  
-    Why it makes sense to define experience in terms of synapse-level events:
+    Why it makes sense to define experience in terms of SYNAPSE-level events:
     <DIR><DIR>
 	— remember the analogy between the brain/mind and a war cabinet.
     </DIR></DIR>
   </P>
     <P>  
-      Why it makes sense to consider experience through the lens of statistics:
-      <DIR><DIR>
-	  — review material from weeks 1 through 10 :-)
+      Why it makes sense to consider experience through the lens of STATISTICS:
+      <DIR><DIR> — statistics is central to cognition; also,
+	  "statistical learning" is
+	  a <a href="https://en.wikipedia.org/wiki/Pleonasm"
+	  target=new>pleonasm</a>.
       </DIR></DIR>
     </P>
     <P>
       Why JOINT INPUT&OUTPUT statistics?
       <DIR><DIR>
 	  — because consequences matter (in reinforcement learning,
-	  consequences of actions; here, of neural activity)  
+	  consequences of actions; here, of neural activity).
       </DIR></DIR>
     </P>
 
@@ -201,10 +203,12 @@
 
   <img src="supervised-unsupervised-reinforcement-learning.png"
        class="figure-right">
-    <P class="incremental">
+    <P>
       What types of learning best describe which NATIVE computations
-      in biological nervous systems?  What about neural computations
-      carried out
+      in biological nervous systems?
+    </P>
+    <P>
+      What about neural computations carried out
       in <a href="https://en.wikipedia.org/wiki/Virtual_machine"
       target=new>VIRTUAL</a> mode?
     </P>
@@ -219,18 +223,23 @@
 
   <img src="One_Ring_inscription.svg" class="figure-right" width=50%>
     <P>
-      <I>"Ash nazg durbatulûk, ash nazg gimbatul,<BR>
-	  ash nazg thrakatulûk, agh burzum-ishi krimpatul"</I> 
-      <DIR>
-	  The  <a 
-		 href="http://en.wikipedia.org/wiki/Hebbian"
-		 target=new><SC>Hebbian</SC></A> rule: "neurons that fire together,
-	  wire together".
-      </DIR> 
+      The Mordor rule:
+      <DIR><DIR>
+	  <I>"Ash nazg durbatulûk, ash nazg gimbatul,<BR>
+	      ash nazg thrakatulûk, agh burzum-ishi krimpatul"</I>
+	</DIR></DIR>
+      </P>
+    <P>
+      The  <a 
+	     href="http://en.wikipedia.org/wiki/Hebbian"
+	     target=new><SC>Hebbian</SC></A> rule:
+      <DIR><DIR>
+	  "Neurons that fire together, wire together".
+      </DIR></DIR>
     </P>
-  <P class="incremental">
-    [That's just the short of it. There's A LOT of nuance.]
-  </P>
+    <P class="incremental">
+      [That's just the short of it. There's A LOT of nuance.]
+    </P>
 
 </div>
 
@@ -242,7 +251,7 @@
 
   <img src="Hebb-cloud.jpg" class="figure-right" height=60%>
   <P>
-    Consider a neuron that computes
+    Consider a neuron with two inputs that computes
     $$
     y = \textbf{w}\cdot \textbf{x} = w_1 x_1 + w_2 x_2
     $$
@@ -274,17 +283,18 @@
     $$
   </P>
   <P>
-    Computational analysis carried out in the 1980s<SUP>*</SUP> showed that
-    neurons with
+    Computational analysis carried out in the 1980s<SUP>*</SUP> showed
+    that a neuron with
     experience-dependent <a href="http://en.wikipedia.org/wiki/Hebbian"
     target=new><SC>Hebbian</SC></A> synapses (as in: spike timing
     dependent
     plasticity, <a href="http://www.scholarpedia.org/article/Spike-timing_dependent_plasticity"
-    target=new>STDP</a>, to be discussed later this week) learn the
-    projection that maximizes the
+    target=new>STDP</a>, to be discussed later this week) learns the
+    projection [of the input vector onto its weight vector] that
+    maximizes the
     <a href="https://en.wikipedia.org/wiki/Variance"
-    target=new>variance</a> of the data in the resulting space. In
-    other words, they carry out Principal Component Analysis
+    target=new>variance</a> of the data in the resulting output
+    space. In other words, it carries out Principal Component Analysis
     or <a href="http://en.wikipedia.org/wiki/Principal_component_analysis"
     target=new>PCA</a>.
   </P>
@@ -365,7 +375,8 @@
 	the PREsynaptic activity (\(x_i\)).
       </li>
       <li>The change in synaptic weights (\(dw_i/dt\)) is also proportional to a non-monotonic
-	function (denoted by \(\phi\)) of the POSTsynaptic activity (\(y\)): 
+	function (denoted by \(\phi\)) of the POSTsynaptic activity
+	(\(y\)), such that: 
 	<ol>
 	  <li>for small \(y\) , the synaptic weight decreases
 	    (\(dw_i/dt < 0\));
@@ -627,7 +638,7 @@
 
   
 <div class="footer">
-<p>Last modified: Tue Apr 16 2024 at 08:29:04 EDT</p>
+<p>Last modified: Tue Apr 15 2025 at 09:04:42 EDT</p>
 </div>
 </body>
 </html>
