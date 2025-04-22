@@ -5,7 +5,7 @@
 <head>
 <title>Psych 3140/6140 wk-13-2</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- <meta name="copyright" content="Copyright &169; 2008-2024 Shimon Edelman"/> -->
+<!-- <meta name="copyright" content="Copyright &169; 2008-2025 Shimon Edelman"/> -->
 <meta name="font-size-adjustment" content="-1" /> <!-- DEFAULT SIZE -->
 <link rel="stylesheet" href="../Slidy/w3c-blue3.css"
  type="text/css" media="screen, projection, print" />
@@ -255,35 +255,34 @@
   <h1>Bayesian Sampler vs. ideal Bayesian reasoning (Sanborn and Chater, 2016)</h1>
 
   <img src="flounder-checkerboard.jpg" class="figure-right">
-  <P>
-    "Bayesian explanations have swept through cognitive science over the past
-    two decades, from intuitive physics and causal learning, to perception,
-    motor control and language. Yet
-    <a href="https://twitter.com/jadehiggs94/status/1363188080451219461"
-    target=new>people flounder</a> with even the simplest probability
-    questions. What explains this apparent paradox?"
-  </P>
-  <P class="incremental">
-    "Bayesian brains need not represent or calculate probabilities at all and
-    are, indeed, poorly adapted to do so. Instead, the brain is a
-    <a href="https://twiecki.github.io/blog/2015/11/10/mcmc-sampling/" target=new>Bayesian
-      sampler</a>."
-  </P>
-  <P class="incremental">
-    "The key insight:
-    <BR>
-      although explicitly representing a probability distribution is
-      hard, drawing samples from it is relatively easy. Sampling does
-      not require knowledge of the entire distribution. It can work
-      merely with a LOCAL sense of RELATIVE
-      PROBABILITIES. Intuitively, we have this local sense: once we
-      ‘see’ a solution, it is often easy to see that it is better than
-      another one, even if we cannot exactly say what either
-      probability is. By continually sampling, we slowly build up a
-      picture of <strike>all</strike> <I><B>most</B></I> of the
-      possibilities. Using a number of samples much smaller than the
-      number of hypotheses makes the computations feasible."
+    <P>
+      Bayesian explanations have swept through cognitive science over
+    the past two decades, from intuitive physics and causal learning,
+    to perception, motor control and language. Yet
+    people <a href="https://royalsocietypublishing.org/doi/10.1098/rsos.160824"
+    target=new>flounder</a> with even the simplest probability
+    questions. What explains this apparent paradox?
     </P>
+    <P class="incremental">
+    Bayesian brains need not represent or calculate probabilities at
+    all and are, indeed, poorly adapted to do so. Instead, the brain
+    is a
+    <a href="https://twiecki.github.io/blog/2015/11/10/mcmc-sampling/"
+      target=new>Bayesian sampler</a>.
+  </P>
+  <P class="incremental">
+    THE KEY INSIGHT: although explicitly representing a probability
+    distribution is hard, drawing samples from it is relatively
+    easy. Sampling does not require knowledge of the entire
+    distribution. It can work merely with a LOCAL sense of RELATIVE
+    PROBABILITIES. Intuitively, we have this local sense: once we
+    ‘see’ a solution, it is often easy to see that it is better than
+    another one, even if we cannot exactly say what either probability
+    is. By continually sampling, we slowly build up a picture
+    of <strike>all</strike> <I><B>most</B></I> of the
+    possibilities. Using a number of samples much smaller than the
+    number of hypotheses makes the computations feasible.
+  </P>
 
 </div>
 
@@ -294,17 +293,18 @@
 
   <img src="SanbornChater16-fig1A.png" class="figure-right" height=40%>
   <P>
-    "Sampling algorithms have difficulties with isolated modes and produce
+    Sampling algorithms have difficulties with isolated modes and produce
     <a href="https://en.wikipedia.org/wiki/Autocorrelation"
     target=new>autocorrelations</a>.
   </P>
   <P>
-    In this illustration, the android climbs the landscape of the (log)
-    posterior probability distribution. The android uses the difference in
-    height of its two feet to decide where to step, and its location is tracked
-    over time (red <font color=red>x</font>). A histogram of its locations
-    after many steps matches the mode of the probability distribution it
-    explored."
+    In this illustration, the android climbs the landscape of the
+    (log) posterior probability distribution. The android uses the
+    difference in height of its two feet to decide where to step, and
+    its location is tracked over time
+    (red <font color=red>x</font>). A histogram of its locations after
+    many steps matches the mode of the probability distribution it
+    explored.
   </P>
   
 </div>
@@ -315,19 +315,17 @@
 
   <img src="SanbornChater16-fig1B.png" class="figure-right" height=85%>
   <P>
-    "Each row is a different example probability distribution (two
+    Each row is a different example probability distribution (two
     unimodal and two bimodal ones). The first column shows a
     topographic map of the posterior density. The second and third
     columns illustrate samples drawn using
     the <a href="https://en.wikipedia.org/wiki/Metropolis%E2%80%93Hastings_algorithm"
     target=new>Metropolis-Hastings</a> algorithm
     and <a href="https://en.wikipedia.org/wiki/Just_another_Gibbs_sampler"
-	   target=new>JAGS</a> ("Just Another
-    <a href="https://en.wikipedia.org/wiki/Gibbs_sampling"
-       target=new>Gibbs Sampler</a>") program 
+    target=new>JAGS</a> ("Just Another Gibbs Sampler") program
     respectively. Within each column are trace plots that show how the
-    location of the sampler changes along each variable during each iteration
-    of the sampling process.
+    location of the sampler changes along each variable during each
+    iteration of the sampling process.
   </P>
   <P>
     Autocorrelations are present when a sample depends on the value of
@@ -336,7 +334,7 @@
     be used to compare the samples obtained against the true
     distributions in the first column. These show that not all of the
     modes are always sampled, even when thousands of samples are drawn
-    (i.e., in the bottom row)."
+    (i.e., in the bottom row).
   </P>
   
 </div>
@@ -349,10 +347,10 @@
 
   <img src="SanbornChater16-tab1.png" class="figure-right" height=80%>
   <P>
-    "Bayesian cognitive models [using sampling instead of full-blown
+    Bayesian cognitive models [using sampling instead of full-blown
     probability estimation] that operate well in complex domains
     actually predict probabilistic reasoning errors in simple
-    domains."
+    domains.
   </P>
   <HR>
   <P>
@@ -372,7 +370,7 @@
 
   <img src="SanbornChater16-fig2A.png" class="figure-right" height=85%>
   <P>
-    "The top row illustrates a query about one piece of the puzzle.
+    The top row illustrates a query about one piece of the puzzle.
     The bottom row illustrates that evaluating the probability of a
     conjunction is easier.
   </P>
@@ -398,7 +396,7 @@
       are in the correct position. So the whole puzzle will be judged
       more probable than a single piece, exhibiting the
       <a href="https://en.wikipedia.org/wiki/Conjunction_fallacy"
-      target=new><B>conjunction fallacy</B></a>."
+      target=new><B>conjunction fallacy</B></a>.
   </P>
   
 </div>
@@ -410,13 +408,13 @@
 
   <img src="SanbornChater16-fig2B.png" class="figure-right" height=70%>
   <P>
-    "Local assessments of relative probability are easy. Comparing the
+    Local assessments of relative probability are easy. Comparing the
     probability of seeing the two astronomical events in a year, or
     the probability of the two quotations appearing on a random
-    website, are both relatively easy."
+    website, are both relatively easy.
   </P>
   <P>
-    "Comparing the probability of seeing one of the astronomical
+    Comparing the probability of seeing one of the astronomical
     events in a year to the probability of seeing one of the
     quotations on a random website is more difficult. In particular,
     when
@@ -427,7 +425,7 @@
     <a href="https://en.wikipedia.org/wiki/Base_rate_fallacy"
     target=new><B>neglects the base rates</B></a>: most websites do
     not have literary quotations, and there are many chances for an
-    eclipse each year."
+    eclipse each year.
   </P>
   
 </div>
@@ -438,13 +436,13 @@
 
   <img src="all-white-puzzle.jpg" class="figure-right" height=70%>
   <P>
-    "If our brains do not respect the laws of probability for simple
+    If our brains do not respect the laws of probability for simple
     tasks, surely the Bayesian approach to the mind must fail in rich
     domains such as vision, language and motor control with huge data
-    and hypothesis spaces."
+    and hypothesis spaces.
   </P>
   <P>
-    "Viewing brains as sampling from complex probability distributions
+    Viewing brains as sampling from complex probability distributions
     upends this argument. Rich, realistic tasks, in which there is a
     lot of contextual information available to guide sampling, are
     just those where the Bayesian sampler is most effective. <B>Rich
@@ -452,7 +450,7 @@
     that matter – those that arise through experience</B>. By limiting
     the region in which the sampler must search, rich problems can
     often be far easier for the sampler than apparently simpler, but
-    more abstract, problems."
+    more abstract, problems.
   </P>
 
 </div>
@@ -476,14 +474,14 @@
 
   <img src="satisficing-1.png" class="figure-right" height=70%>
   <P>
-    "Moreover, the problem of learning the structure of the world, or
+    Moreover, the problem of learning the structure of the world, or
     interpreting an image or a sentence, involves
     finding <a href="https://en.wikipedia.org/wiki/Satisficing"
     target=new>‘good-enough’</a> hypotheses to usefully guide our
     actions, which can be achieved by local sampling in the
     probability landscape. Such hypotheses are no less valuable if an
     isolated peak, corresponding to an even better hypothesis,
-    remained undiscovered."
+    remained undiscovered.
   </P>
   <P class="incremental">
     ["Лучшее — враг хорошего"]
@@ -494,34 +492,34 @@
 
 
 <div  CLASS="slide">
-  <h1>is local sampling good enough?</h1>
+  <h1>is local sampling good enough? yes, but...</h1>
 
 <!--   <img src="" class="figure-right" height=400> -->
   <P>
-    "We suggest too that, for many real-world problems, multiple but
+    We suggest too that, for many real-world problems, multiple but
     distant peaks, corresponding to very different hypotheses about
     the world, may be rare, particularly when context and background
     knowledge are taken into account. Language is locally ambiguous,
     but it is very unlikely that the acoustic signal of a whole
     sentence in English happens to have an equally good interpretation
-    in Latin [...]"
+    in Latin [...]
   </P>
 
 </div>
 
 
 <div  CLASS="slide">
-  <h1>is local sampling good enough?</h1>
+  <h1>is local sampling good enough? yes, but (hold my beer)</h1>
 
 <!--   <img src="wk-14-1.html" class="figure-right" height=400> -->
   <P>
-    "We suggest too that, for many real-world problems, multiple but
+    We suggest too that, for many real-world problems, multiple but
     distant peaks, corresponding to very different hypotheses about
     the world, may be rare, particularly when context and background
     knowledge are taken into account. Language is locally ambiguous,
     but it is very unlikely that the acoustic signal of a whole
     sentence in English happens to have an equally good interpretation
-    in Latin [...]"
+    in Latin [...]
   </P>
   <P>
   Italian/Latin: I VITELLI DEI ROMANI SONO BELLI
@@ -551,13 +549,13 @@
 
   <a href="http://www.ada.auckland.ac.nz/" target=new><img src="Ada.jpg" class="figure-right"></a>
   <P>
-    "We suggest too that, for many real-world problems, multiple but
+    We suggest too that, for many real-world problems, multiple but
     distant peaks, corresponding to very different hypotheses about
     the world, may be rare, particularly when context and background
     knowledge are taken into account. Language is locally ambiguous,
     but it is very unlikely that the acoustic signal of a whole
     sentence in English happens to have an equally good interpretation
-    in Latin [...]"
+    in Latin [...]
   <DIR><DIR>
     <I>
     Ce beau jardin fleurit en mai,<BR>
@@ -681,10 +679,10 @@
   </P>
   <P>
     <small>
-      Iris van Rooij, Olivia Guest, et
-      al. (2023). <a href="https://osf.io/preprints/psyarxiv/4cbuv"
+      Iris van Rooij, Olivia Guest, <I>et al.</I>
+      (2024). <a href="https://link.springer.com/article/10.1007/s42113-024-00217-5"
       target=new><I>Reclaiming AI as a theoretical tool for cognitive
-      science</I></a>. Preprint.
+      science</I></a>. Computational Brain & Behavior 7:616-636.
     </small>
   </P>
   
@@ -713,10 +711,10 @@
   </P>
   <P>
     <small>
-      Iris van Rooij, Olivia Guest, et
-      al. (2023). <a href="https://osf.io/preprints/psyarxiv/4cbuv"
+      Iris van Rooij, Olivia Guest, <I>et al.</I>
+      (2024). <a href="https://link.springer.com/article/10.1007/s42113-024-00217-5"
       target=new><I>Reclaiming AI as a theoretical tool for cognitive
-      science</I></a>. Preprint.
+      science</I></a>. Computational Brain & Behavior 7:616-636.
     </small>
   </P>
 
@@ -724,7 +722,7 @@
 
 	
 <div class="footer">
-<p>Last modified: Thu Apr 25 2024 at 08:23:46 EDT</p>
+<p>Last modified: Tue Apr 22 2025 at 15:08:45 EDT</p>
 </div>
 </body>
 </html>
