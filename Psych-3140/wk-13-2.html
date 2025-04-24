@@ -82,32 +82,48 @@
   <img src="magic-realism.jpg" class="figure-right"
        title="Come on, honey, enough with the magic realism"
        height=50%>
+   
   <P>
-    <B>Getting real about being Bayesian</B> (an algorithmic take):
+    <B>Getting real about being Bayesian</B>
+    (<a href="https://en.wikipedia.org/wiki/Computational_complexity_theory"
+    target=new>computational complexity</a> / algorithmic considerations):
   </P>
-  <P>
-    <I>Bayesian brains without probabilities</I>, A. N. Sanborn and
-    N. Chater, Trends in Cognitive Sciences 20:883-893  (December 2016).
-  </P>
+  <ul>
+    <li>
+      <I>Bayesian intractability is not an ailment that approximation
+	can cure</I>, Johan Kwisthout, Todd Wareham, Iris van Rooij
+	(2011). Cognitive Science 35(5):779-84.
+    </li>
+    <li>
+      <I>Bayesian brains without probabilities</I>, Adam N. Sanborn
+      and Nick Chater, Trends in Cognitive Sciences 20:883-893
+      (December 2016).
+    </li>
+  </ul>
   
 </div>
 
 
 
 <div  CLASS="slide">
-  <h1>Bayesian intractability</h1>
+  <h1>Bayesian intractability (van Rooij et al., 2011)</h1>
 
   <P>
     Notwithstanding the empirical success of the Bayesian framework,
     models formulated within this framework are known to often face
     the theoretical obstacle of computational intractability.
+  </P>
+  <P>
     Formally, this means that computations that are postulated by many
     Bayesian models of cognition fall into the general class of
     so-called <a href="https://en.wikipedia.org/wiki/NP-hardness"
-    target=new>NP-hard problems</a>. Informally, this means that the
-    computations postulated by such models are too resource demanding
-    to be plausibly performed by our resource-bounded minds/brains in
-    a realistic amount of time for all but small inputs.
+		 target=new>NP-hard problems</a>.
+  </P>
+  <P>
+    Informally, this means that the computations postulated by such
+    models are too resource demanding to be plausibly performed by our
+    resource-bounded minds/brains in a realistic amount of time for
+    all but small inputs.
   <P>
     <small>
       <I>Bayesian intractability is not an ailment that approximation
@@ -122,20 +138,26 @@
   
 
 <div  CLASS="slide">
-  <h1>Bayesian intractability</h1>
+  <h1>Bayesian intractability (van Rooij et al., 2011)</h1>
 
-  <P>
-    <font color=gray>
-    Notwithstanding the empirical success of the Bayesian framework,
-    models formulated within this framework are known to often face
-    the theoretical obstacle of computational intractability.
-    Formally, this means that computations that are postulated by many
-    Bayesian models of cognition fall into the general class of
-    so-called <a href="https://en.wikipedia.org/wiki/NP-hardness"
-    target=new>NP-hard problems</a>. Informally, this means that the
-    computations postulated by such models are too resource demanding
-    to be plausibly performed by our resource-bounded minds/brains in
-    a realistic amount of time for all but small inputs.
+  <font color=gray>
+    <P>
+      Notwithstanding the empirical success of the Bayesian framework,
+      models formulated within this framework are known to often face
+      the theoretical obstacle of computational intractability.
+    </P>
+    <P>
+      Formally, this means that computations that are postulated by
+      many Bayesian models of cognition fall into the general class of
+      so-called <a href="https://en.wikipedia.org/wiki/NP-hardness"
+      target=new>NP-hard problems</a>.
+    </P>
+    <P>
+      Informally, this means that the computations postulated by such
+      models are too resource demanding to be plausibly performed by
+      our resource-bounded minds/brains in a realistic amount of time
+      for all but small inputs.
+    </P>
     </font>
   </P>
   <P>
@@ -154,9 +176,9 @@
     seconds in a millennium. To the extent that the cognitive
     abilities that Bayesian models aim to describe operate on a time
     scale of seconds or minutes, computations requiring on the order
-    of years or centuries for their completion are inevitably
-    explanatorily unsatisfactory, no matter how well the models may
-    fit human performance data obtained in the laboratory.
+    of years or centuries for their completion are <B>inevitably
+    explanatorily unsatisfactory</B>, no matter how well the models
+    may fit human performance data obtained in the laboratory.
   </P>
   <P>
     <small>
@@ -171,7 +193,7 @@
   
 
 <div  CLASS="slide">
-  <h1>Bayesian intractability</h1>
+  <h1>Bayesian intractability (van Rooij et al., 2011)</h1>
 
   <P>
     To make our points, we will use a widely adopted—see, for example, Baker et al.,
@@ -215,7 +237,7 @@
   
 
 <div  CLASS="slide">
-  <h1>Bayesian intractability</h1>
+  <h1>Bayesian intractability (van Rooij et al., 2011)</h1>
 
   <P>
     The computational complexity of MPE has been extensively studied
@@ -252,7 +274,7 @@
   
 
 <div  CLASS="slide">
-  <h1>Bayesian Sampler vs. ideal Bayesian reasoning (Sanborn and Chater, 2016)</h1>
+  <h1>NEXT: Bayesian Sampler vs. ideal Bayesian reasoning (Sanborn and Chater, 2016)</h1>
 
   <img src="flounder-checkerboard.jpg" class="figure-right">
     <P>
@@ -281,7 +303,7 @@
     is. By continually sampling, we slowly build up a picture
     of <strike>all</strike> <I><B>most</B></I> of the
     possibilities. Using a number of samples much smaller than the
-    number of hypotheses makes the computations feasible.
+    number of [applicable] hypotheses makes the computations feasible.
   </P>
 
 </div>
@@ -293,9 +315,12 @@
 
   <img src="SanbornChater16-fig1A.png" class="figure-right" height=40%>
   <P>
-    Sampling algorithms have difficulties with isolated modes and produce
+    Sampling algorithms have difficulties with isolated modes
+    [probability peaks] and produce
     <a href="https://en.wikipedia.org/wiki/Autocorrelation"
-    target=new>autocorrelations</a>.
+    target=new>autocorrelations</a>. Autocorrelations are present when
+    a sample depends on the value of the previous sample in the
+    sequence. 
   </P>
   <P>
     In this illustration, the android climbs the landscape of the
@@ -343,7 +368,7 @@
 
 
 <div  CLASS="slide">
-  <h1>Bayesian Sampler vs. ideal Bayesian reasoning</h1>
+  <h1>Bayesian Sampler vs. ideal Bayesian reasoning: the GOOD NEWS</h1>
 
   <img src="SanbornChater16-tab1.png" class="figure-right" height=80%>
   <P>
@@ -354,7 +379,7 @@
   </P>
   <HR>
   <P>
-    This is good news for the research program that attempts to
+    This is GOOD NEWS for the research program that attempts to
     explain reasoning and
     <a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2021.584689/full"
     target=new><B>cognitive illusions</B></a> in terms of a Bayesian
@@ -460,7 +485,8 @@
   <h1>[<I>a propos</I> puzzles...]</h1>
 
   <img src="circle-A-graffito-from-Bologna.jpg" class="figure-right"
-       height=85%>
+       height=85% title="a graffito from Bologna, Italy">
+    <img src="all-white-puzzle.jpg" class="figure-left" height=20%>
     <P>
       The <a href="https://theanarchistlibrary.org/library/ruth-kinna-annotated-bibliography-on-anarchism"
       target=new>missing piece</a> of the puzzle of life.
@@ -474,7 +500,7 @@
 
   <img src="satisficing-1.png" class="figure-right" height=70%>
   <P>
-    Moreover, the problem of learning the structure of the world, or
+    The problem of learning the structure of the world, or
     interpreting an image or a sentence, involves
     finding <a href="https://en.wikipedia.org/wiki/Satisficing"
     target=new>‘good-enough’</a> hypotheses to usefully guide our
@@ -536,9 +562,12 @@
   <P>
   Italian meaning (English translation): the calves of the Romans are beautiful
   </P>
+  <HR>
   <P>
-    <I>[This also illustrates how written words fails to capture the
-      richness of natural language.]</I>
+    <I>[Example borrowed from
+      <a href="https://theanarchistlibrary.org/library/umberto-eco-ur-fascism"
+      target=new>Umberto Eco</a>.]</I> <BR>This also illustrates how
+      written words fails to capture the richness of natural language.
   </P>
   
 </div>
@@ -558,7 +587,7 @@
     in Latin [...]
   <DIR><DIR>
     <I>
-    Ce beau jardin fleurit en mai,<BR>
+    Ce beau jardin fleuri en mai,<BR>
     Mais en hiver<BR>
     Jamais, jamais, jamais, jamais, jamais<BR>
 	    N’est vert, n’est vert, n’est vert, n’est vert,
@@ -698,7 +727,7 @@
     <SC>AI-by-Learning</SC> (informal)
   </P>
   <P>
-    <I>Given:</I> A way of sampling from a distribution \(\cal{D}\).
+    <I>Given:</I> A way of sampling from a distribution of behaviors \(\cal{D}\).
   </P>
   <P>
     <I>Task:</I> Find an algorithm \(A\) (i.e., ‘an AI’) that, when
@@ -722,7 +751,7 @@
 
 	
 <div class="footer">
-<p>Last modified: Tue Apr 22 2025 at 15:08:45 EDT</p>
+<p>Last modified: Thu Apr 24 2025 at 08:20:07 EDT</p>
 </div>
 </body>
 </html>
